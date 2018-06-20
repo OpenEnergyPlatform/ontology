@@ -1,0 +1,181 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: test: <http://www.test.com/Models#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://www.test.com/Models>
+
+
+Annotations:
+    rdfs:comment "Ontologie für Modellrechungen zu Klimaszenarien"
+
+AnnotationProperty: rdfs:comment
+
+
+ObjectProperty: test:has_Input
+
+    Domain:
+        test:Transformation
+
+    Range:
+        test:Data
+
+
+ObjectProperty: test:has_Objective
+
+    Domain:
+        test:Optimization
+
+    Range:
+        test:ModelComponent
+
+
+ObjectProperty: test:has_Output
+
+    Domain:
+        test:Transformation
+
+    Range:
+        test:Data
+
+
+ObjectProperty: test:has_part
+
+
+ObjectProperty: test:has_tool
+
+    Domain:
+        test:ModelCalculation
+
+    Range:
+        test:Model
+
+
+ObjectProperty: test:is_about
+
+    Domain:
+        test:Paper
+
+    Range:
+        test:ModelCalculation
+
+
+Class: test:Assumption
+
+    SubClassOf:
+        test:Data
+
+
+Class: test:Constraint
+
+    SubClassOf:
+        test:Data
+
+
+Class: test:Continuant
+
+
+Class: test:Data
+
+    SubClassOf:
+        test:Continuant
+
+
+Class: test:EmpiricalData
+
+    SubClassOf:
+        test:Data
+
+
+Class: test:Model
+
+    SubClassOf:
+        test:Continuant,
+        test:has_part some test:ModelComponent
+
+
+Class: test:ModelCalculation
+
+    SubClassOf:
+        test:Transformation
+
+
+Class: test:ModelComponent
+
+    SubClassOf:
+        test:Continuant
+
+
+Class: test:ModelElement
+
+    SubClassOf:
+        test:ModelComponent
+
+
+Class: test:ModelFunction
+
+    SubClassOf:
+        test:ModelComponent
+
+
+Class: test:ObjectiveVariable
+
+    SubClassOf:
+        test:Data
+
+
+Class: test:Occurrent
+
+
+Class: test:Optimization
+
+    SubClassOf:
+        test:ModelCalculation
+
+    DisjointWith:
+        test:Simulation
+
+
+Class: test:Paper
+
+    SubClassOf:
+        test:Continuant
+
+
+Class: test:Postprocessing
+
+    SubClassOf:
+        test:Transformation
+
+
+Class: test:Preprocessing
+
+    SubClassOf:
+        test:Transformation
+
+
+Class: test:ProgrammParameter
+
+    SubClassOf:
+        test:Data
+
+
+
+Class: test:Simulation
+
+    SubClassOf:
+        test:ModelCalculation
+
+    DisjointWith:
+        test:Optimization
+
+
+Class: test:Transformation
+
+    SubClassOf:
+        test:Occurrent
