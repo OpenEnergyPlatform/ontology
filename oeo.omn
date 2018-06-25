@@ -14,7 +14,7 @@ Ontology: <http://openenergy-platform.org/ontology/oeo/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Import: <http://purl.obolibrary.org/obo/bfo.owl>
 
-Annotations: 
+Annotations:
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Martin Glauer",
     dc:contributor "Sebastian Cordes",
@@ -22,209 +22,189 @@ Annotations:
 
 AnnotationProperty: dc:contributor
 
-    
+
 AnnotationProperty: definition
 
-    SubPropertyOf: 
+    SubPropertyOf:
         rdfs:comment
-    
-    
+
+
 AnnotationProperty: rdfs:comment
 
-    
+
 AnnotationProperty: rdfs:isDefinedBy
 
-    
+
 Datatype: rdf:PlainLiteral
 
-    
+
 ObjectProperty: has_Input
 
-    Domain: 
+    Domain:
         Transformation
-    
-    Range: 
+
+    Range:
         Data
-    
-    
+
+
 ObjectProperty: has_Objective
 
-    Domain: 
+    Domain:
         Optimization
-    
-    Range: 
+
+    Range:
         ModelComponent
-    
-    
+
+
 ObjectProperty: has_Output
 
-    Domain: 
+    Domain:
         Transformation
-    
-    Range: 
+
+    Range:
         Data
-    
-    
+
+
 ObjectProperty: has_part
 
-    
+
 ObjectProperty: has_tool
 
-    Domain: 
+    Domain:
         ModelCalculation
-    
-    Range: 
+
+    Range:
         Model
-    
-    
+
+
 ObjectProperty: is_about
 
-    Domain: 
+    Domain:
         Paper
-    
-    Range: 
+
+    Range:
         ModelCalculation
-    
-    
+
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
-    EquivalentTo: 
-        Continuant
-    
-    
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 
-    
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
-    
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
-    
+
 Class: Assumption
 
-    SubClassOf: 
+    SubClassOf:
         Data
-    
-    
+
+
 Class: Constraint
 
-    SubClassOf: 
+    SubClassOf:
         Data
-    
-    
-Class: Continuant
 
-    Annotations: 
-        definition "A continuant is an entity that persists, endures, or
-	continues to exist through time while maintaining its identity."@en,
-        rdfs:comment "Synonymous to
-	",
-        rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl>,
-        rdfs:comment "Continuants include material objects (e.g., humans
-	and trees) as well as existentially dependent entities (e.g.,
-	organisations like Green Peace or contracts)"@en
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000002>
-    
     
 Class: Data
 
-    SubClassOf: 
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: EmpiricalData
 
-    SubClassOf: 
+    SubClassOf:
         Data
-    
-    
+
+
 Class: Model
 
-    SubClassOf: 
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part some ModelComponent
-    
-    
+
+
 Class: ModelCalculation
 
-    SubClassOf: 
+    SubClassOf:
         Transformation
-    
-    
+
+
 Class: ModelComponent
 
-    SubClassOf: 
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: ModelElement
 
-    SubClassOf: 
+    SubClassOf:
         ModelComponent
-    
-    
+
+
 Class: ModelFunction
 
-    SubClassOf: 
+    SubClassOf:
         ModelComponent
-    
-    
+
+
 Class: ObjectiveVariable
 
-    SubClassOf: 
+    SubClassOf:
         Data
-    
-    
+
+
 Class: Optimization
 
-    SubClassOf: 
+    SubClassOf:
         ModelCalculation
-    
-    DisjointWith: 
+
+    DisjointWith:
         Simulation
-    
-    
+
+
 Class: Paper
 
-    SubClassOf: 
+    SubClassOf:
         ModelComponent
-    
-    
+
+
 Class: Postprocessing
 
-    SubClassOf: 
+    SubClassOf:
         Transformation
-    
-    
+
+
 Class: Preprocessing
 
-    SubClassOf: 
+    SubClassOf:
         Transformation
-    
-    
+
+
 Class: ProgrammParameter
 
-    SubClassOf: 
+    SubClassOf:
         Data
-    
-    
+
+
 Class: Simulation
 
-    SubClassOf: 
+    SubClassOf:
         ModelCalculation
-    
-    DisjointWith: 
+
+    DisjointWith:
         Optimization
-    
-    
+
+
 Class: Transformation
 
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-  
-    Annotations: 
+    Annotations:
         definition "A transformation is a process that transforms one or more input into at least one output."@en
 
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000015>
