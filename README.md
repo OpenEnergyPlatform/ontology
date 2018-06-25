@@ -1,1 +1,1 @@
-# OpenEnergy Ontology
+# OpenEnergyPlatform Szenarien-Ontology
