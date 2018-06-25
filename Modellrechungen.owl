@@ -2,13 +2,13 @@ Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-Prefix: test: <http://www.test.com/Models#>
+Prefix: : <https://oep.iks.cs.ovgu.de/ontology/>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-Ontology: <http://www.test.com/Models>
+Ontology: <https://oep.iks.cs.ovgu.de/ontology><https://oep.iks.cs.ovgu.de/0.1/ontology> 
 
 
 Annotations:
@@ -17,165 +17,165 @@ Annotations:
 AnnotationProperty: rdfs:comment
 
 
-ObjectProperty: test:has_Input
+ObjectProperty: :has_Input
 
     Domain:
-        test:Transformation
+        :Transformation
 
     Range:
-        test:Data
+        :Data
 
 
-ObjectProperty: test:has_Objective
+ObjectProperty: :has_Objective
 
     Domain:
-        test:Optimization
+        :Optimization
 
     Range:
-        test:ModelComponent
+        :ModelComponent
 
 
-ObjectProperty: test:has_Output
+ObjectProperty: :has_Output
 
     Domain:
-        test:Transformation
+        :Transformation
 
     Range:
-        test:Data
+        :Data
 
 
-ObjectProperty: test:has_part
+ObjectProperty: :has_part
 
 
-ObjectProperty: test:has_tool
+ObjectProperty: :has_tool
 
     Domain:
-        test:ModelCalculation
+        :ModelCalculation
 
     Range:
-        test:Model
+        :Model
 
 
-ObjectProperty: test:is_about
+ObjectProperty: :is_about
 
     Domain:
-        test:Paper
+        :Paper
 
     Range:
-        test:ModelCalculation
+        :ModelCalculation
 
 
-Class: test:Assumption
-
-    SubClassOf:
-        test:Data
-
-
-Class: test:Constraint
+Class: :Assumption
 
     SubClassOf:
-        test:Data
+        :Data
 
 
-Class: test:Continuant
-
-
-Class: test:Data
+Class: :Constraint
 
     SubClassOf:
-        test:Continuant
+        :Data
 
 
-Class: test:EmpiricalData
-
-    SubClassOf:
-        test:Data
+Class: :Continuant
 
 
-Class: test:Model
+Class: :Data
 
     SubClassOf:
-        test:Continuant,
-        test:has_part some test:ModelComponent
+        :Continuant
 
 
-Class: test:ModelCalculation
-
-    SubClassOf:
-        test:Transformation
-
-
-Class: test:ModelComponent
+Class: :EmpiricalData
 
     SubClassOf:
-        test:Continuant
+        :Data
 
 
-Class: test:ModelElement
-
-    SubClassOf:
-        test:ModelComponent
-
-
-Class: test:ModelFunction
+Class: :Model
 
     SubClassOf:
-        test:ModelComponent
+        :Continuant,
+        :has_part some :ModelComponent
 
 
-Class: test:ObjectiveVariable
-
-    SubClassOf:
-        test:Data
-
-
-Class: test:Occurrent
-
-
-Class: test:Optimization
+Class: :ModelCalculation
 
     SubClassOf:
-        test:ModelCalculation
+        :Transformation
+
+
+Class: :ModelComponent
+
+    SubClassOf:
+        :Continuant
+
+
+Class: :ModelElement
+
+    SubClassOf:
+        :ModelComponent
+
+
+Class: :ModelFunction
+
+    SubClassOf:
+        :ModelComponent
+
+
+Class: :ObjectiveVariable
+
+    SubClassOf:
+        :Data
+
+
+Class: :Occurrent
+
+
+Class: :Optimization
+
+    SubClassOf:
+        :ModelCalculation
 
     DisjointWith:
-        test:Simulation
+        :Simulation
 
 
-Class: test:Paper
-
-    SubClassOf:
-        test:Continuant
-
-
-Class: test:Postprocessing
+Class: :Paper
 
     SubClassOf:
-        test:Transformation
+        :Continuant
 
 
-Class: test:Preprocessing
-
-    SubClassOf:
-        test:Transformation
-
-
-Class: test:ProgrammParameter
+Class: :Postprocessing
 
     SubClassOf:
-        test:Data
+        :Transformation
 
 
-
-Class: test:Simulation
+Class: :Preprocessing
 
     SubClassOf:
-        test:ModelCalculation
+        :Transformation
+
+
+Class: :ProgrammParameter
+
+    SubClassOf:
+        :Data
+
+
+
+Class: :Simulation
+
+    SubClassOf:
+        :ModelCalculation
 
     DisjointWith:
-        test:Optimization
+        :Optimization
 
 
-Class: test:Transformation
+Class: :Transformation
 
     SubClassOf:
-        test:Occurrent
+        :Occurrent
