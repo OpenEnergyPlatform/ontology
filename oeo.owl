@@ -1,5 +1,7 @@
 Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -8,178 +10,221 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-Ontology: <http://openenergy-platform.org/ontology/oeo/> <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Ontology: <http://openenergy-platform.org/ontology/oeo/>
+<http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Import: <http://purl.obolibrary.org/obo/bfo.owl>
 
+Annotations: 
+    dc:contributor "Fabian Neuhaus",
+    dc:contributor "Martin Glauer",
+    dc:contributor "Sebastian Cordes",
+    rdfs:comment "Include description of the ontology (in particular its scope) here ..."
 
-Annotations:
-	rdfs:comment "Include description of the ontology (in particular its scope) here ...",
-	dc:contributor "Sebastian Cordes",
-	dc:contributor "Martin Glauer",	
-	dc:contributor "Fabian Neuhaus"	
-
-AnnotationProperty: rdfs:comment 
 AnnotationProperty: dc:contributor
 
+    
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: has_Input
+
+    Domain: 
+        Transformation
+    
+    Range: 
+        Data
+    
+    
+ObjectProperty: has_Objective
+
+    Domain: 
+        Optimization
+    
+    Range: 
+        ModelComponent
+    
+    
+ObjectProperty: has_Output
+
+    Domain: 
+        Transformation
+    
+    Range: 
+        Data
+    
+    
+ObjectProperty: has_part
+
+    
+ObjectProperty: has_tool
+
+    Domain: 
+        ModelCalculation
+    
+    Range: 
+        Model
+    
+    
+ObjectProperty: is_about
+
+    Domain: 
+        Paper
+    
+    Range: 
+        ModelCalculation
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    EquivalentTo: 
+        Continuant
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: Assumption
+
+    SubClassOf: 
+        Data
+    
+    
+Class: Constraint
+
+    SubClassOf: 
+        Data
+    
+    
+Class: Continuant
+
+    Annotations: 
+        definition "A continuant is an entity that persists, endures, or
+	continues to exist through time while maintaining its identity."@en,
+        rdfs:comment "Synonymous to
+	",
+        rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl>,
+        rdfs:comment "Continuants include material objects (e.g., humans
+	and trees) as well as existentially dependent entities (e.g.,
+	organisations like Green Peace or contracts)"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    
+Class: Data
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: EmpiricalData
+
+    SubClassOf: 
+        Data
+    
+    
+Class: Model
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some ModelComponent
+    
+    
+Class: ModelCalculation
+
+    SubClassOf: 
+        Transformation
+    
+    
+Class: ModelComponent
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: ModelElement
+
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: ModelFunction
+
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: ObjectiveVariable
+
+    SubClassOf: 
+        Data
+    
+    
+Class: Optimization
+
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Simulation
+    
+    
+Class: Paper
+
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: Postprocessing
+
+    SubClassOf: 
+        Transformation
+    
+    
+Class: Preprocessing
+
+    SubClassOf: 
+        Transformation
+    
+    
+Class: ProgrammParameter
+
+    SubClassOf: 
+        Data
+    
+    
+Class: Simulation
+
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Optimization
+    
+    
+Class: Transformation
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+  
+    Annotations: 
+        definition "A transformation is a process that transforms one or more input into at least one output."@en
 
-ObjectProperty: :has_Input
-
-    Domain:
-        :Transformation
-
-    Range:
-        :Data
-
-
-ObjectProperty: :has_Objective
-
-    Domain:
-        :Optimization
-
-    Range:
-        :ModelComponent
-
-
-ObjectProperty: :has_Output
-
-    Domain:
-        :Transformation
-
-    Range:
-        :Data
-
-
-ObjectProperty: :has_part
-
-
-ObjectProperty: :has_tool
-
-    Domain:
-        :ModelCalculation
-
-    Range:
-        :Model
-
-
-ObjectProperty: :is_about
-
-    Domain:
-        :Paper
-
-    Range:
-        :ModelCalculation
-
-
-Class: :Assumption
-
-    SubClassOf:
-        :Data
-
-
-Class: :Constraint
-
-    SubClassOf:
-        :Data
-
-
-Class: :Continuant
-
-
-Class: :Data
-
-    SubClassOf:
-        :Continuant
-
-
-Class: :EmpiricalData
-
-    SubClassOf:
-        :Data
-
-
-Class: :Model
-
-    SubClassOf:
-        :Continuant,
-        :has_part some :ModelComponent
-
-
-Class: :ModelCalculation
-
-    SubClassOf:
-        :Transformation
-
-
-Class: :ModelComponent
-
-    SubClassOf:
-        :Continuant
-
-
-Class: :ModelElement
-
-    SubClassOf:
-        :ModelComponent
-
-
-Class: :ModelFunction
-
-    SubClassOf:
-        :ModelComponent
-
-
-Class: :ObjectiveVariable
-
-    SubClassOf:
-        :Data
-
-
-Class: :Occurrent
-
-
-Class: :Optimization
-
-    SubClassOf:
-        :ModelCalculation
-
-    DisjointWith:
-        :Simulation
-
-
-Class: :Paper
-
-    SubClassOf:
-        :Continuant
-
-
-Class: :Postprocessing
-
-    SubClassOf:
-        :Transformation
-
-
-Class: :Preprocessing
-
-    SubClassOf:
-        :Transformation
-
-
-Class: :ProgrammParameter
-
-    SubClassOf:
-        :Data
-
-
-
-Class: :Simulation
-
-    SubClassOf:
-        :ModelCalculation
-
-    DisjointWith:
-        :Optimization
-
-
-Class: :Transformation
-
-    SubClassOf:
-        :Occurrent
