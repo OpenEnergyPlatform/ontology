@@ -42,8 +42,11 @@ AnnotationProperty: rdfs:isDefinedBy
 Datatype: rdf:PlainLiteral
 
     
-ObjectProperty: has_Input
+ObjectProperty: has_input
 
+    SubPropertyOf: 
+        has_participant
+    
     Domain: 
         Transformation
     
@@ -51,7 +54,7 @@ ObjectProperty: has_Input
         Data
     
     
-ObjectProperty: has_Objective
+ObjectProperty: has_objective
 
     Domain: 
         Optimization
@@ -60,8 +63,11 @@ ObjectProperty: has_Objective
         ModelComponent
     
     
-ObjectProperty: has_Output
+ObjectProperty: has_output
 
+    SubPropertyOf: 
+        has_participant
+    
     Domain: 
         Transformation
     
@@ -72,8 +78,17 @@ ObjectProperty: has_Output
 ObjectProperty: has_part
 
     
+ObjectProperty: has_participant
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: has_tool
 
+    SubPropertyOf: 
+        has_participant
+    
     Domain: 
         ModelCalculation
     
@@ -84,10 +99,25 @@ ObjectProperty: has_tool
 ObjectProperty: is_about
 
     Domain: 
-        Paper
+        Publication
     
     Range: 
         ModelCalculation
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: utilizes_dataset
+
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: utilizes_program_parameter
+
+    SubPropertyOf: 
+        has_input
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -103,12 +133,6 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
     
 Class: Assumption
-
-    SubClassOf: 
-        Data
-    
-    
-Class: Constraint
 
     SubClassOf: 
         Data
@@ -145,6 +169,12 @@ Class: ModelComponent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: ModelConstraint
+
+    SubClassOf: 
+        ModelComponent
+    
+    
 Class: ModelElement
 
     SubClassOf: 
@@ -172,19 +202,13 @@ Class: Optimization
         Simulation
     
     
-Class: Paper
-
-    SubClassOf: 
-        ModelComponent
-    
-    
-Class: Postprocessing
+Class: PostProcessing
 
     SubClassOf: 
         Transformation
     
     
-Class: Preprocessing
+Class: PreProcessing
 
     SubClassOf: 
         Transformation
@@ -194,6 +218,12 @@ Class: ProgrammParameter
 
     SubClassOf: 
         Data
+    
+    
+Class: Publication
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: Simulation
