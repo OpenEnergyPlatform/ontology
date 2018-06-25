@@ -1,0 +1,52 @@
+@base <http://openenergy-platform.org/ontology> .
+@prefix : <http://openenergy-platform.org/ontology/oeo> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+:trans_ego_demand_la_zensus_0_0_4
+  a :Transformation;
+  :has_source https://raw.githubusercontent.com/openego/data_processing/master/dataprocessing/sql_snippets/ego_dp_loadarea_census.sql ;
+  :has_input :destatis_zensus_population_per_ha_invg_mview ,
+             :ego_demand_la_osm ;
+  :has_output :ego_demand_la_zensus ;
+  :has_version [rdf:_li 0, 4 ,0] ;
+  rdfs:comment 'eGoDP - Temporary table'.
+
+:trans_ego_demand_la_zensus_cluster_0_0_4
+  a :Transformation ;
+  :has_source https://raw.githubusercontent.com/openego/data_processing/master/dataprocessing/sql_snippets/ego_dp_loadarea_census.sql ;
+  :has_input :ego_demand_la_zensus ;
+  :has_output :ego_demand_la_zensus_cluster ;
+  :has_version [rdf:_li 0, 4 ,0] ;
+  rdfs:comment 'eGoDP - Temporary table' .
+
+:trans_ego_society_zensus_per_la_mview_0_0_4
+  a :Transformation ;
+  :has_source https://raw.githubusercontent.com/openego/data_processing/master/dataprocessing/sql_snippets/ego_dp_loadarea_census.sql ;
+  :has_input :society.destatis_zensus_population_per_ha_mview ,
+             :ego_demand_la_zensus ,
+             :ego_demand_la_zensus_cluster ;
+  :has_output :ego_society_zensus_per_la_mview ;
+  :has_version [rdf:_li 0, 4 ,0] ;
+  rdfs:comment 'eGoDP - Temporary table' .
+
+:destatis_zensus_population_per_ha_invg_mview
+  a :Data ;
+  :has_source http://openenergy-platform.org/api/v0/schema/model_draft/tables/destatis_zensus_population_per_ha_invg_mview/rows/ .
+
+:ego_demand_la_osm
+  a :Data ;
+  :has_source http://openenergy-platform.org/api/v0/schema/model_draft/tables/ego_demand_la_osm/rows/ .
+
+:ego_demand_la_zensus
+  a :Data ;
+  :has_source http://openenergy-platform.org/api/v0/schema/model_draft/tables/ego_demand_la_zensus/rows/ .
+
+:ego_society_zensus_per_la_mview
+  a :Data ;
+  :has_source http://openenergy-platform.org/api/v0/schema/model_draft/tables/ego_society_zensus_per_la_mview/rows/ .
+
+:society.destatis_zensus_population_per_ha_mview
+  a :Data ;
+  :has_source http://openenergy-platform.org/api/v0/schema/society/tables/ego_society_zensus_per_ladestatis_zensus_population_per_ha_mview_mview/rows/ .
