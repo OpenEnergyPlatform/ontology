@@ -21,6 +21,9 @@ Annotations:
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
     rdfs:comment "Include description of the ontology (in particular its scope) here ..."
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
@@ -42,8 +45,20 @@ AnnotationProperty: rdfs:isDefinedBy
 Datatype: rdf:PlainLiteral
 
     
-ObjectProperty: has_Input
+ObjectProperty: has_constraint
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: has_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
     Domain: 
         Transformation
     
@@ -51,8 +66,11 @@ ObjectProperty: has_Input
         Data
     
     
-ObjectProperty: has_Objective
+ObjectProperty: has_objective
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+    
     Domain: 
         Optimization
     
@@ -60,8 +78,29 @@ ObjectProperty: has_Objective
         ModelComponent
     
     
-ObjectProperty: has_Output
+ObjectProperty: has_objectivefunction
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_objectivevariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
     Domain: 
         Transformation
     
@@ -71,9 +110,27 @@ ObjectProperty: has_Output
     
 ObjectProperty: has_part
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
+    
+    Characteristics: 
+        Transitive
+    
+    
+ObjectProperty: has_programvariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a program variable it uses as input."@en
+    
+    SubPropertyOf: 
+        has_input
+    
     
 ObjectProperty: has_tool
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
+    
     Domain: 
         ModelCalculation
     
@@ -83,11 +140,32 @@ ObjectProperty: has_tool
     
 ObjectProperty: is_about
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the thing it covers."@en
+    
     Domain: 
-        Paper
+        Publication
     
     Range: 
         ModelCalculation
+    
+    
+ObjectProperty: makes_assumtion
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumtion made for its execution."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: uses_dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
+    
+    SubPropertyOf: 
+        has_input
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -104,30 +182,45 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
     
 Class: Assumption
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a property of a system or process that is considered to be true."@en
+    
     SubClassOf: 
         Data
     
     
 Class: Constraint
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
+    
     SubClassOf: 
         Data
     
     
 Class: Data
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Data is information."@en
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: EmpiricalData
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Empirical data is data that is gained from observation in the real world. It has to be tested and found to be true."@en
+    
     SubClassOf: 
         Data
     
     
 Class: Model
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part some ModelComponent
@@ -135,36 +228,54 @@ Class: Model
     
 Class: ModelCalculation
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using a model."@en
+    
     SubClassOf: 
         Transformation
     
     
 Class: ModelComponent
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: ModelElement
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
+    
     SubClassOf: 
         ModelComponent
     
     
 Class: ModelFunction
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
+    
     SubClassOf: 
         ModelComponent
     
     
-Class: ObjectiveVariable
+Class: ModelVariable
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
+    
     SubClassOf: 
         ModelComponent
     
     
 Class: Optimization
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
     SubClassOf: 
         ModelCalculation
     
@@ -172,32 +283,47 @@ Class: Optimization
         Simulation
     
     
-Class: Paper
-
-    SubClassOf: 
-        ModelComponent
-    
-    
 Class: Postprocessing
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
+    
     SubClassOf: 
         Transformation
     
     
 Class: Preprocessing
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
+    
     SubClassOf: 
         Transformation
     
     
-Class: ProgrammParameter
+Class: ProgramParameter
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
+    
     SubClassOf: 
         Data
     
     
+Class: Publication
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a document that has been published."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: Simulation
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
     SubClassOf: 
         ModelCalculation
     
