@@ -14,7 +14,7 @@ Ontology: <http://openenergy-platform.org/ontology/oeo/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Import: <http://purl.obolibrary.org/obo/bfo.owl>
 
-Annotations:
+Annotations: 
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Martin Glauer",
     dc:contributor "Sebastian Cordes",
@@ -23,325 +23,422 @@ Annotations:
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
-
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
-
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
-
+    
 AnnotationProperty: dc:contributor
 
-
+    
 AnnotationProperty: definition
 
-    SubPropertyOf:
+    SubPropertyOf: 
         rdfs:comment
-
-
+    
+    
 AnnotationProperty: rdfs:comment
 
-
+    
 AnnotationProperty: rdfs:isDefinedBy
 
-
+    
 Datatype: rdf:PlainLiteral
 
-
+    
 ObjectProperty: has_constraint
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         has_input
-
-
+    
+    
 ObjectProperty: has_input
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
-
-    Domain:
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
         Transformation
-
-    Range:
-        Data
-
-
+    
+    Range: 
+        InformationArtifact
+    
+    
 ObjectProperty: has_objective
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
-
-    Domain:
+    
+    Domain: 
         Optimization
-
-    Range:
+    
+    Range: 
         ModelComponent
-
-
+    
+    
 ObjectProperty: has_objectivefunction
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         has_objective
-
-
+    
+    
 ObjectProperty: has_objectivevariable
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         has_objective
-
-
+    
+    
 ObjectProperty: has_output
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
-
-    Domain:
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
         Transformation
-
-    Range:
-        Data
-
-
+    
+    Range: 
+        InformationArtifact
+    
+    
 ObjectProperty: has_part
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
-
-    Characteristics:
+    
+    Characteristics: 
         Transitive
+    
+    
+ObjectProperty: has_participant
 
-
+    
 ObjectProperty: has_programvariable
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a program variable it uses as input."@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         has_input
-
-
+    
+    
 ObjectProperty: has_tool
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
-
-    Domain:
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
         ModelCalculation
-
-    Range:
+    
+    Range: 
         Model
-
-
+    
+    
 ObjectProperty: is_about
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the thing it covers."@en
-
-    Domain:
+    
+    Domain: 
         Publication
-
-    Range:
+    
+    Range: 
         ModelCalculation
-
-
+    
+    
 ObjectProperty: makes_assumtion
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumtion made for its execution."@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         has_input
-
-
+    
+    
 ObjectProperty: uses_dataset
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
-
-    SubPropertyOf:
+    
+    SubPropertyOf: 
         has_input
-
-
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
-
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 
-
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
-
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
-
+    
 Class: Assumption
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The projected demographic development for a country in the future."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a property of a system or process that is considered to be true."@en
-
-    SubClassOf:
-        Data
-
-
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
 Class: Constraint
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The CO_2 emissions till 2050 have to be reduced by 95%.\" is a constraint for a model calculation about the energy system."@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Dataset
 
-    SubClassOf:
-        Data
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
+The measurement series of an expiriment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: EmpiricalDataset
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        SynthethicDataset
+    
+    
+Class: EnergyUnit
 
-Class: Data
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: InformationArtifact
 
-    Annotations:
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Data is information."@en
-
-    SubClassOf:
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
+    
+    SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: LengthUnit
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "meter"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: MassUnit
 
-Class: EmpiricalData
-
-    Annotations:
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Empirical data is data that is gained from observation in the real world. It has to be tested and found to be true."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en
-
-    SubClassOf:
-        Data
-
-
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
 Class: Model
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part some ModelComponent
-
-
+    
+    
 Class: ModelCalculation
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using a model."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         Transformation
-
-
+    
+    
 Class: ModelComponent
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
-
-
+    
+    
 Class: ModelElement
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         ModelComponent
-
-
+    
+    
 Class: ModelFunction
 
-    Annotations:
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
-
-    SubClassOf:
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en
+    
+    SubClassOf: 
         ModelComponent
-
-
+    
+    
 Class: ModelVariable
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
-
-    SubClassOf:
-        ModelComponent
-
-
+    
+    SubClassOf: 
+        ModelElement
+    
+    
 Class: Optimization
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         ModelCalculation
-
-    DisjointWith:
+    
+    DisjointWith: 
         Simulation
-
-
+    
+    
 Class: Postprocessing
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         Transformation
-
-
+    
+    
 Class: Preprocessing
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         Transformation
-
-
+    
+    
 Class: ProgramParameter
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en
-
-    SubClassOf:
-        Data
-
-
+    
+    SubClassOf: 
+        ModelElement
+    
+    
 Class: Publication
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a document that has been published."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
-
-
+    
+    
 Class: Simulation
 
-    Annotations:
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
-
-    SubClassOf:
+    
+    SubClassOf: 
         ModelCalculation
-
-    DisjointWith:
+    
+    DisjointWith: 
         Optimization
+    
+    
+Class: SynthethicDataset
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        EmpiricalDataset
+    
+    
+Class: TimeUnit
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "seconds"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
 Class: Transformation
 
-    Annotations:
-        definition "A transformation is a process that transforms one or more input into at least one output."@en
-
-    SubClassOf:
+    Annotations: 
+        definition "A transformation is a process that transforms one or more inputs into at least one output."@en
+    
+    SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: UnitOfMeasurement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit of measurement is a specified magnitude of a quantity that is used to express the magnitude of the same kind of quantity."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+DisjointClasses: 
+    EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    LengthUnit,MassUnit,TimeUnit
+
