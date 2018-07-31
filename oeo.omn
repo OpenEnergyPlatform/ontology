@@ -125,6 +125,9 @@ ObjectProperty: has_part
     Characteristics: 
         Transitive
     
+    InverseOf: 
+        part_of
+    
     
 ObjectProperty: has_participant
 
@@ -160,6 +163,18 @@ ObjectProperty: makes_assumption
     
     SubPropertyOf: 
         has_input
+    
+    
+ObjectProperty: part_of
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
+    
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        has_part
     
     
 ObjectProperty: uses_dataset
@@ -223,6 +238,25 @@ The measurement series of an expiriment."@en,
         InformationArtifact
     
     
+Class: Demand
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Demand is generally the need for energy, colloquially referred to as energy consumption.
+Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: DemandSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
 Class: DemographicalAssumption
 
     Annotations: 
@@ -262,6 +296,17 @@ Class: ElectricCurrentUnit
         UnitOfMeasurement
     
     
+Class: ElectricalLoad
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
+
+Source: https://en.wikipedia.org/wiki/Electrical_load"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: EmpiricalDataset
 
     Annotations: 
@@ -285,6 +330,38 @@ Class: EnergyUnit
         UnitOfMeasurement
     
     
+Class: Generator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
+Source: https://en.wikipedia.org/wiki/Electric_generator"@en
+    
+    SubClassOf: 
+        GridComponent,
+        part_of some Grid
+    
+    
+Class: Grid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
+Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
+        rdfs:comment "Synonym: Network"@en
+    
+    SubClassOf: 
+        GridComponent,
+        has_part some GridComponent
+    
+    
+Class: GridComponent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: InformationArtifact
 
     Annotations: 
@@ -302,6 +379,17 @@ Class: LengthUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: LoadArea
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A load area is an area that contains energy consumption.
+
+Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: MassUnit
@@ -401,6 +489,25 @@ Class: Postprocessing
         Transformation
     
     
+Class: Power
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the rate of doing work, the amount of energy transferred per unit time.
+Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: PowerUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power unit is a unit of measurement used to express the rate of doing work, the amount of energy transferred per unit time."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
 Class: Preprocessing
 
     Annotations: 
@@ -429,6 +536,15 @@ Class: Publication
         InformationArtifact
     
     
+Class: Quantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: RegulationAssumption
 
     Annotations: 
@@ -441,6 +557,36 @@ Class: RegulationAssumption
         SubsidyAssumption
     
     
+Class: ResistanceUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A resistance unit is a unit of measurement used to express difficulty to pass an electric current through a conductor."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: Sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Shunt_Impedance
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
+
+Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
+    
+    SubClassOf: 
+        GridComponent,
+        part_of some Grid
+    
+    
 Class: Simulation
 
     Annotations: 
@@ -451,6 +597,28 @@ Class: Simulation
     
     DisjointWith: 
         Optimization
+    
+    
+Class: Storage_Unit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
+    
+    SubClassOf: 
+        GridComponent,
+        part_of some Grid
+    
+    
+Class: Subgrid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
+    
+    SubClassOf: 
+        Grid,
+        GridComponent,
+        has_part some GridComponent,
+        part_of some Grid
     
     
 Class: SubsidyAssumption
@@ -505,6 +673,19 @@ Class: Transformation
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: Transformer
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
+2. A transformer is a static machine used for transforming power from one circuit to another without changing frequency. This is a very basic definition of transformer. Since there is no rotating or moving part so transformer is a static device. Transformer operates on ac supply. Transformer works on the principle of mutual induction.
+
+Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
+    
+    SubClassOf: 
+        GridComponent,
+        part_of some Grid
     
     
 Class: UnitOfMeasurement
@@ -718,6 +899,16 @@ Used for torque"@en
         EnergyUnit
     
     
+Individual: Ohm
+
+    Annotations: 
+        rdfs:comment "Unit symbol: Ω
+SI derived unit for electrical resistance"@en
+    
+    Types: 
+        ResistanceUnit
+    
+    
 Individual: Ounce
 
     Annotations: 
@@ -769,6 +960,16 @@ SI derived unit for voltage."@en
         VoltageUnit
     
     
+Individual: Watt
+
+    Annotations: 
+        rdfs:comment "Unit symbol: W
+SI derived unit for power."@en
+    
+    Types: 
+        PowerUnit
+    
+    
 Individual: Week
 
     Annotations: 
@@ -790,8 +991,14 @@ Individual: Yard
     
     
 DisjointClasses: 
+    CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
+
+DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    Generator,Grid,Shunt_Impedance,Storage_Unit,Subgrid,Transformer
 
