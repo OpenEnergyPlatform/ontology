@@ -48,6 +48,72 @@ AnnotationProperty: rdfs:isDefinedBy
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: covers
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
+    
+    
+ObjectProperty: covers_region
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        GeographicRegion
+    
+    
+ObjectProperty: covers_technology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    
+ObjectProperty: covers_timeframe
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    
+ObjectProperty: has_author
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_client
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
 ObjectProperty: has_constraint
 
     Annotations: 
@@ -55,6 +121,30 @@ ObjectProperty: has_constraint
     
     SubPropertyOf: 
         has_input
+    
+    
+ObjectProperty: has_contact_person
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_funding_source
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
     
     
 ObjectProperty: has_input
@@ -141,6 +231,30 @@ ObjectProperty: has_programvariable
         has_participant
     
     
+ObjectProperty: has_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
+    
+    
+ObjectProperty: has_spatial_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_time_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
 ObjectProperty: has_tool
 
     Annotations: 
@@ -163,6 +277,18 @@ ObjectProperty: makes_assumption
     
     SubPropertyOf: 
         has_input
+    
+    
+ObjectProperty: models_sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        Sector
     
     
 ObjectProperty: part_of
@@ -198,11 +324,38 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
     
+Class: Acronym
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Agent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An agent is a person or group doing something."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: Assumption
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: BooleanVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
     
     SubClassOf: 
         InformationArtifact
@@ -217,6 +370,12 @@ Class: CapacitanceUnit
         UnitOfMeasurement
     
     
+Class: City
+
+    SubClassOf: 
+        GeographicRegion
+    
+    
 Class: Constraint
 
     Annotations: 
@@ -225,6 +384,28 @@ Class: Constraint
     
     SubClassOf: 
         InformationArtifact
+    
+    
+Class: Continent
+
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: Country
+
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: DOI
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
+source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
+    
+    SubClassOf: 
+        Identifier
     
     
 Class: Dataset
@@ -320,6 +501,42 @@ Class: EmpiricalDataset
         SynthethicDataset
     
     
+Class: EnergyGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: EnergySector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: EnergyStorageTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: EnergyTransferTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
 Class: EnergyUnit
 
     Annotations: 
@@ -328,6 +545,12 @@ Class: EnergyUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: FederalState
+
+    SubClassOf: 
+        GeographicRegion
     
     
 Class: Generator
@@ -341,6 +564,15 @@ Source: https://en.wikipedia.org/wiki/Electric_generator"@en
         part_of some Grid
     
     
+Class: GeographicRegion
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: Grid
 
     Annotations: 
@@ -349,7 +581,7 @@ Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
         rdfs:comment "Synonym: Network"@en
     
     SubClassOf: 
-        GridComponent,
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part some GridComponent
     
     
@@ -362,6 +594,15 @@ Class: GridComponent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: Identifier
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
 Class: InformationArtifact
 
     Annotations: 
@@ -369,6 +610,15 @@ Class: InformationArtifact
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Institution
+
+    SubClassOf: 
+        Organization
+    
+    DisjointWith: 
+        Political_Party
     
     
 Class: LengthUnit
@@ -389,7 +639,7 @@ Class: LoadArea
 Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        GeographicRegion
     
     
 Class: MassUnit
@@ -471,6 +721,24 @@ Class: Optimization
         Simulation
     
     
+Class: Organization
+
+    SubClassOf: 
+        Agent
+    
+    DisjointWith: 
+        Person
+    
+    
+Class: Person
+
+    SubClassOf: 
+        Agent
+    
+    DisjointWith: 
+        Organization
+    
+    
 Class: PoliticalAssumption
 
     Annotations: 
@@ -478,6 +746,15 @@ Class: PoliticalAssumption
     
     SubClassOf: 
         Assumption
+    
+    
+Class: Political_Party
+
+    SubClassOf: 
+        Organization
+    
+    DisjointWith: 
+        Institution
     
     
 Class: Postprocessing
@@ -539,7 +816,8 @@ Class: Publication
 Class: Quantity
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Other Idea: A number together with a unit of measurement to quantify an entity."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
@@ -575,7 +853,7 @@ Class: Sector
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: Shunt_Impedance
+Class: ShuntImpedance
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
@@ -599,7 +877,7 @@ Class: Simulation
         Optimization
     
     
-Class: Storage_Unit
+Class: StorageUnit
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
@@ -656,6 +934,15 @@ Class: TechnologicalAssumption
         Assumption
     
     
+Class: Technology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: TimeUnit
 
     Annotations: 
@@ -664,6 +951,15 @@ Class: TimeUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: Title
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
+    
+    SubClassOf: 
+        Identifier
     
     
 Class: Transformation
@@ -744,6 +1040,12 @@ Individual: Day
     
     Types: 
         TimeUnit
+    
+    
+Individual: False
+
+    Types: 
+        BooleanVariable
     
     
 Individual: Farad
@@ -950,6 +1252,12 @@ Used for natural gas"@en
         EnergyUnit
     
     
+Individual: True
+
+    Types: 
+        BooleanVariable
+    
+    
 Individual: Volt
 
     Annotations: 
@@ -991,14 +1299,23 @@ Individual: Yard
     
     
 DisjointClasses: 
+    Acronym,DOI,Title
+
+DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
+
+DisjointClasses: 
+    City,Continent,Country,FederalState,LoadArea
 
 DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
+    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+
+DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
 DisjointClasses: 
-    Generator,Grid,Shunt_Impedance,Storage_Unit,Subgrid,Transformer
+    Generator,Grid,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
