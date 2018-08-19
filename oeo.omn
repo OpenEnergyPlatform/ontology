@@ -372,6 +372,9 @@ Class: CapacitanceUnit
     
 Class: City
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A city is a large human settlement."@en
+    
     SubClassOf: 
         GeographicRegion
     
@@ -394,6 +397,9 @@ Class: Continent
     
 Class: Country
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A country is a geographic region that is an distinct political entity."@en
+    
     SubClassOf: 
         GeographicRegion
     
@@ -485,7 +491,7 @@ Class: ElectricalLoad
 Source: https://en.wikipedia.org/wiki/Electrical_load"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        Quantity
     
     
 Class: EmpiricalDataset
@@ -549,6 +555,9 @@ Class: EnergyUnit
     
 Class: FederalState
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A federal state is a geographic region that is a political entity within a country. It is partially self governing."@en
+    
     SubClassOf: 
         GeographicRegion
     
@@ -614,11 +623,11 @@ Class: InformationArtifact
     
 Class: Institution
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en
+    
     SubClassOf: 
         Organization
-    
-    DisjointWith: 
-        Political_Party
     
     
 Class: LengthUnit
@@ -658,7 +667,7 @@ Class: Model
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        Software,
         has_part some ModelComponent
     
     
@@ -721,8 +730,20 @@ Class: Optimization
         Simulation
     
     
+Class: OptimizationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
 Class: Organization
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
+    
     SubClassOf: 
         Agent
     
@@ -732,6 +753,9 @@ Class: Organization
     
 Class: Person
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human beeing."@en
+    
     SubClassOf: 
         Agent
     
@@ -748,13 +772,13 @@ Class: PoliticalAssumption
         Assumption
     
     
-Class: Political_Party
+Class: PoliticalParty
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en
+    
     SubClassOf: 
         Organization
-    
-    DisjointWith: 
-        Institution
     
     
 Class: Postprocessing
@@ -875,6 +899,24 @@ Class: Simulation
     
     DisjointWith: 
         Optimization
+    
+    
+Class: SimulationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: Software
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
+    
+    SubClassOf: 
+        InformationArtifact
     
     
 Class: StorageUnit
@@ -1303,9 +1345,6 @@ DisjointClasses:
 
 DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
-
-DisjointClasses: 
-    City,Continent,Country,FederalState,LoadArea
 
 DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
