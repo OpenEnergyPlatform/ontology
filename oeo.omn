@@ -66,6 +66,18 @@ ObjectProperty: covers_region
         GeographicRegion
     
     
+ObjectProperty: covers_sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        Sector
+    
+    
 ObjectProperty: covers_technology
 
     Annotations: 
@@ -82,6 +94,12 @@ ObjectProperty: covers_timeframe
     
     SubPropertyOf: 
         covers
+    
+    
+ObjectProperty: handles_uncertainty
+
+    SubPropertyOf: 
+        owl:topObjectProperty
     
     
 ObjectProperty: has_author
@@ -114,6 +132,12 @@ ObjectProperty: has_client
         Agent
     
     
+ObjectProperty: has_complexity
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: has_constraint
 
     Annotations: 
@@ -123,13 +147,19 @@ ObjectProperty: has_constraint
         has_input
     
     
-ObjectProperty: has_contact_person
+ObjectProperty: has_contact
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
     
     SubPropertyOf: 
         has_participant
+    
+    
+ObjectProperty: has_documentation
+
+    SubPropertyOf: 
+        has_part
     
     
 ObjectProperty: has_funding_source
@@ -160,6 +190,18 @@ ObjectProperty: has_input
     
     Range: 
         InformationArtifact
+    
+    
+ObjectProperty: has_license
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        has_part
     
     
 ObjectProperty: has_objective
@@ -246,7 +288,7 @@ ObjectProperty: has_spatial_resolution
         has_resolution
     
     
-ObjectProperty: has_time_resolution
+ObjectProperty: has_temporal_resolution
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
@@ -270,6 +312,30 @@ ObjectProperty: has_tool
         Model
     
     
+ObjectProperty: has_website
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_referenced_by
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        references
+    
+    
+ObjectProperty: is_used_by
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        uses
+    
+    
 ObjectProperty: makes_assumption
 
     Annotations: 
@@ -279,17 +345,8 @@ ObjectProperty: makes_assumption
         has_input
     
     
-ObjectProperty: models_sector
+ObjectProperty: owl:topObjectProperty
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    Range: 
-        Sector
-    
     
 ObjectProperty: part_of
 
@@ -303,6 +360,24 @@ ObjectProperty: part_of
         has_part
     
     
+ObjectProperty: references
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: uses
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        is_used_by
+    
+    
 ObjectProperty: uses_dataset
 
     Annotations: 
@@ -310,6 +385,18 @@ ObjectProperty: uses_dataset
     
     SubPropertyOf: 
         has_input
+    
+    
+ObjectProperty: uses_external_optimizer
+
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_software
+
+    SubPropertyOf: 
+        uses
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
