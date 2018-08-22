@@ -1,0 +1,132 @@
+@prefix oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+:etrago
+
+  #####################
+  # Basic Information #
+  #####################
+
+  rdfs:label
+    'Electricity Transmission Grid Optimization' ,
+    'eTraGo' ;
+  # This replaces `primary purpose`
+  rdfs:comment 'eTraGo aims at optimizing power plant and storage dispatch under consideration of transmission grid constraints. The high-voltage grid (110 kV) is considered as a part of the transmission grid. Investments for grid and storage expansion can be optimized.' ;
+  # `Methodical focus` is illdefined
+  oeo:has_author
+    :lukas_wienholt ,
+    :julian_bartels ,
+    :ulf_mueller ,
+    :martin_soethe ,
+    :wolf_dieter_bunke ;
+  oeo:has_contact
+    :ulf_mueller ,
+    'ulf.p.mueller@hs-flensburg.de' ;
+  oeo:has_website <https://openegoproject.wordpress.com/> ;
+  oeo:has_logo <https://link.zum/bild> ;
+  oeo:has_output
+    [ a :Power_plant_dispatch ] ,
+    [ a :Storage_dispatch ] ,
+    [ a :Line_loading ] ,
+    [ a :P_Series ] ,
+    [ a :Q_series ] ,
+    [ a :Costs ] ;
+  oeo:has_documentation
+    <https://etrago.readthedocs.io/en/latest/> ,
+    <https://github.com/openego/eTraGo> ;
+  oeo:has_funding_source :bmwi ;
+
+  ############
+  # Openness #
+  ############
+
+  oeo:has_license :agpl3 ;
+  oeo:has_source <https://github.com/openego/eTraGo> ;
+  oeo:has_input <https://openenergy-platform.org/dataedit/view/model_draft>;
+
+  ############
+  # Software #
+  ############
+
+  oeo:uses_software
+    :python ,
+    :pypsa ,
+    :scikit-learn ,
+    :pandas ,
+    :sqlalchemy ,
+    :oemof-db ,
+    :geoalchemy2 ,
+    :ego-io ,
+    :matplotlib ;
+
+  oeo:uses_external_optimizer
+    :some_specific_optimizer ;
+
+  # oeo:uses_gui_library :wx_widgets
+  a oeo:AbsentUsesGuiLibrary ;
+
+  ##############
+  # References #
+  ##############
+
+  oeo:is_referenced_by <https://openegoproject.wordpress.com/publications/> ;
+  # `larger scale usage` is illdefined
+
+  ############
+  # Coverage #
+  ############
+
+  oeo:covers_sector
+    oeo:electricity_sector ,
+    oeo:household_sector ,
+    oeo:industry_sector ,
+    oeo:commercial_sector ,
+    oeo:economic_sector ;
+
+  # oeo:covers_energy_carriers
+  a oeo:AbsentCoversEnergyCarriers ;
+
+  oeo:covers_technology
+    oeo:ac_load_flow ,
+    oeo:dc_load_flow ,
+    oeo:net_transfer_capacities ,
+    oeo:battery ,
+    oeo:pump_hydro ,
+    oeo:gas ;
+
+  # oeo:covers_user_behaviour
+  a oeo:AbsentCoversUserBehaviour ;
+
+  # oeo:covers_efficiency_change
+  a oeo:AbsentCoversEfficiencyChange ;
+
+  # oeo:covers_market_models
+  a oeo:AbsentMarketModel ;
+
+  oeo:covers [a oeo:GeographicalRegion] ;
+
+  # oeo:has_spatial_resolution {WIP} ;
+
+  # oeo:has_temporal_resolution oeo:hourly ;
+
+  ###########################
+  # Mathematical Properties #
+  ###########################
+
+  oeo:has_complexity oeo:linear_complexity ;
+  oeo:has_objective oeo:costs ;
+  oeo:handles_uncertainty oeo:deterministic ;
+  # oeo:anchored_assumption {WIP} ;
+
+  oeo:has_input [ oeo:has_format oeo:postgres ] ;
+  oeo:has_output
+    [ oeo:has_format oeo:postgres ] ,
+    [ oeo:has_format oeo:csv ] ;
+
+  oeo:uses :some_model
+  oeo:is_used_by :some_model
