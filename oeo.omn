@@ -542,6 +542,12 @@ Class: CoalPowerplant
         Generator
     
     
+Class: CommerceSector
+
+    SubClassOf: 
+        Sector
+    
+    
 Class: Constraint
 
     Annotations: 
@@ -614,15 +620,6 @@ Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
         Quantity
     
     
-Class: DemandSector
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
-    
-    SubClassOf: 
-        Sector
-    
-    
 Class: DemographicalAssumption
 
     Annotations: 
@@ -673,10 +670,12 @@ Class: ElectricalLoad
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
 
-Source: https://en.wikipedia.org/wiki/Electrical_load"@en
+Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
+        rdfs:label "ElectricalDemand"@en,
+        rdfs:label "ElectricalLoad"@en
     
     SubClassOf: 
-        Quantity
+        Demand
     
     
 Class: ElectricityGrid
@@ -698,6 +697,18 @@ Class: ElectricityGridComponent
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: ElectricitySector
+
+    SubClassOf: 
+        Sector
+    
+    
+Class: Emission
+
+    SubClassOf: 
+        Quantity
     
     
 Class: EmpiricalDataset
@@ -726,15 +737,6 @@ Class: EnergyGeneratorTechnology
     
     SubClassOf: 
         Technology
-    
-    
-Class: EnergySector
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
-    
-    SubClassOf: 
-        Sector
     
     
 Class: EnergyStorageTechnology
@@ -845,6 +847,24 @@ Class: Heat
         EnergyCarrier
     
     
+Class: HeatDemand
+
+    SubClassOf: 
+        Demand
+    
+    
+Class: HeatSector
+
+    SubClassOf: 
+        Sector
+    
+    
+Class: HouseholdSector
+
+    SubClassOf: 
+        Sector
+    
+    
 Class: Identifier
 
     Annotations: 
@@ -852,6 +872,12 @@ Class: Identifier
     
     SubClassOf: 
         InformationArtifact
+    
+    
+Class: IndustrySector
+
+    SubClassOf: 
+        Sector
     
     
 Class: InformationArtifact
@@ -1351,6 +1377,12 @@ Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
         part_of some ElectricityGrid
     
     
+Class: TransportSector
+
+    SubClassOf: 
+        Sector
+    
+    
 Class: UndirectedEdge
 
     SubClassOf: 
@@ -1743,10 +1775,16 @@ DisjointClasses:
     Coal,Gas,Heat,Light,Nuclear,Oil,Water,Wind
 
 DisjointClasses: 
+    CommerceSector,HouseholdSector,IndustrySector
+
+DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
     ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses: 
+    ElectricitySector,HeatSector,TransportSector
 
 DisjointClasses: 
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
