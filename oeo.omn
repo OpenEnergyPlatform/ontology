@@ -476,6 +476,18 @@ Class: Assumption
         InformationArtifact
     
     
+Class: BioGasGenerator
+
+    SubClassOf: 
+        GasPowerplant
+    
+    
+Class: BiomassPowerplant
+
+    SubClassOf: 
+        Generator
+    
+    
 Class: BooleanVariable
 
     Annotations: 
@@ -508,6 +520,18 @@ Class: City
     
     SubClassOf: 
         GeographicRegion
+    
+    
+Class: Coal
+
+    SubClassOf: 
+        Resource
+    
+    
+Class: CoalPowerplant
+
+    SubClassOf: 
+        Generator
     
     
 Class: Constraint
@@ -730,6 +754,19 @@ Class: FederalState
         GeographicRegion
     
     
+Class: Gas
+
+    SubClassOf: 
+        Resource
+    
+    
+Class: GasPowerplant
+
+    SubClassOf: 
+        Generator,
+        uses some Gas
+    
+    
 Class: Generator
 
     Annotations: 
@@ -753,10 +790,26 @@ Class: GeographicRegion
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: GeothermalGenerator
+
+    SubClassOf: 
+        Generator,
+        uses value Heat
+    
+    
 Class: Graph
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: HardCoalPowerplant
+
+    EquivalentTo: 
+        uses value HardCoal
+    
+    SubClassOf: 
+        CoalPowerplant
     
     
 Class: Identifier
@@ -794,6 +847,15 @@ Class: LengthUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: LignitePowerplant
+
+    EquivalentTo: 
+        uses value Lignite
+    
+    SubClassOf: 
+        CoalPowerplant
     
     
 Class: Line
@@ -896,6 +958,20 @@ Class: Node
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: NuclearPowerplant
+
+    SubClassOf: 
+        Generator,
+        uses value Nuclear
+    
+    
+Class: OilPowerplant
+
+    SubClassOf: 
+        Generator,
+        uses value Oil
+    
+    
 Class: Optimization
 
     Annotations: 
@@ -939,6 +1015,13 @@ Class: Person
     
     DisjointWith: 
         Organization
+    
+    
+Class: PhotovoltaicGenerator
+
+    SubClassOf: 
+        Generator,
+        uses value Light
     
     
 Class: PoliticalAssumption
@@ -1044,6 +1127,18 @@ Class: ResistanceUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: Resource
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: RunOfRiverPowerplant
+
+    SubClassOf: 
+        WaterTurbine
     
     
 Class: Sector
@@ -1228,6 +1323,26 @@ Class: VoltageUnit
         UnitOfMeasurement
     
     
+Class: WastePowerplant
+
+    SubClassOf: 
+        Generator
+    
+    
+Class: WaterTurbine
+
+    SubClassOf: 
+        Generator,
+        uses value Water
+    
+    
+Class: WindTurbine
+
+    SubClassOf: 
+        Generator,
+        uses value Wind
+    
+    
 Individual: Ampere
 
     Annotations: 
@@ -1236,6 +1351,12 @@ SI unit for electric current."@en
     
     Types: 
         ElectricCurrentUnit
+    
+    
+Individual: Coal
+
+    Types: 
+        Resource
     
     
 Individual: Common_year
@@ -1314,6 +1435,18 @@ SI unit for mass: kg (1 kg = 1000 g)"@en
         MassUnit
     
     
+Individual: HardCoal
+
+    Types: 
+        Coal
+    
+    
+Individual: Heat
+
+    Types: 
+        Resource
+    
+    
 Individual: Hour
 
     Annotations: 
@@ -1376,6 +1509,18 @@ Individual: Leap_year
         TimeUnit
     
     
+Individual: Light
+
+    Types: 
+        Resource
+    
+    
+Individual: Lignite
+
+    Types: 
+        Coal
+    
+    
 Individual: Metre
 
     Annotations: 
@@ -1427,6 +1572,12 @@ Used for torque"@en
         EnergyUnit
     
     
+Individual: Nuclear
+
+    Types: 
+        Resource
+    
+    
 Individual: Ohm
 
     Annotations: 
@@ -1435,6 +1586,12 @@ SI derived unit for electrical resistance"@en
     
     Types: 
         ResistanceUnit
+    
+    
+Individual: Oil
+
+    Types: 
+        Resource
     
     
 Individual: Ounce
@@ -1494,6 +1651,12 @@ SI derived unit for voltage."@en
         VoltageUnit
     
     
+Individual: Water
+
+    Types: 
+        Resource
+    
+    
 Individual: Watt
 
     Annotations: 
@@ -1512,6 +1675,12 @@ Individual: Week
     
     Types: 
         TimeUnit
+    
+    
+Individual: Wind
+
+    Types: 
+        Resource
     
     
 Individual: Yard
