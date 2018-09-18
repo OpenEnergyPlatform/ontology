@@ -279,6 +279,24 @@ ObjectProperty: has_resolution
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
     
     
+ObjectProperty: has_sink
+
+    SubPropertyOf: 
+        is_connected_to
+    
+    DisjointWith: 
+        has_source
+    
+    
+ObjectProperty: has_source
+
+    SubPropertyOf: 
+        is_connected_to
+    
+    DisjointWith: 
+        has_sink
+    
+    
 ObjectProperty: has_spatial_resolution
 
     Annotations: 
@@ -316,6 +334,15 @@ ObjectProperty: has_website
 
     SubPropertyOf: 
         is_referenced_by
+    
+    
+ObjectProperty: is_connected_to
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Symmetric
     
     
 ObjectProperty: is_referenced_by
@@ -411,6 +438,16 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
     
+Class: ACLine
+
+    Annotations: 
+        rdfs:comment "undirected"
+    
+    SubClassOf: 
+        Line,
+        UndirectedEdge
+    
+    
 Class: Acronym
 
     Annotations: 
@@ -446,6 +483,13 @@ Class: BooleanVariable
     
     SubClassOf: 
         InformationArtifact
+    
+    
+Class: Bus
+
+    SubClassOf: 
+        ElectricityGridComponent,
+        Node
     
     
 Class: CapacitanceUnit
@@ -489,6 +533,16 @@ Class: Country
     
     SubClassOf: 
         GeographicRegion
+    
+    
+Class: DCLine
+
+    Annotations: 
+        rdfs:comment "directed"
+    
+    SubClassOf: 
+        DirectedEdge,
+        Line
     
     
 Class: DOI
@@ -541,6 +595,12 @@ Class: DemographicalAssumption
         Assumption
     
     
+Class: DirectedEdge
+
+    SubClassOf: 
+        Link
+    
+    
 Class: EconomicalAssumption
 
     Annotations: 
@@ -579,6 +639,27 @@ Source: https://en.wikipedia.org/wiki/Electrical_load"@en
     
     SubClassOf: 
         Quantity
+    
+    
+Class: ElectricityGrid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
+Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
+        rdfs:comment "Synonym: Network"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some ElectricityGridComponent
+    
+    
+Class: ElectricityGridComponent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: EmpiricalDataset
@@ -656,8 +737,11 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        GridComponent,
-        part_of some Grid
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    DisjointWith: 
+        Line
     
     
 Class: GeographicRegion
@@ -669,23 +753,8 @@ Class: GeographicRegion
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: Grid
+Class: Graph
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
-Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
-        rdfs:comment "Synonym: Network"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some GridComponent
-    
-    
-Class: GridComponent
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
-    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
@@ -725,6 +794,22 @@ Class: LengthUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: Line
+
+    SubClassOf: 
+        ElectricityGridComponent,
+        Link
+    
+    DisjointWith: 
+        Generator
+    
+    
+Class: Link
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: LoadArea
@@ -803,6 +888,12 @@ Class: ModelVariable
     
     SubClassOf: 
         ModelElement
+    
+    
+Class: Node
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: Optimization
@@ -972,8 +1063,8 @@ Class: ShuntImpedance
 Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
     
     SubClassOf: 
-        GridComponent,
-        part_of some Grid
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
     
     
 Class: Simulation
@@ -1012,8 +1103,8 @@ Class: StorageUnit
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
     
     SubClassOf: 
-        GridComponent,
-        part_of some Grid
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
     
     
 Class: Subgrid
@@ -1022,10 +1113,10 @@ Class: Subgrid
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
     
     SubClassOf: 
-        Grid,
-        GridComponent,
-        has_part some GridComponent,
-        part_of some Grid
+        ElectricityGrid,
+        ElectricityGridComponent,
+        has_part some ElectricityGridComponent,
+        part_of some ElectricityGrid
     
     
 Class: SubsidyAssumption
@@ -1109,8 +1200,14 @@ Class: Transformer
 Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
     
     SubClassOf: 
-        GridComponent,
-        part_of some Grid
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    
+Class: UndirectedEdge
+
+    SubClassOf: 
+        Link
     
     
 Class: UnitOfMeasurement
@@ -1437,11 +1534,11 @@ DisjointClasses:
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
+    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses: 
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
-
-DisjointClasses: 
-    Generator,Grid,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
