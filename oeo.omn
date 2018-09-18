@@ -444,6 +444,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 Class: ACLine
 
     Annotations: 
+        rdfs:label "AC-Line"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
+Generally, flows in the model can not be controlled but are a function of the resitance and electrochemical potential difference."@en,
         rdfs:comment "undirected"
     
     SubClassOf: 
@@ -582,7 +585,10 @@ Class: Country
 Class: DCLine
 
     Annotations: 
-        rdfs:comment "directed"
+        rdfs:label "HVDC-Line"@en,
+        rdfs:comment "directed",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
+Genreally, flows in the model can be controlled/optimized."@en
     
     SubClassOf: 
         DirectedEdge,
@@ -932,6 +938,10 @@ Class: LignitePowerplant
     
 Class: Line
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An uninterrupted transmission system between two nodes in the electric grid."@en,
+        rdfs:label "PowerLine"@en
+    
     SubClassOf: 
         ElectricityGridComponent,
         Link
@@ -1273,7 +1283,7 @@ Class: Software
 Class: StorageUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy, but not necessarily as an electirc charge."@en
     
     SubClassOf: 
         ElectricityGridComponent,
