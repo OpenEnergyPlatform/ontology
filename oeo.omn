@@ -45,6 +45,9 @@ AnnotationProperty: rdfs:comment
 AnnotationProperty: rdfs:isDefinedBy
 
     
+AnnotationProperty: rdfs:label
+
+    
 Datatype: rdf:PlainLiteral
 
     
@@ -499,6 +502,11 @@ Class: BooleanVariable
     
 Class: Bus
 
+    Annotations: 
+        rdfs:label "NetworkNode"@en,
+        rdfs:label "Bus"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en
+    
     SubClassOf: 
         ElectricityGridComponent,
         Node
@@ -525,7 +533,7 @@ Class: City
 Class: Coal
 
     SubClassOf: 
-        Resource
+        EnergyCarrier
     
     
 Class: CoalPowerplant
@@ -699,6 +707,12 @@ Class: EmpiricalDataset
         SynthethicDataset
     
     
+Class: EnergyCarrier
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: EnergyGeneratorTechnology
 
     Annotations: 
@@ -757,7 +771,7 @@ Class: FederalState
 Class: Gas
 
     SubClassOf: 
-        Resource
+        EnergyCarrier
     
     
 Class: GasPowerplant
@@ -794,7 +808,7 @@ Class: GeothermalGenerator
 
     SubClassOf: 
         Generator,
-        uses value Heat
+        uses some Heat
     
     
 Class: Graph
@@ -803,13 +817,26 @@ Class: Graph
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: HardCoal
+
+    SubClassOf: 
+        Coal
+    
+    DisjointWith: 
+        Lignite
+    
+    
 Class: HardCoalPowerplant
 
-    EquivalentTo: 
-        uses value HardCoal
-    
     SubClassOf: 
-        CoalPowerplant
+        CoalPowerplant,
+        uses some HardCoal
+    
+    
+Class: Heat
+
+    SubClassOf: 
+        EnergyCarrier
     
     
 Class: Identifier
@@ -849,13 +876,26 @@ Class: LengthUnit
         UnitOfMeasurement
     
     
+Class: Light
+
+    SubClassOf: 
+        EnergyCarrier
+    
+    
+Class: Lignite
+
+    SubClassOf: 
+        Coal
+    
+    DisjointWith: 
+        HardCoal
+    
+    
 Class: LignitePowerplant
 
-    EquivalentTo: 
-        uses value Lignite
-    
     SubClassOf: 
-        CoalPowerplant
+        CoalPowerplant,
+        uses some Lignite
     
     
 Class: Line
@@ -958,18 +998,30 @@ Class: Node
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: Nuclear
+
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: NuclearPowerplant
 
     SubClassOf: 
         Generator,
-        uses value Nuclear
+        uses some Nuclear
+    
+    
+Class: Oil
+
+    SubClassOf: 
+        EnergyCarrier
     
     
 Class: OilPowerplant
 
     SubClassOf: 
         Generator,
-        uses value Oil
+        uses some Oil
     
     
 Class: Optimization
@@ -1021,7 +1073,7 @@ Class: PhotovoltaicGenerator
 
     SubClassOf: 
         Generator,
-        uses value Light
+        uses some Light
     
     
 Class: PoliticalAssumption
@@ -1127,12 +1179,6 @@ Class: ResistanceUnit
     
     SubClassOf: 
         UnitOfMeasurement
-    
-    
-Class: Resource
-
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: RunOfRiverPowerplant
@@ -1329,18 +1375,30 @@ Class: WastePowerplant
         Generator
     
     
+Class: Water
+
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: WaterTurbine
 
     SubClassOf: 
         Generator,
-        uses value Water
+        uses some Water
+    
+    
+Class: Wind
+
+    SubClassOf: 
+        EnergyCarrier
     
     
 Class: WindTurbine
 
     SubClassOf: 
         Generator,
-        uses value Wind
+        uses some Wind
     
     
 Individual: Ampere
@@ -1355,9 +1413,6 @@ SI unit for electric current."@en
     
 Individual: Coal
 
-    Types: 
-        Resource
-    
     
 Individual: Common_year
 
@@ -1437,15 +1492,9 @@ SI unit for mass: kg (1 kg = 1000 g)"@en
     
 Individual: HardCoal
 
-    Types: 
-        Coal
-    
     
 Individual: Heat
 
-    Types: 
-        Resource
-    
     
 Individual: Hour
 
@@ -1511,15 +1560,9 @@ Individual: Leap_year
     
 Individual: Light
 
-    Types: 
-        Resource
-    
     
 Individual: Lignite
 
-    Types: 
-        Coal
-    
     
 Individual: Metre
 
@@ -1574,9 +1617,6 @@ Used for torque"@en
     
 Individual: Nuclear
 
-    Types: 
-        Resource
-    
     
 Individual: Ohm
 
@@ -1590,9 +1630,6 @@ SI derived unit for electrical resistance"@en
     
 Individual: Oil
 
-    Types: 
-        Resource
-    
     
 Individual: Ounce
 
@@ -1653,9 +1690,6 @@ SI derived unit for voltage."@en
     
 Individual: Water
 
-    Types: 
-        Resource
-    
     
 Individual: Watt
 
@@ -1679,9 +1713,6 @@ Individual: Week
     
 Individual: Wind
 
-    Types: 
-        Resource
-    
     
 Individual: Yard
 
@@ -1698,6 +1729,9 @@ DisjointClasses:
 
 DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
+
+DisjointClasses: 
+    Coal,Gas,Heat,Light,Nuclear,Oil,Water,Wind
 
 DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
