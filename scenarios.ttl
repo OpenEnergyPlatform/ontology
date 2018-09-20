@@ -1,8 +1,12 @@
 
 @base: <http://openenergy-platform.org/ontology/szenarios.ttl/>
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 :Basisszenario2020 a :Scenario.
+:Basisszenario2020 :has_institution :ReinerLemoineInstitut.
+:Basisszenario2020 :has_author :ProfDrIngJochenTwele, :DiplIngBeritMüller, :DiplIngCarolineMöller.
+:Basisszenario2020 :has_client :Buendnis90DieGruenen.
 
 :Basisszenario2020 :has_tool :MehrKnotenModell.
 
@@ -18,7 +22,7 @@
 :Energieeinsparung a :Constraint.
 :Energieeinsparung :appliesTo :EnergyConsumptionBerlinBrandenburg.
 :Energieeinsparung :hasYear :2020.
-:Energieeinsparung :hasMaximum [a :Percentage; :has_Percentage "20"; :appliesTo :EnergyConsumptionBerlinBrandenburg2010].
+:Energieeinsparung :hasMaximum [a :Percentage; :has_Percentage "20"^^xsd:integer; :appliesTo :EnergyConsumptionBerlinBrandenburg2010].
 
 :Basisszenario2020 :uses_dataset :LoadProfileBerlinBrandenburg2010.
 :LoadProfileBerlinBrandenburg2010 a :LoadProfile, :EmpiricalDataset.
@@ -65,28 +69,28 @@
 :AusbauzielWindkraftBrandenburg :appliesTo :InstalledPowerFromWind.
 :AusbauzielWindkraftBrandenburg :hasRegion :Brandenburg.
 :AusbauzielWindkraftBrandenburg :hasYear :2020.
-:AusbauzielWindkraftBrandenburg :hasMinimum [:hasNumeral 7500; :hasUnitofMeasurement :Megawatt].
+:AusbauzielWindkraftBrandenburg :hasMinimum [:hasNumeral "7500"^^xsd:integer; :hasUnitofMeasurement :Megawatt].
 
 :Basisszenario2020 :makes_assumption :AusbauzielWindkraftBerlin
 :AusbauzielWindkraftBerlin a :Constraint.
 :AusbauzielWindkraftBerlin :appliesTo :InstalledPowerFromWind.
 :AusbauzielWindkraftBerlin :hasRegion :Berlin.
 :AusbauzielWindkraftBerlin :hasYear :2020.
-:AusbauzielWindkraftBerlin :hasMinimum [:hasNumeral 140; hasUnitofMeasurement :Megawatt].
+:AusbauzielWindkraftBerlin :hasMinimum [:hasNumeral "140"^^xsd:integer; hasUnitofMeasurement :Megawatt].
 
 :Basisszenario2020 :makes_assumption :AusbauzielPhotovoltaikBrandenburg.
 :AusbauzielPhotovoltaikBrandenburg a :Constraint.
 :AusbauzielPhotovoltaikBrandenburg :appliesTo :InstalledPowerFromPhotovoltaik.
 :AusbauzielPhotovoltaikBrandenburg :hasRegion :Brandenburg.
 :AusbauzielPhotovoltaikBrandenburg :hasYear :2020.
-:AusbauzielPhotovoltaikBrandenburg :hasMinimum [:hasNumeral 2750; :hasUnitofMeasurement :MegawattPeak].
+:AusbauzielPhotovoltaikBrandenburg :hasMinimum [:hasNumeral "2750"^^xsd:integer; :hasUnitofMeasurement :MegawattPeak].
 
 :Basisszenario2020 :makes_assumption :AusbauzielPhotovoltaikBerlin.
 :AusbauzielPhotovoltaikBerlin a :Constraint.
 :AusbauzielPhotovoltaikBerlin :appliesTo :InstalledPowerFromPhotovoltaik.
 :AusbauzielPhotovoltaikBerlin :hasRegion :Berlin.
 :AusbauzielPhotovoltaikBerlin :hasYear :2020.
-:AusbauzielPhotovoltaikBerlin :hasMinimum [:hasNumeral 190; hasUnitofMeasurement :Megawatt].
+:AusbauzielPhotovoltaikBerlin :hasMinimum [:hasNumeral "190"^^xsd:integer; hasUnitofMeasurement :Megawatt].
 
 :Basisszenario2020 :makes_assumption :NeueLeistungBrandenburgAufRegionenGleichverteilt.
 
@@ -94,9 +98,12 @@
 :Stromverbrauchsreduktion a :Constraint.
 :Stromverbrauchsreduktion :appliesTo :GesamtstromverbrauchBerlinBrandenburg.
 :Stromverbrauchsreduktion :hasYear :2020.
-:Stromverbrauchsreduktion :isEqual [:hasNumeral "25"; :hasUnitofMeasurement :TerraWattHours].
+:Stromverbrauchsreduktion :isEqual [:hasNumeral "25"^^xsd:integer; :hasUnitofMeasurement :TerraWattHours].
 
 :Alternativszenario2020 a :Scenario.
+:Alternativszenario2020 :has_institution :ReinerLemoineInstitut.
+:Alternativszenario2020 :has_author :ProfDrIngJochenTwele, :DiplIngBeritMüller, :DiplIngCarolineMöller.
+:Alternativszenario2020 :has_client :Buendnis90DieGruenen.
 
 :Alternativszenario2020 :has_tool :MehrKnotenModell, :MinimalCostModel.
 
@@ -159,7 +166,49 @@
 :Alternativszenario2020 :makes_assumption :HoherFlaechenbedarfPV.
 :HoherFlaechenbedarfPV a :Constraint.
 :HoherFlaechenbedarfPV :appliesTo :NewPowerFromPhotovoltaic.
-:HoherFlaechenbedarfPV :hasMaximum [:hasNumeral "6"; :hasUnitofMeasurement :GigaWatt].
+:HoherFlaechenbedarfPV :hasMaximum [:hasNumeral "6"^^xsd:integer; :hasUnitofMeasurement :GigaWatt].
 
 :Alternativszenario2020 :uses_dataset :Energiemix2030EE100%.
 :Energiemix2030EE100 a :SyntheticDataset.
+
+:Alternativszenario2020 :generates_dataset :Energiekosten2030.
+:Energiekosten2030 a :SyntheticDataset.
+
+:Alternativszenario2020 :makes_assumption :Wind2020kleiner2030.
+:Wind2020kleiner2030 a :Constraint.
+:Wind2020kleiner2030 :appliesTo :InstalledPowerFromWind.
+:Wind2020kleiner2030 :hasYear :2020.
+:Wind2020kleiner2030 :hasMaximum :InstalledPowerFromWind2030.
+
+:Alternativszenario2020 :makes_assumption :PV2020kleiner2030.
+:PV2020kleiner2030 a :Constraint.
+:PV2020kleiner2030 :appliesTo :InstalledPowerFromPhotovoltaik.
+:PV2020kleiner2030 :hasYear :2020.
+:PV2020kleiner2030 :hasMaximum :InstalledPowerFromPV2030.
+
+:Alternativszenario2020 :makes_assumption :Batterie2020kleiner2030.
+:Batterie2020kleiner2030 a :Constraint.
+:Batterie2020kleiner2030 :appliesTo :InstalledPowerFromBatteries.
+:Batterie2020kleiner2030 :hasYear :2020.
+:Batterie2020kleiner2030 :hasMaximum :InstalledPowerFromBatterie2030.
+
+:Alternativszenario2020 :makes_assumption :Methanation2020kleiner2030.
+:Methanation2020kleiner2030 a :Constraint.
+:Methanation2020kleiner2030 :appliesTo :InstalledPowerFromMethanation.
+:Methanation2020kleiner2030 :hasYear :2020.
+:Methanation2020kleiner2030 :hasMaximum :InstalledPowerFromMethanation2030.
+
+:Alternativszenario2020 :makes_assumption :Gas2020kleiner2030.
+:Gas2020kleiner2030 a :Constraint.
+:Gas2020kleiner2030 :appliesTo :InstalledPowerFromGasStorage.
+:Gas2020kleiner2030 :hasYear :2020.
+:Gas2020kleiner2030 :hasMaximum :InstalledPowerFromGasStorage2030.
+
+:Alternativszenario2020 :generates_dataset :InstalledPowerFromPVbySubregion.
+:InstalledPowerFromPVbySubregion a :SyntheticDataset.
+
+:Alternativszenario2020 :generates_dataset :InstalledPowerFromWindbySubregion.
+:InstalledPowerFromWindbySubregion a :SyntheticDataset.
+
+:Alternativszenario2020 :generates_dataset :InstalledPowerFromMethanationbySubregion.
+:InstalledPowerFromMethanationbySubregion a :SyntheticDataset.
