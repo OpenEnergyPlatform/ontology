@@ -1,0 +1,165 @@
+
+@base: <http://openenergy-platform.org/ontology/szenarios.ttl/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:Basisszenario2020 a :Scenario.
+
+:Basisszenario2020 :has_tool :MehrKnotenModell.
+
+:Basisszenario2020 :covers_region :BerlinBrandenburg.
+:BerlinBrandenburg :has_Subregion :Berlin, :Brandenburg.
+:Brandenburg :has_Subregion :PrignitzOberhavel, :UckermarkBarnim, :OderlandSpree, :LausitzSpreewald, :HavellandFläming.
+
+:Basisszenario2020 :covers_sector :IndustrySector, :TrafficSector, :GHDSector, :HouseholdSector.
+
+:Basisszenario2020 :covers_technology :OnShoreWindGenerator, :PhotovoltaicEnergyGenerator, :BiomassEnergyGenerator, :BiogasEnergyGenerator.
+
+:Basisszenario2020 :makes_assumption :Energieeinsparung.
+:Energieeinsparung a :Constraint.
+:Energieeinsparung :appliesTo :EnergyConsumptionBerlinBrandenburg.
+:Energieeinsparung :hasYear :2020.
+:Energieeinsparung :hasMaximum [a :Percentage; :has_Percentage "20"; :appliesTo :EnergyConsumptionBerlinBrandenburg2010].
+
+:Basisszenario2020 :uses_dataset :LoadProfileBerlinBrandenburg2010.
+:LoadProfileBerlinBrandenburg2010 a :LoadProfile, :EmpiricalDataset.
+
+:Basisszenario2020 :uses_dataset :Energiebilanz2008BerlinBrandenburg.
+:Energiebilanz2008BerlinBrandenburg a :EmpiricalDataset.
+
+:Basisszenario2020 :uses_dataset :LoadProfileBerlinBradenburg.
+:LoadProfileBerlinBradenburg a :SyntheticDataset.
+
+:Basisszenario2020 :makes_assumption :SameLoadProfileForAllSubregions.
+
+:Basisszenario2020 :uses_dataset :WeatherDataAnemos2010.
+:WeatherDataAnemos2010 a :WeatherDataset, :EmpiricalDataset.
+
+:Basisszenario2020 :uses_dataset :KennwerteEnerconE82.
+:KennwerteEnerconE82 a :EmpiricalDataset.
+
+:Basisszenario2020 :uses_dataset :JahresertragE82Pankow.
+:JahresertragE82Pankow a :EmpiricalDataset.
+
+:Basisszenario2020 :generates_dataset :JahresverlaufStromerzeugungWindkraft.
+:JahresverlaufStromerzeugungWindkraft a :SyntheticDataset.
+
+:Basisszenario2020 :uses_dataset :SpecificPowerSMASolar2010.
+:SpecificPowerSMASolar2010 a :EmpiricalDataset.
+
+:Basisszenario2020 :generates_dataset :JahresverlaufStromerzeugungPhotovoltaic.
+:JahresverlaufStromerzeugungPhotovoltaic a :SyntheticDataset.
+
+:Basisszenario2020 :uses_dataset :BioenergieanlagenBrandenburg.
+:BioenergieanlagenBrandenburg a :EmpiricalDataset, :PowerplantList.
+
+:Basisszenario2020 :makes_assumption :BiogasAndBiomassLocalDistributionIdentical.
+
+:Basisszenario2020 :uses_dataset :BiomassPowerplantsBerlin.
+:BiomassPowerplantsBerlin a :EmpiricalDataset, :PowerplantList.
+
+:Basisszenario2020 :uses_dataset :JahresverlaufStromerzeugungBioenergie.
+:JahresverlaufStromerzeugungBioenergie a :SyntheticDataset.
+
+:Basisszenario2020 :makes_assumption :AusbauzielWindkraftBrandenburg.
+:AusbauzielWindkraftBrandenburg a :Constraint.
+:AusbauzielWindkraftBrandenburg :appliesTo :InstalledPowerFromWind.
+:AusbauzielWindkraftBrandenburg :hasRegion :Brandenburg.
+:AusbauzielWindkraftBrandenburg :hasYear :2020.
+:AusbauzielWindkraftBrandenburg :hasMinimum [:hasNumeral 7500; :hasUnitofMeasurement :Megawatt].
+
+:Basisszenario2020 :makes_assumption :AusbauzielWindkraftBerlin
+:AusbauzielWindkraftBerlin a :Constraint.
+:AusbauzielWindkraftBerlin :appliesTo :InstalledPowerFromWind.
+:AusbauzielWindkraftBerlin :hasRegion :Berlin.
+:AusbauzielWindkraftBerlin :hasYear :2020.
+:AusbauzielWindkraftBerlin :hasMinimum [:hasNumeral 140; hasUnitofMeasurement :Megawatt].
+
+:Basisszenario2020 :makes_assumption :AusbauzielPhotovoltaikBrandenburg.
+:AusbauzielPhotovoltaikBrandenburg a :Constraint.
+:AusbauzielPhotovoltaikBrandenburg :appliesTo :InstalledPowerFromPhotovoltaik.
+:AusbauzielPhotovoltaikBrandenburg :hasRegion :Brandenburg.
+:AusbauzielPhotovoltaikBrandenburg :hasYear :2020.
+:AusbauzielPhotovoltaikBrandenburg :hasMinimum [:hasNumeral 2750; :hasUnitofMeasurement :MegawattPeak].
+
+:Basisszenario2020 :makes_assumption :AusbauzielPhotovoltaikBerlin.
+:AusbauzielPhotovoltaikBerlin a :Constraint.
+:AusbauzielPhotovoltaikBerlin :appliesTo :InstalledPowerFromPhotovoltaik.
+:AusbauzielPhotovoltaikBerlin :hasRegion :Berlin.
+:AusbauzielPhotovoltaikBerlin :hasYear :2020.
+:AusbauzielPhotovoltaikBerlin :hasMinimum [:hasNumeral 190; hasUnitofMeasurement :Megawatt].
+
+:Basisszenario2020 :makes_assumption :NeueLeistungBrandenburgAufRegionenGleichverteilt.
+
+:Basisszenario2020 :makes_assumption :Stromverbrauchsreduktion.
+:Stromverbrauchsreduktion a :Constraint.
+:Stromverbrauchsreduktion :appliesTo :GesamtstromverbrauchBerlinBrandenburg.
+:Stromverbrauchsreduktion :hasYear :2020.
+:Stromverbrauchsreduktion :isEqual [:hasNumeral "25"; :hasUnitofMeasurement :TerraWattHours].
+
+:Alternativszenario2020 a :Scenario.
+
+:Alternativszenario2020 :has_tool :MehrKnotenModell, :MinimalCostModel.
+
+:Alternativszenario2020 :covers_region :BerlinBrandenburg.
+
+:Alternativszenario2020 :covers_sector :IndustrySector, :TrafficSector, :GHDSector, :HouseholdSector.
+
+:Alternativszenario2020 :covers_technology :OnShoreWindGenerator, :PhotovoltaicEnergyGenerator, :BiomassEnergyGenerator, :BiogasEnergyGenerator.
+:Alternativszenario2020 :covers_technology :GasTurbineGenerator, BatteryStorage, MethanationGasStorage.
+
+:Alternativszenario2020 :makes_assumption :Energieeinsparung.
+:Energieeinsparung a :Constraint.
+:Energieeinsparung :appliesTo :EnergyConsumptionBerlinBrandenburg.
+:Energieeinsparung :hasYear :2020.
+:Energieeinsparung :hasMaximum [a :Percentage; :has_Percentage "20"; :appliesTo :EnergyConsumptionBerlinBrandenburg2010].
+
+:Alternativszenario2020 :uses_dataset :LoadProfileBerlinBrandenburg2010.
+:LoadProfileBerlinBrandenburg2010 a :LoadProfile, :EmpiricalDataset.
+
+:Alternativszenario2020 :uses_dataset :Energiebilanz2008BerlinBrandenburg.
+:Energiebilanz2008BerlinBrandenburg a :EmpiricalDataset.
+
+:Alternativszenario2020 :uses_dataset :LoadProfileBerlinBradenburg.
+:LoadProfileBerlinBradenburg a :SyntheticDataset.
+
+:Alternativszenario2020 :makes_assumption :SameLoadProfileForAllSubregions.
+
+:Alternativszenario2020 :uses_dataset :WeatherDataAnemos2010.
+:WeatherDataAnemos2010 a :WeatherDataset, :EmpiricalDataset.
+
+:Alternativszenario2020 :uses_dataset :KennwerteEnerconE82.
+:KennwerteEnerconE82 a :EmpiricalDataset.
+
+:Alternativszenario2020 :uses_dataset :JahresertragE82Pankow.
+:JahresertragE82Pankow a :EmpiricalDataset.
+
+:Alternativszenario2020 :generates_dataset :JahresverlaufStromerzeugungWindkraft.
+:JahresverlaufStromerzeugungWindkraft a :SyntheticDataset.
+
+:Alternativszenario2020 :uses_dataset :SpecificPowerSMASolar2010.
+:SpecificPowerSMASolar2010 a :EmpiricalDataset.
+
+:Alternativszenario2020 :generates_dataset :JahresverlaufStromerzeugungPhotovoltaic.
+:JahresverlaufStromerzeugungPhotovoltaic a :SyntheticDataset.
+
+:Alternativszenario2020 :uses_dataset :BioenergieanlagenBrandenburg.
+:BioenergieanlagenBrandenburg a :EmpiricalDataset, :PowerplantList.
+
+:Alternativszenario2020 :makes_assumption :BiogasAndBiomassLocalDistributionIdentical.
+
+:Alternativszenario2020 :uses_dataset :BiomassPowerplantsBerlin.
+:BiomassPowerplantsBerlin a :EmpiricalDataset, :PowerplantList.
+
+:Alternativszenario2020 :uses_dataset :JahresverlaufStromerzeugungBioenergie.
+:JahresverlaufStromerzeugungBioenergie a :SyntheticDataset.
+
+:Alternativszenario2020 :uses_dataset :Kostenszenario2.
+:Kostenszenario1 a :CostDataset, :SyntheticDataset.
+
+:Alternativszenario2020 :makes_assumption :HoherFlaechenbedarfPV.
+:HoherFlaechenbedarfPV a :Constraint.
+:HoherFlaechenbedarfPV :appliesTo :NewPowerFromPhotovoltaic.
+:HoherFlaechenbedarfPV :hasMaximum [:hasNumeral "6"; :hasUnitofMeasurement :GigaWatt].
+
+:Alternativszenario2020 :uses_dataset :Energiemix2030EE100%.
+:Energiemix2030EE100 a :SyntheticDataset.
