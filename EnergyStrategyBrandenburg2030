@@ -1,0 +1,116 @@
+
+@base: <http://openenergy-platform.org/ontology/EnergyStrategyBrandenburg.ttl/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:EnergyStrategy2030 a :Scenario.
+:EnergyStrategy2030 :has_institution :ReinerLemoineInstitut, HTWBerlin.
+:EnergyStrategy2030 :has_author :ElisaGaudchau, :BeritMüller, :JochenTwele, :JensFortmann.
+:EnergyStrategy2030 :has_client :Buendnis90DieGruenen.
+
+%% :EnergyStrategy2030 :has_tool :MehrKnotenModell.
+
+:EnergyStrategy2030 :covers_region :Brandenburg.
+:Brandenburg :has_Subregion :PrignitzOberhavel, :UckermarkBarnim, :OderlandSpree, :LausitzSpreewald, :HavellandFläming.
+
+%% :EnergyStrategy2030 :covers_sector :IndustrySector, :TrafficSector, :GHDSector, :HouseholdSector, :HeatSector.
+
+%% :EnergyStrategy2030 :covers_technology :OnShoreWindGenerator, :PhotovoltaicEnergyGenerator, :BiomassEnergyGenerator, :BiogasEnergyGenerator.
+
+:EnergyStrategy2030 :makes_assumption _:Emmissions2030.
+_:Emmissions2030 a :Constraint.
+_:Emmissions2030 :appliesTo :CarbonDioxideEmission.
+_:Emmissions2030 :hasYear :2030.
+_:Emmissions2030 :hasMaximum [:hasNumeral "25.000.000"^^xsd:integer; :hasUnitofMeasurement :Tons].
+_:Emmissions2030 :hasMaximum [a :Percentage; :has_Percentage "28"^^xsd:integer; :appliesTo :CarbonDioxideEmission1990].
+
+:EnergyStrategy2030 :makes_assumption _:Export2030.
+_:Export2030 a :Constraint.
+_:Export2030 :appliesTo :ElectricityExport.
+_:Export2030 :hasYear :2030.
+_:Export2030 :isEqual [:hasNumeral "42"^^xsd:integer; :hasUnitofMeasurement :TerraWattHours].
+
+:EnergyStrategy2030 :makes_assumption _:Windpower2030.
+_:Windpower2030 a :Constraint.
+_:Windpower2030 :appliesTo :InstalledPowerFromWind.
+_:Windpower2030 :hasYear :2030.
+_:Windpower2030 :isEqual [:hasNumeral "10500"^^xsd:integer; :hasUnitofMeasurement :Megawatt].
+
+:EnergyStrategy2030 :makes_assumption _:PhotovolticPower2030.
+_:PhotovolticPower2030 a :Constraint.
+_:PhotovolticPower2030 :appliesTo :InstalledPowerFromPhotovoltaik.
+_:PhotovolticPower2030 :hasYear :2030.
+_:PhotovolticPower2030 :isEqual [:hasNumeral "3500"^^xsd:integer; :hasUnitofMeasurement :Megawatt].
+
+:EnergyStrategy2030 :makes_assumption _:BiomassPower2030.
+_:BiomassPower2030 a :Constraint.
+_:BiomassPower2030 :appliesTo :InstalledPowerFromBiomass.
+_:BiomassPower2030 :hasYear :2030.
+_:BiomassPower2030 :isEqual :InstalledPowerFromBiomass2015.
+
+:EnergyStrategy2030 :makes_assumption _:SolarThermalPower2030.
+_:SolarThermalPower2030 a :Constraint.
+_:SolarThermalPower2030 :appliesTo :InstalledHeatFromSolar.
+_:SolarThermalPower2030 :hasYear :2030.
+_:SolarThermalPower2030 :isEqual [:hasNumeral "2500"^^xsd:integer; :hasUnitofMeasurement :GigaWattHours].
+
+:EnergyStrategy2030 :makes_assumption _:HeatPump2030.
+_:HeatPump2030 a :Constraint.
+_:HeatPump2030 :appliesTo :InstalledHeatFromHeatPump.
+_:HeatPump2030 :hasYear :2030.
+_:HeatPump2030 :isEqual [:hasNumeral "2500"^^xsd:integer; :hasUnitofMeasurement :GigaWattHours].
+
+:EnergyStrategy2030 :makes_assumption _:HeatConsumption2030.
+_:HeatConsumption2030 a :Constraint.
+_:HeatConsumption2030 :appliesTo :HeatConsumption.
+_:HeatConsumption2030 :hasYear :2030.
+_:HeatConsumption2030 :isEqual [a :Percentage; :has_Percentage "66"^^xsd:integer; :appliesTo :HeatConsumtion2007].
+
+:EnergyStrategy2030 :makes_assumption _:ElectricityConsumption2030.
+_:ElectricityConsumption2030 a :Constraint.
+_:ElectricityConsumption2030 :appliesTo :ElectricityConsumption.
+_:ElectricityConsumption2030 :hasYear :2030.
+_:ElectricityConsumption2030 :isEqual [a :Percentage; :has_Percentage "91"^^xsd:integer; :appliesTo :ElectricityConsumtion2007].
+
+:EnergyStrategy2030 :makes_assumption _:EnergyConsumption2030.
+_:EnergyConsumption2030 a :Constraint.
+_:EnergyConsumption2030 :appliesTo :EnergyConsumption.
+_:EnergyConsumption2030 :hasYear :2030.
+_:EnergyConsumption2030 :isEqual [a :Percentage; :has_Percentage "77"^^xsd:integer; :appliesTo :EnergyConsumtion2007].
+
+:EnergyStrategy2030 :makes_assumption _:AlternativeFuelsAndPropulsion2030.
+_:AlternativeFuelsAndPropulsion2030 a :Constraint.
+_:AlternativeFuelsAndPropulsion2030 :appliesTo :EnergyFromAlternativeFuelsAndPropulsionInTraffic.
+_:AlternativeFuelsAndPropulsion2030 :hasYear :2030.
+_:AlternativeFuelsAndPropulsion2030 :isEqual [a :Percentage; :has_Percentage "18"^^xsd:integer; :appliesTo :EnergyInTraffic].
+
+:EnergyStrategy2030 :makes_assumption _:BioFuel2030.
+_:BioFuel2030 a :Constraint.
+_:BioFuel2030 :appliesTo :EnergyFromBioFuelInTraffic.
+_:BioFuel2030 :hasYear :2030.
+_:BioFuel2030 :isEqual [a :Percentage; :has_Percentage "8"^^xsd:integer; :appliesTo :EnergyInTraffic].
+
+:EnergyStrategy2030 :makes_assumption _:ElectricMobility2030.
+_:ElectricMobility2030 a :Constraint.
+_:ElectricMobility2030 :appliesTo :EnergyFromElectricityInTraffic.
+_:ElectricMobility2030 :hasYear :2030.
+_:ElectricMobility2030 :isEqual [a :Percentage; :has_Percentage "10"^^xsd:integer; :appliesTo :EnergyInTraffic].
+
+:EnergyStrategy2030 :makes_assumption _:CarbonDioxideEmissionTraffic2030.
+_:CarbonDioxideEmissionTraffic2030 a :Constraint.
+_:CarbonDioxideEmissionTraffic2030 :appliesTo :CarbonDioxideEmissionTrafficSector.
+_:CarbonDioxideEmissionTraffic2030 :hasYear :2030.
+_:CarbonDioxideEmissionTraffic2030 :isEqual [a :Percentage; :has_Percentage "82"^^xsd:integer; :appliesTo :CarbonDioxideEmissionTrafficSector1990].
+_:CarbonDioxideEmissionTraffic2030 :isEqual [:hasNumeral "4500000"^^xsd:integer; :hasUnitofMeasurement :Tons].
+
+:EnergyStrategy2030 :makes_assumption :WindPVDevelopmentProportionalToArea.
+
+:EnergyStrategy2030 :uses_dataset :PowerplantListBundesnetzargentur.
+
+:EnergyStrategy2030 :makes_assumption _:Gas2030.
+_:Gas2030 a :Constraint.
+_:Gas2030 :appliesTo :InstalledPowerFromGas.
+_:Gas2030 :hasYear :2030.
+_:Gas2030 :isEqual [:hasNumeral "1500"^^xsd:integer; :hasUnitofMeasurement :Megawatt].
+
+:EnergyStrategy2030 :makes_assumption :GasDevelopmentEqualAmongRegions.
