@@ -48,6 +48,12 @@ AnnotationProperty: rdfs:isDefinedBy
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: appliesTo
+
+    
+ObjectProperty: comparesTo
+
+    
 ObjectProperty: covers
 
     Annotations: 
@@ -66,6 +72,18 @@ ObjectProperty: covers_region
         GeographicRegion
     
     
+ObjectProperty: covers_sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        Sector
+    
+    
 ObjectProperty: covers_technology
 
     Annotations: 
@@ -82,6 +100,39 @@ ObjectProperty: covers_timeframe
     
     SubPropertyOf: 
         covers
+    
+    
+ObjectProperty: generates_dataset
+
+    SubPropertyOf: 
+        has_output
+    
+    
+ObjectProperty: hasMaximum
+
+    SubPropertyOf: 
+        comparesTo
+    
+    
+ObjectProperty: hasMinimum
+
+    SubPropertyOf: 
+        comparesTo
+    
+    
+ObjectProperty: hasNumeral
+
+    
+ObjectProperty: hasUnitofMeasurement
+
+    
+ObjectProperty: hasYear
+
+    
+ObjectProperty: has_Percentage
+
+    SubPropertyOf: 
+        comparesTo
     
     
 ObjectProperty: has_author
@@ -160,6 +211,15 @@ ObjectProperty: has_input
     
     Range: 
         InformationArtifact
+    
+    
+ObjectProperty: has_institution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
+    
+    SubPropertyOf: 
+        has_participant
     
     
 ObjectProperty: has_objective
@@ -246,6 +306,15 @@ ObjectProperty: has_spatial_resolution
         has_resolution
     
     
+ObjectProperty: has_subregion
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a region and a smaller region within."@en
+    
+    SubPropertyOf: 
+        has_part
+    
+    
 ObjectProperty: has_time_resolution
 
     Annotations: 
@@ -270,6 +339,12 @@ ObjectProperty: has_tool
         Model
     
     
+ObjectProperty: isEqual
+
+    SubPropertyOf: 
+        comparesTo
+    
+    
 ObjectProperty: makes_assumption
 
     Annotations: 
@@ -277,18 +352,6 @@ ObjectProperty: makes_assumption
     
     SubPropertyOf: 
         has_input
-    
-    
-ObjectProperty: models_sector
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    Range: 
-        Sector
     
     
 ObjectProperty: part_of
@@ -352,6 +415,48 @@ Class: Assumption
         InformationArtifact
     
     
+Class: BatteryStorage
+
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    DisjointWith: 
+        MethanationGasStorage
+    
+    
+Class: BioEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bio energy generator is a renewable energy generator that uses biomass or biogas to generate energy."@en
+    
+    SubClassOf: 
+        RenewableGeneratorTechnology
+    
+    
+Class: BiogasEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas energy generator is a bio energy generator that uses biogas to generate energy."@en
+    
+    SubClassOf: 
+        BioEnergyGenerator
+    
+    DisjointWith: 
+        BiomassEnergyGenerator
+    
+    
+Class: BiomassEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass energy generator is a bio energy generator that uses biomass to generate energy."@en
+    
+    SubClassOf: 
+        BioEnergyGenerator
+    
+    DisjointWith: 
+        BiogasEnergyGenerator
+    
+    
 Class: BooleanVariable
 
     Annotations: 
@@ -370,6 +475,24 @@ Class: CapacitanceUnit
         UnitOfMeasurement
     
     
+Class: CarbonDioxideEmission
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission quantity is a quantity that is about carbon dioxide."@en
+    
+    SubClassOf: 
+        EmissionQuantity
+    
+    
+Class: CarbonDioxideEmissionTrafficSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en
+    
+    SubClassOf: 
+        CarbonDioxideEmission
+    
+    
 Class: City
 
     Annotations: 
@@ -377,6 +500,15 @@ Class: City
     
     SubClassOf: 
         GeographicRegion
+    
+    
+Class: CoalEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal energy generator technology uses coal to generate energy."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
     
     
 Class: Constraint
@@ -389,8 +521,20 @@ Class: Constraint
         InformationArtifact
     
     
+Class: ConsumptionQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumption quantity is a quantity that describes the amount of consumption of some resource."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
 Class: Continent
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A continent is a large landmass on the earth."@en
+    
     SubClassOf: 
         GeographicRegion
     
@@ -432,7 +576,7 @@ Class: Demand
 Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
     
     SubClassOf: 
-        Quantity
+        ConsumptionQuantity
     
     
 Class: DemandSector
@@ -494,6 +638,51 @@ Source: https://en.wikipedia.org/wiki/Electrical_load"@en
         Quantity
     
     
+Class: ElectricityConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity consumption quantity is a consumption quantity about electricity."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: ElectricityExport
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export quantity is a quantity that describes the amount of electricity that is exported from a geographic region."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: ElectricityGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: ElectricitySector
+
+    SubClassOf: 
+        EnergySector
+    
+    DisjointWith: 
+        HeatSector
+    
+    
+Class: EmissionQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity is a quantity that describes the amount of emissions that goes into the environment."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
 Class: EmpiricalDataset
 
     Annotations: 
@@ -507,13 +696,49 @@ Class: EmpiricalDataset
         SynthethicDataset
     
     
-Class: EnergyGeneratorTechnology
+Class: EnergyCarrierQuantity
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier quantity is a quantity about the amount of energy from a certain energy carrier."@en
     
     SubClassOf: 
-        Technology
+        Quantity
+    
+    
+Class: EnergyConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption quantity is a consumption quantity about energy."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: EnergyFromAlternativeFuelsAndPropulsionInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from alternative fuels and populsion in traffic quantity is a energy carrier quantity that describes the amount alternative energy carriers are used in the traffic sector."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: EnergyFromBioFuelInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from bio fuel in traffic quantity is a energy carrier quantity that describes the amount of bio fuel as energy carrier in traffic."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: EnergyFromElectricityInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from electricity in traffic quantity is a energy carrier quantity that describes the amount of electricity used as energy carrier in traffic."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
     
     
 Class: EnergySector
@@ -562,6 +787,42 @@ Class: FederalState
         GeographicRegion
     
     
+Class: FieldPhotovoltaicGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic energy generator is a photovoltaic energy generator that is installed out in the open on the ground."@en
+    
+    SubClassOf: 
+        PhotovoltaicEnergyGenerator
+    
+    DisjointWith: 
+        RooftopPhotovoltaicGenerator
+    
+    
+Class: FossilGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil energy generator technology is an energy generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate energy."@en
+    
+    SubClassOf: 
+        ElectricityGeneratorTechnology
+    
+    DisjointWith: 
+        RenewableGeneratorTechnology
+    
+    
+Class: GHDSector
+
+    SubClassOf: 
+        DemandSector
+    
+    
+Class: GasTurbineGenerator
+
+    SubClassOf: 
+        ElectricityGeneratorTechnology
+    
+    
 Class: Generator
 
     Annotations: 
@@ -603,6 +864,42 @@ Class: GridComponent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: HeatConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat consumption quantity is a consumption quantity about heat."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: HeatGeneratorTechnology
+
+    SubClassOf: 
+        Technology
+    
+    
+Class: HeatPumpHeatGenerator
+
+    SubClassOf: 
+        HeatGeneratorTechnology
+    
+    
+Class: HeatSector
+
+    SubClassOf: 
+        EnergySector
+    
+    DisjointWith: 
+        ElectricitySector
+    
+    
+Class: HouseholdSector
+
+    SubClassOf: 
+        DemandSector
+    
+    
 Class: Identifier
 
     Annotations: 
@@ -612,6 +909,12 @@ Class: Identifier
         InformationArtifact
     
     
+Class: IndustrySector
+
+    SubClassOf: 
+        DemandSector
+    
+    
 Class: InformationArtifact
 
     Annotations: 
@@ -619,6 +922,87 @@ Class: InformationArtifact
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: InstalledHeatFromHeatPump
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from heat pump quantity is a installed power quantity restricted to heat pump power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledHeatFromSolar
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from solar quantity is a installed power quantity restricted to solar heat power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromBiomass
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from biomass quantity is a installed power quantity restricted to biomass power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromCoalPowerPlants
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from coal power plants quantity is a installed power quantity restricted to coal power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from gas quantity is a installed power quantity restricted to gas power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromPhotovoltaics
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from photovoltaics quantity is a installed power quantity restricted to photovoltaic power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromThermalPowerPlants
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from thermal power plants quantity is a installed power quantity restricted to thermal power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromWind
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from wind quantity is a installed power quantity restricted to wind power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power quantity is a quantity that describes the amount of power that some generators can generate."@en
+    
+    SubClassOf: 
+        Quantity
     
     
 Class: Institution
@@ -659,6 +1043,15 @@ Class: MassUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: MethanationGasStorage
+
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    DisjointWith: 
+        BatteryStorage
     
     
 Class: Model
@@ -718,6 +1111,66 @@ Class: ModelVariable
         ModelElement
     
     
+Class: NaturalGasGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas energy generator technology uses natural gas to generate energy."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
+    
+    
+Class: NewPowerFromPhotovoltaics
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A new power from photovoltaics quantity is a quantity that describes the amount of power from photovoltaic power plants that are going to be build in the future."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: NuclearPowerGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal nuclear generator technology uses nuclear reactions to generate energy."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
+    
+    
+Class: OffShoreWindEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind energy generator is a wind energy generator that is build off shore above or in the ocean."@en
+    
+    SubClassOf: 
+        WindEnergyGenerator
+    
+    DisjointWith: 
+        OnShoreWindEnergyGenerator
+    
+    
+Class: OilEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil energy generator technology uses oil to generate energy."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
+    
+    
+Class: OnShoreWindEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind energy generator is a wind energy generator that is build on land."@en
+    
+    SubClassOf: 
+        WindEnergyGenerator
+    
+    DisjointWith: 
+        OffShoreWindEnergyGenerator
+    
+    
 Class: Optimization
 
     Annotations: 
@@ -751,6 +1204,15 @@ Class: Organization
         Person
     
     
+Class: Percentage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A percentage is a ratio given as a fraction of 100."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
 Class: Person
 
     Annotations: 
@@ -761,6 +1223,15 @@ Class: Person
     
     DisjointWith: 
         Organization
+    
+    
+Class: PhotovoltaicEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic energy generator is a renewable energy generator that uses power from the sun to generate energy."@en
+    
+    SubClassOf: 
+        RenewableGeneratorTechnology
     
     
 Class: PoliticalAssumption
@@ -859,6 +1330,18 @@ Class: RegulationAssumption
         SubsidyAssumption
     
     
+Class: RenewableGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy generator technology is an energy generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate energy."@en
+    
+    SubClassOf: 
+        ElectricityGeneratorTechnology
+    
+    DisjointWith: 
+        FossilGeneratorTechnology
+    
+    
 Class: ResistanceUnit
 
     Annotations: 
@@ -866,6 +1349,37 @@ Class: ResistanceUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: RooftopPhotovoltaicGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic energy generator is a photovoltaic energy generator that is installed on top of the roof of a building."@en
+    
+    SubClassOf: 
+        PhotovoltaicEnergyGenerator
+    
+    DisjointWith: 
+        FieldPhotovoltaicGenerator
+    
+    
+Class: RunOfRiverEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river energy generator is a water energy generator that stores little or no water and produces energy."@en
+    
+    SubClassOf: 
+        WaterEnergyGenerator
+    
+    
+Class: Scenario
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "(WIP) A scenario is a collection of assumptions about the energy system.
+There is not yet a consens about the definition."@en
+    
+    SubClassOf: 
+        InformationArtifact
     
     
 Class: Sector
@@ -917,6 +1431,12 @@ Class: Software
     
     SubClassOf: 
         InformationArtifact
+    
+    
+Class: SolarThermalHeatGenerator
+
+    SubClassOf: 
+        HeatGeneratorTechnology
     
     
 Class: StorageUnit
@@ -1004,6 +1524,12 @@ Class: Title
         Identifier
     
     
+Class: TrafficSector
+
+    SubClassOf: 
+        DemandSector
+    
+    
 Class: Transformation
 
     Annotations: 
@@ -1042,6 +1568,24 @@ Class: VoltageUnit
     
     SubClassOf: 
         UnitOfMeasurement
+    
+    
+Class: WaterEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water energy generator is a renewable energy generator that uses power from water to generate energy."@en
+    
+    SubClassOf: 
+        RenewableGeneratorTechnology
+    
+    
+Class: WindEnergyGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind energy generator technology uses wind power to generate energy."@en
+    
+    SubClassOf: 
+        RenewableGeneratorTechnology
     
     
 Individual: Ampere
@@ -1108,6 +1652,16 @@ Individual: Foot
     
     Types: 
         LengthUnit
+    
+    
+Individual: GigaWattHours
+
+    Annotations: 
+        rdfs:comment "Unit symbol: GWh
+Used for electricity"@en
+    
+    Types: 
+        EnergyUnit
     
     
 Individual: Grain
@@ -1190,6 +1744,16 @@ Individual: Leap_year
     
     Types: 
         TimeUnit
+    
+    
+Individual: Megawatt
+
+    Annotations: 
+        rdfs:comment "Unit symbol: MW
+1 MW = 1000W"@en
+    
+    Types: 
+        PowerUnit
     
     
 Individual: Metre
@@ -1283,6 +1847,16 @@ SI unit of time"@en
         TimeUnit
     
     
+Individual: TerraWattHours
+
+    Annotations: 
+        rdfs:comment "Unit symbol: TWh
+Used for electricity"@en
+    
+    Types: 
+        EnergyUnit
+    
+    
 Individual: Therm
 
     Annotations: 
@@ -1292,6 +1866,16 @@ Used for natural gas"@en
     
     Types: 
         EnergyUnit
+    
+    
+Individual: Tons
+
+    Annotations: 
+        rdfs:comment "Unit symbol: t
+1 t = 3600 kg"@en
+    
+    Types: 
+        MassUnit
     
     
 Individual: True
@@ -1344,16 +1928,28 @@ DisjointClasses:
     Acronym,DOI,Title
 
 DisjointClasses: 
+    BioEnergyGenerator,PhotovoltaicEnergyGenerator,WaterEnergyGenerator,WindEnergyGenerator
+
+DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
+
+DisjointClasses: 
+    CoalEnergyGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilEnergyGenerator
 
 DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
-    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+
+DisjointClasses: 
+    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    GHDSector,HouseholdSector,IndustrySector,TrafficSector
 
 DisjointClasses: 
     Generator,Grid,ShuntImpedance,StorageUnit,Subgrid,Transformer
