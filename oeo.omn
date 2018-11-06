@@ -17,6 +17,7 @@ Import: <http://purl.obolibrary.org/obo/bfo.owl>
 Annotations: 
     dc:contributor "Christian Winger",
     dc:contributor "Fabian Neuhaus",
+    dc:contributor "Lukas Emele",
     dc:contributor "Martin Glauer",
     dc:contributor "Sebastian Cordes",
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
@@ -445,10 +446,10 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 Class: ACLine
 
     Annotations: 
-        rdfs:label "AC-Line"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
 Generally, flows in the model can not be controlled but are a function of the resitance and electrochemical potential difference."@en,
-        rdfs:comment "undirected"
+        rdfs:comment "undirected",
+        rdfs:label "AC-Line"@en
     
     SubClassOf: 
         Line,
@@ -507,9 +508,9 @@ Class: BooleanVariable
 Class: Bus
 
     Annotations: 
-        rdfs:label "NetworkNode"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
         rdfs:label "Bus"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en
+        rdfs:label "NetworkNode"@en
     
     SubClassOf: 
         ElectricityGridComponent,
@@ -558,8 +559,8 @@ Class: CommerceSector
 Class: Constraint
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
     
     SubClassOf: 
         InformationArtifact
@@ -589,10 +590,10 @@ Class: Country
 Class: DCLine
 
     Annotations: 
-        rdfs:label "HVDC-Line"@en,
-        rdfs:comment "directed",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
-Genreally, flows in the model can be controlled/optimized."@en
+Genreally, flows in the model can be controlled/optimized."@en,
+        rdfs:comment "directed",
+        rdfs:label "HVDC-Line"@en
     
     SubClassOf: 
         DirectedEdge,
@@ -633,8 +634,8 @@ Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
 Class: DemographicalAssumption
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en
     
     SubClassOf: 
         Assumption
@@ -649,9 +650,9 @@ Class: DirectedEdge
 Class: EconomicalAssumption
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted prizes of fossil fuel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en
     
     SubClassOf: 
         Assumption
@@ -770,8 +771,8 @@ Class: EnergyTransferTechnology
 Class: EnergyUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -866,8 +867,8 @@ Class: HeatDemand
 Class: HeatSector
 
     Annotations: 
-        rdfs:label "HeatingCoolingSector"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
+        rdfs:label "HeatingCoolingSector"@en
     
     SubClassOf: 
         Sector
@@ -932,8 +933,8 @@ Class: Institution
 Class: LengthUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -995,8 +996,8 @@ Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
 Class: MassUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -1043,8 +1044,8 @@ Class: ModelElement
 Class: ModelFunction
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
     
     SubClassOf: 
         ModelComponent
@@ -1201,8 +1202,8 @@ Class: Preprocessing
 Class: ProgramParameter
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
     
     SubClassOf: 
         ModelElement
@@ -1374,8 +1375,8 @@ Class: Technology
 Class: TimeUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en
+        <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en
     
     SubClassOf: 
         UnitOfMeasurement
