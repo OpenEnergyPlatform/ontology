@@ -417,6 +417,9 @@ Class: Assumption
     
 Class: BatteryStorage
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en
+    
     SubClassOf: 
         EnergyStorageTechnology
     
@@ -424,37 +427,37 @@ Class: BatteryStorage
         MethanationGasStorage
     
     
-Class: BioEnergyGenerator
+Class: BioElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A bio energy generator is a renewable energy generator that uses biomass or biogas to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
     
     SubClassOf: 
         RenewableGeneratorTechnology
     
     
-Class: BiogasEnergyGenerator
+Class: BiogasElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas energy generator is a bio energy generator that uses biogas to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas electricity generator is a bio energy generator that uses biogas to generate electricity."@en
     
     SubClassOf: 
-        BioEnergyGenerator
+        BioElectricityGenerator
     
     DisjointWith: 
-        BiomassEnergyGenerator
+        BiomassElectricityGenerator
     
     
-Class: BiomassEnergyGenerator
+Class: BiomassElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass energy generator is a bio energy generator that uses biomass to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass electricity generator is a bio energy generator that uses biomass to generate electricity."@en
     
     SubClassOf: 
-        BioEnergyGenerator
+        BioElectricityGenerator
     
     DisjointWith: 
-        BiogasEnergyGenerator
+        BiogasElectricityGenerator
     
     
 Class: BooleanVariable
@@ -502,10 +505,10 @@ Class: City
         GeographicRegion
     
     
-Class: CoalEnergyGenerator
+Class: CoalElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal energy generator technology uses coal to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal electricity generator technology uses coal to generate electricity."@en
     
     SubClassOf: 
         FossilGeneratorTechnology
@@ -659,7 +662,7 @@ Class: ElectricityExport
 Class: ElectricityGeneratorTechnology
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generator technology is an technology used to transform energy from some source into electricity."@en
     
     SubClassOf: 
         Technology
@@ -667,6 +670,9 @@ Class: ElectricityGeneratorTechnology
     
 Class: ElectricitySector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A electricity sector is a sector that includes the electricity production."@en
+    
     SubClassOf: 
         EnergySector
     
@@ -790,10 +796,10 @@ Class: FederalState
 Class: FieldPhotovoltaicGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic energy generator is a photovoltaic energy generator that is installed out in the open on the ground."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
     
     SubClassOf: 
-        PhotovoltaicEnergyGenerator
+        PhotovoltaicElectricityGenerator
     
     DisjointWith: 
         RooftopPhotovoltaicGenerator
@@ -802,7 +808,7 @@ Class: FieldPhotovoltaicGenerator
 Class: FossilGeneratorTechnology
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil energy generator technology is an energy generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil electricity generator technology is an electricity generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate electricity."@en
     
     SubClassOf: 
         ElectricityGeneratorTechnology
@@ -811,14 +817,11 @@ Class: FossilGeneratorTechnology
         RenewableGeneratorTechnology
     
     
-Class: GHDSector
-
-    SubClassOf: 
-        DemandSector
-    
-    
 Class: GasTurbineGenerator
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
+    
     SubClassOf: 
         ElectricityGeneratorTechnology
     
@@ -875,18 +878,27 @@ Class: HeatConsumption
     
 Class: HeatGeneratorTechnology
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generator technology is an technology used to transform energy from some source into heat."@en
+    
     SubClassOf: 
         Technology
     
     
 Class: HeatPumpHeatGenerator
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
+    
     SubClassOf: 
         HeatGeneratorTechnology
     
     
 Class: HeatSector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat sector is a energy sector that includes the heat production."@en
+    
     SubClassOf: 
         EnergySector
     
@@ -896,6 +908,9 @@ Class: HeatSector
     
 Class: HouseholdSector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A household sector is a demand sector that includes the energy consumption from private households."@en
+    
     SubClassOf: 
         DemandSector
     
@@ -911,6 +926,9 @@ Class: Identifier
     
 Class: IndustrySector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A industry sector is a demand sector that includes the energy consumption from industry."@en
+    
     SubClassOf: 
         DemandSector
     
@@ -1047,6 +1065,9 @@ Class: MassUnit
     
 Class: MethanationGasStorage
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en
+    
     SubClassOf: 
         EnergyStorageTechnology
     
@@ -1114,7 +1135,7 @@ Class: ModelVariable
 Class: NaturalGasGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas energy generator technology uses natural gas to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas electricity generator technology uses natural gas to generate electricity."@en
     
     SubClassOf: 
         FossilGeneratorTechnology
@@ -1132,43 +1153,43 @@ Class: NewPowerFromPhotovoltaics
 Class: NuclearPowerGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal nuclear generator technology uses nuclear reactions to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear generator technology is a fossil electricity generator that uses nuclear reactions to generate electricity."@en
     
     SubClassOf: 
         FossilGeneratorTechnology
     
     
-Class: OffShoreWindEnergyGenerator
+Class: OffShoreWindElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind energy generator is a wind energy generator that is build off shore above or in the ocean."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind electricity generator is a wind electricity generator that is build off shore above or in the ocean."@en
     
     SubClassOf: 
-        WindEnergyGenerator
+        WindElectricityGenerator
     
     DisjointWith: 
-        OnShoreWindEnergyGenerator
+        OnShoreWindElectricityGenerator
     
     
-Class: OilEnergyGenerator
+Class: OilElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil energy generator technology uses oil to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
     
     SubClassOf: 
         FossilGeneratorTechnology
     
     
-Class: OnShoreWindEnergyGenerator
+Class: OnShoreWindElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind energy generator is a wind energy generator that is build on land."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind electricity generator is a wind electricity generator that is build on land."@en
     
     SubClassOf: 
-        WindEnergyGenerator
+        WindElectricityGenerator
     
     DisjointWith: 
-        OffShoreWindEnergyGenerator
+        OffShoreWindElectricityGenerator
     
     
 Class: Optimization
@@ -1225,10 +1246,10 @@ Class: Person
         Organization
     
     
-Class: PhotovoltaicEnergyGenerator
+Class: PhotovoltaicElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic energy generator is a renewable energy generator that uses power from the sun to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
     
     SubClassOf: 
         RenewableGeneratorTechnology
@@ -1333,7 +1354,7 @@ Class: RegulationAssumption
 Class: RenewableGeneratorTechnology
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy generator technology is an energy generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable electricity generator technology is an electricity generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate electricity."@en
     
     SubClassOf: 
         ElectricityGeneratorTechnology
@@ -1354,22 +1375,22 @@ Class: ResistanceUnit
 Class: RooftopPhotovoltaicGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic energy generator is a photovoltaic energy generator that is installed on top of the roof of a building."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity generator is a photovoltaic electricity generator that is installed on top of the roof of a building."@en
     
     SubClassOf: 
-        PhotovoltaicEnergyGenerator
+        PhotovoltaicElectricityGenerator
     
     DisjointWith: 
         FieldPhotovoltaicGenerator
     
     
-Class: RunOfRiverEnergyGenerator
+Class: RunOfRiverElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river energy generator is a water energy generator that stores little or no water and produces energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river electricity generator is a water energy generator that stores little or no water and produces electricity."@en
     
     SubClassOf: 
-        WaterEnergyGenerator
+        WaterElectricityGenerator
     
     
 Class: Scenario
@@ -1435,6 +1456,9 @@ Class: Software
     
 Class: SolarThermalHeatGenerator
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
+    
     SubClassOf: 
         HeatGeneratorTechnology
     
@@ -1487,6 +1511,15 @@ Class: SynthethicDataset
         EmpiricalDataset
     
     
+Class: TCSSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en
+    
+    SubClassOf: 
+        DemandSector
+    
+    
 Class: TechnologicalAssumption
 
     Annotations: 
@@ -1526,6 +1559,9 @@ Class: Title
     
 Class: TrafficSector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en
+    
     SubClassOf: 
         DemandSector
     
@@ -1570,19 +1606,19 @@ Class: VoltageUnit
         UnitOfMeasurement
     
     
-Class: WaterEnergyGenerator
+Class: WaterElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water energy generator is a renewable energy generator that uses power from water to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
     
     SubClassOf: 
         RenewableGeneratorTechnology
     
     
-Class: WindEnergyGenerator
+Class: WindElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind energy generator technology uses wind power to generate energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind electricity generator technology uses wind power to generate electricity."@en
     
     SubClassOf: 
         RenewableGeneratorTechnology
@@ -1928,13 +1964,13 @@ DisjointClasses:
     Acronym,DOI,Title
 
 DisjointClasses: 
-    BioEnergyGenerator,PhotovoltaicEnergyGenerator,WaterEnergyGenerator,WindEnergyGenerator
+    BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
 
 DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
 DisjointClasses: 
-    CoalEnergyGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilEnergyGenerator
+    CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
 
 DisjointClasses: 
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
@@ -1949,8 +1985,8 @@ DisjointClasses:
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
 DisjointClasses: 
-    GHDSector,HouseholdSector,IndustrySector,TrafficSector
+    Generator,Grid,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
 DisjointClasses: 
-    Generator,Grid,ShuntImpedance,StorageUnit,Subgrid,Transformer
+    HouseholdSector,IndustrySector,TCSSector,TrafficSector
 
