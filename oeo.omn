@@ -691,8 +691,14 @@ Class: DemographicalAssumption
         Assumption
     
     
-Class: DieselOil
+Class: DieselFuel
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Diesel fuel /ˈdiːzəl/ in general is any liquid fuel used in diesel engines, whose fuel ignition takes place, without any spark, as a result of compression of the inlet air mixture and then injection of fuel. (Glow plugs, grid heaters and block heaters help achieve high temperatures for combustion during engine startup in cold weather.) Diesel engines have found broad use as a result of higher thermodynamic efficiency and thus fuel efficiency. This is particularly noted where diesel engines are run at part-load; as their air supply is not throttled as in a petrol engine, their efficiency still remains very high.
+
+The most common type of diesel fuel is a specific fractional distillate of petroleum fuel oil, but alternatives that are not derived from petroleum, such as biodiesel, biomass to liquid (BTL) or gas to liquid (GTL) diesel, are increasingly being developed and adopted.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Diesel_fuel&oldid=866949285"
+    
     SubClassOf: 
         Oil
     
@@ -868,6 +874,10 @@ Class: GasWorksGas
     
 Class: Gasoline
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gasoline (American English) or petrol (British English) is a transparent petroleum-derived liquid that is used primarily as a fuel in spark-ignited internal combustion engines. It consists mostly of organic compounds obtained by the fractional distillation of petroleum, enhanced with a variety of additives.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640"
+    
     SubClassOf: 
         Oil
     
@@ -956,6 +966,16 @@ Class: HouseholdSector
         Sector
     
     
+Class: Hydro
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydroelectricity&oldid=866820379",
+        <http://purl.org/dc/terms/title> "Hydroelectricity is electricity produced from hydropower."
+    
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: Identifier
 
     Annotations: 
@@ -1008,6 +1028,13 @@ Class: Institution
     
 Class: Kerosene
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kerosene, also known as paraffin, lamp oil, and coal oil (an obsolete term), is a combustible hydrocarbon liquid which is derived from petroleum. It is widely used as a fuel in industry as well as households. Its name derives from Greek: κηρός (keros) meaning wax, and was registered as a trademark by Canadian geologist and inventor Abraham Gesner in 1854 before evolving into a genericized trademark. It is sometimes spelled kerosine in scientific and industrial usage.
+[...]
+
+Kerosene is widely used to power jet engines of aircraft (jet fuel) and some rocket engines and is also commonly used as a cooking and lighting fuel and for fire toys such as poi. In parts of Asia, kerosene is sometimes used as fuel for small outboard motors or even motorcycles.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484"
+    
     SubClassOf: 
         Oil
     
@@ -1154,6 +1181,12 @@ Class: ModelVariable
     
 Class: NaturalGas
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas is a naturally occurring hydrocarbon gas mixture consisting primarily of methane, but commonly including varying amounts of other higher alkanes, and sometimes a small percentage of carbon dioxide, nitrogen, hydrogen sulfide, or helium. It is formed when layers of decomposing plant and animal matter are exposed to intense heat and pressure under the surface of the Earth over millions of years. The energy that the plants originally obtained from the sun is stored in the form of chemical bonds in the gas.
+
+Natural gas is a fossil fuel used as a source of energy for heating, cooking, and electricity generation. It is also used as a fuel for vehicles and as a chemical feedstock in the manufacture of plastics and other commercially important organic chemicals. Fossil fuel based natural gas is a non-renewable resource.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Natural_gas&oldid=867819022"
+    
     SubClassOf: 
         Gas
     
@@ -1578,21 +1611,19 @@ Class: WastePowerplant
         Generator
     
     
-Class: Water
-
-    SubClassOf: 
-        EnergyCarrier
-    
-    
 Class: WaterTurbine
 
     SubClassOf: 
         Generator,
-        uses some Water
+        uses some Hydro
     
     
 Class: Wind
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wind power is the use of air flow through wind turbines to provide the mechanical power to turn electric generators.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_power&oldid=867774274"
+    
     SubClassOf: 
         EnergyCarrier
     
@@ -1936,6 +1967,10 @@ Individual: Week
     
 Individual: Wind
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wind power is the use of air flow through wind turbines to provide the mechanical power to turn electric generators.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_power&oldid=867774274"
+    
     
 Individual: Yard
 
@@ -1957,7 +1992,7 @@ DisjointClasses:
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
 DisjointClasses: 
-    Coal,Gas,Heat,Light,Nuclear,Oil,Water,Wind
+    Coal,Gas,Heat,Hydro,Light,Nuclear,Oil,Wind
 
 DisjointClasses: 
     CommerceSector,HouseholdSector,IndustrySector
