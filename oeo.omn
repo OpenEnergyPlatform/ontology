@@ -478,6 +478,16 @@ Class: Agent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: AssociatedGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas produced in association with crude oil."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        NaturalGas
+    
+    
 Class: Assumption
 
     Annotations: 
@@ -593,6 +603,16 @@ Class: CoalPowerplant
 
     SubClassOf: 
         Generator
+    
+    
+Class: CollieryGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or transmitted by pipeline to consumers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        NaturalGas
     
     
 Class: CommerceSector
@@ -851,23 +871,11 @@ Class: FederalState
         GeographicRegion
     
     
-Class: Gas
-
-    SubClassOf: 
-        EnergyCarrier
-    
-    
 Class: GasPowerplant
 
     SubClassOf: 
         Generator,
-        uses some Gas
-    
-    
-Class: GasWorksGas
-
-    SubClassOf: 
-        Gas
+        uses some NaturalGas
     
     
 Class: Gasoline
@@ -1189,19 +1197,31 @@ Class: ModelVariable
 Class: NaturalGas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas is a naturally occurring hydrocarbon gas mixture consisting primarily of methane, but commonly including varying amounts of other higher alkanes, and sometimes a small percentage of carbon dioxide, nitrogen, hydrogen sulfide, or helium. It is formed when layers of decomposing plant and animal matter are exposed to intense heat and pressure under the surface of the Earth over millions of years. The energy that the plants originally obtained from the sun is stored in the form of chemical bonds in the gas.
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This data collection applies to natural gas, which comprises gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
 
-Natural gas is a fossil fuel used as a source of energy for heating, cooking, and electricity generation. It is also used as a fuel for vehicles and as a chemical feedstock in the manufacture of plastics and other commercially important organic chemicals. Fossil fuel based natural gas is a non-renewable resource.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Natural_gas&oldid=867819022"
+It includes both ‘non-associated’ gas originating from fields producing hydrocarbons only in gaseous form, and ‘associated’ gas produced in association with crude oil as well as methane recovered from coal mines (colliery gas) or from coal seams (coal seam gas).
+
+It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas
+        EnergyCarrier
     
     
 Class: Node
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: NonAssociatedGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas originating from fields producing hydrocarbons only in gaseous form.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        NaturalGas
     
     
 Class: Nuclear
@@ -2055,7 +2075,7 @@ DisjointClasses:
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
 DisjointClasses: 
-    Coal,Gas,Heat,Hydro,Nuclear,Oil,SolarEnergy,Wind
+    Coal,Heat,Hydro,NaturalGas,Nuclear,Oil,SolarEnergy,Wind
 
 DisjointClasses: 
     CommerceSector,HouseholdSector,IndustrySector
