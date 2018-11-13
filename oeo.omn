@@ -903,6 +903,17 @@ Class: GeographicRegion
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: Geothermal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy available as heat emitted from within the earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites:
+— for electricity generation using dry steam or high enthalpy brine after flashing,
+— directly as heat for district heating, agriculture etc"@en
+    
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: GeothermalGenerator
 
     SubClassOf: 
@@ -1045,12 +1056,6 @@ Class: LengthUnit
     
     SubClassOf: 
         UnitOfMeasurement
-    
-    
-Class: Light
-
-    SubClassOf: 
-        EnergyCarrier
     
     
 Class: Lignite
@@ -1288,7 +1293,7 @@ Class: PhotovoltaicGenerator
 
     SubClassOf: 
         Generator,
-        uses some Light
+        uses some SolarEnergy
     
     
 Class: PoliticalAssumption
@@ -1454,6 +1459,38 @@ Class: Software
     
     SubClassOf: 
         InformationArtifact
+    
+    
+Class: SolarEnergy
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        EnergyCarrier
+    
+    
+Class: SolarPhotovoltaic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        SolarEnergy
+    
+    
+Class: SolarThermal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
+(a) solar thermal-electric plants; or
+(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        SolarEnergy
     
     
 Class: SolidBiomass
@@ -2018,7 +2055,7 @@ DisjointClasses:
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
 DisjointClasses: 
-    Coal,Gas,Heat,Hydro,Light,Nuclear,Oil,Wind
+    Coal,Gas,Heat,Hydro,Nuclear,Oil,SolarEnergy,Wind
 
 DisjointClasses: 
     CommerceSector,HouseholdSector,IndustrySector
