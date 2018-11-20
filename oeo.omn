@@ -1,0 +1,1553 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://openenergy-platform.org/ontology/oeo/>
+<http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Import: <http://purl.obolibrary.org/obo/bfo.owl>
+
+Annotations: 
+    dc:contributor "Fabian Neuhaus",
+    dc:contributor "Martin Glauer",
+    dc:contributor "Sebastian Cordes",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology",
+    rdfs:comment "Include description of the ontology (in particular its scope) here ..."
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: covers
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
+    
+    
+ObjectProperty: covers_region
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        GeographicRegion
+    
+    
+ObjectProperty: covers_sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        Sector
+    
+    
+ObjectProperty: covers_technology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    
+ObjectProperty: covers_timeframe
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    
+ObjectProperty: handles_uncertainty
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_author
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_client
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_complexity
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: has_contact
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_documentation
+
+    SubPropertyOf: 
+        has_part
+    
+    
+ObjectProperty: has_funding_source
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+    
+    
+ObjectProperty: has_license
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        has_part
+    
+    
+ObjectProperty: has_objective
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+    
+    Domain: 
+        Optimization
+    
+    Range: 
+        ModelComponent
+    
+    
+ObjectProperty: has_objectivefunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_objectivevariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+    
+    
+ObjectProperty: has_part
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
+    
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        part_of
+    
+    
+ObjectProperty: has_participant
+
+    
+ObjectProperty: has_programvariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
+    
+    
+ObjectProperty: has_sink
+
+    SubPropertyOf: 
+        is_connected_to
+    
+    DisjointWith: 
+        has_source
+    
+    
+ObjectProperty: has_source
+
+    SubPropertyOf: 
+        is_connected_to
+    
+    DisjointWith: 
+        has_sink
+    
+    
+ObjectProperty: has_spatial_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_temporal_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_tool
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        ModelCalculation
+    
+    Range: 
+        Model
+    
+    
+ObjectProperty: has_website
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_connected_to
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Symmetric
+    
+    
+ObjectProperty: is_referenced_by
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        references
+    
+    
+ObjectProperty: is_used_by
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        uses
+    
+    
+ObjectProperty: makes_assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: part_of
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
+    
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        has_part
+    
+    
+ObjectProperty: references
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: uses
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        is_used_by
+    
+    
+ObjectProperty: uses_dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: uses_external_optimizer
+
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_software
+
+    SubPropertyOf: 
+        uses
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: ACLine
+
+    Annotations: 
+        rdfs:comment "undirected"
+    
+    SubClassOf: 
+        Line,
+        UndirectedEdge
+    
+    
+Class: Acronym
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Agent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An agent is a person or group doing something."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: BooleanVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Bus
+
+    SubClassOf: 
+        ElectricityGridComponent,
+        Node
+    
+    
+Class: CapacitanceUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A capacitance unit is a unit of measurement used to express the ratio of the change in an electric charge in a system to the corresponding change in its electric potential."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: City
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A city is a large human settlement."@en
+    
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: Constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Consumer
+
+    SubClassOf: 
+        ElectricityGridComponent
+    
+    
+Class: Continent
+
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: Country
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A country is a geographic region that is an distinct political entity."@en
+    
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: DCLine
+
+    Annotations: 
+        rdfs:comment "directed"
+    
+    SubClassOf: 
+        DirectedEdge,
+        Line
+    
+    
+Class: DOI
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
+source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
+The measurement series of an expiriment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Demand
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Demand is generally the need for energy, colloquially referred to as energy consumption.
+Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: DemandSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: DemographicalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
+Class: DirectedEdge
+
+    SubClassOf: 
+        Link
+    
+    
+Class: EconomicalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted prizes of fossil fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
+Class: ElectricChargeUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric charge unit is a unit of measurement used to express the physical property of matter that causes it to experience a force when placed in an electromagnetic field."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: ElectricCurrentUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric current unit is a unit of measurement used to express the flow of electric charge."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: ElectricalLoad
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
+
+Source: https://en.wikipedia.org/wiki/Electrical_load"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: ElectricityGrid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
+Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
+        rdfs:comment "Synonym: Network"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some ElectricityGridComponent
+    
+    
+Class: ElectricityGridComponent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: EmpiricalDataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        SynthethicDataset
+    
+    
+Class: EnergyGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: EnergySector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: EnergyStorageTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: EnergyTransferTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: EnergyUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: FederalState
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A federal state is a geographic region that is a political entity within a country. It is partially self governing."@en
+    
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: Generator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
+Source: https://en.wikipedia.org/wiki/Electric_generator"@en
+    
+    SubClassOf: 
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    DisjointWith: 
+        Line
+    
+    
+Class: GeographicRegion
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Graph
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Identifier
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: InformationArtifact
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Institution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en
+    
+    SubClassOf: 
+        Organization
+    
+    
+Class: LengthUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: Line
+
+    SubClassOf: 
+        ElectricityGridComponent,
+        Link
+    
+    DisjointWith: 
+        Generator
+    
+    
+Class: Link
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: LoadArea
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A load area is an area that contains energy consumption.
+
+Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
+    
+    SubClassOf: 
+        GeographicRegion
+    
+    
+Class: MassUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: Model
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
+    
+    SubClassOf: 
+        Software,
+        has_part some ModelComponent
+    
+    
+Class: ModelCalculation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en
+    
+    SubClassOf: 
+        Transformation,
+        has_tool some Model
+    
+    
+Class: ModelComponent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: ModelElement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
+    
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: ModelFunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en
+    
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: ModelVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
+    
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Node
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Optimization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Simulation
+    
+    
+Class: OptimizationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: Organization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
+    
+    SubClassOf: 
+        Agent
+    
+    DisjointWith: 
+        Person
+    
+    
+Class: Person
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human beeing."@en
+    
+    SubClassOf: 
+        Agent
+    
+    DisjointWith: 
+        Organization
+    
+    
+Class: PoliticalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
+Class: PoliticalParty
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en
+    
+    SubClassOf: 
+        Organization
+    
+    
+Class: Postprocessing
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
+    
+    SubClassOf: 
+        Transformation
+    
+    
+Class: Power
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the rate of doing work, the amount of energy transferred per unit time.
+Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: PowerUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power unit is a unit of measurement used to express the rate of doing work, the amount of energy transferred per unit time."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: Preprocessing
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
+    
+    SubClassOf: 
+        Transformation
+    
+    
+Class: ProgramParameter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en
+    
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Publication
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Quantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Other Idea: A number together with a unit of measurement to quantify an entity."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: RegulationAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A regulation assumption is an assumption about political regulations and prohibitions."@en
+    
+    SubClassOf: 
+        PoliticalAssumption
+    
+    DisjointWith: 
+        SubsidyAssumption
+    
+    
+Class: ResistanceUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A resistance unit is a unit of measurement used to express difficulty to pass an electric current through a conductor."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: Sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: ShuntImpedance
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
+
+Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
+    
+    SubClassOf: 
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    
+Class: Simulation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Optimization
+    
+    
+Class: SimulationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: Software
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: StorageUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
+    
+    SubClassOf: 
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    
+Class: Subgrid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
+    
+    SubClassOf: 
+        ElectricityGrid,
+        ElectricityGridComponent,
+        has_part some ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    
+Class: SubsidyAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Public subsidies for energy efficient renovation of private buildings."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsidy assumption is an assumption about financial support from the government to an economic sector or certain economic entities."@en
+    
+    SubClassOf: 
+        PoliticalAssumption
+    
+    DisjointWith: 
+        RegulationAssumption
+    
+    
+Class: SynthethicDataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        EmpiricalDataset
+    
+    
+Class: TechnologicalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technological assumption is an assumption about what kind of technologies are available."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
+Class: Technology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: TimeUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Class: Title
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Transformation
+
+    Annotations: 
+        definition "A transformation is a process that transforms one or more inputs into at least one output."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: Transformer
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
+2. A transformer is a static machine used for transforming power from one circuit to another without changing frequency. This is a very basic definition of transformer. Since there is no rotating or moving part so transformer is a static device. Transformer operates on ac supply. Transformer works on the principle of mutual induction.
+
+Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
+    
+    SubClassOf: 
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+    
+    
+Class: UndirectedEdge
+
+    SubClassOf: 
+        Link
+    
+    
+Class: UnitOfMeasurement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit of measurement is a specified magnitude of a quantity that is used to express the magnitude of the same kind of quantity."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: VoltageUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage unit is a unit of measurement used to express the difference in electric potential between two points."@en
+    
+    SubClassOf: 
+        UnitOfMeasurement
+    
+    
+Individual: Ampere
+
+    Annotations: 
+        rdfs:comment "Unit symbol: A
+SI unit for electric current."@en
+    
+    Types: 
+        ElectricCurrentUnit
+    
+    
+Individual: Common_year
+
+    Annotations: 
+        rdfs:comment "Unit symbol: a, y
+1 a = 365 d"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Coulomb
+
+    Annotations: 
+        rdfs:comment "Unit symbol: C
+SI unit for electric charge."@en
+    
+    Types: 
+        ElectricChargeUnit
+    
+    
+Individual: Day
+
+    Annotations: 
+        rdfs:comment "Unit symbol: d
+1 d = 24 h = 1440 min = 86,400 s"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: False
+
+    Types: 
+        BooleanVariable
+    
+    
+Individual: Farad
+
+    Annotations: 
+        rdfs:comment "Unit symbol: F
+SI derived unit of electrical capacitance."@en
+    
+    Types: 
+        CapacitanceUnit
+    
+    
+Individual: Foot
+
+    Annotations: 
+        rdfs:comment "Unit symbol: ft
+1 ft = 0.3048 m"@en
+    
+    Types: 
+        LengthUnit
+    
+    
+Individual: Grain
+
+    Annotations: 
+        rdfs:comment "Unit symbol: grain, gr
+1 gr = 64,79891 mg"@en
+    
+    Types: 
+        MassUnit
+    
+    
+Individual: Gram
+
+    Annotations: 
+        rdfs:comment "Unit symbol: g
+SI unit for mass: kg (1 kg = 1000 g)"@en
+    
+    Types: 
+        MassUnit
+    
+    
+Individual: Hour
+
+    Annotations: 
+        rdfs:comment "Unit symbol: h
+1h = 60 min = 3600 s"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Inch
+
+    Annotations: 
+        rdfs:comment "Unit symbol: in, \"
+1 in = 1\" = 2,54 cm = 0,0254 m"@en
+    
+    Types: 
+        LengthUnit
+    
+    
+Individual: Joule
+
+    Annotations: 
+        rdfs:comment "SI unit for energy.
+Unit symbol: J
+1 J = 1 kg*(m/s)^2"@en
+    
+    Types: 
+        EnergyUnit
+    
+    
+Individual: Julian_year
+
+    Annotations: 
+        rdfs:comment "Unit symbol: a, a_jul, y, y_jul
+1 a = 365,25 d = 31,557,600 s"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Kilowatt_hour
+
+    Annotations: 
+        rdfs:comment "Unit symbol: kWh
+1 kWh = 3600 kJ
+Used for electricity"@en
+    
+    Types: 
+        EnergyUnit
+    
+    
+Individual: Leap_year
+
+    Annotations: 
+        rdfs:comment "Unit symbol: a, y
+1 a = 366 d"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Metre
+
+    Annotations: 
+        rdfs:comment "Unit symbol: m
+SI unit for length"@en
+    
+    Types: 
+        LengthUnit
+    
+    
+Individual: Mile
+
+    Annotations: 
+        rdfs:comment "Unit symbol: mile
+1 mile = 1609.344 m"@en
+    
+    Types: 
+        LengthUnit
+    
+    
+Individual: Minute
+
+    Annotations: 
+        rdfs:comment "Unit Symbol: min
+1 min = 60s"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Nautical_mile
+
+    Annotations: 
+        rdfs:comment "Unit symbol: M, NM, nmi, sm
+1 M = 1852 m"@en
+    
+    Types: 
+        LengthUnit
+    
+    
+Individual: Newton_metre
+
+    Annotations: 
+        rdfs:comment "Unit symbol: Nm
+1 Nm = 1 J
+Used for torque"@en
+    
+    Types: 
+        EnergyUnit
+    
+    
+Individual: Ohm
+
+    Annotations: 
+        rdfs:comment "Unit symbol: Ω
+SI derived unit for electrical resistance"@en
+    
+    Types: 
+        ResistanceUnit
+    
+    
+Individual: Ounce
+
+    Annotations: 
+        rdfs:comment "Unit symbol: oz
+1 oz = 28.349523125 g (there are other ounces but this is the one that is used the most)"@en
+    
+    Types: 
+        MassUnit
+    
+    
+Individual: Pound
+
+    Annotations: 
+        rdfs:comment "Unit symbol: lb
+1 lb = 0.45359237 kg"@en
+    
+    Types: 
+        MassUnit
+    
+    
+Individual: Second
+
+    Annotations: 
+        rdfs:comment "Unit symbol: s
+SI unit of time"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Therm
+
+    Annotations: 
+        rdfs:comment "Unit symbol: thm
+1 thm ≈ 105.5 MJ (exact value depending on region)
+Used for natural gas"@en
+    
+    Types: 
+        EnergyUnit
+    
+    
+Individual: True
+
+    Types: 
+        BooleanVariable
+    
+    
+Individual: Volt
+
+    Annotations: 
+        rdfs:comment "Unit symbol: V
+SI derived unit for voltage."@en
+    
+    Types: 
+        VoltageUnit
+    
+    
+Individual: Watt
+
+    Annotations: 
+        rdfs:comment "Unit symbol: W
+SI derived unit for power."@en
+    
+    Types: 
+        PowerUnit
+    
+    
+Individual: Week
+
+    Annotations: 
+        rdfs:comment "Unit symbol: week
+1 week = 7 d"@en
+    
+    Types: 
+        TimeUnit
+    
+    
+Individual: Yard
+
+    Annotations: 
+        rdfs:comment "Unit symbol: yd
+1 yd = 0.9144 m"@en
+    
+    Types: 
+        LengthUnit
+    
+    
+DisjointClasses: 
+    Acronym,DOI,Title
+
+DisjointClasses: 
+    Bus,Consumer,Generator,Line,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses: 
+    CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
+
+DisjointClasses: 
+    DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
+
+DisjointClasses: 
+    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses: 
+    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+
+DisjointClasses: 
+    EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
