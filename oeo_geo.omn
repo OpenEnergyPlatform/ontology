@@ -1,0 +1,812 @@
+Prefix: : <https://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <https://openenergy-platform.org/ontology/oeo_geo/>
+<https://openenergy-platform.org/ontology/v0.0.1/oeo_geo/>
+Import: <http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl>
+
+Annotations: 
+    dc:contributor "Christian Winger",
+    dc:contributor "Fabian Neuhaus",
+    dc:contributor "Hannah Förster",
+    dc:contributor "Lukas Emele",
+    dc:contributor "Martin Glauer",
+    dc:contributor "Sebastian Cordes",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology",
+    rdfs:comment "Include description of the ontology (in particular its scope) here ..."
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: <https://openenergy-platform.org/ontology/oeo_geo/definition>
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/covers>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/covers_region>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/covers>
+    
+    Range: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/covers_sector>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/covers>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/covers_technology>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/covers>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/covers_timeframe>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/covers>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/handles_uncertainty>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_author>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_client>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_complexity>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_constraint>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_input>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_contact>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_documentation>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_part>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_funding_source>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_input>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_license>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_logo>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_part>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_objective>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_objectivefunction>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_objective>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_objectivevariable>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_objective>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_output>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_part>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
+    
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_programvariable>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_resolution>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_sink>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/is_connected_to>
+    
+    DisjointWith: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_source>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_source>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/is_connected_to>
+    
+    DisjointWith: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_sink>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_spatial_resolution>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_resolution>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_temporal_resolution>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_resolution>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_tool>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_participant>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/has_website>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/is_referenced_by>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/is_connected_to>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Characteristics: 
+        Symmetric
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/is_referenced_by>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/references>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/is_used_by>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/uses>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/makes_assumption>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_input>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/part_of>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
+    
+    Characteristics: 
+        Transitive
+    
+    InverseOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_part>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/references>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/is_referenced_by>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/uses>
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/is_used_by>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/uses_dataset>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
+    
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/has_input>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/uses_external_optimizer>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/uses>
+    
+    
+ObjectProperty: <https://openenergy-platform.org/ontology/oeo_geo/uses_software>
+
+    SubPropertyOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/uses>
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An administrative division, unit, entity, area or region, also referred to as a subnational entity, statoid, constituent unit, or country subdivision, is a portion of a country or other region delineated for the purpose of administration. Administrative divisions are granted a certain degree of autonomy and are usually required to manage themselves through their own local governments. Countries are divided up into these smaller units to make managing their land and the affairs of their people easier. A country may be divided into provinces, which, in turn, are divided into counties, which, in turn, may be divided in whole or in part into municipalities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Administrative_division&oldid=867063518"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Africa>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Africa is the world's second largest and second most-populous continent (behind Asia in both categories). At about 30.3 million km2 (11.7 million square miles) including adjacent islands, it covers 6% of Earth's total surface area and 20% of its land area."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Africa&oldid=868613614"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Antarctica>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Antarctica is Earth's southernmost continent. It contains the geographic South Pole and is situated in the Antarctic region of the Southern Hemisphere, almost entirely south of the Antarctic Circle, and is surrounded by the Southern Ocean. At 14,000,000 square kilometres (5,400,000 square miles), it is the fifth-largest continent."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Antarctica&oldid=868427230"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Asia>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Asia is Earth's largest and most populous continent, located primarily in the Eastern and Northern Hemispheres. It shares the continental landmass of Eurasia with the continent of Europe and the continental landmass of Afro-Eurasia with both Europe and Africa."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Asia&oldid=868251038"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Australia>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The continent of Australia, sometimes known in technical contexts by the names Sahul, Australinea or Meganesia to distinguish it from the country of Australia, consists of the land masses which sit on Australia's continental shelf. This includes mainland Australia, Tasmania, and the island of New Guinea (comprising Papua New Guinea and two Indonesian provinces). Situated in the geographical region of Oceania, it is the smallest of the seven traditional continents in the English conception."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Australia_(continent)&oldid=868416094"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/City>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A city is a local administrative unit (LAU) where the majority of the population lives in an urban centre of at least 50 000 inhabitants. This is part of the EU-OECD functional urban area definition (EU-OECD FUA)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat: 
+https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:City"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A continent is one of several very large landmasses of the world. Generally identified by convention rather than any strict criteria, up to seven regions are commonly regarded as continents."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Continent&oldid=868603165"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Country>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A country is a region that is identified as a distinct national entity in political geography. A country may be an independent sovereign state or part of a larger state,[1] as a non-sovereign or formerly sovereign political division, or a geographic region associated with sets of previously independent or differently associated people with distinct political characteristics."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Country&oldid=866952883"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/County>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A county is a geographical region of a country used for administrative or other purposes, in certain modern nations. The term is derived from the Old French conté or cunté denoting a jurisdiction under the sovereignty of a count (earl) or a viscount."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=County&oldid=868471406"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Europe>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. It is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west and the Mediterranean Sea to the south. It comprises the westernmost part of Eurasia."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Europe&oldid=868103335"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/FederalState>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A federation (also known as a federal state) is a political entity characterized by a union of partially self-governing provinces, states, or other regions under a central federal government (federalism)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Federation&oldid=865044965"@en,
+        rdfs:label "FederalState"@en,
+        rdfs:label "Federation"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/LoadArea>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A load area is an area that contains energy consumption.
+
+Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Municipality>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A municipality is usually a single urban administrative division having corporate status and powers of self-government or jurisdiction as granted by national and state laws to which it is subordinate. It is to be distinguished (usually) from the county, which may encompass rural territory or numerous small communities such as towns, villages and hamlets."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Municipality&oldid=868484965"@en,
+        rdfs:label "Community"@en,
+        rdfs:label "Municipality"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/NorthAmerica>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere; it is also considered by some to be a northern subcontinent of the Americas. It is bordered to the north by the Arctic Ocean, to the east by the Atlantic Ocean, to the west and south by the Pacific Ocean, and to the southeast by South America and the Caribbean Sea."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=North_America&oldid=867798265"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/Province>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A province is almost always an administrative division within a country or state. The term derives from the ancient Roman provincia, which was the major territorial and administrative unit of the Roman Empire's territorial possessions outside Italy. The term province has since been adopted by many countries. In some countries with no actual provinces, \"the provinces\" is a metaphorical term meaning \"outside the capital city\"."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Province&oldid=865815503"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/SouthAmerica>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "South America is a continent in the Western Hemisphere, mostly in the Southern Hemisphere, with a relatively small portion in the Northern Hemisphere. It may also be considered a subcontinent of the Americas, which is how it is viewed in the Spanish and Portuguese-speaking regions of the Americas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=South_America&oldid=868487395"@en
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Ampere>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: A
+SI unit for electric current."@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Coal>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Common_year>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: a, y
+1 a = 365 d"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Coulomb>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: C
+SI unit for electric charge."@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Day>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: d
+1 d = 24 h = 1440 min = 86,400 s"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/False>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Farad>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: F
+SI derived unit of electrical capacitance."@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Foot>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: ft
+1 ft = 0.3048 m"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Grain>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: grain, gr
+1 gr = 64,79891 mg"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Gram>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: g
+SI unit for mass: kg (1 kg = 1000 g)"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/HardCoal>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Heat>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Hour>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: h
+1h = 60 min = 3600 s"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Inch>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: in, \"
+1 in = 1\" = 2,54 cm = 0,0254 m"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Joule>
+
+    Annotations: 
+        rdfs:comment "SI unit for energy.
+Unit symbol: J
+1 J = 1 kg*(m/s)^2"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Julian_year>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: a, a_jul, y, y_jul
+1 a = 365,25 d = 31,557,600 s"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Kilowatt_hour>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: kWh
+1 kWh = 3600 kJ
+Used for electricity"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Leap_year>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: a, y
+1 a = 366 d"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Light>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Lignite>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Metre>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: m
+SI unit for length"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Mile>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: mile
+1 mile = 1609.344 m"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Minute>
+
+    Annotations: 
+        rdfs:comment "Unit Symbol: min
+1 min = 60s"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Nautical_mile>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: M, NM, nmi, sm
+1 M = 1852 m"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Newton_metre>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: Nm
+1 Nm = 1 J
+Used for torque"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Nuclear>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Ohm>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: Ω
+SI derived unit for electrical resistance"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Oil>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Ounce>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: oz
+1 oz = 28.349523125 g (there are other ounces but this is the one that is used the most)"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Pound>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: lb
+1 lb = 0.45359237 kg"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Second>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: s
+SI unit of time"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Therm>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: thm
+1 thm ≈ 105.5 MJ (exact value depending on region)
+Used for natural gas"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/True>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Volt>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: V
+SI derived unit for voltage."@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Water>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Watt>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: W
+SI derived unit for power."@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Week>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: week
+1 week = 7 d"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Wind>
+
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Yard>
+
+    Annotations: 
+        rdfs:comment "Unit symbol: yd
+1 yd = 0.9144 m"@en
+    
+    

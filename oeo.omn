@@ -1,5 +1,5 @@
-Prefix: : <http://openenergy-platform.org/ontology/oeo/>
-Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+Prefix: : <https://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
@@ -24,6 +24,12 @@ Annotations:
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
     rdfs:comment "Include description of the ontology (in particular its scope) here ..."
 
+AnnotationProperty: <http://openenergy-platform.org/ontology/oeo/definition>
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
     
@@ -39,12 +45,6 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: dc:contributor
 
     
-AnnotationProperty: definition
-
-    SubPropertyOf: 
-        rdfs:comment
-    
-    
 AnnotationProperty: rdfs:comment
 
     
@@ -57,208 +57,205 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
-ObjectProperty: covers
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
     
     
-ObjectProperty: covers_region
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_region>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
     
     SubPropertyOf: 
-        covers
-    
-    Range: 
-        GeographicRegion
+        <http://openenergy-platform.org/ontology/oeo/covers>
     
     
-ObjectProperty: covers_sector
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_sector>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
     
     SubPropertyOf: 
-        covers
+        <http://openenergy-platform.org/ontology/oeo/covers>
     
     Range: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-ObjectProperty: covers_technology
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_technology>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
     
     SubPropertyOf: 
-        covers
+        <http://openenergy-platform.org/ontology/oeo/covers>
     
     
-ObjectProperty: covers_timeframe
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_timeframe>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
     
     SubPropertyOf: 
-        covers
+        <http://openenergy-platform.org/ontology/oeo/covers>
     
     
-ObjectProperty: handles_uncertainty
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/handles_uncertainty>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     
-ObjectProperty: has_author
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_author>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     Domain: 
-        Publication
+        <http://openenergy-platform.org/ontology/oeo/Publication>
     
     Range: 
-        Agent
+        <http://openenergy-platform.org/ontology/oeo/Agent>
     
     
-ObjectProperty: has_client
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_client>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     Domain: 
-        Publication
+        <http://openenergy-platform.org/ontology/oeo/Publication>
     
     Range: 
-        Agent
+        <http://openenergy-platform.org/ontology/oeo/Agent>
     
     
-ObjectProperty: has_complexity
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_complexity>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     
-ObjectProperty: has_constraint
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_constraint>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
     
     SubPropertyOf: 
-        has_input
+        <http://openenergy-platform.org/ontology/oeo/has_input>
     
     
-ObjectProperty: has_contact
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_contact>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     
-ObjectProperty: has_documentation
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_documentation>
 
     SubPropertyOf: 
-        has_part
+        <http://openenergy-platform.org/ontology/oeo/has_part>
     
     
-ObjectProperty: has_funding_source
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_funding_source>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     Domain: 
-        Publication
+        <http://openenergy-platform.org/ontology/oeo/Publication>
     
     Range: 
-        Agent
+        <http://openenergy-platform.org/ontology/oeo/Agent>
     
     
-ObjectProperty: has_input
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_input>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     Domain: 
-        Transformation
+        <http://openenergy-platform.org/ontology/oeo/Transformation>
     
     Range: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-ObjectProperty: has_license
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_license>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     
-ObjectProperty: has_logo
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_logo>
 
     SubPropertyOf: 
-        has_part
+        <http://openenergy-platform.org/ontology/oeo/has_part>
     
     
-ObjectProperty: has_objective
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_objective>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
     
     Domain: 
-        Optimization
+        <http://openenergy-platform.org/ontology/oeo/Optimization>
     
     Range: 
-        ModelComponent
+        <http://openenergy-platform.org/ontology/oeo/ModelComponent>
     
     
-ObjectProperty: has_objectivefunction
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_objectivefunction>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
     
     SubPropertyOf: 
-        has_objective
+        <http://openenergy-platform.org/ontology/oeo/has_objective>
     
     
-ObjectProperty: has_objectivevariable
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_objectivevariable>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
     
     SubPropertyOf: 
-        has_objective
+        <http://openenergy-platform.org/ontology/oeo/has_objective>
     
     
-ObjectProperty: has_output
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_output>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     Domain: 
-        Transformation
+        <http://openenergy-platform.org/ontology/oeo/Transformation>
     
     Range: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-ObjectProperty: has_part
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_part>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
@@ -267,85 +264,85 @@ ObjectProperty: has_part
         Transitive
     
     InverseOf: 
-        part_of
+        <http://openenergy-platform.org/ontology/oeo/part_of>
     
     
-ObjectProperty: has_participant
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_participant>
 
     
-ObjectProperty: has_programvariable
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_programvariable>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     
-ObjectProperty: has_resolution
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_resolution>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
     
     
-ObjectProperty: has_sink
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_sink>
 
     SubPropertyOf: 
-        is_connected_to
+        <http://openenergy-platform.org/ontology/oeo/is_connected_to>
     
     DisjointWith: 
-        has_source
+        <http://openenergy-platform.org/ontology/oeo/has_source>
     
     
-ObjectProperty: has_source
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_source>
 
     SubPropertyOf: 
-        is_connected_to
+        <http://openenergy-platform.org/ontology/oeo/is_connected_to>
     
     DisjointWith: 
-        has_sink
+        <http://openenergy-platform.org/ontology/oeo/has_sink>
     
     
-ObjectProperty: has_spatial_resolution
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_spatial_resolution>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
     
     SubPropertyOf: 
-        has_resolution
+        <http://openenergy-platform.org/ontology/oeo/has_resolution>
     
     
-ObjectProperty: has_temporal_resolution
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_temporal_resolution>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
     
     SubPropertyOf: 
-        has_resolution
+        <http://openenergy-platform.org/ontology/oeo/has_resolution>
     
     
-ObjectProperty: has_tool
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_tool>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://openenergy-platform.org/ontology/oeo/has_participant>
     
     Domain: 
-        ModelCalculation
+        <http://openenergy-platform.org/ontology/oeo/ModelCalculation>
     
     Range: 
-        Model
+        <http://openenergy-platform.org/ontology/oeo/Model>
     
     
-ObjectProperty: has_website
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_website>
 
     SubPropertyOf: 
-        is_referenced_by
+        <http://openenergy-platform.org/ontology/oeo/is_referenced_by>
     
     
-ObjectProperty: is_connected_to
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/is_connected_to>
 
     SubPropertyOf: 
         owl:topObjectProperty
@@ -354,37 +351,34 @@ ObjectProperty: is_connected_to
         Symmetric
     
     
-ObjectProperty: is_referenced_by
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/is_referenced_by>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     InverseOf: 
-        references
+        <http://openenergy-platform.org/ontology/oeo/references>
     
     
-ObjectProperty: is_used_by
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/is_used_by>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     InverseOf: 
-        uses
+        <http://openenergy-platform.org/ontology/oeo/uses>
     
     
-ObjectProperty: makes_assumption
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/makes_assumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
     
     SubPropertyOf: 
-        has_input
+        <http://openenergy-platform.org/ontology/oeo/has_input>
     
     
-ObjectProperty: owl:topObjectProperty
-
-    
-ObjectProperty: part_of
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/part_of>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
@@ -393,61 +387,52 @@ ObjectProperty: part_of
         Transitive
     
     InverseOf: 
-        has_part
+        <http://openenergy-platform.org/ontology/oeo/has_part>
     
     
-ObjectProperty: references
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/references>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     InverseOf: 
-        is_referenced_by
+        <http://openenergy-platform.org/ontology/oeo/is_referenced_by>
     
     
-ObjectProperty: uses
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses>
 
     SubPropertyOf: 
         owl:topObjectProperty
     
     InverseOf: 
-        is_used_by
+        <http://openenergy-platform.org/ontology/oeo/is_used_by>
     
     
-ObjectProperty: uses_dataset
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses_dataset>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
     
     SubPropertyOf: 
-        has_input
+        <http://openenergy-platform.org/ontology/oeo/has_input>
     
     
-ObjectProperty: uses_external_optimizer
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses_external_optimizer>
 
     SubPropertyOf: 
-        uses
+        <http://openenergy-platform.org/ontology/oeo/uses>
     
     
-ObjectProperty: uses_software
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses_software>
 
     SubPropertyOf: 
-        uses
+        <http://openenergy-platform.org/ontology/oeo/uses>
     
     
-Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+ObjectProperty: owl:topObjectProperty
 
     
-Class: <http://purl.obolibrary.org/obo/BFO_0000003>
-
-    
-Class: <http://purl.obolibrary.org/obo/BFO_0000015>
-
-    
-Class: <http://purl.obolibrary.org/obo/BFO_0000031>
-
-    
-Class: ACLine
+Class: <http://openenergy-platform.org/ontology/oeo/ACLine>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
@@ -456,20 +441,20 @@ Generally, flows in the model can not be controlled but are a function of the re
         rdfs:label "AC-Line"@en
     
     SubClassOf: 
-        Line,
-        UndirectedEdge
+        <http://openenergy-platform.org/ontology/oeo/Line>,
+        <http://openenergy-platform.org/ontology/oeo/UndirectedEdge>
     
     
-Class: Acronym
+Class: <http://openenergy-platform.org/ontology/oeo/Acronym>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
     
     SubClassOf: 
-        Identifier
+        <http://openenergy-platform.org/ontology/oeo/Identifier>
     
     
-Class: Agent
+Class: <http://openenergy-platform.org/ontology/oeo/Agent>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An agent is a person or group doing something."@en
@@ -478,63 +463,63 @@ Class: Agent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: Anthracite
+Class: <http://openenergy-platform.org/ontology/oeo/Anthracite>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "High rank coal used for industrial and residential applications. It has generally less than 10 % volatile matter and a high carbon content (about 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        HardCoal
+        <http://openenergy-platform.org/ontology/oeo/HardCoal>
     
     
-Class: AssociatedGas
+Class: <http://openenergy-platform.org/ontology/oeo/AssociatedGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas produced in association with crude oil."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        NaturalGas
+        <http://openenergy-platform.org/ontology/oeo/NaturalGas>
     
     
-Class: Assumption
+Class: <http://openenergy-platform.org/ontology/oeo/Assumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: AviationGasoline
+Class: <http://openenergy-platform.org/ontology/oeo/AviationGasoline>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Motor spirit prepared especially for aviation piston engines, with an octane number suited to the engine, a freezing point of - 60 °C and a distillation range usually within the limits of 30 °C and 180 °C."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gasoline
+        <http://openenergy-platform.org/ontology/oeo/Gasoline>
     
     
-Class: BioGasGenerator
+Class: <http://openenergy-platform.org/ontology/oeo/BioGasGenerator>
 
     SubClassOf: 
-        GasPowerplant
+        <http://openenergy-platform.org/ontology/oeo/GasPowerplant>
     
     
-Class: Biodiesel
+Class: <http://openenergy-platform.org/ontology/oeo/Biodiesel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bio-diesel (a methyl-ester produced from vegetable or animal oil, of diesel quality), biodimethylether (dimethylether produced from biomass), Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil produced from oil seed through mechanical processing only) and all other liquid biofuels which are added to, blended with or used straight as transport diesel.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        LiquidBiofuel
+        <http://openenergy-platform.org/ontology/oeo/LiquidBiofuel>
     
     
-Class: Biofuel
+Class: <http://openenergy-platform.org/ontology/oeo/Biofuel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a fuel that is produced through contemporary biological processes, such as agriculture and anaerobic digestion, rather than a fuel produced by geological processes such as those involved in the formation of fossil fuels, such as coal and petroleum, from prehistoric biological matter.
@@ -543,20 +528,20 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109"
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: Biogas
+Class: <http://openenergy-platform.org/ontology/oeo/Biogas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biogas&oldid=867559571"
     
     SubClassOf: 
-        Biofuel
+        <http://openenergy-platform.org/ontology/oeo/Biofuel>
     
     
-Class: Biogasoline
+Class: <http://openenergy-platform.org/ontology/oeo/Biogasoline>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)",
@@ -565,35 +550,35 @@ Class: Biogasoline
         rdfs:label "Biogasoline"@en
     
     SubClassOf: 
-        LiquidBiofuel
+        <http://openenergy-platform.org/ontology/oeo/LiquidBiofuel>
     
     
-Class: BiomassPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/BiomassPowerplant>
 
     SubClassOf: 
-        Generator
+        <http://openenergy-platform.org/ontology/oeo/Generator>
     
     
-Class: BlastFurnaceGas
+Class: <http://openenergy-platform.org/ontology/oeo/BlastFurnaceGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Produced during the combustion of coke in blast furnaces in the iron and steel industry. It is recovered and used as a fuel partly within the plant and partly in other steel industry processes or in power stations equipped to burn it. The quantity of fuel should be reported on a gross calorific value basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        ManufacturedCoalBasedGas
+        <http://openenergy-platform.org/ontology/oeo/ManufacturedCoalBasedGas>
     
     
-Class: BooleanVariable
+Class: <http://openenergy-platform.org/ontology/oeo/BooleanVariable>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: Bus
+Class: <http://openenergy-platform.org/ontology/oeo/Bus>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
@@ -601,135 +586,111 @@ Class: Bus
         rdfs:label "NetworkNode"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        Node
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/Node>
     
     
-Class: CapacitanceUnit
+Class: <http://openenergy-platform.org/ontology/oeo/CapacitanceUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A capacitance unit is a unit of measurement used to express the ratio of the change in an electric charge in a system to the corresponding change in its electric potential."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: Charcoal
+Class: <http://openenergy-platform.org/ontology/oeo/Charcoal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The solid residue of the destructive distillation and pyrolysis of wood and other vegetal material."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolidBiomass
+        <http://openenergy-platform.org/ontology/oeo/SolidBiomass>
     
     
-Class: City
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A city is a large human settlement."@en
-    
-    SubClassOf: 
-        GeographicRegion
-    
-    
-Class: CoalAndOtherSolidFossilFuels
+Class: <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock usually occurring in rock strata in layers or veins called coal beds or coal seams. The harder forms, such as anthracite coal, can be regarded as metamorphic rock because of later exposure to elevated temperature and pressure. Coal is composed primarily of carbon, along with variable quantities of other elements, chiefly hydrogen, sulfur, oxygen, and nitrogen.[1] Coal is a fossil fuel that forms when dead plant matter is converted into peat, which in turn is converted into lignite, then sub-bituminous coal, after that bituminous coal, and lastly anthracite. This involves biological and geological processes. The geological processes take place over millions of years."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: CoalPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/CoalPowerplant>
 
     SubClassOf: 
-        Generator
+        <http://openenergy-platform.org/ontology/oeo/Generator>
     
     
-Class: CokeOvenGas
+Class: <http://openenergy-platform.org/ontology/oeo/CokeOvenGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Obtained as a by-product of the manufacture of coke oven coke for the production of iron and steel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        ManufacturedCoalBasedGas
+        <http://openenergy-platform.org/ontology/oeo/ManufacturedCoalBasedGas>
     
     
-Class: CokingCoal
+Class: <http://openenergy-platform.org/ontology/oeo/CokingCoal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Bituminous coal with a quality that allows the production of a coke suitable to support a blast furnace charge. Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        HardCoal
+        <http://openenergy-platform.org/ontology/oeo/HardCoal>
     
     
-Class: CollieryGas
+Class: <http://openenergy-platform.org/ontology/oeo/CollieryGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or transmitted by pipeline to consumers."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        NaturalGas
+        <http://openenergy-platform.org/ontology/oeo/NaturalGas>
     
     
-Class: CommerceSector
+Class: <http://openenergy-platform.org/ontology/oeo/CommerceSector>
 
     Annotations: 
         rdfs:label "ServiceSector"@en
     
     SubClassOf: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-Class: Constraint
+Class: <http://openenergy-platform.org/ontology/oeo/Constraint>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: Consumer
+Class: <http://openenergy-platform.org/ontology/oeo/Consumer>
 
     SubClassOf: 
-        ElectricityGridComponent
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>
     
     
-Class: Continent
-
-    SubClassOf: 
-        GeographicRegion
-    
-    
-Class: Country
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A country is a geographic region that is an distinct political entity."@en
-    
-    SubClassOf: 
-        GeographicRegion
-    
-    
-Class: CrudeOil
+Class: <http://openenergy-platform.org/ontology/oeo/CrudeOil>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable. This category includes field or lease condensate recovered from associated and non-associated gas where it is commingled with the commercial crude oil stream."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        OilAndPetroleumProducts
+        <http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>
     
     
-Class: DCLine
+Class: <http://openenergy-platform.org/ontology/oeo/DCLine>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
@@ -738,21 +699,21 @@ Genreally, flows in the model can be controlled/optimized."@en,
         rdfs:label "HVDC-Line"@en
     
     SubClassOf: 
-        DirectedEdge,
-        Line
+        <http://openenergy-platform.org/ontology/oeo/DirectedEdge>,
+        <http://openenergy-platform.org/ontology/oeo/Line>
     
     
-Class: DOI
+Class: <http://openenergy-platform.org/ontology/oeo/DOI>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
 source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
     
     SubClassOf: 
-        Identifier
+        <http://openenergy-platform.org/ontology/oeo/Identifier>
     
     
-Class: Dataset
+Class: <http://openenergy-platform.org/ontology/oeo/Dataset>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
@@ -760,30 +721,30 @@ The measurement series of an expiriment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: Demand
+Class: <http://openenergy-platform.org/ontology/oeo/Demand>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Demand is generally the need for energy, colloquially referred to as energy consumption.
 Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
     
     SubClassOf: 
-        Quantity
+        <http://openenergy-platform.org/ontology/oeo/Quantity>
     
     
-Class: DemographicalAssumption
+Class: <http://openenergy-platform.org/ontology/oeo/DemographicalAssumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en
     
     SubClassOf: 
-        Assumption
+        <http://openenergy-platform.org/ontology/oeo/Assumption>
     
     
-Class: DieselFuel
+Class: <http://openenergy-platform.org/ontology/oeo/DieselFuel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content.",
@@ -792,16 +753,16 @@ Class: DieselFuel
         rdfs:label "TransportDiesel"@en
     
     SubClassOf: 
-        GasDieselOil
+        <http://openenergy-platform.org/ontology/oeo/GasDieselOil>
     
     
-Class: DirectedEdge
+Class: <http://openenergy-platform.org/ontology/oeo/DirectedEdge>
 
     SubClassOf: 
-        Link
+        <http://openenergy-platform.org/ontology/oeo/Link>
     
     
-Class: EconomicalAssumption
+Class: <http://openenergy-platform.org/ontology/oeo/EconomicalAssumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en,
@@ -809,28 +770,28 @@ Class: EconomicalAssumption
         <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en
     
     SubClassOf: 
-        Assumption
+        <http://openenergy-platform.org/ontology/oeo/Assumption>
     
     
-Class: ElectricChargeUnit
+Class: <http://openenergy-platform.org/ontology/oeo/ElectricChargeUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electric charge unit is a unit of measurement used to express the physical property of matter that causes it to experience a force when placed in an electromagnetic field."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: ElectricCurrentUnit
+Class: <http://openenergy-platform.org/ontology/oeo/ElectricCurrentUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electric current unit is a unit of measurement used to express the flow of electric charge."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: ElectricalLoad
+Class: <http://openenergy-platform.org/ontology/oeo/ElectricalLoad>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
@@ -840,10 +801,10 @@ Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
         rdfs:label "ElectricalLoad"@en
     
     SubClassOf: 
-        Demand
+        <http://openenergy-platform.org/ontology/oeo/Demand>
     
     
-Class: ElectricityGrid
+Class: <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
@@ -852,10 +813,10 @@ Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some ElectricityGridComponent
+        <http://openenergy-platform.org/ontology/oeo/has_part> some <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>
     
     
-Class: ElectricityGridComponent
+Class: <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
@@ -864,32 +825,32 @@ Class: ElectricityGridComponent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: ElectricitySector
+Class: <http://openenergy-platform.org/ontology/oeo/ElectricitySector>
 
     SubClassOf: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-Class: Emission
+Class: <http://openenergy-platform.org/ontology/oeo/Emission>
 
     SubClassOf: 
-        Quantity
+        <http://openenergy-platform.org/ontology/oeo/Quantity>
     
     
-Class: EmpiricalDataset
+Class: <http://openenergy-platform.org/ontology/oeo/EmpiricalDataset>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
     
     SubClassOf: 
-        Dataset
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
     
     DisjointWith: 
-        SynthethicDataset
+        <http://openenergy-platform.org/ontology/oeo/SynthethicDataset>
     
     
-Class: EnergyCarrier
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "According to ISO 13600, an energy carrier is either a substance or a phenomenon that can be used to produce mechanical work or heat or to operate chemical or physical processes. It is any system or substance that contains energy for conversion as usable energy later or somewhere else. This could be converted for use in, for example, an appliance or vehicle. Such carriers include springs, electrical batteries, capacitors, pressurized air, dammed water, hydrogen, petroleum, coal, wood, and natural gas."@en,
@@ -899,80 +860,71 @@ Class: EnergyCarrier
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: EnergyGeneratorTechnology
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
     
     SubClassOf: 
-        Technology
+        <http://openenergy-platform.org/ontology/oeo/Technology>
     
     
-Class: EnergyStorageTechnology
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
     
     SubClassOf: 
-        Technology
+        <http://openenergy-platform.org/ontology/oeo/Technology>
     
     
-Class: EnergyTransferTechnology
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyTransferTechnology>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
     
     SubClassOf: 
-        Technology
+        <http://openenergy-platform.org/ontology/oeo/Technology>
     
     
-Class: EnergyUnit
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: FederalState
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A federal state is a geographic region that is a political entity within a country. It is partially self governing."@en
-    
-    SubClassOf: 
-        GeographicRegion
-    
-    
-Class: GasDieselOil
+Class: <http://openenergy-platform.org/ontology/oeo/GasDieselOil>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Gas/diesel oil is primarily a medium distillate distilling between 180 °C and 380 °C. Includes blending components. Several grades are available depending on uses."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        OilAndPetroleumProducts
+        <http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>
     
     
-Class: GasPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/GasPowerplant>
 
     SubClassOf: 
-        Generator,
-        uses some NaturalGas
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/NaturalGas>
     
     
-Class: Gasoline
+Class: <http://openenergy-platform.org/ontology/oeo/Gasoline>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Gasoline (American English) or petrol (British English) is a transparent petroleum-derived liquid that is used primarily as a fuel in spark-ignited internal combustion engines. It consists mostly of organic compounds obtained by the fractional distillation of petroleum, enhanced with a variety of additives.",
         <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640"
     
     SubClassOf: 
-        OilAndPetroleumProducts
+        <http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>
     
     
-Class: GasworksGas
+Class: <http://openenergy-platform.org/ontology/oeo/GasworksGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all types of gases produced in public utility or private plants, whose main purpose is manufacture, transport and distribution of gas. It includes gas produced by carbonisation (including gas produced by coke ovens and transferred to gasworks gas), by total gasification with or without enrichment with oil products (LPG, residual fuel oil, etc.), and by reforming and simple mixing of gases and/or air, reported under the rows ‘from other sources’. Under the transformation sector identify amounts of gasworks gas transferred to blended natural gas which will be distributed and consumed through the natural gas grid.
@@ -981,33 +933,24 @@ The production of other coal gases (i.e. coke oven gas, blast furnace gas and ox
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        ManufacturedCoalBasedGas
+        <http://openenergy-platform.org/ontology/oeo/ManufacturedCoalBasedGas>
     
     
-Class: Generator
+Class: <http://openenergy-platform.org/ontology/oeo/Generator>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/part_of> some <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>
     
     DisjointWith: 
-        Line
+        <http://openenergy-platform.org/ontology/oeo/Line>
     
     
-Class: GeographicRegion
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
-Class: Geothermal
+Class: <http://openenergy-platform.org/ontology/oeo/Geothermal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy available as heat emitted from within the earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites:
@@ -1016,65 +959,65 @@ Class: Geothermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: GeothermalGenerator
+Class: <http://openenergy-platform.org/ontology/oeo/GeothermalGenerator>
 
     SubClassOf: 
-        Generator,
-        uses some Heat
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/Heat>
     
     
-Class: Graph
+Class: <http://openenergy-platform.org/ontology/oeo/Graph>
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: HardCoal
+Class: <http://openenergy-platform.org/ontology/oeo/HardCoal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>
     
     DisjointWith: 
-        Lignite
+        <http://openenergy-platform.org/ontology/oeo/Lignite>
     
     
-Class: HardCoalPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/HardCoalPowerplant>
 
     SubClassOf: 
-        CoalPowerplant,
-        uses some HardCoal
+        <http://openenergy-platform.org/ontology/oeo/CoalPowerplant>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/HardCoal>
     
     
-Class: Heat
+Class: <http://openenergy-platform.org/ontology/oeo/Heat>
 
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: HeatDemand
+Class: <http://openenergy-platform.org/ontology/oeo/HeatDemand>
 
     SubClassOf: 
-        Demand
+        <http://openenergy-platform.org/ontology/oeo/Demand>
     
     
-Class: HeatSector
+Class: <http://openenergy-platform.org/ontology/oeo/HeatSector>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
         rdfs:label "HeatingCoolingSector"@en
     
     SubClassOf: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-Class: HeatingOil
+Class: <http://openenergy-platform.org/ontology/oeo/HeatingOil>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Light heating oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
@@ -1083,45 +1026,45 @@ Class: HeatingOil
         rdfs:label "OtherGasOil"@en
     
     SubClassOf: 
-        GasDieselOil
+        <http://openenergy-platform.org/ontology/oeo/GasDieselOil>
     
     
-Class: HouseholdSector
+Class: <http://openenergy-platform.org/ontology/oeo/HouseholdSector>
 
     SubClassOf: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-Class: Hydro
+Class: <http://openenergy-platform.org/ontology/oeo/Hydro>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Potential and kinetic energy of water converted into electricity in hydroelectric plants.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: Identifier
+Class: <http://openenergy-platform.org/ontology/oeo/Identifier>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: IndustrialWaste
+Class: <http://openenergy-platform.org/ontology/oeo/IndustrialWaste>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Report wastes of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat. The quantity of fuel used should be reported on a net calorific value basis. Renewable industrial waste should be reported in the solid biomass, biogas and/or liquid biofuels categories."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Waste
+        <http://openenergy-platform.org/ontology/oeo/Waste>
     
     
-Class: IndustrySector
+Class: <http://openenergy-platform.org/ontology/oeo/IndustrySector>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
@@ -1141,10 +1084,10 @@ Class: IndustrySector
 * Non-specified (any manufacturing industry not included above)"@en
     
     SubClassOf: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-Class: InformationArtifact
+Class: <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
@@ -1153,16 +1096,16 @@ Class: InformationArtifact
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: Institution
+Class: <http://openenergy-platform.org/ontology/oeo/Institution>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en
     
     SubClassOf: 
-        Organization
+        <http://openenergy-platform.org/ontology/oeo/Organization>
     
     
-Class: JetFuel
+Class: <http://openenergy-platform.org/ontology/oeo/JetFuel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
@@ -1171,10 +1114,10 @@ Class: JetFuel
         rdfs:label "KeroseneTypeJetFuel"@en
     
     SubClassOf: 
-        Kerosene
+        <http://openenergy-platform.org/ontology/oeo/Kerosene>
     
     
-Class: Kerosene
+Class: <http://openenergy-platform.org/ontology/oeo/Kerosene>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Kerosene, also known as paraffin, lamp oil, and coal oil (an obsolete term), is a combustible hydrocarbon liquid which is derived from petroleum. It is widely used as a fuel in industry as well as households. Its name derives from Greek: κηρός (keros) meaning wax, and was registered as a trademark by Canadian geologist and inventor Abraham Gesner in 1854 before evolving into a genericized trademark. It is sometimes spelled kerosine in scientific and industrial usage.
@@ -1184,20 +1127,20 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484"
     
     SubClassOf: 
-        OilAndPetroleumProducts
+        <http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>
     
     
-Class: LengthUnit
+Class: <http://openenergy-platform.org/ontology/oeo/LengthUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: Lignite
+Class: <http://openenergy-platform.org/ontology/oeo/Lignite>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
@@ -1208,40 +1151,40 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>
     
     DisjointWith: 
-        HardCoal
+        <http://openenergy-platform.org/ontology/oeo/HardCoal>
     
     
-Class: LignitePowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/LignitePowerplant>
 
     SubClassOf: 
-        CoalPowerplant,
-        uses some Lignite
+        <http://openenergy-platform.org/ontology/oeo/CoalPowerplant>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/Lignite>
     
     
-Class: Line
+Class: <http://openenergy-platform.org/ontology/oeo/Line>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An uninterrupted transmission system between two nodes in the electric grid."@en,
         rdfs:label "PowerLine"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        Link
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/Link>
     
     DisjointWith: 
-        Generator
+        <http://openenergy-platform.org/ontology/oeo/Generator>
     
     
-Class: Link
+Class: <http://openenergy-platform.org/ontology/oeo/Link>
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: LiquidBiofuel
+Class: <http://openenergy-platform.org/ontology/oeo/LiquidBiofuel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The quantities of liquid biofuels reported in this category should relate to the quantities of biofuel and not to the total volume of liquids into which the biofuels are blended. 
@@ -1250,57 +1193,46 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Biofuel
+        <http://openenergy-platform.org/ontology/oeo/Biofuel>
     
     
-Class: LoadArea
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A load area is an area that contains energy consumption.
-
-Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
-    
-    SubClassOf: 
-        GeographicRegion
-    
-    
-Class: ManufacturedCoalBasedGas
+Class: <http://openenergy-platform.org/ontology/oeo/ManufacturedCoalBasedGas>
 
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>
     
     
-Class: MassUnit
+Class: <http://openenergy-platform.org/ontology/oeo/MassUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: Model
+Class: <http://openenergy-platform.org/ontology/oeo/Model>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
     
     SubClassOf: 
-        Software,
-        has_part some ModelComponent
+        <http://openenergy-platform.org/ontology/oeo/Software>,
+        <http://openenergy-platform.org/ontology/oeo/has_part> some <http://openenergy-platform.org/ontology/oeo/ModelComponent>
     
     
-Class: ModelCalculation
+Class: <http://openenergy-platform.org/ontology/oeo/ModelCalculation>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en
     
     SubClassOf: 
-        Transformation,
-        has_tool some Model
+        <http://openenergy-platform.org/ontology/oeo/Transformation>,
+        <http://openenergy-platform.org/ontology/oeo/has_tool> some <http://openenergy-platform.org/ontology/oeo/Model>
     
     
-Class: ModelComponent
+Class: <http://openenergy-platform.org/ontology/oeo/ModelComponent>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
@@ -1309,35 +1241,35 @@ Class: ModelComponent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: ModelElement
+Class: <http://openenergy-platform.org/ontology/oeo/ModelElement>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
     
     SubClassOf: 
-        ModelComponent
+        <http://openenergy-platform.org/ontology/oeo/ModelComponent>
     
     
-Class: ModelFunction
+Class: <http://openenergy-platform.org/ontology/oeo/ModelFunction>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
     
     SubClassOf: 
-        ModelComponent
+        <http://openenergy-platform.org/ontology/oeo/ModelComponent>
     
     
-Class: ModelVariable
+Class: <http://openenergy-platform.org/ontology/oeo/ModelVariable>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
     
     SubClassOf: 
-        ModelElement
+        <http://openenergy-platform.org/ontology/oeo/ModelElement>
     
     
-Class: MotorGasoline
+Class: <http://openenergy-platform.org/ontology/oeo/MotorGasoline>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Motor gasoline consists of a mixture of light hydrocarbons distilling between 35 oC and 215 oC. It is used as a fuel for land based spark ignition engines. Motor gasoline may include additives, oxygenates and octane enhancers, including lead compounds such as TEL and TML.
@@ -1346,20 +1278,20 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gasoline
+        <http://openenergy-platform.org/ontology/oeo/Gasoline>
     
     
-Class: MunicipalWaste
+Class: <http://openenergy-platform.org/ontology/oeo/MunicipalWaste>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Waste
+        <http://openenergy-platform.org/ontology/oeo/Waste>
     
     
-Class: NaturalGas
+Class: <http://openenergy-platform.org/ontology/oeo/NaturalGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "This data collection applies to natural gas, which comprises gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
@@ -1370,57 +1302,57 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: Node
+Class: <http://openenergy-platform.org/ontology/oeo/Node>
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: NonAssociatedGas
+Class: <http://openenergy-platform.org/ontology/oeo/NonAssociatedGas>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas originating from fields producing hydrocarbons only in gaseous form.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        NaturalGas
+        <http://openenergy-platform.org/ontology/oeo/NaturalGas>
     
     
-Class: NonRenewableMunicipalWaste
+Class: <http://openenergy-platform.org/ontology/oeo/NonRenewableMunicipalWaste>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of non-biological origin."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWaste
+        <http://openenergy-platform.org/ontology/oeo/MunicipalWaste>
     
     
-Class: Nuclear
+Class: <http://openenergy-platform.org/ontology/oeo/Nuclear>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear power is the use of nuclear reactions that release nuclear energy to generate heat, which most frequently is then used in steam turbines to produce electricity in a nuclear power plant. Nuclear power can be obtained from nuclear fission, nuclear decay and nuclear fusion. Presently, the vast majority of electricity from nuclear power is produced by nuclear fission of elements in the actinide series of the periodic table. Nuclear decay processes are used in niche applications such as radioisotope thermoelectric generators. The possibility of generating electricity from nuclear fusion is still at a research phase with no commercial applications. This article mostly deals with nuclear fission power for electricity generation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power&oldid=868476098"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: NuclearPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/NuclearPowerplant>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear power plant or nuclear power station is a thermal power station in which the heat source is a nuclear reactor. As it is typical of thermal power stations, heat is used to generate steam that drives a steam turbine connected to a generator that produces electricity.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power_plant&oldid=867102016"
     
     SubClassOf: 
-        Generator,
-        uses some Nuclear
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/Nuclear>
     
     
-Class: OilAndPetroleumProducts
+Class: <http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum (/pəˈtroʊliəm/) is a naturally occurring, yellowish-black liquid found in geological formations beneath the Earth's surface. It is commonly refined into various types of fuels. Components of petroleum are separated using a technique called fractional distillation, i.e. separation of a liquid mixture into fractions differing in boiling point by means of distillation, typically using a fractionating column.
@@ -1429,50 +1361,50 @@ It consists of hydrocarbons of various molecular weights and other organic compo
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: OilPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/OilPowerplant>
 
     SubClassOf: 
-        Generator,
-        uses some OilAndPetroleumProducts
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>
     
     
-Class: Optimization
+Class: <http://openenergy-platform.org/ontology/oeo/Optimization>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
     
     SubClassOf: 
-        ModelCalculation
+        <http://openenergy-platform.org/ontology/oeo/ModelCalculation>
     
     DisjointWith: 
-        Simulation
+        <http://openenergy-platform.org/ontology/oeo/Simulation>
     
     
-Class: OptimizationModel
+Class: <http://openenergy-platform.org/ontology/oeo/OptimizationModel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en
     
     SubClassOf: 
-        Model
+        <http://openenergy-platform.org/ontology/oeo/Model>
     
     
-Class: Organization
+Class: <http://openenergy-platform.org/ontology/oeo/Organization>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
     
     SubClassOf: 
-        Agent
+        <http://openenergy-platform.org/ontology/oeo/Agent>
     
     DisjointWith: 
-        Person
+        <http://openenergy-platform.org/ontology/oeo/Person>
     
     
-Class: OtherBituminousCoal
+Class: <http://openenergy-platform.org/ontology/oeo/OtherBituminousCoal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Coal used for steam raising purposes and includes all bituminous coal that is neither included under coking coal nor anthracite. It is characterised by higher volatile matter than anthracite (more than 10 %) and lower carbon content (less than 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis. If bituminous coal is used in coke ovens it should be reported as coking coal."@en,
@@ -1481,30 +1413,30 @@ Class: OtherBituminousCoal
         rdfs:label "SteamCoal"@en
     
     SubClassOf: 
-        HardCoal
+        <http://openenergy-platform.org/ontology/oeo/HardCoal>
     
     
-Class: OtherKerosene
+Class: <http://openenergy-platform.org/ontology/oeo/OtherKerosene>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Refined petroleum distillate used in sectors other than aircraft transport. It distils between 150 °C and 300 °C."@en
     
     SubClassOf: 
-        Kerosene
+        <http://openenergy-platform.org/ontology/oeo/Kerosene>
     
     
-Class: OtherLiquidBiofuels
+Class: <http://openenergy-platform.org/ontology/oeo/OtherLiquidBiofuels>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000119> "Liquid biofuels, used directly as fuel, not included in biogasoline or bio-diesels."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        LiquidBiofuel
+        <http://openenergy-platform.org/ontology/oeo/LiquidBiofuel>
     
     
-Class: Peat
+Class: <http://openenergy-platform.org/ontology/oeo/Peat>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour. Peat used for non-energy purposes is not included.
@@ -1513,103 +1445,103 @@ This definition is without prejudice to the definition of renewable energy sourc
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>
     
     
-Class: Person
+Class: <http://openenergy-platform.org/ontology/oeo/Person>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human beeing."@en
     
     SubClassOf: 
-        Agent
+        <http://openenergy-platform.org/ontology/oeo/Agent>
     
     DisjointWith: 
-        Organization
+        <http://openenergy-platform.org/ontology/oeo/Organization>
     
     
-Class: PhotovoltaicGenerator
+Class: <http://openenergy-platform.org/ontology/oeo/PhotovoltaicGenerator>
 
     SubClassOf: 
-        Generator,
-        uses some SolarEnergy
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/SolarEnergy>
     
     
-Class: PoliticalAssumption
+Class: <http://openenergy-platform.org/ontology/oeo/PoliticalAssumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
     
     SubClassOf: 
-        Assumption
+        <http://openenergy-platform.org/ontology/oeo/Assumption>
     
     
-Class: PoliticalParty
+Class: <http://openenergy-platform.org/ontology/oeo/PoliticalParty>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en
     
     SubClassOf: 
-        Organization
+        <http://openenergy-platform.org/ontology/oeo/Organization>
     
     
-Class: Postprocessing
+Class: <http://openenergy-platform.org/ontology/oeo/Postprocessing>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
     
     SubClassOf: 
-        Transformation
+        <http://openenergy-platform.org/ontology/oeo/Transformation>
     
     
-Class: Power
+Class: <http://openenergy-platform.org/ontology/oeo/Power>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the rate of doing work, the amount of energy transferred per unit time.
 Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
     
     SubClassOf: 
-        Quantity
+        <http://openenergy-platform.org/ontology/oeo/Quantity>
     
     
-Class: PowerUnit
+Class: <http://openenergy-platform.org/ontology/oeo/PowerUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power unit is a unit of measurement used to express the rate of doing work, the amount of energy transferred per unit time."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: Preprocessing
+Class: <http://openenergy-platform.org/ontology/oeo/Preprocessing>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
     
     SubClassOf: 
-        Transformation
+        <http://openenergy-platform.org/ontology/oeo/Transformation>
     
     
-Class: ProgramParameter
+Class: <http://openenergy-platform.org/ontology/oeo/ProgramParameter>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
     
     SubClassOf: 
-        ModelElement
+        <http://openenergy-platform.org/ontology/oeo/ModelElement>
     
     
-Class: Publication
+Class: <http://openenergy-platform.org/ontology/oeo/Publication>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: Quantity
+Class: <http://openenergy-platform.org/ontology/oeo/Quantity>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
@@ -1619,48 +1551,48 @@ Class: Quantity
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: RegulationAssumption
+Class: <http://openenergy-platform.org/ontology/oeo/RegulationAssumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A regulation assumption is an assumption about political regulations and prohibitions."@en
     
     SubClassOf: 
-        PoliticalAssumption
+        <http://openenergy-platform.org/ontology/oeo/PoliticalAssumption>
     
     DisjointWith: 
-        SubsidyAssumption
+        <http://openenergy-platform.org/ontology/oeo/SubsidyAssumption>
     
     
-Class: RenewableMunicipalWaste
+Class: <http://openenergy-platform.org/ontology/oeo/RenewableMunicipalWaste>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of biological origin."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Biofuel,
-        MunicipalWaste
+        <http://openenergy-platform.org/ontology/oeo/Biofuel>,
+        <http://openenergy-platform.org/ontology/oeo/MunicipalWaste>
     
     
-Class: ResistanceUnit
+Class: <http://openenergy-platform.org/ontology/oeo/ResistanceUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A resistance unit is a unit of measurement used to express difficulty to pass an electric current through a conductor."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: RunOfRiverPowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/RunOfRiverPowerplant>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
     
     SubClassOf: 
-        WaterTurbine
+        <http://openenergy-platform.org/ontology/oeo/WaterTurbine>
     
     
-Class: Sector
+Class: <http://openenergy-platform.org/ontology/oeo/Sector>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
@@ -1669,7 +1601,7 @@ Class: Sector
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: ShuntImpedance
+Class: <http://openenergy-platform.org/ontology/oeo/ShuntImpedance>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
@@ -1677,61 +1609,61 @@ Class: ShuntImpedance
 Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/part_of> some <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>
     
     
-Class: Simulation
+Class: <http://openenergy-platform.org/ontology/oeo/Simulation>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
     
     SubClassOf: 
-        ModelCalculation
+        <http://openenergy-platform.org/ontology/oeo/ModelCalculation>
     
     DisjointWith: 
-        Optimization
+        <http://openenergy-platform.org/ontology/oeo/Optimization>
     
     
-Class: SimulationModel
+Class: <http://openenergy-platform.org/ontology/oeo/SimulationModel>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en
     
     SubClassOf: 
-        Model
+        <http://openenergy-platform.org/ontology/oeo/Model>
     
     
-Class: Software
+Class: <http://openenergy-platform.org/ontology/oeo/Software>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://openenergy-platform.org/ontology/oeo/InformationArtifact>
     
     
-Class: SolarEnergy
+Class: <http://openenergy-platform.org/ontology/oeo/SolarEnergy>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: SolarPhotovoltaic
+Class: <http://openenergy-platform.org/ontology/oeo/SolarPhotovoltaic>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolarEnergy
+        <http://openenergy-platform.org/ontology/oeo/SolarEnergy>
     
     
-Class: SolarThermal
+Class: <http://openenergy-platform.org/ontology/oeo/SolarThermal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
@@ -1740,10 +1672,10 @@ Class: SolarThermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolarEnergy
+        <http://openenergy-platform.org/ontology/oeo/SolarEnergy>
     
     
-Class: SolidBiomass
+Class: <http://openenergy-platform.org/ontology/oeo/SolidBiomass>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.",
@@ -1752,77 +1684,77 @@ Class: SolidBiomass
         rdfs:label "SolidBiomass"@en
     
     SubClassOf: 
-        Biofuel
+        <http://openenergy-platform.org/ontology/oeo/Biofuel>
     
     
-Class: StorageUnit
+Class: <http://openenergy-platform.org/ontology/oeo/StorageUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy, but not necessarily as an electirc charge."@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/part_of> some <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>
     
     
-Class: SubBituminousCoal
+Class: <http://openenergy-platform.org/ontology/oeo/SubBituminousCoal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Refers to non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31 % volatile matter on a dry mineral matter free basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>
     
     
-Class: Subgrid
+Class: <http://openenergy-platform.org/ontology/oeo/Subgrid>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
     
     SubClassOf: 
-        ElectricityGrid,
-        ElectricityGridComponent,
-        has_part some ElectricityGridComponent,
-        part_of some ElectricityGrid
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>,
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/has_part> some <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/part_of> some <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>
     
     
-Class: SubsidyAssumption
+Class: <http://openenergy-platform.org/ontology/oeo/SubsidyAssumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "Public subsidies for energy efficient renovation of private buildings."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subsidy assumption is an assumption about financial support from the government to an economic sector or certain economic entities."@en
     
     SubClassOf: 
-        PoliticalAssumption
+        <http://openenergy-platform.org/ontology/oeo/PoliticalAssumption>
     
     DisjointWith: 
-        RegulationAssumption
+        <http://openenergy-platform.org/ontology/oeo/RegulationAssumption>
     
     
-Class: SynthethicDataset
+Class: <http://openenergy-platform.org/ontology/oeo/SynthethicDataset>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
     
     SubClassOf: 
-        Dataset
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
     
     DisjointWith: 
-        EmpiricalDataset
+        <http://openenergy-platform.org/ontology/oeo/EmpiricalDataset>
     
     
-Class: TechnologicalAssumption
+Class: <http://openenergy-platform.org/ontology/oeo/TechnologicalAssumption>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technological assumption is an assumption about what kind of technologies are available."@en
     
     SubClassOf: 
-        Assumption
+        <http://openenergy-platform.org/ontology/oeo/Assumption>
     
     
-Class: Technology
+Class: <http://openenergy-platform.org/ontology/oeo/Technology>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
@@ -1831,45 +1763,45 @@ Class: Technology
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: TideWaveOcean
+Class: <http://openenergy-platform.org/ontology/oeo/TideWaveOcean>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: TimeUnit
+Class: <http://openenergy-platform.org/ontology/oeo/TimeUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: Title
+Class: <http://openenergy-platform.org/ontology/oeo/Title>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
     
     SubClassOf: 
-        Identifier
+        <http://openenergy-platform.org/ontology/oeo/Identifier>
     
     
-Class: Transformation
+Class: <http://openenergy-platform.org/ontology/oeo/Transformation>
 
     Annotations: 
-        definition "A transformation is a process that transforms one or more inputs into at least one output."@en
+        <http://openenergy-platform.org/ontology/oeo/definition> "A transformation is a process that transforms one or more inputs into at least one output."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: Transformer
+Class: <http://openenergy-platform.org/ontology/oeo/Transformer>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
@@ -1878,11 +1810,11 @@ Class: Transformer
 Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        <http://openenergy-platform.org/ontology/oeo/ElectricityGridComponent>,
+        <http://openenergy-platform.org/ontology/oeo/part_of> some <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>
     
     
-Class: TransportSector
+Class: <http://openenergy-platform.org/ontology/oeo/TransportSector>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
@@ -1895,16 +1827,16 @@ Class: TransportSector
 * Non-specified: includes all transport not elsewhere specified."@en
     
     SubClassOf: 
-        Sector
+        <http://openenergy-platform.org/ontology/oeo/Sector>
     
     
-Class: UndirectedEdge
+Class: <http://openenergy-platform.org/ontology/oeo/UndirectedEdge>
 
     SubClassOf: 
-        Link
+        <http://openenergy-platform.org/ontology/oeo/Link>
     
     
-Class: UnitOfMeasurement
+Class: <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A unit of measurement is a specified magnitude of a quantity that is used to express the magnitude of the same kind of quantity."@en
@@ -1913,57 +1845,57 @@ Class: UnitOfMeasurement
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: VoltageUnit
+Class: <http://openenergy-platform.org/ontology/oeo/VoltageUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage unit is a unit of measurement used to express the difference in electric potential between two points."@en
     
     SubClassOf: 
-        UnitOfMeasurement
+        <http://openenergy-platform.org/ontology/oeo/UnitOfMeasurement>
     
     
-Class: Waste
+Class: <http://openenergy-platform.org/ontology/oeo/Waste>
 
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: WastePowerplant
+Class: <http://openenergy-platform.org/ontology/oeo/WastePowerplant>
 
     SubClassOf: 
-        Generator
+        <http://openenergy-platform.org/ontology/oeo/Generator>
     
     
-Class: WaterTurbine
+Class: <http://openenergy-platform.org/ontology/oeo/WaterTurbine>
 
     SubClassOf: 
-        Generator,
-        uses some Hydro
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/Hydro>
     
     
-Class: Wind
+Class: <http://openenergy-platform.org/ontology/oeo/Wind>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        EnergyCarrier
+        <http://openenergy-platform.org/ontology/oeo/EnergyCarrier>
     
     
-Class: WindOffshore
+Class: <http://openenergy-platform.org/ontology/oeo/WindOffshore>
 
     SubClassOf: 
-        Wind
+        <http://openenergy-platform.org/ontology/oeo/Wind>
     
     
-Class: WindOnshore
+Class: <http://openenergy-platform.org/ontology/oeo/WindOnshore>
 
     SubClassOf: 
-        Wind
+        <http://openenergy-platform.org/ontology/oeo/Wind>
     
     
-Class: WindTurbine
+Class: <http://openenergy-platform.org/ontology/oeo/WindTurbine>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind turbine is a device that converts the wind's kinetic energy into electrical energy.
@@ -1972,140 +1904,152 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
     SubClassOf: 
-        Generator,
-        uses some Wind
+        <http://openenergy-platform.org/ontology/oeo/Generator>,
+        <http://openenergy-platform.org/ontology/oeo/uses> some <http://openenergy-platform.org/ontology/oeo/Wind>
     
     
-Class: WoodAndOther
+Class: <http://openenergy-platform.org/ontology/oeo/WoodAndOther>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolidBiomass
+        <http://openenergy-platform.org/ontology/oeo/SolidBiomass>
     
     
-Individual: Ampere
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/Ampere>
 
     Annotations: 
         rdfs:comment "Unit symbol: A
 SI unit for electric current."@en
     
     Types: 
-        ElectricCurrentUnit
+        <http://openenergy-platform.org/ontology/oeo/ElectricCurrentUnit>
     
     
-Individual: Coal
+Individual: <http://openenergy-platform.org/ontology/oeo/Coal>
 
     
-Individual: Common_year
+Individual: <http://openenergy-platform.org/ontology/oeo/Common_year>
 
     Annotations: 
         rdfs:comment "Unit symbol: a, y
 1 a = 365 d"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Coulomb
+Individual: <http://openenergy-platform.org/ontology/oeo/Coulomb>
 
     Annotations: 
         rdfs:comment "Unit symbol: C
 SI unit for electric charge."@en
     
     Types: 
-        ElectricChargeUnit
+        <http://openenergy-platform.org/ontology/oeo/ElectricChargeUnit>
     
     
-Individual: Day
+Individual: <http://openenergy-platform.org/ontology/oeo/Day>
 
     Annotations: 
         rdfs:comment "Unit symbol: d
 1 d = 24 h = 1440 min = 86,400 s"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: False
+Individual: <http://openenergy-platform.org/ontology/oeo/False>
 
     Types: 
-        BooleanVariable
+        <http://openenergy-platform.org/ontology/oeo/BooleanVariable>
     
     
-Individual: Farad
+Individual: <http://openenergy-platform.org/ontology/oeo/Farad>
 
     Annotations: 
         rdfs:comment "Unit symbol: F
 SI derived unit of electrical capacitance."@en
     
     Types: 
-        CapacitanceUnit
+        <http://openenergy-platform.org/ontology/oeo/CapacitanceUnit>
     
     
-Individual: Foot
+Individual: <http://openenergy-platform.org/ontology/oeo/Foot>
 
     Annotations: 
         rdfs:comment "Unit symbol: ft
 1 ft = 0.3048 m"@en
     
     Types: 
-        LengthUnit
+        <http://openenergy-platform.org/ontology/oeo/LengthUnit>
     
     
-Individual: Grain
+Individual: <http://openenergy-platform.org/ontology/oeo/Grain>
 
     Annotations: 
         rdfs:comment "Unit symbol: grain, gr
 1 gr = 64,79891 mg"@en
     
     Types: 
-        MassUnit
+        <http://openenergy-platform.org/ontology/oeo/MassUnit>
     
     
-Individual: Gram
+Individual: <http://openenergy-platform.org/ontology/oeo/Gram>
 
     Annotations: 
         rdfs:comment "Unit symbol: g
 SI unit for mass: kg (1 kg = 1000 g)"@en
     
     Types: 
-        MassUnit
+        <http://openenergy-platform.org/ontology/oeo/MassUnit>
     
     
-Individual: HardCoal
+Individual: <http://openenergy-platform.org/ontology/oeo/HardCoal>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     
-Individual: Heat
+Individual: <http://openenergy-platform.org/ontology/oeo/Heat>
 
     
-Individual: Hour
+Individual: <http://openenergy-platform.org/ontology/oeo/Hour>
 
     Annotations: 
         rdfs:comment "Unit symbol: h
 1h = 60 min = 3600 s"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Inch
+Individual: <http://openenergy-platform.org/ontology/oeo/Inch>
 
     Annotations: 
         rdfs:comment "Unit symbol: in, \"
 1 in = 1\" = 2,54 cm = 0,0254 m"@en
     
     Types: 
-        LengthUnit
+        <http://openenergy-platform.org/ontology/oeo/LengthUnit>
     
     
-Individual: Joule
+Individual: <http://openenergy-platform.org/ontology/oeo/Joule>
 
     Annotations: 
         rdfs:comment "SI unit for energy.
@@ -2113,20 +2057,20 @@ Unit symbol: J
 1 J = 1 kg*(m/s)^2"@en
     
     Types: 
-        EnergyUnit
+        <http://openenergy-platform.org/ontology/oeo/EnergyUnit>
     
     
-Individual: Julian_year
+Individual: <http://openenergy-platform.org/ontology/oeo/Julian_year>
 
     Annotations: 
         rdfs:comment "Unit symbol: a, a_jul, y, y_jul
 1 a = 365,25 d = 31,557,600 s"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Kilowatt_hour
+Individual: <http://openenergy-platform.org/ontology/oeo/Kilowatt_hour>
 
     Annotations: 
         rdfs:comment "Unit symbol: kWh
@@ -2134,23 +2078,23 @@ Individual: Kilowatt_hour
 Used for electricity"@en
     
     Types: 
-        EnergyUnit
+        <http://openenergy-platform.org/ontology/oeo/EnergyUnit>
     
     
-Individual: Leap_year
+Individual: <http://openenergy-platform.org/ontology/oeo/Leap_year>
 
     Annotations: 
         rdfs:comment "Unit symbol: a, y
 1 a = 366 d"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Light
+Individual: <http://openenergy-platform.org/ontology/oeo/Light>
 
     
-Individual: Lignite
+Individual: <http://openenergy-platform.org/ontology/oeo/Lignite>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
@@ -2161,47 +2105,47 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     
-Individual: Metre
+Individual: <http://openenergy-platform.org/ontology/oeo/Metre>
 
     Annotations: 
         rdfs:comment "Unit symbol: m
 SI unit for length"@en
     
     Types: 
-        LengthUnit
+        <http://openenergy-platform.org/ontology/oeo/LengthUnit>
     
     
-Individual: Mile
+Individual: <http://openenergy-platform.org/ontology/oeo/Mile>
 
     Annotations: 
         rdfs:comment "Unit symbol: mile
 1 mile = 1609.344 m"@en
     
     Types: 
-        LengthUnit
+        <http://openenergy-platform.org/ontology/oeo/LengthUnit>
     
     
-Individual: Minute
+Individual: <http://openenergy-platform.org/ontology/oeo/Minute>
 
     Annotations: 
         rdfs:comment "Unit Symbol: min
 1 min = 60s"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Nautical_mile
+Individual: <http://openenergy-platform.org/ontology/oeo/Nautical_mile>
 
     Annotations: 
         rdfs:comment "Unit symbol: M, NM, nmi, sm
 1 M = 1852 m"@en
     
     Types: 
-        LengthUnit
+        <http://openenergy-platform.org/ontology/oeo/LengthUnit>
     
     
-Individual: Newton_metre
+Individual: <http://openenergy-platform.org/ontology/oeo/Newton_metre>
 
     Annotations: 
         rdfs:comment "Unit symbol: Nm
@@ -2209,60 +2153,60 @@ Individual: Newton_metre
 Used for torque"@en
     
     Types: 
-        EnergyUnit
+        <http://openenergy-platform.org/ontology/oeo/EnergyUnit>
     
     
-Individual: Nuclear
+Individual: <http://openenergy-platform.org/ontology/oeo/Nuclear>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear power is the use of nuclear reactions that release nuclear energy to generate heat, which most frequently is then used in steam turbines to produce electricity in a nuclear power plant. Nuclear power can be obtained from nuclear fission, nuclear decay and nuclear fusion. Presently, the vast majority of electricity from nuclear power is produced by nuclear fission of elements in the actinide series of the periodic table. Nuclear decay processes are used in niche applications such as radioisotope thermoelectric generators. The possibility of generating electricity from nuclear fusion is still at a research phase with no commercial applications. This article mostly deals with nuclear fission power for electricity generation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power&oldid=868476098"@en
     
     
-Individual: Ohm
+Individual: <http://openenergy-platform.org/ontology/oeo/Ohm>
 
     Annotations: 
         rdfs:comment "Unit symbol: Ω
 SI derived unit for electrical resistance"@en
     
     Types: 
-        ResistanceUnit
+        <http://openenergy-platform.org/ontology/oeo/ResistanceUnit>
     
     
-Individual: Oil
+Individual: <http://openenergy-platform.org/ontology/oeo/Oil>
 
     
-Individual: Ounce
+Individual: <http://openenergy-platform.org/ontology/oeo/Ounce>
 
     Annotations: 
         rdfs:comment "Unit symbol: oz
 1 oz = 28.349523125 g (there are other ounces but this is the one that is used the most)"@en
     
     Types: 
-        MassUnit
+        <http://openenergy-platform.org/ontology/oeo/MassUnit>
     
     
-Individual: Pound
+Individual: <http://openenergy-platform.org/ontology/oeo/Pound>
 
     Annotations: 
         rdfs:comment "Unit symbol: lb
 1 lb = 0.45359237 kg"@en
     
     Types: 
-        MassUnit
+        <http://openenergy-platform.org/ontology/oeo/MassUnit>
     
     
-Individual: Second
+Individual: <http://openenergy-platform.org/ontology/oeo/Second>
 
     Annotations: 
         rdfs:comment "Unit symbol: s
 SI unit of time"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Therm
+Individual: <http://openenergy-platform.org/ontology/oeo/Therm>
 
     Annotations: 
         rdfs:comment "Unit symbol: thm
@@ -2270,92 +2214,92 @@ Individual: Therm
 Used for natural gas"@en
     
     Types: 
-        EnergyUnit
+        <http://openenergy-platform.org/ontology/oeo/EnergyUnit>
     
     
-Individual: True
+Individual: <http://openenergy-platform.org/ontology/oeo/True>
 
     Types: 
-        BooleanVariable
+        <http://openenergy-platform.org/ontology/oeo/BooleanVariable>
     
     
-Individual: Volt
+Individual: <http://openenergy-platform.org/ontology/oeo/Volt>
 
     Annotations: 
         rdfs:comment "Unit symbol: V
 SI derived unit for voltage."@en
     
     Types: 
-        VoltageUnit
+        <http://openenergy-platform.org/ontology/oeo/VoltageUnit>
     
     
-Individual: Water
+Individual: <http://openenergy-platform.org/ontology/oeo/Water>
 
     
-Individual: Watt
+Individual: <http://openenergy-platform.org/ontology/oeo/Watt>
 
     Annotations: 
         rdfs:comment "Unit symbol: W
 SI derived unit for power."@en
     
     Types: 
-        PowerUnit
+        <http://openenergy-platform.org/ontology/oeo/PowerUnit>
     
     
-Individual: Week
+Individual: <http://openenergy-platform.org/ontology/oeo/Week>
 
     Annotations: 
         rdfs:comment "Unit symbol: week
 1 week = 7 d"@en
     
     Types: 
-        TimeUnit
+        <http://openenergy-platform.org/ontology/oeo/TimeUnit>
     
     
-Individual: Wind
+Individual: <http://openenergy-platform.org/ontology/oeo/Wind>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     
-Individual: Yard
+Individual: <http://openenergy-platform.org/ontology/oeo/Yard>
 
     Annotations: 
         rdfs:comment "Unit symbol: yd
 1 yd = 0.9144 m"@en
     
     Types: 
-        LengthUnit
+        <http://openenergy-platform.org/ontology/oeo/LengthUnit>
     
     
 DisjointClasses: 
-    Acronym,DOI,Title
+    <http://openenergy-platform.org/ontology/oeo/Acronym>,<http://openenergy-platform.org/ontology/oeo/DOI>,<http://openenergy-platform.org/ontology/oeo/Title>
 
 DisjointClasses: 
-    Bus,Consumer,Generator,Line,ShuntImpedance,StorageUnit,Subgrid,Transformer
+    <http://openenergy-platform.org/ontology/oeo/Bus>,<http://openenergy-platform.org/ontology/oeo/Consumer>,<http://openenergy-platform.org/ontology/oeo/Generator>,<http://openenergy-platform.org/ontology/oeo/Line>,<http://openenergy-platform.org/ontology/oeo/ShuntImpedance>,<http://openenergy-platform.org/ontology/oeo/StorageUnit>,<http://openenergy-platform.org/ontology/oeo/Subgrid>,<http://openenergy-platform.org/ontology/oeo/Transformer>
 
 DisjointClasses: 
-    CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
+    <http://openenergy-platform.org/ontology/oeo/CapacitanceUnit>,<http://openenergy-platform.org/ontology/oeo/ElectricChargeUnit>,<http://openenergy-platform.org/ontology/oeo/ElectricCurrentUnit>,<http://openenergy-platform.org/ontology/oeo/EnergyUnit>,<http://openenergy-platform.org/ontology/oeo/LengthUnit>,<http://openenergy-platform.org/ontology/oeo/MassUnit>,<http://openenergy-platform.org/ontology/oeo/PowerUnit>,<http://openenergy-platform.org/ontology/oeo/ResistanceUnit>,<http://openenergy-platform.org/ontology/oeo/TimeUnit>,<http://openenergy-platform.org/ontology/oeo/VoltageUnit>
 
 DisjointClasses: 
-    CoalAndOtherSolidFossilFuels,Heat,Hydro,NaturalGas,Nuclear,OilAndPetroleumProducts,SolarEnergy,Wind
+    <http://openenergy-platform.org/ontology/oeo/CoalAndOtherSolidFossilFuels>,<http://openenergy-platform.org/ontology/oeo/Heat>,<http://openenergy-platform.org/ontology/oeo/Hydro>,<http://openenergy-platform.org/ontology/oeo/NaturalGas>,<http://openenergy-platform.org/ontology/oeo/Nuclear>,<http://openenergy-platform.org/ontology/oeo/OilAndPetroleumProducts>,<http://openenergy-platform.org/ontology/oeo/SolarEnergy>,<http://openenergy-platform.org/ontology/oeo/Wind>
 
 DisjointClasses: 
-    CommerceSector,HouseholdSector,IndustrySector
+    <http://openenergy-platform.org/ontology/oeo/CommerceSector>,<http://openenergy-platform.org/ontology/oeo/HouseholdSector>,<http://openenergy-platform.org/ontology/oeo/IndustrySector>
 
 DisjointClasses: 
-    DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
+    <http://openenergy-platform.org/ontology/oeo/DemographicalAssumption>,<http://openenergy-platform.org/ontology/oeo/EconomicalAssumption>,<http://openenergy-platform.org/ontology/oeo/PoliticalAssumption>,<http://openenergy-platform.org/ontology/oeo/TechnologicalAssumption>
 
 DisjointClasses: 
-    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+    <http://openenergy-platform.org/ontology/oeo/ElectricityGrid>,<http://openenergy-platform.org/ontology/oeo/Generator>,<http://openenergy-platform.org/ontology/oeo/ShuntImpedance>,<http://openenergy-platform.org/ontology/oeo/StorageUnit>,<http://openenergy-platform.org/ontology/oeo/Subgrid>,<http://openenergy-platform.org/ontology/oeo/Transformer>
 
 DisjointClasses: 
-    ElectricitySector,HeatSector,TransportSector
+    <http://openenergy-platform.org/ontology/oeo/ElectricitySector>,<http://openenergy-platform.org/ontology/oeo/HeatSector>,<http://openenergy-platform.org/ontology/oeo/TransportSector>
 
 DisjointClasses: 
-    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+    <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>,<http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>,<http://openenergy-platform.org/ontology/oeo/EnergyTransferTechnology>
 
 DisjointClasses: 
-    EnergyUnit,LengthUnit,MassUnit,TimeUnit
+    <http://openenergy-platform.org/ontology/oeo/EnergyUnit>,<http://openenergy-platform.org/ontology/oeo/LengthUnit>,<http://openenergy-platform.org/ontology/oeo/MassUnit>,<http://openenergy-platform.org/ontology/oeo/TimeUnit>
 
