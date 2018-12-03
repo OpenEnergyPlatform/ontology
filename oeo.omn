@@ -621,14 +621,10 @@ Class: Charcoal
         SolidBiomass
     
     
-Class: CoalAndOtherSolidFossilFuels
+Class: Coal
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock usually occurring in rock strata in layers or veins called coal beds or coal seams. The harder forms, such as anthracite coal, can be regarded as metamorphic rock because of later exposure to elevated temperature and pressure. Coal is composed primarily of carbon, along with variable quantities of other elements, chiefly hydrogen, sulfur, oxygen, and nitrogen.[1] Coal is a fossil fuel that forms when dead plant matter is converted into peat, which in turn is converted into lignite, then sub-bituminous coal, after that bituminous coal, and lastly anthracite. This involves biological and geological processes. The geological processes take place over millions of years."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en
-    
     SubClassOf: 
-        Fuel
+        SolidFossilFuels
     
     
 Class: CoalPowerplant
@@ -1010,7 +1006,7 @@ Class: HardCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        Coal
     
     DisjointWith: 
         Lignite
@@ -1179,7 +1175,7 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        Coal
     
     DisjointWith: 
         HardCoal
@@ -1233,7 +1229,7 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
 Class: ManufacturedCoalBasedGas
 
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        SolidFossilFuels
     
     
 Class: MassUnit
@@ -1479,7 +1475,7 @@ This definition is without prejudice to the definition of renewable energy sourc
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        SolidFossilFuels
     
     
 Class: Person
@@ -1727,6 +1723,16 @@ Class: SolidBiomass
         Biofuel
     
     
+Class: SolidFossilFuels
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock usually occurring in rock strata in layers or veins called coal beds or coal seams. The harder forms, such as anthracite coal, can be regarded as metamorphic rock because of later exposure to elevated temperature and pressure. Coal is composed primarily of carbon, along with variable quantities of other elements, chiefly hydrogen, sulfur, oxygen, and nitrogen.[1] Coal is a fossil fuel that forms when dead plant matter is converted into peat, which in turn is converted into lignite, then sub-bituminous coal, after that bituminous coal, and lastly anthracite. This involves biological and geological processes. The geological processes take place over millions of years."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en
+    
+    SubClassOf: 
+        Fuel
+    
+    
 Class: StateOfMatter
 
     SubClassOf: 
@@ -1750,7 +1756,7 @@ Class: SubBituminousCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        CoalAndOtherSolidFossilFuels
+        Coal
     
     
 Class: Subgrid
@@ -2317,9 +2323,6 @@ DisjointClasses:
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
 DisjointClasses: 
-    CoalAndOtherSolidFossilFuels,Heat,Hydro,NaturalGas,Nuclear,OilAndPetroleumProducts,SolarEnergy,Wind
-
-DisjointClasses: 
     CommerceSector,HouseholdSector,IndustrySector
 
 DisjointClasses: 
@@ -2336,4 +2339,7 @@ DisjointClasses:
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    Heat,Hydro,NaturalGas,Nuclear,OilAndPetroleumProducts,SolarEnergy,SolidFossilFuels,Wind
 
