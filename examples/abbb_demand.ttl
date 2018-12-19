@@ -1,0 +1,88 @@
+@prefix : <http://> . #TODO
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:scenario.abbb_demand
+
+    rdf:type dcat:Dataset ;
+    dct:title "oemof app brandenburg berlin - demand per sector" ;
+    dct:description "aggregated and modified demand data (electricity and heat) for every technology, region and scenario" ;
+    # dcat:keyword "demand","Germany" ,"oemof" ,"oemof_abbb";
+    dcat:distribution :scenario.abbb_demand-csv , :scenario.abbb_demand-1 ;
+    # dct:title "scenario.abbb_demand" ;
+    dct:language <http://publications.europa.eu/resource/authority/language/GER>, <http://publications.europa.eu/resource/authority/language/ENG> ;
+    dct:creator [ a foaf:Person ;
+                  foaf:name "Elisa Gaudchau" ;
+                  foaf:mbox <elisa.gaudchau@rl-institut.de> ] ;
+    dct:contributor [ a foaf:Person ;
+                  foaf:name "Elisa Gaudchau" ;
+                  foaf:mbox <elisa.gaudchau@rl-institut.de> ] ;
+    dct:creator [ a foaf:Person ;
+                  foaf:name "Kilian Zimmerer" ] ;
+    dct:spatial <http://publications.europa.eu/mdr/authority/place/DEU_BBG>, <http://publications.europa.eu/mdr/authority/place/DEU_BER> ; #MDR Places  http://publications.europa.eu/mdr/authority/place/ dct:Location
+    # resolution
+    rdfs:comment "resolution: Regionale Planungsgemeinschaften und Berlin" ;
+    dct:publisher [ a foaf:Agent ] ;
+    # dcat:contactPoint
+    # dct:temporal
+    dct:created "2016-11-24"^^xsd:date ; # reference date ?
+    :refenrencedate "2016-11-24"^^xsd:date ;
+    # Sources
+    foaf:page       # :sources ?
+        <http://www.lak-energiebilanzen.de/seiten/download/Archiv%20Bilanzen/Brandenburg/2012/Energiebilanz%20Brandenburg%202012.pdf> ,
+        <https://www.zab-energie.de/de/system/files/media-downloads/6._monitoringbericht_zur_energiestrategie_-_berichtsjahr_2014_1.pdf> ,
+        <http://www.energie.brandenburg.de/media/bb1.a.2865.de/Energiestrategie_2030.pdf> ,
+        <http://www.stadtentwicklung.berlin.de/umwelt/klima-schutz/bek_berlin/> ,
+        [ a foaf:Document ;
+          rdfs:label "ZAB ZukunftsAgentur Brandenburg GmbH" ;
+          rdfs:comment "nicht oeffentlich" ] ;
+    dcat:landingPage <http://openenergy-platform.org/dataedit/view/scenario/abbb_demand> .
+
+
+:scenario.abbb_demand-1
+    a dcat:Distribution ;
+    # dcat:accessURL ...
+    dcat:accessURL <http://openenergy-platform.org/dataedit/view/scenario/abbb_demand> ;
+
+    dct:license [ a dct:LicenseDocument ;
+                  rdfs:label "id: ODbL-1.0, name: Open Database License (ODbL) v1.0, version: 1.0, url: http://www.opendefinition.org/licenses/odc-odbl" ;
+                  rdfs:comment "instruction: You are free to share, to create and to adapt as long as you attribute, share-alike and keep open. Copyright 2016 Reiner Lemoine Institut"
+                ] ,
+                <https://www.dcat-ap.de/def/licenses/odbl> ;
+    dct:title "distribution of scenario.abbb_demand" ;
+
+    dcat:mediaType "table" ;
+    dcat:format [ a dct:MediaTypeOrExtent ;
+                  rdfs:label "table"^^xsd:String
+    ] .
+
+
+:scenario.abbb_demand-csv
+    a dcat:Distribution ;
+    # dcat:accessURL ...
+    dcat:downloadURL <http://openenergy-platform.org/api/v0/schema/scenario/tables/abbb_demand/rows?form=csv> ;
+    dcat:accessURL <http://openenergy-platform.org/api/v0/schema/scenario/tables/abbb_demand/rows?form=csv> ;
+    dct:license [ a dct:LicenseDocument ;
+                  rdfs:label "id: ODbL-1.0, name: Open Database License (ODbL) v1.0, version: 1.0, url: http://www.opendefinition.org/licenses/odc-odbl" ;
+                  rdfs:comment "instruction: You are free to share, to create and to adapt as long as you attribute, share-alike and keep open. Copyright 2016 Reiner Lemoine Institut"
+                ],
+                <https://www.dcat-ap.de/def/licenses/odbl> ;
+    dct:title "CSV distribution of scenario.abbb_demand" ;
+    dcat:mediaType "text/csv" ;
+    dcat:format [ a dct:MediaTypeOrExtent ;
+                  rdfs:label "text/csv"^^xsd:String
+                ] .
+
+# Columns ?
+
+:catalog a dcat:Catalog ;
+          dct:title "" ;
+          dct:description "" ;
+          # dct:publisher !
+          dcat:Dataset :scenario.abbb_demand .

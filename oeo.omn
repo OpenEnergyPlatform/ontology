@@ -14,7 +14,7 @@ Ontology: <http://openenergy-platform.org/ontology/oeo/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Import: <http://purl.obolibrary.org/obo/bfo.owl>
 
-Annotations: 
+Annotations:
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Martin Glauer",
     dc:contributor "Sebastian Cordes",
@@ -23,1970 +23,2160 @@ Annotations:
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
-    
+
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
-    
+
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
-    
+
 AnnotationProperty: dc:contributor
 
-    
+
 AnnotationProperty: definition
 
-    SubPropertyOf: 
+    SubPropertyOf:
         rdfs:comment
-    
-    
+
+
 AnnotationProperty: rdfs:comment
 
-    
+
 AnnotationProperty: rdfs:isDefinedBy
 
-    
+
 Datatype: rdf:PlainLiteral
 
-    
+
 ObjectProperty: appliesTo
 
-    
+
 ObjectProperty: comparesTo
 
-    
+
 ObjectProperty: covers
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
-    
-    
+
+
 ObjectProperty: covers_region
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         covers
-    
-    Range: 
+
+    Range:
         GeographicRegion
-    
-    
+
+
 ObjectProperty: covers_sector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         covers
-    
-    Range: 
+
+    Range:
         Sector
-    
-    
+
+
 ObjectProperty: covers_technology
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         covers
-    
-    
+
+
 ObjectProperty: covers_timeframe
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         covers
-    
-    
+
+
 ObjectProperty: generates_dataset
 
-    SubPropertyOf: 
+    SubPropertyOf:
         has_output
-    
-    
+
+
+ObjectProperty: handles_uncertainty
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+
 ObjectProperty: hasMaximum
 
-    SubPropertyOf: 
+    SubPropertyOf:
         comparesTo
-    
-    
+
+
 ObjectProperty: hasMinimum
 
-    SubPropertyOf: 
+    SubPropertyOf:
         comparesTo
-    
-    
+
+
 ObjectProperty: hasNumeral
 
-    
+
 ObjectProperty: hasUnitofMeasurement
 
-    
+
 ObjectProperty: hasYear
 
-    
+
 ObjectProperty: has_Percentage
 
-    SubPropertyOf: 
+    SubPropertyOf:
         comparesTo
-    
-    
+
+
 ObjectProperty: has_author
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    Domain: 
+
+    Domain:
         Publication
-    
-    Range: 
+
+    Range:
         Agent
-    
-    
+
+
 ObjectProperty: has_client
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    Domain: 
+
+    Domain:
         Publication
-    
-    Range: 
+
+    Range:
         Agent
-    
-    
+
+
+ObjectProperty: has_complexity
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+
 ObjectProperty: has_constraint
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
-    
-    SubPropertyOf: 
-        has_input
-    
-    
-ObjectProperty: has_contact_person
 
-    Annotations: 
+    SubPropertyOf:
+        has_input
+
+
+ObjectProperty: has_contact
+
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    
+
+
+ObjectProperty: has_documentation
+
+    SubPropertyOf:
+        has_part
+
+
 ObjectProperty: has_funding_source
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    Domain: 
+
+    Domain:
         Publication
-    
-    Range: 
+
+    Range:
         Agent
-    
-    
+
+
 ObjectProperty: has_input
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    Domain: 
+
+    Domain:
         Transformation
-    
-    Range: 
+
+    Range:
         InformationArtifact
-    
-    
+
+
 ObjectProperty: has_institution
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    
+ObjectProperty: has_license
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+
+ObjectProperty: has_logo
+
+    SubPropertyOf:
+        has_part
+
+
 ObjectProperty: has_objective
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
-    
-    Domain: 
+
+    Domain:
         Optimization
-    
-    Range: 
+
+    Range:
         ModelComponent
-    
-    
+
+
 ObjectProperty: has_objectivefunction
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_objective
-    
-    
+
+
 ObjectProperty: has_objectivevariable
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_objective
-    
-    
+
+
 ObjectProperty: has_output
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    Domain: 
+
+    Domain:
         Transformation
-    
-    Range: 
+
+    Range:
         InformationArtifact
-    
-    
+
+
 ObjectProperty: has_part
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
-    
-    Characteristics: 
+
+    Characteristics:
         Transitive
-    
-    InverseOf: 
+
+    InverseOf:
         part_of
-    
-    
+
+
 ObjectProperty: has_participant
 
-    
+
 ObjectProperty: has_programvariable
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    
+
+
 ObjectProperty: has_resolution
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
-    
-    
+
+
+ObjectProperty: has_sink
+
+    SubPropertyOf:
+        is_connected_to
+
+    DisjointWith:
+        has_source
+
+
+ObjectProperty: has_source
+
+    SubPropertyOf:
+        is_connected_to
+
+    DisjointWith:
+        has_sink
+
+
 ObjectProperty: has_spatial_resolution
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_resolution
-    
-    
+
+
 ObjectProperty: has_subregion
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a region and a smaller region within."@en
-    
-    SubPropertyOf: 
-        has_part
-    
-    
-ObjectProperty: has_time_resolution
 
-    Annotations: 
+    SubPropertyOf:
+        has_part
+
+
+ObjectProperty: has_temporal_resolution
+
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_resolution
-    
-    
+
+
 ObjectProperty: has_tool
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_participant
-    
-    Domain: 
+
+    Domain:
         ModelCalculation
-    
-    Range: 
+
+    Range:
         Model
-    
-    
+
+
+ObjectProperty: has_website
+
+    SubPropertyOf:
+        is_referenced_by
+
+
+ObjectProperty: is_connected_to
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+    Characteristics:
+        Symmetric
+
+
 ObjectProperty: isEqual
 
-    SubPropertyOf: 
+    SubPropertyOf:
         comparesTo
-    
-    
+
+
+ObjectProperty: is_referenced_by
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+    InverseOf:
+        references
+
+
+ObjectProperty: is_used_by
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+    InverseOf:
+        uses
+
+
 ObjectProperty: makes_assumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_input
-    
-    
+
+
+ObjectProperty: owl:topObjectProperty
+
+
 ObjectProperty: part_of
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
-    
-    Characteristics: 
+
+    Characteristics:
         Transitive
-    
-    InverseOf: 
+
+    InverseOf:
         has_part
-    
-    
+
+
+ObjectProperty: references
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+    InverseOf:
+        is_referenced_by
+
+
+ObjectProperty: uses
+
+    SubPropertyOf:
+        owl:topObjectProperty
+
+    InverseOf:
+        is_used_by
+
+
 ObjectProperty: uses_dataset
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
-    
-    SubPropertyOf: 
+
+    SubPropertyOf:
         has_input
-    
-    
+
+
+ObjectProperty: uses_external_optimizer
+
+    SubPropertyOf:
+        uses
+
+
+ObjectProperty: uses_software
+
+    SubPropertyOf:
+        uses
+
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
-    
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 
-    
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
-    
+
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
-    
+
+Class: ACLine
+
+    Annotations:
+        rdfs:comment "undirected"
+
+    SubClassOf:
+        Line,
+        UndirectedEdge
+
+
 Class: Acronym
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Identifier
-    
-    
+
+
 Class: Agent
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An agent is a person or group doing something."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: Assumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
 Class: BatteryStorage
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         EnergyStorageTechnology
-    
-    DisjointWith: 
+
+    DisjointWith:
         MethanationGasStorage
-    
-    
+
+
 Class: BioElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         RenewableGeneratorTechnology
-    
-    
+
+
 Class: BiogasElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas electricity generator is a bio energy generator that uses biogas to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         BioElectricityGenerator
-    
-    DisjointWith: 
+
+    DisjointWith:
         BiomassElectricityGenerator
-    
-    
+
+
 Class: BiomassElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass electricity generator is a bio energy generator that uses biomass to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         BioElectricityGenerator
-    
-    DisjointWith: 
+
+    DisjointWith:
         BiogasElectricityGenerator
-    
-    
+
+
 Class: BooleanVariable
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
+Class: Bus
+
+    SubClassOf:
+        ElectricityGridComponent,
+        Node
+
+
 Class: CapacitanceUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A capacitance unit is a unit of measurement used to express the ratio of the change in an electric charge in a system to the corresponding change in its electric potential."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: CarbonDioxideEmission
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission quantity is a quantity that is about carbon dioxide."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         EmissionQuantity
-    
-    
+
+
 Class: CarbonDioxideEmissionTrafficSector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         CarbonDioxideEmission
-    
-    
+
+
 Class: City
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A city is a large human settlement."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         GeographicRegion
-    
-    
+
+
 Class: CoalElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A coal electricity generator technology uses coal to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         FossilGeneratorTechnology
-    
-    
+
+
 Class: Constraint
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
+Class: Consumer
+
+    SubClassOf:
+        ElectricityGridComponent
+
+
 Class: ConsumptionQuantity
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A consumption quantity is a quantity that describes the amount of consumption of some resource."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
 Class: Continent
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A continent is a large landmass on the earth."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         GeographicRegion
-    
-    
+
+
 Class: Country
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A country is a geographic region that is an distinct political entity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         GeographicRegion
-    
-    
+
+
+Class: DCLine
+
+    Annotations:
+        rdfs:comment "directed"
+
+    SubClassOf:
+        DirectedEdge,
+        Line
+
+
 Class: DOI
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
 source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Identifier
-    
-    
+
+
 Class: Dataset
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
 The measurement series of an expiriment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
 Class: Demand
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Demand is generally the need for energy, colloquially referred to as energy consumption.
 Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ConsumptionQuantity
-    
-    
+
+
 Class: DemandSector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Sector
-    
-    
+
+
 Class: DemographicalAssumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Assumption
-    
-    
+
+
+Class: DirectedEdge
+
+    SubClassOf:
+        Link
+
+
 Class: EconomicalAssumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted prizes of fossil fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Assumption
-    
-    
+
+
 Class: ElectricChargeUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electric charge unit is a unit of measurement used to express the physical property of matter that causes it to experience a force when placed in an electromagnetic field."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: ElectricCurrentUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electric current unit is a unit of measurement used to express the flow of electric charge."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: ElectricalLoad
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
 
 Source: https://en.wikipedia.org/wiki/Electrical_load"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
 Class: ElectricityConsumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity consumption quantity is a consumption quantity about electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ConsumptionQuantity
-    
-    
+
+
 Class: ElectricityExport
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export quantity is a quantity that describes the amount of electricity that is exported from a geographic region."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
 Class: ElectricityGeneratorTechnology
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generator technology is an technology used to transform energy from some source into electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Technology
-    
-    
-Class: ElectricitySector
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A electricity sector is a sector that includes the electricity production."@en
-    
-    SubClassOf: 
-        EnergySector
-    
-    DisjointWith: 
-        HeatSector
-    
-    
-Class: EmissionQuantity
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity is a quantity that describes the amount of emissions that goes into the environment."@en
-    
-    SubClassOf: 
-        Quantity
-    
-    
-Class: EmpiricalDataset
+Class: ElectricityGrid
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
-    
-    SubClassOf: 
-        Dataset
-    
-    DisjointWith: 
-        SynthethicDataset
-    
-    
-Class: EnergyCarrierQuantity
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier quantity is a quantity about the amount of energy from a certain energy carrier."@en
-    
-    SubClassOf: 
-        Quantity
-    
-    
-Class: EnergyConsumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption quantity is a consumption quantity about energy."@en
-    
-    SubClassOf: 
-        ConsumptionQuantity
-    
-    
-Class: EnergyFromAlternativeFuelsAndPropulsionInTraffic
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from alternative fuels and populsion in traffic quantity is a energy carrier quantity that describes the amount alternative energy carriers are used in the traffic sector."@en
-    
-    SubClassOf: 
-        EnergyCarrierQuantity
-    
-    
-Class: EnergyFromBioFuelInTraffic
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from bio fuel in traffic quantity is a energy carrier quantity that describes the amount of bio fuel as energy carrier in traffic."@en
-    
-    SubClassOf: 
-        EnergyCarrierQuantity
-    
-    
-Class: EnergyFromElectricityInTraffic
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from electricity in traffic quantity is a energy carrier quantity that describes the amount of electricity used as energy carrier in traffic."@en
-    
-    SubClassOf: 
-        EnergyCarrierQuantity
-    
-    
-Class: EnergySector
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
-    
-    SubClassOf: 
-        Sector
-    
-    
-Class: EnergyStorageTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
-    
-    SubClassOf: 
-        Technology
-    
-    
-Class: EnergyTransferTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
-    
-    SubClassOf: 
-        Technology
-    
-    
-Class: EnergyUnit
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en
-    
-    SubClassOf: 
-        UnitOfMeasurement
-    
-    
-Class: FederalState
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A federal state is a geographic region that is a political entity within a country. It is partially self governing."@en
-    
-    SubClassOf: 
-        GeographicRegion
-    
-    
-Class: FieldPhotovoltaicGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
-    
-    SubClassOf: 
-        PhotovoltaicElectricityGenerator
-    
-    DisjointWith: 
-        RooftopPhotovoltaicGenerator
-    
-    
-Class: FossilGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil electricity generator technology is an electricity generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate electricity."@en
-    
-    SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    DisjointWith: 
-        RenewableGeneratorTechnology
-    
-    
-Class: GasTurbineGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
-    
-    SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    
-Class: Generator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
-Source: https://en.wikipedia.org/wiki/Electric_generator"@en
-    
-    SubClassOf: 
-        GridComponent,
-        part_of some Grid
-    
-    
-Class: GeographicRegion
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
-Class: Grid
-
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
 Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
         rdfs:comment "Synonym: Network"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some GridComponent
-    
-    
-Class: GridComponent
 
-    Annotations: 
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some ElectricityGridComponent
+
+
+Class: ElectricityGridComponent
+
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
+Class: ElectricitySector
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A electricity sector is a sector that includes the electricity production."@en
+
+    SubClassOf:
+        EnergySector
+
+    DisjointWith:
+        HeatSector
+
+
+Class: EmissionQuantity
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity is a quantity that describes the amount of emissions that goes into the environment."@en
+
+    SubClassOf:
+        Quantity
+
+
+Class: EmpiricalDataset
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
+
+    SubClassOf:
+        Dataset
+
+    DisjointWith:
+        SynthethicDataset
+
+
+Class: EnergyCarrierQuantity
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier quantity is a quantity about the amount of energy from a certain energy carrier."@en
+
+    SubClassOf:
+        Quantity
+
+
+Class: EnergyConsumption
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption quantity is a consumption quantity about energy."@en
+
+    SubClassOf:
+        ConsumptionQuantity
+
+
+Class: EnergyFromAlternativeFuelsAndPropulsionInTraffic
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from alternative fuels and populsion in traffic quantity is a energy carrier quantity that describes the amount alternative energy carriers are used in the traffic sector."@en
+
+    SubClassOf:
+        EnergyCarrierQuantity
+
+
+Class: EnergyFromBioFuelInTraffic
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from bio fuel in traffic quantity is a energy carrier quantity that describes the amount of bio fuel as energy carrier in traffic."@en
+
+    SubClassOf:
+        EnergyCarrierQuantity
+
+
+Class: EnergyFromElectricityInTraffic
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from electricity in traffic quantity is a energy carrier quantity that describes the amount of electricity used as energy carrier in traffic."@en
+
+    SubClassOf:
+        EnergyCarrierQuantity
+
+
+Class: EnergySector
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
+
+    SubClassOf:
+        Sector
+
+
+Class: EnergyStorageTechnology
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
+
+    SubClassOf:
+        Technology
+
+
+Class: EnergyTransferTechnology
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
+
+    SubClassOf:
+        Technology
+
+
+Class: EnergyUnit
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en
+
+    SubClassOf:
+        UnitOfMeasurement
+
+
+Class: FederalState
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A federal state is a geographic region that is a political entity within a country. It is partially self governing."@en
+
+    SubClassOf:
+        GeographicRegion
+
+
+Class: FieldPhotovoltaicGenerator
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
+
+    SubClassOf:
+        PhotovoltaicElectricityGenerator
+
+    DisjointWith:
+        RooftopPhotovoltaicGenerator
+
+
+Class: FossilGeneratorTechnology
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil electricity generator technology is an electricity generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate electricity."@en
+
+    SubClassOf:
+        ElectricityGeneratorTechnology
+
+    DisjointWith:
+        RenewableGeneratorTechnology
+
+
+Class: GasTurbineGenerator
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
+
+    SubClassOf:
+        ElectricityGeneratorTechnology
+
+
+Class: Generator
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
+Source: https://en.wikipedia.org/wiki/Electric_generator"@en
+
+    SubClassOf:
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+
+    DisjointWith:
+        Line
+
+
+Class: GeographicRegion
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+
+
+Class: Graph
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+
+
 Class: HeatConsumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat consumption quantity is a consumption quantity about heat."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ConsumptionQuantity
-    
-    
+
+
 Class: HeatGeneratorTechnology
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generator technology is an technology used to transform energy from some source into heat."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Technology
-    
-    
+
+
 Class: HeatPumpHeatGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         HeatGeneratorTechnology
-    
-    
+
+
 Class: HeatSector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat sector is a energy sector that includes the heat production."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         EnergySector
-    
-    DisjointWith: 
+
+    DisjointWith:
         ElectricitySector
-    
-    
+
+
 Class: HouseholdSector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A household sector is a demand sector that includes the energy consumption from private households."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         DemandSector
-    
-    
+
+
 Class: Identifier
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
 Class: IndustrySector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A industry sector is a demand sector that includes the energy consumption from industry."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         DemandSector
-    
-    
+
+
 Class: InformationArtifact
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: InstalledHeatFromHeatPump
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from heat pump quantity is a installed power quantity restricted to heat pump power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledHeatFromSolar
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from solar quantity is a installed power quantity restricted to solar heat power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerFromBiomass
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from biomass quantity is a installed power quantity restricted to biomass power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerFromCoalPowerPlants
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from coal power plants quantity is a installed power quantity restricted to coal power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerFromGas
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from gas quantity is a installed power quantity restricted to gas power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerFromPhotovoltaics
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from photovoltaics quantity is a installed power quantity restricted to photovoltaic power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerFromThermalPowerPlants
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from thermal power plants quantity is a installed power quantity restricted to thermal power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerFromWind
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from wind quantity is a installed power quantity restricted to wind power plants."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InstalledPowerQuantity
-    
-    
+
+
 Class: InstalledPowerQuantity
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power quantity is a quantity that describes the amount of power that some generators can generate."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
 Class: Institution
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Organization
-    
-    
+
+
 Class: LengthUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
+Class: Line
+
+    SubClassOf:
+        ElectricityGridComponent,
+        Link
+
+    DisjointWith:
+        Generator
+
+
+Class: Link
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+
+
 Class: LoadArea
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A load area is an area that contains energy consumption.
 
 Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         GeographicRegion
-    
-    
+
+
 Class: MassUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: MethanationGasStorage
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         EnergyStorageTechnology
-    
-    DisjointWith: 
+
+    DisjointWith:
         BatteryStorage
-    
-    
+
+
 Class: Model
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Software,
         has_part some ModelComponent
-    
-    
+
+
 Class: ModelCalculation
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Transformation,
         has_tool some Model
-    
-    
+
+
 Class: ModelComponent
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: ModelElement
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ModelComponent
-    
-    
+
+
 Class: ModelFunction
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ModelComponent
-    
-    
+
+
 Class: ModelVariable
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ModelElement
-    
-    
+
+
 Class: NaturalGasGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas electricity generator technology uses natural gas to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         FossilGeneratorTechnology
-    
-    
+
+
 Class: NewPowerFromPhotovoltaics
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A new power from photovoltaics quantity is a quantity that describes the amount of power from photovoltaic power plants that are going to be build in the future."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
+Class: Node
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+
+
 Class: NuclearPowerGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear generator technology is a fossil electricity generator that uses nuclear reactions to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         FossilGeneratorTechnology
-    
-    
+
+
 Class: OffShoreWindElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind electricity generator is a wind electricity generator that is build off shore above or in the ocean."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         WindElectricityGenerator
-    
-    DisjointWith: 
+
+    DisjointWith:
         OnShoreWindElectricityGenerator
-    
-    
+
+
 Class: OilElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         FossilGeneratorTechnology
-    
-    
+
+
 Class: OnShoreWindElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind electricity generator is a wind electricity generator that is build on land."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         WindElectricityGenerator
-    
-    DisjointWith: 
+
+    DisjointWith:
         OffShoreWindElectricityGenerator
-    
-    
+
+
 Class: Optimization
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ModelCalculation
-    
-    DisjointWith: 
+
+    DisjointWith:
         Simulation
-    
-    
+
+
 Class: OptimizationModel
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Model
-    
-    
+
+
 Class: Organization
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Agent
-    
-    DisjointWith: 
+
+    DisjointWith:
         Person
-    
-    
+
+
 Class: Percentage
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A percentage is a ratio given as a fraction of 100."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
 Class: Person
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human beeing."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Agent
-    
-    DisjointWith: 
+
+    DisjointWith:
         Organization
-    
-    
+
+
 Class: PhotovoltaicElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         RenewableGeneratorTechnology
-    
-    
+
+
 Class: PoliticalAssumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Assumption
-    
-    
+
+
 Class: PoliticalParty
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Organization
-    
-    
+
+
 Class: Postprocessing
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Transformation
-    
-    
+
+
 Class: Power
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the rate of doing work, the amount of energy transferred per unit time.
 Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Quantity
-    
-    
+
+
 Class: PowerUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power unit is a unit of measurement used to express the rate of doing work, the amount of energy transferred per unit time."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: Preprocessing
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Transformation
-    
-    
+
+
 Class: ProgramParameter
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ModelElement
-    
-    
+
+
 Class: Publication
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
 Class: Quantity
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Other Idea: A number together with a unit of measurement to quantify an entity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: RegulationAssumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A regulation assumption is an assumption about political regulations and prohibitions."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         PoliticalAssumption
-    
-    DisjointWith: 
+
+    DisjointWith:
         SubsidyAssumption
-    
-    
+
+
 Class: RenewableGeneratorTechnology
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable electricity generator technology is an electricity generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ElectricityGeneratorTechnology
-    
-    DisjointWith: 
+
+    DisjointWith:
         FossilGeneratorTechnology
-    
-    
+
+
 Class: ResistanceUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A resistance unit is a unit of measurement used to express difficulty to pass an electric current through a conductor."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: RooftopPhotovoltaicGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity generator is a photovoltaic electricity generator that is installed on top of the roof of a building."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         PhotovoltaicElectricityGenerator
-    
-    DisjointWith: 
+
+    DisjointWith:
         FieldPhotovoltaicGenerator
-    
-    
+
+
 Class: RunOfRiverElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river electricity generator is a water energy generator that stores little or no water and produces electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         WaterElectricityGenerator
-    
-    
+
+
 Class: Scenario
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "(WIP) A scenario is a collection of assumptions about the energy system.
 There is not yet a consens about the definition."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
 Class: Sector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: ShuntImpedance
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
 
 Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
-    
-    SubClassOf: 
-        GridComponent,
-        part_of some Grid
-    
-    
+
+    SubClassOf:
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+
+
 Class: Simulation
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         ModelCalculation
-    
-    DisjointWith: 
+
+    DisjointWith:
         Optimization
-    
-    
+
+
 Class: SimulationModel
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Model
-    
-    
+
+
 Class: Software
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         InformationArtifact
-    
-    
+
+
 Class: SolarThermalHeatGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         HeatGeneratorTechnology
-    
-    
+
+
 Class: StorageUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
-    
-    SubClassOf: 
-        GridComponent,
-        part_of some Grid
-    
-    
+
+    SubClassOf:
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+
+
 Class: Subgrid
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
-    
-    SubClassOf: 
-        Grid,
-        GridComponent,
-        has_part some GridComponent,
-        part_of some Grid
-    
-    
+
+    SubClassOf:
+        ElectricityGrid,
+        ElectricityGridComponent,
+        has_part some ElectricityGridComponent,
+        part_of some ElectricityGrid
+
+
 Class: SubsidyAssumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000112> "Public subsidies for energy efficient renovation of private buildings."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subsidy assumption is an assumption about financial support from the government to an economic sector or certain economic entities."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         PoliticalAssumption
-    
-    DisjointWith: 
+
+    DisjointWith:
         RegulationAssumption
-    
-    
+
+
 Class: SynthethicDataset
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Dataset
-    
-    DisjointWith: 
+
+    DisjointWith:
         EmpiricalDataset
-    
-    
+
+
 Class: TCSSector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         DemandSector
-    
-    
+
+
 Class: TechnologicalAssumption
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technological assumption is an assumption about what kind of technologies are available."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Assumption
-    
-    
+
+
 Class: Technology
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: TimeUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: Title
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Identifier
-    
-    
+
+
 Class: TrafficSector
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         DemandSector
-    
-    
+
+
 Class: Transformation
 
-    Annotations: 
+    Annotations:
         definition "A transformation is a process that transforms one or more inputs into at least one output."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000015>
-    
-    
+
+
 Class: Transformer
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
 2. A transformer is a static machine used for transforming power from one circuit to another without changing frequency. This is a very basic definition of transformer. Since there is no rotating or moving part so transformer is a static device. Transformer operates on ac supply. Transformer works on the principle of mutual induction.
 
 Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
-    
-    SubClassOf: 
-        GridComponent,
-        part_of some Grid
-    
-    
+
+    SubClassOf:
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
+
+
+Class: UndirectedEdge
+
+    SubClassOf:
+        Link
+
+
 Class: UnitOfMeasurement
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A unit of measurement is a specified magnitude of a quantity that is used to express the magnitude of the same kind of quantity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
+
+
 Class: VoltageUnit
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage unit is a unit of measurement used to express the difference in electric potential between two points."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         UnitOfMeasurement
-    
-    
+
+
 Class: WaterElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         RenewableGeneratorTechnology
-    
-    
+
+
 Class: WindElectricityGenerator
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind electricity generator technology uses wind power to generate electricity."@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         RenewableGeneratorTechnology
-    
-    
+
+
 Individual: Ampere
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: A
 SI unit for electric current."@en
-    
-    Types: 
+
+    Types:
         ElectricCurrentUnit
-    
-    
+
+
 Individual: Common_year
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: a, y
 1 a = 365 d"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: Coulomb
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: C
 SI unit for electric charge."@en
-    
-    Types: 
+
+    Types:
         ElectricChargeUnit
-    
-    
+
+
 Individual: Day
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: d
 1 d = 24 h = 1440 min = 86,400 s"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: False
 
-    Types: 
+    Types:
         BooleanVariable
-    
-    
+
+
 Individual: Farad
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: F
 SI derived unit of electrical capacitance."@en
-    
-    Types: 
+
+    Types:
         CapacitanceUnit
-    
-    
+
+
 Individual: Foot
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: ft
 1 ft = 0.3048 m"@en
-    
-    Types: 
+
+    Types:
         LengthUnit
-    
-    
+
+
 Individual: GigaWattHours
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: GWh
 Used for electricity"@en
-    
-    Types: 
+
+    Types:
         EnergyUnit
-    
-    
+
+
 Individual: Grain
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: grain, gr
 1 gr = 64,79891 mg"@en
-    
-    Types: 
+
+    Types:
         MassUnit
-    
-    
+
+
 Individual: Gram
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: g
 SI unit for mass: kg (1 kg = 1000 g)"@en
-    
-    Types: 
+
+    Types:
         MassUnit
-    
-    
+
+
 Individual: Hour
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: h
 1h = 60 min = 3600 s"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: Inch
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: in, \"
 1 in = 1\" = 2,54 cm = 0,0254 m"@en
-    
-    Types: 
+
+    Types:
         LengthUnit
-    
-    
+
+
 Individual: Joule
 
-    Annotations: 
+    Annotations:
         rdfs:comment "SI unit for energy.
 Unit symbol: J
 1 J = 1 kg*(m/s)^2"@en
-    
-    Types: 
+
+    Types:
         EnergyUnit
-    
-    
+
+
 Individual: Julian_year
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: a, a_jul, y, y_jul
 1 a = 365,25 d = 31,557,600 s"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: Kilowatt_hour
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: kWh
 1 kWh = 3600 kJ
 Used for electricity"@en
-    
-    Types: 
+
+    Types:
         EnergyUnit
-    
-    
+
+
 Individual: Leap_year
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: a, y
 1 a = 366 d"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: Megawatt
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: MW
 1 MW = 1000W"@en
-    
-    Types: 
+
+    Types:
         PowerUnit
-    
-    
+
+
 Individual: Metre
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: m
 SI unit for length"@en
-    
-    Types: 
+
+    Types:
         LengthUnit
-    
-    
+
+
 Individual: Mile
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: mile
 1 mile = 1609.344 m"@en
-    
-    Types: 
+
+    Types:
         LengthUnit
-    
-    
+
+
 Individual: Minute
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit Symbol: min
 1 min = 60s"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: Nautical_mile
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: M, NM, nmi, sm
 1 M = 1852 m"@en
-    
-    Types: 
+
+    Types:
         LengthUnit
-    
-    
+
+
 Individual: Newton_metre
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: Nm
 1 Nm = 1 J
 Used for torque"@en
-    
-    Types: 
+
+    Types:
         EnergyUnit
-    
-    
+
+
 Individual: Ohm
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: Ω
 SI derived unit for electrical resistance"@en
-    
-    Types: 
+
+    Types:
         ResistanceUnit
-    
-    
+
+
 Individual: Ounce
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: oz
 1 oz = 28.349523125 g (there are other ounces but this is the one that is used the most)"@en
-    
-    Types: 
+
+    Types:
         MassUnit
-    
-    
+
+
 Individual: Pound
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: lb
 1 lb = 0.45359237 kg"@en
-    
-    Types: 
+
+    Types:
         MassUnit
-    
-    
+
+
 Individual: Second
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: s
 SI unit of time"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: TerraWattHours
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: TWh
 Used for electricity"@en
-    
-    Types: 
+
+    Types:
         EnergyUnit
-    
-    
+
+
 Individual: Therm
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: thm
 1 thm ≈ 105.5 MJ (exact value depending on region)
 Used for natural gas"@en
-    
-    Types: 
+
+    Types:
         EnergyUnit
-    
-    
+
+
 Individual: Tons
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: t
 1 t = 3600 kg"@en
-    
-    Types: 
+
+    Types:
         MassUnit
-    
-    
+
+
 Individual: True
 
-    Types: 
+    Types:
         BooleanVariable
-    
-    
+
+
 Individual: Volt
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: V
 SI derived unit for voltage."@en
-    
-    Types: 
+
+    Types:
         VoltageUnit
-    
-    
+
+
 Individual: Watt
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: W
 SI derived unit for power."@en
-    
-    Types: 
+
+    Types:
         PowerUnit
-    
-    
+
+
 Individual: Week
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: week
 1 week = 7 d"@en
-    
-    Types: 
+
+    Types:
         TimeUnit
-    
-    
+
+
 Individual: Yard
 
-    Annotations: 
+    Annotations:
         rdfs:comment "Unit symbol: yd
 1 yd = 0.9144 m"@en
-    
-    Types: 
+
+    Types:
         LengthUnit
-    
-    
-DisjointClasses: 
+
+
+DisjointClasses:
     Acronym,DOI,Title
 
-DisjointClasses: 
+DisjointClasses:
     BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
 
-DisjointClasses: 
+DisjointClasses:
+    Bus,Consumer,Generator,Line,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses:
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
-DisjointClasses: 
+DisjointClasses:
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
 
-DisjointClasses: 
+DisjointClasses:
     DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
-DisjointClasses: 
+DisjointClasses:
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
-DisjointClasses: 
+DisjointClasses:
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
 
-DisjointClasses: 
+DisjointClasses:
+    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses:
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
-DisjointClasses: 
-    Generator,Grid,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
+DisjointClasses:
     HouseholdSector,IndustrySector,TCSSector,TrafficSector
-
