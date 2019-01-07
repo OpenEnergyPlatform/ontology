@@ -412,46 +412,6 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
         <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
     
     
-Class: <https://openenergy-platform.org/ontology/oeo_geo/Africa>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Africa is the world's second largest and second most-populous continent (behind Asia in both categories). At about 30.3 million km2 (11.7 million square miles) including adjacent islands, it covers 6% of Earth's total surface area and 20% of its land area."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Africa&oldid=868613614"@en
-    
-    SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
-    
-    
-Class: <https://openenergy-platform.org/ontology/oeo_geo/Antarctica>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Antarctica is Earth's southernmost continent. It contains the geographic South Pole and is situated in the Antarctic region of the Southern Hemisphere, almost entirely south of the Antarctic Circle, and is surrounded by the Southern Ocean. At 14,000,000 square kilometres (5,400,000 square miles), it is the fifth-largest continent."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Antarctica&oldid=868427230"@en
-    
-    SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
-    
-    
-Class: <https://openenergy-platform.org/ontology/oeo_geo/Asia>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Asia is Earth's largest and most populous continent, located primarily in the Eastern and Northern Hemispheres. It shares the continental landmass of Eurasia with the continent of Europe and the continental landmass of Afro-Eurasia with both Europe and Africa."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Asia&oldid=868251038"@en
-    
-    SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
-    
-    
-Class: <https://openenergy-platform.org/ontology/oeo_geo/Australia>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The continent of Australia, sometimes known in technical contexts by the names Sahul, Australinea or Meganesia to distinguish it from the country of Australia, consists of the land masses which sit on Australia's continental shelf. This includes mainland Australia, Tasmania, and the island of New Guinea (comprising Papua New Guinea and two Indonesian provinces). Situated in the geographical region of Oceania, it is the smallest of the seven traditional continents in the English conception."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Australia_(continent)&oldid=868416094"@en
-    
-    SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
-    
-    
 Class: <https://openenergy-platform.org/ontology/oeo_geo/City>
 
     Annotations: 
@@ -490,17 +450,7 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/County>
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=County&oldid=868471406"@en
     
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
-    
-    
-Class: <https://openenergy-platform.org/ontology/oeo_geo/Europe>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. It is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west and the Mediterranean Sea to the south. It comprises the westernmost part of Eurasia."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Europe&oldid=868103335"@en
-    
-    SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+        <https://openenergy-platform.org/ontology/oeo_geo/Country>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/FederalState>
@@ -522,6 +472,28 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/LAU>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "To meet the demand for statistics at a local level, Eurostat maintains a system of Local Administrative Units (LAUs) compatible with NUTS. These LAUs are the building blocks of the NUTS, and comprise the municipalities and communes of the European Union.
+
+The LAUs are:
+
+administrative for reasons such as the availability of data and policy implementation capacity;
+
+a subdivision of the NUTS 3 regions covering the whole economic territory of the Member States;
+
+appropriate for the implementation of local level typologies included in TERCET, namely the coastal area and DEGURBA classification.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/web/nuts/local-administrative-units"
+    
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS3>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/LoadArea>
@@ -547,14 +519,35 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/Municipality>
         <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
     
     
-Class: <https://openenergy-platform.org/ontology/oeo_geo/NorthAmerica>
+Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS0>
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere; it is also considered by some to be a northern subcontinent of the Americas. It is bordered to the north by the Arctic Ocean, to the east by the Atlantic Ocean, to the west and south by the Pacific Ocean, and to the southeast by South America and the Caribbean Sea."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=North_America&oldid=867798265"@en
-    
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>
+
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>
+
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>
+    
+    
+Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS3>
+
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/Province>
@@ -567,13 +560,19 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/Province>
         <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
     
     
-Class: <https://openenergy-platform.org/ontology/oeo_geo/SouthAmerica>
+Class: <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>
+
+    SubClassOf: 
+        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Africa>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "South America is a continent in the Western Hemisphere, mostly in the Southern Hemisphere, with a relatively small portion in the Northern Hemisphere. It may also be considered a subcontinent of the Americas, which is how it is viewed in the Spanish and Portuguese-speaking regions of the Americas."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=South_America&oldid=868487395"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Africa is the world's second largest and second most-populous continent (behind Asia in both categories). At about 30.3 million km2 (11.7 million square miles) including adjacent islands, it covers 6% of Earth's total surface area and 20% of its land area.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Africa&oldid=876942469"
     
-    SubClassOf: 
+    Types: 
         <https://openenergy-platform.org/ontology/oeo_geo/Continent>
     
     
@@ -582,6 +581,36 @@ Individual: <https://openenergy-platform.org/ontology/oeo_geo/Ampere>
     Annotations: 
         rdfs:comment "Unit symbol: A
 SI unit for electric current."@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Antarctica>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Antarctica is Earth's southernmost continent. It contains the geographic South Pole and is situated in the Antarctic region of the Southern Hemisphere, almost entirely south of the Antarctic Circle, and is surrounded by the Southern Ocean. At 14,000,000 square kilometres (5,400,000 square miles), it is the fifth-largest continent.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Antarctica&oldid=877196656"
+    
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Asia>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Asia is Earth's largest and most populous continent, located primarily in the Eastern and Northern Hemispheres. It shares the continental landmass of Eurasia with the continent of Europe and the continental landmass of Afro-Eurasia with both Europe and Africa. Asia covers an area of 44,579,000 square kilometres (17,212,000 sq mi), about 30% of Earth's total land area and 8.7% of the Earth's total surface area.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Asia&oldid=876007948"
+    
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Australia>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The continent of Australia, sometimes known in technical contexts by the names Sahul, Australinea or Meganesia to distinguish it from the country of Australia, consists of the land masses which sit on Australia's continental shelf. This includes mainland Australia, Tasmania, and the island of New Guinea (comprising Papua New Guinea and two Indonesian provinces).[1] Situated in the geographical region of Oceania, it is the smallest of the seven traditional continents in the English conception.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Australia_(continent)&oldid=874016426"
+    
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
     
     
 Individual: <https://openenergy-platform.org/ontology/oeo_geo/Coal>
@@ -606,6 +635,16 @@ Individual: <https://openenergy-platform.org/ontology/oeo_geo/Day>
     Annotations: 
         rdfs:comment "Unit symbol: d
 1 d = 24 h = 1440 min = 86,400 s"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Europe>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Europe is a continent located entirely in the Northern Hemisphere and mostly in the Eastern Hemisphere. It is bordered by the Arctic Ocean to the north, the Atlantic Ocean to the west and the Mediterranean Sea to the south. It comprises the westernmost part of Eurasia.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Europe&oldid=876129250"
+    
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
     
     
 Individual: <https://openenergy-platform.org/ontology/oeo_geo/False>
@@ -731,6 +770,16 @@ Individual: <https://openenergy-platform.org/ontology/oeo_geo/Newton_metre>
 Used for torque"@en
     
     
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/NorthAmerica>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "North America is a continent entirely within the Northern Hemisphere and almost all within the Western Hemisphere; it is also considered by some to be a northern subcontinent of the Americas. It is bordered to the north by the Arctic Ocean, to the east by the Atlantic Ocean, to the west and south by the Pacific Ocean, and to the southeast by South America and the Caribbean Sea.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=North_America&oldid=876018837"
+    
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
+    
+    
 Individual: <https://openenergy-platform.org/ontology/oeo_geo/Nuclear>
 
     
@@ -763,6 +812,16 @@ Individual: <https://openenergy-platform.org/ontology/oeo_geo/Second>
     Annotations: 
         rdfs:comment "Unit symbol: s
 SI unit of time"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/SouthAmerica>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "South America is a continent in the Western Hemisphere, mostly in the Southern Hemisphere, with a relatively small portion in the Northern Hemisphere.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=South_America&oldid=876836428"
+    
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Continent>
     
     
 Individual: <https://openenergy-platform.org/ontology/oeo_geo/Therm>
