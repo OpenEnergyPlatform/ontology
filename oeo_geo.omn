@@ -420,7 +420,8 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/City>
 https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:City"@en
     
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+        <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/Continent>
@@ -440,7 +441,8 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/Country>
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Country&oldid=866952883"@en
     
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+        <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/County>
@@ -450,19 +452,8 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/County>
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=County&oldid=868471406"@en
     
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/Country>
-    
-    
-Class: <https://openenergy-platform.org/ontology/oeo_geo/FederalState>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A federation (also known as a federal state) is a political entity characterized by a union of partially self-governing provinces, states, or other regions under a central federal government (federalism)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Federation&oldid=865044965"@en,
-        rdfs:label "FederalState"@en,
-        rdfs:label "Federation"@en
-    
-    SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+        <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
@@ -490,9 +481,6 @@ appropriate for the implementation of local level typologies included in TERCET,
     
     SubClassOf: 
         <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>,
         <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS3>
     
     
@@ -516,28 +504,27 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/Municipality>
         rdfs:label "Municipality"@en
     
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+        <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS0>
 
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>
+        <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>
 
     SubClassOf: 
         <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS0>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>
 
     SubClassOf: 
         <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>,
         <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>
     
     
@@ -545,8 +532,6 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/NUTS3>
 
     SubClassOf: 
         <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/Country>,
-        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS1>,
         <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/NUTS2>
     
     
@@ -557,7 +542,8 @@ Class: <https://openenergy-platform.org/ontology/oeo_geo/Province>
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Province&oldid=865815503"@en
     
     SubClassOf: 
-        <https://openenergy-platform.org/ontology/oeo_geo/GeographicRegion>
+        <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>,
+        <https://openenergy-platform.org/ontology/oeo_geo/part_of> some <https://openenergy-platform.org/ontology/oeo_geo/AdministrativeDivision>
     
     
 Class: <https://openenergy-platform.org/ontology/oeo_geo/StatisticalRegion>
@@ -662,6 +648,12 @@ Individual: <https://openenergy-platform.org/ontology/oeo_geo/Foot>
     Annotations: 
         rdfs:comment "Unit symbol: ft
 1 ft = 0.3048 m"@en
+    
+    
+Individual: <https://openenergy-platform.org/ontology/oeo_geo/Germany>
+
+    Types: 
+        <https://openenergy-platform.org/ontology/oeo_geo/Country>
     
     
 Individual: <https://openenergy-platform.org/ontology/oeo_geo/Grain>
