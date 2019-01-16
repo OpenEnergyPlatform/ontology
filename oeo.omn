@@ -475,6 +475,12 @@ Class: Agent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: AmbientHeat
+
+    SubClassOf: 
+        Heat
+    
+    
 Class: Anthracite
 
     Annotations: 
@@ -765,6 +771,15 @@ Class: DemographicalAssumption
         Assumption
     
     
+Class: DerivedHeat
+
+    EquivalentTo: 
+        DistrictHeat
+    
+    SubClassOf: 
+        Heat
+    
+    
 Class: DieselFuel
 
     Annotations: 
@@ -782,6 +797,15 @@ Class: DirectedEdge
 
     SubClassOf: 
         Link
+    
+    
+Class: DistrictHeat
+
+    EquivalentTo: 
+        DerivedHeat
+    
+    SubClassOf: 
+        Heat
     
     
 Class: EconomicalAssumption
@@ -919,6 +943,12 @@ Class: EnergyUnit
         UnitOfMeasurement
     
     
+Class: Fission
+
+    SubClassOf: 
+        Nuclear
+    
+    
 Class: Fuel
 
     Annotations: 
@@ -927,6 +957,12 @@ Class: Fuel
     
     SubClassOf: 
         EnergyCarrier
+    
+    
+Class: Fusion
+
+    SubClassOf: 
+        Nuclear
     
     
 Class: Gas
@@ -1000,7 +1036,7 @@ Class: Geothermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        EnergyCarrier
+        Heat
     
     
 Class: GeothermalGenerator
@@ -1078,11 +1114,20 @@ Class: HouseholdSector
         Sector
     
     
-Class: Hydro
+Class: Hydroelectricity
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Potential and kinetic energy of water converted into electricity in hydroelectric plants.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        Hydropower
+    
+    
+Class: Hydropower
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> ""
     
     SubClassOf: 
         EnergyCarrier
@@ -1734,6 +1779,7 @@ Class: SolarThermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
+        Heat,
         SolarEnergy
     
     
@@ -1856,7 +1902,7 @@ Class: TideWaveOcean
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        EnergyCarrier
+        Hydropower
     
     
 Class: TimeUnit
@@ -1956,7 +2002,7 @@ Class: WaterTurbine
 
     SubClassOf: 
         Generator,
-        uses some Hydro
+        uses some Hydroelectricity
     
     
 Class: Wind
@@ -2376,5 +2422,5 @@ DisjointClasses:
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
 DisjointClasses: 
-    Heat,Hydro,NaturalGas,Nuclear,OilAndPetroleumProducts,SolarEnergy,SolidFossilFuels,Wind
+    Heat,Hydroelectricity,NaturalGas,Nuclear,OilAndPetroleumProducts,SolarEnergy,SolidFossilFuels,Wind
 
