@@ -475,6 +475,16 @@ Class: Agent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: AirPollutant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"
+    
+    SubClassOf: 
+        Pollutant
+    
+    
 Class: AmbientHeat
 
     SubClassOf: 
@@ -949,6 +959,13 @@ Class: Fission
         Nuclear
     
     
+Class: FlourinatedGas
+
+    SubClassOf: 
+        Gas,
+        GreenhouseGas
+    
+    
 Class: Fuel
 
     Annotations: 
@@ -1052,6 +1069,25 @@ Class: Graph
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: GreenhouseGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas is a gas that absorbs and emits radiant energy within the thermal infrared range. Greenhouse gases cause the greenhouse effect.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Greenhouse_gas&oldid=880592155"
+    
+    SubClassOf: 
+        Pollutant
+    
+    
+Class: HFC
+
+    EquivalentTo: 
+        Hydrofluorocarbon
+    
+    SubClassOf: 
+        FlourinatedGas
+    
+    
 Class: HardCoal
 
     Annotations: 
@@ -1122,6 +1158,15 @@ Class: Hydroelectricity
     
     SubClassOf: 
         Hydropower
+    
+    
+Class: Hydrofluorocarbon
+
+    EquivalentTo: 
+        HFC
+    
+    SubClassOf: 
+        FlourinatedGas
     
     
 Class: Hydropower
@@ -1542,6 +1587,15 @@ Class: OtherLiquidBiofuels
         LiquidBiofuel
     
     
+Class: PFC
+
+    EquivalentTo: 
+        Perfluorocarbon
+    
+    SubClassOf: 
+        FlourinatedGas
+    
+    
 Class: Peat
 
     Annotations: 
@@ -1553,6 +1607,15 @@ This definition is without prejudice to the definition of renewable energy sourc
     SubClassOf: 
         Gas,
         SolidFossilFuels
+    
+    
+Class: Perfluorocarbon
+
+    EquivalentTo: 
+        PFC
+    
+    SubClassOf: 
+        FlourinatedGas
     
     
 Class: Person
@@ -1590,6 +1653,12 @@ Class: PoliticalParty
     
     SubClassOf: 
         Organization
+    
+    
+Class: Pollutant
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: Postprocessing
@@ -2061,6 +2130,27 @@ SI unit for electric current."@en
         ElectricCurrentUnit
     
     
+Individual: CH4
+
+    SameAs: 
+        Methane
+    
+    
+Individual: CO2
+
+    SameAs: 
+        Carbon_dioxide
+    
+    
+Individual: Carbon_dioxide
+
+    Types: 
+        GreenhouseGas
+    
+    SameAs: 
+        CO2
+    
+    
 Individual: Coal
 
     
@@ -2226,6 +2316,15 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     
+Individual: Methane
+
+    Types: 
+        GreenhouseGas
+    
+    SameAs: 
+        CH4
+    
+    
 Individual: Metre
 
     Annotations: 
@@ -2256,6 +2355,18 @@ Individual: Minute
         TimeUnit
     
     
+Individual: N2O
+
+    SameAs: 
+        Nitrous_oxide
+    
+    
+Individual: NF3
+
+    SameAs: 
+        Nitrogen_trifluoride
+    
+    
 Individual: Nautical_mile
 
     Annotations: 
@@ -2275,6 +2386,24 @@ Used for torque"@en
     
     Types: 
         EnergyUnit
+    
+    
+Individual: Nitrogen_trifluoride
+
+    Types: 
+        GreenhouseGas
+    
+    SameAs: 
+        NF3
+    
+    
+Individual: Nitrous_oxide
+
+    Types: 
+        GreenhouseGas
+    
+    SameAs: 
+        N2O
     
     
 Individual: Nuclear
@@ -2317,6 +2446,12 @@ Individual: Pound
         MassUnit
     
     
+Individual: SF6
+
+    SameAs: 
+        Sulphur_hexafluoride
+    
+    
 Individual: Second
 
     Annotations: 
@@ -2325,6 +2460,15 @@ SI unit of time"@en
     
     Types: 
         TimeUnit
+    
+    
+Individual: Sulphur_hexafluoride
+
+    Types: 
+        GreenhouseGas
+    
+    SameAs: 
+        SF6
     
     
 Individual: Therm
