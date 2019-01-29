@@ -6,7 +6,7 @@ Developing a common ontology for energy system analysis and scenarios.
 
 ## License / Copyright
 
-This repository is licensed under [tba](https://github.com/OpenEnergyPlatform/ontology/issues/8)
+This repository is licensed under CC0 1.0 Universell (CC0 1.0) Public Domain Dedication
 
 ## Installation
 
