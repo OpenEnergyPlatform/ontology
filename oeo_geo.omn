@@ -57,32 +57,11 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
-ObjectProperty: has_part
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
-    
-    Characteristics: 
-        Transitive
-    
-    InverseOf: 
-        part_of
-    
-    
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: part_of
+ObjectProperty: oeo:part_of
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
-    
-    Characteristics: 
-        Transitive
-    
-    InverseOf: 
-        has_part
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -115,7 +94,7 @@ https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:City
     
     SubClassOf: 
         AdministrativeDivision,
-        part_of some AdministrativeDivision
+        oeo:part_of some AdministrativeDivision
     
     
 Class: Continent
@@ -136,7 +115,7 @@ Class: Country
     
     SubClassOf: 
         AdministrativeDivision,
-        part_of some AdministrativeDivision
+        oeo:part_of some AdministrativeDivision
     
     
 Class: County
@@ -147,7 +126,7 @@ Class: County
     
     SubClassOf: 
         AdministrativeDivision,
-        part_of some AdministrativeDivision
+        oeo:part_of some AdministrativeDivision
     
     
 Class: GeographicRegion
@@ -175,7 +154,7 @@ appropriate for the implementation of local level typologies included in TERCET,
     
     SubClassOf: 
         StatisticalRegion,
-        part_of some NUTS3
+        oeo:part_of some NUTS3
     
     
 Class: LoadArea
@@ -199,7 +178,7 @@ Class: Municipality
     
     SubClassOf: 
         AdministrativeDivision,
-        part_of some AdministrativeDivision
+        oeo:part_of some AdministrativeDivision
     
     
 Class: NUTS0
@@ -212,21 +191,21 @@ Class: NUTS1
 
     SubClassOf: 
         StatisticalRegion,
-        part_of some NUTS0
+        oeo:part_of some NUTS0
     
     
 Class: NUTS2
 
     SubClassOf: 
         StatisticalRegion,
-        part_of some NUTS1
+        oeo:part_of some NUTS1
     
     
 Class: NUTS3
 
     SubClassOf: 
         StatisticalRegion,
-        part_of some NUTS2
+        oeo:part_of some NUTS2
     
     
 Class: Province
@@ -237,7 +216,7 @@ Class: Province
     
     SubClassOf: 
         AdministrativeDivision,
-        part_of some AdministrativeDivision
+        oeo:part_of some AdministrativeDivision
     
     
 Class: StatisticalRegion
