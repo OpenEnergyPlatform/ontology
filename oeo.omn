@@ -1094,6 +1094,7 @@ Class: GreenhouseGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Greenhouse_gas&oldid=880592155"
     
     SubClassOf: 
+        Gas,
         Pollutant
     
     
@@ -1486,6 +1487,12 @@ Class: NonAssociatedGas
         NaturalGas
     
     
+Class: NonMethaneVolatileOrganicCompound
+
+    SubClassOf: 
+        VolatileOrganicCompound
+    
+    
 Class: NonRenewableMunicipalWaste
 
     Annotations: 
@@ -1612,6 +1619,12 @@ Class: PFC
     
     SubClassOf: 
         FlourinatedGas
+    
+    
+Class: ParticulateMatter
+
+    SubClassOf: 
+        AirPollutant
     
     
 Class: Peat
@@ -2064,6 +2077,24 @@ Class: UnitOfMeasurement
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: VolatileOrganicCompound
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Volatile organic compounds (VOCs) are organic chemicals that have a high vapor pressure at ordinary room temperature. Their high vapor pressure results from a low boiling point, which causes large numbers of molecules to evaporate or sublimate from the liquid or solid form of the compound and enter the surrounding air, a trait known as volatility.
+
+[...]
+
+VOCs are numerous, varied, and ubiquitous. They include both human-made and naturally occurring chemical compounds.
+
+[...]
+
+Some VOCs are dangerous to human health or cause harm to the environment.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Volatile_organic_compound&oldid=880677383"
+    
+    SubClassOf: 
+        AirPollutant
+    
+    
 Class: VoltageUnit
 
     Annotations: 
@@ -2337,7 +2368,8 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
 Individual: Methane
 
     Types: 
-        GreenhouseGas
+        GreenhouseGas,
+        VolatileOrganicCompound
     
     SameAs: 
         CH4
