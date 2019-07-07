@@ -57,10 +57,40 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: considers_User_behaviour_and_demand
+
+    SubPropertyOf: 
+        covers
+    
+    
 ObjectProperty: covers
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
+    
+    
+ObjectProperty: covers_demand_sector
+
+    SubPropertyOf: 
+        covers_sector
+    
+    
+ObjectProperty: covers_energy_sector
+
+    SubPropertyOf: 
+        covers_sector
+    
+    
+ObjectProperty: covers_energycarrier
+
+    Annotations: 
+        rdfs:comment "A relation that holds between a publication/model calculation/model and the energycarrier it covers."
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        EnergyCarrier
     
     
 ObjectProperty: covers_region
@@ -102,10 +132,34 @@ ObjectProperty: covers_timeframe
         covers
     
     
+ObjectProperty: data_provided
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: example_research_questions
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: further_reference_properties
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: handles_uncertainty
 
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    
+ObjectProperty: has_approach_to_uncertainty
+
+    SubPropertyOf: 
+        has_part
     
     
 ObjectProperty: has_author
@@ -198,6 +252,12 @@ ObjectProperty: has_input
         InformationArtifact
     
     
+ObjectProperty: has_institution
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: has_license
 
     SubPropertyOf: 
@@ -207,7 +267,23 @@ ObjectProperty: has_license
 ObjectProperty: has_logo
 
     SubPropertyOf: 
+        has_part,
+        is_referenced_by
+    
+    
+ObjectProperty: has_mathematical_objective
+
+    SubPropertyOf: 
         has_part
+    
+    Range: 
+        ModelComponent
+    
+    
+ObjectProperty: has_methodical_Focus
+
+    SubPropertyOf: 
+        owl:topObjectProperty
     
     
 ObjectProperty: has_objective
@@ -312,6 +388,12 @@ ObjectProperty: has_spatial_resolution
         has_resolution
     
     
+ObjectProperty: has_support_community_forum
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
 ObjectProperty: has_temporal_resolution
 
     Annotations: 
@@ -336,7 +418,25 @@ ObjectProperty: has_tool
         Model
     
     
+ObjectProperty: has_typical_computation_hardware
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_typical_computation_time
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: has_website
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_available_on_GitHub
 
     SubPropertyOf: 
         is_referenced_by
@@ -367,6 +467,12 @@ ObjectProperty: is_used_by
     
     InverseOf: 
         uses
+    
+    
+ObjectProperty: link_to_source_code
+
+    SubPropertyOf: 
+        is_referenced_by
     
     
 ObjectProperty: makes_assumption
@@ -402,6 +508,18 @@ ObjectProperty: references
         is_referenced_by
     
     
+ObjectProperty: source_code_available
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: suited_for_many_scenarios
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: uses
 
     SubPropertyOf: 
@@ -432,6 +550,18 @@ ObjectProperty: uses_software
         uses
     
     
+ObjectProperty: uses_software_internal_data_processing
+
+    SubPropertyOf: 
+        uses_software
+    
+    
+ObjectProperty: uses_software_modelling
+
+    SubPropertyOf: 
+        uses_software
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -447,10 +577,10 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 Class: ACLine
 
     Annotations: 
+        rdfs:label "AC-Line"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
 Generally, flows in the model can not be controlled but are a function of the resitance and electrochemical potential difference."@en,
-        rdfs:comment "undirected",
-        rdfs:label "AC-Line"@en
+        rdfs:comment "undirected"
     
     SubClassOf: 
         Line,
@@ -478,8 +608,8 @@ Class: Agent
 Class: AirPollutant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere."
     
     SubClassOf: 
         Pollutant
@@ -505,8 +635,8 @@ Class: Anthracite
 Class: AssociatedGas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas produced in association with crude oil."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas produced in association with crude oil."@en
     
     SubClassOf: 
         Gas,
@@ -543,8 +673,8 @@ Class: BioGasGenerator
 Class: Biodiesel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bio-diesel (a methyl-ester produced from vegetable or animal oil, of diesel quality), biodimethylether (dimethylether produced from biomass), Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil produced from oil seed through mechanical processing only) and all other liquid biofuels which are added to, blended with or used straight as transport diesel.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bio-diesel (a methyl-ester produced from vegetable or animal oil, of diesel quality), biodimethylether (dimethylether produced from biomass), Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil produced from oil seed through mechanical processing only) and all other liquid biofuels which are added to, blended with or used straight as transport diesel."
     
     SubClassOf: 
         Liquid,
@@ -566,8 +696,8 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
 Class: Biogas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biogas&oldid=867559571"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biogas&oldid=867559571",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
         Biofuel,
@@ -577,10 +707,10 @@ Class: Biogas
 Class: Biogasoline
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)",
+        rdfs:label "Biogasoline"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
         rdfs:label "Bioethanol"@en,
-        rdfs:label "Biogasoline"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)"
     
     SubClassOf: 
         Liquid,
@@ -616,9 +746,9 @@ Class: BooleanVariable
 Class: Bus
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
         rdfs:label "Bus"@en,
-        rdfs:label "NetworkNode"@en
+        rdfs:label "NetworkNode"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en
     
     SubClassOf: 
         ElectricityGridComponent,
@@ -637,8 +767,8 @@ Class: CapacitanceUnit
 Class: Charcoal
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The solid residue of the destructive distillation and pyrolysis of wood and other vegetal material."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The solid residue of the destructive distillation and pyrolysis of wood and other vegetal material."@en
     
     SubClassOf: 
         Solid,
@@ -661,8 +791,8 @@ Class: CoalPowerplant
 Class: CokeOvenGas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Obtained as a by-product of the manufacture of coke oven coke for the production of iron and steel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Obtained as a by-product of the manufacture of coke oven coke for the production of iron and steel."@en
     
     SubClassOf: 
         Gas,
@@ -683,8 +813,8 @@ Class: CokingCoal
 Class: CollieryGas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or transmitted by pipeline to consumers."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or transmitted by pipeline to consumers."@en
     
     SubClassOf: 
         Gas,
@@ -703,8 +833,8 @@ Class: CommerceSector
 Class: Constraint
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en
     
     SubClassOf: 
         InformationArtifact
@@ -730,10 +860,10 @@ Class: CrudeOil
 Class: DCLine
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
-Genreally, flows in the model can be controlled/optimized."@en,
+        rdfs:label "HVDC-Line"@en,
         rdfs:comment "directed",
-        rdfs:label "HVDC-Line"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
+Genreally, flows in the model can be controlled/optimized."@en
     
     SubClassOf: 
         DirectedEdge,
@@ -774,8 +904,8 @@ Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
 Class: DemographicalAssumption
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en
     
     SubClassOf: 
         Assumption
@@ -793,10 +923,10 @@ Class: DerivedHeat
 Class: DieselFuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
         rdfs:label "DieselFuel"@en,
-        rdfs:label "TransportDiesel"@en
+        rdfs:label "TransportDiesel"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
         GasDieselOil,
@@ -821,9 +951,9 @@ Class: DistrictHeat
 Class: EconomicalAssumption
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en,
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted prizes of fossil fuel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en
     
     SubClassOf: 
         Assumption
@@ -863,9 +993,9 @@ Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
 Class: ElectricityGrid
 
     Annotations: 
+        rdfs:comment "Synonym: Network"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
-Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
-        rdfs:comment "Synonym: Network"@en
+Source: https://en.wikipedia.org/wiki/Electrical_grid"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
@@ -952,8 +1082,8 @@ Class: EnergyTransferTechnology
 Class: EnergyUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy unit is a unit of measurement used to express the energy of an object or the energy transformed during a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Joule, kWh"@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -997,8 +1127,8 @@ Class: Gas
 Class: GasDieselOil
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas/diesel oil is primarily a medium distillate distilling between 180 °C and 380 °C. Includes blending components. Several grades are available depending on uses."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas/diesel oil is primarily a medium distillate distilling between 180 °C and 380 °C. Includes blending components. Several grades are available depending on uses."@en
     
     SubClassOf: 
         Liquid,
@@ -1053,10 +1183,10 @@ Source: https://en.wikipedia.org/wiki/Electric_generator"@en
 Class: Geothermal
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy available as heat emitted from within the earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites:
 — for electricity generation using dry steam or high enthalpy brine after flashing,
-— directly as heat for district heating, agriculture etc"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+— directly as heat for district heating, agriculture etc"@en
     
     SubClassOf: 
         Heat
@@ -1109,8 +1239,8 @@ Class: HFC
 Class: HardCoal
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en
     
     SubClassOf: 
         Coal,
@@ -1142,8 +1272,8 @@ Class: HeatDemand
 Class: HeatSector
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
-        rdfs:label "HeatingCoolingSector"@en
+        rdfs:label "HeatingCoolingSector"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en
     
     SubClassOf: 
         Sector
@@ -1152,10 +1282,10 @@ Class: HeatSector
 Class: HeatingOil
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Light heating oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         rdfs:label "HeatingOil"@en,
-        rdfs:label "OtherGasOil"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Light heating oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
+        rdfs:label "OtherGasOil"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
         GasDieselOil,
@@ -1259,8 +1389,8 @@ Class: Institution
 Class: JetFuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
         rdfs:label "JetFuel"@en,
         rdfs:label "KeroseneTypeJetFuel"@en
     
@@ -1286,8 +1416,8 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
 Class: LengthUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A length unit is a unit of measurement used to express the distance of two points."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "metre"@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -1347,10 +1477,10 @@ Class: Liquid
 Class: LiquidBiofuel
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The quantities of liquid biofuels reported in this category should relate to the quantities of biofuel and not to the total volume of liquids into which the biofuels are blended. 
 
-The following liquid biofuels are concerned: biogasoline, bio-diesels, other liquid biofuels"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+The following liquid biofuels are concerned: biogasoline, bio-diesels, other liquid biofuels"@en
     
     SubClassOf: 
         Biofuel,
@@ -1367,8 +1497,8 @@ Class: ManufacturedCoalBasedGas
 Class: MassUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mass unit is a unit of measurement used to express the mass of an object."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "kg"@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -1415,8 +1545,8 @@ Class: ModelElement
 Class: ModelFunction
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en
     
     SubClassOf: 
         ModelComponent
@@ -1447,8 +1577,8 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
 Class: MunicipalWaste
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en
     
     SubClassOf: 
         Waste
@@ -1489,8 +1619,8 @@ Class: NonAssociatedGas
 Class: NonRenewableMunicipalWaste
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of non-biological origin."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of non-biological origin."@en
     
     SubClassOf: 
         MunicipalWaste
@@ -1573,8 +1703,8 @@ Class: Organization
 Class: OtherBituminousCoal
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal used for steam raising purposes and includes all bituminous coal that is neither included under coking coal nor anthracite. It is characterised by higher volatile matter than anthracite (more than 10 %) and lower carbon content (less than 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis. If bituminous coal is used in coke ovens it should be reported as coking coal."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal used for steam raising purposes and includes all bituminous coal that is neither included under coking coal nor anthracite. It is characterised by higher volatile matter than anthracite (more than 10 %) and lower carbon content (less than 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis. If bituminous coal is used in coke ovens it should be reported as coking coal."@en,
         rdfs:label "OtherBituminousCoal"@en,
         rdfs:label "SteamCoal"@en
     
@@ -1586,8 +1716,8 @@ Class: OtherBituminousCoal
 Class: OtherKerosene
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Refined petroleum distillate used in sectors other than aircraft transport. It distils between 150 °C and 300 °C."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Refined petroleum distillate used in sectors other than aircraft transport. It distils between 150 °C and 300 °C."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
         Kerosene,
@@ -1617,10 +1747,10 @@ Class: PFC
 Class: Peat
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour. Peat used for non-energy purposes is not included.
 
-This definition is without prejudice to the definition of renewable energy sources in Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+This definition is without prejudice to the definition of renewable energy sources in Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories."@en
     
     SubClassOf: 
         Gas,
@@ -1719,8 +1849,8 @@ Class: Preprocessing
 Class: ProgramParameter
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en
     
     SubClassOf: 
         ModelElement
@@ -1760,8 +1890,8 @@ Class: RegulationAssumption
 Class: RenewableMunicipalWaste
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of biological origin."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of biological origin."@en
     
     SubClassOf: 
         Biofuel,
@@ -1840,8 +1970,8 @@ Class: Software
 Class: SolarEnergy
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en
     
     SubClassOf: 
         EnergyCarrier
@@ -1850,8 +1980,8 @@ Class: SolarEnergy
 Class: SolarPhotovoltaic
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en
     
     SubClassOf: 
         SolarEnergy
@@ -1860,10 +1990,10 @@ Class: SolarPhotovoltaic
 Class: SolarThermal
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
 (a) solar thermal-electric plants; or
-(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en
     
     SubClassOf: 
         Heat,
@@ -1880,9 +2010,9 @@ Class: SolidBiomass
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        rdfs:label "SolidBiomass"@en,
         rdfs:label "SolidBiofuel"@en,
-        rdfs:label "SolidBiomass"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
         Biofuel,
@@ -1892,8 +2022,8 @@ Class: SolidBiomass
 Class: SolidFossilFuels
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock usually occurring in rock strata in layers or veins called coal beds or coal seams. The harder forms, such as anthracite coal, can be regarded as metamorphic rock because of later exposure to elevated temperature and pressure. Coal is composed primarily of carbon, along with variable quantities of other elements, chiefly hydrogen, sulfur, oxygen, and nitrogen.[1] Coal is a fossil fuel that forms when dead plant matter is converted into peat, which in turn is converted into lignite, then sub-bituminous coal, after that bituminous coal, and lastly anthracite. This involves biological and geological processes. The geological processes take place over millions of years."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock usually occurring in rock strata in layers or veins called coal beds or coal seams. The harder forms, such as anthracite coal, can be regarded as metamorphic rock because of later exposure to elevated temperature and pressure. Coal is composed primarily of carbon, along with variable quantities of other elements, chiefly hydrogen, sulfur, oxygen, and nitrogen.[1] Coal is a fossil fuel that forms when dead plant matter is converted into peat, which in turn is converted into lignite, then sub-bituminous coal, after that bituminous coal, and lastly anthracite. This involves biological and geological processes. The geological processes take place over millions of years."@en
     
     SubClassOf: 
         Fuel
@@ -1918,8 +2048,8 @@ Class: StorageUnit
 Class: SubBituminousCoal
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Refers to non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31 % volatile matter on a dry mineral matter free basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Refers to non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31 % volatile matter on a dry mineral matter free basis."@en
     
     SubClassOf: 
         Coal,
@@ -1995,8 +2125,8 @@ Class: TideWaveOcean
 Class: TimeUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time unit is a unit of measurement used to express the duration of a process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "second"@en
     
     SubClassOf: 
         UnitOfMeasurement
@@ -2095,8 +2225,8 @@ Class: WaterTurbine
 Class: Wind
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."
     
     SubClassOf: 
         EnergyCarrier
@@ -2130,8 +2260,8 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
 Class: WoodAndOther
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en
     
     SubClassOf: 
         Solid,
@@ -2251,8 +2381,8 @@ SI unit for mass: kg (1 kg = 1000 g)"@en
 Individual: HardCoal
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en
     
     
 Individual: Heat
@@ -2542,8 +2672,8 @@ Individual: Week
 Individual: Wind
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."
     
     
 Individual: Yard
