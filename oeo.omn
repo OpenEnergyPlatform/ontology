@@ -896,6 +896,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
         Land
     
     
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HubHeight>
 
     SubClassOf: 
@@ -907,7 +908,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         ElectricityProductionUnit
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#IsolatedOperationCapability>
 
     SubClassOf: 
@@ -1087,7 +1088,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffAnimalProtection>
 
     SubClassOf: 
@@ -1147,7 +1148,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SeasideLocation>
 
     SubClassOf: 
@@ -1183,7 +1184,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         StorageUnitDataset
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
 
     SubClassOf: 
@@ -1226,7 +1227,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UseableStorageCapacity>
 
     SubClassOf: 
@@ -2576,11 +2577,14 @@ Class: Generator
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
-    
+
     SubClassOf:
         NetworkNode,
+        ElectricityGridComponent,
 	uses some EnergyCarrier,
 	uses some EnergyGeneratorTechnology
+
+
     
     DisjointWith: 
         Line
@@ -2670,7 +2674,15 @@ Class: GridModel
 
     SubClassOf: 
         SoftwareElement
-    
+
+Class: HFC
+
+    EquivalentTo:
+        Hydrofluorocarbon
+
+    SubClassOf:
+        FlourinatedGas
+
     
 Class: HardCoal
 
@@ -2799,6 +2811,20 @@ Class: HydroelectricPowerplant
         PowerGeneratingUnit,
         has_part some WaterTurbine
     
+
+Class: HubHeight
+
+    SubClassOf: 
+        TechnicalDataWind
+    
+    
+Class: Hydrofluorocarbon
+
+    EquivalentTo:
+        HFC
+
+    SubClassOf:
+        FlourinatedGas
 
 
 Class: Hydroelectricity
@@ -3225,8 +3251,10 @@ Class: Manufacturer
     
 Class: ManufacturerSpecifications
 
-    SubClassOf: 
-        WindEntityDataset
+    SubClassOf:
+        WindEntityDataset,
+        WindEntityData
+
     
     
 Class: MassUnit
@@ -4103,6 +4131,54 @@ Class: ResidentialDemand
         Demand
     
     
+Class: RequierementSwitchOffAnimalProtection
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffCapacityLimitation
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffIceFalling
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffNoiseImmissionProtectionByDay
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffNoiseImmissionProtectionNights
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffOthers
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffShadowing
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: Requierements
+
+    SubClassOf: 
+        WindEntityData
+    
+    
 Class: ResistanceUnit
 
     Annotations: 
@@ -4122,6 +4198,18 @@ Class: RooftopPhotovoltaicGenerator
     
     DisjointWith: 
         FieldPhotovoltaicGenerator
+    
+    
+Class: RotorBladeDeIcingSystem
+
+    SubClassOf: 
+        TechnicalDataWind
+    
+    
+Class: RotorDiameter
+
+    SubClassOf: 
+        TechnicalDataWind
     
     
 Class: RunOfRiverElectricityGenerator
@@ -4558,6 +4646,13 @@ Class: Technical
 
     
     
+Class: TechnicalDataWind
+
+    SubClassOf: 
+        WindEntityData,
+        part_of some WindEntity
+    
+    
 Class: TechnologicalAssumption
 
     Annotations: 
@@ -4967,7 +5062,22 @@ Class: WindElectricityGenerator
 Class: WindEntityDataset
 
     SubClassOf: 
-        ElectricityProductionUnit
+        ElectricityProductionUnit,
+        has_part some Generator,
+        has_part some WindEntityData
+    
+Class: WindEntity
+
+    SubClassOf:
+        ElectricityProductionUnit,
+        has_part some Generator,
+        has_part some WindEntityData
+
+
+Class: WindEntityData
+
+    SubClassOf: 
+        InformationArtifact
     
 
 Class: WindOffshore
