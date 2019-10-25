@@ -684,12 +684,6 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
         Land
     
     
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HubHeight>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
-    
-    
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#IsolatedOperationCapability>
 
     SubClassOf: 
@@ -810,66 +804,6 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
     
     
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffAnimalProtection>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffCapacityLimitation>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffIceFalling>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffNoiseImmissionProtectionByDay>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffNoiseImmissionProtectionNights>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffOthers>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffShadowing>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
-
-    SubClassOf: 
-        WindEntity
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RotorBladeDeIcingSystem>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RotorDiameter>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
-    
-    
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SeasideLocation>
 
     SubClassOf: 
@@ -886,19 +820,6 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
 
     SubClassOf: 
         StorageUnit
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
-
-    SubClassOf: 
-        WindEntity
-    
-    
-Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Technology>
-
-    SubClassOf: 
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>,
-        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
     
     
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UseableStorageCapacity>
@@ -1795,9 +1716,7 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        WindEntity
-         and (part_of some ElectricityGrid)
+        ElectricityGridComponent
     
     DisjointWith: 
         Line
@@ -1961,6 +1880,12 @@ Class: HouseholdSector
 
     SubClassOf: 
         Sector
+    
+    
+Class: HubHeight
+
+    SubClassOf: 
+        TechnicalDataWind
     
     
 Class: Hydrofluorocarbon
@@ -2262,7 +2187,7 @@ Class: Manufacturer
 Class: ManufacturerSpecifications
 
     SubClassOf: 
-        WindEntity
+        WindEntityData
     
     
 Class: MassUnit
@@ -2784,6 +2709,54 @@ Class: RenewableMunicipalWaste
         MunicipalWaste
     
     
+Class: RequierementSwitchOffAnimalProtection
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffCapacityLimitation
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffIceFalling
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffNoiseImmissionProtectionByDay
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffNoiseImmissionProtectionNights
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffOthers
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffShadowing
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: Requierements
+
+    SubClassOf: 
+        WindEntityData
+    
+    
 Class: ResistanceUnit
 
     Annotations: 
@@ -2803,6 +2776,18 @@ Class: RooftopPhotovoltaicGenerator
     
     DisjointWith: 
         FieldPhotovoltaicGenerator
+    
+    
+Class: RotorBladeDeIcingSystem
+
+    SubClassOf: 
+        TechnicalDataWind
+    
+    
+Class: RotorDiameter
+
+    SubClassOf: 
+        TechnicalDataWind
     
     
 Class: RunOfRiverElectricityGenerator
@@ -3037,6 +3022,13 @@ Class: TCSSector
         DemandSector
     
     
+Class: TechnicalDataWind
+
+    SubClassOf: 
+        WindEntityData,
+        part_of some WindEntity
+    
+    
 Class: TechnologicalAssumption
 
     Annotations: 
@@ -3214,7 +3206,15 @@ Class: WindElectricityGenerator
 Class: WindEntity
 
     SubClassOf: 
-        ElectricityProductionUnit
+        ElectricityProductionUnit,
+        has_part some Generator,
+        has_part some WindEntityData
+    
+    
+Class: WindEntityData
+
+    SubClassOf: 
+        InformationArtifact
     
     
 Class: WindOffshore
