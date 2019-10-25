@@ -1534,7 +1534,7 @@ Class: ElectricityGridComponent
 Class: ElectricityProductionUnit
 
     SubClassOf: 
-        MaStR
+        ElectricityGridComponent
     
     
 Class: ElectricitySector
@@ -2977,7 +2977,6 @@ Class: StorageUnit
     
     SubClassOf: 
         ElectricityGridComponent,
-        MaStR,
         part_of some ElectricityGrid
     
     
@@ -2999,7 +2998,6 @@ Class: Subgrid
     
     SubClassOf: 
         ElectricityGrid,
-        Transformer,
         has_part some ElectricityGridComponent,
         part_of some ElectricityGrid
     
@@ -3222,8 +3220,7 @@ Class: WindEntity
 Class: WindOffshore
 
     SubClassOf: 
-        WindTurbine,
-        has_input some Sea
+        WindTurbine
     
     
 Class: WindOnshore
@@ -3242,8 +3239,7 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
     
     SubClassOf: 
         Generator,
-        uses some Wind,
-        uses_dataset some MaStR
+        uses some Wind
     
     
 Class: WoodAndOther
@@ -3743,9 +3739,6 @@ DisjointClasses:
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
 
 DisjointClasses: 
-    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
     ElectricitySector,HeatSector,TransportSector
 
 DisjointClasses: 
@@ -3753,6 +3746,9 @@ DisjointClasses:
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
 DisjointClasses: 
     HouseholdSector,IndustrySector,TCSSector,TrafficSector
