@@ -122,6 +122,15 @@ ObjectProperty: covers_timeframe
     
     SubPropertyOf: 
         covers
+
+    
+ObjectProperty: depends_on
+
+    
+ObjectProperty: g_depends_on
+
+    SubPropertyOf: 
+        depends_on
     
 
 ObjectProperty: generates_dataset
@@ -635,11 +644,16 @@ ObjectProperty: references
     InverseOf: 
         is_referenced_by
     
-    
+
 ObjectProperty: transmits
 
     SubPropertyOf: 
         owl:topObjectProperty
+
+ObjectProperty: s_depends_on
+
+    SubPropertyOf: 
+        depends_on
     
     
 ObjectProperty: uses
@@ -678,10 +692,34 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000024>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000029>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AcDcCoupling>
@@ -1274,7 +1312,7 @@ Class: Agent
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Intelligent_agent"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: AgriculturalDemand
@@ -2112,10 +2150,23 @@ Class: ElectricityGrid
 Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
         rdfs:comment "Synonym: Network"@en
     
-    SubClassOf: 
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part min 1 EnergyGeneratorTechnology,
         has_part min 1 Line
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        has_part some ElectricityGridComponent
+
+
+
+Class: ElectricityGridComponent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        part_of some ElectricityGrid
     
     
 Class: ElectricityProductionUnit
@@ -2168,7 +2219,7 @@ Class: EmpiricalDataset
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en
     
     SubClassOf: 
         Dataset
@@ -2184,7 +2235,7 @@ Class: EnergyCarrier
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Energy_carrier&oldid=828742268"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: EnergyCarrierQuantity
@@ -2541,13 +2592,13 @@ Class: GeographicRegion
         <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000006>
     
     
 Class: GeopgraphicCoordinate
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
 Class: Geothermal
@@ -2602,7 +2653,7 @@ A GWP is calculated over a specific time horizon, commonly 20, 100, or 500 years
 Class: Graph
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000024>
     
     
 Class: GreenhouseGas
@@ -3072,7 +3123,7 @@ Class: LinearOptimalPowerflow
 Class: Link
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000024>
     
     DisjointWith: 
         Node
@@ -3263,9 +3314,13 @@ Class: ModelElement
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
     
-    SubClassOf: 
+    SubClassOf:
         InformationArtifact
-    
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        part_of some Model
+
+
+
     
 Class: ModelExamples
 
@@ -3417,7 +3472,7 @@ Class: NewPowerFromPhotovoltaics
 Class: Node
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000024>
     
     DisjointWith: 
         Link
@@ -3789,7 +3844,7 @@ Class: Pollutant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pollutant&oldid=906519011"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: Postprocessing
@@ -3894,8 +3949,9 @@ Class: Prosumer
         <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is a person who consumes and produces a product. It is derived from \"prosumption\", a dot-com era business term meaning \"production by consumers\"."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Prosumer&oldid=881861680"@en
     
-    SubClassOf: 
-        Agent
+    SubClassOf:
+        Agent,
+        <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
 Class: Public
@@ -4132,7 +4188,7 @@ Class: Sector
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
 Class: SectorConcept
@@ -4374,7 +4430,7 @@ Class: StateOfMatter
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
 
 Class: StorageHydropowerplant
@@ -4517,7 +4573,7 @@ Class: Technology
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: TidalPowerPlant
@@ -4749,7 +4805,7 @@ Class: UnitOfMeasurement
         <http://purl.obolibrary.org/obo/IAO_0000115> "A unit of measurement is a specified magnitude of a quantity that is used to express the magnitude of the same kind of quantity."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
 Class: User
