@@ -2153,7 +2153,7 @@ Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
     SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part min 1 EnergyGeneratorTechnology,
-        has_part min 1 Line
+        has_part min 1 Line,
         <http://purl.obolibrary.org/obo/BFO_0000027>,
         has_part some ElectricityGridComponent
 
@@ -2172,7 +2172,7 @@ Class: ElectricityGridComponent
 Class: ElectricityProductionUnit
 
     SubClassOf: 
-        MaStR
+        ElectricityGridComponent
     
     
 Class: ElectricitySector
@@ -3315,7 +3315,7 @@ Class: ModelElement
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
     
     SubClassOf:
-        InformationArtifact
+        InformationArtifact,
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         part_of some Model
 
@@ -4456,10 +4456,11 @@ Class: StorageUnit
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
     
-    SubClassOf: 
+    SubClassOf:
         NetworkNode,
-        uses some EnergyStorageTechnology
-    
+        uses some EnergyStorageTechnology,
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
 
     
 Class: Study
@@ -4492,7 +4493,6 @@ Class: Subgrid
     
     SubClassOf:
         ElectricityGrid,
-        Transformer,
         has_part some ElectricityGridComponent,
         part_of some ElectricityGrid
     
@@ -4994,8 +4994,7 @@ Class: WindFarm
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
     SubClassOf: 
-        WindTurbine,
-        has_input some Sea
+        WindTurbine
     
     
 Class: WindOnshore
@@ -5016,10 +5015,13 @@ Class: WindTurbine
 Wind turbines are manufactured in a wide range of vertical and horizontal axis. The smallest turbines are used for applications such as battery charging for auxiliary power for boats or caravans or to power traffic warning signs. Slightly larger turbines can be used for making contributions to a domestic power supply while selling unused power back to the utility supplier via the electrical grid. Arrays of large turbines, known as wind farms, are becoming an increasingly important source of intermittent renewable energy and are used by many countries as part of a strategy to reduce their reliance on fossil fuels."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
-    SubClassOf: 
+    SubClassOf:
         Turbine,
         has_physical_output some Power,
-        has_physical_input only Wind
+        has_physical_input only Wind,
+        Generator,
+        uses some Wind
+
     
     
 Class: WoodAndOther
@@ -6173,9 +6175,6 @@ DisjointClasses:
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
 
 DisjointClasses: 
-    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
     ElectricitySector,HeatSector,TransportSector
 
 DisjointClasses:
@@ -6183,6 +6182,9 @@ DisjointClasses:
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
 DisjointClasses: 
     HouseholdSector,IndustrySector,TCSSector,TrafficSector
