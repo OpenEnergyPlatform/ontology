@@ -1819,6 +1819,18 @@ Class: FlourinatedGas
         GreenhouseGas
     
     
+Class: Flow
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> ""
+    
+    SubClassOf: 
+        Water
+    
+    DisjointWith: 
+        Ocean
+    
+    
 Class: FossilGeneratorTechnology
 
     Annotations: 
@@ -1911,9 +1923,7 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        WindEntity
-         and (part_of some ElectricityGrid)
+        ElectricityGridComponent
     
     DisjointWith: 
         Line
@@ -2079,6 +2089,12 @@ Class: HouseholdSector
         Sector
     
     
+Class: HydroPowerplant
+
+    SubClassOf: 
+        Generator
+    
+    
 Class: Hydrofluorocarbon
 
     EquivalentTo: 
@@ -2086,15 +2102,6 @@ Class: Hydrofluorocarbon
     
     SubClassOf: 
         FlourinatedGas
-    
-    
-Class: Hydropower
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> ""
-    
-    SubClassOf: 
-        EnergyCarrier
     
     
 Class: Identifier
@@ -2378,7 +2385,7 @@ Class: Manufacturer
 Class: ManufacturerSpecifications
 
     SubClassOf: 
-        WindEntity
+        WindEntityDataset
     
     
 Class: MassUnit
@@ -2573,6 +2580,21 @@ Class: NuclearPowerplant
         uses some Nuclear
     
     
+Class: Ocean
+
+    SubClassOf: 
+        Water
+    
+    DisjointWith: 
+        Flow
+    
+    
+Class: OceanPowerplant
+
+    SubClassOf: 
+        Generator
+    
+    
 Class: OffShoreWindElectricityGenerator
 
     Annotations: 
@@ -2765,7 +2787,7 @@ Class: PhotovoltaicGenerator
 Class: PlantOperation
 
     SubClassOf: 
-        ElectricityProductionUnit
+        CommonParameters
     
     
 Class: PoliticalAssumption
@@ -2814,7 +2836,7 @@ Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
 Class: PowerPlantData
 
     SubClassOf: 
-        ElectricityProductionUnit
+        CommonParameters
     
     
 Class: PowerUnit
@@ -2852,6 +2874,18 @@ Class: Publication
     
     SubClassOf: 
         InformationArtifact
+    
+    
+Class: PumpstoragePowerplant
+
+    SubClassOf: 
+        ReservoirPowerplant
+    
+    
+Class: PumpstoragePowerplantWithNaturalInflux
+
+    SubClassOf: 
+        ReservoirPowerplant
     
     
 Class: Quantity
@@ -2899,6 +2933,15 @@ Class: RenewableMunicipalWaste
         MunicipalWaste
     
     
+Class: ReservoirPowerplant
+
+    SubClassOf: 
+        HydroPowerplant
+    
+    DisjointWith: 
+        RunOfRiverPowerplant
+    
+    
 Class: ResistanceUnit
 
     Annotations: 
@@ -2935,10 +2978,11 @@ Class: RunOfRiverPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
     
     SubClassOf: 
-        WaterTurbine
+        HydroPowerplant,
+        uses some Flow
     
     DisjointWith: 
-        TidalPowerPlant
+        ReservoirPowerplant, TidalPowerPlant
     
     
 Class: Scenario
@@ -3085,6 +3129,12 @@ Class: StateOfMatter
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: StorageHydropowerplant
+
+    SubClassOf: 
+        ReservoirPowerplant
+    
+    
 Class: StorageUnit
 
     Annotations: 
@@ -3092,8 +3142,13 @@ Class: StorageUnit
     
     SubClassOf: 
         ElectricityGridComponent,
-        MaStR,
         part_of some ElectricityGrid
+    
+    
+Class: StorageUnitDataset
+
+    SubClassOf: 
+        MaStR
     
     
 Class: SubBituminousCoal
@@ -3179,10 +3234,17 @@ Class: TidalPowerPlant
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        WaterTurbine
+        OceanPowerplant,
+        uses some Tide
     
     DisjointWith: 
         RunOfRiverPowerplant
+    
+    
+Class: Tide
+
+    SubClassOf: 
+        Ocean
     
     
 Class: TimeUnit
@@ -3293,6 +3355,12 @@ Class: WastePowerplant
         Generator
     
     
+Class: Water
+
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: WaterElectricityGenerator
 
     Annotations: 
@@ -3302,11 +3370,17 @@ Class: WaterElectricityGenerator
         RenewableGeneratorTechnology
     
     
-Class: WaterTurbine
+Class: Wave
 
     SubClassOf: 
-        Generator,
-        uses some Hydropower
+        Ocean
+    
+    
+Class: WavePowerPlant
+
+    SubClassOf: 
+        OceanPowerplant,
+        uses some Wave
     
     
 Class: Wind
@@ -3328,7 +3402,7 @@ Class: WindElectricityGenerator
         RenewableGeneratorTechnology
     
     
-Class: WindEntity
+Class: WindEntityDataset
 
     SubClassOf: 
         ElectricityProductionUnit
@@ -3357,8 +3431,7 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
     
     SubClassOf: 
         Generator,
-        uses some Wind,
-        uses_dataset some MaStR
+        uses some Wind
     
     
 Class: WoodAndOther
@@ -3835,6 +3908,9 @@ DisjointClasses:
 
 DisjointClasses: 
     BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
+
+DisjointClasses: 
+    BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
 
 DisjointClasses: 
     Bus,Consumer,Generator,Line,ShuntImpedance,StorageUnit,Subgrid,Transformer
