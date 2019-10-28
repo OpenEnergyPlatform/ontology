@@ -21,9 +21,13 @@ Here is a template for new release sections
 ### Added
 - factsheet categories (#47)
 - storage technologies (#47)
-
+- `ObjectProperty` `has_normal_state_of_matter` (#39)
+- add individuals `solid`, `liquid`, `gaseous`, `plasmatic` (#39)
+- Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 ### Changed
 - structure of the ontology (#47)
+- change peat to solid and not gas (#39)
 
 ### Removed
+- `ObjectProperty` `has_stateofmatter` (#39)
 
