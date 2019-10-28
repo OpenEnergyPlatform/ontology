@@ -19,11 +19,11 @@ Here is a template for new release sections
 ## [Unreleased]
 
 ### Added
-- one thing
+- factsheet categories (#47)
+- storage technologies (#47)
 
 ### Changed
-- another thing
+- structure of the ontology (#47)
 
 ### Removed
-- yet another thing
 
