@@ -21,17 +21,18 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
 3. Open [protégé](https://protege.stanford.edu/) and work on the ontology
     Please refrain from editing the `oeo.omn` file in a text editor. 
     If you do so, open protégé and check that the nodes which you modified do not have any problems
-4. Push your local branch on the remote server `origin`
+4. Describe briefly what you changed in the `CHANGELOG.md` file and commit the file last
+5. Push your local branch on the remote server `origin`
     ```bash
     git push
     ```
     If your branch does not exist on the remote server yet, git will provide you with instructions, simply follow them
-5. Submit a pull request (PR)
+6. Submit a pull request (PR)
     Follow the [steps](https://help.github.com/en/articles/creating-a-pull-request) of the github help to create the PR
     Please note that you PR should be directed from your branch (for example `myfeature`) towards the branch `dev`
-6. [Ask someone](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) to review your PR 
-7. Write the PR number in the corresponding issue so that they are linked
-8. (if approved) Merge the PR into `dev` and delete the branch on which you were working
+7. [Ask someone](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) to review your PR 
+8. Write the PR number in the corresponding issue so that they are linked
+9. (if approved) Merge the PR into `dev` and delete the branch on which you were working
     
 
 ### Branch name convention
