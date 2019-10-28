@@ -24,4 +24,12 @@ Commit: restructured subclasses of WindEntity
 	- Added superclass "has_part some WindEntityData" to WindEntity
 	- Deleted the Technology Class with the IRI http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Technology in favor of the other Technology Class (with the normal oeo IRI) to prevent confusion bc of two "Technology" classes
 	- Changed IRIs of the former subclasses of WindEntity from "http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10" to  "http://openenergy-platform.org/ontology/oeo/" to conform to the ontology
-	
+
+Commit: specifically dependent continuants and Issue #45
+	- I realized that the whole Class ElectricityProductionUnit, rather than just it's subclass WindEntity (renamed to the more specific "WindEntityData") contains specifactions of those units and is not an object. So I moved it to bfo:quality (subclass of specifically dependend continuant) as it depends on the Unit it describes and added the suffix "Property"
+	- Added object properties "has_disposition", "has_role", "has_function" and "has_quality"
+	- Moved Pollutant and it's subclasses GreenhouseGas and Airpollutant to bfo:disposition
+	- Made flourinatedGas subclass of "has_disposition some greenhousegas" instead of greenhousegas
+	- As "Agent" is rather a role in the energy model/ simulation I moved it to role. Which gave me the opportunity to classify ist subclasses new as object aggregate (Organisation) and object (Person)
+	- Added subclass "has_part some Person" to Organisation because it fits the given definition
+	- Implemented changes of issue #45 (generalised the solutions for liquid and solid too): renamed "StateOfMatter" to "PortionOfMatter" and added prefix "PortionOf" to it's subclasses, as well as added the bfo:quality "phase_description" with it's subclasses "Liquid", "Solid", and "Gas"
