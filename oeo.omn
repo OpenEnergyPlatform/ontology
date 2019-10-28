@@ -1,6 +1,7 @@
 Prefix: : <http://openenergy-platform.org/ontology/oeo/>
 Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: obda: <https://w3id.org/obda/vocabulary#>
 Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -69,6 +70,9 @@ ObjectProperty: conforms_to
         Sector
     
     
+ObjectProperty: contains
+
+    
 ObjectProperty: covers
 
     Annotations: 
@@ -114,7 +118,19 @@ ObjectProperty: covers_timeframe
         covers
     
     
+ObjectProperty: distributes
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: handles_uncertainty
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has
 
     SubPropertyOf: 
         owl:topObjectProperty
@@ -177,7 +193,7 @@ ObjectProperty: has_contact
 ObjectProperty: has_documentation
 
     SubPropertyOf: 
-        has_part
+        has
     
     
 ObjectProperty: has_funding_source
@@ -213,7 +229,51 @@ ObjectProperty: has_input
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
     SubPropertyOf: 
+        has
+    
+    
+ObjectProperty: has_license
+
+    SubPropertyOf: 
         has_participant
+    
+    
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        has
+    
+    
+ObjectProperty: has_numercical_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+
+    
+ObjectProperty: has_numerical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
     
     Domain: 
         Transformation
@@ -222,16 +282,42 @@ ObjectProperty: has_input
         InformationArtifact
     
     
-ObjectProperty: has_license
+ObjectProperty: has_numercical_input
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
     SubPropertyOf: 
-        owl:topObjectProperty
+        has_input
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
     
     
-ObjectProperty: has_logo
+ObjectProperty: has_numerical_output
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
     SubPropertyOf: 
-        has_part
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
     
     
 ObjectProperty: has_normal_state_of_matter
@@ -252,7 +338,7 @@ ObjectProperty: has_objective
         Optimization
     
     Range: 
-        ModelComponent
+        SoftwareElement
     
     
 ObjectProperty: has_objectivefunction
@@ -281,20 +367,14 @@ ObjectProperty: has_output
     SubPropertyOf: 
         has_participant
     
-    Domain: 
-        Transformation
-    
-    Range: 
-        InformationArtifact
-    
     
 ObjectProperty: has_part
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
     
-    Characteristics: 
-        Transitive
+    SubPropertyOf: 
+        owl:topObjectProperty
     
     InverseOf: 
         part_of
@@ -302,6 +382,45 @@ ObjectProperty: has_part
     
 ObjectProperty: has_participant
 
+    
+ObjectProperty: has_physical_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    Characteristics: 
+        Functional,
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        EnergyGeneratorTechnology
+    
+    Range: 
+        EnergyCarrier
+    
+    
+ObjectProperty: has_physical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        EnergyGeneratorTechnology
+    
+    Range: 
+        Power
+    
     
 ObjectProperty: has_pollutant
 
@@ -396,6 +515,15 @@ ObjectProperty: is_connected_to
         Symmetric
     
     
+ObjectProperty: is_equivalent_to
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an definition and its synonym."@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: is_referenced_by
 
     SubPropertyOf: 
@@ -420,7 +548,7 @@ ObjectProperty: makes_assumption
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
     
     SubPropertyOf: 
-        has_input
+        owl:topObjectProperty
     
     
 ObjectProperty: owl:topObjectProperty
@@ -429,7 +557,7 @@ ObjectProperty: owl:topObjectProperty
 ObjectProperty: part_of
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."@en
     
     Characteristics: 
         Transitive
@@ -447,6 +575,12 @@ ObjectProperty: references
         is_referenced_by
     
     
+ObjectProperty: transmits
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: uses
 
     SubPropertyOf: 
@@ -462,7 +596,7 @@ ObjectProperty: uses_dataset
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
     
     SubPropertyOf: 
-        has_input
+        uses
     
     
 ObjectProperty: uses_external_optimizer
@@ -498,10 +632,18 @@ Generally, flows in the model can not be controlled but are a function of the re
         rdfs:label "AC-Line"@en
     
     SubClassOf: 
-        Line,
-        UndirectedEdge
+        Line
+   
     
+Class: API
+
+    SubClassOf: 
+        Interface
     
+    DisjointWith: 
+        GUI   
+ 
+
 Class: Acronym
 
     Annotations: 
@@ -514,17 +656,35 @@ Class: Acronym
 Class: Agent
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An agent is a person or group doing something."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An autonomous entity which acts, directing its activity towards achieving goals [...], upon an environment using observation through sensors and consequent actuators"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Intelligent_agent"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: AgriculturalDemand
+
+    SubClassOf: 
+        Demand
+    
+
+Class: Air
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed using surplus energy to store energy."@en
+    
+    SubClassOf: 
+        EnergyCarrier,
+        EnergyStorageTechnology,
+        is_used_by some StorageUnit
+    
+    
 Class: AirPollutant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"@en
     
     SubClassOf: 
         Pollutant
@@ -532,8 +692,18 @@ Class: AirPollutant
     
 Class: AmbientHeat
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient heat, understood as heat that is naturally around us in its diffuse and extended form, emanates from a diversity of heat sources, including earth, water, or air, and is increasingly attracting the attention of those concerned with energy and sustainability."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Urchueguia, J. F. (2016). Shallow geothermal and ambient heat technologies for renewable heating. In Renewable Heating and Cooling (pp. 89-118). Woodhead Publishing."@en
+    
     SubClassOf: 
         Heat
+    
+    
+Class: AnalyticalApproach
+
+    SubClassOf: 
+        ContentDescriptor
     
     
 Class: Anthracite
@@ -544,6 +714,12 @@ Class: Anthracite
     
     SubClassOf: 
         HardCoal
+    
+    
+Class: Appliance
+
+    SubClassOf: 
+        ResidentialDemand
     
     
 Class: AssociatedGas
@@ -566,6 +742,24 @@ Class: Assumption
         InformationArtifact
     
     
+Class: Author
+
+    SubClassOf: 
+        Person
+    
+    
+Class: AutoModelGenerator
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: Aviation
+
+    SubClassOf: 
+        TransportDemand
+    
+    
 Class: AviationGasoline
 
     Annotations: 
@@ -576,10 +770,31 @@ Class: AviationGasoline
         Gasoline
     
     
-Class: BioGasGenerator
+Class: Battery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Battery is a device using different chemical or physical reactions to store energy."@en
+    
+    SubClassOf: 
+        EnergyStorageTechnology,
+        is_used_by some StorageUnit
+    
+    
+Class: BatteryElectric
 
     SubClassOf: 
-        GasPowerplant
+        TransportDemand
+    
+
+Class: BioGasGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas generator uses biogas to generate electricity."@en
+    
+    SubClassOf: 
+        EnergyGeneratorTechnology,
+        has_physical_output some Power,
+        has_physical_input only Biogas
     
     
 Class: Biodiesel
@@ -628,9 +843,13 @@ Class: Biogasoline
     
 Class: BiomassPowerplant
 
-    SubClassOf: 
-        Generator
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass powerplant uses biomass to generate electricity or heat."@en
     
+    SubClassOf: 
+        RegenerativePowerplant,
+        has_part some SteamTurbine
+
     
 Class: BlastFurnaceGas
 
@@ -655,12 +874,10 @@ Class: Bus
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
-        rdfs:label "Bus"@en,
-        rdfs:label "NetworkNode"@en
+        rdfs:label "Bus"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        Node
+        NetworkNode
     
     
 Class: CapacitanceUnit
@@ -682,8 +899,30 @@ Class: Charcoal
         SolidBiomass
     
     
+Class: Citation
+
+    SubClassOf: 
+        Identifier
+    
+    
+Class: CitationReference
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: Client
+
+    SubClassOf: 
+        Person
+    
+    
 Class: Coal
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
+    
     SubClassOf: 
         SolidFossilFuels,
         has_normal_state_of_matter value solid
@@ -691,9 +930,29 @@ Class: Coal
     
 Class: CoalPowerplant
 
-    SubClassOf: 
-        Generator
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal-fired power station or coal power plant is a thermal power station which burns coal to generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal-fired_power_station&oldid=905322370"
     
+ 
+    SubClassOf: 
+        FossilePowerplant,
+        has_part some SteamTurbine
+    
+    
+Class: CodeDocumentation
+
+    SubClassOf: 
+        Documentation
+    
+
+    
+Class: CodeSource
+
+    SubClassOf: 
+        DataDescriptor,
+        OpenSource
+
     
 Class: CokeOvenGas
 
@@ -715,6 +974,12 @@ Class: CokingCoal
         HardCoal
     
     
+Class: CollaborativeProgramming
+
+    SubClassOf: 
+        OpenSource
+    
+    
 Class: CollieryGas
 
     Annotations: 
@@ -725,6 +990,12 @@ Class: CollieryGas
         NaturalGas
     
     
+Class: Combustion
+
+    SubClassOf: 
+        TransportDemand
+    
+    
 Class: CommerceSector
 
     Annotations: 
@@ -732,6 +1003,39 @@ Class: CommerceSector
     
     SubClassOf: 
         Sector
+    
+    
+
+Class: CommericalDemand
+
+    SubClassOf: 
+        Demand
+    
+    
+Class: Community
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
+    
+    SubClassOf:
+        Support
+
+    
+    
+Class: CompressedAir
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed to store energy. To discharge energy, the air is expaned."@en
+    
+    SubClassOf: 
+        Air
+    
+    
+Class: ComputationTime
+
+    SubClassOf: 
+        SoftwareDescriptor
     
     
 Class: Constraint
@@ -746,8 +1050,42 @@ Class: Constraint
     
 Class: Consumer
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
+    
     SubClassOf: 
-        ElectricityGridComponent
+        Agent
+    
+    
+Class: Contact
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: ContactPerson
+
+    SubClassOf: 
+        Person
+    
+    
+Class: ContentDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: CorporateIdentity
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Cost
+
+    SubClassOf: 
+        ModelVariable
     
     
 Class: CrudeOil
@@ -757,8 +1095,8 @@ Class: CrudeOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid
+        Liquid,
+        OilAndPetroleumProducts
     
     
 Class: DCLine
@@ -770,7 +1108,6 @@ Genreally, flows in the model can be controlled/optimized."@en,
         rdfs:label "HVDC-Line"@en
     
     SubClassOf: 
-        DirectedEdge,
         Line
     
     
@@ -782,6 +1119,65 @@ source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
     
     SubClassOf: 
         Identifier
+    
+    
+Class: DammedWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is a barrier that stops or restricts the flow of water or underground streams. Reservoirs created by dams not only suppress floods but also provide water for activities such as irrigation, human consumption, industrial use, aquaculture, and navigability. Hydropower is often used in conjunction with dams to generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en
+    
+    SubClassOf: 
+        Hydroelectricity,
+        is_used_by some StorageUnit
+    
+    
+Class: DataDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: DataFormat
+
+    SubClassOf: 
+        DataDescriptor
+    
+    DisjointWith: 
+        OpenSource
+    
+    
+Class: DataPostprocessing
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: DataPreprocessing
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: DataProcessing
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: DataProcessingSoftware
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Database
+
+    SubClassOf: 
+        DataFormat
+    
+    DisjointWith: 
+        Plot
     
     
 Class: Dataset
@@ -817,6 +1213,10 @@ Class: DemographicalAssumption
     
 Class: DerivedHeat
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Derived heat covers the total heat production in heating plants and in combined heat and power plants. It includes the heat used by the auxiliaries of the installation which use hot fluid (space heating, liquid fuel heating, etc.) And losses in the installation/network heat exchanges. For autoproducing entities (= entities generating electricity and/or heat wholly or partially for their own use as an activity which supports their primary activity) the heat used by the undertaking for its own processes is not included."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=DSP_GLOSSARY_NOM_DTL_VIEW&StrNom=CODED2&StrLanguageCode=EN&IntKey=16452285&RdoSearch=&TxtSearch=&CboTheme=&IntCurrentPage=1"@en
+    
     EquivalentTo: 
         DistrictHeat
     
@@ -824,11 +1224,17 @@ Class: DerivedHeat
         Heat
     
     
+Class: Developer
+
+    SubClassOf: 
+        Person
+    
+    
 Class: DieselFuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         rdfs:label "DieselFuel"@en,
         rdfs:label "TransportDiesel"@en
     
@@ -836,19 +1242,35 @@ Class: DieselFuel
         GasDieselOil
     
     
-Class: DirectedEdge
-
-    SubClassOf: 
-        Link
-    
-    
 Class: DistrictHeat
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating (also known as heat networks or teleheating) is a system for distributing heat generated in a centralized location through a system of insulated pipes for residential and commercial heating requirements such as space heating and water heating. The heat is often obtained from a cogeneration plant burning fossil fuels or biomass, but heat-only boiler stations, geothermal heating, heat pumps and central solar heating are also used, as well as heat waste from nuclear power electricity generation. "@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=District_heating&oldid=906646999"@en
+    
     EquivalentTo: 
         DerivedHeat
     
     SubClassOf: 
         Heat
+    
+    
+Class: Documentation
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: Ecological
+
+    SubClassOf: 
+        Type
+    
+    
+Class: Economical
+
+    SubClassOf: 
+        Type
     
     
 Class: EconomicalAssumption
@@ -880,12 +1302,32 @@ Class: ElectricCurrentUnit
         UnitOfMeasurement
     
     
+Class: ElectricVehicle
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric vehicle, also called an EV, uses one or more electric motors or traction motors for propulsion. An electric vehicle may be powered through a collector system by electricity from off-vehicle sources, or may be self-contained with a battery, solar panels or an electric generator to convert fuel to electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Electric_vehicle&oldid=906776214"@en
+    
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    
+Class: ElectricalEnergy
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy is energy derived from electric potential energy or kinetic energy. [...] This energy is supplied by the combination of electric current and electric potential that is delivered by an electrical circuit"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Electrical_energy"@en
+    
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: ElectricalLoad
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
 
-Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
+    Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
         rdfs:label "ElectricalDemand"@en,
         rdfs:label "ElectricalLoad"@en
     
@@ -902,26 +1344,34 @@ Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some ElectricityGridComponent
-    
-    
-Class: ElectricityGridComponent
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        has_part min 1 EnergyGeneratorTechnology,
+        has_part min 1 Line
     
     
 Class: ElectricitySector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en
+    
     SubClassOf: 
         Sector
     
     
+Class: Email
+
+    SubClassOf: 
+        Contact
+    
+    
 Class: Emission
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "1. Emissions are waste from production, distribution and consumption, which are distributed to environmental media. Emmision is often restricted to pollutants.
+        
+        2. Emissions generally means discharge of any interference in the environment. The source is called the issuer. Each emission causes an immission."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Emmision"@en
+    
     SubClassOf: 
         Quantity
     
@@ -967,7 +1417,9 @@ Class: EnergyGeneratorTechnology
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
     
     SubClassOf: 
-        Technology
+        Technology,
+        has_physical_input some EnergyCarrier,
+        has_physical_output some Power
     
     
 Class: EnergyStorageTechnology
@@ -998,16 +1450,83 @@ Class: EnergyUnit
         UnitOfMeasurement
     
     
+Class: ExternalOptimizer
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Factsheet
+
+    SubClassOf: 
+        EmpiricalDataset
+    
+    
+Class: Fax
+
+    SubClassOf: 
+        Contact
+    
+    
 Class: Fission
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In nuclear physics and nuclear chemistry, nuclear fission is a nuclear reaction or a radioactive decay process in which the nucleus of an atom splits into smaller, lighter nuclei. The fission process often produces free neutrons and gamma photons, and releases a very large amount of energy even by the energetic standards of radioactive decay. "@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_fission&oldid=905727345"@en
+    
     SubClassOf: 
         Nuclear
     
     
-Class: FlourinatedGas
+Class: FixedOperationCost
 
     SubClassOf: 
+        Cost
+    
+    
+Class: FlourinatedGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated gases (F-gases) are man-made gases that can stay in the atmosphere for centuries and contribute to a global greenhouse effect. There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6) and nitrogen trifluoride (NF3)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
+    
+    SubClassOf: 
         GreenhouseGas
+    
+    
+Class: FlowBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow battery, or redox flow battery (after reduction–oxidation), is a type of electrochemical cell where chemical energy is provided by two chemical components dissolved in liquids contained within the system and separated by a membrane. Ion exchange (accompanied by flow of electric current) occurs through the membrane while both liquids circulate in their own respective space."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Flow_battery&oldid=907053515"@en
+    
+    SubClassOf: 
+        Battery
+    
+    
+Class: Forum
+
+    SubClassOf: 
+        Support
+    
+
+
+Class: FossilePowerplant
+
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: Framework
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: FrameworkFactsheet
+
+    SubClassOf: 
+        Factsheet
     
     
 Class: Fuel
@@ -1020,12 +1539,48 @@ Class: Fuel
         EnergyCarrier
     
     
+Class: FuelPrice
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Funding
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
 Class: Fusion
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In nuclear chemistry, nuclear fusion is a reaction in which two or more atomic nuclei are combined to form one or more different atomic nuclei and subatomic particles (neutrons or protons). The difference in mass between the reactants and products is manifested as either the release or absorption of energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_fusion&oldid=906947069"@en
+    
     SubClassOf: 
         Nuclear
     
+
+Class: GUI
+
+    SubClassOf: 
+        Interface,
+        SoftwareDescriptor
     
+    DisjointWith: 
+        API
+    
+    
+Class: Gas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas&oldid=904791916"@en
+    
+    SubClassOf: 
+        StateOfMatter
+    
+
 Class: GasDieselOil
 
     Annotations: 
@@ -1039,9 +1594,25 @@ Class: GasDieselOil
     
 Class: GasPowerplant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas-fired power plant or gas-fired power station or natural gas power plant is a thermal power station which burns natural gas to generate electricity. Natural gas power stations generate a quarter of world electricity and a significant part of global greenhouse gas emissions and thus global warming."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas-fired_power_plant&oldid=905149105"@en
+    
     SubClassOf: 
-        Generator,
-        uses some NaturalGas
+        FossilePowerplant,
+        has_part some GasTurbine
+    
+    
+Class: GasTurbine
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine, also called a combustion turbine, is a type of continuous combustion, internal combustion engine."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas_turbine&oldid=901583703"@en
+    
+    SubClassOf: 
+        Turbine,
+        has_physical_output some Power,
+        has_physical_input only NaturalGas
     
     
 Class: Gasoline
@@ -1074,8 +1645,9 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        NetworkNode,
+	uses some EnergyCarrier,
+	uses some EnergyGeneratorTechnology
     
     DisjointWith: 
         Line
@@ -1093,11 +1665,23 @@ Class: Geothermal
         Heat
     
     
-Class: GeothermalGenerator
+Class: GeothermalPowerplant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal generator uses geothermal energy to generate electricity."@en
+    
     SubClassOf: 
-        Generator,
-        uses some Heat
+        RegenerativePowerplant,
+        has_part some SteamTurbine
+    
+    
+Class: GitHub
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal generator uses geothermal energy to generate electricity."@en
+    
+    SubClassOf: 
+        Weblink
     
     
 Class: GlobalWarmingPotential
@@ -1128,13 +1712,10 @@ Class: GreenhouseGas
         Pollutant
     
     
-Class: HFC
+Class: GridModel
 
-    EquivalentTo: 
-        Hydrofluorocarbon
-    
     SubClassOf: 
-        FlourinatedGas
+        SoftwareElement
     
     
 Class: HardCoal
@@ -1152,19 +1733,40 @@ Class: HardCoal
     
 Class: HardCoalPowerplant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hard coal powerplant burns coal to generate electricity."@en
+    
     SubClassOf: 
-        CoalPowerplant,
-        uses some HardCoal
+        CoalPowerplant
+    
+    
+Class: Hardware
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
+       The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en
+    
+    SubClassOf: 
+        ModelingTechnology
     
     
 Class: Heat
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
+       The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en
+    
     SubClassOf: 
         EnergyCarrier
     
     
 Class: HeatDemand
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The heat demand describes the needed amount of heat."@en
+    
     SubClassOf: 
         Demand
     
@@ -1193,8 +1795,21 @@ Class: HeatingOil
     
 Class: HouseholdSector
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en
+    
     SubClassOf: 
         Sector
+    
+    
+Class: HydroelectricPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en
+    
+    SubClassOf: 
+        PowerGeneratingUnit,
+        has_part some WaterTurbine
     
     
 Class: Hydroelectricity
@@ -1204,22 +1819,53 @@ Class: Hydroelectricity
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
+        EnergyStorageTechnology,
         Hydropower
     
     
-Class: Hydrofluorocarbon
+Class: Hydrogen
 
-    EquivalentTo: 
-        HFC
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a chemical element with chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
     
     SubClassOf: 
-        FlourinatedGas
+        EnergyStorageTechnology
+    
+    
+Class: HydrogenPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen powerplant uses hydrogen to generate electricity."@en
+    
+    SubClassOf: 
+        ReactivePowerplant,
+        has_part some HydrogenTurbine
+    
+    
+Class: HydrogenTurbine
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen turbine is a turbine fueled with liquid hydrogen."@en
+    
+    SubClassOf: 
+        Turbine,
+        has_physical_output some Power,
+        has_physical_input only Hydrogen
+    
+    
+Class: HydrogenVehicle
+
+    SubClassOf: 
+        TransportDemand
+
     
     
 Class: Hydropower
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> ""
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydropower or water power [...] is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydropower&oldid=906980683"@en
     
     SubClassOf: 
         EnergyCarrier
@@ -1276,6 +1922,12 @@ Class: InformationArtifact
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: InstallationGuide
+
+    SubClassOf: 
+        Documentation
+    
+    
 Class: Institution
 
     Annotations: 
@@ -1283,6 +1935,18 @@ Class: Institution
     
     SubClassOf: 
         Organization
+    
+    
+Class: Interface
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: InvestmentCost
+
+    SubClassOf: 
+        Cost
     
     
 Class: JetFuel
@@ -1321,6 +1985,24 @@ Class: LengthUnit
         UnitOfMeasurement
     
     
+Class: Li-ionBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lithium-ion battery or Li-ion battery (abbreviated as LIB) is a type of rechargeable battery [...] In the batteries lithium ions move from the negative electrode to the positive electrode during discharge and back when charging. Li-ion batteries use an intercalated lithium compound as one electrode material, compared to the metallic lithium used in a non-rechargeable lithium battery. "@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Lithium-ion_battery&oldid=906786251"@en
+    
+    SubClassOf: 
+        Battery
+    
+
+    
+Class: License
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+
 Class: Lignite
 
     Annotations: 
@@ -1340,9 +2022,11 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
     
 Class: LignitePowerplant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite powerplant burns lignite to generate electricity."@en
+    
     SubClassOf: 
-        CoalPowerplant,
-        uses some Lignite
+        CoalPowerplant
     
     
 Class: Line
@@ -1352,19 +2036,44 @@ Class: Line
         rdfs:label "PowerLine"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
         Link
     
-    DisjointWith: 
-        Generator
     
+Class: LinearOptimalPowerflow
+
+    SubClassOf: 
+        GridModel
+
+
     
 Class: Link
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
+    DisjointWith: 
+        Node
     
+
+Class: Liquid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Liquid&oldid=904993133"@en
+    
+    SubClassOf: 
+        StateOfMatter
+    
+    
+Class: LiquidAir
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed and cooled to store energy. To discharge energy, the air is expaned."@en
+    
+    SubClassOf: 
+        Air
+    
+
 Class: LiquidBiofuel
 
     Annotations: 
@@ -1378,11 +2087,44 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
         has_normal_state_of_matter value liquid
     
     
+Class: LiquidMetalBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Rechargeable liquid-metal batteries are used for electric vehicles and potentially also for grid energy storage, to balance out intermittent renewable power sources such as solar panels and wind turbines."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Molten-salt_battery&oldid=900557096"@en
+    
+    SubClassOf: 
+        MoltenStateBattery
+    
+    
+Class: Logo
+
+    SubClassOf: 
+        CorporateIdentity
+    
+    
+Class: Mail
+
+    SubClassOf: 
+        Support
+    
+    
+
 Class: ManufacturedCoalBasedGas
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal gasification is the process of producing syngas–a mixture consisting primarily of carbon monoxide (CO), hydrogen (H2), carbon dioxide (CO2), natural gas (CH4) , and water vapour (H2O)–from coal and water, air and/or oxygen."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal_gasification&oldid=904933607"@en
+    
     SubClassOf: 
         SolidFossilFuels,
         has_normal_state_of_matter value gaseous
+    
+    
+Class: MarketModel
+
+    SubClassOf: 
+        Model
     
     
 Class: MassUnit
@@ -1395,14 +2137,52 @@ Class: MassUnit
         UnitOfMeasurement
     
     
+Class: MathematicalConcept
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Maximization
+
+    SubClassOf: 
+        ModelFunction
+    
+    
+Class: MethodicalFocus
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+
+Class: Microgrid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A microgrid is a localized group of electricity sources and loads that normally operates connected to and synchronous with the traditional wide area synchronous grid (macrogrid), but can also disconnect to \"island mode\" — and function autonomously as physical or economic conditions dictate. In this way, a microgrid can effectively integrate various sources of distributed generation (DG), especially Renewable Energy Sources (RES) - renewable electricity, and can supply emergency power, changing between island and connected modes. "@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Microgrid&oldid=906195407"@en
+    
+    SubClassOf: 
+        ElectricityGrid,
+        Subgrid
+    
+    
+
+Class: Minimization
+
+    SubClassOf: 
+        ModelFunction
+    
+    
+
 Class: Model
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
     
     SubClassOf: 
-        Software,
-        has_part some ModelComponent
+        ModelingSoftware,
+        has_part some SoftwareElement
     
     
 Class: ModelCalculation
@@ -1415,23 +2195,25 @@ Class: ModelCalculation
         has_tool some Model
     
     
-Class: ModelComponent
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
 Class: ModelElement
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
     
     SubClassOf: 
-        ModelComponent
+        InformationArtifact
     
+    
+Class: ModelExamples
+
+    SubClassOf: 
+        Support
+    
+    
+Class: ModelFactsheet
+
+    SubClassOf: 
+        Factsheet
     
 Class: ModelFunction
 
@@ -1440,16 +2222,63 @@ Class: ModelFunction
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
     
     SubClassOf: 
-        ModelComponent
-    
-    
-Class: ModelVariable
+        Model
+
+Class: MoltenSaltBattery
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-salt batteries are a class of battery that uses molten salts as an electrolyte and offers both a high energy density and a high power density."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Molten-salt_battery&oldid=900557096"@en
     
     SubClassOf: 
-        ModelElement
+        SoftwareElement
+
+    
+    
+Class: MoltenStateBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-state batteries consist of two molten metal alloys separated by an electrolyte."@en
+    
+    SubClassOf: 
+        Battery
+    
+    
+Class: ModelingSoftware
+
+    SubClassOf: 
+        Software
+    
+    
+Class: ModelingTechnology
+
+    SubClassOf: 
+        Technology
+    
+    
+Class: Modus
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: MoltenSaltBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-salt batteries are a class of battery that uses molten salts as an electrolyte and offers both a high energy density and a high power density."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Molten-salt_battery&oldid=900557096"@en
+    
+    SubClassOf: 
+        MoltenStateBattery
+    
+    
+Class: MoltenStateBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-state batteries consist of two molten metal alloys separated by an electrolyte."@en
+    
+    SubClassOf: 
+        Battery
     
     
 Class: MotorGasoline
@@ -1474,6 +2303,12 @@ Class: MunicipalWaste
         Waste
     
     
+Class: Name
+
+    SubClassOf: 
+        Identifier
+    
+    
 Class: NaturalGas
 
     Annotations: 
@@ -1489,10 +2324,22 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
         has_normal_state_of_matter value gaseous
     
     
+Class: NetworkNode
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A network node is a node in an electrical grid."@en
+
+    SubClassOf: 
+        Node
+    
+    
 Class: Node
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    DisjointWith: 
+        Link
     
     
 Class: NonAssociatedGas
@@ -1507,6 +2354,11 @@ Class: NonAssociatedGas
     
 Class: NonMethaneVolatileOrganicCompound
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-methane volatile organic compounds (NMVOCs) are a large variety of chemically different compounds, such as benzene, ethanol, formaldehyde, cyclohexane, 1,1,1-trichloroethane or acetone.
+       Essentially, NMVOCs are identical to volatile organic compounds (VOCs), but with methane excluded. An important subset of NMVOCs are the non-methane hydrocarbons (NMHCs). Methane is excluded in air-pollution contexts because it is not harmful. Its low reactivity and thus long lifetime in the atmosphere, however, makes it an important greenhouse gas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Non-methane_volatile_organic_compound&oldid=890812257"@en
+    
     SubClassOf: 
         VolatileOrganicCompound
     
@@ -1538,8 +2390,20 @@ Class: NuclearPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power_plant&oldid=867102016"
     
     SubClassOf: 
-        Generator,
-        uses some Nuclear
+        ReactivePowerplant,
+        has_part some SteamTurbine
+    
+    
+Class: ObjectiveFunction
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Office
+
+    SubClassOf: 
+        CommericalDemand
     
     
 Class: OilAndPetroleumProducts
@@ -1557,8 +2421,18 @@ It consists of hydrocarbons of various molecular weights and other organic compo
 Class: OilPowerplant
 
     SubClassOf: 
-        Generator,
-        uses some OilAndPetroleumProducts
+        FossilePowerplant,
+        has_part some SteamTurbine
+    
+    
+Class: OpenSource
+
+    SubClassOf: 
+        DataDescriptor,
+        SoftwareDescriptor
+    
+    DisjointWith: 
+        DataFormat
     
     
 Class: Optimization
@@ -1626,17 +2500,24 @@ Class: OtherLiquidBiofuels
         LiquidBiofuel
     
     
-Class: PFC
+Class: PVPanel
 
-    EquivalentTo: 
-        Perfluorocarbon
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "hotovoltaic solar panels absorb sunlight as a source of energy to generate electricity. A photovoltaic (PV) module is a packaged, connected assembly of typically 6x10 photovoltaic solar cells. Photovoltaic modules constitute the photovoltaic array of a photovoltaic system that generates and supplies solar electricity in commercial and residential applications."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_panel&oldid=906976047"@en
     
     SubClassOf: 
-        FlourinatedGas
+        EnergyGeneratorTechnology,
+        has_physical_output some Power,
+        has_physical_input only SolarPhotovoltaic
     
     
 Class: ParticulateMatter
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Atmospheric aerosol particles – also known as atmospheric particulate matter, particulate matter (PM), particulates, or suspended particulate matter (SPM) – are microscopic solid or liquid matter suspended in the atmosphere of Earth. The term aerosol commonly refers to the particulate/air mixture, as opposed to the particulate matter alone.Sources of particulate matter can be natural or anthropogenic.They have impacts on climate and precipitation that adversely affect human health, in addition to direct inhalation. "@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Particulates&oldid=906795232"@en
+    
     SubClassOf: 
         AirPollutant
     
@@ -1654,15 +2535,6 @@ This definition is without prejudice to the definition of renewable energy sourc
         has_normal_state_of_matter value solid
     
     
-Class: Perfluorocarbon
-
-    EquivalentTo: 
-        PFC
-    
-    SubClassOf: 
-        FlourinatedGas
-    
-    
 Class: Person
 
     Annotations: 
@@ -1675,11 +2547,36 @@ Class: Person
         Organization
     
     
-Class: PhotovoltaicGenerator
+Class: Phone
 
     SubClassOf: 
-        Generator,
-        uses some SolarEnergy
+        Contact
+    
+    
+Class: PhotovoltaicPowerplant
+
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
+    
+    SubClassOf: 
+        SolarPowerPlant,
+        has_part some PVPanel
+    
+    
+Class: Plot
+
+    SubClassOf: 
+        DataFormat
+    
+    DisjointWith: 
+        Database
+    
+    
+Class: Plotting
+    
+    SubClassOf: 
+        DataProcessing
     
     
 Class: PoliticalAssumption
@@ -1702,6 +2599,10 @@ Class: PoliticalParty
     
 Class: Pollutant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pollutant is a substance or energy introduced into the environment that has undesired effects, or adversely affects the usefulness of a resource. A pollutant may cause long- or short-term damage by changing the growth rate of plant or animal species, or by interfering with human amenities, comfort, health, or property values."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pollutant&oldid=906519011"@en
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
@@ -1725,6 +2626,25 @@ Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
         Quantity
     
     
+Class: PowerGeneratingUnit
+
+    SubClassOf: 
+        NetworkNode,
+        uses some EnergyGeneratorTechnology,
+        uses some EnergyStorageTechnology,
+        uses some EnergyTransferTechnology
+    
+    
+Class: PowerToGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power-to-gas (often abbreviated P2G) is a technology that converts electrical power to a gas fuel. When using surplus power from wind generation, the concept is sometimes called windgas. There are currently three methods in use; all use electricity to split water into hydrogen and oxygen by means of electrolysis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en
+    
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    
 Class: PowerUnit
 
     Annotations: 
@@ -1743,6 +2663,24 @@ Class: Preprocessing
         Transformation
     
     
+Class: PrimaryOutputs
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: PrimaryPurpose
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Private
+
+    SubClassOf: 
+        Funding
+    
+    
 Class: ProgramParameter
 
     Annotations: 
@@ -1753,13 +2691,71 @@ Class: ProgramParameter
         ModelElement
     
     
+Class: Project
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: Prosumer
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is a person who consumes and produces a product. It is derived from \"prosumption\", a dot-com era business term meaning \"production by consumers\"."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Prosumer&oldid=881861680"@en
+    
+    SubClassOf: 
+        Agent
+    
+    
+Class: Public
+
+    SubClassOf: 
+        Funding
+    
+    
 Class: Publication
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
     
     SubClassOf: 
-        InformationArtifact
+        Reference
+    
+    
+Class: PumpedStorage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) uses water from a higher reservoir to generate energy"@en
+    
+    SubClassOf: 
+        EnergyStorageTechnology,
+        is_used_by some StorageUnit
+    
+    
+Class: PumpedStoragePlant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage plant pumps water using surplus energy from a lower level to a higher reservoir. The reservoir functions as a storage unit. If needed, energy can be generated by letting the water flow back to the lower level"@en
+    
+    SubClassOf: 
+        HydroelectricPowerplant
+    
+    
+Class: PumpedWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
+    
+    SubClassOf: 
+        Hydroelectricity,
+        is_used_by some StorageUnit
+    
+    
+Class: Quality
+
+    SubClassOf: 
+        SoftwareDescriptor
     
     
 Class: Quantity
@@ -1770,6 +2766,32 @@ Class: Quantity
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Rail
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: ReactivePowerplant
+
+    SubClassOf: 
+        PowerGeneratingUnit,
+        has_part some Turbine
+    
+    
+Class: Reference
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: RegenerativePowerplant
+
+    SubClassOf: 
+        PowerGeneratingUnit,
+        has_part some WindTurbine
     
     
 Class: RegulationAssumption
@@ -1795,6 +2817,12 @@ Class: RenewableMunicipalWaste
         MunicipalWaste
     
     
+Class: ResidentialDemand
+
+    SubClassOf: 
+        Demand
+    
+    
 Class: ResistanceUnit
 
     Annotations: 
@@ -1804,13 +2832,38 @@ Class: ResistanceUnit
         UnitOfMeasurement
     
     
+Class: Retail
+
+    SubClassOf: 
+        CommericalDemand
+    
+    
+Class: Robustness
+
+    SubClassOf: 
+        Validation
+    
+    
 Class: RunOfRiverPowerplant
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
     
     SubClassOf: 
-        WaterTurbine
+        HydroelectricPowerplant
+    
+    
+Class: Scenario
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: ScenarioFactsheet
+
+    SubClassOf: 
+        Factsheet
+
     
     
 Class: Sector
@@ -1824,6 +2877,9 @@ Class: Sector
     
 Class: SectorConcept
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector concept contains concepts of possible sectors."@en
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
@@ -1836,8 +2892,7 @@ Class: ShuntImpedance
 Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        NetworkNode
     
     
 Class: Simulation
@@ -1861,16 +2916,71 @@ Class: SimulationModel
         Model
     
     
+Class: SingleNodeModel
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: Social
+
+    SubClassOf: 
+        Type
+    
+    
+
+Class: Sodium-IonBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sodium-ion batteries (SIB) are a type of rechargeable metal-ion battery that uses sodium ions as charge carriers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Sodium-ion_battery&oldid=906459441"@en
+    
+    SubClassOf: 
+        Battery
+    
+    
+Class: Sodium-SulfurBattery
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sodium–sulfur battery is a type of molten-salt battery constructed from liquid sodium (Na) and sulfur (S).This type of battery has a high energy density, high efficiency of charge/discharge and long cycle life, and is fabricated from inexpensive materials. The operating temperatures of 300 to 350 °C and the highly corrosive nature of the sodium polysulfides, primarily make them suitable for stationary energy storage applications. The cell becomes more economical with increasing size."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Sodium%E2%80%93sulfur_battery&oldid=900392594"@en
+    
+    SubClassOf: 
+        MoltenStateBattery
+    
+    
 Class: Software
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
     
     SubClassOf: 
+        ModelingTechnology
+    
+    
+Class: SoftwareDescriptor
+
+    SubClassOf: 
         InformationArtifact
     
     
-Class: SolarEnergy
+Class: SoftwareElement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
+    SubClassOf: 
+        Software
+    
+    
+Class: SoftwareMaintenance
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+
+Class: Solar
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
@@ -1887,7 +2997,18 @@ Class: SolarPhotovoltaic
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolarEnergy
+        Solar
+    
+    
+Class: SolarPowerPlant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar power is the conversion of energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination. Concentrated solar power systems use lenses or mirrors and tracking systems to focus a large area of sunlight into a small beam. Photovoltaic cells convert light into an electric current using the photovoltaic effect."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_power&oldid=904827092"@en
+    
+    SubClassOf: 
+        PowerGeneratingUnit,
+        Turbine or (has_part some PVPanel)
     
     
 Class: SolarThermal
@@ -1899,10 +3020,44 @@ Class: SolarThermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Heat,
-        SolarEnergy
+        Heat
+
     
     
+Class: SolarThermalCollector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal collector collects heat by absorbing sunlight. The term \"solar collector\" commonly refers to a device for solar hot water heating, but may refer to large power generating installations such as solar parabolic troughs and solar towers or non water heating devices such as solar air heaters."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
+    
+    SubClassOf: 
+        EnergyGeneratorTechnology,
+        has_physical_output some Power,
+        has_physical_input only SolarThermal
+    
+    
+Class: SolarThermalPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "uses solar thermal energy to generate electrical energy"@en
+    
+    SubClassOf: 
+        SolarPowerPlant,
+        has_part some SteamTurbine
+    
+    
+
+Class: Solid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solid is one of the four fundamental states of matter (the others being liquid, gas, and plasma). In solids particles are closely packed. It is characterized by structural rigidity and resistance to changes of shape or volume."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solid&oldid=906779814"
+    
+    SubClassOf: 
+        StateOfMatter
+    
+    
+
 Class: SolidBiomass
 
     Annotations: 
@@ -1926,10 +3081,32 @@ Class: SolidFossilFuels
         Fuel
     
     
-Class: StateOfMatter
+Class: Solver
 
     SubClassOf: 
+        SoftwareElement
+    
+    
+Class: StateOfMatter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
+    
+    SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: SteamTurbine
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A steam turbine is a device that extracts thermal energy from pressurized steam and uses it to do mechanical work on a rotating output shaft.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Steam_turbine&oldid=906022336"
+    
+    SubClassOf: 
+        Turbine,
+        (has_physical_input some NaturalGas) or (has_physical_input some Nuclear) or (has_physical_input some OilAndPetroleumProducts) or (has_physical_input some Solar) or (has_physical_input some SolidBiomass) or (has_physical_input some SolidFossilFuels),
+        has_physical_output some Power
     
     
 Class: StorageUnit
@@ -1938,8 +3115,16 @@ Class: StorageUnit
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy, but not necessarily as an electirc charge."@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        NetworkNode,
+        uses some EnergyStorageTechnology
+    
+
+    
+Class: Study
+
+    SubClassOf: 
+        Reference
+
     
     
 Class: SubBituminousCoal
@@ -1958,10 +3143,7 @@ Class: Subgrid
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
     
     SubClassOf: 
-        ElectricityGrid,
-        ElectricityGridComponent,
-        has_part some ElectricityGridComponent,
-        part_of some ElectricityGrid
+        ElectricityGrid
     
     
 Class: SubsidyAssumption
@@ -1977,6 +3159,25 @@ Class: SubsidyAssumption
         RegulationAssumption
     
     
+Class: SuperconductingMagneticEnergy
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Superconducting magnetic energy storage (SMES) systems store energy in the magnetic field created by the flow of direct current in a superconducting coil which has been cryogenically cooled to a temperature below its superconducting critical temperature.
+          A typical SMES system includes three parts: superconducting coil, power conditioning system and cryogenically cooled refrigerator. Once the superconducting coil is charged, the current will not decay and the magnetic energy can be stored indefinitely."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Superconducting_magnetic_energy_storage&oldid=902190687"
+    
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+
+    
+Class: Support
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+
 Class: SynthethicDataset
 
     Annotations: 
@@ -1988,6 +3189,12 @@ Class: SynthethicDataset
     
     DisjointWith: 
         EmpiricalDataset
+    
+    
+Class: Technical
+
+    SubClassOf: 
+        Type
     
     
 Class: TechnologicalAssumption
@@ -2008,6 +3215,44 @@ Class: Technology
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+
+Class: TestDataset
+
+    SubClassOf: 
+        Dataset
+    
+    
+
+Class: Thermal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Thermal energy storage (TES) is a technology that stocks thermal energy by heating or cooling a storage medium so that the stored energy can be used at a later time for heating and cooling applications and power generation. TES systems are used particularly in buildings and in industrial processes."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Sarbu, Ioan & Sebarchievici, C. (2018). A Comprehensive Review of Thermal Energy Storage. Sustainability (Switzerland). 10. 10.3390/su10010191. "
+    
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    
+Class: TidalStreamGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
+    
+    SubClassOf: 
+        EnergyGeneratorTechnology,
+        has_physical_output some Power,
+        has_physical_input only TideWaveOcean
+    
+    
+Class: TidalStreamPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
+    
+    SubClassOf: 
+        HydroelectricPowerplant
+    
+    
 Class: TideWaveOcean
 
     Annotations: 
@@ -2016,6 +3261,31 @@ Class: TideWaveOcean
     
     SubClassOf: 
         Hydropower
+    
+    
+Class: TimeHorizon
+
+    SubClassOf: 
+        ModelVariable
+    
+Class: ModelVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
+    
+    SubClassOf: 
+        ModelElement
+
+Class: TimeSeries
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: TimeStep
+
+    SubClassOf: 
+        ModelVariable
     
     
 Class: TimeUnit
@@ -2055,8 +3325,20 @@ Class: Transformer
 Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
-        part_of some ElectricityGrid
+        NetworkNode
+    
+    
+Class: TranshipmentModel
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: TransportDemand
+
+    SubClassOf: 
+        Demand
+
     
     
 Class: TransportSector
@@ -2075,12 +3357,46 @@ Class: TransportSector
         Sector
     
     
-Class: UndirectedEdge
+Class: Turbine
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbine [...] is a rotary mechanical device that extracts energy from a fluid flow and converts it into useful work. The work produced by a turbine can be used for generating electrical power when combined with a generator."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Turbine&oldid=905470312"
+    
+    SubClassOf: 
+        EnergyGeneratorTechnology
+    
+    
+Class: Type
 
     SubClassOf: 
-        Link
+        DataDescriptor
     
     
+Class: Uncertainty
+
+    SubClassOf: 
+        Validation
+    
+    
+
+Class: UndergroundHydrogenStorage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Underground hydrogen storage is the practice of hydrogen storage in underground caverns,salt domes and depleted oil/gas fields."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780"
+    
+    SubClassOf: 
+        Hydrogen
+    
+    
+Class: Unit
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+
 Class: UnitOfMeasurement
 
     Annotations: 
@@ -2088,6 +3404,36 @@ Class: UnitOfMeasurement
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: User
+
+    SubClassOf: 
+        Person
+    
+    
+Class: UserDocumentation
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: V2Grid
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: Validation
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: VariableOperationCost
+
+    SubClassOf: 
+        Cost
     
     
 Class: VolatileOrganicCompound
@@ -2101,7 +3447,7 @@ VOCs are numerous, varied, and ubiquitous. They include both human-made and natu
 
 [...]
 
-Some VOCs are dangerous to human health or cause harm to the environment.",
+Some VOCs are dangerous to human health or cause harm to the environment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Volatile_organic_compound&oldid=880677383"
     
     SubClassOf: 
@@ -2117,45 +3463,96 @@ Class: VoltageUnit
         UnitOfMeasurement
     
     
+Class: Warehouse
+
+    SubClassOf: 
+        CommericalDemand
+    
+    
 Class: Waste
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste (or wastes) are unwanted or unusable materials. Waste is any substance which is discarded after primary use, or is worthless, defective and of no use."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Waste&oldid=903993587"
+    
     SubClassOf: 
         Fuel
     
     
 Class: WastePowerplant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste-to-energy plant is a waste management facility that combusts wastes to produce electricity. This type of power plant is sometimes called a trash-to-energy, municipal waste incineration, energy recovery, or resource recovery plant."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Waste-to-energy_plant&oldid=904634168"
+    
     SubClassOf: 
-        Generator
+        FossilePowerplant,
+        has_part some SteamTurbine
     
     
 Class: WaterTurbine
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a rotary machine that converts kinetic energy and potential energy of water into mechanical work."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Water_turbine&oldid=902161000"
+    
     SubClassOf: 
-        Generator,
-        uses some Hydroelectricity
+        Turbine,
+        has_physical_output some Power,
+        has_physical_input only Hydropower
+    
+    
+Class: Weblink
+
+    SubClassOf: 
+        Link
+    
+    
+Class: Website
+
+    SubClassOf: 
+        CorporateIdentity
     
     
 Class: Wind
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        EnergyCarrier
+        Air
     
     
-Class: WindOffshore
+Class: WindFarm
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm uses wind turbines and and wind to generate renewable energy."@en
+    
+    SubClassOf: 
+        RegenerativePowerplant,
+        has_part some WindTurbine
+    
+    
+Class: WindFarm
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm uses wind turbines and and wind to generate renewable energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
+    
     SubClassOf: 
         Wind
     
     
 Class: WindOnshore
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Onshore wind power is the complement to Offshore wind power. It is harvested on land."@en
+    
     SubClassOf: 
-        Wind
+        RegenerativePowerplant,
+        has_part some WindTurbine
     
     
 Class: WindTurbine
@@ -2163,12 +3560,13 @@ Class: WindTurbine
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind turbine is a device that converts the wind's kinetic energy into electrical energy.
 
-Wind turbines are manufactured in a wide range of vertical and horizontal axis. The smallest turbines are used for applications such as battery charging for auxiliary power for boats or caravans or to power traffic warning signs. Slightly larger turbines can be used for making contributions to a domestic power supply while selling unused power back to the utility supplier via the electrical grid. Arrays of large turbines, known as wind farms, are becoming an increasingly important source of intermittent renewable energy and are used by many countries as part of a strategy to reduce their reliance on fossil fuels.",
+Wind turbines are manufactured in a wide range of vertical and horizontal axis. The smallest turbines are used for applications such as battery charging for auxiliary power for boats or caravans or to power traffic warning signs. Slightly larger turbines can be used for making contributions to a domestic power supply while selling unused power back to the utility supplier via the electrical grid. Arrays of large turbines, known as wind farms, are becoming an increasingly important source of intermittent renewable energy and are used by many countries as part of a strategy to reduce their reliance on fossil fuels."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
     SubClassOf: 
-        Generator,
-        uses some Wind
+        Turbine,
+        has_physical_output some Power,
+        has_physical_input only Wind
     
     
 Class: WoodAndOther
@@ -2181,6 +3579,50 @@ Class: WoodAndOther
         SolidBiomass
     
     
+Class: Workshop
+
+    SubClassOf: 
+        Support
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/C++>
+
+    Types: 
+        Framework
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/MS_Excel/VBA>
+
+    Types: 
+        Framework
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/Spatial(GIS)>
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Accounting
+
+    Types: 
+        MethodicalFocus
+    
+    
+
+Individual: Active
+
+    Types: 
+        Modus
+    
+    
+Individual: AgentBasedProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+
 Individual: Ampere
 
     Annotations: 
@@ -2191,6 +3633,27 @@ SI unit for electric current."@en
         ElectricCurrentUnit
     
     
+Individual: Appliance
+
+    
+Individual: Aviation
+
+    
+Individual: BackCasting
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: BatteryElectric
+
+    
+Individual: BottomUp
+
+    Types: 
+        AnalyticalApproach
+    
+    
 Individual: CH4
 
     SameAs: 
@@ -2199,8 +3662,23 @@ Individual: CH4
     
 Individual: CO2
 
+    Types: 
+        Cost
+    
     SameAs: 
         Carbon_dioxide
+    
+    
+Individual: CPLEX
+
+    Types: 
+        Solver
+    
+    
+Individual: CSV
+
+    Types: 
+        DataFormat
     
     
 Individual: Carbon_dioxide
@@ -2214,6 +3692,16 @@ Individual: Carbon_dioxide
     
 Individual: Coal
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
+    
+    
+Individual: Coin-Or_CBC
+
+    Types: 
+        Solver
+    
     
 Individual: Common_year
 
@@ -2223,6 +3711,12 @@ Individual: Common_year
     
     Types: 
         TimeUnit
+    
+    
+Individual: Cooking
+
+    Types: 
+        ResidentialDemand
     
     
 Individual: Coulomb
@@ -2235,6 +3729,15 @@ SI unit for electric charge."@en
         ElectricChargeUnit
     
     
+Individual: DataFrame
+
+    Types: 
+        DataFormat
+    
+    
+Individual: Database
+
+    
 Individual: Day
 
     Annotations: 
@@ -2243,6 +3746,114 @@ Individual: Day
     
     Types: 
         TimeUnit
+    
+    
+Individual: Dict
+
+    Types: 
+        DataFormat
+    
+    
+Individual: DynamicProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: E-101_3500
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-115_3000
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-115_3200
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-126_4200
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-141_4200
+
+    Types: 
+        WaterTurbine
+
+    
+Individual: E-82_3000
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-92_2350
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: Econometric
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: EconomicEquilibrium
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: E-101_3500
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-115_3000
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-115_3200
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-126_4200
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-141_4200
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-82_3000
+
+    Types: 
+        WaterTurbine
+    
+    
+Individual: E-92_2350
+
+    Types: 
+        WaterTurbine
     
     
 Individual: Eurostat_Energy_Balances
@@ -2261,7 +3872,9 @@ The energy balance expresses all forms of energy in a common accounting unit. Th
 Individual: False
 
     Types: 
-        BooleanVariable
+        BooleanVariable,
+        GUI,
+        OpenSource
     
     
 Individual: Farad
@@ -2282,6 +3895,36 @@ Individual: Foot
     
     Types: 
         LengthUnit
+    
+    
+Individual: Fortran
+
+    Types: 
+        Framework
+    
+    
+Individual: FuzzyLogic
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: GAMS
+
+    Types: 
+        Framework
+    
+    
+Individual: GLPK
+
+    Types: 
+        Solver
+    
+    
+Individual: GNU
+
+    Types: 
+        Framework
     
     
 Individual: German_Energy_Balances
@@ -2340,6 +3983,26 @@ SI unit for mass: kg (1 kg = 1000 g)"@en
         MassUnit
     
     
+Individual: Gurobi
+
+    Types: 
+        Solver
+    
+    
+
+Individual: HFC
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
+    
+    Types: 
+        FlourinatedGas
+    
+    Facts:  
+     is_equivalent_to  Hydrofluorocarbon
+    
+    
 Individual: HardCoal
 
     Annotations: 
@@ -2349,6 +4012,15 @@ Individual: HardCoal
     
 Individual: Heat
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
+       The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en
+    
+    Types: 
+        ResidentialDemand
+    
+
     
 Individual: Hour
 
@@ -2357,9 +4029,38 @@ Individual: Hour
 1h = 60 min = 3600 s"@en
     
     Types: 
+        TimeStep,
         TimeUnit
     
     
+Individual: Hybrid
+
+    Types: 
+        AnalyticalApproach
+    
+    
+
+Individual: Hydrofluorocarbon
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
+    
+    Types: 
+        FlourinatedGas
+    
+    Facts:  
+     is_equivalent_to  HFC
+    
+    
+Individual: Hydrogen
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a chemical element with chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
+    
+    
+
 Individual: IPCC_1996_Guidelines
 
     Annotations: 
@@ -2380,6 +4081,12 @@ Individual: IPCC_2006_Guidelines
         SectorConcept
     
     
+Individual: Inactive
+
+    Types: 
+        Modus
+    
+    
 Individual: Inch
 
     Annotations: 
@@ -2388,6 +4095,18 @@ Individual: Inch
     
     Types: 
         LengthUnit
+    
+    
+Individual: InternalCombustion
+
+    
+Individual: InternalcombustionVehicle
+
+    
+Individual: Java
+
+    Types: 
+        Framework
     
     
 Individual: Joule
@@ -2434,6 +4153,9 @@ Individual: Leap_year
     
 Individual: Light
 
+    Types: 
+        ResidentialDemand
+    
     
 Individual: Lignite
 
@@ -2444,6 +4166,42 @@ Oil shale and tar sands produced and combusted directly should be reported in th
 
 This includes the portion of the oil shale or tar sands consumed in the transformation process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    
+Individual: LinearProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: MOSEK
+
+    Types: 
+        Solver
+    
+    
+Individual: MS_Excel
+
+    Types: 
+        Framework
+    
+    
+Individual: Macro-Economic
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: MathProg
+
+    Types: 
+        Framework
+    
+    
+Individual: Matlab
+
+    Types: 
+        Framework
     
     
 Individual: Methane
@@ -2483,7 +4241,38 @@ Individual: Minute
 1 min = 60s"@en
     
     Types: 
+        TimeStep,
         TimeUnit
+    
+    
+Individual: MixedIntegerLinearProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: Modellca
+
+    Types: 
+        Framework
+    
+    
+Individual: MonteCarlo
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Month
+
+    Types: 
+        TimeStep
+    
+    
+Individual: MultiCriteria
+
+    Types: 
+        MethodicalFocus
     
     
 Individual: N2O
@@ -2549,7 +4338,7 @@ Individual: Nitrous_oxide
         N2O
     
     
-Individual: Nuclear
+Individual: NuclearPower
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear power is the use of nuclear reactions that release nuclear energy to generate heat, which most frequently is then used in steam turbines to produce electricity in a nuclear power plant. Nuclear power can be obtained from nuclear fission, nuclear decay and nuclear fusion. Presently, the vast majority of electricity from nuclear power is produced by nuclear fission of elements in the actinide series of the periodic table. Nuclear decay processes are used in niche applications such as radioisotope thermoelectric generators. The possibility of generating electricity from nuclear fusion is still at a research phase with no commercial applications. This article mostly deals with nuclear fission power for electricity generation."@en,
@@ -2569,6 +4358,21 @@ SI derived unit for electrical resistance"@en
 Individual: Oil
 
     
+Individual: Optimization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Other
+
+    Types: 
+        AnalyticalApproach
+    
+    
 Individual: Ounce
 
     Annotations: 
@@ -2579,6 +4383,40 @@ Individual: Ounce
         MassUnit
     
     
+Individual: PFC
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorocarbons, sometimes referred to as perfluorocarbons or PFCs, are, strictly speaking, organofluorine compounds with the formula CxFy, i.e. they contain only carbon and fluorine, though the terminology is not strictly followed. Compounds with the prefix perfluoro- are hydrocarbons, including those with heteroatoms, wherein all C-H bonds have been replaced by C-F bonds."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
+    
+    Types: 
+        FlourinatedGas
+    
+    
+Individual: PHP
+
+    Types: 
+        Framework
+    
+    
+
+Individual: Passive
+
+    
+Individual: Perfluorocarbon
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorocarbons, sometimes referred to as perfluorocarbons or PFCs, are, strictly speaking, organofluorine compounds with the formula CxFy, i.e. they contain only carbon and fluorine, though the terminology is not strictly followed. Compounds with the prefix perfluoro- are hydrocarbons, including those with heteroatoms, wherein all C-H bonds have been replaced by C-F bonds."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
+    
+    Types: 
+        FlourinatedGas
+    
+    
+Individual: Plot
+
+    
+
 Individual: Pound
 
     Annotations: 
@@ -2589,6 +4427,21 @@ Individual: Pound
         MassUnit
     
     
+Individual: Python
+
+    Types: 
+        Framework
+    
+    
+Individual: R
+
+    Types: 
+        Framework
+    
+    
+Individual: Rail
+
+    
 Individual: Renewable_Energy_Directive_Sectors
 
     Annotations: 
@@ -2597,6 +4450,12 @@ Individual: Renewable_Energy_Directive_Sectors
     
     Types: 
         SectorConcept
+    
+    
+Individual: Ruby
+
+    Types: 
+        Framework
     
     
 Individual: SF6
@@ -2613,6 +4472,33 @@ SI unit of time"@en
     
     Types: 
         TimeUnit
+    
+    
+Individual: Simulation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: SmartMetre
+
+    Types: 
+        Appliance
+    
+    
+Individual: Spreadsheet
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Stochastic
+
+    Types: 
+        MethodicalFocus
     
     
 Individual: Sulphur_hexafluoride
@@ -2635,11 +4521,34 @@ Used for natural gas"@en
         EnergyUnit
     
     
+Individual: Toolbox
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: TopDown
+
+    Types: 
+        AnalyticalApproach
+    
+    
 Individual: True
 
     Types: 
-        BooleanVariable
+        BooleanVariable,
+        GUI,
+        OpenSource
     
+    
+Individual: Txt
+
+    Types: 
+        DataFormat
+    
+    
+Individual: V2Grid
+
     
 Individual: Volt
 
@@ -2678,7 +4587,20 @@ Individual: Wind
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    
+Individual: XLSX
+
+    Types: 
+        DataFormat
+    
+    
+Individual: XML
+
+    Types: 
+        DataFormat
     
     
 Individual: Yard
@@ -2713,13 +4635,24 @@ Individual: solid
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state being solid. A portion of matter is in solid state if and only if it has a definite shape and volume (at a given temperature and pressure)."
+
+Individual: Year
+
+    Types: 
+        TimeStep
     
+    
+Individual: gdx
+
+    Types: 
+        DataFormat
+
     
 DisjointClasses: 
     Acronym,DOI,Title
 
 DisjointClasses: 
-    Bus,Consumer,Generator,Line,ShuntImpedance,StorageUnit,Subgrid,Transformer
+    Bus,PowerGeneratingUnit,ShuntImpedance,StorageUnit,Transformer
 
 DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
@@ -2728,20 +4661,20 @@ DisjointClasses:
     CommerceSector,HouseholdSector,IndustrySector
 
 DisjointClasses: 
-    DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
-
-DisjointClasses: 
-    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
-    ElectricitySector,HeatSector,TransportSector
-
-DisjointClasses: 
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
 DisjointClasses: 
-    Heat,Hydroelectricity,NaturalGas,Nuclear,OilAndPetroleumProducts,SolarEnergy,SolidFossilFuels,Wind
+    ElectricitySector,HeatSector,TransportSector
+
+DisjointClasses: 
+    Fuel,Heat,Hydropower,Nuclear,Solar,Wind
+
+DisjointClasses: 
+    LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
+
+DisjointClasses: 
+    EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
