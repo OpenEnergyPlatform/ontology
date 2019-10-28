@@ -320,6 +320,15 @@ ObjectProperty: has_numerical_output
         InformationArtifact
     
     
+ObjectProperty: has_normal_state_of_matter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure and temperature"
+    
+    Range: 
+        StateOfMatter
+    
+    
 ObjectProperty: has_objective
 
     Annotations: 
@@ -704,8 +713,7 @@ Class: Anthracite
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        HardCoal,
-        Solid
+        HardCoal
     
     
 Class: Appliance
@@ -721,7 +729,6 @@ Class: AssociatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas,
         NaturalGas
     
     
@@ -760,8 +767,7 @@ Class: AviationGasoline
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gasoline,
-        Liquid
+        Gasoline
     
     
 Class: Battery
@@ -798,7 +804,6 @@ Class: Biodiesel
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        Liquid,
         LiquidBiofuel
     
     
@@ -821,8 +826,7 @@ Class: Biogas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biogas&oldid=867559571"
     
     SubClassOf: 
-        Biofuel,
-        Gas
+        Biofuel
     
     
 Class: Biogasoline
@@ -834,7 +838,6 @@ Class: Biogasoline
         rdfs:label "Biogasoline"@en
     
     SubClassOf: 
-        Liquid,
         LiquidBiofuel
     
     
@@ -855,7 +858,6 @@ Class: BlastFurnaceGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas,
         ManufacturedCoalBasedGas
     
     
@@ -894,7 +896,6 @@ Class: Charcoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Solid,
         SolidBiomass
     
     
@@ -923,8 +924,8 @@ Class: Coal
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
     
     SubClassOf: 
-        Solid,
-        SolidFossilFuels
+        SolidFossilFuels,
+        has_normal_state_of_matter value solid
     
     
 Class: CoalPowerplant
@@ -960,7 +961,6 @@ Class: CokeOvenGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas,
         ManufacturedCoalBasedGas
     
     
@@ -971,8 +971,7 @@ Class: CokingCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        HardCoal,
-        Solid
+        HardCoal
     
     
 Class: CollaborativeProgramming
@@ -988,7 +987,6 @@ Class: CollieryGas
         <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas,
         NaturalGas
     
     
@@ -1020,8 +1018,9 @@ Class: Community
         <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
     
-    SubClassOf: 
+    SubClassOf:
         Support
+
     
     
 Class: CompressedAir
@@ -1240,8 +1239,7 @@ Class: DieselFuel
         rdfs:label "TransportDiesel"@en
     
     SubClassOf: 
-        GasDieselOil,
-        Liquid
+        GasDieselOil
     
     
 Class: DistrictHeat
@@ -1493,7 +1491,6 @@ Class: FlourinatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        Gas,
         GreenhouseGas
     
     
@@ -1563,7 +1560,7 @@ Class: Fusion
     SubClassOf: 
         Nuclear
     
-    
+
 Class: GUI
 
     SubClassOf: 
@@ -1583,7 +1580,7 @@ Class: Gas
     SubClassOf: 
         StateOfMatter
     
-    
+
 Class: GasDieselOil
 
     Annotations: 
@@ -1591,8 +1588,8 @@ Class: GasDieselOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Liquid,
-        OilAndPetroleumProducts
+        OilAndPetroleumProducts,
+        has_normal_state_of_matter value liquid
     
     
 Class: GasPowerplant
@@ -1625,8 +1622,8 @@ Class: Gasoline
         <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640"
     
     SubClassOf: 
-        Liquid,
-        OilAndPetroleumProducts
+        OilAndPetroleumProducts,
+        has_normal_state_of_matter value liquid
     
     
 Class: GasworksGas
@@ -1638,7 +1635,6 @@ The production of other coal gases (i.e. coke oven gas, blast furnace gas and ox
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas,
         ManufacturedCoalBasedGas
     
     
@@ -1713,7 +1709,6 @@ Class: GreenhouseGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Greenhouse_gas&oldid=880592155"
     
     SubClassOf: 
-        Gas,
         Pollutant
     
     
@@ -1730,8 +1725,7 @@ Class: HardCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Coal,
-        Solid
+        Coal
     
     DisjointWith: 
         Lignite
@@ -1796,8 +1790,7 @@ Class: HeatingOil
         rdfs:label "OtherGasOil"@en
     
     SubClassOf: 
-        GasDieselOil,
-        Liquid
+        GasDieselOil
     
     
 Class: HouseholdSector
@@ -1965,8 +1958,7 @@ Class: JetFuel
         rdfs:label "KeroseneTypeJetFuel"@en
     
     SubClassOf: 
-        Kerosene,
-        Liquid
+        Kerosene
     
     
 Class: Kerosene
@@ -1979,8 +1971,8 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484"
     
     SubClassOf: 
-        Liquid,
-        OilAndPetroleumProducts
+        OilAndPetroleumProducts,
+        has_normal_state_of_matter value liquid
     
     
 Class: LengthUnit
@@ -2022,8 +2014,7 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Coal,
-        Solid
+        Coal
     
     DisjointWith: 
         HardCoal
@@ -2063,7 +2054,7 @@ Class: Link
     DisjointWith: 
         Node
     
-    
+
 Class: Liquid
 
     Annotations: 
@@ -2082,7 +2073,7 @@ Class: LiquidAir
     SubClassOf: 
         Air
     
-    
+
 Class: LiquidBiofuel
 
     Annotations: 
@@ -2093,7 +2084,7 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
     
     SubClassOf: 
         Biofuel,
-        Liquid
+        has_normal_state_of_matter value liquid
     
     
 Class: LiquidMetalBattery
@@ -2126,8 +2117,8 @@ Class: ManufacturedCoalBasedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal_gasification&oldid=904933607"@en
     
     SubClassOf: 
-        Gas,
-        SolidFossilFuels
+        SolidFossilFuels,
+        has_normal_state_of_matter value gaseous
     
     
 Class: MarketModel
@@ -2299,8 +2290,7 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gasoline,
-        Liquid
+        Gasoline
     
     
 Class: MunicipalWaste
@@ -2331,7 +2321,7 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
     
     SubClassOf: 
         Fuel,
-        Gas
+        has_normal_state_of_matter value gaseous
     
     
 Class: NetworkNode
@@ -2359,7 +2349,6 @@ Class: NonAssociatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        Gas,
         NaturalGas
     
     
@@ -2426,8 +2415,7 @@ It consists of hydrocarbons of various molecular weights and other organic compo
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
     
     SubClassOf: 
-        Fuel,
-        Liquid
+        Fuel
     
     
 Class: OilPowerplant
@@ -2489,8 +2477,7 @@ Class: OtherBituminousCoal
         rdfs:label "SteamCoal"@en
     
     SubClassOf: 
-        HardCoal,
-        Solid
+        HardCoal
     
     
 Class: OtherKerosene
@@ -2500,8 +2487,7 @@ Class: OtherKerosene
         <http://purl.obolibrary.org/obo/IAO_0000115> "Refined petroleum distillate used in sectors other than aircraft transport. It distils between 150 °C and 300 °C."@en
     
     SubClassOf: 
-        Kerosene,
-        Liquid
+        Kerosene
     
     
 Class: OtherLiquidBiofuels
@@ -2511,7 +2497,6 @@ Class: OtherLiquidBiofuels
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Liquid,
         LiquidBiofuel
     
     
@@ -2546,8 +2531,8 @@ This definition is without prejudice to the definition of renewable energy sourc
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gas,
-        SolidFossilFuels
+        SolidFossilFuels,
+        has_normal_state_of_matter value solid
     
     
 Class: Person
@@ -3061,6 +3046,7 @@ Class: SolarThermalPowerplant
         has_part some SteamTurbine
     
     
+
 Class: Solid
 
     Annotations: 
@@ -3071,6 +3057,7 @@ Class: Solid
         StateOfMatter
     
     
+
 Class: SolidBiomass
 
     Annotations: 
@@ -3081,7 +3068,7 @@ Class: SolidBiomass
     
     SubClassOf: 
         Biofuel,
-        Solid
+        has_normal_state_of_matter value solid
     
     
 Class: SolidFossilFuels
@@ -3147,8 +3134,7 @@ Class: SubBituminousCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Coal,
-        Solid
+        Coal
     
     
 Class: Subgrid
@@ -3590,7 +3576,6 @@ Class: WoodAndOther
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Solid,
         SolidBiomass
     
     
@@ -4628,6 +4613,29 @@ Individual: Yard
         LengthUnit
     
     
+Individual: gaseous
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a gas. A portion of matter is in gaseous state if and only if it has has no definite shape and no definite volume and is not electrically conductive."
+    
+    
+Individual: liquid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being liquid. A portion of matter is liquid has has no definite shape but a definite volume (at a given temperature and pressure)."
+    
+    
+Individual: plasmatic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a plasma. A portion of matter is in plasmatic state if and only if it has has no definite shape and no definite volume and is electrically conductive."
+    
+    
+Individual: solid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state being solid. A portion of matter is in solid state if and only if it has a definite shape and volume (at a given temperature and pressure)."
+
 Individual: Year
 
     Types: 
@@ -4638,7 +4646,7 @@ Individual: gdx
 
     Types: 
         DataFormat
-    
+
     
 DisjointClasses: 
     Acronym,DOI,Title
