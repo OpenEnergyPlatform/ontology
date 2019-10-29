@@ -2718,12 +2718,35 @@ Class: HouseholdSector
     SubClassOf: 
         Sector
     
-    
+ 
+
 Class: HydroPowerplant
 
-    SubClassOf: 
+    SubClassOf:
         Generator
+
+
+Class: HydroelectricPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en
     
+    SubClassOf: 
+        PowerGeneratingUnit,
+        has_part some WaterTurbine
+    
+
+
+Class: Hydroelectricity
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Potential and kinetic energy of water converted into electricity in hydroelectric plants.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+
+    SubClassOf:
+        EnergyStorageTechnology,
+        Hydropower
+
     
 Class: Hydrogen
 
