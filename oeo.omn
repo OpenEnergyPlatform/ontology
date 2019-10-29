@@ -122,6 +122,15 @@ ObjectProperty: covers_timeframe
     
     SubPropertyOf: 
         covers
+
+    
+ObjectProperty: depends_on
+
+    
+ObjectProperty: g_depends_on
+
+    SubPropertyOf: 
+        depends_on
     
 
 ObjectProperty: generates_dataset
@@ -635,11 +644,16 @@ ObjectProperty: references
     InverseOf: 
         is_referenced_by
     
-    
+
 ObjectProperty: transmits
 
     SubPropertyOf: 
         owl:topObjectProperty
+
+ObjectProperty: s_depends_on
+
+    SubPropertyOf: 
+        depends_on
     
     
 ObjectProperty: uses
@@ -678,10 +692,34 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000024>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000029>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AcDcCoupling>
@@ -858,6 +896,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
         Land
     
     
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HubHeight>
 
     SubClassOf: 
@@ -869,7 +908,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         ElectricityProductionUnit
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#IsolatedOperationCapability>
 
     SubClassOf: 
@@ -1049,7 +1088,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffAnimalProtection>
 
     SubClassOf: 
@@ -1109,7 +1148,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SeasideLocation>
 
     SubClassOf: 
@@ -1145,7 +1184,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         StorageUnitDataset
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
 
     SubClassOf: 
@@ -1188,7 +1227,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
     SubClassOf: 
         <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
     
-    
+
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UseableStorageCapacity>
 
     SubClassOf: 
@@ -1274,7 +1313,7 @@ Class: Agent
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Intelligent_agent"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: AgriculturalDemand
@@ -2112,16 +2151,29 @@ Class: ElectricityGrid
 Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
         rdfs:comment "Synonym: Network"@en
     
-    SubClassOf: 
+    SubClassOf:
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part min 1 EnergyGeneratorTechnology,
-        has_part min 1 Line
+        has_part min 1 Line,
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        has_part some ElectricityGridComponent
+
+
+
+Class: ElectricityGridComponent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        part_of some ElectricityGrid
     
     
 Class: ElectricityProductionUnit
 
     SubClassOf: 
-        MaStR
+        ElectricityGridComponent
     
     
 Class: ElectricitySector
@@ -2168,7 +2220,7 @@ Class: EmpiricalDataset
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from obeservations in the real world."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en
     
     SubClassOf: 
         Dataset
@@ -2184,7 +2236,7 @@ Class: EnergyCarrier
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Energy_carrier&oldid=828742268"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: EnergyCarrierQuantity
@@ -2525,11 +2577,14 @@ Class: Generator
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
-    
+
     SubClassOf:
         NetworkNode,
+        ElectricityGridComponent,
 	uses some EnergyCarrier,
 	uses some EnergyGeneratorTechnology
+
+
     
     DisjointWith: 
         Line
@@ -2541,13 +2596,13 @@ Class: GeographicRegion
         <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000006>
     
     
 Class: GeopgraphicCoordinate
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
 Class: Geothermal
@@ -2602,7 +2657,7 @@ A GWP is calculated over a specific time horizon, commonly 20, 100, or 500 years
 Class: Graph
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000024>
     
     
 Class: GreenhouseGas
@@ -2619,7 +2674,15 @@ Class: GridModel
 
     SubClassOf: 
         SoftwareElement
-    
+
+Class: HFC
+
+    EquivalentTo:
+        Hydrofluorocarbon
+
+    SubClassOf:
+        FlourinatedGas
+
     
 Class: HardCoal
 
@@ -2748,6 +2811,20 @@ Class: HydroelectricPowerplant
         PowerGeneratingUnit,
         has_part some WaterTurbine
     
+
+Class: HubHeight
+
+    SubClassOf: 
+        TechnicalDataWind
+    
+    
+Class: Hydrofluorocarbon
+
+    EquivalentTo:
+        HFC
+
+    SubClassOf:
+        FlourinatedGas
 
 
 Class: Hydroelectricity
@@ -3072,7 +3149,7 @@ Class: LinearOptimalPowerflow
 Class: Link
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000024>
     
     DisjointWith: 
         Node
@@ -3174,8 +3251,10 @@ Class: Manufacturer
     
 Class: ManufacturerSpecifications
 
-    SubClassOf: 
-        WindEntityDataset
+    SubClassOf:
+        WindEntityDataset,
+        WindEntityData
+
     
     
 Class: MassUnit
@@ -3263,9 +3342,13 @@ Class: ModelElement
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
     
-    SubClassOf: 
-        InformationArtifact
-    
+    SubClassOf:
+        InformationArtifact,
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        part_of some Model
+
+
+
     
 Class: ModelExamples
 
@@ -3417,7 +3500,7 @@ Class: NewPowerFromPhotovoltaics
 Class: Node
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000024>
     
     DisjointWith: 
         Link
@@ -3789,7 +3872,7 @@ Class: Pollutant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pollutant&oldid=906519011"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: Postprocessing
@@ -3894,8 +3977,9 @@ Class: Prosumer
         <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is a person who consumes and produces a product. It is derived from \"prosumption\", a dot-com era business term meaning \"production by consumers\"."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Prosumer&oldid=881861680"@en
     
-    SubClassOf: 
-        Agent
+    SubClassOf:
+        Agent,
+        <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
 Class: Public
@@ -4047,6 +4131,54 @@ Class: ResidentialDemand
         Demand
     
     
+Class: RequierementSwitchOffAnimalProtection
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffCapacityLimitation
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffIceFalling
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffNoiseImmissionProtectionByDay
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffNoiseImmissionProtectionNights
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffOthers
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: RequierementSwitchOffShadowing
+
+    SubClassOf: 
+        Requierements
+    
+    
+Class: Requierements
+
+    SubClassOf: 
+        WindEntityData
+    
+    
 Class: ResistanceUnit
 
     Annotations: 
@@ -4066,6 +4198,18 @@ Class: RooftopPhotovoltaicGenerator
     
     DisjointWith: 
         FieldPhotovoltaicGenerator
+    
+    
+Class: RotorBladeDeIcingSystem
+
+    SubClassOf: 
+        TechnicalDataWind
+    
+    
+Class: RotorDiameter
+
+    SubClassOf: 
+        TechnicalDataWind
     
     
 Class: RunOfRiverElectricityGenerator
@@ -4132,7 +4276,7 @@ Class: Sector
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
 Class: SectorConcept
@@ -4374,7 +4518,7 @@ Class: StateOfMatter
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
 
 Class: StorageHydropowerplant
@@ -4400,10 +4544,11 @@ Class: StorageUnit
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
     
-    SubClassOf: 
+    SubClassOf:
         NetworkNode,
-        uses some EnergyStorageTechnology
-    
+        uses some EnergyStorageTechnology,
+        ElectricityGridComponent,
+        part_of some ElectricityGrid
 
     
 Class: Study
@@ -4436,7 +4581,6 @@ Class: Subgrid
     
     SubClassOf:
         ElectricityGrid,
-        Transformer,
         has_part some ElectricityGridComponent,
         part_of some ElectricityGrid
     
@@ -4502,6 +4646,13 @@ Class: Technical
 
     
     
+Class: TechnicalDataWind
+
+    SubClassOf: 
+        WindEntityData,
+        part_of some WindEntity
+    
+    
 Class: TechnologicalAssumption
 
     Annotations: 
@@ -4517,7 +4668,7 @@ Class: Technology
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: TidalPowerPlant
@@ -4749,7 +4900,7 @@ Class: UnitOfMeasurement
         <http://purl.obolibrary.org/obo/IAO_0000115> "A unit of measurement is a specified magnitude of a quantity that is used to express the magnitude of the same kind of quantity."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
 Class: User
@@ -4911,7 +5062,22 @@ Class: WindElectricityGenerator
 Class: WindEntityDataset
 
     SubClassOf: 
-        ElectricityProductionUnit
+        ElectricityProductionUnit,
+        has_part some Generator,
+        has_part some WindEntityData
+    
+Class: WindEntity
+
+    SubClassOf:
+        ElectricityProductionUnit,
+        has_part some Generator,
+        has_part some WindEntityData
+
+
+Class: WindEntityData
+
+    SubClassOf: 
+        InformationArtifact
     
 
 Class: WindOffshore
@@ -4938,8 +5104,7 @@ Class: WindFarm
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
     SubClassOf: 
-        WindTurbine,
-        has_input some Sea
+        WindTurbine
     
     
 Class: WindOnshore
@@ -4960,10 +5125,13 @@ Class: WindTurbine
 Wind turbines are manufactured in a wide range of vertical and horizontal axis. The smallest turbines are used for applications such as battery charging for auxiliary power for boats or caravans or to power traffic warning signs. Slightly larger turbines can be used for making contributions to a domestic power supply while selling unused power back to the utility supplier via the electrical grid. Arrays of large turbines, known as wind farms, are becoming an increasingly important source of intermittent renewable energy and are used by many countries as part of a strategy to reduce their reliance on fossil fuels."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
-    SubClassOf: 
+    SubClassOf:
         Turbine,
         has_physical_output some Power,
-        has_physical_input only Wind
+        has_physical_input only Wind,
+        Generator,
+        uses some Wind
+
     
     
 Class: WoodAndOther
@@ -6117,9 +6285,6 @@ DisjointClasses:
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
 
 DisjointClasses: 
-    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
     ElectricitySector,HeatSector,TransportSector
 
 DisjointClasses:
@@ -6127,6 +6292,9 @@ DisjointClasses:
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
+
+DisjointClasses: 
+    Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
 DisjointClasses: 
     HouseholdSector,IndustrySector,TCSSector,TrafficSector
