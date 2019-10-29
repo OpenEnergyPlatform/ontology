@@ -2096,7 +2096,15 @@ Class: ElectricityGeneratorTechnology
     SubClassOf: 
         Technology
     
-    
+Class: ElectricityGridComponent
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+
+
 Class: ElectricityGrid
 
     Annotations: 
@@ -2519,7 +2527,6 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf:
-        ElectricityGridComponent
         NetworkNode,
 	uses some EnergyCarrier,
 	uses some EnergyGeneratorTechnology
@@ -2553,7 +2560,13 @@ Class: Geothermal
     
     SubClassOf: 
         Heat
-    
+
+
+Class: GeothermalGenerator
+
+    SubClassOf:
+        Generator,
+        uses some Heat
     
 Class: GeothermalPowerplant
 
@@ -3399,7 +3412,7 @@ Class: NewPowerFromPhotovoltaics
     
     SubClassOf: 
         Quantity
-    
+
     
 Class: Node
 
@@ -3668,7 +3681,15 @@ Class: Percentage
     SubClassOf: 
         Quantity
     
-    
+Class: PFC
+
+    EquivalentTo:
+        Perfluorocarbon
+
+    SubClassOf:
+        FlourinatedGas
+
+
 Class: Perfluorocarbon
 
     EquivalentTo: 
@@ -4074,7 +4095,7 @@ Class: RunOfRiverPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
 
     SubClassOf:
-        HydroelectricPowerplant
+        HydroelectricPowerplant,
         HydroPowerplant,
         uses some Flow
 
@@ -4228,7 +4249,17 @@ Class: Solar
     SubClassOf: 
         EnergyCarrier
     
-    
+
+Class: SolarEnergy
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+
+    SubClassOf:
+        EnergyCarrier
+
+
 Class: SolarPhotovoltaic
 
     Annotations: 
