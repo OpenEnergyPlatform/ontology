@@ -61,6 +61,12 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+
+ObjectProperty: appliesTo
+
+    
+ObjectProperty: comparesTo
+
 ObjectProperty: conforms_to
 
     Domain: 
@@ -117,7 +123,12 @@ ObjectProperty: covers_timeframe
     SubPropertyOf: 
         covers
     
-    
+
+ObjectProperty: generates_dataset
+
+    SubPropertyOf: 
+        has_output
+
 ObjectProperty: distributes
 
     SubPropertyOf: 
@@ -129,7 +140,33 @@ ObjectProperty: handles_uncertainty
     SubPropertyOf: 
         owl:topObjectProperty
     
+
+ObjectProperty: hasMaximum
+
+    SubPropertyOf: 
+        comparesTo
     
+    
+ObjectProperty: hasMinimum
+
+    SubPropertyOf: 
+        comparesTo
+    
+    
+ObjectProperty: hasNumeral
+
+    
+ObjectProperty: hasUnitofMeasurement
+
+    
+ObjectProperty: hasYear
+
+    
+ObjectProperty: has_Percentage
+
+    SubPropertyOf: 
+        comparesTo
+
 ObjectProperty: has
 
     SubPropertyOf: 
@@ -230,6 +267,15 @@ ObjectProperty: has_input
     
     SubPropertyOf: 
         has
+    
+    
+ObjectProperty: has_institution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
+    
+    SubPropertyOf: 
+        has_participant
     
     
 ObjectProperty: has_license
@@ -476,6 +522,15 @@ ObjectProperty: has_spatial_resolution
         has_resolution
     
     
+ObjectProperty: has_subregion
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a region and a smaller region within."@en
+    
+    SubPropertyOf: 
+        has_part
+    
+    
 ObjectProperty: has_temporal_resolution
 
     Annotations: 
@@ -504,6 +559,12 @@ ObjectProperty: has_website
 
     SubPropertyOf: 
         is_referenced_by
+    
+    
+ObjectProperty: isEqual
+
+    SubPropertyOf: 
+        comparesTo
     
     
 ObjectProperty: is_connected_to
@@ -623,6 +684,553 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
 
     
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AcDcCoupling>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AreaOfApplication>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AssignedEffectivePowerInverter>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AssignedEffectivePowerInverterSolar>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Batterytechnology>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#BlackStartCapacity>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#CapacitiyLimitation>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#ClusterBalticSea>
+
+    SubClassOf: 
+        Sea
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#ClusterNorthSea>
+
+    SubClassOf: 
+        Sea
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#CoastDistance>
+
+    SubClassOf: 
+        Sea
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#CommissioningData>
+
+    SubClassOf: 
+        PlantOperation
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#CommonInverterWithStorage>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Community>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#ConnectionToMaximumOrHighVoltage>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#County>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#DataFinalDecommissioning>
+
+    SubClassOf: 
+        PlantOperation
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#DataRestartOperation>
+
+    SubClassOf: 
+        PlantOperation
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#DataStartTemporaryDecommissioning>
+
+    SubClassOf: 
+        PlantOperation
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#DateStartOfTemporaryorFinalDecommissioning>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#DisplayOfDecommissioning>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#District>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EmergencyGenerator>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EntityOperationStatus>
+
+    SubClassOf: 
+        PlantOperation
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#FeedingType>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#GaussKrügerEast>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#GaussKrügerNorth>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#GrossCapacity>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HouseNumber>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HubHeight>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+
+    SubClassOf: 
+        ElectricityProductionUnit
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#IsolatedOperationCapability>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Latitude>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Longitude>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#MainOrientation>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#MainOrientationTilt>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NameElectricityProducerEntity>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NamePowerPlant>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NetCapacity>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NetCapacityGermany>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NetCapacityGermanyHydro>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NumbersOfModules>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#OccupiedArableLand>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#OccupiedArea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#OperationSite>
+
+    SubClassOf: 
+        StorageUnitDataset
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#ParcelNumber>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PartOfMarginalPowerPlant>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PartOfMarginalPowerPlantHydro>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PlannedCommissioningData>
+
+    SubClassOf: 
+        PlantOperation
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PositionSolar>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PostalCode>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PowerPlantnumber>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PrequalifiedForControlEnergy>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PumpOperationContinouslyAdjustable>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PumpOperationPowerConsumption>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PumpStorageTechnology>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#ReductionElectricityGeneration>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControlByThirdParties>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControlDirectMarketer>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControlGridOperator>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RemoteControl>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffAnimalProtection>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffCapacityLimitation>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffIceFalling>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffNoiseImmissionProtectionByDay>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffNoiseImmissionProtectionNights>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffOthers>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RequierementSwitchOffShadowing>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Requierements>
+
+    SubClassOf: 
+        WindEntityDataset
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RotorBladeDeIcingSystem>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#RotorDiameter>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SeasideLocation>
+
+    SubClassOf: 
+        Sea
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SecondaryOrientation>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SecondaryOrientationTilt>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+
+    SubClassOf: 
+        ElectricityProductionUnit
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Street>
+
+    SubClassOf: 
+        Land
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+
+    SubClassOf: 
+        StorageUnitDataset
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
+
+    SubClassOf: 
+        WindEntityDataset
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Technology>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>,
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataWind>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TypeOfArea>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TypeOfDecommissioning>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TypeOfHydroPowerPlant>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TypeOfInflows>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UniformOrientationAndTilt>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UseableStorageCapacity>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UtmEast>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UtmNorth>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UtmZoneValue>
+
+    SubClassOf: 
+        GeopgraphicCoordinate
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#WaterDepth>
+
+    SubClassOf: 
+        Sea
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Weic>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#WeicDisplayName>
+
+    SubClassOf: 
+        PowerPlantData
+    
+    
 Class: ACLine
 
     Annotations: 
@@ -651,6 +1259,12 @@ Class: Acronym
     
     SubClassOf: 
         Identifier
+    
+    
+Class: AdditionalToAddress
+
+    SubClassOf: 
+        Land
     
     
 Class: Agent
@@ -769,7 +1383,28 @@ Class: AviationGasoline
     SubClassOf: 
         Gasoline
     
+
+Class: BatteryStorage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en
     
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    DisjointWith: 
+        MethanationGasStorage
+    
+    
+Class: BioElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
+    
+    SubClassOf: 
+        RenewableGeneratorTechnology
+    
+
 Class: Battery
 
     Annotations: 
@@ -829,6 +1464,18 @@ Class: Biogas
         Biofuel
     
     
+Class: BiogasElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas electricity generator is a bio energy generator that uses biogas to generate electricity."@en
+    
+    SubClassOf: 
+        BioElectricityGenerator
+    
+    DisjointWith: 
+        BiomassElectricityGenerator
+    
+    
 Class: Biogasoline
 
     Annotations: 
@@ -839,6 +1486,18 @@ Class: Biogasoline
     
     SubClassOf: 
         LiquidBiofuel
+    
+    
+Class: BiomassElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass electricity generator is a bio energy generator that uses biomass to generate electricity."@en
+    
+    SubClassOf: 
+        BioElectricityGenerator
+    
+    DisjointWith: 
+        BiogasElectricityGenerator
     
     
 Class: BiomassPowerplant
@@ -889,6 +1548,24 @@ Class: CapacitanceUnit
         UnitOfMeasurement
     
     
+Class: CarbonDioxideEmission
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission quantity is a quantity that is about carbon dioxide."@en
+    
+    SubClassOf: 
+        Emission
+    
+    
+Class: CarbonDioxideEmissionTrafficSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en
+    
+    SubClassOf: 
+        CarbonDioxideEmission
+    
+    
 Class: Charcoal
 
     Annotations: 
@@ -898,7 +1575,15 @@ Class: Charcoal
     SubClassOf: 
         SolidBiomass
     
+
+Class: City
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A city is a large human settlement."@en
     
+    SubClassOf: 
+        Land
+
 Class: Citation
 
     SubClassOf: 
@@ -915,6 +1600,7 @@ Class: Client
 
     SubClassOf: 
         Person
+
     
     
 Class: Coal
@@ -926,6 +1612,15 @@ Class: Coal
     SubClassOf: 
         SolidFossilFuels,
         has_normal_state_of_matter value solid
+    
+    
+Class: CoalElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal electricity generator technology uses coal to generate electricity."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
     
     
 Class: CoalPowerplant
@@ -1004,7 +1699,11 @@ Class: CommerceSector
     SubClassOf: 
         Sector
     
-    
+
+Class: CommonParameters
+
+    SubClassOf: 
+        ElectricityProductionUnit
 
 Class: CommericalDemand
 
@@ -1086,6 +1785,33 @@ Class: Cost
 
     SubClassOf: 
         ModelVariable
+    
+    
+Class: ConsumptionQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumption quantity is a quantity that describes the amount of consumption of some resource."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: Continent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A continent is a large landmass on the earth."@en
+    
+    SubClassOf: 
+        Land
+    
+    
+Class: Country
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A country is a geographic region that is an distinct political entity."@en
+    
+    SubClassOf: 
+        Land
     
     
 Class: CrudeOil
@@ -1198,7 +1924,16 @@ Class: Demand
 Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
     
     SubClassOf: 
-        Quantity
+        ConsumptionQuantity
+    
+    
+Class: DemandSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
+    
+    SubClassOf: 
+        Sector
     
     
 Class: DemographicalAssumption
@@ -1335,6 +2070,41 @@ Class: ElectricalLoad
         Demand
     
     
+Class: ElectricityConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity consumption quantity is a consumption quantity about electricity."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: ElectricityExport
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export quantity is a quantity that describes the amount of electricity that is exported from a geographic region."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: ElectricityGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generator technology is an technology used to transform energy from some source into electricity."@en
+    
+    SubClassOf: 
+        Technology
+    
+Class: ElectricityGridComponent
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+
+
 Class: ElectricityGrid
 
     Annotations: 
@@ -1346,6 +2116,12 @@ Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part min 1 EnergyGeneratorTechnology,
         has_part min 1 Line
+    
+    
+Class: ElectricityProductionUnit
+
+    SubClassOf: 
+        MaStR
     
     
 Class: ElectricitySector
@@ -1411,6 +2187,51 @@ Class: EnergyCarrier
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: EnergyCarrierQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier quantity is a quantity about the amount of energy from a certain energy carrier."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: EnergyConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption quantity is a consumption quantity about energy."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: EnergyFromAlternativeFuelsAndPropulsionInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from alternative fuels and populsion in traffic quantity is a energy carrier quantity that describes the amount alternative energy carriers are used in the traffic sector."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: EnergyFromBioFuelInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from bio fuel in traffic quantity is a energy carrier quantity that describes the amount of bio fuel as energy carrier in traffic."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: EnergyFromElectricityInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from electricity in traffic quantity is a energy carrier quantity that describes the amount of electricity used as energy carrier in traffic."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
 Class: EnergyGeneratorTechnology
 
     Annotations: 
@@ -1420,6 +2241,15 @@ Class: EnergyGeneratorTechnology
         Technology,
         has_physical_input some EnergyCarrier,
         has_physical_output some Power
+    
+    
+Class: EnergySector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
+    
+    SubClassOf: 
+        Sector
     
     
 Class: EnergyStorageTechnology
@@ -1449,7 +2279,27 @@ Class: EnergyUnit
     SubClassOf: 
         UnitOfMeasurement
     
+
+Class: FederalState
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A federal state is a geographic region that is a political entity within a country. It is partially self governing."@en
     
+    SubClassOf: 
+        Land
+    
+    
+Class: FieldPhotovoltaicGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
+    
+    SubClassOf: 
+        PhotovoltaicElectricityGenerator
+    
+    DisjointWith: 
+        RooftopPhotovoltaicGenerator
+
 Class: ExternalOptimizer
 
     SubClassOf: 
@@ -1493,7 +2343,30 @@ Class: FlourinatedGas
     SubClassOf: 
         GreenhouseGas
     
+
+Class: Flow
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> ""
     
+    SubClassOf: 
+        Water
+    
+    DisjointWith: 
+        Ocean
+    
+    
+Class: FossilGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil electricity generator technology is an electricity generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate electricity."@en
+    
+    SubClassOf: 
+        ElectricityGeneratorTechnology
+    
+    DisjointWith: 
+        RenewableGeneratorTechnology
+
 Class: FlowBattery
 
     Annotations: 
@@ -1615,6 +2488,15 @@ Class: GasTurbine
         has_physical_input only NaturalGas
     
     
+Class: GasTurbineGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
+    
+    SubClassOf: 
+        ElectricityGeneratorTechnology
+    
+    
 Class: Gasoline
 
     Annotations: 
@@ -1644,13 +2526,28 @@ Class: Generator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
-    SubClassOf: 
+    SubClassOf:
         NetworkNode,
 	uses some EnergyCarrier,
 	uses some EnergyGeneratorTechnology
     
     DisjointWith: 
         Line
+    
+    
+Class: GeographicRegion
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geographic region is a delimited part of the earth."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: GeopgraphicCoordinate
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: Geothermal
@@ -1663,7 +2560,13 @@ Class: Geothermal
     
     SubClassOf: 
         Heat
-    
+
+
+Class: GeothermalGenerator
+
+    SubClassOf:
+        Generator,
+        uses some Heat
     
 Class: GeothermalPowerplant
 
@@ -1762,6 +2665,15 @@ Class: Heat
         EnergyCarrier
     
     
+Class: HeatConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat consumption quantity is a consumption quantity about heat."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
 Class: HeatDemand
 
     Annotations: 
@@ -1769,6 +2681,24 @@ Class: HeatDemand
     
     SubClassOf: 
         Demand
+    
+    
+Class: HeatGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generator technology is an technology used to transform energy from some source into heat."@en
+    
+    SubClassOf: 
+        Technology
+    
+    
+Class: HeatPumpHeatGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
+    
+    SubClassOf: 
+        HeatGeneratorTechnology
     
     
 Class: HeatSector
@@ -1801,7 +2731,14 @@ Class: HouseholdSector
     SubClassOf: 
         Sector
     
-    
+
+
+Class: HydroPowerplant
+
+    SubClassOf:
+        Generator
+
+
 Class: HydroelectricPowerplant
 
     Annotations: 
@@ -1811,17 +2748,18 @@ Class: HydroelectricPowerplant
         PowerGeneratingUnit,
         has_part some WaterTurbine
     
-    
+
+
 Class: Hydroelectricity
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Potential and kinetic energy of water converted into electricity in hydroelectric plants.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
-    
-    SubClassOf: 
+
+    SubClassOf:
         EnergyStorageTechnology,
         Hydropower
-    
+
     
 Class: Hydrogen
 
@@ -1859,8 +2797,7 @@ Class: HydrogenVehicle
     SubClassOf: 
         TransportDemand
 
-    
-    
+
 Class: Hydropower
 
     Annotations: 
@@ -1870,7 +2807,7 @@ Class: Hydropower
     SubClassOf: 
         EnergyCarrier
     
-    
+
 Class: Identifier
 
     Annotations: 
@@ -1921,7 +2858,87 @@ Class: InformationArtifact
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
+
+Class: InstalledHeatFromHeatPump
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from heat pump quantity is a installed power quantity restricted to heat pump power plants."@en
     
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledHeatFromSolar
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from solar quantity is a installed power quantity restricted to solar heat power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromBiomass
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from biomass quantity is a installed power quantity restricted to biomass power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromCoalPowerPlants
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from coal power plants quantity is a installed power quantity restricted to coal power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from gas quantity is a installed power quantity restricted to gas power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromPhotovoltaics
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from photovoltaics quantity is a installed power quantity restricted to photovoltaic power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromThermalPowerPlants
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from thermal power plants quantity is a installed power quantity restricted to thermal power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromWind
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from wind quantity is a installed power quantity restricted to wind power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power quantity is a quantity that describes the amount of power that some generators can generate."@en
+    
+    SubClassOf: 
+        Quantity
+
 Class: InstallationGuide
 
     SubClassOf: 
@@ -1973,6 +2990,12 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
     SubClassOf: 
         OilAndPetroleumProducts,
         has_normal_state_of_matter value liquid
+    
+    
+Class: Land
+
+    SubClassOf: 
+        GeographicRegion
     
     
 Class: LengthUnit
@@ -2077,7 +3100,7 @@ Class: LiquidAir
 Class: LiquidBiofuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The quantities of liquid biofuels reported in this category should relate to the quantities of biofuel and not to the total volume of liquids into which the biofuels are blended. 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The quantities of liquid biofuels reported in this category should relate to the quantities of biofuel and not to the total volume of liquids into which the biofuels are blended.
 
 The following liquid biofuels are concerned: biogasoline, bio-diesels, other liquid biofuels"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
@@ -2086,7 +3109,24 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
         Biofuel,
         has_normal_state_of_matter value liquid
     
+
+Class: LoadArea
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A load area is an area that contains energy consumption.
+
+Source: https://wiki.openmod-initiative.org/wiki/Load_area"@en
     
+    SubClassOf: 
+        Land
+    
+    
+Class: MaStR
+
+    SubClassOf: 
+        EmpiricalDataset
+    
+
 Class: LiquidMetalBattery
 
     Annotations: 
@@ -2108,7 +3148,6 @@ Class: Mail
     SubClassOf: 
         Support
     
-    
 
 Class: ManufacturedCoalBasedGas
 
@@ -2127,6 +3166,18 @@ Class: MarketModel
         Model
     
     
+Class: Manufacturer
+
+    SubClassOf: 
+        ManufacturerSpecifications
+    
+    
+Class: ManufacturerSpecifications
+
+    SubClassOf: 
+        WindEntityDataset
+    
+    
 Class: MassUnit
 
     Annotations: 
@@ -2136,7 +3187,19 @@ Class: MassUnit
     SubClassOf: 
         UnitOfMeasurement
     
+
+Class: MethanationGasStorage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en
     
+    SubClassOf: 
+        EnergyStorageTechnology
+    
+    DisjointWith: 
+        BatteryStorage
+    
+
 Class: MathematicalConcept
 
     SubClassOf: 
@@ -2333,6 +3396,24 @@ Class: NetworkNode
         Node
     
     
+Class: NaturalGasGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas electricity generator technology uses natural gas to generate electricity."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
+    
+    
+Class: NewPowerFromPhotovoltaics
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A new power from photovoltaics quantity is a quantity that describes the amount of power from photovoltaic power plants that are going to be build in the future."@en
+    
+    SubClassOf: 
+        Quantity
+
+    
 Class: Node
 
     SubClassOf: 
@@ -2383,6 +3464,15 @@ Class: Nuclear
         EnergyCarrier
     
     
+Class: NuclearPowerGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear generator technology is a fossil electricity generator that uses nuclear reactions to generate electricity."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
+    
+    
 Class: NuclearPowerplant
 
     Annotations: 
@@ -2406,6 +3496,33 @@ Class: Office
         CommericalDemand
     
     
+Class: Ocean
+
+    SubClassOf: 
+        Water
+    
+    DisjointWith: 
+        Flow
+    
+    
+Class: OceanPowerplant
+
+    SubClassOf: 
+        Generator
+    
+    
+Class: OffShoreWindElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind electricity generator is a wind electricity generator that is build off shore above or in the ocean."@en
+    
+    SubClassOf: 
+        WindElectricityGenerator
+    
+    DisjointWith: 
+        OnShoreWindElectricityGenerator
+    
+    
 Class: OilAndPetroleumProducts
 
     Annotations: 
@@ -2416,6 +3533,15 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     
     SubClassOf: 
         Fuel
+    
+    
+Class: OilElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
+    
+    SubClassOf: 
+        FossilGeneratorTechnology
     
     
 Class: OilPowerplant
@@ -2433,6 +3559,18 @@ Class: OpenSource
     
     DisjointWith: 
         DataFormat
+    
+    
+Class: OnShoreWindElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind electricity generator is a wind electricity generator that is build on land."@en
+    
+    SubClassOf: 
+        WindElectricityGenerator
+    
+    DisjointWith: 
+        OffShoreWindElectricityGenerator
     
     
 Class: Optimization
@@ -2535,6 +3673,32 @@ This definition is without prejudice to the definition of renewable energy sourc
         has_normal_state_of_matter value solid
     
     
+Class: Percentage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A percentage is a ratio given as a fraction of 100."@en
+    
+    SubClassOf: 
+        Quantity
+    
+Class: PFC
+
+    EquivalentTo:
+        Perfluorocarbon
+
+    SubClassOf:
+        FlourinatedGas
+
+
+Class: Perfluorocarbon
+
+    EquivalentTo: 
+        PFC
+    
+    SubClassOf: 
+        FlourinatedGas
+    
+    
 Class: Person
 
     Annotations: 
@@ -2546,7 +3710,23 @@ Class: Person
     DisjointWith: 
         Organization
     
+
+Class: PhotovoltaicElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
     
+    SubClassOf: 
+        RenewableGeneratorTechnology
+    
+    
+Class: PhotovoltaicGenerator
+
+    SubClassOf:
+        Generator,
+        uses some SolarEnergy
+
+
 Class: Phone
 
     SubClassOf: 
@@ -2554,7 +3734,6 @@ Class: Phone
     
     
 Class: PhotovoltaicPowerplant
-
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
@@ -2577,6 +3756,12 @@ Class: Plotting
     
     SubClassOf: 
         DataProcessing
+    
+    
+Class: PlantOperation
+
+    SubClassOf: 
+        CommonParameters
     
     
 Class: PoliticalAssumption
@@ -2626,6 +3811,12 @@ Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
         Quantity
     
     
+Class: PowerPlantData
+
+    SubClassOf: 
+        CommonParameters
+
+
 Class: PowerGeneratingUnit
 
     SubClassOf: 
@@ -2758,6 +3949,18 @@ Class: Quality
         SoftwareDescriptor
     
     
+Class: PumpstoragePowerplant
+
+    SubClassOf: 
+        ReservoirPowerplant
+    
+    
+Class: PumpstoragePowerplantWithNaturalInflux
+
+    SubClassOf: 
+        ReservoirPowerplant
+    
+    
 Class: Quantity
 
     Annotations: 
@@ -2806,6 +4009,18 @@ Class: RegulationAssumption
         SubsidyAssumption
     
     
+Class: RenewableGeneratorTechnology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable electricity generator technology is an electricity generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate electricity."@en
+    
+    SubClassOf: 
+        ElectricityGeneratorTechnology
+    
+    DisjointWith: 
+        FossilGeneratorTechnology
+    
+    
 Class: RenewableMunicipalWaste
 
     Annotations: 
@@ -2816,7 +4031,16 @@ Class: RenewableMunicipalWaste
         Biofuel,
         MunicipalWaste
     
+
+Class: ReservoirPowerplant
+
+    SubClassOf: 
+        HydroPowerplant
     
+    DisjointWith: 
+        RunOfRiverPowerplant
+
+
 Class: ResidentialDemand
 
     SubClassOf: 
@@ -2831,7 +4055,28 @@ Class: ResistanceUnit
     SubClassOf: 
         UnitOfMeasurement
     
+
+Class: RooftopPhotovoltaicGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity generator is a photovoltaic electricity generator that is installed on top of the roof of a building."@en
     
+    SubClassOf: 
+        PhotovoltaicElectricityGenerator
+    
+    DisjointWith: 
+        FieldPhotovoltaicGenerator
+    
+    
+Class: RunOfRiverElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river electricity generator is a water energy generator that stores little or no water and produces electricity."@en
+    
+    SubClassOf: 
+        WaterElectricityGenerator
+
+
 Class: Retail
 
     SubClassOf: 
@@ -2843,20 +4088,36 @@ Class: Robustness
     SubClassOf: 
         Validation
     
-    
+
 Class: RunOfRiverPowerplant
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
-    
-    SubClassOf: 
-        HydroelectricPowerplant
-    
+
+    SubClassOf:
+        HydroelectricPowerplant,
+        HydroPowerplant,
+        uses some Flow
+
+    DisjointWith:
+        ReservoirPowerplant, TidalPowerPlant
+
     
 Class: Scenario
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "(WIP) A scenario is a collection of assumptions about the energy system.
+There is not yet a consens about the definition."@en
+    
     SubClassOf: 
+        InformationArtifact,
         SoftwareElement
+    
+    
+Class: Sea
+
+    SubClassOf: 
+        GeographicRegion
     
     
 Class: ScenarioFactsheet
@@ -2864,8 +4125,7 @@ Class: ScenarioFactsheet
     SubClassOf: 
         Factsheet
 
-    
-    
+
 Class: Sector
 
     Annotations: 
@@ -2989,7 +4249,17 @@ Class: Solar
     SubClassOf: 
         EnergyCarrier
     
-    
+
+Class: SolarEnergy
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+
+    SubClassOf:
+        EnergyCarrier
+
+
 Class: SolarPhotovoltaic
 
     Annotations: 
@@ -3024,6 +4294,16 @@ Class: SolarThermal
 
     
     
+
+Class: SolarThermalHeatGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
+    
+    SubClassOf: 
+        HeatGeneratorTechnology
+    
+
 Class: SolarThermalCollector
 
     Annotations: 
@@ -3096,7 +4376,13 @@ Class: StateOfMatter
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
-    
+
+Class: StorageHydropowerplant
+
+    SubClassOf: 
+        ReservoirPowerplant
+
+
 Class: SteamTurbine
 
     Annotations: 
@@ -3112,7 +4398,7 @@ Class: SteamTurbine
 Class: StorageUnit
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy, but not necessarily as an electirc charge."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
     
     SubClassOf: 
         NetworkNode,
@@ -3125,6 +4411,12 @@ Class: Study
     SubClassOf: 
         Reference
 
+    
+    
+Class: StorageUnitDataset
+
+    SubClassOf: 
+        MaStR
     
     
 Class: SubBituminousCoal
@@ -3142,8 +4434,11 @@ Class: Subgrid
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en
     
-    SubClassOf: 
-        ElectricityGrid
+    SubClassOf:
+        ElectricityGrid,
+        Transformer,
+        has_part some ElectricityGridComponent,
+        part_of some ElectricityGrid
     
     
 Class: SubsidyAssumption
@@ -3190,11 +4485,21 @@ Class: SynthethicDataset
     DisjointWith: 
         EmpiricalDataset
     
+
+Class: TCSSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en
     
+    SubClassOf: 
+        DemandSector
+
+
 Class: Technical
 
     SubClassOf: 
         Type
+
     
     
 Class: TechnologicalAssumption
@@ -3215,6 +4520,19 @@ Class: Technology
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: TidalPowerPlant
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+
+    SubClassOf:
+        OceanPowerplant,
+        uses some Tide
+
+    DisjointWith:
+        RunOfRiverPowerplant
+
 
 Class: TestDataset
 
@@ -3252,15 +4570,22 @@ Class: TidalStreamPowerplant
     SubClassOf: 
         HydroelectricPowerplant
     
-    
+
+
 Class: TideWaveOcean
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         Hydropower
+    
+    
+Class: Tide
+
+    SubClassOf: 
+        Ocean
     
     
 Class: TimeHorizon
@@ -3307,6 +4632,15 @@ Class: Title
         Identifier
     
     
+Class: TrafficSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en
+    
+    SubClassOf: 
+        DemandSector
+    
+    
 Class: Transformation
 
     Annotations: 
@@ -3349,23 +4683,35 @@ Class: TransportSector
 * Domestic aviation
 * Road: fuels used in road vehicles as well as agricultural and industrial highway use
 * Rail, including industrial railways.
-* Pipeline transport 
-* Domestic navigation 
+* Pipeline transport
+* Domestic navigation
 * Non-specified: includes all transport not elsewhere specified."@en
     
     SubClassOf: 
         Sector
     
+
+Class: TypeDescription
+
+    SubClassOf: 
+        ManufacturerSpecifications
     
+    
+Class: UndirectedEdge
+
+    SubClassOf:
+        Link
+
+
 Class: Turbine
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A turbine [...] is a rotary mechanical device that extracts energy from a fluid flow and converts it into useful work. The work produced by a turbine can be used for generating electrical power when combined with a generator."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Turbine&oldid=905470312"
-    
-    SubClassOf: 
+
+    SubClassOf:
         EnergyGeneratorTechnology
-    
+
     
 Class: Type
 
@@ -3488,15 +4834,43 @@ Class: WastePowerplant
     SubClassOf: 
         FossilePowerplant,
         has_part some SteamTurbine
+
+
+Class: Water
+
+    SubClassOf:
+        EnergyCarrier
     
     
-Class: WaterTurbine
+Class: WaterElectricityGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a rotary machine that converts kinetic energy and potential energy of water into mechanical work."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Water_turbine&oldid=902161000"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
     
     SubClassOf: 
+        RenewableGeneratorTechnology
+    
+    
+Class: Wave
+
+    SubClassOf: 
+        Ocean
+
+    
+Class: WavePowerPlant
+
+    SubClassOf: 
+        OceanPowerplant,
+        uses some Wave
+
+
+Class: WaterTurbine
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a rotary machine that converts kinetic energy and potential energy of water into mechanical work."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Water_turbine&oldid=902161000"
+
+    SubClassOf:
         Turbine,
         has_physical_output some Power,
         has_physical_input only Hydropower
@@ -3524,7 +4898,29 @@ Class: Wind
     SubClassOf: 
         Air
     
+
+Class: WindElectricityGenerator
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind electricity generator technology uses wind power to generate electricity."@en
     
+    SubClassOf: 
+        RenewableGeneratorTechnology
+    
+    
+Class: WindEntityDataset
+
+    SubClassOf: 
+        ElectricityProductionUnit
+    
+
+Class: WindOffshore
+
+    SubClassOf:
+        WindTurbine,
+        has_input some Sea
+
+
 Class: WindFarm
 
     Annotations: 
@@ -3542,7 +4938,8 @@ Class: WindFarm
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
     SubClassOf: 
-        Wind
+        WindTurbine,
+        has_input some Sea
     
     
 Class: WindOnshore
@@ -3897,6 +5294,16 @@ Individual: Foot
         LengthUnit
     
     
+Individual: GigaWattHours
+
+    Annotations: 
+        rdfs:comment "Unit symbol: GWh
+Used for electricity"@en
+    
+    Types: 
+        EnergyUnit
+
+
 Individual: Fortran
 
     Types: 
@@ -4168,6 +5575,16 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     
+Individual: Megawatt
+
+    Annotations: 
+        rdfs:comment "Unit symbol: MW
+1 MW = 1000W"@en
+    
+    Types: 
+        PowerUnit
+
+
 Individual: LinearProgramming
 
     Types: 
@@ -4510,6 +5927,16 @@ Individual: Sulphur_hexafluoride
         SF6
     
     
+Individual: TerraWattHours
+
+    Annotations: 
+        rdfs:comment "Unit symbol: TWh
+Used for electricity"@en
+    
+    Types: 
+        EnergyUnit
+    
+    
 Individual: Therm
 
     Annotations: 
@@ -4521,6 +5948,16 @@ Used for natural gas"@en
         EnergyUnit
     
     
+Individual: Tons
+
+    Annotations: 
+        rdfs:comment "Unit symbol: t
+1 t = 3600 kg"@en
+    
+    Types: 
+        MassUnit
+
+
 Individual: Toolbox
 
     Types: 
@@ -4652,21 +6089,49 @@ DisjointClasses:
     Acronym,DOI,Title
 
 DisjointClasses: 
-    Bus,PowerGeneratingUnit,ShuntImpedance,StorageUnit,Transformer
+
+    BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
+
+DisjointClasses: 
+    BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
+
+DisjointClasses: 
+    Bus,Consumer,Generator,Line,ShuntImpedance,StorageUnit,Subgrid,Transformer, PowerGeneratingUnit
 
 DisjointClasses: 
     CapacitanceUnit,ElectricChargeUnit,ElectricCurrentUnit,EnergyUnit,LengthUnit,MassUnit,PowerUnit,ResistanceUnit,TimeUnit,VoltageUnit
 
 DisjointClasses: 
-    CommerceSector,HouseholdSector,IndustrySector
+    CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
 
 DisjointClasses: 
+    CommerceSector,HouseholdSector,IndustrySector
+
+DisjointClasses:
+    DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
+
+DisjointClasses: 
+    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+
+DisjointClasses: 
+    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
+
+DisjointClasses: 
+    ElectricityGrid,Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
+DisjointClasses: 
+    ElectricitySector,HeatSector,TransportSector
+
+DisjointClasses:
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
 DisjointClasses: 
+    HouseholdSector,IndustrySector,TCSSector,TrafficSector
+
+DisjointClasses:
     ElectricitySector,HeatSector,TransportSector
 
 DisjointClasses: 
@@ -4675,6 +6140,4 @@ DisjointClasses:
 DisjointClasses: 
     LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
 
-DisjointClasses: 
-    EnergyUnit,LengthUnit,MassUnit,TimeUnit
 
