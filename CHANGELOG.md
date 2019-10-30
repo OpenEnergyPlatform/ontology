@@ -31,3 +31,16 @@ Here is a template for new release sections
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
 
+
+## 2019-10-30
+
+### Added
+- object properties: 'has_disposition', 'has_role', 'has_function', 'has_quality'
+### Changed
+- Agent and subclasses
+- Pollutant and subclasses (#45)
+- structure of the ontology (#47)
+
+### Removed
+- some superclasses of unsatisfiable classes and some that made the ontology inconsistent
+
