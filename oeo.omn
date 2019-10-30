@@ -1314,7 +1314,6 @@ Class: Air
     
     SubClassOf: 
         EnergyCarrier,
-        EnergyStorageTechnology,
         is_used_by some StorageUnit
     
     
@@ -2127,7 +2126,6 @@ Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
         rdfs:comment "Synonym: Network"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>,
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         has_part some ElectricityGridComponent,
         has_part min 1 EnergyGeneratorTechnology,
@@ -2140,7 +2138,6 @@ Class: ElectricityGridComponent
         <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>,
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         part_of some ElectricityGrid
     
@@ -2466,8 +2463,7 @@ Class: Fusion
 Class: GUI
 
     SubClassOf: 
-        Interface,
-        SoftwareDescriptor
+        Interface
     
     DisjointWith: 
         API
@@ -2557,7 +2553,6 @@ Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
         ElectricityGridComponent,
-        NetworkNode,
         uses some EnergyCarrier,
         uses some EnergyGeneratorTechnology
     
@@ -4218,7 +4213,6 @@ Class: RunOfRiverPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
     
     SubClassOf: 
-        HydroPowerplant,
         HydroelectricPowerplant,
         uses some Flow
     
@@ -4233,7 +4227,6 @@ Class: Scenario
 There is not yet a consens about the definition."@en
     
     SubClassOf: 
-        InformationArtifact,
         SoftwareElement
     
     
@@ -4519,7 +4512,6 @@ Class: StorageUnit
     
     SubClassOf: 
         ElectricityGridComponent,
-        NetworkNode,
         part_of some ElectricityGrid,
         uses some EnergyStorageTechnology
     
@@ -5076,7 +5068,6 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
     
     SubClassOf: 
-        Generator,
         Turbine,
         has_physical_output some Power,
         uses some Wind,
