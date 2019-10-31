@@ -1,4 +1,4 @@
-How to test for inconsistent ontologies and unsatisfiable classes:
+**How to test for inconsistent ontologies and unsatisfiable classes**
 
 1. Open the ontology in Protege
 2. Under the Reasoner menu, Select the reasoner you want to use (like 'HermiT 1.4.2.456'")
