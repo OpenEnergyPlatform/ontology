@@ -315,9 +315,6 @@ ObjectProperty: has_normal_state_of_matter
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure and temperature"
     
-    Range: 
-        StateOfMatter
-    
     
 ObjectProperty: has_numercical_input
 
@@ -1842,7 +1839,6 @@ Class: CrudeOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Liquid,
         OilAndPetroleumProducts
     
     
@@ -2366,7 +2362,7 @@ Class: FlourinatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        Gas,
+        PortionOfGas,
         has_disposition some GreenhouseGas
     
     
@@ -2467,16 +2463,6 @@ Class: GUI
     
     DisjointWith: 
         API
-    
-    
-Class: Gas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas&oldid=904791916"@en
-    
-    SubClassOf: 
-        StateOfMatter
     
     
 Class: GasDieselOil
@@ -3135,16 +3121,6 @@ Class: Link
         Node
     
     
-Class: Liquid
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Liquid&oldid=904993133"@en
-    
-    SubClassOf: 
-        StateOfMatter
-    
-    
 Class: LiquidAir
 
     Annotations: 
@@ -3649,7 +3625,8 @@ Class: Organization
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some Person
     
     DisjointWith: 
         Person
@@ -3848,6 +3825,64 @@ Class: Pollutant
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
+Class: PortionOfGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas&oldid=904791916"@en
+    
+    EquivalentTo: 
+        has_normal_state_of_matter value gaseous
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: PortionOfLiquid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Liquid&oldid=904993133"@en
+    
+    EquivalentTo: 
+        has_normal_state_of_matter value liquid
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: PortionOfMatter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+    
+    
+Class: PortionOfPlasma
+
+    EquivalentTo: 
+        has_normal_state_of_matter value plasmatic
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: PortionOfSolid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solid is one of the four fundamental states of matter (the others being liquid, gas, and plasma). In solids particles are closely packed. It is characterized by structural rigidity and resistance to changes of shape or volume."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solid&oldid=906779814"
+    
+    EquivalentTo: 
+        has_normal_state_of_matter value solid
+    
+    SubClassOf: 
+        PortionOfMatter
     
     
 Class: Postprocessing
@@ -4438,16 +4473,6 @@ Class: SolarThermalPowerplant
         has_part some SteamTurbine
     
     
-Class: Solid
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solid is one of the four fundamental states of matter (the others being liquid, gas, and plasma). In solids particles are closely packed. It is characterized by structural rigidity and resistance to changes of shape or volume."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solid&oldid=906779814"
-    
-    SubClassOf: 
-        StateOfMatter
-    
-    
 Class: SolidBiomass
 
     Annotations: 
@@ -4475,16 +4500,6 @@ Class: Solver
 
     SubClassOf: 
         SoftwareElement
-    
-    
-Class: StateOfMatter
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: SteamTurbine
@@ -5088,6 +5103,12 @@ Class: Workshop
 
     SubClassOf: 
         Support
+    
+    
+Class: phase_description
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/C++>
@@ -6107,6 +6128,9 @@ Individual: gaseous
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a gas. A portion of matter is in gaseous state if and only if it has has no definite shape and no definite volume and is not electrically conductive."
     
+    Types: 
+        phase_description
+    
     
 Individual: gdx
 
@@ -6119,17 +6143,26 @@ Individual: liquid
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being liquid. A portion of matter is liquid has has no definite shape but a definite volume (at a given temperature and pressure)."
     
+    Types: 
+        phase_description
+    
     
 Individual: plasmatic
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a plasma. A portion of matter is in plasmatic state if and only if it has has no definite shape and no definite volume and is electrically conductive."
     
+    Types: 
+        phase_description
+    
     
 Individual: solid
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state being solid. A portion of matter is in solid state if and only if it has a definite shape and volume (at a given temperature and pressure)."
+    
+    Types: 
+        phase_description
     
     
 DisjointClasses: 
