@@ -315,9 +315,6 @@ ObjectProperty: has_normal_state_of_matter
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure and temperature"
     
-    Range: 
-        StateOfMatter
-    
     
 ObjectProperty: has_numercical_input
 
@@ -428,7 +425,7 @@ ObjectProperty: has_physical_input
         EnergyGeneratorTechnology
     
     Range: 
-        EnergyCarrier
+        has_disposition some EnergyCarrier
     
     
 ObjectProperty: has_physical_output
@@ -509,6 +506,9 @@ ObjectProperty: has_spatial_resolution
     SubPropertyOf: 
         has_resolution
     
+    
+ObjectProperty: has_state_of_matter
+
     
 ObjectProperty: has_subregion
 
@@ -1310,10 +1310,12 @@ Class: AgriculturalDemand
 Class: Air
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed using surplus energy to store energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The name given to the Earth's atmosphere."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Air_(disambiguation)"
     
     SubClassOf: 
-        EnergyCarrier,
+        PortionOfMatter,
+        has_disposition some <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>,
         is_used_by some StorageUnit
     
     
@@ -1480,8 +1482,8 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
 Class: Biogas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biogas&oldid=867559571"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
         Biofuel
@@ -1842,7 +1844,6 @@ Class: CrudeOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Liquid,
         OilAndPetroleumProducts
     
     
@@ -1875,7 +1876,7 @@ Class: DammedWater
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en
     
     SubClassOf: 
-        Hydroelectricity,
+        Water,
         is_used_by some StorageUnit
     
     
@@ -2075,7 +2076,7 @@ Class: ElectricalEnergy
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Electrical_energy"@en
     
     SubClassOf: 
-        EnergyCarrier
+        Energy
     
     
 Class: ElectricalLoad
@@ -2201,6 +2202,16 @@ Class: EmpiricalDataset
         SynthethicDataset
     
     
+Class: Energy
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The property of matter and radiation which is manifest as a capacity to perform work (such as causing motion or the interaction of molecules)",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.lexico.com/en/definition/energy"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: EnergyCarrier
 
     Annotations: 
@@ -2208,7 +2219,7 @@ Class: EnergyCarrier
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Energy_carrier&oldid=828742268"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
+        <http://purl.obolibrary.org/obo/BFO_0000016>
     
     
 Class: EnergyCarrierQuantity
@@ -2263,8 +2274,14 @@ Class: EnergyGeneratorTechnology
     
     SubClassOf: 
         Technology,
-        has_physical_input some EnergyCarrier,
+        has_physical_input some (has_disposition some <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>),
         has_physical_output some Power
+    
+    
+Class: EnergyProduction
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: EnergySector
@@ -2350,7 +2367,7 @@ Class: Fission
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_fission&oldid=905727345"@en
     
     SubClassOf: 
-        Nuclear
+        NuclearEnergyProduction
     
     
 Class: FixedOperationCost
@@ -2366,17 +2383,18 @@ Class: FlourinatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        Gas,
+        PortionOfGas,
         has_disposition some GreenhouseGas
     
     
 Class: Flow
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> ""
+        <http://purl.obolibrary.org/obo/IAO_0000115> "the motion of a gas or liquid",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Flow"
     
     SubClassOf: 
-        Water
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     DisjointWith: 
         Ocean
@@ -2435,7 +2453,8 @@ Class: Fuel
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fuel&oldid=866720145"
     
     SubClassOf: 
-        EnergyCarrier
+        PortionOfMatter,
+        has_disposition some EnergyCarrier
     
     
 Class: FuelPrice
@@ -2457,7 +2476,7 @@ Class: Fusion
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_fusion&oldid=906947069"@en
     
     SubClassOf: 
-        Nuclear
+        NuclearEnergyProduction
     
     
 Class: GUI
@@ -2467,16 +2486,6 @@ Class: GUI
     
     DisjointWith: 
         API
-    
-    
-Class: Gas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas&oldid=904791916"@en
-    
-    SubClassOf: 
-        StateOfMatter
     
     
 Class: GasDieselOil
@@ -2701,7 +2710,7 @@ Class: Heat
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en
     
     SubClassOf: 
-        EnergyCarrier
+        Energy
     
     
 Class: HeatConsumption
@@ -2777,6 +2786,16 @@ Class: HubHeight
         TechnicalDataWind
     
     
+Class: HydroPower
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydropower or water power [...] is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydropower&oldid=906980683"@en
+    
+    SubClassOf: 
+        Energy
+    
+    
 Class: HydroPowerplant
 
     SubClassOf: 
@@ -2800,8 +2819,7 @@ Class: Hydroelectricity
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        EnergyStorageTechnology,
-        Hydropower
+        HydroPower
     
     
 Class: Hydrofluorocarbon
@@ -2852,16 +2870,6 @@ Class: HydrogenVehicle
 
     SubClassOf: 
         TransportDemand
-    
-    
-Class: Hydropower
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydropower or water power [...] is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydropower&oldid=906980683"@en
-    
-    SubClassOf: 
-        EnergyCarrier
     
     
 Class: Identifier
@@ -3133,16 +3141,6 @@ Class: Link
     
     DisjointWith: 
         Node
-    
-    
-Class: Liquid
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Liquid&oldid=904993133"@en
-    
-    SubClassOf: 
-        StateOfMatter
     
     
 Class: LiquidAir
@@ -3503,14 +3501,23 @@ Class: NonRenewableMunicipalWaste
         MunicipalWaste
     
     
-Class: Nuclear
+Class: NuclearEnergyProduction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "ways to produce energy through the use of nuclear power"
+    
+    SubClassOf: 
+        EnergyProduction
+    
+    
+Class: NuclearPower
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear power is the use of nuclear reactions that release nuclear energy to generate heat, which most frequently is then used in steam turbines to produce electricity in a nuclear power plant. Nuclear power can be obtained from nuclear fission, nuclear decay and nuclear fusion. Presently, the vast majority of electricity from nuclear power is produced by nuclear fission of elements in the actinide series of the periodic table. Nuclear decay processes are used in niche applications such as radioisotope thermoelectric generators. The possibility of generating electricity from nuclear fusion is still at a research phase with no commercial applications. This article mostly deals with nuclear fission power for electricity generation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power&oldid=868476098"@en
     
     SubClassOf: 
-        EnergyCarrier
+        Energy
     
     
 Class: NuclearPowerGenerator
@@ -3649,7 +3656,8 @@ Class: Organization
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some Person
     
     DisjointWith: 
         Person
@@ -3680,7 +3688,7 @@ Class: OtherKerosene
 Class: OtherLiquidBiofuels
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Liquid biofuels, used directly as fuel, not included in biogasoline or bio-diesels."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquid biofuels, used directly as fuel, not included in biogasoline or bio-diesels."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
@@ -3788,7 +3796,7 @@ Class: PhotovoltaicGenerator
 
     SubClassOf: 
         Generator,
-        uses some SolarEnergy
+        uses some SolarPower
     
     
 Class: PhotovoltaicPowerplant
@@ -3848,6 +3856,67 @@ Class: Pollutant
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
+Class: PortionOfGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas&oldid=904791916"@en
+    
+    EquivalentTo: 
+        has_state_of_matter value gaseous
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: PortionOfLiquid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Liquid&oldid=904993133"@en
+    
+    EquivalentTo: 
+        has_state_of_matter value liquid
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: PortionOfMatter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter isa part of a material entity that has a state_of_matter property."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+    
+    
+Class: PortionOfPlasma
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Plasma is one of the four fundamental states of matter, and was first described by chemist Irving Langmuir[2] in the 1920s.[3] It consists of a gas of ions – atoms which have some of their orbital electrons removed – and free electrons.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Plasma_(physics)"
+    
+    EquivalentTo: 
+        has_state_of_matter value plasmatic
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: PortionOfSolid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solid is one of the four fundamental states of matter (the others being liquid, gas, and plasma). In solids particles are closely packed. It is characterized by structural rigidity and resistance to changes of shape or volume."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solid&oldid=906779814"
+    
+    EquivalentTo: 
+        has_state_of_matter value solid
+    
+    SubClassOf: 
+        PortionOfMatter
     
     
 Class: Postprocessing
@@ -3997,7 +4066,7 @@ Class: PumpedWater
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
     
     SubClassOf: 
-        Hydroelectricity,
+        Water,
         is_used_by some StorageUnit
     
     
@@ -4354,26 +4423,6 @@ Class: SoftwareMaintenance
         InformationArtifact
     
     
-Class: Solar
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        EnergyCarrier
-    
-    
-Class: SolarEnergy
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        EnergyCarrier
-    
-    
 Class: SolarPhotovoltaic
 
     Annotations: 
@@ -4381,7 +4430,17 @@ Class: SolarPhotovoltaic
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Solar
+        EnergyProduction
+    
+    
+Class: SolarPower
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        Energy
     
     
 Class: SolarPowerPlant
@@ -4438,16 +4497,6 @@ Class: SolarThermalPowerplant
         has_part some SteamTurbine
     
     
-Class: Solid
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solid is one of the four fundamental states of matter (the others being liquid, gas, and plasma). In solids particles are closely packed. It is characterized by structural rigidity and resistance to changes of shape or volume."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solid&oldid=906779814"
-    
-    SubClassOf: 
-        StateOfMatter
-    
-    
 Class: SolidBiomass
 
     Annotations: 
@@ -4477,16 +4526,6 @@ Class: Solver
         SoftwareElement
     
     
-Class: StateOfMatter
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
-    
-    
 Class: SteamTurbine
 
     Annotations: 
@@ -4495,7 +4534,6 @@ Class: SteamTurbine
     
     SubClassOf: 
         Turbine,
-        (has_physical_input some NaturalGas) or (has_physical_input some Nuclear) or (has_physical_input some OilAndPetroleumProducts) or (has_physical_input some Solar) or (has_physical_input some SolidBiomass) or (has_physical_input some SolidFossilFuels),
         has_physical_output some Power
     
     
@@ -4684,8 +4722,12 @@ Class: TidalStreamPowerplant
     
 Class: Tide
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Tides are rise and fall of sea levels caused by the combined effects of the gravitational forces exerted by the moon and the sun, and the rotation of the earth.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Tide"
+    
     SubClassOf: 
-        Ocean
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: TideWaveOcean
@@ -4695,7 +4737,7 @@ Class: TideWaveOcean
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Hydropower
+        EnergyProduction
     
     
 Class: TimeHorizon
@@ -4938,8 +4980,13 @@ Class: WastePowerplant
     
 Class: Water
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water"
+    
     SubClassOf: 
-        EnergyCarrier
+        PortionOfMatter,
+        has_disposition some EnergyCarrier
     
     
 Class: WaterElectricityGenerator
@@ -4960,13 +5007,17 @@ Class: WaterTurbine
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        has_physical_input only Hydropower
+        has_physical_input only HydroPower
     
     
 Class: Wave
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "(wind-)waves are water surface waves that occur on the free surface of the oceans.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Wind_wave"
+    
     SubClassOf: 
-        Ocean
+        Water
     
     
 Class: WavePowerPlant
@@ -5088,6 +5139,16 @@ Class: Workshop
 
     SubClassOf: 
         Support
+    
+    
+Class: state_of_matter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/C++>
@@ -6048,6 +6109,10 @@ SI derived unit for voltage."@en
     
 Individual: Water
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water"
+    
     
 Individual: Watt
 
@@ -6107,6 +6172,9 @@ Individual: gaseous
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a gas. A portion of matter is in gaseous state if and only if it has has no definite shape and no definite volume and is not electrically conductive."
     
+    Types: 
+        state_of_matter
+    
     
 Individual: gdx
 
@@ -6119,17 +6187,26 @@ Individual: liquid
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being liquid. A portion of matter is liquid has has no definite shape but a definite volume (at a given temperature and pressure)."
     
+    Types: 
+        state_of_matter
+    
     
 Individual: plasmatic
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a plasma. A portion of matter is in plasmatic state if and only if it has has no definite shape and no definite volume and is electrically conductive."
     
+    Types: 
+        state_of_matter
+    
     
 Individual: solid
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The state being solid. A portion of matter is in solid state if and only if it has a definite shape and volume (at a given temperature and pressure)."
+    
+    Types: 
+        state_of_matter
     
     
 DisjointClasses: 
@@ -6170,9 +6247,6 @@ DisjointClasses:
 
 DisjointClasses: 
     EnergyUnit,LengthUnit,MassUnit,TimeUnit
-
-DisjointClasses: 
-    Fuel,Heat,Hydropower,Nuclear,Solar,Wind
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
