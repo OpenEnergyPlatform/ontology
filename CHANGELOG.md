@@ -32,6 +32,8 @@ Here is a template for new release sections
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
 - GeographicRegion and subclasses (#61)
+- StateOfMatter and subclasses (#45)
+
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
