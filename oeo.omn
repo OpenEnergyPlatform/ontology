@@ -171,12 +171,21 @@ ObjectProperty: hasMinimum
     
 ObjectProperty: hasNumeral
 
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: hasUnitofMeasurement
 
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: hasYear
 
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: has_Percentage
 
@@ -217,7 +226,7 @@ ObjectProperty: has_client
 ObjectProperty: has_complexity
 
     SubPropertyOf: 
-        owl:topObjectProperty
+        has
     
     
 ObjectProperty: has_constraint
@@ -227,6 +236,9 @@ ObjectProperty: has_constraint
     
     SubPropertyOf: 
         has_input
+    
+    Range: 
+        Constraint
     
     
 ObjectProperty: has_contact
@@ -240,6 +252,9 @@ ObjectProperty: has_contact
     
 ObjectProperty: has_disposition
 
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
     
 ObjectProperty: has_documentation
 
@@ -271,7 +286,7 @@ ObjectProperty: has_funding_source
 ObjectProperty: has_globalwarmingpotential
 
     SubPropertyOf: 
-        owl:topObjectProperty
+        has
     
     Domain: 
         GreenhouseGas
@@ -314,6 +329,15 @@ ObjectProperty: has_normal_state_of_matter
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure and temperature"
+    
+    SubPropertyOf: 
+        has_quality
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    Range: 
+        state_of_matter
     
     
 ObjectProperty: has_numercical_input
@@ -359,6 +383,9 @@ ObjectProperty: has_objective
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
     
+    SubPropertyOf: 
+        has
+    
     Domain: 
         Optimization
     
@@ -390,7 +417,7 @@ ObjectProperty: has_output
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
     
     SubPropertyOf: 
-        has_participant
+        has
     
     
 ObjectProperty: has_part
@@ -399,7 +426,7 @@ ObjectProperty: has_part
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
     
     SubPropertyOf: 
-        owl:topObjectProperty
+        has
     
     InverseOf: 
         part_of
@@ -407,6 +434,9 @@ ObjectProperty: has_part
     
 ObjectProperty: has_participant
 
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: has_physical_input
 
@@ -450,7 +480,7 @@ ObjectProperty: has_physical_output
 ObjectProperty: has_pollutant
 
     SubPropertyOf: 
-        owl:topObjectProperty
+        has
     
     Domain: 
         Emission
@@ -470,15 +500,24 @@ ObjectProperty: has_programvariable
     
 ObjectProperty: has_quality
 
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: has_resolution
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
     
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: has_role
 
+    SubPropertyOf: 
+        has
+    
     
 ObjectProperty: has_sink
 
@@ -509,6 +548,15 @@ ObjectProperty: has_spatial_resolution
     
 ObjectProperty: has_state_of_matter
 
+    SubPropertyOf: 
+        has_quality
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    Range: 
+        state_of_matter
+    
     
 ObjectProperty: has_subregion
 
@@ -703,6 +751,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000030>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000040>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
