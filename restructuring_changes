@@ -1,0 +1,35 @@
+Most classes werent in their right BFO category and BFOs principle of the asserted monohierarchy was (and is) violated.
+So I moved the classes to their right categories and then started to work on the inconsistencies.
+Most classes were just moved to "independant continuant/ material entity/ object" as they were material objects.
+A detailed description of the changes for consistency reasons is below, sorted by commit:
+
+Commit: First restructuring
+	- Moved classes
+	- Added object properties: depends_on,  g_depends_on and s_depends_on
+	- Added superclass to ModelComponent: "part_of some model"
+	- Added superclass to ElectricityGridComponent: "part_of some ElectricityGrid"
+	- Added ElectricityProductionUnit to ElectricityGridComponent
+	- Removed ElectricityProductionUnit and StorageUnit from MaStR subclasses, but in what relationship do they stand?
+
+Commit: Removed inconsistencies
+	- Removed superclass Transformer from Subgrid
+	- Removed disjoint with ElectricityGrid from Subgrid
+	- Removed uses_dataset some MaStR from WindTurbine bc WindTurbine is an Object and not a Transformation and the range of uses_dataset is transformation
+	- Removed has_input some Sea from WindOffshore bc WindOffShore is a geographicRegion and not an InformationArtefact and the range of has_input is InformationArtefact
+
+Commit: restructured subclasses of WindEntity
+	- The subclasses of WindEntity are: Requierements, ManufacturerSpecifications, TechnicalDataWind, Technology (with semanticweb IRI)
+	- Created new class WindEntityData as subclass of InformationArtifact
+	- Changed subclasses of WindEntity to subclasses of the new class WindEntityData instead, as they are Data and not objects (wind turbines)
+	- Added superclass "has_part some WindEntityData" to WindEntity
+	- Deleted the Technology Class with the IRI http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Technology in favor of the other Technology Class (with the normal oeo IRI) to prevent confusion bc of two "Technology" classes
+	- Changed IRIs of the former subclasses of WindEntity from "http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10" to  "http://openenergy-platform.org/ontology/oeo/" to conform to the ontology
+
+Commit: specifically dependent continuants and Issue #45
+	- I realized that the whole Class ElectricityProductionUnit, rather than just it's subclass WindEntity (renamed to the more specific "WindEntityData") contains specifactions of those units and is not an object. So I moved it to bfo:quality (subclass of specifically dependend continuant) as it depends on the Unit it describes and added the suffix "Property"
+	- Added object properties "has_disposition", "has_role", "has_function" and "has_quality"
+	- Moved Pollutant and it's subclasses GreenhouseGas and Airpollutant to bfo:disposition
+	- Made flourinatedGas subclass of "has_disposition some greenhousegas" instead of greenhousegas
+	- As "Agent" is rather a role in the energy model/ simulation I moved it to role. Which gave me the opportunity to classify ist subclasses new as object aggregate (Organisation) and object (Person)
+	- Added subclass "has_part some Person" to Organisation because it fits the given definition
+	- Implemented changes of issue #45 (generalised the solutions for liquid and solid too): renamed "StateOfMatter" to "PortionOfMatter" and added prefix "PortionOf" to it's subclasses, as well as added the bfo:quality "phase_description" with it's subclasses "Liquid", "Solid", and "Gas"
