@@ -22,17 +22,20 @@ Here is a template for new release sections
 - factsheet categories (#47)
 - storage technologies (#47)
 - `ObjectProperty` `has_normal_state_of_matter` (#39)
-- add individuals `solid`, `liquid`, `gaseous`, `plasmatic` (#39)
-- Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
+- individuals `solid`, `liquid`, `gaseous`, `plasmatic` (#39)
+- has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to
+  fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
 - file AUTHORS.rst (#70)
+- file for with guideline for testing ontology (#54)
 ### Changed
 - agent and subclasses (#51)
 - pollutant and subclasses (#51)
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
-- StateOfMatter and subclasses (#45)
+- StateOfMatter and subclasses (#58)
+- Unify WindEntityData and WindEntityDataset (#59)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
