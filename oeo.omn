@@ -885,7 +885,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#HydroEntityDataset>
 
     SubClassOf: 
-        ElectricityProductionUnit
+        ElectricityProductionEntityDataset
     
     
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#IsolatedOperationCapability>
@@ -1089,7 +1089,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#SolarEntityDataset>
 
     SubClassOf: 
-        ElectricityProductionUnit
+        ElectricityProductionEntityDataset
     
     
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Street>
@@ -1653,7 +1653,7 @@ Class: CommericalDemand
 Class: CommonParameters
 
     SubClassOf: 
-        ElectricityProductionUnit
+        InformationArtifact
     
     
 Class: Community
@@ -2060,8 +2060,14 @@ Class: ElectricityGridComponent
         <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is a part of an electrical grid."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        Technology,
         part_of some ElectricityGrid
+    
+    
+Class: ElectricityProductionEntityDataset
+
+    SubClassOf: 
+        Dataset
     
     
 Class: ElectricityProductionUnit
@@ -2076,9 +2082,7 @@ Class: ElectricitySector
         <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en
     
-    SubClassOf:
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        part_of some ElectricityGrid,
+    SubClassOf: 
         Sector
     
     
@@ -4980,17 +4984,10 @@ Class: WindElectricityGenerator
         RenewableGeneratorTechnology
     
     
-Class: WindEntity
-
-    SubClassOf: 
-        ElectricityProductionUnit,
-        has_part some Generator
-    
-    
 Class: WindEntityDataset
 
     SubClassOf: 
-        ElectricityProductionUnit,
+        ElectricityProductionEntityDataset,
         has_part some Generator
     
     
