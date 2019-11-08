@@ -11,3 +11,7 @@ This repository is licensed under CC0 1.0 Universell (CC0 1.0) Public Domain Ded
 ## Installation
 
 * [protégé](https://protege.stanford.edu/)
+
+## Development
+
+Please read the `CONTRIBUTE.md` file before working on this repository
