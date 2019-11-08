@@ -4,6 +4,8 @@
 
 - [Git](https://git-scm.com/)
 
+### Contribution of OEO content
+Please read [OEO wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
 
 ### Philosophy
 
