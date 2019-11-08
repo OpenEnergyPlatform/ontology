@@ -69,6 +69,9 @@ ObjectProperty: comparesTo
     
 ObjectProperty: conforms_to
 
+    SubPropertyOf: 
+        has_participant
+    
     Domain: 
         conforms_to some SectorConcept
     
@@ -147,9 +150,6 @@ ObjectProperty: generates_dataset
     
 ObjectProperty: handles_uncertainty
 
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
     
 ObjectProperty: has
 
@@ -407,6 +407,9 @@ ObjectProperty: has_part
     
 ObjectProperty: has_participant
 
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
     
 ObjectProperty: has_physical_input
 
@@ -439,12 +442,6 @@ ObjectProperty: has_physical_output
     Characteristics: 
         Irreflexive,
         Asymmetric
-    
-    Domain: 
-        EnergyGeneratorTechnology
-    
-    Range: 
-        Power
     
     
 ObjectProperty: has_pollutant
@@ -664,6 +661,18 @@ ObjectProperty: uses_software
 
     SubPropertyOf: 
         uses
+    
+    
+ObjectProperty: utilizes_dataset
+
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: utilizes_program_parameter
+
+    SubPropertyOf: 
+        has_input
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1799,6 +1808,12 @@ Class: DammedWater
     SubClassOf: 
         Water,
         is_used_by some StorageUnit
+    
+    
+Class: Data
+
+    SubClassOf: 
+        InformationArtifact
     
     
 Class: DataDescriptor
@@ -3231,6 +3246,18 @@ Class: ModelCalculation
         has_tool some Model
     
     
+Class: ModelComponent
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: ModelConstraint
+
+    SubClassOf: 
+        ModelComponent
+    
+    
 Class: ModelElement
 
     Annotations: 
@@ -3957,7 +3984,8 @@ Class: Publication
         <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
     
     SubClassOf: 
-        Reference
+        Reference,
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: PumpedStorage
