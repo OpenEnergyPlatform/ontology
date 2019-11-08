@@ -5,12 +5,18 @@
 - [Git](https://git-scm.com/)
 
 ### Contribution of OEO content
-Please read [OEO wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
+- Please read [OEO wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
+- Please add your information to the `AUTHORS.rst` file using the
+  workflow described below. This will be your first Pull request on this
+  repository and will help you to familiarize yourself with our workflow
+  
+### Workflow
 
-### Philosophy
-
-The development of a feature for this repository is inspired from the workflow described 
-by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
+The development of a feature for this repository is inspired from the
+workflow described by
+[Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
+If you are unsure about an instruction please notify @Bachibouzouk (you
+can also create an issue, point 1 below, to explain what is not clear).
 
 1. Create [an issue](https://help.github.com/en/articles/creating-an-issue) on the github repository to describe the addition to the ontology. Discussion about the implementation details should occur within this issue 
 2. Create a branch from dev to work on your issue (see below, the "Branch name convention" section)
