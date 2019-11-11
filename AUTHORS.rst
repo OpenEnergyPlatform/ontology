@@ -55,7 +55,11 @@ During Master
  * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
+* @izzet91 
 
+ * 2 months of experience with ontology
+ * Started working on this project since 2019-09-01
+ * Specific relevant area of expertise for this project: Implementing MaStR in the ontology
 
 During Bachelor
 ---------------
