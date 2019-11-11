@@ -13,7 +13,7 @@ With Ph.D.
 * github handle (+ real name if relevant/wanted)
 
  * X years of experience with ontology
- * Started working on this project since 20XX-XX-XX
+ * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
 
@@ -23,7 +23,7 @@ With Master
 * github handle (+ real name if relevant/wanted)
 
  * X years of experience with ontology
- * Started working on this project since 20XX-XX-XX
+ * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
 
@@ -33,13 +33,13 @@ Researchers
 * @Bachibouzouk
 
  * 0 year of experience with ontology
- * Started working on this project since 2019-10-01
+ * Working on this ontology since 2019-10-01
  * Specific relevant area of expertise for this project: github workflow
 
 * github handle (+ real name if relevant/wanted)
 
  * X years of experience with ontology
- * Started working on this project since 20XX-XX-XX
+ * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
 
@@ -52,7 +52,7 @@ During Master
 * github handle (+ real name if relevant/wanted)
 
  * X years of experience with ontology
- * Started working on this project since 20XX-XX-XX
+ * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
 
@@ -63,7 +63,7 @@ During Bachelor
 * github handle (+ real name if relevant/wanted)
 
  * X years of experience with ontology
- * Started working on this project since 20XX-XX-XX
+ * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
 
@@ -74,7 +74,7 @@ Past contributors to the ontology
 * github handle (+ real name if relevant/wanted)
 
  * X years of experience with ontology
- * Started working on this project since 20XX-XX-XX
+ * Working on this ontology since 20XX-XX-XX
  * Specific relevant area of expertise for this project: ...
 
 
