@@ -35,7 +35,19 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
 7. [Ask someone](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) to review your PR 
 8. Write the PR number in the corresponding issue so that they are linked
 9. (if approved) Merge the PR into `dev` and delete the branch on which you were working
-    
+   
+### Specific workflow
+We distinguish workflows between A) including new terms and B) restructuring existing parts.
+
+A) Including new terms to the ontology 
+- 1 PR for 1 new term (with maximum a few(!) subclasses, if at all)
+- each term has to include adequate bfo classification, proper definition, proper relations
+- a discussion on the topic from the energy modelling domain's point of view is recommended
+- review by at least 2 domain experts
+
+B) Restructuring existing parts: tbd.
+
+Please include in the PR and issue name a [A] or [B] to indicate which part of the workflow you are refering to. 
 
 ### Branch name convention
 The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_`).
