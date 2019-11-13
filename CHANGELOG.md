@@ -27,6 +27,7 @@ Here is a template for new release sections
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
 ### Changed
+- FluorinatedGreenhouseGas (#88)
 - agent and subclasses (#51)
 - pollutant and subclasses (#51)
 - structure of the ontology (#47)
