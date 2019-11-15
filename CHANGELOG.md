@@ -26,6 +26,8 @@ Here is a template for new release sections
 - Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
+- issue templates (#92) 
+  
 ### Changed
 - FluorinatedGreenhouseGas (#88)
 - agent and subclasses (#51)
