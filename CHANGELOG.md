@@ -32,7 +32,7 @@ Here is a template for new release sections
 - pollutant and subclasses (#51)
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
-- StateOfMatter and subclasses (#45)
+- StateOfMatter and subclasses (#45)(#105)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
