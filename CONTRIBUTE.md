@@ -43,7 +43,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
 3. Open [protégé](https://protege.stanford.edu/) and work on the ontology
 
     One can also edit the `oeo.omn` file in a text editor
-4. Before committing your changes, open the `oeo.omn` file with protégé and save the file from protégé. See the "Conventions" section for the commit messages format
+4. Before committing your changes, open the `oeo.omn` file with protégé and save the file from protégé. You should also check if you included unconsistencies by following [this ontology test procedure](https://github.com/OpenEnergyPlatform/ontology/wiki/ontology-test-guide)
+
+    See the "Conventions" section below for commit messages format tips
 5. Push your local branch on the remote server `origin`
     ```bash
     git push
@@ -65,7 +67,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
 
 11. Check that, after this whole process, you branch does not have conflict with `dev` (github prevents you to merge if there are conflicts). In case of conflicts you are responsible to fix them on your branch before your merge (see below "Fixing merge conflicts" section)
     
-12. (if approved) Merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into dev, so they know they have to check for potential conflicts with `dev`
+12. (if approved) Merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
    
    
 ### Fixing merge conflicts
@@ -99,7 +101,11 @@ In case of conflicts between your branch and `dev` you must solve them locally.
     
 
 ### Conventions
-The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_`).
+The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). Is it also nice to end the branch name with the issue number it linked to:
+
+Examples of branch names : `feature/solving-duplicate-problems-#11` or `feature/add_ontology_new_class_#43`
+
+If the branch purpose is to fix a problem `feature/` can be replaced by `fix/`
 
 Try to follow [these conventions](https://chris.beams.io/posts/git-commit) for commit messages:
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
