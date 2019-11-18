@@ -19,14 +19,25 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     A) Including a new term to the ontology. Only 1 new term (with a few subclasses, if at all)
     
     B) Restructuring existing parts of the ontology
-    
+
     C) Other issue
 
     Discussion about the implementation details should occur within this issue. [Assign a project](https://help.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar) (default "Issues") to the issue
 
-2. Create a branch from dev to work on your issue (see below, the "Branch name convention" section)
+2. Create a branch from `dev` to work on your issue (see below, the "Branch name convention" section)
+
+    **Important**: If you are working on an issue of type A), please discuss with someone else within the issue thread **before** starting to work on a solution on your own
+
+    Checkout the latest stand of `dev`
     ```bash
-    git checkout -b feature/myfeature dev
+    git checkout dev
+    ```
+    ```bash
+    git pull
+    ```
+    Branch from `dev`
+    ```bash
+    git checkout -b feature/myfeature
     ```
     As all need to edit the same `oeo.omn` file, it is better to merge one changes as fast *as possible* (i.e. do not wait for 6 months) to avoid merging conflicts
 3. Open [protégé](https://protege.stanford.edu/) and work on the ontology
