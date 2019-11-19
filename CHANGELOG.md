@@ -27,7 +27,7 @@ Here is a template for new release sections
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
 - issue templates (#92) 
-- ArtificialObject (#120) 
+- ArtificialObject (#121) 
 
 ### Changed
 - FluorinatedGreenhouseGas (#88)
