@@ -26,7 +26,9 @@ Here is a template for new release sections
 - Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
-- ArtificialObject (#120)
+- issue templates (#92) 
+- ArtificialObject (#120) 
+
 ### Changed
 - FluorinatedGreenhouseGas (#88)
 - agent and subclasses (#51)
@@ -34,6 +36,8 @@ Here is a template for new release sections
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
 - StateOfMatter and subclasses (#45)
+- improved workflow in `CONTRIBUTE.md` (#98)
+- linked wiki and `CONTRIBUTE.md` in `README`(#113)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
