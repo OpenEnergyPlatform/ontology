@@ -44,4 +44,8 @@ Here is a template for new release sections
 - some superclasses of unsatisfiable classes and some that made the
   ontology inconsistent (#51)
 - contact and subclasses (#101)
+- subclasses of assumption (#102)
+
+
+
 
