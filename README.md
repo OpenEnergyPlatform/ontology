@@ -21,8 +21,8 @@ The workflow is described in the [CONTRIBUTE.md](https://github.com/OpenEnergyPl
 
 If you have a specific question about ontology, modelling or economy (in context of the ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these team to notify its members that you need their feedback/help.
 
-- @economy-experts
+- [@economy-experts](https://github.com/orgs/OpenEnergyPlatform/teams/economy-experts)
 
-- @ontology-experts
+- [@ontology-experts](https://github.com/orgs/OpenEnergyPlatform/teams/modelling-experts)
 
-- @modelling-experts
+- [@modelling-experts](https://github.com/orgs/OpenEnergyPlatform/teams/ontology-experts)
