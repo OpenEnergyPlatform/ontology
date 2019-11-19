@@ -151,12 +151,6 @@ ObjectProperty: generates_dataset
 ObjectProperty: handles_uncertainty
 
     
-ObjectProperty: has
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
 ObjectProperty: hasMaximum
 
     SubPropertyOf: 
@@ -243,9 +237,6 @@ ObjectProperty: has_disposition
     
 ObjectProperty: has_documentation
 
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_function
 
@@ -285,9 +276,6 @@ ObjectProperty: has_input
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_institution
 
@@ -306,9 +294,6 @@ ObjectProperty: has_license
     
 ObjectProperty: has_logo
 
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_normal_state_of_matter
 
@@ -1291,6 +1276,15 @@ Class: Appliance
         ResidentialDemand
     
     
+Class: ArtificialObject
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ArtificialObject is an object that was deliberately manufactured by humans to address a particular purpose."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
 Class: AssociatedGas
 
     Annotations: 
@@ -1719,12 +1713,6 @@ Class: ConsumptionQuantity
         Quantity
     
     
-Class: Contact
-
-    SubClassOf: 
-        InformationArtifact
-    
-    
 Class: ContactPerson
 
     SubClassOf: 
@@ -2074,12 +2062,6 @@ Class: ElectricitySector
         Sector
     
     
-Class: Email
-
-    SubClassOf: 
-        Contact
-    
-    
 Class: Emission
 
     Annotations: 
@@ -2246,12 +2228,6 @@ Class: Factsheet
 
     SubClassOf: 
         EmpiricalDataset
-    
-    
-Class: Fax
-
-    SubClassOf: 
-        Contact
     
     
 Class: FederalState
@@ -3705,12 +3681,6 @@ Class: Person
         Organization
     
     
-Class: Phone
-
-    SubClassOf: 
-        Contact
-    
-    
 Class: PhotovoltaicElectricityGenerator
 
     Annotations: 
@@ -4231,7 +4201,7 @@ Class: Sector
 Class: SectorConcept
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector concept contains concepts of possible sectors."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorConcept is a specific way to subdivide a system."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
