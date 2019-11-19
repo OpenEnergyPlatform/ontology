@@ -4,6 +4,10 @@
 
 Developing a common ontology for energy system analysis and scenarios.
 
+## Scope of this ontology
+
+This **domain** ontology is a joint effort to represent the energy-system modelling context based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability & transferability within the energy system modelling context.
+
 ## License / Copyright
 
 This repository is licensed under CC0 1.0 Universell (CC0 1.0) Public Domain Dedication
