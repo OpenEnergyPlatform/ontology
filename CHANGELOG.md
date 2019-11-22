@@ -19,6 +19,7 @@ Here is a template for new release sections
 ## [Unreleased]
 
 ### Added
+- Concepts of biogenic, fossil, renewable and synthetic (#130)
 - factsheet categories (#47)
 - storage technologies (#47)
 - `ObjectProperty` `has_normal_state_of_matter` (#39)
