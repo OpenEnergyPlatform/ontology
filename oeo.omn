@@ -21,12 +21,12 @@ Annotations:
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Hannah Förster",
     dc:contributor "Izzet Kilicarslan",
+    dc:contributor "Lara Christmann",
     dc:contributor "Ludwig Hülk",
     dc:contributor "Lukas Emele",
     dc:contributor "Martin Glauer",
     dc:contributor "Mirjam Stappel",
     dc:contributor "Pierre-Francois Duc",
-    dc:contributor "Lara Christmann",
     dc:contributor "Sebastian Cordes",
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
     rdfs:comment "Include description of the ontology (in particular its scope) here ..."
@@ -304,7 +304,7 @@ ObjectProperty: has_logo
 ObjectProperty: has_normal_state_of_matter
 
     Annotations: 
-<http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)"
     
     SubPropertyOf: 
         has_quality
@@ -376,6 +376,15 @@ ObjectProperty: has_objectivevariable
     
     SubPropertyOf: 
         has_objective
+    
+    
+ObjectProperty: has_origin
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has the origin of y"
+    
+    SubPropertyOf: 
+        has_quality
     
     
 ObjectProperty: has_output
@@ -5000,6 +5009,15 @@ Class: Workshop
         Support
     
     
+Class: origin
+
+    Annotations: 
+        rdfs:comment "The origin is a quality describing the source."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
 Class: state_of_matter
 
     Annotations: 
@@ -6112,3 +6130,4 @@ DisjointClasses:
 
 DisjointClasses: 
     LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
+
