@@ -21,12 +21,12 @@ Annotations:
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Hannah Förster",
     dc:contributor "Izzet Kilicarslan",
+    dc:contributor "Lara Christmann",
     dc:contributor "Ludwig Hülk",
     dc:contributor "Lukas Emele",
     dc:contributor "Martin Glauer",
     dc:contributor "Mirjam Stappel",
     dc:contributor "Pierre-Francois Duc",
-    dc:contributor "Lara Christmann",
     dc:contributor "Sebastian Cordes",
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
     rdfs:comment "Include description of the ontology (in particular its scope) here ..."
@@ -304,7 +304,7 @@ ObjectProperty: has_logo
 ObjectProperty: has_normal_state_of_matter
 
     Annotations: 
-<http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)"
     
     SubPropertyOf: 
         has_quality
@@ -1351,7 +1351,7 @@ Class: Battery
         <http://purl.obolibrary.org/obo/IAO_0000115> "A Battery is a device using different chemical or physical reactions to store energy."@en
     
     SubClassOf: 
-        EnergyStorageTechnology,
+        Thermal,
         is_used_by some StorageUnit
     
     
@@ -1367,7 +1367,7 @@ Class: BatteryStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     DisjointWith: 
         MethanationGasStorage
@@ -1379,7 +1379,7 @@ Class: BioElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: BioGasGenerator
@@ -1388,7 +1388,7 @@ Class: BioGasGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas generator uses biogas to generate electricity."@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
         has_physical_input only Biogas
     
@@ -1581,7 +1581,7 @@ Class: CoalElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A coal electricity generator technology uses coal to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: CoalPowerplant
@@ -1981,7 +1981,7 @@ Class: ElectricVehicle
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Electric_vehicle&oldid=906776214"@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: ElectricalEnergy
@@ -2023,6 +2023,12 @@ Class: ElectricityExport
     
     SubClassOf: 
         Quantity
+    
+    
+Class: ElectricityGenerator
+
+    SubClassOf: 
+        ArtificialObject
     
     
 Class: ElectricityGeneratorTechnology
@@ -2176,6 +2182,12 @@ Class: EnergyFromElectricityInTraffic
         EnergyCarrierQuantity
     
     
+Class: EnergyGenerator
+
+    SubClassOf: 
+        ArtificialObject
+    
+    
 Class: EnergyGeneratorTechnology
 
     Annotations: 
@@ -2202,6 +2214,12 @@ Class: EnergySector
         Sector
     
     
+Class: EnergyStorage
+
+    SubClassOf: 
+        ArtificialObject
+    
+    
 Class: EnergyStorageTechnology
 
     Annotations: 
@@ -2209,6 +2227,12 @@ Class: EnergyStorageTechnology
     
     SubClassOf: 
         Technology
+    
+    
+Class: EnergyTransfer
+
+    SubClassOf: 
+        ArtificialObject
     
     
 Class: EnergyTransferTechnology
@@ -2319,6 +2343,15 @@ Class: Forum
 
     SubClassOf: 
         Support
+    
+    
+Class: FossilGenerator
+
+    SubClassOf: 
+        ElectricityGenerator
+    
+    DisjointWith: 
+        RenewableGenerator
     
     
 Class: FossilGeneratorTechnology
@@ -2433,7 +2466,7 @@ Class: GasTurbineGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
     
     SubClassOf: 
-        ElectricityGeneratorTechnology
+        ElectricityGenerator
     
     
 Class: Gasoline
@@ -2604,7 +2637,7 @@ Class: Hardware
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en
     
     SubClassOf: 
-        ModelingTechnology
+        ArtificialObject
     
     
 Class: Heat
@@ -2636,6 +2669,12 @@ Class: HeatDemand
         Demand
     
     
+Class: HeatGenerator
+
+    SubClassOf: 
+        ArtificialObject
+    
+    
 Class: HeatGeneratorTechnology
 
     Annotations: 
@@ -2651,7 +2690,7 @@ Class: HeatPumpHeatGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
     
     SubClassOf: 
-        HeatGeneratorTechnology
+        HeatGenerator
     
     
 Class: HeatSector
@@ -2747,7 +2786,7 @@ Class: Hydrogen
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: HydrogenPowerplant
@@ -3166,7 +3205,7 @@ Class: MethanationGasStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     DisjointWith: 
         BatteryStorage
@@ -3356,7 +3395,7 @@ Class: NaturalGasGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas electricity generator technology uses natural gas to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: NetworkNode
@@ -3442,7 +3481,7 @@ Class: NuclearPowerGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear generator technology is a fossil electricity generator that uses nuclear reactions to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: NuclearPowerplant
@@ -3513,7 +3552,7 @@ Class: OilElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: OilPowerplant
@@ -3631,7 +3670,7 @@ Class: PVPanel
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_panel&oldid=906976047"@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
         has_physical_input only SolarPhotovoltaic
     
@@ -3699,7 +3738,7 @@ Class: PhotovoltaicElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: PhotovoltaicGenerator
@@ -3861,7 +3900,7 @@ Class: PowerToGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: PowerUnit
@@ -3948,7 +3987,7 @@ Class: PumpedStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) uses water from a higher reservoir to generate energy"@en
     
     SubClassOf: 
-        EnergyStorageTechnology,
+        EnergyStorage,
         is_used_by some StorageUnit
     
     
@@ -4024,6 +4063,15 @@ Class: RegenerativePowerplant
     SubClassOf: 
         PowerGeneratingUnit,
         has_part some WindTurbine
+    
+    
+Class: RenewableGenerator
+
+    SubClassOf: 
+        ElectricityGenerator
+    
+    DisjointWith: 
+        FossilGenerator
     
     
 Class: RenewableGeneratorTechnology
@@ -4363,7 +4411,7 @@ Class: SolarThermalCollector
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
         has_physical_input only SolarThermal
     
@@ -4374,7 +4422,7 @@ Class: SolarThermalHeatGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
     
     SubClassOf: 
-        HeatGeneratorTechnology
+        HeatGenerator
     
     
 Class: SolarThermalPowerplant
@@ -4485,7 +4533,7 @@ Class: SuperconductingMagneticEnergy
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Superconducting_magnetic_energy_storage&oldid=902190687"
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: Support
@@ -4534,7 +4582,7 @@ Class: Technology
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: TestDataset
@@ -4550,7 +4598,7 @@ Class: Thermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "Sarbu, Ioan & Sebarchievici, C. (2018). A Comprehensive Review of Thermal Energy Storage. Sustainability (Switzerland). 10. 10.3390/su10010191. "
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: TidalPowerPlant
@@ -4573,7 +4621,7 @@ Class: TidalStreamGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
         has_physical_input only TideWaveOcean
     
@@ -4709,7 +4757,7 @@ Class: Turbine
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Turbine&oldid=905470312"
     
     SubClassOf: 
-        EnergyGeneratorTechnology
+        EnergyGenerator
     
     
 Class: Type
@@ -4862,7 +4910,7 @@ Class: WaterElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: WaterTurbine
@@ -4923,7 +4971,7 @@ Class: WindElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind electricity generator technology uses wind power to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: WindEntity
@@ -6090,6 +6138,9 @@ DisjointClasses:
     CommerceSector,HouseholdSector,IndustrySector
 
 DisjointClasses: 
+    ElectricityGenerator,EnergyGenerator,EnergyStorage,EnergyTransfer,HeatGenerator
+
+DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
 DisjointClasses: 
@@ -6112,3 +6163,4 @@ DisjointClasses:
 
 DisjointClasses: 
     LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
+
