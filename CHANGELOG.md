@@ -39,6 +39,7 @@ Here is a template for new release sections
 - improved workflow in `CONTRIBUTE.md` (#98)
 - linked wiki and `CONTRIBUTE.md` in `README`(#113)
 - add github team handle in `README` (#119)
+- technology and subclasses
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
