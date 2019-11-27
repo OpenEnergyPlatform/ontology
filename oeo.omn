@@ -1394,7 +1394,8 @@ Class: Biodiesel
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        LiquidBiofuel
+        PortionOfMatter,
+        has_disposition some LiquidBiofuel
     
     
 Class: Biofuel
@@ -1409,6 +1410,15 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         Fuel
     
     
+Class: BiofuelObject
+
+    EquivalentTo: 
+        has_disposition some Biofuel
+    
+    SubClassOf: 
+        FuelObject
+    
+    
 Class: Biogas
 
     Annotations: 
@@ -1416,7 +1426,8 @@ Class: Biogas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        Biofuel
+        PortionOfMatter,
+        has_disposition some Biofuel
     
     
 Class: BiogasElectricityGenerator
@@ -1440,7 +1451,8 @@ Class: Biogasoline
         rdfs:label "Biogasoline"@en
     
     SubClassOf: 
-        LiquidBiofuel
+        PortionOfMatter,
+        has_disposition some LiquidBiofuel
     
     
 Class: BiomassElectricityGenerator
@@ -3121,6 +3133,15 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
         has_normal_state_of_matter value liquid
     
     
+Class: LiquidBiofuelObject
+
+    EquivalentTo: 
+        has_disposition some LiquidBiofuel
+    
+    SubClassOf: 
+        BiofuelObject
+    
+    
 Class: LiquidMetalBattery
 
     Annotations: 
@@ -4459,7 +4480,8 @@ Class: SolidBiomass
         rdfs:label "SolidBiomass"@en
     
     SubClassOf: 
-        Biofuel,
+        PortionOfMatter,
+        has_disposition some Biofuel,
         has_normal_state_of_matter value solid
     
     
