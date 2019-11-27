@@ -72,6 +72,18 @@ ObjectProperty: appliesTo
     
 ObjectProperty: applies_technology
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "the property of an ArtificialObject to apply a Technology."
+    
+    Domain: 
+        ArtificialObject
+    
+    Range: 
+        Technology
+    
+    InverseOf: 
+        is_applied_by_object
+    
     
 ObjectProperty: comparesTo
 
@@ -550,6 +562,21 @@ ObjectProperty: isEqual
 
     SubPropertyOf: 
         comparesTo
+    
+    
+ObjectProperty: is_applied_by_object
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The property of a technology to be applied by an ArtificialObject."
+    
+    Domain: 
+        Technology
+    
+    Range: 
+        ArtificialObject
+    
+    InverseOf: 
+        applies_technology
     
     
 ObjectProperty: is_connected_to
@@ -2031,7 +2058,8 @@ Class: ElectricityExport
 Class: ElectricityGenerator
 
     SubClassOf: 
-        Generator
+        Generator,
+        applies_technology some ElectricityGeneratorTechnology
     
     
 Class: ElectricityGeneratorTechnology
