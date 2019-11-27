@@ -1565,7 +1565,8 @@ Class: Coal
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
     
     SubClassOf: 
-        SolidFossilFuels,
+        PortionOfMatter,
+        has_disposition some SolidFossilFuels,
         has_normal_state_of_matter value solid
     
     
@@ -2394,6 +2395,15 @@ Class: Fuel
         has_disposition some EnergyCarrier
     
     
+Class: FuelObject
+
+    EquivalentTo: 
+        has_disposition some Fuel
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
 Class: FuelPrice
 
     SubClassOf: 
@@ -3148,7 +3158,8 @@ Class: ManufacturedCoalBasedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal_gasification&oldid=904933607"@en
     
     SubClassOf: 
-        SolidFossilFuels,
+        PortionOfMatter,
+        has_disposition some SolidFossilFuels,
         has_normal_state_of_matter value gaseous
     
     
@@ -3687,7 +3698,8 @@ This definition is without prejudice to the definition of renewable energy sourc
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolidFossilFuels,
+        PortionOfMatter,
+        has_disposition some SolidFossilFuels,
         has_normal_state_of_matter value solid
     
     
@@ -4457,6 +4469,15 @@ Class: SolidBiomass
     SubClassOf: 
         Biofuel,
         has_normal_state_of_matter value solid
+    
+    
+Class: SolidFossilFuelObject
+
+    EquivalentTo: 
+        has_disposition some SolidFossilFuels
+    
+    SubClassOf: 
+        FuelObject
     
     
 Class: SolidFossilFuels
