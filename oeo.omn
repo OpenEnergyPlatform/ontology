@@ -70,6 +70,9 @@ Datatype: rdf:PlainLiteral
 ObjectProperty: appliesTo
 
     
+ObjectProperty: applies_technology
+
+    
 ObjectProperty: comparesTo
 
     
@@ -2217,7 +2220,8 @@ Class: EnergySector
 Class: EnergyStorage
 
     SubClassOf: 
-        ArtificialObject
+        ArtificialObject,
+        applies_technology some EnergyStorageTechnology
     
     
 Class: EnergyStorageTechnology
@@ -2232,7 +2236,8 @@ Class: EnergyStorageTechnology
 Class: EnergyTransfer
 
     SubClassOf: 
-        ArtificialObject
+        ArtificialObject,
+        applies_technology some EnergyTransferTechnology
     
     
 Class: EnergyTransferTechnology
@@ -3314,12 +3319,6 @@ Class: ModelingSoftware
         Software
     
     
-Class: ModelingTechnology
-
-    SubClassOf: 
-        Technology
-    
-    
 Class: Modus
 
     SubClassOf: 
@@ -4337,7 +4336,7 @@ Class: Software
         <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
     
     SubClassOf: 
-        ModelingTechnology
+        InformationArtifact
     
     
 Class: SoftwareDescriptor
