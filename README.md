@@ -17,6 +17,6 @@ This repository is licensed under CC0 1.0 Universell (CC0 1.0) Public Domain Ded
 * [protégé](https://protege.stanford.edu/)
 
 ## Contributing and developing
-Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards and best practise principles on content and BFO classification.
+Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
  
 The workflow is described in the [CONTRIBUTE.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTE.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [github issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
