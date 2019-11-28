@@ -65,6 +65,8 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     
     C) If your PR does not modify the ontology, only one reviewer is enough
 
+    When more than one reviewer is requested, please try to combine modelling and ontology expertise in your choice of reviewers. (see the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about who is expert of what)
+
 11. Check that, after this whole process, you branch does not have conflict with `dev` (github prevents you to merge if there are conflicts). In case of conflicts you are responsible to fix them on your branch before your merge (see below "Fixing merge conflicts" section)
     
 12. (if approved) Merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
