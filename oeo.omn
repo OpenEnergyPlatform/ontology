@@ -1787,8 +1787,7 @@ Class: CrudeOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfMatter,
-        has_disposition some OilAndPetroleumProducts
+        OilAndPetroleumProducts
     
     
 Class: DCLine
@@ -2358,6 +2357,7 @@ There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur
         <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
+        GreenhouseGas,
         has_disposition some GreenhouseGas
     
     
@@ -2454,8 +2454,7 @@ Class: GasDieselOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfMatter,
-        has_disposition some OilAndPetroleumProducts,
+        OilAndPetroleumProducts,
         has_normal_state_of_matter value liquid
     
     
@@ -2498,8 +2497,7 @@ Class: Gasoline
         <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640"
     
     SubClassOf: 
-        PortionOfMatter,
-        has_disposition some OilAndPetroleumProducts,
+        OilAndPetroleumProducts,
         has_normal_state_of_matter value liquid
     
     
@@ -2842,14 +2840,14 @@ Class: Identifier
         InformationArtifact
     
     
-Class: IndustrialWaste
+Class: IndustrialWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Report wastes of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat. The quantity of fuel used should be reported on a net calorific value basis. Renewable industrial waste should be reported in the solid biomass, biogas and/or liquid biofuels categories."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Waste
+        WasteFuel
     
     
 Class: IndustrialWasteFuelObject
@@ -3020,8 +3018,7 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484"
     
     SubClassOf: 
-        PortionOfMatter,
-        has_disposition some OilAndPetroleumProducts,
+        OilAndPetroleumProducts,
         has_normal_state_of_matter value liquid
     
     
@@ -3392,20 +3389,20 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
         Gasoline
     
     
-Class: MunicipalWaste
+Class: MunicipalWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Waste
+        WasteFuel
     
     
 Class: MunicipalWasteFuelObject
 
     EquivalentTo: 
-        has_disposition some MunicipalWaste
+        has_disposition some MunicipalWasteFuel
     
     SubClassOf: 
         WasteFuelObject
@@ -3428,7 +3425,8 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Fuel,
+        PortionOfMatter,
+        has_disposition some Fuel,
         has_normal_state_of_matter value gaseous
     
     
@@ -3496,7 +3494,7 @@ Class: NonRenewableMunicipalWaste
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWaste
+        MunicipalWasteFuel
     
     
 Class: NonRenewableMunicipalWasteFuelObject
@@ -3595,16 +3593,8 @@ It consists of hydrocarbons of various molecular weights and other organic compo
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
     
     SubClassOf: 
-        Fuel
-    
-    
-Class: OilAndPetroleumProductsFuelObject
-
-    EquivalentTo: 
-        has_disposition some OilAndPetroleumProducts
-    
-    SubClassOf: 
-        FuelObject
+        PortionOfMatter,
+        has_disposition some Fuel
     
     
 Class: OilElectricityGenerator
@@ -4121,7 +4111,7 @@ Class: RenewableMunicipalWaste
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWaste
+        MunicipalWasteFuel
     
     
 Class: RenewableMunicipalWasteFuelObject
@@ -4940,7 +4930,7 @@ Class: Warehouse
         CommericalDemand
     
     
-Class: Waste
+Class: WasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Waste (or wastes) are unwanted or unusable materials. Waste is any substance which is discarded after primary use, or is worthless, defective and of no use."@en,
@@ -4953,7 +4943,7 @@ Class: Waste
 Class: WasteFuelObject
 
     EquivalentTo: 
-        has_disposition some Waste
+        has_disposition some WasteFuel
     
     SubClassOf: 
         FuelObject
