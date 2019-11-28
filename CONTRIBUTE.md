@@ -61,7 +61,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
  
     A) If including new terms to the ontology, ask at least two persons to review
     
-    B) If restructuring the ontology, one person is enough, though two is better
+    B) If restructuring the ontology, ask at least two persons to review
     
     C) If your PR does not modify the ontology, only one reviewer is enough
 
