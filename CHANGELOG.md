@@ -29,6 +29,7 @@ Here is a template for new release sections
   'has_quality' (#51)
 - issue templates (#92) 
 - ArtificialObject (#121) 
+- Grid (#137)
 
 ### Changed
 - FluorinatedGreenhouseGas (#88)
