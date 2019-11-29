@@ -61,9 +61,11 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
  
     A) If including new terms to the ontology, ask at least two persons to review
     
-    B) If restructuring the ontology, one person is enough, though two is better
+    B) If restructuring the ontology, ask at least two persons to review
     
     C) If your PR does not modify the ontology, only one reviewer is enough
+
+    When more than one reviewer is requested, please try to combine modelling and ontology expertise in your choice of reviewers. (see the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about who is expert of what)
 
 11. Check that, after this whole process, you branch does not have conflict with `dev` (github prevents you to merge if there are conflicts). In case of conflicts you are responsible to fix them on your branch before your merge (see below "Fixing merge conflicts" section)
     
