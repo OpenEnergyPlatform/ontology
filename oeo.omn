@@ -16,11 +16,17 @@ Ontology: <http://openenergy-platform.org/ontology/oeo/>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
+    dc:contributor "Anna Kleinau",
     dc:contributor "Christian Winger",
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Hannah Förster",
+    dc:contributor "Izzet Kilicarslan",
+    dc:contributor "Lara Christmann",
+    dc:contributor "Ludwig Hülk",
     dc:contributor "Lukas Emele",
     dc:contributor "Martin Glauer",
+    dc:contributor "Mirjam Stappel",
+    dc:contributor "Pierre-Francois Duc",
     dc:contributor "Sebastian Cordes",
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
     rdfs:comment "Include description of the ontology (in particular its scope) here ..."
@@ -69,6 +75,9 @@ ObjectProperty: comparesTo
     
 ObjectProperty: conforms_to
 
+    SubPropertyOf: 
+        has_participant
+    
     Domain: 
         conforms_to some SectorConcept
     
@@ -147,15 +156,6 @@ ObjectProperty: generates_dataset
     
 ObjectProperty: handles_uncertainty
 
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: has
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
     
 ObjectProperty: hasMaximum
 
@@ -243,9 +243,6 @@ ObjectProperty: has_disposition
     
 ObjectProperty: has_documentation
 
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_function
 
@@ -285,9 +282,6 @@ ObjectProperty: has_input
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_institution
 
@@ -306,14 +300,14 @@ ObjectProperty: has_license
     
 ObjectProperty: has_logo
 
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_normal_state_of_matter
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure and temperature"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)"
+    
+    SubPropertyOf: 
+        has_quality
     
     
 ObjectProperty: has_numercical_input
@@ -384,6 +378,15 @@ ObjectProperty: has_objectivevariable
         has_objective
     
     
+ObjectProperty: has_origin
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has the origin of y"
+    
+    SubPropertyOf: 
+        has_quality
+    
+    
 ObjectProperty: has_output
 
     Annotations: 
@@ -407,6 +410,9 @@ ObjectProperty: has_part
     
 ObjectProperty: has_participant
 
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
     
 ObjectProperty: has_physical_input
 
@@ -439,12 +445,6 @@ ObjectProperty: has_physical_output
     Characteristics: 
         Irreflexive,
         Asymmetric
-    
-    Domain: 
-        EnergyGeneratorTechnology
-    
-    Range: 
-        Power
     
     
 ObjectProperty: has_pollutant
@@ -509,6 +509,9 @@ ObjectProperty: has_spatial_resolution
     
 ObjectProperty: has_state_of_matter
 
+    SubPropertyOf: 
+        has_quality
+    
     
 ObjectProperty: has_subregion
 
@@ -664,6 +667,18 @@ ObjectProperty: uses_software
 
     SubPropertyOf: 
         uses
+    
+    
+ObjectProperty: utilizes_dataset
+
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: utilizes_program_parameter
+
+    SubPropertyOf: 
+        has_input
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1284,13 +1299,23 @@ Class: Anthracite
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        HardCoal
+        HardCoal,
+        has_origin value fossil
     
     
 Class: Appliance
 
     SubClassOf: 
         ResidentialDemand
+    
+    
+Class: ArtificialObject
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ArtificialObject is an object that was deliberately manufactured by humans to address a particular purpose."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: AssociatedGas
@@ -1300,7 +1325,8 @@ Class: AssociatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        NaturalGas
+        NaturalGas,
+        has_origin value fossil
     
     
 Class: Assumption
@@ -1338,7 +1364,8 @@ Class: AviationGasoline
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gasoline
+        Gasoline,
+        has_origin value fossil
     
     
 Class: Battery
@@ -1396,7 +1423,9 @@ Class: Biodiesel
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        LiquidBiofuel
+        LiquidBiofuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: Biofuel
@@ -1408,7 +1437,9 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109"
     
     SubClassOf: 
-        Fuel
+        Fuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: Biogas
@@ -1418,7 +1449,9 @@ Class: Biogas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        Biofuel
+        Biofuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: BiogasElectricityGenerator
@@ -1442,7 +1475,9 @@ Class: Biogasoline
         rdfs:label "Biogasoline"@en
     
     SubClassOf: 
-        LiquidBiofuel
+        LiquidBiofuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: BiomassElectricityGenerator
@@ -1474,7 +1509,8 @@ Class: BlastFurnaceGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        ManufacturedCoalBasedGas
+        ManufacturedCoalBasedGas,
+        has_origin value fossil
     
     
 Class: BooleanVariable
@@ -1530,7 +1566,9 @@ Class: Charcoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolidBiomass
+        SolidBiomass,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: Citation
@@ -1568,7 +1606,8 @@ Class: Coal
     
     SubClassOf: 
         SolidFossilFuels,
-        has_normal_state_of_matter value solid
+        has_normal_state_of_matter value solid,
+        has_origin value fossil
     
     
 Class: CoalElectricityGenerator
@@ -1611,7 +1650,8 @@ Class: CokeOvenGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        ManufacturedCoalBasedGas
+        ManufacturedCoalBasedGas,
+        has_origin value fossil
     
     
 Class: CokingCoal
@@ -1621,7 +1661,8 @@ Class: CokingCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        HardCoal
+        HardCoal,
+        has_origin value fossil
     
     
 Class: CollaborativeProgramming
@@ -1637,7 +1678,8 @@ Class: CollieryGas
         <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        NaturalGas
+        NaturalGas,
+        has_origin value fossil
     
     
 Class: Combustion
@@ -1721,12 +1763,6 @@ Class: ConsumptionQuantity
         Quantity
     
     
-Class: ContactInfomation
-
-    SubClassOf: 
-        InformationArtifact
-    
-    
 Class: ContactPerson
 
     SubClassOf: 
@@ -1776,7 +1812,8 @@ Class: CrudeOil
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        OilAndPetroleumProducts
+        OilAndPetroleumProducts,
+        has_origin value fossil
     
     
 Class: DCLine
@@ -1810,6 +1847,12 @@ Class: DammedWater
     SubClassOf: 
         Water,
         is_used_by some StorageUnit
+    
+    
+Class: Data
+
+    SubClassOf: 
+        InformationArtifact
     
     
 Class: DataDescriptor
@@ -1890,16 +1933,6 @@ Class: DemandSector
         Sector
     
     
-Class: DemographicalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en
-    
-    SubClassOf: 
-        Assumption
-    
-    
 Class: DerivedHeat
 
     Annotations: 
@@ -1928,7 +1961,8 @@ Class: DieselFuel
         rdfs:label "TransportDiesel"@en
     
     SubClassOf: 
-        GasDieselOil
+        GasDieselOil,
+        has_origin value fossil
     
     
 Class: DistrictHeat
@@ -1960,17 +1994,6 @@ Class: Economical
 
     SubClassOf: 
         Type
-    
-    
-Class: EconomicalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted prizes of fossil fuel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en
-    
-    SubClassOf: 
-        Assumption
     
     
 Class: ElectricChargeUnit
@@ -2089,12 +2112,6 @@ Class: ElectricitySector
     
     SubClassOf: 
         Sector
-    
-    
-Class: Email
-
-    SubClassOf: 
-        ContactInfomation
     
     
 Class: Emission
@@ -2265,12 +2282,6 @@ Class: Factsheet
         EmpiricalDataset
     
     
-Class: Fax
-
-    SubClassOf: 
-        ContactInfomation
-    
-    
 Class: FederalState
 
     Annotations: 
@@ -2308,17 +2319,6 @@ Class: FixedOperationCost
         Cost
     
     
-Class: FlourinatedGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated gases (F-gases) are man-made gases that can stay in the atmosphere for centuries and contribute to a global greenhouse effect. There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6) and nitrogen trifluoride (NF3)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
-    
-    SubClassOf: 
-        PortionOfGas,
-        has_disposition some GreenhouseGas
-    
-    
 Class: Flow
 
     Annotations: 
@@ -2340,6 +2340,19 @@ Class: FlowBattery
     
     SubClassOf: 
         Battery
+    
+    
+Class: FluorinatedGreenhouseGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated greenhouse gases (F-gases) are man-made gases that can stay in the atmosphere for centuries. As they contribute to a global greenhouse effect they are greenhouse gases.
+
+There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6) and nitrogen trifluoride (NF3)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
+    
+    SubClassOf: 
+        PortionOfGas,
+        has_disposition some GreenhouseGas
     
     
 Class: Forum
@@ -2428,7 +2441,8 @@ Class: GasDieselOil
     
     SubClassOf: 
         OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid
+        has_normal_state_of_matter value liquid,
+        has_origin value fossil
     
     
 Class: GasPowerplant
@@ -2471,7 +2485,8 @@ Class: Gasoline
     
     SubClassOf: 
         OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid
+        has_normal_state_of_matter value liquid,
+        has_origin value fossil
     
     
 Class: GasworksGas
@@ -2604,7 +2619,7 @@ Class: HFC
         Hydrofluorocarbon
     
     SubClassOf: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     
 Class: HardCoal
@@ -2614,7 +2629,8 @@ Class: HardCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Coal
+        Coal,
+        has_origin value fossil
     
     DisjointWith: 
         Lignite
@@ -2706,7 +2722,8 @@ Class: HeatingOil
         rdfs:label "OtherGasOil"@en
     
     SubClassOf: 
-        GasDieselOil
+        GasDieselOil,
+        has_origin value fossil
     
     
 Class: HouseholdSector
@@ -2770,7 +2787,7 @@ Class: Hydrofluorocarbon
         HFC
     
     SubClassOf: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     
 Class: Hydrogen
@@ -2978,7 +2995,8 @@ Class: JetFuel
         rdfs:label "KeroseneTypeJetFuel"@en
     
     SubClassOf: 
-        Kerosene
+        Kerosene,
+        has_origin value fossil
     
     
 Class: Kerosene
@@ -2992,7 +3010,8 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
     
     SubClassOf: 
         OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid
+        has_normal_state_of_matter value liquid,
+        has_origin value fossil
     
     
 Class: LandRegion
@@ -3038,7 +3057,8 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Coal
+        Coal,
+        has_origin value fossil
     
     DisjointWith: 
         HardCoal
@@ -3100,7 +3120,9 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
     
     SubClassOf: 
         Biofuel,
-        has_normal_state_of_matter value liquid
+        has_normal_state_of_matter value liquid,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: LiquidMetalBattery
@@ -3150,7 +3172,8 @@ Class: ManufacturedCoalBasedGas
     
     SubClassOf: 
         SolidFossilFuels,
-        has_normal_state_of_matter value gaseous
+        has_normal_state_of_matter value gaseous,
+        has_origin value fossil
     
     
 Class: Manufacturer
@@ -3248,6 +3271,18 @@ Class: ModelCalculation
         has_tool some Model
     
     
+Class: ModelComponent
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: ModelConstraint
+
+    SubClassOf: 
+        ModelComponent
+    
+    
 Class: ModelElement
 
     Annotations: 
@@ -3337,7 +3372,8 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Gasoline
+        Gasoline,
+        has_origin value fossil
     
     
 Class: MunicipalWaste
@@ -3368,7 +3404,8 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
     
     SubClassOf: 
         Fuel,
-        has_normal_state_of_matter value gaseous
+        has_normal_state_of_matter value gaseous,
+        has_origin value fossil
     
     
 Class: NaturalGasGenerator
@@ -3414,7 +3451,8 @@ Class: NonAssociatedGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        NaturalGas
+        NaturalGas,
+        has_origin value fossil
     
     
 Class: NonMethaneVolatileOrganicCompound
@@ -3435,7 +3473,8 @@ Class: NonRenewableMunicipalWaste
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWaste
+        MunicipalWaste,
+        has_origin value fossil
     
     
 Class: NuclearEnergyProduction
@@ -3525,7 +3564,8 @@ It consists of hydrocarbons of various molecular weights and other organic compo
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
     
     SubClassOf: 
-        Fuel
+        Fuel,
+        has_origin value fossil
     
     
 Class: OilElectricityGenerator
@@ -3609,7 +3649,8 @@ Class: OtherBituminousCoal
         rdfs:label "SteamCoal"@en
     
     SubClassOf: 
-        HardCoal
+        HardCoal,
+        has_origin value fossil
     
     
 Class: OtherKerosene
@@ -3619,7 +3660,8 @@ Class: OtherKerosene
         <http://purl.obolibrary.org/obo/IAO_0000115> "Refined petroleum distillate used in sectors other than aircraft transport. It distils between 150 °C and 300 °C."@en
     
     SubClassOf: 
-        Kerosene
+        Kerosene,
+        has_origin value fossil
     
     
 Class: OtherLiquidBiofuels
@@ -3629,7 +3671,9 @@ Class: OtherLiquidBiofuels
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        LiquidBiofuel
+        LiquidBiofuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: PFC
@@ -3642,7 +3686,7 @@ Class: PFC
         Perfluorocarbon
     
     SubClassOf: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     
 Class: PVPanel
@@ -3677,7 +3721,8 @@ This definition is without prejudice to the definition of renewable energy sourc
     
     SubClassOf: 
         SolidFossilFuels,
-        has_normal_state_of_matter value solid
+        has_normal_state_of_matter value solid,
+        has_origin value fossil
     
     
 Class: Percentage
@@ -3699,7 +3744,7 @@ Class: Perfluorocarbon
         PFC
     
     SubClassOf: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     
 Class: Person
@@ -3712,12 +3757,6 @@ Class: Person
     
     DisjointWith: 
         Organization
-    
-    
-Class: Phone
-
-    SubClassOf: 
-        ContactInfomation
     
     
 Class: PhotovoltaicElectricityGenerator
@@ -3765,15 +3804,6 @@ Class: Plotting
 
     SubClassOf: 
         DataProcessing
-    
-    
-Class: PoliticalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
-    
-    SubClassOf: 
-        Assumption
     
     
 Class: PoliticalParty
@@ -3974,7 +4004,8 @@ Class: Publication
         <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
     
     SubClassOf: 
-        Reference
+        Reference,
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: PumpedStorage
@@ -4061,18 +4092,6 @@ Class: RegenerativePowerplant
         has_part some WindTurbine
     
     
-Class: RegulationAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A regulation assumption is an assumption about political regulations and prohibitions."@en
-    
-    SubClassOf: 
-        PoliticalAssumption
-    
-    DisjointWith: 
-        SubsidyAssumption
-    
-    
 Class: RenewableGeneratorTechnology
 
     Annotations: 
@@ -4093,7 +4112,9 @@ Class: RenewableMunicipalWaste
     
     SubClassOf: 
         Biofuel,
-        MunicipalWaste
+        MunicipalWaste,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: RequierementSwitchOffAnimalProtection
@@ -4260,7 +4281,7 @@ Class: Sector
 Class: SectorConcept
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector concept contains concepts of possible sectors."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorConcept is a specific way to subdivide a system."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
@@ -4444,7 +4465,9 @@ Class: SolidBiomass
     
     SubClassOf: 
         Biofuel,
-        has_normal_state_of_matter value solid
+        has_normal_state_of_matter value solid,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: SolidFossilFuels
@@ -4454,7 +4477,8 @@ Class: SolidFossilFuels
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en
     
     SubClassOf: 
-        Fuel
+        Fuel,
+        has_origin value fossil
     
     
 Class: Solver
@@ -4510,7 +4534,8 @@ Class: SubBituminousCoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Coal
+        Coal,
+        has_origin value fossil
     
     
 Class: Subgrid
@@ -4522,19 +4547,6 @@ Class: Subgrid
         ElectricityGrid,
         has_part some ElectricityGridComponent,
         part_of some ElectricityGrid
-    
-    
-Class: SubsidyAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Public subsidies for energy efficient renovation of private buildings."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsidy assumption is an assumption about financial support from the government to an economic sector or certain economic entities."@en
-    
-    SubClassOf: 
-        PoliticalAssumption
-    
-    DisjointWith: 
-        RegulationAssumption
     
     
 Class: SuperconductingMagneticEnergy
@@ -4586,15 +4598,6 @@ Class: TechnicalDataWind
 
     SubClassOf: 
         WindEntityDataset
-    
-    
-Class: TechnologicalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A technological assumption is an assumption about what kind of technologies are available."@en
-    
-    SubClassOf: 
-        Assumption
     
     
 Class: Technology
@@ -5060,13 +5063,24 @@ Class: WoodAndOther
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        SolidBiomass
+        SolidBiomass,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: Workshop
 
     SubClassOf: 
         Support
+    
+    
+Class: origin
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The origin is a quality that indicates where something comes from (its source)."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Class: state_of_matter
@@ -5454,7 +5468,7 @@ Individual: HFC
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
     
     Types: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     Facts:  
      is_equivalent_to  Hydrofluorocarbon
@@ -5501,7 +5515,7 @@ Individual: Hydrofluorocarbon
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
     
     Types: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     Facts:  
      is_equivalent_to  HFC
@@ -5849,7 +5863,7 @@ Individual: PFC
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
     
     Types: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     
 Individual: PHP
@@ -5868,7 +5882,7 @@ Individual: Perfluorocarbon
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
     
     Types: 
-        FlourinatedGas
+        FluorinatedGreenhouseGas
     
     
 Individual: Plot
@@ -6095,6 +6109,28 @@ Individual: Yard
 Individual: Year
 
     
+Individual: biogenic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is biogenic if it is made by or produce from life forms."
+    
+    Types: 
+        origin,
+        has_origin some origin
+    
+    
+Individual: fossil
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is fossil if it was created by natural processes lasting thousands or millions of years.
+
+In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain."
+    
+    Types: 
+        origin,
+        has_origin some origin
+    
+    
 Individual: gaseous
 
     Annotations: 
@@ -6128,6 +6164,17 @@ Individual: plasmatic
         state_of_matter
     
     
+Individual: renewable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is renewable if will replenish to replace the portion depleted in a finite amount of time in a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Renewable_resource&oldid=926207362"
+    
+    Types: 
+        origin,
+        has_origin some origin
+    
+    
 Individual: solid
 
     Annotations: 
@@ -6135,6 +6182,16 @@ Individual: solid
     
     Types: 
         state_of_matter
+    
+    
+Individual: synthetic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is synthetic if it was created artifically by a chemical process."
+    
+    Types: 
+        origin,
+        has_origin some origin
     
     
 DisjointClasses: 
@@ -6157,9 +6214,6 @@ DisjointClasses:
 
 DisjointClasses: 
     CommerceSector,HouseholdSector,IndustrySector
-
-DisjointClasses: 
-    DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology

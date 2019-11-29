@@ -19,6 +19,7 @@ Here is a template for new release sections
 ## [Unreleased]
 
 ### Added
+- Concepts of biogenic, fossil, renewable and synthetic (#130)
 - factsheet categories (#47)
 - storage technologies (#47)
 - `ObjectProperty` `has_normal_state_of_matter` (#39)
@@ -26,17 +27,29 @@ Here is a template for new release sections
 - Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
+- issue templates (#92) 
+- ArtificialObject (#121) 
+
 ### Changed
+- FluorinatedGreenhouseGas (#88)
 - agent and subclasses (#51)
 - pollutant and subclasses (#51)
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
 - GeographicRegion and subclasses (#62 )
 - StateOfMatter and subclasses (#45)
+- improved workflow in `CONTRIBUTE.md` (#98)
+- linked wiki and `CONTRIBUTE.md` in `README`(#113)
+- add github team handle in `README` (#119)
 
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
 - some superclasses of unsatisfiable classes and some that made the
   ontology inconsistent (#51)
+- contact and subclasses (#101)
+- subclasses of assumption (#102)
+
+
+
 
