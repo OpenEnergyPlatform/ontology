@@ -12,7 +12,9 @@ Please read [OEO wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-
 The development of a feature for this repository is inspired from the workflow described 
 by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
 
-1. Create [an issue](https://help.github.com/en/articles/creating-an-issue) on the github repository
+1. Create
+   [an issue](https://help.github.com/en/articles/creating-an-issue) on
+   the github repository
 
     Choose the right issue for you among the choices you have on github:
 
@@ -20,7 +22,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     
     B) Restructuring existing parts of the ontology
 
-    C) Other issue
+    C) Updating definition of the ontology
+
+    D) Other issue
 
     Discussion about the implementation details should occur within this issue. [Assign a project](https://help.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar) (default "Issues") to the issue
 
@@ -63,7 +67,11 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     
     B) If restructuring the ontology, ask at least two persons to review
     
-    C) If your PR does not modify the ontology, only one reviewer is enough
+    C) If updating a definition in the ontology, ask at least two
+    persons to review
+    
+    D) If your PR does not modify the ontology, one reviewer is
+    enough
 
     When more than one reviewer is requested, please try to combine modelling and ontology expertise in your choice of reviewers. (see the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about who is expert of what)
 
