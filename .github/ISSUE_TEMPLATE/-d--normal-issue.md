@@ -18,5 +18,5 @@ If you already have ideas for the solution describe them here
 ## Workflow checklist
 
 - [ ] I am aware of the
-      [workflow](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTE.md)
+      [workflow](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md)
       for this repository

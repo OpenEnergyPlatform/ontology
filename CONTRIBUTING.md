@@ -70,7 +70,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     C) If updating a definition in the ontology, ask at least two
     persons to review
     
-    D) If your PR does not modify the ontology, only one reviewer is
+    D) If your PR does not modify the ontology, one reviewer is
     enough
 
     When more than one reviewer is requested, please try to combine modelling and ontology expertise in your choice of reviewers. (see the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about who is expert of what)
