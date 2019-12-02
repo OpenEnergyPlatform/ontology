@@ -1,8 +1,7 @@
 ---
 name: "[C] Ontology definition update" 
-about: For restructuring existing parts
-of the ontology title: Your title should make sense if said after "The
-issue is <your issue title>" 
+about: For restructuring existing partsof the ontology 
+title: Your title should make sense if said after "The issue is <your issue title>" 
 labels: "[C] definition update" 
 assignees: ''
 ---
