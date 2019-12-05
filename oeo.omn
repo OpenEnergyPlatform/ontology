@@ -1268,7 +1268,7 @@ Class: AnalyticalApproach
     SubClassOf: 
         ContentDescriptor
     
-   
+    
 Class: Appliance
 
     SubClassOf: 
@@ -1453,7 +1453,7 @@ Class: CarbonDioxideEmissionTrafficSector
     SubClassOf: 
         CarbonDioxideEmission
     
-   
+    
 Class: Citation
 
     SubClassOf: 
@@ -2372,7 +2372,6 @@ Class: HFC
         FluorinatedGreenhouseGas
     
     
-
 Class: HardCoalPowerplant
 
     Annotations: 
@@ -2450,7 +2449,6 @@ Class: HeatSector
         Sector
     
     
-
 Class: HouseholdSector
 
     Annotations: 
@@ -2743,7 +2741,6 @@ Class: License
         SoftwareDescriptor
     
     
-
 Class: LignitePowerplant
 
     Annotations: 
@@ -3015,12 +3012,15 @@ Class: MoltenSaltBattery
 Class: MoltenStateBattery
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-state batteries consist of two molten metal alloys separated by an electrolyte."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-state batteries consist of two molten metal alloys separated by an electrolyte."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
         Battery
     
     
+Class: MunicipalWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
@@ -3092,7 +3092,6 @@ Class: NonRenewableMunicipalWasteFuel
     SubClassOf: 
         MunicipalWasteFuel,
         has_origin value fossil
-
     
     
 Class: NuclearEnergyProduction
@@ -3278,7 +3277,6 @@ Class: ParticulateMatter
     
     SubClassOf: 
         AirPollutant
-
     
     
 Class: Percentage
@@ -3313,12 +3311,6 @@ Class: Person
     
     DisjointWith: 
         Organization
-    
-    
-Class: Phone
-
-    SubClassOf: 
-        Contact
     
     
 Class: PhotovoltaicElectricityGenerator
@@ -3455,7 +3447,9 @@ Class: PortionOfBiofuel
         has_disposition some Biofuel
     
     SubClassOf: 
-        PortionOfFuel
+        PortionOfFuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: PortionOfBiogas
@@ -3511,7 +3505,8 @@ Class: PortionOfCoal
     SubClassOf: 
         PortionOfMatter,
         has_disposition some SolidFossilFuels,
-        has_normal_state_of_matter value solid
+        has_normal_state_of_matter value solid,
+        has_origin value fossil
     
     
 Class: PortionOfCokeOvenGas
@@ -3720,7 +3715,10 @@ Class: PortionOfLiquidBiofuel
         has_disposition some LiquidBiofuel
     
     SubClassOf: 
-        PortionOfBiofuel
+        PortionOfBiofuel,
+        has_normal_state_of_matter value liquid,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: PortionOfManufacturedCoalBasedGas
@@ -3732,7 +3730,8 @@ Class: PortionOfManufacturedCoalBasedGas
     SubClassOf: 
         PortionOfMatter,
         has_disposition some SolidFossilFuels,
-        has_normal_state_of_matter value gaseous
+        has_normal_state_of_matter value gaseous,
+        has_origin value fossil
     
     
 Class: PortionOfMatter
@@ -3778,7 +3777,8 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
     SubClassOf: 
         PortionOfMatter,
         has_disposition some Fuel,
-        has_normal_state_of_matter value gaseous
+        has_normal_state_of_matter value gaseous,
+        has_origin value fossil
     
     
 Class: PortionOfNonAssociatedGas
@@ -3797,7 +3797,8 @@ Class: PortionOfNonRenewableMunicipalWasteFuel
         has_disposition some NonRenewableMunicipalWasteFuel
     
     SubClassOf: 
-        PortionOfMunicipalWasteFuel
+        PortionOfMunicipalWasteFuel,
+        has_origin value fossil
     
     
 Class: PortionOfOilAndPetroleumProducts
@@ -3810,7 +3811,8 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some Fuel
+        has_disposition some Fuel,
+        has_origin value fossil
     
     
 Class: PortionOfPeat
@@ -3844,7 +3846,9 @@ Class: PortionOfRenewableMunicipalWasteFuel
         has_disposition some RenewableMunicipalWasteFuel
     
     SubClassOf: 
-        PortionOfMunicipalWasteFuel
+        PortionOfMunicipalWasteFuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: PortionOfSolidBiomass
@@ -3858,7 +3862,9 @@ Class: PortionOfSolidBiomass
     SubClassOf: 
         PortionOfMatter,
         has_disposition some Biofuel,
-        has_normal_state_of_matter value solid
+        has_normal_state_of_matter value solid,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: PortionOfSolidFossilFuel
@@ -3867,7 +3873,8 @@ Class: PortionOfSolidFossilFuel
         has_disposition some SolidFossilFuels
     
     SubClassOf: 
-        PortionOfFuel
+        PortionOfFuel,
+        has_origin value fossil
     
     
 Class: PortionOfSubBituminousCoal
