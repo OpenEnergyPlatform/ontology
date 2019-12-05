@@ -16,11 +16,17 @@ Ontology: <http://openenergy-platform.org/ontology/oeo/>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
+    dc:contributor "Anna Kleinau",
     dc:contributor "Christian Winger",
     dc:contributor "Fabian Neuhaus",
     dc:contributor "Hannah Förster",
+    dc:contributor "Izzet Kilicarslan",
+    dc:contributor "Lara Christmann",
+    dc:contributor "Ludwig Hülk",
     dc:contributor "Lukas Emele",
     dc:contributor "Martin Glauer",
+    dc:contributor "Mirjam Stappel",
+    dc:contributor "Pierre-Francois Duc",
     dc:contributor "Sebastian Cordes",
     <http://purl.org/dc/terms/title> "Open Energy Ontology",
     rdfs:comment "Include description of the ontology (in particular its scope) here ..."
@@ -151,12 +157,6 @@ ObjectProperty: generates_dataset
 ObjectProperty: handles_uncertainty
 
     
-ObjectProperty: has
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
 ObjectProperty: hasMaximum
 
     SubPropertyOf: 
@@ -243,9 +243,6 @@ ObjectProperty: has_disposition
     
 ObjectProperty: has_documentation
 
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_function
 
@@ -285,9 +282,6 @@ ObjectProperty: has_input
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_institution
 
@@ -306,14 +300,14 @@ ObjectProperty: has_license
     
 ObjectProperty: has_logo
 
-    SubPropertyOf: 
-        has
-    
     
 ObjectProperty: has_normal_state_of_matter
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure and temperature"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)"
+    
+    SubPropertyOf: 
+        has_quality
     
     
 ObjectProperty: has_numercical_input
@@ -382,6 +376,15 @@ ObjectProperty: has_objectivevariable
     
     SubPropertyOf: 
         has_objective
+    
+    
+ObjectProperty: has_origin
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has the origin of y"
+    
+    SubPropertyOf: 
+        has_quality
     
     
 ObjectProperty: has_output
@@ -506,6 +509,9 @@ ObjectProperty: has_spatial_resolution
     
 ObjectProperty: has_state_of_matter
 
+    SubPropertyOf: 
+        has_quality
+    
     
 ObjectProperty: has_subregion
 
@@ -1262,11 +1268,20 @@ Class: AnalyticalApproach
     SubClassOf: 
         ContentDescriptor
     
-    
+   
 Class: Appliance
 
     SubClassOf: 
         ResidentialDemand
+    
+    
+Class: ArtificialObject
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ArtificialObject is an object that was deliberately manufactured by humans to address a particular purpose."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
 Class: Assumption
@@ -1354,7 +1369,9 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109"
     
     SubClassOf: 
-        Fuel
+        Fuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: BiogasElectricityGenerator
@@ -1436,7 +1453,7 @@ Class: CarbonDioxideEmissionTrafficSector
     SubClassOf: 
         CarbonDioxideEmission
     
-    
+   
 Class: Citation
 
     SubClassOf: 
@@ -1493,8 +1510,7 @@ Class: CodeDocumentation
 Class: CodeSource
 
     SubClassOf: 
-        DataDescriptor,
-        OpenSource
+        DataDescriptor
     
     
 Class: CollaborativeProgramming
@@ -1573,12 +1589,6 @@ Class: ConsumptionQuantity
     
     SubClassOf: 
         Quantity
-    
-    
-Class: Contact
-
-    SubClassOf: 
-        InformationArtifact
     
     
 Class: ContactPerson
@@ -1729,16 +1739,6 @@ Class: DemandSector
         Sector
     
     
-Class: DemographicalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development of some country, city or the world."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demographical assumption is an assumption about the population of a region."@en
-    
-    SubClassOf: 
-        Assumption
-    
-    
 Class: DerivedHeat
 
     Annotations: 
@@ -1787,17 +1787,6 @@ Class: Economical
 
     SubClassOf: 
         Type
-    
-    
-Class: EconomicalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted development of GDP of a country."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted prizes of fossil fuel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economical assumption is an assumption about the economical state or development of a region."@en
-    
-    SubClassOf: 
-        Assumption
     
     
 Class: ElectricChargeUnit
@@ -1916,12 +1905,6 @@ Class: ElectricitySector
     
     SubClassOf: 
         Sector
-    
-    
-Class: Email
-
-    SubClassOf: 
-        Contact
     
     
 Class: Emission
@@ -2090,12 +2073,6 @@ Class: Factsheet
 
     SubClassOf: 
         EmpiricalDataset
-    
-    
-Class: Fax
-
-    SubClassOf: 
-        Contact
     
     
 Class: FederalState
@@ -2395,6 +2372,7 @@ Class: HFC
         FluorinatedGreenhouseGas
     
     
+
 Class: HardCoalPowerplant
 
     Annotations: 
@@ -2472,6 +2450,7 @@ Class: HeatSector
         Sector
     
     
+
 Class: HouseholdSector
 
     Annotations: 
@@ -2764,6 +2743,7 @@ Class: License
         SoftwareDescriptor
     
     
+
 Class: LignitePowerplant
 
     Annotations: 
@@ -2811,7 +2791,9 @@ The following liquid biofuels are concerned: biogasoline, bio-diesels, other liq
     
     SubClassOf: 
         Biofuel,
-        has_normal_state_of_matter value liquid
+        has_normal_state_of_matter value liquid,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: LiquidMetalBattery
@@ -3027,8 +3009,7 @@ Class: MoltenSaltBattery
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Molten-salt_battery&oldid=900557096"@en
     
     SubClassOf: 
-        MoltenStateBattery,
-        SoftwareElement
+        MoltenStateBattery
     
     
 Class: MoltenStateBattery
@@ -3040,7 +3021,6 @@ Class: MoltenStateBattery
         Battery
     
     
-Class: MunicipalWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
@@ -3110,7 +3090,9 @@ Class: NonRenewableMunicipalWasteFuel
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWasteFuel
+        MunicipalWasteFuel,
+        has_origin value fossil
+
     
     
 Class: NuclearEnergyProduction
@@ -3222,7 +3204,6 @@ Class: OnShoreWindElectricityGenerator
 Class: OpenSource
 
     SubClassOf: 
-        DataDescriptor,
         SoftwareDescriptor
     
     DisjointWith: 
@@ -3273,7 +3254,8 @@ Class: PFC
         Perfluorocarbon
     
     SubClassOf: 
-        FluorinatedGreenhouseGas
+        FluorinatedGreenhouseGas,
+        has_origin value fossil
     
     
 Class: PVPanel
@@ -3296,6 +3278,7 @@ Class: ParticulateMatter
     
     SubClassOf: 
         AirPollutant
+
     
     
 Class: Percentage
@@ -3714,7 +3697,9 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfCoal
+        PortionOfCoal,
+        has_normal_state_of_matter value solid,
+        has_origin value fossil
     
     DisjointWith: 
         PortionOfHardCoal
@@ -4120,18 +4105,6 @@ Class: RegenerativePowerplant
         has_part some WindTurbine
     
     
-Class: RegulationAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A regulation assumption is an assumption about political regulations and prohibitions."@en
-    
-    SubClassOf: 
-        PoliticalAssumption
-    
-    DisjointWith: 
-        SubsidyAssumption
-    
-    
 Class: RenewableGeneratorTechnology
 
     Annotations: 
@@ -4151,7 +4124,9 @@ Class: RenewableMunicipalWasteFuel
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWasteFuel
+        MunicipalWasteFuel,
+        has_origin value biogenic,
+        has_origin value renewable
     
     
 Class: RequierementSwitchOffAnimalProtection
@@ -4318,7 +4293,7 @@ Class: Sector
 Class: SectorConcept
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector concept contains concepts of possible sectors."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorConcept is a specific way to subdivide a system."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
@@ -4499,7 +4474,8 @@ Class: SolidFossilFuels
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=868515262"@en
     
     SubClassOf: 
-        Fuel
+        Fuel,
+        has_origin value fossil
     
     
 Class: Solver
@@ -4559,19 +4535,6 @@ Class: Subgrid
         part_of some ElectricityGrid
     
     
-Class: SubsidyAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "Public subsidies for energy efficient renovation of private buildings."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsidy assumption is an assumption about financial support from the government to an economic sector or certain economic entities."@en
-    
-    SubClassOf: 
-        PoliticalAssumption
-    
-    DisjointWith: 
-        RegulationAssumption
-    
-    
 Class: SuperconductingMagneticEnergy
 
     Annotations: 
@@ -4621,15 +4584,6 @@ Class: TechnicalDataWind
 
     SubClassOf: 
         WindEntityDataset
-    
-    
-Class: TechnologicalAssumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A technological assumption is an assumption about what kind of technologies are available."@en
-    
-    SubClassOf: 
-        Assumption
     
     
 Class: Technology
@@ -5041,7 +4995,6 @@ Class: WindFarm
     
     SubClassOf: 
         RegenerativePowerplant,
-        WindTurbine,
         has_part some WindTurbine
     
     
@@ -5081,6 +5034,15 @@ Class: Workshop
 
     SubClassOf: 
         Support
+    
+    
+Class: origin
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The origin is a quality that indicates where something comes from (its source)."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Class: state_of_matter
@@ -6109,6 +6071,28 @@ Individual: Yard
 Individual: Year
 
     
+Individual: biogenic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is biogenic if it is made by or produce from life forms."
+    
+    Types: 
+        origin,
+        has_origin some origin
+    
+    
+Individual: fossil
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is fossil if it was created by natural processes lasting thousands or millions of years.
+
+In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain."
+    
+    Types: 
+        origin,
+        has_origin some origin
+    
+    
 Individual: gaseous
 
     Annotations: 
@@ -6142,6 +6126,17 @@ Individual: plasmatic
         state_of_matter
     
     
+Individual: renewable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is renewable if will replenish to replace the portion depleted in a finite amount of time in a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Renewable_resource&oldid=926207362"
+    
+    Types: 
+        origin,
+        has_origin some origin
+    
+    
 Individual: solid
 
     Annotations: 
@@ -6149,6 +6144,16 @@ Individual: solid
     
     Types: 
         state_of_matter
+    
+    
+Individual: synthetic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is synthetic if it was created artifically by a chemical process."
+    
+    Types: 
+        origin,
+        has_origin some origin
     
     
 DisjointClasses: 
@@ -6171,9 +6176,6 @@ DisjointClasses:
 
 DisjointClasses: 
     CommerceSector,HouseholdSector,IndustrySector
-
-DisjointClasses: 
-    DemographicalAssumption,EconomicalAssumption,PoliticalAssumption,TechnologicalAssumption
 
 DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
