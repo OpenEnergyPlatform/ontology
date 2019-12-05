@@ -29,7 +29,7 @@ Here is a template for new release sections
   'has_quality' (#51)
 - issue templates (#92) 
 - ArtificialObject (#121) 
-- Grid (#137)
+- Grid class (#137)
 
 ### Changed
 - FluorinatedGreenhouseGas (#88)
@@ -48,7 +48,6 @@ Here is a template for new release sections
   ontology inconsistent (#51)
 - contact and subclasses (#101)
 - subclasses of assumption (#102)
-
 
 
 
