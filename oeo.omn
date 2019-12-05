@@ -1871,14 +1871,11 @@ Class: ElectricityGrid
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
-Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
-        rdfs:comment "Synonym: Network"@en
+Source: https://en.wikipedia.org/wiki/Electrical_grid"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some ElectricityGridComponent,
-        has_part min 1 EnergyGeneratorTechnology,
-        has_part min 1 Line
+        Grid,
+        has_part some ElectricityGridComponent
     
     
 Class: ElectricityGridComponent
@@ -2351,6 +2348,15 @@ Class: GreenhouseGas
     
     SubClassOf: 
         Pollutant
+    
+    
+Class: Grid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
+rdfs:comment "Synonym: Network"@en
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
 Class: GridModel
@@ -6207,4 +6213,3 @@ DisjointClasses:
 
 DisjointClasses: 
     LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
-
