@@ -29,6 +29,7 @@ Here is a template for new release sections
   'has_quality' (#51)
 - issue templates (#92, #146) 
 - ArtificialObject (#121) 
+- classes for objects that apply to technologies like EnergyGenerator (#128)
 - Grid class (#137)
 
 ### Changed
