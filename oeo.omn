@@ -70,6 +70,21 @@ Datatype: rdf:PlainLiteral
 ObjectProperty: appliesTo
 
     
+ObjectProperty: applies_technology
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "the property of an ArtificialObject to apply to a Technology."
+    
+    Domain: 
+        ArtificialObject
+    
+    Range: 
+        Technology
+    
+    InverseOf: 
+        is_applied_to_object
+    
+    
 ObjectProperty: comparesTo
 
     
@@ -556,6 +571,21 @@ ObjectProperty: isEqual
 
     SubPropertyOf: 
         comparesTo
+    
+    
+ObjectProperty: is_applied_to_object
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The property of a technology to be applied to an ArtificialObject."
+    
+    Domain: 
+        Technology
+    
+    Range: 
+        ArtificialObject
+    
+    InverseOf: 
+        applies_technology
     
     
 ObjectProperty: is_connected_to
@@ -1243,18 +1273,6 @@ Class: AgriculturalDemand
         Demand
     
     
-Class: Air
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The name given to the Earth's atmosphere."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Air_(disambiguation)"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        has_disposition some <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>,
-        is_used_by some StorageUnit
-    
-    
 Class: AirPollutant
 
     Annotations: 
@@ -1281,17 +1299,6 @@ Class: AnalyticalApproach
         ContentDescriptor
     
     
-Class: Anthracite
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "High rank coal used for industrial and residential applications. It has generally less than 10 % volatile matter and a high carbon content (about 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        HardCoal,
-        has_origin value fossil
-    
-    
 Class: Appliance
 
     SubClassOf: 
@@ -1305,17 +1312,6 @@ Class: ArtificialObject
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000030>
-    
-    
-Class: AssociatedGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas produced in association with crude oil."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        NaturalGas,
-        has_origin value fossil
     
     
 Class: Assumption
@@ -1346,24 +1342,13 @@ Class: Aviation
         TransportDemand
     
     
-Class: AviationGasoline
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Motor spirit prepared especially for aviation piston engines, with an octane number suited to the engine, a freezing point of - 60 °C and a distillation range usually within the limits of 30 °C and 180 °C."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Gasoline,
-        has_origin value fossil
-    
-    
 Class: Battery
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A Battery is a device using different chemical or physical reactions to store energy."@en
     
     SubClassOf: 
-        EnergyStorageTechnology,
+        Thermal,
         is_used_by some StorageUnit
     
     
@@ -1379,7 +1364,7 @@ Class: BatteryStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     DisjointWith: 
         MethanationGasStorage
@@ -1391,7 +1376,7 @@ Class: BioElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: BioGasGenerator
@@ -1400,21 +1385,9 @@ Class: BioGasGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas generator uses biogas to generate electricity."@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
-        has_physical_input only Biogas
-    
-    
-Class: Biodiesel
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bio-diesel (a methyl-ester produced from vegetable or animal oil, of diesel quality), biodimethylether (dimethylether produced from biomass), Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil produced from oil seed through mechanical processing only) and all other liquid biofuels which are added to, blended with or used straight as transport diesel.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
-    
-    SubClassOf: 
-        LiquidBiofuel,
-        has_origin value biogenic,
-        has_origin value renewable
+        has_physical_input only PortionOfBiogas
     
     
 Class: Biofuel
@@ -1431,18 +1404,6 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         has_origin value renewable
     
     
-Class: Biogas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
-    
-    SubClassOf: 
-        Biofuel,
-        has_origin value biogenic,
-        has_origin value renewable
-    
-    
 Class: BiogasElectricityGenerator
 
     Annotations: 
@@ -1453,20 +1414,6 @@ Class: BiogasElectricityGenerator
     
     DisjointWith: 
         BiomassElectricityGenerator
-    
-    
-Class: Biogasoline
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
-        rdfs:label "Bioethanol"@en,
-        rdfs:label "Biogasoline"@en
-    
-    SubClassOf: 
-        LiquidBiofuel,
-        has_origin value biogenic,
-        has_origin value renewable
     
     
 Class: BiomassElectricityGenerator
@@ -1489,17 +1436,6 @@ Class: BiomassPowerplant
     SubClassOf: 
         RegenerativePowerplant,
         has_part some SteamTurbine
-    
-    
-Class: BlastFurnaceGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Produced during the combustion of coke in blast furnaces in the iron and steel industry. It is recovered and used as a fuel partly within the plant and partly in other steel industry processes or in power stations equipped to burn it. The quantity of fuel should be reported on a gross calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        ManufacturedCoalBasedGas,
-        has_origin value fossil
     
     
 Class: BooleanVariable
@@ -1548,18 +1484,6 @@ Class: CarbonDioxideEmissionTrafficSector
         CarbonDioxideEmission
     
     
-Class: Charcoal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The solid residue of the destructive distillation and pyrolysis of wood and other vegetal material."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        SolidBiomass,
-        has_origin value biogenic,
-        has_origin value renewable
-    
-    
 Class: Citation
 
     SubClassOf: 
@@ -1587,25 +1511,13 @@ Class: Client
         Agent
     
     
-Class: Coal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
-    
-    SubClassOf: 
-        SolidFossilFuels,
-        has_normal_state_of_matter value solid,
-        has_origin value fossil
-    
-    
 Class: CoalElectricityGenerator
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A coal electricity generator technology uses coal to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: CoalPowerplant
@@ -1631,43 +1543,10 @@ Class: CodeSource
         DataDescriptor
     
     
-Class: CokeOvenGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Obtained as a by-product of the manufacture of coke oven coke for the production of iron and steel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        ManufacturedCoalBasedGas,
-        has_origin value fossil
-    
-    
-Class: CokingCoal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Bituminous coal with a quality that allows the production of a coke suitable to support a blast furnace charge. Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        HardCoal,
-        has_origin value fossil
-    
-    
 Class: CollaborativeProgramming
 
     SubClassOf: 
         OpenSource
-    
-    
-Class: CollieryGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or transmitted by pipeline to consumers."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        NaturalGas,
-        has_origin value fossil
     
     
 Class: Combustion
@@ -1705,15 +1584,6 @@ Class: Community
     
     SubClassOf: 
         Support
-    
-    
-Class: CompressedAir
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed to store energy. To discharge energy, the air is expaned."@en
-    
-    SubClassOf: 
-        Air
     
     
 Class: ComputationTime
@@ -1793,17 +1663,6 @@ Class: Country
         Land
     
     
-Class: CrudeOil
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable. This category includes field or lease condensate recovered from associated and non-associated gas where it is commingled with the commercial crude oil stream."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        OilAndPetroleumProducts,
-        has_origin value fossil
-    
-    
 Class: DCLine
 
     Annotations: 
@@ -1824,17 +1683,6 @@ source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
     
     SubClassOf: 
         Identifier
-    
-    
-Class: DammedWater
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is a barrier that stops or restricts the flow of water or underground streams. Reservoirs created by dams not only suppress floods but also provide water for activities such as irrigation, human consumption, industrial use, aquaculture, and navigability. Hydropower is often used in conjunction with dams to generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en
-    
-    SubClassOf: 
-        Water,
-        is_used_by some StorageUnit
     
     
 Class: Data
@@ -1940,19 +1788,6 @@ Class: Developer
         Agent
     
     
-Class: DieselFuel
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "DieselFuel"@en,
-        rdfs:label "TransportDiesel"@en
-    
-    SubClassOf: 
-        GasDieselOil,
-        has_origin value fossil
-    
-    
 Class: DistrictHeat
 
     Annotations: 
@@ -2009,7 +1844,7 @@ Class: ElectricVehicle
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Electric_vehicle&oldid=906776214"@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: ElectricalEnergy
@@ -2053,27 +1888,31 @@ Class: ElectricityExport
         Quantity
     
     
+Class: ElectricityGenerator
+
+    SubClassOf: 
+        Generator,
+        applies_technology some ElectricityGeneratorTechnology
+    
+    
 Class: ElectricityGeneratorTechnology
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generator technology is an technology used to transform energy from some source into electricity."@en
     
     SubClassOf: 
-        Technology
+        EnergyGeneratorTechnology
     
     
 Class: ElectricityGrid
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical grid is an interconnected network for delivering electricity from producers to consumers.
-Source: https://en.wikipedia.org/wiki/Electrical_grid"@en,
-        rdfs:comment "Synonym: Network"@en
+Source: https://en.wikipedia.org/wiki/Electrical_grid"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some ElectricityGridComponent,
-        has_part min 1 EnergyGeneratorTechnology,
-        has_part min 1 Line
+        Grid,
+        has_part some ElectricityGridComponent
     
     
 Class: ElectricityGridComponent
@@ -2204,6 +2043,12 @@ Class: EnergyFromElectricityInTraffic
         EnergyCarrierQuantity
     
     
+Class: EnergyGenerator
+
+    SubClassOf: 
+        Generator
+    
+    
 Class: EnergyGeneratorTechnology
 
     Annotations: 
@@ -2230,6 +2075,13 @@ Class: EnergySector
         Sector
     
     
+Class: EnergyStorage
+
+    SubClassOf: 
+        ArtificialObject,
+        applies_technology some EnergyStorageTechnology
+    
+    
 Class: EnergyStorageTechnology
 
     Annotations: 
@@ -2237,6 +2089,13 @@ Class: EnergyStorageTechnology
     
     SubClassOf: 
         Technology
+    
+    
+Class: EnergyTransfer
+
+    SubClassOf: 
+        ArtificialObject,
+        applies_technology some EnergyTransferTechnology
     
     
 Class: EnergyTransferTechnology
@@ -2339,7 +2198,7 @@ There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur
         <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        PortionOfGas,
+        GreenhouseGas,
         has_disposition some GreenhouseGas
     
     
@@ -2347,6 +2206,15 @@ Class: Forum
 
     SubClassOf: 
         Support
+    
+    
+Class: FossilGenerator
+
+    SubClassOf: 
+        ElectricityGenerator
+    
+    DisjointWith: 
+        RenewableGenerator
     
     
 Class: FossilGeneratorTechnology
@@ -2382,11 +2250,10 @@ Class: FrameworkFactsheet
 Class: Fuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is any material that can be made to react with other substances so that it releases energy as heat energy or to be used for work. The concept was originally applied solely to those materials capable of releasing chemical energy but has since also been applied to other sources of heat energy such as nuclear energy (via nuclear fission and nuclear fusion).",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fuel&oldid=866720145"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel is an EnergyCarrier that releases energy in form of heat or work, by chemical reaction with other substances."
     
     SubClassOf: 
-        PortionOfMatter,
+        EnergyCarrier,
         has_disposition some EnergyCarrier
     
     
@@ -2421,18 +2288,6 @@ Class: GUI
         API
     
     
-Class: GasDieselOil
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas/diesel oil is primarily a medium distillate distilling between 180 °C and 380 °C. Includes blending components. Several grades are available depending on uses."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid,
-        has_origin value fossil
-    
-    
 Class: GasPowerplant
 
     Annotations: 
@@ -2453,7 +2308,7 @@ Class: GasTurbine
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        has_physical_input only NaturalGas
+        has_physical_input only PortionOfNaturalGas
     
     
 Class: GasTurbineGenerator
@@ -2462,31 +2317,7 @@ Class: GasTurbineGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
     
     SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    
-Class: Gasoline
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gasoline (American English) or petrol (British English) is a transparent petroleum-derived liquid that is used primarily as a fuel in spark-ignited internal combustion engines. It consists mostly of organic compounds obtained by the fractional distillation of petroleum, enhanced with a variety of additives.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640"
-    
-    SubClassOf: 
-        OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid,
-        has_origin value fossil
-    
-    
-Class: GasworksGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all types of gases produced in public utility or private plants, whose main purpose is manufacture, transport and distribution of gas. It includes gas produced by carbonisation (including gas produced by coke ovens and transferred to gasworks gas), by total gasification with or without enrichment with oil products (LPG, residual fuel oil, etc.), and by reforming and simple mixing of gases and/or air, reported under the rows ‘from other sources’. Under the transformation sector identify amounts of gasworks gas transferred to blended natural gas which will be distributed and consumed through the natural gas grid.
-
-The production of other coal gases (i.e. coke oven gas, blast furnace gas and oxygen steel furnace gas) should be reported in the columns concerning such gases, and not as production of gasworks gas. The coal gases transferred to gasworks plants should then be reported (in their own column) in the transformation sector in the gasworks plants row. The total amount of gasworks gas resulting from transfers of other coal gases should appear in the production line for gasworks gas."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        ManufacturedCoalBasedGas
+        ElectricityGenerator
     
     
 Class: Generator
@@ -2496,7 +2327,7 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        ElectricityGridComponent,
+        ArtificialObject,
         uses some EnergyCarrier,
         uses some EnergyGeneratorTechnology
     
@@ -2585,6 +2416,15 @@ Class: GreenhouseGas
         Pollutant
     
     
+Class: Grid
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
+rdfs:comment "Synonym: Network"@en
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+    
+    
 Class: GridModel
 
     SubClassOf: 
@@ -2604,20 +2444,6 @@ Class: HFC
         FluorinatedGreenhouseGas
     
     
-Class: HardCoal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Coal,
-        has_origin value fossil
-    
-    DisjointWith: 
-        Lignite
-    
-    
 Class: HardCoalPowerplant
 
     Annotations: 
@@ -2635,7 +2461,7 @@ Class: Hardware
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en
     
     SubClassOf: 
-        ModelingTechnology
+        ArtificialObject
     
     
 Class: Heat
@@ -2667,13 +2493,19 @@ Class: HeatDemand
         Demand
     
     
+Class: HeatGenerator
+
+    SubClassOf: 
+        Generator
+    
+    
 Class: HeatGeneratorTechnology
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generator technology is an technology used to transform energy from some source into heat."@en
     
     SubClassOf: 
-        Technology
+        EnergyGeneratorTechnology
     
     
 Class: HeatPumpHeatGenerator
@@ -2682,7 +2514,7 @@ Class: HeatPumpHeatGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
     
     SubClassOf: 
-        HeatGeneratorTechnology
+        HeatGenerator
     
     
 Class: HeatSector
@@ -2693,19 +2525,6 @@ Class: HeatSector
     
     SubClassOf: 
         Sector
-    
-    
-Class: HeatingOil
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Light heating oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "HeatingOil"@en,
-        rdfs:label "OtherGasOil"@en
-    
-    SubClassOf: 
-        GasDieselOil,
-        has_origin value fossil
     
     
 Class: HouseholdSector
@@ -2736,7 +2555,7 @@ Class: HydroPower
 Class: HydroPowerplant
 
     SubClassOf: 
-        Generator
+        ArtificialObject
     
     
 Class: HydroelectricPowerplant
@@ -2779,7 +2598,7 @@ Class: Hydrogen
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: HydrogenPowerplant
@@ -2818,14 +2637,14 @@ Class: Identifier
         InformationArtifact
     
     
-Class: IndustrialWaste
+Class: IndustrialWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Report wastes of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat. The quantity of fuel used should be reported on a net calorific value basis. Renewable industrial waste should be reported in the solid biomass, biogas and/or liquid biofuels categories."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Waste
+        WasteFuel
     
     
 Class: IndustrySector
@@ -2968,34 +2787,6 @@ Class: InvestmentCost
         Cost
     
     
-Class: JetFuel
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "JetFuel"@en,
-        rdfs:label "KeroseneTypeJetFuel"@en
-    
-    SubClassOf: 
-        Kerosene,
-        has_origin value fossil
-    
-    
-Class: Kerosene
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kerosene, also known as paraffin, lamp oil, and coal oil (an obsolete term), is a combustible hydrocarbon liquid which is derived from petroleum. It is widely used as a fuel in industry as well as households. Its name derives from Greek: κηρός (keros) meaning wax, and was registered as a trademark by Canadian geologist and inventor Abraham Gesner in 1854 before evolving into a genericized trademark. It is sometimes spelled kerosine in scientific and industrial usage.
-[...]
-
-Kerosene is widely used to power jet engines of aircraft (jet fuel) and some rocket engines and is also commonly used as a cooking and lighting fuel and for fire toys such as poi. In parts of Asia, kerosene is sometimes used as fuel for small outboard motors or even motorcycles.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484"
-    
-    SubClassOf: 
-        OilAndPetroleumProducts,
-        has_normal_state_of_matter value liquid,
-        has_origin value fossil
-    
-    
 Class: Land
 
     SubClassOf: 
@@ -3026,24 +2817,6 @@ Class: License
 
     SubClassOf: 
         SoftwareDescriptor
-    
-    
-Class: Lignite
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
-
-Oil shale and tar sands produced and combusted directly should be reported in this category. Oil shale and tar sands used as inputs for other transformation processes should also be reported in this category.
-
-This includes the portion of the oil shale or tar sands consumed in the transformation process."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Coal,
-        has_origin value fossil
-    
-    DisjointWith: 
-        HardCoal
     
     
 Class: LignitePowerplant
@@ -3081,15 +2854,6 @@ Class: Link
     
     DisjointWith: 
         Node
-    
-    
-Class: LiquidAir
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed and cooled to store energy. To discharge energy, the air is expaned."@en
-    
-    SubClassOf: 
-        Air
     
     
 Class: LiquidBiofuel
@@ -3146,18 +2910,6 @@ Class: Mail
         Support
     
     
-Class: ManufacturedCoalBasedGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal gasification is the process of producing syngas–a mixture consisting primarily of carbon monoxide (CO), hydrogen (H2), carbon dioxide (CO2), natural gas (CH4) , and water vapour (H2O)–from coal and water, air and/or oxygen."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal_gasification&oldid=904933607"@en
-    
-    SubClassOf: 
-        SolidFossilFuels,
-        has_normal_state_of_matter value gaseous,
-        has_origin value fossil
-    
-    
 Class: Manufacturer
 
     SubClassOf: 
@@ -3204,7 +2956,7 @@ Class: MethanationGasStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     DisjointWith: 
         BatteryStorage
@@ -3313,12 +3065,6 @@ Class: ModelingSoftware
         Software
     
     
-Class: ModelingTechnology
-
-    SubClassOf: 
-        Technology
-    
-    
 Class: Modus
 
     SubClassOf: 
@@ -3338,33 +3084,22 @@ Class: MoltenSaltBattery
 Class: MoltenStateBattery
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-state batteries consist of two molten metal alloys separated by an electrolyte."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Molten-state batteries consist of two molten metal alloys separated by an electrolyte."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
         Battery
     
     
-Class: MotorGasoline
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Motor gasoline consists of a mixture of light hydrocarbons distilling between 35 oC and 215 oC. It is used as a fuel for land based spark ignition engines. Motor gasoline may include additives, oxygenates and octane enhancers, including lead compounds such as TEL and TML.
-
-Includes motor gasoline blending components (excluding additives/oxygenates), e.g. alkylates, isomerate, reformate, cracked gasoline destined for use as finished motor gasoline."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Gasoline,
-        has_origin value fossil
-    
-    
-Class: MunicipalWaste
+Class: MunicipalWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Wastes produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Waste
+        WasteFuel
     
     
 Class: Name
@@ -3373,29 +3108,13 @@ Class: Name
         Identifier
     
     
-Class: NaturalGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "This data collection applies to natural gas, which comprises gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
-
-It includes both ‘non-associated’ gas originating from fields producing hydrocarbons only in gaseous form, and ‘associated’ gas produced in association with crude oil as well as methane recovered from coal mines (colliery gas) or from coal seams (coal seam gas).
-
-It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Fuel,
-        has_normal_state_of_matter value gaseous,
-        has_origin value fossil
-    
-    
 Class: NaturalGasGenerator
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas electricity generator technology uses natural gas to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: NetworkNode
@@ -3425,17 +3144,6 @@ Class: Node
         Link
     
     
-Class: NonAssociatedGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas originating from fields producing hydrocarbons only in gaseous form.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
-    
-    SubClassOf: 
-        NaturalGas,
-        has_origin value fossil
-    
-    
 Class: NonMethaneVolatileOrganicCompound
 
     Annotations: 
@@ -3447,14 +3155,14 @@ Class: NonMethaneVolatileOrganicCompound
         VolatileOrganicCompound
     
     
-Class: NonRenewableMunicipalWaste
+Class: NonRenewableMunicipalWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of non-biological origin."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        MunicipalWaste,
+        MunicipalWasteFuel,
         has_origin value fossil
     
     
@@ -3483,7 +3191,7 @@ Class: NuclearPowerGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear generator technology is a fossil electricity generator that uses nuclear reactions to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: NuclearPowerplant
@@ -3506,7 +3214,7 @@ Class: ObjectiveFunction
 Class: Ocean
 
     SubClassOf: 
-        Water
+        PortionOfWater
     
     DisjointWith: 
         Flow
@@ -3515,7 +3223,7 @@ Class: Ocean
 Class: OceanPowerplant
 
     SubClassOf: 
-        Generator
+        ArtificialObject
     
     
 Class: OffShoreWindElectricityGenerator
@@ -3536,26 +3244,13 @@ Class: Office
         CommericalDemand
     
     
-Class: OilAndPetroleumProducts
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum (/pəˈtroʊliəm/) is a naturally occurring, yellowish-black liquid found in geological formations beneath the Earth's surface. It is commonly refined into various types of fuels. Components of petroleum are separated using a technique called fractional distillation, i.e. separation of a liquid mixture into fractions differing in boiling point by means of distillation, typically using a fractionating column.
-
-It consists of hydrocarbons of various molecular weights and other organic compounds. The name petroleum covers both naturally occurring unprocessed crude oil and petroleum products that are made up of refined crude oil. A fossil fuel, petroleum is formed when large quantities of dead organisms, mostly zooplankton and algae, are buried underneath sedimentary rock and subjected to both intense heat and pressure."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
-    
-    SubClassOf: 
-        Fuel,
-        has_origin value fossil
-    
-    
 Class: OilElectricityGenerator
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
     
     SubClassOf: 
-        FossilGeneratorTechnology
+        FossilGenerator
     
     
 Class: OilPowerplant
@@ -3620,42 +3315,6 @@ Class: Organization
         Person
     
     
-Class: OtherBituminousCoal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal used for steam raising purposes and includes all bituminous coal that is neither included under coking coal nor anthracite. It is characterised by higher volatile matter than anthracite (more than 10 %) and lower carbon content (less than 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis. If bituminous coal is used in coke ovens it should be reported as coking coal."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "OtherBituminousCoal"@en,
-        rdfs:label "SteamCoal"@en
-    
-    SubClassOf: 
-        HardCoal,
-        has_origin value fossil
-    
-    
-Class: OtherKerosene
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Refined petroleum distillate used in sectors other than aircraft transport. It distils between 150 °C and 300 °C."@en
-    
-    SubClassOf: 
-        Kerosene,
-        has_origin value fossil
-    
-    
-Class: OtherLiquidBiofuels
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquid biofuels, used directly as fuel, not included in biogasoline or bio-diesels."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        LiquidBiofuel,
-        has_origin value biogenic,
-        has_origin value renewable
-    
-    
 Class: PFC
 
     Annotations: 
@@ -3666,7 +3325,8 @@ Class: PFC
         Perfluorocarbon
     
     SubClassOf: 
-        FluorinatedGreenhouseGas
+        FluorinatedGreenhouseGas,
+        has_origin value fossil
     
     
 Class: PVPanel
@@ -3689,20 +3349,6 @@ Class: ParticulateMatter
     
     SubClassOf: 
         AirPollutant
-    
-    
-Class: Peat
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour. Peat used for non-energy purposes is not included.
-
-This definition is without prejudice to the definition of renewable energy sources in Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        SolidFossilFuels,
-        has_normal_state_of_matter value solid,
-        has_origin value fossil
     
     
 Class: Percentage
@@ -3734,6 +3380,7 @@ Class: Person
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000030>
+
     
     DisjointWith: 
         Organization
@@ -3786,6 +3433,15 @@ Class: Plotting
         DataProcessing
     
     
+Class: PoliticalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
 Class: PoliticalParty
 
     Annotations: 
@@ -3805,30 +3461,350 @@ Class: Pollutant
         <http://purl.obolibrary.org/obo/BFO_0000016>
     
     
-Class: PortionOfGas
+Class: PortionOfAir
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas is one of the four fundamental states of matter (the others being solid, liquid, and plasma). A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). A gas mixture, such as air, contains a variety of pure gases. What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles. This separation usually makes a colorless gas invisible to the human observer."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas&oldid=904791916"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The name given to the Earth's atmosphere."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Air_(disambiguation)"
     
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>,
+        is_used_by some StorageUnit
+    
+    
+Class: PortionOfAnthracite
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "High rank coal used for industrial and residential applications. It has generally less than 10 % volatile matter and a high carbon content (about 90 % fixed carbon). Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfHardCoal
+    
+    
+Class: PortionOfAssociatedGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas produced in association with crude oil."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfNaturalGas
+    
+    
+Class: PortionOfAviationGasoline
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Motor spirit prepared especially for aviation piston engines, with an octane number suited to the engine, a freezing point of - 60 °C and a distillation range usually within the limits of 30 °C and 180 °C."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfGasoline
+    
+    
+Class: PortionOfBiodiesel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bio-diesel (a methyl-ester produced from vegetable or animal oil, of diesel quality), biodimethylether (dimethylether produced from biomass), Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil produced from oil seed through mechanical processing only) and all other liquid biofuels which are added to, blended with or used straight as transport diesel.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some LiquidBiofuel
+    
+    
+Class: PortionOfBiofuel
+
     EquivalentTo: 
-        has_state_of_matter value gaseous
+        has_disposition some Biofuel
+    
+    SubClassOf: 
+        PortionOfFuel,
+        has_origin value biogenic,
+        has_origin value renewable
+    
+    
+Class: PortionOfBiogas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some Biofuel
+    
+    
+Class: PortionOfBiogasoline
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This category includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        rdfs:label "Bioethanol"@en,
+        rdfs:label "PortionOfBiogasoline"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some LiquidBiofuel
+    
+    
+Class: PortionOfBlastFurnaceGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Produced during the combustion of coke in blast furnaces in the iron and steel industry. It is recovered and used as a fuel partly within the plant and partly in other steel industry processes or in power stations equipped to burn it. The quantity of fuel should be reported on a gross calorific value basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfManufacturedCoalBasedGas
+    
+    
+Class: PortionOfCharcoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The solid residue of the destructive distillation and pyrolysis of wood and other vegetal material."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfSolidBiomass
+    
+    
+Class: PortionOfCoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some SolidFossilFuels,
+        has_normal_state_of_matter value solid,
+        has_origin value fossil
+    
+    
+Class: PortionOfCokeOvenGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Obtained as a by-product of the manufacture of coke oven coke for the production of iron and steel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfManufacturedCoalBasedGas
+    
+    
+Class: PortionOfCokingCoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Bituminous coal with a quality that allows the production of a coke suitable to support a blast furnace charge. Its gross calorific value is greater than 23 865 kJ/kg (5 700 kcal/kg) on an ash-free but moist basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfHardCoal
+    
+    
+Class: PortionOfCollieryGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane produced at coal mines or from coal seams, piped to the surface and consumed at collieries or transmitted by pipeline to consumers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfNaturalGas
+    
+    
+Class: PortionOfCompressedAir
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed to store energy. To discharge energy, the air is expaned."@en
+    
+    SubClassOf: 
+        PortionOfAir
+    
+    
+Class: PortionOfCrudeOil
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Crude oil is a mineral oil of natural origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable. This category includes field or lease condensate recovered from associated and non-associated gas where it is commingled with the commercial crude oil stream."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfOilAndPetroleumProducts
+    
+    
+Class: PortionOfDammedWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is a barrier that stops or restricts the flow of water or underground streams. Reservoirs created by dams not only suppress floods but also provide water for activities such as irrigation, human consumption, industrial use, aquaculture, and navigability. Hydropower is often used in conjunction with dams to generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en
+    
+    SubClassOf: 
+        PortionOfWater,
+        is_used_by some StorageUnit
+    
+    
+Class: PortionOfDieselFuel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "On-road diesel oil for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        rdfs:label "PortionOfDieselFuel"@en,
+        rdfs:label "PortionOfTransportDiesel"@en
+    
+    SubClassOf: 
+        PortionOfGasDieselOil
+    
+    
+Class: PortionOfFuel
+
+    EquivalentTo: 
+        has_disposition some Fuel
     
     SubClassOf: 
         PortionOfMatter
     
     
-Class: PortionOfLiquid
+Class: PortionOfGasDieselOil
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter (the others being solid, gas, and plasma), and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Liquid&oldid=904993133"@en
-    
-    EquivalentTo: 
-        has_state_of_matter value liquid
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gas/diesel oil is primarily a medium distillate distilling between 180 °C and 380 °C. Includes blending components. Several grades are available depending on uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfMatter
+        PortionOfOilAndPetroleumProducts,
+        has_normal_state_of_matter value liquid
+    
+    
+Class: PortionOfGasoline
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gasoline (American English) or petrol (British English) is a transparent petroleum-derived liquid that is used primarily as a fuel in spark-ignited internal combustion engines. It consists mostly of organic compounds obtained by the fractional distillation of petroleum, enhanced with a variety of additives.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640"
+    
+    SubClassOf: 
+        PortionOfOilAndPetroleumProducts,
+        has_normal_state_of_matter value liquid
+    
+    
+Class: PortionOfGasworksGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all types of gases produced in public utility or private plants, whose main purpose is manufacture, transport and distribution of gas. It includes gas produced by carbonisation (including gas produced by coke ovens and transferred to gasworks gas), by total gasification with or without enrichment with oil products (LPG, residual fuel oil, etc.), and by reforming and simple mixing of gases and/or air, reported under the rows ‘from other sources’. Under the transformation sector identify amounts of gasworks gas transferred to blended natural gas which will be distributed and consumed through the natural gas grid.
+
+The production of other coal gases (i.e. coke oven gas, blast furnace gas and oxygen steel furnace gas) should be reported in the columns concerning such gases, and not as production of gasworks gas. The coal gases transferred to gasworks plants should then be reported (in their own column) in the transformation sector in the gasworks plants row. The total amount of gasworks gas resulting from transfers of other coal gases should appear in the production line for gasworks gas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfManufacturedCoalBasedGas
+    
+    
+Class: PortionOfHardCoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfCoal
+    
+    DisjointWith: 
+        PortionOfLignite
+    
+    
+Class: PortionOfHeatingOil
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Light heating oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        rdfs:label "PortionOfHeatingOil"@en,
+        rdfs:label "PortionOfOtherGasOil"@en
+    
+    SubClassOf: 
+        PortionOfGasDieselOil
+    
+    
+Class: PortionOfIndustrialWasteFuel
+
+    SubClassOf: 
+        PortionOfWasteFuel
+    
+    
+Class: PortionOfJetFuel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        rdfs:label "JetFuel"@en,
+        rdfs:label "KeroseneTypeJetFuel"@en
+    
+    SubClassOf: 
+        PortionOfKerosene
+    
+    
+Class: PortionOfKerosene
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kerosene, also known as paraffin, lamp oil, and coal oil (an obsolete term), is a combustible hydrocarbon liquid which is derived from petroleum. It is widely used as a fuel in industry as well as households. Its name derives from Greek: κηρός (keros) meaning wax, and was registered as a trademark by Canadian geologist and inventor Abraham Gesner in 1854 before evolving into a genericized trademark. It is sometimes spelled kerosine in scientific and industrial usage.
+[...]
+
+Kerosene is widely used to power jet engines of aircraft (jet fuel) and some rocket engines and is also commonly used as a cooking and lighting fuel and for fire toys such as poi. In parts of Asia, kerosene is sometimes used as fuel for small outboard motors or even motorcycles.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484"
+    
+    SubClassOf: 
+        PortionOfOilAndPetroleumProducts,
+        has_normal_state_of_matter value liquid
+    
+    
+Class: PortionOfLignite
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
+
+Oil shale and tar sands produced and combusted directly should be reported in this category. Oil shale and tar sands used as inputs for other transformation processes should also be reported in this category.
+
+This includes the portion of the oil shale or tar sands consumed in the transformation process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfCoal,
+        has_normal_state_of_matter value solid,
+        has_origin value fossil
+    
+    DisjointWith: 
+        PortionOfHardCoal
+    
+    
+Class: PortionOfLiquidAir
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is compressed and cooled to store energy. To discharge energy, the air is expaned."@en
+    
+    SubClassOf: 
+        PortionOfAir
+    
+    
+Class: PortionOfLiquidBiofuel
+
+    EquivalentTo: 
+        has_disposition some LiquidBiofuel
+    
+    SubClassOf: 
+        PortionOfBiofuel,
+        has_normal_state_of_matter value liquid,
+        has_origin value biogenic,
+        has_origin value renewable
+    
+    
+Class: PortionOfManufacturedCoalBasedGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal gasification is the process of producing syngas–a mixture consisting primarily of carbon monoxide (CO), hydrogen (H2), carbon dioxide (CO2), natural gas (CH4) , and water vapour (H2O)–from coal and water, air and/or oxygen."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal_gasification&oldid=904933607"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some SolidFossilFuels,
+        has_normal_state_of_matter value gaseous,
+        has_origin value fossil
     
     
 Class: PortionOfMatter
@@ -3840,30 +3816,178 @@ Class: PortionOfMatter
         <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
-Class: PortionOfPlasma
+Class: PortionOfMotorGasoline
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Plasma is one of the four fundamental states of matter, and was first described by chemist Irving Langmuir[2] in the 1920s.[3] It consists of a gas of ions – atoms which have some of their orbital electrons removed – and free electrons.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Plasma_(physics)"
-    
-    EquivalentTo: 
-        has_state_of_matter value plasmatic
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Motor gasoline consists of a mixture of light hydrocarbons distilling between 35 oC and 215 oC. It is used as a fuel for land based spark ignition engines. Motor gasoline may include additives, oxygenates and octane enhancers, including lead compounds such as TEL and TML.
+
+Includes motor gasoline blending components (excluding additives/oxygenates), e.g. alkylates, isomerate, reformate, cracked gasoline destined for use as finished motor gasoline."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfMatter
+        PortionOfGasoline
     
     
-Class: PortionOfSolid
+Class: PortionOfMunicipalWasteFuel
+
+    EquivalentTo: 
+        has_disposition some MunicipalWasteFuel
+    
+    SubClassOf: 
+        PortionOfWasteFuel
+    
+    
+Class: PortionOfNaturalGas
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solid is one of the four fundamental states of matter (the others being liquid, gas, and plasma). In solids particles are closely packed. It is characterized by structural rigidity and resistance to changes of shape or volume."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solid&oldid=906779814"
-    
-    EquivalentTo: 
-        has_state_of_matter value solid
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This data collection applies to natural gas, which comprises gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane.
+
+It includes both ‘non-associated’ gas originating from fields producing hydrocarbons only in gaseous form, and ‘associated’ gas produced in association with crude oil as well as methane recovered from coal mines (colliery gas) or from coal seams (coal seam gas).
+
+It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfMatter
+        PortionOfMatter,
+        has_disposition some Fuel,
+        has_normal_state_of_matter value gaseous,
+        has_origin value fossil
+    
+    
+Class: PortionOfNonAssociatedGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas originating from fields producing hydrocarbons only in gaseous form.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        PortionOfNaturalGas
+    
+    
+Class: PortionOfNonRenewableMunicipalWasteFuel
+
+    EquivalentTo: 
+        has_disposition some NonRenewableMunicipalWasteFuel
+    
+    SubClassOf: 
+        PortionOfMunicipalWasteFuel,
+        has_origin value fossil
+    
+    
+Class: PortionOfOilAndPetroleumProducts
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum (/pəˈtroʊliəm/) is a naturally occurring, yellowish-black liquid found in geological formations beneath the Earth's surface. It is commonly refined into various types of fuels. Components of petroleum are separated using a technique called fractional distillation, i.e. separation of a liquid mixture into fractions differing in boiling point by means of distillation, typically using a fractionating column.
+
+It consists of hydrocarbons of various molecular weights and other organic compounds. The name petroleum covers both naturally occurring unprocessed crude oil and petroleum products that are made up of refined crude oil. A fossil fuel, petroleum is formed when large quantities of dead organisms, mostly zooplankton and algae, are buried underneath sedimentary rock and subjected to both intense heat and pressure."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some Fuel,
+        has_origin value fossil
+    
+    
+Class: PortionOfPeat
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible soft, porous or compressed, sedimentary deposit of plant origin with high water content (up to 90 % in the raw state), easily cut, of light to dark brown colour. Peat used for non-energy purposes is not included.
+
+This definition is without prejudice to the definition of renewable energy sources in Directive 2001/77/EC and to the 2006 IPCC Guidelines for National Greenhouse Gas Inventories."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some SolidFossilFuels,
+        has_normal_state_of_matter value solid
+    
+    
+Class: PortionOfPumpedWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
+    
+    SubClassOf: 
+        PortionOfWater,
+        is_used_by some StorageUnit
+    
+    
+Class: PortionOfRenewableMunicipalWasteFuel
+
+    EquivalentTo: 
+        has_disposition some RenewableMunicipalWasteFuel
+    
+    SubClassOf: 
+        PortionOfMunicipalWasteFuel,
+        has_origin value biogenic,
+        has_origin value renewable
+    
+    
+Class: PortionOfSolidBiomass
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        rdfs:label "SolidBiofuel"@en,
+        rdfs:label "SolidBiomass"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some Biofuel,
+        has_normal_state_of_matter value solid,
+        has_origin value biogenic,
+        has_origin value renewable
+    
+    
+Class: PortionOfSolidFossilFuel
+
+    EquivalentTo: 
+        has_disposition some SolidFossilFuels
+    
+    SubClassOf: 
+        PortionOfFuel,
+        has_origin value fossil
+    
+    
+Class: PortionOfSubBituminousCoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Refers to non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31 % volatile matter on a dry mineral matter free basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfCoal
+    
+    
+Class: PortionOfWasteFuel
+
+    EquivalentTo: 
+        has_disposition some WasteFuel
+    
+    SubClassOf: 
+        PortionOfFuel
+    
+    
+Class: PortionOfWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_disposition some EnergyCarrier
+    
+    
+Class: PortionOfWoodAndOther
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        PortionOfSolidBiomass
     
     
 Class: Postprocessing
@@ -3907,7 +4031,7 @@ Class: PowerToGas
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: PowerUnit
@@ -3994,7 +4118,7 @@ Class: PumpedStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) uses water from a higher reservoir to generate energy"@en
     
     SubClassOf: 
-        EnergyStorageTechnology,
+        EnergyStorage,
         is_used_by some StorageUnit
     
     
@@ -4005,17 +4129,6 @@ Class: PumpedStoragePlant
     
     SubClassOf: 
         HydroelectricPowerplant
-    
-    
-Class: PumpedWater
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
-    
-    SubClassOf: 
-        Water,
-        is_used_by some StorageUnit
     
     
 Class: PumpstoragePowerplant
@@ -4072,6 +4185,15 @@ Class: RegenerativePowerplant
         has_part some WindTurbine
     
     
+Class: RenewableGenerator
+
+    SubClassOf: 
+        ElectricityGenerator
+    
+    DisjointWith: 
+        FossilGenerator
+    
+    
 Class: RenewableGeneratorTechnology
 
     Annotations: 
@@ -4084,15 +4206,14 @@ Class: RenewableGeneratorTechnology
         FossilGeneratorTechnology
     
     
-Class: RenewableMunicipalWaste
+Class: RenewableMunicipalWasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The portion of municipal waste which is of biological origin."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Biofuel,
-        MunicipalWaste,
+        MunicipalWasteFuel,
         has_origin value biogenic,
         has_origin value renewable
     
@@ -4337,7 +4458,7 @@ Class: Software
         <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
     
     SubClassOf: 
-        ModelingTechnology
+        InformationArtifact
     
     
 Class: SoftwareDescriptor
@@ -4411,7 +4532,7 @@ Class: SolarThermalCollector
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
         has_physical_input only SolarThermal
     
@@ -4422,7 +4543,7 @@ Class: SolarThermalHeatGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
     
     SubClassOf: 
-        HeatGeneratorTechnology
+        HeatGenerator
     
     
 Class: SolarThermalPowerplant
@@ -4433,21 +4554,6 @@ Class: SolarThermalPowerplant
     SubClassOf: 
         SolarPowerPlant,
         has_part some SteamTurbine
-    
-    
-Class: SolidBiomass
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers organic, non-fossil material of biological origin which may be used as fuel for heat production or electricity generation.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
-        rdfs:label "SolidBiofuel"@en,
-        rdfs:label "SolidBiomass"@en
-    
-    SubClassOf: 
-        Biofuel,
-        has_normal_state_of_matter value solid,
-        has_origin value biogenic,
-        has_origin value renewable
     
     
 Class: SolidFossilFuels
@@ -4507,17 +4613,6 @@ Class: Study
         Reference
     
     
-Class: SubBituminousCoal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Refers to non-agglomerating coal with a gross calorific value between 17 435 kJ/kg (4 165 kcal/kg) and 23 865 kJ/kg (5 700 kcal/kg) containing more than 31 % volatile matter on a dry mineral matter free basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Coal,
-        has_origin value fossil
-    
-    
 Class: Subgrid
 
     Annotations: 
@@ -4537,7 +4632,7 @@ Class: SuperconductingMagneticEnergy
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Superconducting_magnetic_energy_storage&oldid=902190687"
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: Support
@@ -4586,7 +4681,7 @@ Class: Technology
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: TestDataset
@@ -4602,7 +4697,7 @@ Class: Thermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "Sarbu, Ioan & Sebarchievici, C. (2018). A Comprehensive Review of Thermal Energy Storage. Sustainability (Switzerland). 10. 10.3390/su10010191. "
     
     SubClassOf: 
-        EnergyStorageTechnology
+        EnergyStorage
     
     
 Class: TidalPowerPlant
@@ -4625,7 +4720,7 @@ Class: TidalStreamGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        EnergyGenerator,
         has_physical_output some Power,
         has_physical_input only TideWaveOcean
     
@@ -4761,7 +4856,7 @@ Class: Turbine
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Turbine&oldid=905470312"
     
     SubClassOf: 
-        EnergyGeneratorTechnology
+        EnergyGenerator
     
     
 Class: Type
@@ -4876,7 +4971,7 @@ Class: Warehouse
         CommericalDemand
     
     
-Class: Waste
+Class: WasteFuel
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Waste (or wastes) are unwanted or unusable materials. Waste is any substance which is discarded after primary use, or is worthless, defective and of no use."@en,
@@ -4897,24 +4992,13 @@ Class: WastePowerplant
         has_part some SteamTurbine
     
     
-Class: Water
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        has_disposition some EnergyCarrier
-    
-    
 Class: WaterElectricityGenerator
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: WaterTurbine
@@ -4936,7 +5020,7 @@ Class: Wave
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Wind_wave"
     
     SubClassOf: 
-        Water
+        PortionOfWater
     
     
 Class: WavePowerPlant
@@ -4966,7 +5050,7 @@ Class: Wind
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        Air
+        PortionOfAir
     
     
 Class: WindElectricityGenerator
@@ -4975,7 +5059,7 @@ Class: WindElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind electricity generator technology uses wind power to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        RenewableGenerator
     
     
 Class: WindEntity
@@ -5033,18 +5117,6 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
         has_physical_output some Power,
         uses some Wind,
         has_physical_input only Wind
-    
-    
-Class: WoodAndOther
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        SolidBiomass,
-        has_origin value biogenic,
-        has_origin value renewable
     
     
 Class: Workshop
@@ -5173,13 +5245,6 @@ Individual: Carbon_dioxide
     
     SameAs: 
         CO2
-    
-    
-Individual: Coal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
     
     
 Individual: Coin-Or_CBC
@@ -5453,13 +5518,6 @@ Individual: HFC
      is_equivalent_to  Hydrofluorocarbon
     
     
-Individual: HardCoal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    
 Individual: Heat
 
     Annotations: 
@@ -5601,17 +5659,6 @@ Individual: Light
 
     Types: 
         ResidentialDemand
-    
-    
-Individual: Lignite
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
-
-Oil shale and tar sands produced and combusted directly should be reported in this category. Oil shale and tar sands used as inputs for other transformation processes should also be reported in this category.
-
-This includes the portion of the oil shale or tar sands consumed in the transformation process."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     
 Individual: LinearProgramming
@@ -5867,6 +5914,38 @@ Individual: Perfluorocarbon
 Individual: Plot
 
     
+Individual: PortionOfCoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.Coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967"
+    
+    
+Individual: PortionOfHardCoal
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The term ‘hard coal’ refers to coal of gross calorific value greater than 23 865 kJ/kg (5 700 kcal/kg) on an ashfree but moist basis and with a mean random reflectance of vitrinite of at least 0,6."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    
+Individual: PortionOfLignite
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-agglomerating coal with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis.
+
+Oil shale and tar sands produced and combusted directly should be reported in this category. Oil shale and tar sands used as inputs for other transformation processes should also be reported in this category.
+
+This includes the portion of the oil shale or tar sands consumed in the transformation process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    
+Individual: PortionOfWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water"
+    
+    
 Individual: Pound
 
     Annotations: 
@@ -6026,13 +6105,6 @@ SI derived unit for voltage."@en
     
     Types: 
         VoltageUnit
-    
-    
-Individual: Water
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a transparent, tasteless, odorless, and nearly colorless chemical substance, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water"
     
     
 Individual: Watt
@@ -6195,6 +6267,9 @@ DisjointClasses:
     CommerceSector,HouseholdSector,IndustrySector
 
 DisjointClasses: 
+    ElectricityGenerator,EnergyGenerator,EnergyStorage,EnergyTransfer,HeatGenerator
+
+DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
 DisjointClasses: 
@@ -6217,4 +6292,3 @@ DisjointClasses:
 
 DisjointClasses: 
     LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
-

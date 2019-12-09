@@ -29,6 +29,8 @@ Here is a template for new release sections
   'has_quality' (#51)
 - issue templates (#92, #146) 
 - ArtificialObject (#121) 
+- classes for objects that apply to technologies like EnergyGenerator (#128)
+- Grid class (#137)
 
 ### Changed
 - FluorinatedGreenhouseGas (#88)
@@ -40,7 +42,9 @@ Here is a template for new release sections
 - improved workflow in `CONTRIBUTE.md` (#98)
 - linked wiki and `CONTRIBUTE.md` in `README`(#113)
 - add github team handle in `README` (#119)
+- technology and subclasses (#128)
 - rename CONTRIBUTE.md CONTRIBUTING.md (#144)
+
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
@@ -48,7 +52,6 @@ Here is a template for new release sections
   ontology inconsistent (#51)
 - contact and subclasses (#101)
 - subclasses of assumption (#102)
-
 
 
 
