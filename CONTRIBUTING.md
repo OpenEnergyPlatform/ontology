@@ -100,7 +100,7 @@ In case of conflicts between your branch and `dev` you must solve them locally.
 4. The conflicts have to be [manually](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line) resolved
     
 
-### Naming conventions for branches
+### Conventions
 The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
 
 Examples of branch names : `feature/solving-duplicate-problems-#11` or `feature/add_ontology_new_class_#43`
