@@ -57,7 +57,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     If your branch does not exist on the remote server yet, git will provide you with instructions, simply follow them
 6. Submit a pull request (PR)
     - Follow the [steps](https://help.github.com/en/articles/creating-a-pull-request) of the github help to create the PR.
-    - Please note that you PR should be directed from your branch (for example `myfeature`) towards the branch `dev`
+    - Please note that your PR should be directed from your branch (for example `myfeature`) towards the branch `dev`
     - To make reviewing easier, briefly describe the changes you have made in the pull request and summarise the discussion and conclusions in the associated issue. 
 7. Describe briefly (i.e. in one or two lines) what you changed in the `CHANGELOG.md` file. End the description by the number in parenthesis `(#<your PR number>)`
 8. Commit the changes to the `CHANGELOG.md` file
