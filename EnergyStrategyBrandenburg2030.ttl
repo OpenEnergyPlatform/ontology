@@ -5,8 +5,6 @@
 @prefix oeo: <https://github.com/OpenEnergyPlatform/ontology/blob/feature/Scenario/oeo.omn>.
 @prefix mi: <missing!>.
 
-#what is the prefix of a/ this scenario?
-
 <EnergyStrategy2030> a oeo:Scenario.
 <EnergyStrategy2030> oeo:has_institution "ReinerLemoineInstitut"^^xsd:string, "HTWBerlin"^^xsd:string.
 <EnergyStrategy2030> oeo:has_author "ElisaGaudchau"^^xsd:string, "BeritMüller"^^xsd:string, "JochenTwele"^^xsd:string, "JensFortmann"^^xsd:string.
@@ -18,14 +16,14 @@
 # I decided for value so we dont have to include every dataset in the ontology
 <EnergyStrategy2030> oeo:uses_dataset "abbb_constaints"^^xsd:string, "abbb_demand"^^xsd:string, "abbb_emob"^^xsd:string, "abbb_regions"^^xsd:string, "abbb_simulation_parameter"^^xsd:string, "abbb_transformer"^^xsd:string, "abbb_transmission_capacity"^^xsd:string.
 
-# class or value?
+# class or value? Issue opened #170
 <EnergyStrategy2030> oeo:covers_region mi:Brandenburg.
 mi:Brandenburg oeo:has_subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:OderlandSpree, mi:LausitzSpreewald, mi:HavellandFläming.
 
-# Issue opened for GHDSector
+# Issue opened for GHDSector #157
 <EnergyStrategy2030> oeo:covers_sector oeo:IndustrySector, oeo:TrafficSector, mi:GHDSector, oeo:HouseholdSector, oeo:HeatSector, oeo:ElectricitySector.
 
-# Issue opened for some classes that exist too often
+# Issue opened for some classes that exist too often #159, #160, #161
 <EnergyStrategy2030> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator.
 
 <EnergyStrategy2030> oeo:makes_assumption _:Emmissions2030.
@@ -35,6 +33,7 @@ _:Emmissions2030 oeo:hasYear "2030"^^xsd:integer.
 _:Emmissions2030 oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
 # what is CarbonDioxideEmission1990? 
 # the meaning is: is should be maximum 28% over the CarbonDioxideEmissions of 1990
+#source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
 _:Emmissions2030 oeo:hasMaximum [a oeo:Percentage; oeo:has_Percentage "28"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmission1990].
 
 <EnergyStrategy2030> oeo:makes_assumption _:Export2030.
@@ -101,6 +100,7 @@ _:AlternativeFuelsAndPropulsion2030 oeo:appliesTo oeo:EnergyFromAlternativeFuels
 _:AlternativeFuelsAndPropulsion2030 oeo:hasYear "2030"^^xsd:integer.
 # we just have EnergyFromAlternativeFuelsAndPropulsionInTraffic, EnergyFromElectricityInTraffic and EnergyFromBioFuelInTraffic
 # subclasses of EnergyCarrierQuantity
+# Issue opened to add EnergyInTraffic #170
 _:AlternativeFuelsAndPropulsion2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "18"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
 
 <EnergyStrategy2030> oeo:makes_assumption _:BioFuel2030.
@@ -128,8 +128,8 @@ _:CarbonDioxideEmissionTraffic2030 oeo:isEqual [oeo:hasNumeral "4500000"^^xsd:in
 # missing
 <EnergyStrategy2030> oeo:makes_assumption mi:WindPVDevelopmentProportionalToArea.
 
-# object or value?
-<EnergyStrategy2030> oeo:uses_dataset mi:PowerplantListBundesnetzargentur2015.
+#  I decided for value so we dont have to include every dataset in the ontology
+<EnergyStrategy2030> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
 
 <EnergyStrategy2030> oeo:makes_assumption _:Gas2030.
 _:Gas2030 a oeo:Constraint.
