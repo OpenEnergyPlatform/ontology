@@ -117,15 +117,19 @@ _:ElectricMobility2030 oeo:hasYear "2030"^^xsd:integer.
 # same as above
 _:ElectricMobility2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "10"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
 
+# assumption != constraint
 <EnergyStrategy2030> oeo:makes_assumption _:CarbonDioxideEmissionTraffic2030.
 _:CarbonDioxideEmissionTraffic2030 a oeo:Constraint.
 _:CarbonDioxideEmissionTraffic2030 oeo:appliesTo oeo:CarbonDioxideEmissionTrafficSector.
 _:CarbonDioxideEmissionTraffic2030 oeo:hasYear "2030"^^xsd:integer.
 # what is CarbonDioxideEmissionTrafficSector1990?
+# numeral cant be equal to a percentage, has to be reformulated
+# Numeral has to be class so I can anonymously access one that belongs to an entity like CarbonDioxideEmissionTrafficSector1990 (which shouldnt be an entity btw) #171
+# relationships with three entities (numeral2, that is percentage of numeral1) arent possible so a class PercentageOf is needed #172
 _:CarbonDioxideEmissionTraffic2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "82"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmissionTrafficSector1990].
 _:CarbonDioxideEmissionTraffic2030 oeo:isEqual [oeo:hasNumeral "4500000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
 
-# missing
+# assumption missing
 <EnergyStrategy2030> oeo:makes_assumption mi:WindPVDevelopmentProportionalToArea.
 
 #  I decided for value so we dont have to include every dataset in the ontology
