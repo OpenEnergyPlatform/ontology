@@ -34,6 +34,8 @@ _:Emmissions2030 oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:h
 # what is CarbonDioxideEmission1990? 
 # the meaning is: is should be maximum 28% over the CarbonDioxideEmissions of 1990
 #source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
+#heißt wir brauchen eine Entität, die als Numeral die CO2-Emissionen von 1990 hat
+#process(-profile) (Jahr 1990) des process profiles jähliche CO2-Emissionen  -->Numeral ist Summe dieses Jahres
 _:Emmissions2030 oeo:hasMaximum [a oeo:Percentage; oeo:has_Percentage "28"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmission1990].
 
 <EnergyStrategy2030> oeo:has_constraint _:Export2030.
@@ -127,6 +129,7 @@ _:CarbonDioxideEmissionTraffic2030 oeo:hasYear "2030"^^xsd:integer.
 # Numeral has to be class so I can anonymously access one that belongs to an entity like CarbonDioxideEmissionTrafficSector1990 (which shouldnt be an entity btw) #171
 # relationships with three entities (numeral2, that is percentage of numeral1) arent possible so a class PercentageOf is needed #172
 _:CarbonDioxideEmissionTraffic2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "82"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmissionTrafficSector1990].
+#constraint can't be equal to numeral
 _:CarbonDioxideEmissionTraffic2030 oeo:isEqual [oeo:hasNumeral "4500000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
 
 # assumption missing
