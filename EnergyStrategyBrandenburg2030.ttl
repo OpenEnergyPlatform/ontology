@@ -27,134 +27,133 @@ mi:Brandenburg oeo:has_subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:Od
 <EnergyStrategy2030> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator.
 
 <EnergyStrategy2030> oeo:has_constraint _:Emmissions2030.
-_:Emmissions2030 a oeo:Constraint.
-_:Emmissions2030 oeo:appliesTo oeo:CarbonDioxideEmission.
-_:Emmissions2030 oeo:hasYear "2030"^^xsd:integer.
-_:Emmissions2030 oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
+_:Emmissions2030 a oeo:Constraint;
+    oeo:appliesTo oeo:CarbonDioxideEmission;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
 # what is CarbonDioxideEmission1990? 
 # the meaning is: is should be maximum 28% over the CarbonDioxideEmissions of 1990
 #source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
 #heißt wir brauchen eine Entität, die als Numeral die CO2-Emissionen von 1990 hat
 #process(-profile) (Jahr 1990) des process profiles jähliche CO2-Emissionen  -->Numeral ist Summe dieses Jahres
-_:Emmissions2030 oeo:hasMaximum [a oeo:Percentage; oeo:has_Percentage "28"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmission1990].
+    oeo:hasMaximum [a oeo:Percentage; oeo:has_Percentage "28"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmission1990].
 
 <EnergyStrategy2030> oeo:has_constraint _:Export2030.
-_:Export2030 a oeo:Constraint.
-_:Export2030 oeo:appliesTo oeo:ElectricityExport.
-_:Export2030 oeo:hasYear "2030"^^xsd:integer.
-_:Export2030 oeo:isEqual [oeo:hasNumeral "42"^^xsd:integer; oeo:hasUnitofMeasurement oeo:TerraWattHours].
+_:Export2030 a oeo:Constraint;
+    oeo:appliesTo oeo:ElectricityExport;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "42"^^xsd:integer; oeo:hasUnitofMeasurement oeo:TerraWattHours].
 
 <EnergyStrategy2030> oeo:has_constraint _:Windpower2030.
-_:Windpower2030 a oeo:Constraint.
-_:Windpower2030 oeo:appliesTo oeo:InstalledPowerFromWind.
-_:Windpower2030 oeo:hasYear "2030"^^xsd:integer.
-_:Windpower2030 oeo:isEqual [oeo:hasNumeral "10500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:Windpower2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromWind;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "10500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
 
 <EnergyStrategy2030> oeo:has_constraint _:PhotovolticPower2030.
-_:PhotovolticPower2030 a oeo:Constraint.
-_:PhotovolticPower2030 oeo:appliesTo oeo:InstalledPowerFromPhotovoltaics.
-_:PhotovolticPower2030 oeo:hasYear "2030"^^xsd:integer.
-_:PhotovolticPower2030 oeo:isEqual [oeo:hasNumeral "3500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:PhotovolticPower2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromPhotovoltaics;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "3500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
 
 <EnergyStrategy2030> oeo:has_constraint _:BiomassPower2030.
-_:BiomassPower2030 a oeo:Constraint.
-_:BiomassPower2030 oeo:appliesTo oeo:InstalledPowerFromBiomass.
-_:BiomassPower2030 oeo:hasYear "2030"^^xsd:integer.
+_:BiomassPower2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromBiomass;
+    oeo:hasYear "2030"^^xsd:integer;
 # that shouldnt be an object but split into a sentence/ relationship
-_:BiomassPower2030 oeo:isEqual mi:InstalledPowerFromBiomass2015.
+    oeo:isEqual mi:InstalledPowerFromBiomass2015.
 
 <EnergyStrategy2030> oeo:has_constraint _:SolarThermalPower2030.
-_:SolarThermalPower2030 a oeo:Constraint.
-_:SolarThermalPower2030 oeo:appliesTo oeo:InstalledHeatFromSolar.
-_:SolarThermalPower2030 oeo:hasYear "2030"^^xsd:integer.
-_:SolarThermalPower2030 oeo:isEqual [oeo:hasNumeral "2500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
+_:SolarThermalPower2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledHeatFromSolar;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "2500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
 
 <EnergyStrategy2030> oeo:has_constraint _:HeatPump2030.
 _:HeatPump2030 a oeo:Constraint.
-_:HeatPump2030 oeo:appliesTo oeo:InstalledHeatFromHeatPump.
-_:HeatPump2030 oeo:hasYear "2030"^^xsd:integer.
-_:HeatPump2030 oeo:isEqual [oeo:hasNumeral "2500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
+    oeo:appliesTo oeo:InstalledHeatFromHeatPump;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "2500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
 
 <EnergyStrategy2030> oeo:has_constraint _:HeatConsumption2030.
-_:HeatConsumption2030 a oeo:Constraint.
-_:HeatConsumption2030 oeo:appliesTo oeo:HeatConsumption.
-_:HeatConsumption2030 oeo:hasYear "2030"^^xsd:integer.
+_:HeatConsumption2030 a oeo:Constraint;
+    oeo:appliesTo oeo:HeatConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
 # what is HeatConsumption2007?
-_:HeatConsumption2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "66"^^xsd:integer; oeo:appliesTo mi:HeatConsumption2007].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "66"^^xsd:integer; oeo:appliesTo mi:HeatConsumption2007].
 
 <EnergyStrategy2030> oeo:has_constraint _:ElectricityConsumption2030.
-_:ElectricityConsumption2030 a oeo:Constraint.
-_:ElectricityConsumption2030 oeo:appliesTo oeo:ElectricityConsumption.
-_:ElectricityConsumption2030 oeo:hasYear "2030"^^xsd:integer.
+_:ElectricityConsumption2030 a oeo:Constraint;
+    oeo:appliesTo oeo:ElectricityConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
 # what is ElectricityConsumption2007?
-_:ElectricityConsumption2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "91"^^xsd:integer; oeo:appliesTo mi:ElectricityConsumption2007].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "91"^^xsd:integer; oeo:appliesTo mi:ElectricityConsumption2007].
 
 <EnergyStrategy2030> oeo:has_constraint _:EnergyConsumption2030.
-_:EnergyConsumption2030 a oeo:Constraint.
-_:EnergyConsumption2030 oeo:appliesTo oeo:EnergyConsumption.
-_:EnergyConsumption2030 oeo:hasYear "2030"^^xsd:integer.
+_:EnergyConsumption2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
 # what is EnergyConsumption2007?
-_:EnergyConsumption2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "77"^^xsd:integer; oeo:appliesTo mi:EnergyConsumption2007].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "77"^^xsd:integer; oeo:appliesTo mi:EnergyConsumption2007].
 
 <EnergyStrategy2030> oeo:has_constraint _:AlternativeFuelsAndPropulsion2030.
-_:AlternativeFuelsAndPropulsion2030 a oeo:Constraint.
-_:AlternativeFuelsAndPropulsion2030 oeo:appliesTo oeo:EnergyFromAlternativeFuelsAndPropulsionInTraffic.
-_:AlternativeFuelsAndPropulsion2030 oeo:hasYear "2030"^^xsd:integer.
+_:AlternativeFuelsAndPropulsion2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyFromAlternativeFuelsAndPropulsionInTraffic;
+    oeo:hasYear "2030"^^xsd:integer;
 # we just have EnergyFromAlternativeFuelsAndPropulsionInTraffic, EnergyFromElectricityInTraffic and EnergyFromBioFuelInTraffic
 # subclasses of EnergyCarrierQuantity
 # Issue opened to add EnergyInTraffic #170
-_:AlternativeFuelsAndPropulsion2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "18"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "18"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
 
 <EnergyStrategy2030> oeo:has_constraint _:BioFuel2030.
-_:BioFuel2030 a oeo:Constraint.
-_:BioFuel2030 oeo:appliesTo oeo:EnergyFromBioFuelInTraffic.
-_:BioFuel2030 oeo:hasYear "2030"^^xsd:integer.
+_:BioFuel2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyFromBioFuelInTraffic;
+    oeo:hasYear "2030"^^xsd:integer;
 # same as above
-_:BioFuel2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "8"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "8"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
 
 <EnergyStrategy2030> oeo:has_constraint _:ElectricMobility2030.
-_:ElectricMobility2030 a oeo:Constraint.
-_:ElectricMobility2030 oeo:appliesTo oeo:EnergyFromElectricityInTraffic.
-_:ElectricMobility2030 oeo:hasYear "2030"^^xsd:integer.
+_:ElectricMobility2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyFromElectricityInTraffic;
+    oeo:hasYear "2030"^^xsd:integer;
 # same as above
-_:ElectricMobility2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "10"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "10"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
 
-# assumption != constraint
+# assumption != constraint so I changed to constraint
 <EnergyStrategy2030> oeo:has_constraint _:CarbonDioxideEmissionTraffic2030.
-_:CarbonDioxideEmissionTraffic2030 a oeo:Constraint.
-_:CarbonDioxideEmissionTraffic2030 oeo:appliesTo oeo:CarbonDioxideEmissionTrafficSector.
-_:CarbonDioxideEmissionTraffic2030 oeo:hasYear "2030"^^xsd:integer.
+_:CarbonDioxideEmissionTraffic2030 a oeo:Constraint;
+    oeo:appliesTo oeo:CarbonDioxideEmissionTrafficSector;
+    oeo:hasYear "2030"^^xsd:integer;
 # what is CarbonDioxideEmissionTrafficSector1990?
 # numeral cant be equal to a percentage, has to be reformulated
 # Numeral has to be class so I can anonymously access one that belongs to an entity like CarbonDioxideEmissionTrafficSector1990 (which shouldnt be an entity btw) #171
 # relationships with three entities (numeral2, that is percentage of numeral1) arent possible so a class PercentageOf is needed #172
-_:CarbonDioxideEmissionTraffic2030 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "82"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmissionTrafficSector1990].
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "82"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmissionTrafficSector1990];
 #constraint can't be equal to numeral
-_:CarbonDioxideEmissionTraffic2030 oeo:isEqual [oeo:hasNumeral "4500000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
+    oeo:isEqual [oeo:hasNumeral "4500000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
 
-# assumption missing
-<EnergyStrategy2030> oeo:makes_assumption mi:WindPVDevelopmentProportionalToArea.
+#I made assumptions values as standard because they cant easily be  partinioned
+<EnergyStrategy2030> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
 
 #  I decided for value so we dont have to include every dataset in the ontology
 <EnergyStrategy2030> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
 
 <EnergyStrategy2030> oeo:has_constraint _:Gas2030.
-_:Gas2030 a oeo:Constraint.
-_:Gas2030 oeo:appliesTo oeo:InstalledPowerFromGas.
-_:Gas2030 oeo:hasYear "2030"^^xsd:integer.
-_:Gas2030 oeo:isEqual [oeo:hasNumeral "1500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:Gas2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromGas;
+    oeo:hasYear "2030"^^xsd:integer;
+#constraint cant be equal to numeral
+    oeo:isEqual [oeo:hasNumeral "1500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
 
-#assumption missing
-<EnergyStrategy2030> oeo:makes_assumption mi:GasDevelopmentEqualAmongRegions.
+<EnergyStrategy2030> oeo:makes_assumption "GasDevelopmentEqualAmongRegions"^^xsd:string.
 
-#assumption missing
-<EnergyStrategy2030> oeo:makes_assumption mi:ShutDownJaenschwalde.
+<EnergyStrategy2030> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
 
 <EnergyStrategy2030> oeo:has_constraint _:InstalledPowerFromThermalPowerplants.
-_:InstalledPowerFromThermalPowerplants a oeo:Constraint.
-_:InstalledPowerFromThermalPowerplants oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants.
-_:InstalledPowerFromThermalPowerplants oeo:hasYear "2030"^^xsd:integer.
-_:InstalledPowerFromThermalPowerplants oeo:isEqual [oeo:hasNumeral "4132"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:InstalledPowerFromThermalPowerplants a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "4132"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
 
 
 #repetitions of the same problems from here on
@@ -178,15 +177,17 @@ _:InstalledPowerFromThermalPowerplants oeo:isEqual [oeo:hasNumeral "4132"^^xsd:i
 
 <EnergyStrategy2030_2> oeo:has_constraint _:Emmissions2030_2.
 _:Emmissions2030_2 a oeo:Constraint.
-_:Emmissions2030_2 oeo:appliesTo oeo:CarbonDioxideEmission.
-_:Emmissions2030_2 oeo:hasYear "2030"^^xsd:integer.
-_:Emmissions2030_2 oeo:hasMaximum [oeo:hasNumeral "20.070.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
+    oeo:appliesTo oeo:CarbonDioxideEmission;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:hasMaximum [oeo:hasNumeral "20.070.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
 
 <EnergyStrategy2030_2> oeo:has_constraint _:Export2030_2.
-_:Export2030_2 a oeo:Constraint.
-_:Export2030_2 oeo:appliesTo oeo:ElectricityExport.
-_:Export2030_2 oeo:hasYear "2030"^^xsd:integer.
-_:Export2030_2 oeo:isEqual [oeo:hasNumeral "21331"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
+_:Export2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:ElectricityExport;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "21331"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:GigaWattHours.
 
 <EnergyStrategy2030_2> oeo:has_constraint _:Windpower2030.
 
@@ -199,16 +200,18 @@ _:Export2030_2 oeo:isEqual [oeo:hasNumeral "21331"^^xsd:integer; oeo:hasUnitofMe
 <EnergyStrategy2030_2> oeo:has_constraint _:HeatPump2030.
 
 <EnergyStrategy2030_2> oeo:has_constraint _:HeatConsumption2030_2.
-_:HeatConsumption2030_2 a oeo:Constraint.
-_:HeatConsumption2030_2 oeo:appliesTo oeo:HeatConsumption.
-_:HeatConsumption2030_2 oeo:hasYear "2030"^^xsd:integer.
-_:HeatConsumption2030_2 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "83"^^xsd:integer; oeo:appliesTo mi:HeatConsumption2007].
+_:HeatConsumption2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:HeatConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+    #needs percentage class
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "83"^^xsd:integer; oeo:appliesTo mi:HeatConsumption2007].
 
 <EnergyStrategy2030_2> oeo:has_constraint _:EnergyConsumption2030_2.
-_:EnergyConsumption2030_2 a oeo:Constraint.
-_:EnergyConsumption2030_2 oeo:appliesTo oeo:EnergyConsumption.
-_:EnergyConsumption2030_2 oeo:hasYear "2030"^^xsd:integer.
-_:EnergyConsumption2030_2 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "87"^^xsd:integer; oeo:appliesTo mi:EnergyConsumption2007].
+_:EnergyConsumption2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+    #needs percentage class
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "87"^^xsd:integer; oeo:appliesTo mi:EnergyConsumption2007].
 
 <EnergyStrategy2030_2> oeo:has_constraint _:AlternativeFuelsAndPropulsion2030.
 
@@ -223,18 +226,22 @@ _:EnergyConsumption2030_2 oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "87"
 <EnergyStrategy2030_2> oeo:uses_dataset mi:PowerplantListBundesnetzargentur2015.
 
 <EnergyStrategy2030_2> oeo:has_constraint _:Gas2030_2.
-_:Gas2030_2 a oeo:Constraint.
-_:Gas2030_2 oeo:appliesTo oeo:InstalledPowerFromGas.
-_:Gas2030_2 oeo:hasYear "2030"^^xsd:integer.
-_:Gas2030_2 oeo:isEqual [oeo:hasNumeral "846"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:Gas2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromGas;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "846"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:Megawatt.
 
-<EnergyStrategy2030_2> oeo:makes_assumption mi:ShutDownJaenschwalde.
+<EnergyStrategy2030_2> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
 
 <EnergyStrategy2030_2> oeo:has_constraint _:InstalledPowerFromThermalPowerplants_2.
-_:InstalledPowerFromThermalPowerplants_2 a oeo:Constraint.
-_:InstalledPowerFromThermalPowerplants_2 oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants.
-_:InstalledPowerFromThermalPowerplants_2 oeo:hasYear "2030"^^xsd:integer.
-_:InstalledPowerFromThermalPowerplants_2 oeo:isEqual [oeo:hasNumeral "3477"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:InstalledPowerFromThermalPowerplants_2 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "3477"^^xsd:integer;
+    oeo:hasUnitofMeasurement oeo:Megawatt.
 
 
 <EnergyStrategy2030_3> a oeo:Scenario.
@@ -279,24 +286,30 @@ _:InstalledPowerFromThermalPowerplants_2 oeo:isEqual [oeo:hasNumeral "3477"^^xsd
 
 <EnergyStrategy2030_3> oeo:makes_assumption _:CarbonDioxideEmissionTraffic2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption mi:WindPVDevelopmentProportionalToArea.
+<EnergyStrategy2030_3> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
 
-<EnergyStrategy2030_3> oeo:uses_dataset mi:PowerplantListBundesnetzargentur2015.
+<EnergyStrategy2030_3> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
 
 <EnergyStrategy2030_3> oeo:makes_assumption _:Gas2030_2.
 
-<EnergyStrategy2030_3> oeo:makes_assumption mi:ShutDownJaenschwalde.
+<EnergyStrategy2030_3> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
 
-<EnergyStrategy2030_3> oeo:makes_assumption mi:ShutDownSchwarzePumpe.
+<EnergyStrategy2030_3> oeo:makes_assumption "ShutDownSchwarzePumpe"^^xsd:string.
 
 <EnergyStrategy2030_3> oeo:has_constraint _:NoCoal.
-_:NoCoal a oeo:Constraint.
-_:NoCoal oeo:appliesTo oeo:InstalledPowerFromCoalPowerPlant.
-_:NoCoal oeo:hasYear "2030"^^xsd:integer.
-_:NoCoal oeo:isEqual [oeo:hasNumeral "0"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:NoCoal a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromCoalPowerPlant;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "0"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:Megawatt.
 
 <EnergyStrategy2030_3> oeo:has_constraint _:InstalledPowerFromThermalPowerplants_3.
-_:InstalledPowerFromThermalPowerplants_3 a oeo:Constraint.
-_:InstalledPowerFromThermalPowerplants_3 oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants.
-_:InstalledPowerFromThermalPowerplants_3 oeo:hasYear "2030"^^xsd:integer.
-_:InstalledPowerFromThermalPowerplants_3 oeo:isEqual [oeo:hasNumeral "1977"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:InstalledPowerFromThermalPowerplants_3 
+    a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants;
+    oeo:hasYear "2030"^^xsd:integer;
+    #combine numeral and unit to one thing?
+    #isequal
+    oeo:hasNumeral "1977"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:Megawatt.
