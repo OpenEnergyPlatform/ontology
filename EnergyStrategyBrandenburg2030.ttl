@@ -26,11 +26,12 @@ mi:Brandenburg oeo:has_subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:Od
 # Issue opened for some classes that exist too often #159, #160, #161
 <EnergyStrategy2030> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator.
 
+#special constraint case called ValueRestriction or sth like that?
 <EnergyStrategy2030> oeo:has_constraint _:Emmissions2030.
 _:Emmissions2030 a oeo:Constraint;
     oeo:appliesTo oeo:CarbonDioxideEmission;
-    oeo:hasYear "2030"^^xsd:integer;
-    oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
+    mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+    mi:hasQuantityRestriction [oeo:hasMaximum [a oeo:Quantity; oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons]].
 # what is CarbonDioxideEmission1990? 
 # the meaning is: is should be maximum 28% over the CarbonDioxideEmissions of 1990
 #source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
@@ -221,9 +222,9 @@ _:EnergyConsumption2030_2 a oeo:Constraint;
 
 <EnergyStrategy2030_2> oeo:has_constraint _:CarbonDioxideEmissionTraffic2030.
 
-<EnergyStrategy2030_2> oeo:makes_assumption mi:WindPVDevelopmentProportionalToArea.
+<EnergyStrategy2030_2> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
 
-<EnergyStrategy2030_2> oeo:uses_dataset mi:PowerplantListBundesnetzargentur2015.
+<EnergyStrategy2030_2> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^^xsd:string.
 
 <EnergyStrategy2030_2> oeo:has_constraint _:Gas2030_2.
 _:Gas2030_2 a oeo:Constraint;
