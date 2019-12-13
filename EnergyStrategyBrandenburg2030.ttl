@@ -27,33 +27,32 @@ mi:Brandenburg oeo:has_subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:Od
 <EnergyStrategy2030> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator.
 
 #special constraint case called ValueRestriction or sth like that?
-<EnergyStrategy2030> oeo:has_constraint _:Emmissions2030.
-_:Emmissions2030 a oeo:Constraint;
-    oeo:appliesTo oeo:CarbonDioxideEmission;
-    mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
-    mi:hasQuantityRestriction [oeo:hasMaximum [a oeo:Quantity; oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons]].
-# what is CarbonDioxideEmission1990? 
-# the meaning is: is should be maximum 28% over the CarbonDioxideEmissions of 1990
-#source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
-#heißt wir brauchen eine Entität, die als Numeral die CO2-Emissionen von 1990 hat
-#process(-profile) (Jahr 1990) des process profiles jähliche CO2-Emissionen  -->Numeral ist Summe dieses Jahres
-    oeo:hasMaximum [a oeo:Percentage; oeo:has_Percentage "28"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmission1990].
+#CarbonDioxideEmission etc are Process Profiles!
+#constraint as equivalent class: all classes with relationship "is_constraint_of"
+<EnergyStrategy2030> oeo:has_constraint _:CarbonDioxideEmission2030.
+_:CarbonDioxideEmissions2030 a oeo:CarbonDioxideEmission;
+        mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+# what is CarbonDioxideEmission1990? source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
+#Instanz (Jahr 1990) des process profiles CO2-Emissionen 
+        mi:has_quantity [oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons; 
+                                            oeo:isEqual [a mi:PercentageOfQuantity; oeo:has_Percentage "28"^^xsd:integer; 
+                                                            mi:has_quantity [mi:is_quantity_of _:CarbonDioxideEmission1990]]]].
+            _:CarbonDioxideEmission1990 a oeo:CarbonDioxideEmission;
+                mi:hasTimeSpan [oeo:hasYear "1990"^^xsd:integer].
 
-<EnergyStrategy2030> oeo:has_constraint _:Export2030.
-_:Export2030 a oeo:Constraint;
-    oeo:appliesTo oeo:ElectricityExport;
-    oeo:hasYear "2030"^^xsd:integer;
-    oeo:isEqual [oeo:hasNumeral "42"^^xsd:integer; oeo:hasUnitofMeasurement oeo:TerraWattHours].
+<EnergyStrategy2030> oeo:has_constraint _:ElectricityExport2030.
+_:ElectricityExport2030 a oeo:ElectricityExport;
+    mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+    mi:has_quantity [oeo:isEqual [oeo:hasNumeral "42"^^xsd:integer; oeo:hasUnitofMeasurement oeo:TerraWattHours]].
+
 
 <EnergyStrategy2030> oeo:has_constraint _:Windpower2030.
-_:Windpower2030 a oeo:Constraint;
-    oeo:appliesTo oeo:InstalledPowerFromWind;
-    oeo:hasYear "2030"^^xsd:integer;
-    oeo:isEqual [oeo:hasNumeral "10500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+_:Windpower2030 a oeo:InstalledPowerFromWind;
+    mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+    mi:has_quantity [oeo:isEqual [oeo:hasNumeral "10500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt]].
 
 <EnergyStrategy2030> oeo:has_constraint _:PhotovolticPower2030.
-_:PhotovolticPower2030 a oeo:Constraint;
-    oeo:appliesTo oeo:InstalledPowerFromPhotovoltaics;
+_:PhotovolticPower2030 a oeo:InstalledPowerFromPhotovoltaics;
     oeo:hasYear "2030"^^xsd:integer;
     oeo:isEqual [oeo:hasNumeral "3500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
 
@@ -261,37 +260,37 @@ _:InstalledPowerFromThermalPowerplants_2 a oeo:Constraint;
 
 <EnergyStrategy2030_3> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator. 
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:Emmissions2030_2.
+<EnergyStrategy2030_3> oeo:has_constraint _:Emmissions2030_2.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:Export2030_2.
+<EnergyStrategy2030_3> oeo:has_constraint _:Export2030_2.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:Windpower2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:Windpower2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:PhotovolticPower2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:PhotovolticPower2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:BiomassPower2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:BiomassPower2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:SolarThermalPower2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:SolarThermalPower2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:HeatPump2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:HeatPump2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:HeatConsumption2030_2.
+<EnergyStrategy2030_3> oeo:has_constraint _:HeatConsumption2030_2.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:EnergyConsumption2030_2.
+<EnergyStrategy2030_3> oeo:has_constraint _:EnergyConsumption2030_2.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:AlternativeFuelsAndPropulsion2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:AlternativeFuelsAndPropulsion2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:BioFuel2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:BioFuel2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:ElectricMobility2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:ElectricMobility2030.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:CarbonDioxideEmissionTraffic2030.
+<EnergyStrategy2030_3> oeo:has_constraint _:CarbonDioxideEmissionTraffic2030.
 
 <EnergyStrategy2030_3> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
 
 <EnergyStrategy2030_3> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
 
-<EnergyStrategy2030_3> oeo:makes_assumption _:Gas2030_2.
+<EnergyStrategy2030_3> oeo:has_constraint _:Gas2030_2.
 
 <EnergyStrategy2030_3> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
 
