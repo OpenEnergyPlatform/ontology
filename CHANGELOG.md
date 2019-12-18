@@ -44,6 +44,7 @@ Here is a template for new release sections
 - add github team handle in `README` (#119)
 - technology and subclasses (#128)
 - rename CONTRIBUTE.md CONTRIBUTING.md (#144)
+- individuals without types (#191)
 
 
 ### Removed
