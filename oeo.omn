@@ -67,6 +67,13 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+
+ObjectProperty: considers_User_behaviour_and_demand
+
+    SubPropertyOf: 
+        covers
+    
+
 ObjectProperty: appliesTo
 
     
@@ -102,11 +109,24 @@ ObjectProperty: conforms_to
     
 ObjectProperty: contains
 
+
     
 ObjectProperty: covers
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
+    
+    
+ObjectProperty: covers_energycarrier
+
+    Annotations: 
+        rdfs:comment "A relation that holds between a publication/model calculation/model and the energycarrier it covers."
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        EnergyCarrier
     
     
 ObjectProperty: covers_region
@@ -148,6 +168,27 @@ ObjectProperty: covers_timeframe
         covers
     
     
+
+ObjectProperty: data_provided
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: example_research_questions
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: further_reference_properties
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: handles_uncertainty
+
 ObjectProperty: depends_on
 
     
@@ -157,6 +198,12 @@ ObjectProperty: distributes
         owl:topObjectProperty
     
     
+
+ObjectProperty: has_approach_to_uncertainty
+
+    SubPropertyOf: 
+        has_part
+
 ObjectProperty: g_depends_on
 
     SubPropertyOf: 
@@ -197,7 +244,7 @@ ObjectProperty: has_Percentage
 
     SubPropertyOf: 
         comparesTo
-    
+  
     
 ObjectProperty: has_author
 
@@ -344,6 +391,15 @@ ObjectProperty: has_numercical_input
         InformationArtifact
     
     
+
+ObjectProperty: has_institution
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_license
+
 ObjectProperty: has_numerical_output
 
     Annotations: 
@@ -355,12 +411,31 @@ ObjectProperty: has_numerical_output
     Characteristics: 
         Irreflexive,
         Asymmetric
-    
-    Domain: 
+
+     Domain: 
         Transformation
-    
+
     Range: 
         InformationArtifact
+    
+
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        has_part,
+        is_referenced_by
+    
+    
+ObjectProperty: has_mathematical_objective
+
+    SubPropertyOf: 
+        has_part
+          
+    
+ObjectProperty: has_methodical_Focus
+
+    SubPropertyOf: 
+        owl:topObjectProperty
     
     
 ObjectProperty: has_objective
@@ -522,6 +597,12 @@ ObjectProperty: has_spatial_resolution
         has_resolution
     
     
+
+ObjectProperty: has_support_community_forum
+
+    SubPropertyOf: 
+        is_referenced_by
+
 ObjectProperty: has_state_of_matter
 
     SubPropertyOf: 
@@ -535,6 +616,7 @@ ObjectProperty: has_subregion
     
     SubPropertyOf: 
         has_part
+
     
     
 ObjectProperty: has_temporal_resolution
@@ -561,12 +643,30 @@ ObjectProperty: has_tool
         Model
     
     
+ObjectProperty: has_typical_computation_hardware
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_typical_computation_time
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
 ObjectProperty: has_website
 
     SubPropertyOf: 
         is_referenced_by
     
     
+
+ObjectProperty: is_available_on_GitHub
+
+    SubPropertyOf: 
+        is_referenced_by
+
 ObjectProperty: isEqual
 
     SubPropertyOf: 
@@ -586,6 +686,7 @@ ObjectProperty: is_applied_to_object
     
     InverseOf: 
         applies_technology
+
     
     
 ObjectProperty: is_connected_to
@@ -624,6 +725,12 @@ ObjectProperty: is_used_by
         uses
     
     
+ObjectProperty: link_to_source_code
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
 ObjectProperty: makes_assumption
 
     Annotations: 
@@ -657,6 +764,15 @@ ObjectProperty: references
         is_referenced_by
     
     
+
+ObjectProperty: source_code_available
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: suited_for_many_scenarios
+
 ObjectProperty: s_depends_on
 
     SubPropertyOf: 
@@ -699,6 +815,18 @@ ObjectProperty: uses_software
         uses
     
     
+
+ObjectProperty: uses_software_internal_data_processing
+
+    SubPropertyOf: 
+        uses_software
+    
+    
+ObjectProperty: uses_software_modelling
+
+    SubPropertyOf: 
+        uses_software
+
 ObjectProperty: utilizes_dataset
 
     SubPropertyOf: 
@@ -709,6 +837,7 @@ ObjectProperty: utilizes_program_parameter
 
     SubPropertyOf: 
         has_input
+
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1210,7 +1339,7 @@ Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-
 
     SubClassOf: 
         Sea
-    
+   
     
 Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Weic>
 
@@ -1322,6 +1451,7 @@ Class: Assumption
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
+
     
     SubClassOf: 
         InformationArtifact
@@ -1377,6 +1507,7 @@ Class: BioElectricityGenerator
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
+
     
     SubClassOf: 
         RenewableGenerator
@@ -1400,6 +1531,7 @@ Class: Biofuel
 
 Biofuels can be derived directly from plants (i.e. energy crops), or indirectly from agricultural, commercial, domestic, and/or industrial wastes.[1] Renewable biofuels generally involve contemporary carbon fixation, such as those that occur in plants or microalgae through the process of photosynthesis. Other renewable biofuels are made through the use or conversion of biomass (referring to recently living organisms, most often referring to plants or plant-derived materials). This biomass can be converted to convenient energy-containing substances in three different ways: thermal conversion, chemical conversion, and biochemical conversion. This biomass conversion can result in fuel in solid, liquid, or gas form. This new biomass can also be used directly for biofuels.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109"
+
     
     SubClassOf: 
         Fuel,
@@ -1835,6 +1967,7 @@ Class: ElectricCurrentUnit
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electric current unit is a unit of measurement used to express the flow of electric charge."@en
+
     
     SubClassOf: 
         UnitOfMeasurement
@@ -1877,6 +2010,7 @@ Class: ElectricityConsumption
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity consumption quantity is a consumption quantity about electricity."@en
+
     
     SubClassOf: 
         ConsumptionQuantity
@@ -1886,6 +2020,7 @@ Class: ElectricityExport
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export quantity is a quantity that describes the amount of electricity that is exported from a geographic region."@en
+
     
     SubClassOf: 
         Quantity
@@ -5171,6 +5306,7 @@ Class: state_of_matter
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856"
+
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>
@@ -5586,6 +5722,7 @@ Individual: IPCC_1996_Guidelines
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 1996 (revised).",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/gl/invs6.html"
+
     
     Types: 
         SectorConcept
@@ -6105,6 +6242,7 @@ Individual: XML
 
     Types: 
         DataFormat
+
     
     
 Individual: Yard

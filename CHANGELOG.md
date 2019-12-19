@@ -31,6 +31,7 @@ Here is a template for new release sections
 - ArtificialObject (#121) 
 - classes for objects that apply to technologies like EnergyGenerator (#128)
 - Grid class (#137)
+- object properties to describe models (#109)
 
 ### Changed
 - FluorinatedGreenhouseGas (#88)
