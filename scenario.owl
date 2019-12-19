@@ -1,0 +1,388 @@
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://openenergy-platform.org/ontology/scenario.omn>
+
+Import: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_region>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_technology>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_output>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_tool>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/makes_assumption>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/models_sector>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses_dataset>
+
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/scenario.omn#expands_technology>
+
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/oeo/covers_technology>
+    
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/scenario.omn#generates_dataset>
+
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/oeo/has_output>
+    
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/scenario.omn#has_expansionGoal>
+
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/oeo/makes_assumption>
+    
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/scenario.omn#has_photovoltaicExpansionGoal>
+
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/scenario.omn#has_expansionGoal>
+    
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/scenario.omn#has_windExpansionGoal>
+
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/scenario.omn#has_expansionGoal>
+    
+    
+ObjectProperty: <http://openenergy-platform.org/ontology/scenario.omn#reduces_consumption>
+
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/oeo/makes_assumption>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/Assumption>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/Country>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/Dataset>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/DemandSector>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/FederalState>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/Model>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OptimizationModel>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/Publication>
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/Quantity>
+
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#BatteryStorage>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>
+    
+    DisjointWith: 
+        <http://openenergy-platform.org/ontology/scenario.omn#MethanationGasStorage>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#Berlin-Brandenburg-Studie>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/scenario.omn#Scenario>,
+        (<http://openenergy-platform.org/ontology/oeo/models_sector> some <http://openenergy-platform.org/ontology/scenario.omn#GHDSector>)
+         and (<http://openenergy-platform.org/ontology/oeo/models_sector> some <http://openenergy-platform.org/ontology/scenario.omn#HouseholdSector>)
+         and (<http://openenergy-platform.org/ontology/oeo/models_sector> some <http://openenergy-platform.org/ontology/scenario.omn#IndustrySector>)
+         and (<http://openenergy-platform.org/ontology/oeo/models_sector> some <http://openenergy-platform.org/ontology/scenario.omn#TrafficSector>),
+        (<http://openenergy-platform.org/ontology/oeo/covers_region> value <http://openenergy-platform.org/ontology/scenario.omn#Berlin>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_region> value <http://openenergy-platform.org/ontology/scenario.omn#Brandenburg>),
+        <http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#BiomassEnergyGenerator>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#ConsumptionDataset>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#LoadProfile>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#WeatherDataset>,
+        <http://openenergy-platform.org/ontology/scenario.omn#expands_technology> some <http://openenergy-platform.org/ontology/scenario.omn#PhotovoltaicEnergyGenerator>,
+        <http://openenergy-platform.org/ontology/scenario.omn#expands_technology> some <http://openenergy-platform.org/ontology/scenario.omn#WindEnergyGenerator>,
+        <http://openenergy-platform.org/ontology/scenario.omn#reduces_consumption> some <http://openenergy-platform.org/ontology/oeo/Quantity>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#BiogasStorage>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#BiomassEnergyGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#CombinedHeatAndPowerGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#ConsumptionDataset>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#CostDataset>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#EnergyFeedDataset>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#EnergymixDataset>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#FossilEnergyGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#GHDSector>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/DemandSector>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#GeothermalEnergyGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#Goal>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Assumption>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#HouseholdSector>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/DemandSector>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#IndustrySector>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/DemandSector>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#LoadProfile>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#MethanationGasStorage>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>
+    
+    DisjointWith: 
+        <http://openenergy-platform.org/ontology/scenario.omn#BatteryStorage>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#OffShoreWindGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/scenario.omn#WindEnergyGenerator>
+    
+    DisjointWith: 
+        <http://openenergy-platform.org/ontology/scenario.omn#OnShoreWindGenerator>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#OnShoreWindGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/scenario.omn#WindEnergyGenerator>
+    
+    DisjointWith: 
+        <http://openenergy-platform.org/ontology/scenario.omn#OffShoreWindGenerator>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#PhotovoltaicEnergyGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#PowerplantList>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#PumpedStorage>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyStorageTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#Scenario>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Publication>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#TrafficSector>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/DemandSector>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#WaterEnergyGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#WeatherDataset>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/Dataset>
+    
+    
+Class: <http://openenergy-platform.org/ontology/scenario.omn#WindEnergyGenerator>
+
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/EnergyGeneratorTechnology>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Alternativszenario2020>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/scenario.omn#Berlin-Brandenburg-Studie>,
+        (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#BatteryStorage>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#MethanationGasStorage>),
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#CostDataset>,
+        <http://openenergy-platform.org/ontology/scenario.omn#generates_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#CostDataset>,
+        <http://openenergy-platform.org/ontology/scenario.omn#generates_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#EnergymixDataset>,
+        <http://openenergy-platform.org/ontology/oeo/has_tool> value <http://openenergy-platform.org/ontology/scenario.omn#Ein-Knoten-Modell>,
+        <http://openenergy-platform.org/ontology/oeo/has_tool> value <http://openenergy-platform.org/ontology/scenario.omn#Mehr-Knoten-Modell>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Berlin>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/oeo/FederalState>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Brandenburg>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/oeo/FederalState>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#BreyerZentral>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/scenario.omn#Scenario>,
+        (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#BatteryStorage>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#MethanationGasStorage>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#PumpedStorage>),
+        (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#BiogasStorage>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#CombinedHeatAndPowerGenerator>),
+        (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#OffShoreWindGenerator>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#OnShoreWindGenerator>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#PhotovoltaicEnergyGenerator>)
+         and (<http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#WaterEnergyGenerator>),
+        (<http://openenergy-platform.org/ontology/oeo/makes_assumption> value <http://openenergy-platform.org/ontology/scenario.omn#Jahr2010>)
+         and (<http://openenergy-platform.org/ontology/oeo/makes_assumption> value <http://openenergy-platform.org/ontology/scenario.omn#Jahr2020>),
+        <http://openenergy-platform.org/ontology/oeo/covers_technology> some <http://openenergy-platform.org/ontology/scenario.omn#FossilEnergyGenerator>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#CostDataset>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#EnergyFeedDataset>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#LoadProfile>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#PowerplantList>,
+        <http://openenergy-platform.org/ontology/oeo/uses_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#WeatherDataset>,
+        <http://openenergy-platform.org/ontology/scenario.omn#generates_dataset> some <http://openenergy-platform.org/ontology/scenario.omn#PowerplantList>,
+        <http://openenergy-platform.org/ontology/oeo/covers_region> value <http://openenergy-platform.org/ontology/scenario.omn#Germany>,
+        <http://openenergy-platform.org/ontology/oeo/has_tool> value <http://openenergy-platform.org/ontology/scenario.omn#EinLinearesOptModell>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Ein-Knoten-Modell>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/oeo/Model>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#EinLinearesOptModell>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/oeo/OptimizationModel>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Germany>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/oeo/Country>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Jahr2010>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/scenario.omn#Goal>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Jahr2020>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/scenario.omn#Goal>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Mehr-Knoten-Modell>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/oeo/Model>
+    
+    
+Individual: <http://openenergy-platform.org/ontology/scenario.omn#Referenzszenario2020>
+
+    Types: 
+        <http://openenergy-platform.org/ontology/scenario.omn#Berlin-Brandenburg-Studie>,
+        <http://openenergy-platform.org/ontology/scenario.omn#has_photovoltaicExpansionGoal> some <http://openenergy-platform.org/ontology/oeo/Quantity>,
+        <http://openenergy-platform.org/ontology/scenario.omn#has_windExpansionGoal> some <http://openenergy-platform.org/ontology/oeo/Quantity>
+    
+    
+DisjointClasses: 
+    <http://openenergy-platform.org/ontology/scenario.omn#GHDSector>,<http://openenergy-platform.org/ontology/scenario.omn#HouseholdSector>,<http://openenergy-platform.org/ontology/scenario.omn#IndustrySector>,<http://openenergy-platform.org/ontology/scenario.omn#TrafficSector>
+
