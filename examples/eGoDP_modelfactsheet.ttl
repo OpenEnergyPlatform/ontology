@@ -21,6 +21,8 @@
 :LudwigHuelkRLI foaf:mbox <ludwig.huelk@rl-institut.de> .
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_website <https://openegoproject.wordpress.com/>
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_logo <.../media/logos/open_ego_logo.png> . #?
+
+########
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_primary_purpose "The DataProcessing is a collection of scripts to process input data to be used for the other eGo-Tools. The resulting input data is published and available." .
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_primary_output :Substations , :GridDistricts , :Loadareas .
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_support_community_forum true .
@@ -28,25 +30,39 @@
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_documentation <https://github.com/openego/data_processing> .
 :DataProcessing_DataModeloftheGermanElectricitySystem :documentation_quality 	"not available" .
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_funding_source	:BMWi_project_open_eGo . #(6. Forschungsprogramm)
-:DataProcessing_DataModeloftheGermanElectricitySystem :num_of_developers "less than 10" .
-:DataProcessing_DataModeloftheGermanElectricitySystem :num_of_users "less than 10" .
+# :DataProcessing_DataModeloftheGermanElectricitySystem :num_of_developers "less than 10" .
+# :DataProcessing_DataModeloftheGermanElectricitySystem :num_of_users "less than 10" .
 
 #Openness
-:DataProcessing_DataModeloftheGermanElectricitySystem :is_open_source true .
-:DataProcessing_DataModeloftheGermanElectricitySystem :has_license :AfferoGeneralPublicLicenseVersion3 .
-:DataProcessing_DataModeloftheGermanElectricitySystem :source_code_available true .
-:DataProcessing_DataModeloftheGermanElectricitySystem :is_available_on_GitHub true .
-:DataProcessing_DataModeloftheGermanElectricitySystem :link_to_source_code	<https://github.com/openego/data_processing> .
-:DataProcessing_DataModeloftheGermanElectricitySystem :data_provided 	true .
-:DataProcessing_DataModeloftheGermanElectricitySystem :cooperative_programming true .
+:DataProcessing_DataModeloftheGermanElectricitySystem :has_opennessinformation [ a :Openessinformation,
+                                          :is_open_source true ;
+                                          :has_license :AfferoGeneralPublicLicenseVersion3 ;
+                                          :source_code_available true ;
+                                          :is_available_on_GitHub true ;
+                                          :link_to_source_code <https://github.com/openego/data_processing> ;
+                                          :data_provided true ;
+                                          :cooperative_programming true ] .
 # GitHub Organisation
 # GitHub Contributions Graph
 
 #Software
 #Modelling software
-:DataProcessing_DataModeloftheGermanElectricitySystem :uses_software_modelling :Python , :PostgreSQL , :pandas , :workalender , :oemof.db , :demandlib , :ego.io , :geoalchemy2 .
+:DataProcessing_DataModeloftheGermanElectricitySystem :software [] .
+:DataProcessing_DataModeloftheGermanElectricitySystem :uses_software_modelling [ a rdf:Bag;
+            rdf:_1 :Python ;
+            rdf:_2 :PostgreSQL ;
+            rdf:_3 :pandas ;
+            rdf:_4 :workalender ;
+            rdf:_5 :oemof.db ;
+            rdf:_6 :demandlib ;
+            rdf:_7 :ego.io ;
+            rdf:_8 :geoalchemy2
+            ].
 #Internal data processing software 	Python, PostgreSQL
-:DataProcessing_DataModeloftheGermanElectricitySystem :uses_software_internal_data_processing :Python , :PostgreSQL .
+:DataProcessing_DataModeloftheGermanElectricitySystem :uses_software_internal_data_processing [ a rdf:Bag ;
+            rdf:_1 :Python ;
+            rdf:_2 :PostgreSQL
+            ].
 #zwei SubProperties :uses_software_modelling, :uses_software_internal_data_processing of :uses_software ?
 :DataProcessing_DataModeloftheGermanElectricitySystem :uses_external_optimizer false .
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_GUI false .
@@ -60,10 +76,27 @@
 # Modeled energy sectors (final energy)	electricity
 :DataProcessing_DataModeloftheGermanElectricitySystem :covers_energy_sector :electricity .
 # Modeled demand sectors	Households, Industry, Commercial sector
-:DataProcessing_DataModeloftheGermanElectricitySystem :covers_demand_sector :HoushouldsSector , :IndustrySector , :CommercialSector .
+:DataProcessing_DataModeloftheGermanElectricitySystem :covers_demand_sector [ a rdf:Bag ;
+            rdf:_1 :HoushouldsSector ;
+            rdf:_2 :IndustrySector ;
+            rdf:_3 :CommercialSector
+            ] .
 # SubProperties von :covers_sector
 #Modelled energy carriers (primary energy carrier)
-:DataProcessing_DataModeloftheGermanElectricitySystem :covers_energycarrier :NaturalGas , :Biogas , :Hydrogen , :Petrol ,:HardCoal , :Lignite , :Uranium , :SolidBiomass , :SolarEnergy , :Wind , :Hydropower , :Geothermal .
+:DataProcessing_DataModeloftheGermanElectricitySystem :covers_energycarrier [ a rdf:Bag ;
+rdf:_1 :NaturalGas ;
+rdf:_2 :Biogas ;
+rdf:_3 :Hydrogen ;
+rdf:_4 :Petrol ;
+rdf:_5 :HardCoal ;
+rdf:_6 :Lignite ;
+rdf:_7 :Uranium ;
+rdf:_8 :SolidBiomass ;
+rdf:_9 :SolarEnergy ;
+rdf:_10 :Wind ;
+rdf:_11 :Hydropower ;
+rdf:_12 :Geothermal ;
+] .
 #Modeled technologies: components for generation or conversion
 # :covers_generation-conversion_technology
 #Modeled technologies: components for transfer, infrastructure or grid
@@ -80,12 +113,17 @@
 
 #Mathematical Properties
 # Model class (optimisation)	- Model class (simulation)	- über Subclasses
+:DataProcessing_DataModeloftheGermanElectricitySystem :has_mathematical_properties _:x .
+
 :DataProcessing_DataModeloftheGermanElectricitySystem :other_mathematical_property :DataScripts .
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_mathematical_objective :DataScripts .
+:DataScripts a :Modelcomponent . # has_mathematical_objective subclass of has_part ?
 :DataProcessing_DataModeloftheGermanElectricitySystem :has_approach_to_uncertainty :Deterministic .
 :DataProcessing_DataModeloftheGermanElectricitySystem :suited_for_many_scenarios false .
-:DataProcessing_DataModeloftheGermanElectricitySystem :has_typical_computation_time "more than a day" .
-:DataProcessing_DataModeloftheGermanElectricitySystem :has_typical_computation_hardware :PostgreSQLDatabaseServerOEP . #
+
+:DataProcessing_DataModeloftheGermanElectricitySystem :computationinformation _:y .
+      _:y :has_typical_computation_time "more than a day" .
+      _:y :has_typical_computation_hardware :PostgreSQLDatabaseServerOEP . #
 #Technical data anchored in the model
 
 # Model Integration
