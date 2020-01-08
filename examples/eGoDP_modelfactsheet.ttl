@@ -5,6 +5,8 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
+@prefix mi: "missing!".
+
 <DataProcessing_DataModeloftheGermanElectricitySystem> a oeo:Model.
 #(part of the open_eGo project) (eGoDP)
 
@@ -24,19 +26,20 @@
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_logo "<.../media/logos/open_ego_logo.png>"^^xsd:string . #?
 
 ########
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_primary_purpose "The DataProcessing is a collection of scripts to process input data to be used for the other eGo-Tools. The resulting input data is published and available."^^xsd:string .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_primary_output :Substations , :GridDistricts , :Loadareas .
+#primary_purpose and primary_output are classes right now, at least primary_output should just be a property
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_primary_purpose "The DataProcessing is a collection of scripts to process input data to be used for the other eGo-Tools. The resulting input data is published and available."^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_primary_output :Substations , :GridDistricts , :Loadareas .
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_support_community_forum true .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :uses_framework false .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:uses_framework false . 
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_documentation <https://github.com/openego/data_processing> .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :documentation_quality 	"not available"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:documentation_quality 	"not available"^^xsd:string .
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_funding_source	:BMWi_project_open_eGo . #(6. Forschungsprogramm)
 # <DataProcessing_DataModeloftheGermanElectricitySystem> :num_of_developers "less than 10" .
 # <DataProcessing_DataModeloftheGermanElectricitySystem> :num_of_users "less than 10" .
 
 #Openness
 <DataProcessing_DataModeloftheGermanElectricitySystem> :has_opennessinformation [ a :Openessinformation,
-                                          :is_open_source true ;
+                                          mi:is_open_source true ;
                                           oeo:has_license :AfferoGeneralPublicLicenseVersion3 ;
                                           oeo:source_code_available true ;
                                           oeo:is_available_on_GitHub true ;
@@ -63,7 +66,7 @@
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:example_research_questions "How can open data be accessed to generate a data set to compare various models?" , "How can data be extracted with ensured quality?"^^xsd:string .
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:further_reference_properties "Data schemes available: http://oep.iks.cs.ovgu.de/dataedit/schemas"^^xsd:string . #rdfs:comment
 
-# Coverage
+# Coverage, we just have covers_sector!
 # Modeled energy sectors (final energy)	electricity
 <DataProcessing_DataModeloftheGermanElectricitySystem> :covers_energy_sector oeo:ElectricitySector .
 # Modeled demand sectors	Households, Industry, Commercial sector
@@ -91,13 +94,14 @@
 
 #Mathematical Properties
 # Model class (optimisation)	- Model class (simulation)	- über Subclasses
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_mathematical_properties _:x .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_mathematical_properties _:x .
 
-<DataProcessing_DataModeloftheGermanElectricitySystem> :other_mathematical_property :DataScripts .
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_mathematical_objective :DataScripts .
-:DataScripts a :Modelcomponent . # has_mathematical_objective subclass of has_part ?
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_approach_to_uncertainty :Deterministic .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :suited_for_many_scenarios false .
+#whats meant with "other_mathematical_property"?
+<DataProcessing_DataModeloftheGermanElectricitySystem> :other_mathematical_property _:DataScripts .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_mathematical_objective _:DataScripts .
+_:DataScripts a :Modelcomponent . # has_mathematical_objective subclass of has_part ?
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_approach_to_uncertainty "Deterministic"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:suited_for_many_scenarios false .
 
 <DataProcessing_DataModeloftheGermanElectricitySystem> :computationinformation _:y .
       _:y oeo:has_typical_computation_time "more than a day"^^xsd:string .
@@ -106,8 +110,8 @@
 
 # Model Integration
   #Interfaces
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Model_file_format ".sql"^^xsd:string , ".py"^^xsd:string .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Input_data_file_format  "oedb"^^xsd:string .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Output_data_file_format "oedb"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_Model_file_format ".sql"^^xsd:string , ".py"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_Input_data_file_format  "oedb"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_Output_data_file_format "oedb"^^xsd:string .
   # Integration with other models
   # Integration of other models
