@@ -5,7 +5,7 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-<DataProcessing_DataModeloftheGermanElectricitySystem> a oeo:Model
+<DataProcessing_DataModeloftheGermanElectricitySystem> a oeo:Model.
 #(part of the open_eGo project) (eGoDP)
 
 # Basic Information
@@ -20,16 +20,16 @@
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_contact :LudwigHuelk .
 #<DataProcessing_DataModeloftheGermanElectricitySystem>
 :LudwigHuelkRLI foaf:mbox <ludwig.huelk@rl-institut.de> .
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_website <https://openegoproject.wordpress.com/>
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_logo <.../media/logos/open_ego_logo.png> . #?
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_website "<https://openegoproject.wordpress.com/>"^^xsd:string.
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_logo "<.../media/logos/open_ego_logo.png>"^^xsd:string . #?
 
 ########
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_primary_purpose "The DataProcessing is a collection of scripts to process input data to be used for the other eGo-Tools. The resulting input data is published and available." .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :has_primary_purpose "The DataProcessing is a collection of scripts to process input data to be used for the other eGo-Tools. The resulting input data is published and available."^^xsd:string .
 <DataProcessing_DataModeloftheGermanElectricitySystem> :has_primary_output :Substations , :GridDistricts , :Loadareas .
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_support_community_forum true .
 <DataProcessing_DataModeloftheGermanElectricitySystem> :uses_framework false .
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_documentation <https://github.com/openego/data_processing> .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :documentation_quality 	"not available" .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :documentation_quality 	"not available"^^xsd:string .
 <DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_funding_source	:BMWi_project_open_eGo . #(6. Forschungsprogramm)
 # <DataProcessing_DataModeloftheGermanElectricitySystem> :num_of_developers "less than 10" .
 # <DataProcessing_DataModeloftheGermanElectricitySystem> :num_of_users "less than 10" .
@@ -49,59 +49,36 @@
 #Software
 #Modelling software
 <DataProcessing_DataModeloftheGermanElectricitySystem> :software [] .
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:uses_software_modelling [ a rdf:Bag;
-            rdf:_1 :Python ;
-            rdf:_2 :PostgreSQL ;
-            rdf:_3 :pandas ;
-            rdf:_4 :workalender ;
-            rdf:_5 :oemof.db ;
-            rdf:_6 :demandlib ;
-            rdf:_7 :ego.io ;
-            rdf:_8 :geoalchemy2
-            ].
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:uses_software_modelling "Python"^^xsd:string, "PostgreSQL"^^xsd:string, "pandas"^^xsd:string, "workalender"^^xsd:string,
+                                                       "oemof.db"^^xsd:string, "demandlib"^^xsd:string, "ego.io"^^xsd:string, "geoalchemy2"^^xsd:string.
 #Internal data processing software 	Python, PostgreSQL
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:uses_software_internal_data_processing [ a rdf:Bag ;
-            rdf:_1 :Python ;
-            rdf:_2 :PostgreSQL
-            ].
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:uses_software_internal_data_processing "Python"^^xsd:string, "PostgreSQL"^^xsd:string.
+     
 #zwei SubProperties :uses_software_modelling, :uses_software_internal_data_processing of :uses_software ?
 <DataProcessing_DataModeloftheGermanElectricitySystem> :uses_external_optimizer false .
 <DataProcessing_DataModeloftheGermanElectricitySystem> :has_GUI false .
 
 #References
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:is_referenced_by <https://openegoproject.wordpress.com/publications/> .
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:example_research_questions "How can open data be accessed to generate a data set to compare various models?" , "How can data be extracted with ensured quality?" .
-<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:further_reference_properties "Data schemes available: http://oep.iks.cs.ovgu.de/dataedit/schemas" . #rdfs:comment
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:is_referenced_by "<https://openegoproject.wordpress.com/publications/>"^^xsd:string.
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:example_research_questions "How can open data be accessed to generate a data set to compare various models?" , "How can data be extracted with ensured quality?"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:further_reference_properties "Data schemes available: http://oep.iks.cs.ovgu.de/dataedit/schemas"^^xsd:string . #rdfs:comment
 
 # Coverage
 # Modeled energy sectors (final energy)	electricity
-<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_energy_sector :electricity .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_energy_sector oeo:ElectricitySector .
 # Modeled demand sectors	Households, Industry, Commercial sector
-<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_demand_sector [ a rdf:Bag ;
-            rdf:_1 :HoushouldsSector ;
-            rdf:_2 :IndustrySector ;
-            rdf:_3 :CommercialSector
-            ] .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_demand_sector oeo:HouseholdSector, oeo:IndustrySector, oeo:CommercialSector.
+         
 # SubProperties von :covers_sector
 #Modelled energy carriers (primary energy carrier)
-<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_energycarrier [ a rdf:Bag ;
-rdf:_1 :NaturalGas ;
-rdf:_2 :Biogas ;
-rdf:_3 :Hydrogen ;
-rdf:_4 :Petrol ;
-rdf:_5 :HardCoal ;
-rdf:_6 :Lignite ;
-rdf:_7 :Uranium ;
-rdf:_8 :SolidBiomass ;
-rdf:_9 :SolarEnergy ;
-rdf:_10 :Wind ;
-rdf:_11 :Hydropower ;
-rdf:_12 :Geothermal ;
-] .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:covers_energycarrier oeo:PortionOfNaturalGas, oeo:PortionOfBiogas, oeo:PortionOfHydrogen,
+                                                      oeo:PortionOfPetrol, oeo:PortionOfHardCoal, oeo:PortionOfLignite, oeo:PortionOfUranium, oeo:PortionOfSolidBiomass,
+                                                      oeo:PortionOfSolarEnergy, oeo:PortionOfWind, oeo:PortionOfHydropower, oeo:PortionOfGeothermal.
+
 #Modeled technologies: components for generation or conversion
 # :covers_generation-conversion_technology
 #Modeled technologies: components for transfer, infrastructure or grid
-<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_transfer-infrastructure-grid_technology :ElectricityDistribution , :ElectricityTransmission .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_transfer_infrastructure_grid_technology :ElectricityDistribution , :ElectricityTransmission .
 #Properties electrical grid AC load flow
 <DataProcessing_DataModeloftheGermanElectricitySystem> :considers_User_behaviour_and_demand false .
 # :considers_Changes_in_efficiency
@@ -123,14 +100,14 @@ rdf:_12 :Geothermal ;
 <DataProcessing_DataModeloftheGermanElectricitySystem> :suited_for_many_scenarios false .
 
 <DataProcessing_DataModeloftheGermanElectricitySystem> :computationinformation _:y .
-      _:y oeo:has_typical_computation_time "more than a day" .
+      _:y oeo:has_typical_computation_time "more than a day"^^xsd:string .
       _:y oeo:has_typical_computation_hardware :PostgreSQLDatabaseServerOEP . #
 #Technical data anchored in the model
 
 # Model Integration
   #Interfaces
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Model_file_format 	:.sql , :.py .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Input_data_file_format :oedb .
-<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Output_data_file_format 	:oedb .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Model_file_format ".sql"^^xsd:string , ".py"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Input_data_file_format  "oedb"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :has_Output_data_file_format "oedb"^^xsd:string .
   # Integration with other models
   # Integration of other models
