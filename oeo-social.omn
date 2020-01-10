@@ -1,0 +1,548 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: obda: <https://w3id.org/obda/vocabulary#>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://openenergy-platform.org/ontology/oeo-social/>
+<http://openenergy-platform.org/ontology/v0.0.1/oeo-social/>
+Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+
+Annotations: 
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Social module)",
+    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles."
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: conforms_to
+
+    Domain: 
+        conforms_to some SectorConcept
+    
+    Range: 
+        Sector
+    
+    
+ObjectProperty: covers
+
+    
+ObjectProperty: covers_sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        Sector
+    
+    
+ObjectProperty: has_author
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_client
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_contact
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_funding_source
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        Publication
+    
+    Range: 
+        Agent
+    
+    
+ObjectProperty: has_institution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
+    
+    SubPropertyOf: 
+        has_participant,
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_part
+
+    
+ObjectProperty: has_participant
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_role
+
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000016>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000024>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000029>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000038>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: Agent
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An autonomous entity which acts, directing its activity towards achieving goals [...], upon an environment using observation through sensors and consequent actuators"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Intelligent_agent"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: Author
+
+    SubClassOf: 
+        Agent
+    
+    
+Class: Client
+
+    SubClassOf: 
+        Agent
+    
+    
+Class: CommerceSector
+
+    Annotations: 
+        rdfs:label "ServiceSector"@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: Consumer
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
+    
+    SubClassOf: 
+        Agent
+    
+    
+Class: ContactPerson
+
+    SubClassOf: 
+        Agent
+    
+    
+Class: DemandSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: Developer
+
+    SubClassOf: 
+        Agent
+    
+    
+Class: ElectricitySector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: EnergySector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: HeatSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
+        rdfs:label "HeatingCoolingSector"@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: HouseholdSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: IndustrySector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
+
+* Iron and steel industry
+* Chemical and petrochemical industry
+* Non-ferrous metals
+* Non-metallic minerals
+* Transport equipment
+* Machinery
+* Mining (excluding fuels) and quarrying
+* Food and tobacco
+* Paper, pulp and print
+* Wood and wood products (other than pulp and paper)
+* Construction
+* Textile and leather
+* Non-specified (any manufacturing industry not included above)"@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: Institution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en
+    
+    SubClassOf: 
+        Organization
+    
+    
+Class: Organization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        has_part some Person
+    
+    DisjointWith: 
+        Person
+    
+    
+Class: Person
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human beeing."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    DisjointWith: 
+        Organization
+    
+    
+Class: PoliticalParty
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en
+    
+    SubClassOf: 
+        Organization
+    
+    
+Class: Prosumer
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is a person who consumes and produces a product. It is derived from \"prosumption\", a dot-com era business term meaning \"production by consumers\"."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Prosumer&oldid=881861680"@en
+    
+    SubClassOf: 
+        Agent
+    
+    
+Class: Publication
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A publication is a collection of information artifacts that has been published."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+    
+    
+Class: SectorConcept
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorConcept is a specific way to subdivide a system."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: TCSSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en
+    
+    SubClassOf: 
+        DemandSector
+    
+    
+Class: TrafficSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en
+    
+    SubClassOf: 
+        DemandSector
+    
+    
+Class: TransportSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
+
+* Domestic aviation
+* Road: fuels used in road vehicles as well as agricultural and industrial highway use
+* Rail, including industrial railways.
+* Pipeline transport
+* Domestic navigation
+* Non-specified: includes all transport not elsewhere specified."@en
+    
+    SubClassOf: 
+        Sector
+    
+    
+Class: User
+
+    SubClassOf: 
+        Agent
+    
+    
+Individual: Eurostat_Energy_Balances
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The concept of \"energy balance\" is an accounting framework for the compilation and understanding of data on all energy products entering, exiting and being used in a country. The energy balance is the most complete statistical accounting of energy products and their flow in the economy. Columns of the energy balance represent energy products (fuels). Rows represent energy flows.
+
+The energy balance expresses all forms of energy in a common accounting unit. The balance shows the relationships between supply, inputs to the energy transformation processes and their outputs as well as the actual energy consumption by different sectors of end-use.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "This is a general description of an energy balance. A link to a complete Eurostat energy balance is provided under the URL for 'definition source'",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php/Energy_balance#What_is_an_energy_balance.3F"
+    
+    Types: 
+        SectorConcept
+    
+    
+Individual: German_Energy_Balances
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Das Schema der Energiebilanzen umfasst eine Matrix von 33 Spalten und 68 Zeilen (einschließlich der Summenspalten und -zeilen). In der horizontalen Gliederung (Spalten) werden die Energieträger ausgewiesen, die der energetischen und nichtenergetischen Nutzung dienen. In der vertikalen Gliederung (Zeilen) werden für die jeweiligen Energieträger Aufkommen, Umwandlung und Verwendung erfasst.
+
+Als Energieträger werden alle Quellen oder Stoffe bezeichnet, in denen Energie mechanisch, thermisch, chemisch oder physikalisch gespeichert ist. Fünf Kerngruppe werden bei der Energiebilanz unterschieden:
+
+    Fossile Brennstoffe
+    Erneuerbare Energien
+    Strom
+    Kernbrennstoffe
+    Fernwärme
+
+Bilanzebenen
+Schematische Darstellung des Bilanzraums der deutschen Arbeitsgemeinschaft Energiebilanzen
+Primär- und Endenergie sowie Umwandlungsverluste
+
+Die Abgrenzung erfolgt in drei Bilanzbereichen:
+
+    die Primärenergiebilanz,
+    die Umwandlungsbilanz und
+    der Endenergieverbrauch.
+
+In der Primärenergiebilanz werden die Energieträger mit ihrem Mengenaufkommen bei der Gewinnung und Anlieferung nach folgenden Kriterien erfasst:
+
+    inländische Gewinnung von Energieträgern,
+    Außenhandel mit Energieträgern, unterteilt nach Einfuhr und Ausfuhr,
+    Hochseebunkerungen (Heizöl, Dieselkraftstoff und Schmierstoffe für die nationale und internationale Seeschifffahrt in deutschen Häfen. Ohne Lieferungen an Binnen- und Küstenmotorschiffe und Fischerei, die zum Sektor Verkehr (Endenergieverbrauch) zählen.)
+    Bestandsveränderungen, getrennt erfasst nach Bestandsentnahmen und -aufstockungen",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The German Energy Balance is managed by the 'AG Energiebilanzen', where aso the energy balances can be found: https://ag-energiebilanzen.de/",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://de.wikipedia.org/w/index.php?title=Energiebilanz_(Energiewirtschaft)&oldid=176259115"
+    
+    Types: 
+        SectorConcept
+    
+    
+Individual: IPCC_1996_Guidelines
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 1996 (revised).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/gl/invs6.html"
+    
+    Types: 
+        SectorConcept
+    
+    
+Individual: IPCC_2006_Guidelines
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 2006.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/2006gl/index.html"
+    
+    Types: 
+        SectorConcept
+    
+    
+Individual: NACE_Sectors
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The Statistical classification of economic activities in the European Community, abbreviated as NACE, is the classification of economic activities in the European Union (EU); the term NACE is derived from the French Nomenclature statistique des activités économiques dans la Communauté européenne. Various NACE versions have been developed since 1970.
+
+NACE is a four-digit classification providing the framework for collecting and presenting a large range of statistical data according to economic activity in the fields of economic statistics (e.g. production, employment and national accounts) and in other statistical domains developed within the European statistical system (ESS).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_classification_of_economic_activities_in_the_European_Community_(NACE)"
+    
+    Types: 
+        SectorConcept
+    
+    
+Individual: Renewable_Energy_Directive_Sectors
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The Renewable Energy Directive has been revised, but this should have had no impacts on the sectoral definitions. Factsheet on revision: https://ec.europa.eu/energy/sites/ener/files/documents/directive_renewable_factsheet.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028"
+    
+    Types: 
+        SectorConcept
+    
+    
+DisjointClasses: 
+    CommerceSector,HouseholdSector,IndustrySector
+
+DisjointClasses: 
+    ElectricitySector,HeatSector,TransportSector
+
+DisjointClasses: 
+    HouseholdSector,IndustrySector,TCSSector,TrafficSector
+

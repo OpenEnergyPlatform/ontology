@@ -1,0 +1,2403 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: obda: <https://w3id.org/obda/vocabulary#>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
+<http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+
+Annotations: 
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)",
+    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation."
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: conforms_to
+
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: data_provided
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: generates_dataset
+
+    SubPropertyOf: 
+        has_output
+    
+    
+ObjectProperty: hasNumeral
+
+    
+ObjectProperty: hasUnitofMeasurement
+
+    
+ObjectProperty: has_approach_to_uncertainty
+
+    SubPropertyOf: 
+        has_part
+    
+    
+ObjectProperty: has_author
+
+    
+ObjectProperty: has_client
+
+    
+ObjectProperty: has_complexity
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: has_contact
+
+    
+ObjectProperty: has_funding_source
+
+    
+ObjectProperty: has_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    
+ObjectProperty: has_license
+
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        has_part,
+        is_referenced_by
+    
+    
+ObjectProperty: has_mathematical_objective
+
+    SubPropertyOf: 
+        has_part
+    
+    
+ObjectProperty: has_numercical_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+    
+    
+ObjectProperty: has_numerical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+    
+    
+ObjectProperty: has_objective
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+    
+    Domain: 
+        Optimization
+    
+    Range: 
+        SoftwareElement
+    
+    
+ObjectProperty: has_objectivefunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_objectivevariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_part
+
+    
+ObjectProperty: has_participant
+
+    
+ObjectProperty: has_physical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    
+ObjectProperty: has_programvariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
+    
+    
+ObjectProperty: has_spatial_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_support_community_forum
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: has_temporal_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_tool
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        ModelCalculation
+    
+    Range: 
+        Model
+    
+    
+ObjectProperty: has_typical_computation_hardware
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_typical_computation_time
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_website
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_available_on_GitHub
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_referenced_by
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        references
+    
+    
+ObjectProperty: link_to_source_code
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: makes_assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: part_of
+
+    Characteristics: 
+        Transitive
+    
+    
+ObjectProperty: references
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: source_code_available
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: uses
+
+    
+ObjectProperty: uses_dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
+    
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_external_optimizer
+
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_software
+
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_software_internal_data_processing
+
+    SubPropertyOf: 
+        uses_software
+    
+    
+ObjectProperty: uses_software_modelling
+
+    SubPropertyOf: 
+        uses_software
+    
+    
+ObjectProperty: utilizes_dataset
+
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: utilizes_program_parameter
+
+    SubPropertyOf: 
+        has_input
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000016>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000024>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000029>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000038>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AcDcCoupling>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#AssignedEffectivePowerInverter>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#Batterytechnology>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EmergencyGenerator>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#NetCapacityGermany>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#OperationSite>
+
+    SubClassOf: 
+        StorageUnitDataset
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PartOfMarginalPowerPlant>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PumpOperationContinouslyAdjustable>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PumpOperationPowerConsumption>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#PumpStorageTechnology>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+
+    SubClassOf: 
+        StorageUnitDataset
+    
+    
+Class: <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#UseableStorageCapacity>
+
+    SubClassOf: 
+        <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#TechnicalDataStorage>
+    
+    
+Class: ACLine
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
+Generally, flows in the model can not be controlled but are a function of the resitance and electrochemical potential difference."@en,
+        rdfs:comment "undirected",
+        rdfs:label "AC-Line"@en
+    
+    SubClassOf: 
+        Line
+    
+    
+Class: API
+
+    SubClassOf: 
+        Interface
+    
+    DisjointWith: 
+        GUI
+    
+    
+Class: Acronym
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: AgriculturalDemand
+
+    SubClassOf: 
+        Demand
+    
+    
+Class: AnalyticalApproach
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Appliance
+
+    SubClassOf: 
+        ResidentialDemand
+    
+    
+Class: Assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: AutoModelGenerator
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: Aviation
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: BatteryElectric
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: BiomassPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass powerplant uses biomass to generate electricity or heat."@en
+    
+    SubClassOf: 
+        RegenerativePowerplant
+    
+    
+Class: BooleanVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Bus
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
+        rdfs:label "Bus"@en
+    
+    SubClassOf: 
+        NetworkNode
+    
+    
+Class: CarbonDioxideEmission
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission quantity is a quantity that is about carbon dioxide."@en
+    
+    SubClassOf: 
+        Emission
+    
+    
+Class: CarbonDioxideEmissionTrafficSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en
+    
+    SubClassOf: 
+        CarbonDioxideEmission
+    
+    
+Class: Citation
+
+    SubClassOf: 
+        Identifier
+    
+    
+Class: CitationReference
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: CoalPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal-fired power station or coal power plant is a thermal power station which burns coal to generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal-fired_power_station&oldid=905322370"
+    
+    SubClassOf: 
+        FossilePowerplant
+    
+    
+Class: CodeDocumentation
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: CodeSource
+
+    SubClassOf: 
+        DataDescriptor
+    
+    
+Class: CollaborativeProgramming
+
+    SubClassOf: 
+        OpenSource
+    
+    
+Class: Combustion
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: CommericalDemand
+
+    SubClassOf: 
+        Demand
+    
+    
+Class: Community
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
+    
+    SubClassOf: 
+        Support
+    
+    
+Class: ComputationTime
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+Class: Constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: ConsumptionQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumption quantity is a quantity that describes the amount of consumption of some resource."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: ContentDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: CorporateIdentity
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Cost
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: DCLine
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
+Genreally, flows in the model can be controlled/optimized."@en,
+        rdfs:comment "directed",
+        rdfs:label "HVDC-Line"@en
+    
+    SubClassOf: 
+        Line
+    
+    
+Class: DOI
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
+source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Data
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: DataDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: DataFormat
+
+    SubClassOf: 
+        DataDescriptor
+    
+    DisjointWith: 
+        OpenSource
+    
+    
+Class: DataPostprocessing
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: DataPreprocessing
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: DataProcessing
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: DataProcessingSoftware
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Database
+
+    SubClassOf: 
+        DataFormat
+    
+    DisjointWith: 
+        Plot
+    
+    
+Class: Dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
+The measurement series of an expiriment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Demand
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Demand is generally the need for energy, colloquially referred to as energy consumption.
+Source: https://wiki.openmod-initiative.org/wiki/Demand"@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: Documentation
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: Ecological
+
+    SubClassOf: 
+        Type
+    
+    
+Class: Economical
+
+    SubClassOf: 
+        Type
+    
+    
+Class: ElectricalLoad
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
+
+    Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
+        rdfs:label "ElectricalDemand"@en,
+        rdfs:label "ElectricalLoad"@en
+    
+    SubClassOf: 
+        Demand
+    
+    
+Class: ElectricityConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity consumption quantity is a consumption quantity about electricity."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: ElectricityExport
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export quantity is a quantity that describes the amount of electricity that is exported from a geographic region."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: Emission
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "1. Emissions are waste from production, distribution and consumption, which are distributed to environmental media. Emmision is often restricted to pollutants.
+        
+        2. Emissions generally means discharge of any interference in the environment. The source is called the issuer. Each emission causes an immission."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Emmision"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: EmissionFactor
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission factors assume a linear relation between the intensity of the activity and the emission resulting from this activity:
+
+Emission (pollutant) = Activity * Emission Factor (pollutant)",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Emission_intensity&oldid=881841342"
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: EmpiricalDataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        SynthethicDataset
+    
+    
+Class: EnergyCarrierQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier quantity is a quantity about the amount of energy from a certain energy carrier."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: EnergyConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption quantity is a consumption quantity about energy."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: EnergyFromAlternativeFuelsAndPropulsionInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from alternative fuels and populsion in traffic quantity is a energy carrier quantity that describes the amount alternative energy carriers are used in the traffic sector."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: EnergyFromBioFuelInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from bio fuel in traffic quantity is a energy carrier quantity that describes the amount of bio fuel as energy carrier in traffic."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: EnergyFromElectricityInTraffic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from electricity in traffic quantity is a energy carrier quantity that describes the amount of electricity used as energy carrier in traffic."@en
+    
+    SubClassOf: 
+        EnergyCarrierQuantity
+    
+    
+Class: ExternalOptimizer
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Factsheet
+
+    SubClassOf: 
+        EmpiricalDataset
+    
+    
+Class: FixedOperationCost
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Forum
+
+    SubClassOf: 
+        Support
+    
+    
+Class: FossilePowerplant
+
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: Framework
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: FrameworkFactsheet
+
+    SubClassOf: 
+        Factsheet
+    
+    
+Class: FuelPrice
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Funding
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: GUI
+
+    SubClassOf: 
+        Interface
+    
+    DisjointWith: 
+        API
+    
+    
+Class: GasPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas-fired power plant or gas-fired power station or natural gas power plant is a thermal power station which burns natural gas to generate electricity. Natural gas power stations generate a quarter of world electricity and a significant part of global greenhouse gas emissions and thus global warming."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas-fired_power_plant&oldid=905149105"@en
+    
+    SubClassOf: 
+        FossilePowerplant
+    
+    
+Class: GeothermalPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal generator uses geothermal energy to generate electricity."@en
+    
+    SubClassOf: 
+        RegenerativePowerplant
+    
+    
+Class: GitHub
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal generator uses geothermal energy to generate electricity."@en
+    
+    SubClassOf: 
+        Weblink
+    
+    
+Class: GlobalWarmingPotential
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Global warming potential (GWP) is a measure of how much heat a greenhouse gas traps in the atmosphere up to a specific time horizon, relative to carbon dioxide. It compares the amount of heat trapped by a certain mass of the gas in question to the amount of heat trapped by a similar mass of carbon dioxide and is expressed as a factor of carbon dioxide (whose GWP is standardized to 1).
+
+A GWP is calculated over a specific time horizon, commonly 20, 100, or 500 years. User related choices such as the time horizon can greatly affect the numerical values obtained for carbon dioxide equivalents.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Global_warming_potential&oldid=878160191"
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: Graph
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000024>
+    
+    
+Class: GridModel
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: HardCoalPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hard coal powerplant burns coal to generate electricity."@en
+    
+    SubClassOf: 
+        CoalPowerplant
+    
+    
+Class: HeatConsumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat consumption quantity is a consumption quantity about heat."@en
+    
+    SubClassOf: 
+        ConsumptionQuantity
+    
+    
+Class: HeatDemand
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The heat demand describes the needed amount of heat."@en
+    
+    SubClassOf: 
+        Demand
+    
+    
+Class: HydroelectricPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en
+    
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: HydrogenPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen powerplant uses hydrogen to generate electricity."@en
+    
+    SubClassOf: 
+        ReactivePowerplant
+    
+    
+Class: HydrogenVehicle
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: Identifier
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: InformationArtifact
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: InstallationGuide
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: InstalledHeatFromHeatPump
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from heat pump quantity is a installed power quantity restricted to heat pump power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledHeatFromSolar
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from solar quantity is a installed power quantity restricted to solar heat power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromBiomass
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from biomass quantity is a installed power quantity restricted to biomass power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromCoalPowerPlants
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from coal power plants quantity is a installed power quantity restricted to coal power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromGas
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from gas quantity is a installed power quantity restricted to gas power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromPhotovoltaics
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from photovoltaics quantity is a installed power quantity restricted to photovoltaic power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromThermalPowerPlants
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from thermal power plants quantity is a installed power quantity restricted to thermal power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerFromWind
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from wind quantity is a installed power quantity restricted to wind power plants."@en
+    
+    SubClassOf: 
+        InstalledPowerQuantity
+    
+    
+Class: InstalledPowerQuantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power quantity is a quantity that describes the amount of power that some generators can generate."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: Interface
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: InvestmentCost
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: License
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+Class: LignitePowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite powerplant burns lignite to generate electricity."@en
+    
+    SubClassOf: 
+        CoalPowerplant
+    
+    
+Class: Line
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An uninterrupted transmission system between two nodes in the electric grid."@en,
+        rdfs:label "PowerLine"@en
+    
+    SubClassOf: 
+        Link
+    
+    
+Class: LinearOptimalPowerflow
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: Link
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000024>
+    
+    DisjointWith: 
+        Node
+    
+    
+Class: Logo
+
+    SubClassOf: 
+        CorporateIdentity
+    
+    
+Class: MaStR
+
+    SubClassOf: 
+        EmpiricalDataset
+    
+    
+Class: Mail
+
+    SubClassOf: 
+        Support
+    
+    
+Class: MarketModel
+
+    SubClassOf: 
+        Model
+    
+    
+Class: MathematicalConcept
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Maximization
+
+    SubClassOf: 
+        ModelFunction
+    
+    
+Class: MethodicalFocus
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Minimization
+
+    SubClassOf: 
+        ModelFunction
+    
+    
+Class: Model
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
+    
+    SubClassOf: 
+        ModelingSoftware,
+        has_part some SoftwareElement
+    
+    
+Class: ModelCalculation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en
+    
+    SubClassOf: 
+        Transformation,
+        has_tool some Model
+    
+    
+Class: ModelComponent
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: ModelConstraint
+
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: ModelElement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
+    
+    SubClassOf: 
+        InformationArtifact,
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        part_of some Model
+    
+    
+Class: ModelExamples
+
+    SubClassOf: 
+        Support
+    
+    
+Class: ModelFactsheet
+
+    SubClassOf: 
+        Factsheet
+    
+    
+Class: ModelFunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: ModelVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
+    
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: ModelingSoftware
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Modus
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Name
+
+    SubClassOf: 
+        Identifier
+    
+    
+Class: NetworkNode
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A network node is a node in an electrical grid."@en
+    
+    SubClassOf: 
+        Node
+    
+    
+Class: NewPowerFromPhotovoltaics
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A new power from photovoltaics quantity is a quantity that describes the amount of power from photovoltaic power plants that are going to be build in the future."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: Node
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000024>
+    
+    DisjointWith: 
+        Link
+    
+    
+Class: NuclearPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear power plant or nuclear power station is a thermal power station in which the heat source is a nuclear reactor. As it is typical of thermal power stations, heat is used to generate steam that drives a steam turbine connected to a generator that produces electricity.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power_plant&oldid=867102016"
+    
+    SubClassOf: 
+        ReactivePowerplant
+    
+    
+Class: ObjectiveFunction
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Office
+
+    SubClassOf: 
+        CommericalDemand
+    
+    
+Class: OilPowerplant
+
+    SubClassOf: 
+        FossilePowerplant
+    
+    
+Class: OpenSource
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    DisjointWith: 
+        DataFormat
+    
+    
+Class: Optimization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Simulation
+    
+    
+Class: OptimizationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: Percentage
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A percentage is a ratio given as a fraction of 100."@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: PhotovoltaicPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
+    
+    SubClassOf: 
+        SolarPowerPlant
+    
+    
+Class: Plot
+
+    SubClassOf: 
+        DataFormat
+    
+    DisjointWith: 
+        Database
+    
+    
+Class: Plotting
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: PoliticalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
+Class: Postprocessing
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
+    
+    SubClassOf: 
+        Transformation
+    
+    
+Class: Power
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the rate of doing work, the amount of energy transferred per unit time.
+Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
+    
+    SubClassOf: 
+        Quantity
+    
+    
+Class: PowerGeneratingUnit
+
+    SubClassOf: 
+        NetworkNode
+    
+    
+Class: Preprocessing
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
+    
+    SubClassOf: 
+        Transformation
+    
+    
+Class: PrimaryOutputs
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: PrimaryPurpose
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Private
+
+    SubClassOf: 
+        Funding
+    
+    
+Class: ProgramParameter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
+    
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Project
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: Public
+
+    SubClassOf: 
+        Funding
+    
+    
+Class: PumpedStoragePlant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage plant pumps water using surplus energy from a lower level to a higher reservoir. The reservoir functions as a storage unit. If needed, energy can be generated by letting the water flow back to the lower level"@en
+    
+    SubClassOf: 
+        HydroelectricPowerplant
+    
+    
+Class: Quality
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+Class: Quantity
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Other Idea: A number together with a unit of measurement to quantify an entity."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: Rail
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: ReactivePowerplant
+
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: Reference
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: RegenerativePowerplant
+
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: ResidentialDemand
+
+    SubClassOf: 
+        Demand
+    
+    
+Class: Retail
+
+    SubClassOf: 
+        CommericalDemand
+    
+    
+Class: Robustness
+
+    SubClassOf: 
+        Validation
+    
+    
+Class: RunOfRiverPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en
+    
+    SubClassOf: 
+        HydroelectricPowerplant
+    
+    
+Class: Scenario
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "(WIP) A scenario is a collection of assumptions about the energy system.
+There is not yet a consens about the definition."@en
+    
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: ScenarioFactsheet
+
+    SubClassOf: 
+        Factsheet
+    
+    
+Class: ShuntImpedance
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
+
+Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en
+    
+    SubClassOf: 
+        NetworkNode
+    
+    
+Class: Simulation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Optimization
+    
+    
+Class: SimulationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: SingleNodeModel
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: Social
+
+    SubClassOf: 
+        Type
+    
+    
+Class: Software
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: SoftwareDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: SoftwareElement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
+    SubClassOf: 
+        Software
+    
+    
+Class: SoftwareMaintenance
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: SolarPowerPlant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar power is the conversion of energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination. Concentrated solar power systems use lenses or mirrors and tracking systems to focus a large area of sunlight into a small beam. Photovoltaic cells convert light into an electric current using the photovoltaic effect."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_power&oldid=904827092"@en
+    
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: SolarThermalPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "uses solar thermal energy to generate electrical energy"@en
+    
+    SubClassOf: 
+        SolarPowerPlant
+    
+    
+Class: Solver
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: StorageUnitDataset
+
+    SubClassOf: 
+        MaStR
+    
+    
+Class: Study
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: Support
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: SynthethicDataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        EmpiricalDataset
+    
+    
+Class: Technical
+
+    SubClassOf: 
+        Type
+    
+    
+Class: TestDataset
+
+    SubClassOf: 
+        Dataset
+    
+    
+Class: TidalStreamPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
+    
+    SubClassOf: 
+        HydroelectricPowerplant
+    
+    
+Class: TimeHorizon
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: TimeSeries
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: TimeStep
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: Title
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Transformation
+
+    Annotations: 
+        definition "A transformation is a process that transforms one or more inputs into at least one output."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: Transformer
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
+2. A transformer is a static machine used for transforming power from one circuit to another without changing frequency. This is a very basic definition of transformer. Since there is no rotating or moving part so transformer is a static device. Transformer operates on ac supply. Transformer works on the principle of mutual induction.
+
+Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en
+    
+    SubClassOf: 
+        NetworkNode
+    
+    
+Class: TranshipmentModel
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: TransportDemand
+
+    SubClassOf: 
+        Demand
+    
+    
+Class: Type
+
+    SubClassOf: 
+        DataDescriptor
+    
+    
+Class: Uncertainty
+
+    SubClassOf: 
+        Validation
+    
+    
+Class: UndirectedEdge
+
+    SubClassOf: 
+        Link
+    
+    
+Class: Unit
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: UserDocumentation
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: V2Grid
+
+    SubClassOf: 
+        TransportDemand
+    
+    
+Class: Validation
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: VariableOperationCost
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Warehouse
+
+    SubClassOf: 
+        CommericalDemand
+    
+    
+Class: WastePowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste-to-energy plant is a waste management facility that combusts wastes to produce electricity. This type of power plant is sometimes called a trash-to-energy, municipal waste incineration, energy recovery, or resource recovery plant."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Waste-to-energy_plant&oldid=904634168"
+    
+    SubClassOf: 
+        FossilePowerplant
+    
+    
+Class: Weblink
+
+    SubClassOf: 
+        Link
+    
+    
+Class: Website
+
+    SubClassOf: 
+        CorporateIdentity
+    
+    
+Class: WindFarm
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm uses wind turbines and and wind to generate renewable energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
+    
+    SubClassOf: 
+        RegenerativePowerplant
+    
+    
+Class: WindOnshore
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Onshore wind power is the complement to Offshore wind power. It is harvested on land."@en
+    
+    SubClassOf: 
+        RegenerativePowerplant
+    
+    
+Class: Workshop
+
+    SubClassOf: 
+        Support
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/C++>
+
+    Types: 
+        Framework
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/MS_Excel/VBA>
+
+    Types: 
+        Framework
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/Spatial(GIS)>
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Accounting
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Active
+
+    Types: 
+        Modus
+    
+    
+Individual: AgentBasedProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: BackCasting
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: BottomUp
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: CPLEX
+
+    Types: 
+        Solver
+    
+    
+Individual: CSV
+
+    Types: 
+        DataFormat
+    
+    
+Individual: Coin-Or_CBC
+
+    Types: 
+        Solver
+    
+    
+Individual: Cooking
+
+    Types: 
+        ResidentialDemand
+    
+    
+Individual: DataFrame
+
+    Types: 
+        DataFormat
+    
+    
+Individual: Dict
+
+    Types: 
+        DataFormat
+    
+    
+Individual: DynamicProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: Econometric
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: EconomicEquilibrium
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: False
+
+    Types: 
+        BooleanVariable
+    
+    
+Individual: Fortran
+
+    Types: 
+        Framework
+    
+    
+Individual: FuzzyLogic
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: GAMS
+
+    Types: 
+        Framework
+    
+    
+Individual: GLPK
+
+    Types: 
+        Solver
+    
+    
+Individual: GNU
+
+    Types: 
+        Framework
+    
+    
+Individual: Gurobi
+
+    Types: 
+        Solver
+    
+    
+Individual: Heat
+
+    Types: 
+        ResidentialDemand
+    
+    
+Individual: Hybrid
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: Inactive
+
+    Types: 
+        Modus
+    
+    
+Individual: Java
+
+    Types: 
+        Framework
+    
+    
+Individual: Light
+
+    Types: 
+        ResidentialDemand
+    
+    
+Individual: LinearProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: MOSEK
+
+    Types: 
+        Solver
+    
+    
+Individual: MS_Excel
+
+    Types: 
+        Framework
+    
+    
+Individual: Macro-Economic
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: MathProg
+
+    Types: 
+        Framework
+    
+    
+Individual: Matlab
+
+    Types: 
+        Framework
+    
+    
+Individual: MixedIntegerLinearProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: Modellca
+
+    Types: 
+        Framework
+    
+    
+Individual: MonteCarlo
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: MultiCriteria
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Optimization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Other
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: PHP
+
+    Types: 
+        Framework
+    
+    
+Individual: Passive
+
+    Types: 
+        Modus
+    
+    
+Individual: Python
+
+    Types: 
+        Framework
+    
+    
+Individual: R
+
+    Types: 
+        Framework
+    
+    
+Individual: Ruby
+
+    Types: 
+        Framework
+    
+    
+Individual: Simulation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: SmartMetre
+
+    Types: 
+        Appliance
+    
+    
+Individual: Spreadsheet
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Stochastic
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Toolbox
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: TopDown
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: True
+
+    Types: 
+        BooleanVariable
+    
+    
+Individual: Txt
+
+    Types: 
+        DataFormat
+    
+    
+Individual: XLSX
+
+    Types: 
+        DataFormat
+    
+    
+Individual: XML
+
+    Types: 
+        DataFormat
+    
+    
+Individual: gdx
+
+    Types: 
+        DataFormat
+    
+    
+DisjointClasses: 
+    Acronym,DOI,Title
+
+DisjointClasses: 
+    LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
+
