@@ -27,6 +27,6 @@ If you have a specific question about ontology, modelling or economy (in context
 
 - [@economy-experts](https://github.com/orgs/OpenEnergyPlatform/teams/economy-experts)
 
-- [@ontology-experts](https://github.com/orgs/OpenEnergyPlatform/teams/modelling-experts)
+- [@ontology-experts](https://github.com/orgs/OpenEnergyPlatform/teams/ontology-experts)
 
-- [@modelling-experts](https://github.com/orgs/OpenEnergyPlatform/teams/ontology-experts)
+- [@modelling-experts](https://github.com/orgs/OpenEnergyPlatform/teams/modelling-experts)

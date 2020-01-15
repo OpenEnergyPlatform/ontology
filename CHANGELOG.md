@@ -34,6 +34,7 @@ Here is a template for new release sections
 - object properties to describe models (#109)
 
 ### Changed
+- Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)
 - FluorinatedGreenhouseGas (#88)
 - agent and subclasses (#51)
 - pollutant and subclasses (#51)

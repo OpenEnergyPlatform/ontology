@@ -1,0 +1,1606 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: obda: <https://w3id.org/obda/vocabulary#>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
+<http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+
+Annotations: 
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)",
+    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation."
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: conforms_to
+
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: data_provided
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: generates_dataset
+
+    SubPropertyOf: 
+        has_output
+    
+    
+ObjectProperty: hasNumeral
+
+    
+ObjectProperty: hasUnitofMeasurement
+
+    
+ObjectProperty: has_approach_to_uncertainty
+
+    SubPropertyOf: 
+        has_part
+    
+    
+ObjectProperty: has_author
+
+    
+ObjectProperty: has_client
+
+    
+ObjectProperty: has_complexity
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: has_contact
+
+    
+ObjectProperty: has_funding_source
+
+    
+ObjectProperty: has_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    
+ObjectProperty: has_license
+
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        has_part,
+        is_referenced_by
+    
+    
+ObjectProperty: has_mathematical_objective
+
+    SubPropertyOf: 
+        has_part
+    
+    
+ObjectProperty: has_numercical_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        has_input
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+    
+    
+ObjectProperty: has_numerical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        Transformation
+    
+    Range: 
+        InformationArtifact
+    
+    
+ObjectProperty: has_objective
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+    
+    Domain: 
+        Optimization
+    
+    Range: 
+        SoftwareElement
+    
+    
+ObjectProperty: has_objectivefunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_objectivevariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_part
+
+    
+ObjectProperty: has_participant
+
+    
+ObjectProperty: has_physical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        has_output
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    
+ObjectProperty: has_programvariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    
+ObjectProperty: has_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
+    
+    
+ObjectProperty: has_spatial_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_support_community_forum
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: has_temporal_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_tool
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
+    
+    SubPropertyOf: 
+        has_participant
+    
+    Domain: 
+        ModelCalculation
+    
+    Range: 
+        Model
+    
+    
+ObjectProperty: has_typical_computation_hardware
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_typical_computation_time
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: has_website
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_available_on_GitHub
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: is_referenced_by
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        references
+    
+    
+ObjectProperty: link_to_source_code
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: makes_assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: part_of
+
+    Characteristics: 
+        Transitive
+    
+    
+ObjectProperty: references
+
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: source_code_available
+
+    SubPropertyOf: 
+        is_referenced_by
+    
+    
+ObjectProperty: uses
+
+    
+ObjectProperty: uses_dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
+    
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_external_optimizer
+
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_software
+
+    SubPropertyOf: 
+        uses
+    
+    
+ObjectProperty: uses_software_internal_data_processing
+
+    SubPropertyOf: 
+        uses_software
+    
+    
+ObjectProperty: uses_software_modelling
+
+    SubPropertyOf: 
+        uses_software
+    
+    
+ObjectProperty: utilizes_dataset
+
+    SubPropertyOf: 
+        has_input
+    
+    
+ObjectProperty: utilizes_program_parameter
+
+    SubPropertyOf: 
+        has_input
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000016>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000024>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000029>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000038>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: API
+
+    SubClassOf: 
+        Interface
+    
+    DisjointWith: 
+        GUI
+    
+    
+Class: Acronym
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: AnalyticalApproach
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: AutoModelGenerator
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: BooleanVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Citation
+
+    SubClassOf: 
+        Identifier
+    
+    
+Class: CitationReference
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: CodeDocumentation
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: CodeSource
+
+    SubClassOf: 
+        DataDescriptor
+    
+    
+Class: CollaborativeProgramming
+
+    SubClassOf: 
+        OpenSource
+    
+    
+Class: Community
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
+    
+    SubClassOf: 
+        Support
+    
+    
+Class: ComputationTime
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+Class: Constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: ContentDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: CorporateIdentity
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Cost
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: DOI
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
+source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Data
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: DataDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: DataFormat
+
+    SubClassOf: 
+        DataDescriptor
+    
+    DisjointWith: 
+        OpenSource
+    
+    
+Class: DataPostprocessing
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: DataPreprocessing
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: DataProcessing
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: DataProcessingSoftware
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Database
+
+    SubClassOf: 
+        DataFormat
+    
+    DisjointWith: 
+        Plot
+    
+    
+Class: Dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
+The measurement series of an expiriment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Documentation
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: Ecological
+
+    SubClassOf: 
+        Type
+    
+    
+Class: Economical
+
+    SubClassOf: 
+        Type
+    
+    
+Class: EmpiricalDataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        SynthethicDataset
+    
+    
+Class: ExternalOptimizer
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Factsheet
+
+    SubClassOf: 
+        EmpiricalDataset
+    
+    
+Class: FixedOperationCost
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Forum
+
+    SubClassOf: 
+        Support
+    
+    
+Class: Framework
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: FrameworkFactsheet
+
+    SubClassOf: 
+        Factsheet
+    
+    
+Class: FuelPrice
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Funding
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: GUI
+
+    SubClassOf: 
+        Interface
+    
+    DisjointWith: 
+        API
+    
+    
+Class: GridModel
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: Identifier
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: InformationArtifact
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: InstallationGuide
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: Interface
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: InvestmentCost
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: License
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+Class: LinearOptimalPowerflow
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: Logo
+
+    SubClassOf: 
+        CorporateIdentity
+    
+    
+Class: Mail
+
+    SubClassOf: 
+        Support
+    
+    
+Class: MarketModel
+
+    SubClassOf: 
+        Model
+    
+    
+Class: MathematicalConcept
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Maximization
+
+    SubClassOf: 
+        ModelFunction
+    
+    
+Class: MethodicalFocus
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Minimization
+
+    SubClassOf: 
+        ModelFunction
+    
+    
+Class: Model
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a tool for computing the behavior of a system using an idealized representation."@en
+    
+    SubClassOf: 
+        ModelingSoftware,
+        has_part some SoftwareElement
+    
+    
+Class: ModelCalculation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en
+    
+    SubClassOf: 
+        Transformation,
+        has_tool some Model
+    
+    
+Class: ModelComponent
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: ModelConstraint
+
+    SubClassOf: 
+        ModelComponent
+    
+    
+Class: ModelElement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
+    
+    SubClassOf: 
+        InformationArtifact,
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        part_of some Model
+    
+    
+Class: ModelExamples
+
+    SubClassOf: 
+        Support
+    
+    
+Class: ModelFactsheet
+
+    SubClassOf: 
+        Factsheet
+    
+    
+Class: ModelFunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: ModelVariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
+    
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: ModelingSoftware
+
+    SubClassOf: 
+        Software
+    
+    
+Class: Modus
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Name
+
+    SubClassOf: 
+        Identifier
+    
+    
+Class: ObjectiveFunction
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: OpenSource
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    DisjointWith: 
+        DataFormat
+    
+    
+Class: Optimization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Simulation
+    
+    
+Class: OptimizationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: Plot
+
+    SubClassOf: 
+        DataFormat
+    
+    DisjointWith: 
+        Database
+    
+    
+Class: Plotting
+
+    SubClassOf: 
+        DataProcessing
+    
+    
+Class: PoliticalAssumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en
+    
+    SubClassOf: 
+        Assumption
+    
+    
+Class: Postprocessing
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
+    
+    SubClassOf: 
+        Transformation
+    
+    
+Class: Preprocessing
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
+    
+    SubClassOf: 
+        Transformation
+    
+    
+Class: PrimaryOutputs
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: PrimaryPurpose
+
+    SubClassOf: 
+        ContentDescriptor
+    
+    
+Class: Private
+
+    SubClassOf: 
+        Funding
+    
+    
+Class: ProgramParameter
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
+    
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: Project
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: Public
+
+    SubClassOf: 
+        Funding
+    
+    
+Class: Quality
+
+    SubClassOf: 
+        SoftwareDescriptor
+    
+    
+Class: Reference
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Robustness
+
+    SubClassOf: 
+        Validation
+    
+    
+Class: Scenario
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "(WIP) A scenario is a collection of assumptions about the energy system.
+There is not yet a consens about the definition."@en
+    
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: ScenarioFactsheet
+
+    SubClassOf: 
+        Factsheet
+    
+    
+Class: Simulation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
+    SubClassOf: 
+        ModelCalculation
+    
+    DisjointWith: 
+        Optimization
+    
+    
+Class: SimulationModel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en
+    
+    SubClassOf: 
+        Model
+    
+    
+Class: SingleNodeModel
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: Social
+
+    SubClassOf: 
+        Type
+    
+    
+Class: Software
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
+    
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: SoftwareDescriptor
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: SoftwareElement
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
+    SubClassOf: 
+        Software
+    
+    
+Class: SoftwareMaintenance
+
+    SubClassOf: 
+        InformationArtifact
+    
+    
+Class: Solver
+
+    SubClassOf: 
+        SoftwareElement
+    
+    
+Class: Study
+
+    SubClassOf: 
+        Reference
+    
+    
+Class: Support
+
+    SubClassOf: 
+        SoftwareMaintenance
+    
+    
+Class: SynthethicDataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
+    
+    SubClassOf: 
+        Dataset
+    
+    DisjointWith: 
+        EmpiricalDataset
+    
+    
+Class: Technical
+
+    SubClassOf: 
+        Type
+    
+    
+Class: TestDataset
+
+    SubClassOf: 
+        Dataset
+    
+    
+Class: TimeHorizon
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: TimeSeries
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: TimeStep
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: Title
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
+    
+    SubClassOf: 
+        Identifier
+    
+    
+Class: Transformation
+
+    Annotations: 
+        definition "A transformation is a process that transforms one or more inputs into at least one output."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: TranshipmentModel
+
+    SubClassOf: 
+        GridModel
+    
+    
+Class: Type
+
+    SubClassOf: 
+        DataDescriptor
+    
+    
+Class: Uncertainty
+
+    SubClassOf: 
+        Validation
+    
+    
+Class: Unit
+
+    SubClassOf: 
+        ModelVariable
+    
+    
+Class: UserDocumentation
+
+    SubClassOf: 
+        Documentation
+    
+    
+Class: Validation
+
+    SubClassOf: 
+        ModelElement
+    
+    
+Class: VariableOperationCost
+
+    SubClassOf: 
+        Cost
+    
+    
+Class: Website
+
+    SubClassOf: 
+        CorporateIdentity
+    
+    
+Class: Workshop
+
+    SubClassOf: 
+        Support
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/C++>
+
+    Types: 
+        Framework
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/MS_Excel/VBA>
+
+    Types: 
+        Framework
+    
+    
+Individual: <http://openenergy-platform.org/ontology/oeo/Spatial(GIS)>
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Accounting
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Active
+
+    Types: 
+        Modus
+    
+    
+Individual: AgentBasedProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: BackCasting
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: BottomUp
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: CPLEX
+
+    Types: 
+        Solver
+    
+    
+Individual: CSV
+
+    Types: 
+        DataFormat
+    
+    
+Individual: Coin-Or_CBC
+
+    Types: 
+        Solver
+    
+    
+Individual: DataFrame
+
+    Types: 
+        DataFormat
+    
+    
+Individual: Dict
+
+    Types: 
+        DataFormat
+    
+    
+Individual: DynamicProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: Econometric
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: EconomicEquilibrium
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: False
+
+    Types: 
+        BooleanVariable
+    
+    
+Individual: Fortran
+
+    Types: 
+        Framework
+    
+    
+Individual: FuzzyLogic
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: GAMS
+
+    Types: 
+        Framework
+    
+    
+Individual: GLPK
+
+    Types: 
+        Solver
+    
+    
+Individual: GNU
+
+    Types: 
+        Framework
+    
+    
+Individual: Gurobi
+
+    Types: 
+        Solver
+    
+    
+Individual: Hybrid
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: Inactive
+
+    Types: 
+        Modus
+    
+    
+Individual: Java
+
+    Types: 
+        Framework
+    
+    
+Individual: LinearProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: MOSEK
+
+    Types: 
+        Solver
+    
+    
+Individual: MS_Excel
+
+    Types: 
+        Framework
+    
+    
+Individual: Macro-Economic
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: MathProg
+
+    Types: 
+        Framework
+    
+    
+Individual: Matlab
+
+    Types: 
+        Framework
+    
+    
+Individual: MixedIntegerLinearProgramming
+
+    Types: 
+        MathematicalConcept
+    
+    
+Individual: Modellca
+
+    Types: 
+        Framework
+    
+    
+Individual: MonteCarlo
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: MultiCriteria
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Optimization
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en
+    
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Other
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: PHP
+
+    Types: 
+        Framework
+    
+    
+Individual: Passive
+
+    Types: 
+        Modus
+    
+    
+Individual: Python
+
+    Types: 
+        Framework
+    
+    
+Individual: R
+
+    Types: 
+        Framework
+    
+    
+Individual: Ruby
+
+    Types: 
+        Framework
+    
+    
+Individual: Simulation
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en
+    
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Spreadsheet
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Stochastic
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: Toolbox
+
+    Types: 
+        MethodicalFocus
+    
+    
+Individual: TopDown
+
+    Types: 
+        AnalyticalApproach
+    
+    
+Individual: True
+
+    Types: 
+        BooleanVariable
+    
+    
+Individual: Txt
+
+    Types: 
+        DataFormat
+    
+    
+Individual: XLSX
+
+    Types: 
+        DataFormat
+    
+    
+Individual: XML
+
+    Types: 
+        DataFormat
+    
+    
+Individual: gdx
+
+    Types: 
+        DataFormat
+    
+    
+DisjointClasses: 
+    Acronym,DOI,Title
+
+DisjointClasses: 
+    LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
+
