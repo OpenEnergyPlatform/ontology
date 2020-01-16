@@ -285,6 +285,15 @@ ObjectProperty: uses
         is_used_by
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste is a disposition of an object aggregate when it has been discarded after primary use."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -1247,7 +1256,7 @@ Class: FossilePowerplant
 Class: Fuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel is an EnergyCarrier that releases energy in form of heat or work, by chemical reaction with other substances."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel is an EnergyCarrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances."
     
     SubClassOf: 
         EnergyCarrier,
@@ -3179,8 +3188,12 @@ Class: Warehouse
 Class: WasteFuel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste (or wastes) are unwanted or unusable materials. Waste is any substance which is discarded after primary use, or is worthless, defective and of no use."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Waste&oldid=903993587"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "WasteFuel is a fuel in which the material entity is waste."@en,
+        rdfs:comment "The energy content of WasteFuel is typically released by incineration or gasification."
+    
+    EquivalentTo: 
+        Fuel
+         and (has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/Waste>)
     
     SubClassOf: 
         Fuel
