@@ -285,6 +285,16 @@ ObjectProperty: uses
         is_used_by
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+
+    EquivalentTo: 
+        EnergyCarrier
+         and (has_origin value renewable)
+    
+    SubClassOf: 
+        EnergyCarrier
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -1335,7 +1345,8 @@ Class: Geothermal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Heat
+        Heat,
+        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: GeothermalGenerator
@@ -1538,7 +1549,9 @@ Class: Hydrogen
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
     
     SubClassOf: 
-        EnergyStorage
+        EnergyStorage,
+        has_disposition some Fuel,
+        has_origin value synthetic
     
     
 Class: HydrogenPowerplant
@@ -2883,7 +2896,8 @@ Class: SolarPower
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Energy
+        Energy,
+        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: SolarPowerPlant
@@ -3243,7 +3257,8 @@ Class: Wind
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        PortionOfAir
+        PortionOfAir,
+        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: WindElectricityGenerator
