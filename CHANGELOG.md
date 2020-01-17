@@ -35,6 +35,7 @@ Here is a template for new release sections
 - RenewableEnergyCarrier (#206)
 
 ### Changed
+- Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
 - Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)
 - FluorinatedGreenhouseGas (#88)
 - agent and subclasses (#51)
