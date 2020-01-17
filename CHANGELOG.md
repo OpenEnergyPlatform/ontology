@@ -32,6 +32,7 @@ Here is a template for new release sections
 - classes for objects that apply to technologies like EnergyGenerator (#128)
 - Grid class (#137)
 - object properties to describe models (#109)
+- RenewableEnergyCarrier (#206)
 
 ### Changed
 - Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)

@@ -287,7 +287,16 @@ ObjectProperty: uses
     InverseOf: 
         is_used_by
     
+
+Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+
+    EquivalentTo: 
+        EnergyCarrier
+         and (has_origin value renewable)
     
+    SubClassOf: 
+        EnergyCarrier
+
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
 
     Annotations: 
@@ -295,7 +304,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
-    
+
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -1338,18 +1347,6 @@ Class: GeographicRegion
         <http://purl.obolibrary.org/obo/BFO_0000006>
     
     
-Class: Geothermal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy available as heat emitted from within the earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites:
-— for electricity generation using dry steam or high enthalpy brine after flashing,
-— directly as heat for district heating, agriculture etc"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Heat
-    
-    
 Class: GeothermalGenerator
 
     Annotations: 
@@ -1358,6 +1355,19 @@ Class: GeothermalGenerator
     SubClassOf: 
         Generator,
         uses some Heat
+    
+    
+Class: GeothermalHeat
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy available as heat emitted from within the earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites:
+— for electricity generation using dry steam or high enthalpy brine after flashing,
+— directly as heat for district heating, agriculture etc"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        Heat,
+        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: GeothermalPowerplant
@@ -1550,7 +1560,9 @@ Class: Hydrogen
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
     
     SubClassOf: 
-        EnergyStorage
+        EnergyStorage,
+        has_disposition some Fuel,
+        has_origin value synthetic
     
     
 Class: HydrogenPowerplant
@@ -2895,7 +2907,8 @@ Class: SolarPower
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        Energy
+        Energy,
+        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: SolarPowerPlant
@@ -2909,18 +2922,6 @@ Class: SolarPowerPlant
         Turbine or (has_part some PVPanel)
     
     
-Class: SolarThermal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
-(a) solar thermal-electric plants; or
-(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        Heat
-    
-    
 Class: SolarThermalCollector
 
     Annotations: 
@@ -2930,7 +2931,19 @@ Class: SolarThermalCollector
     SubClassOf: 
         EnergyGenerator,
         has_physical_output some Power,
-        has_physical_input only SolarThermal
+        has_physical_input only SolarThermalHeat
+    
+    
+Class: SolarThermalHeat
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
+(a) solar thermal-electric plants; or
+(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        Heat
     
     
 Class: SolarThermalHeatGenerator
@@ -3251,17 +3264,6 @@ Class: WavePowerPlant
         uses some Wave
     
     
-Class: Wind
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
-    
-    SubClassOf: 
-        PortionOfAir
-    
-    
 Class: WindElectricityGenerator
 
     Annotations: 
@@ -3299,6 +3301,18 @@ Class: WindOnshore
         has_part some WindTurbine
     
     
+Class: WindPower
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        PortionOfAir,
+        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+    
+    
 Class: WindTurbine
 
     Annotations: 
@@ -3310,8 +3324,8 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        uses some Wind,
-        has_physical_input only Wind
+        uses some WindPower,
+        has_physical_input only WindPower
     
     
 Class: Year
