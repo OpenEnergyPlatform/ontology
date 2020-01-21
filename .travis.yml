@@ -1,0 +1,7 @@
+before_install:
+- wget https://github.com/ontodev/robot/releases/download/v1.5.0/robot.jar
+- curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > robot 
+- chmod u+x robot
+
+script:
+- ./robot verify -i src/ontology/oeo.omn
