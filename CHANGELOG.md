@@ -50,6 +50,7 @@ Here is a template for new release sections
 - technology and subclasses (#128)
 - rename CONTRIBUTE.md CONTRIBUTING.md (#144)
 - individuals without types (#191)
+- import unit-ontology (#215)
 
 
 ### Removed
