@@ -14,6 +14,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+Import: <https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2019-06-07/iao.owl>
 
 Annotations: 
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)",
@@ -152,9 +153,6 @@ ObjectProperty: has_numercical_input
     Domain: 
         Transformation
     
-    Range: 
-        InformationArtifact
-    
     
 ObjectProperty: has_numerical_output
 
@@ -170,9 +168,6 @@ ObjectProperty: has_numerical_output
     
     Domain: 
         Transformation
-    
-    Range: 
-        InformationArtifact
     
     
 ObjectProperty: has_objective
@@ -452,6 +447,24 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000010>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000028>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000100>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000300>
+
+    
 Class: API
 
     SubClassOf: 
@@ -467,7 +480,7 @@ Class: Acronym
         <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is a abbreviation of the title by using the first letters of each part of the title."@en
     
     SubClassOf: 
-        Identifier
+        <http://purl.obolibrary.org/obo/IAO_0000028>
     
     
 Class: AnalyticalApproach
@@ -483,7 +496,7 @@ Class: Assumption
         <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000300>
     
     
 Class: AutoModelGenerator
@@ -498,13 +511,7 @@ Class: BooleanVariable
         <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
     
     SubClassOf: 
-        InformationArtifact
-    
-    
-Class: Citation
-
-    SubClassOf: 
-        Identifier
+        <http://purl.obolibrary.org/obo/IAO_0000028>
     
     
 Class: CitationReference
@@ -554,19 +561,19 @@ Class: Constraint
         <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en
     
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: ContentDescriptor
 
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: CorporateIdentity
 
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: Cost
@@ -582,19 +589,13 @@ Class: DOI
 source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
     
     SubClassOf: 
-        Identifier
-    
-    
-Class: Data
-
-    SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000028>
     
     
 Class: DataDescriptor
 
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: DataFormat
@@ -627,27 +628,13 @@ Class: DataProcessing
 Class: DataProcessingSoftware
 
     SubClassOf: 
-        Software
+        <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
 Class: Database
 
     SubClassOf: 
         DataFormat
-    
-    DisjointWith: 
-        Plot
-    
-    
-Class: Dataset
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "A list of power plants.
-The measurement series of an expiriment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A dataset is a collection of information artifacts of the same type about a common topic."@en
-    
-    SubClassOf: 
-        InformationArtifact
     
     
 Class: Documentation
@@ -675,7 +662,7 @@ Class: EmpiricalDataset
         <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en
     
     SubClassOf: 
-        Dataset
+        <http://purl.obolibrary.org/obo/IAO_0000100>
     
     DisjointWith: 
         SynthethicDataset
@@ -684,7 +671,7 @@ Class: EmpiricalDataset
 Class: ExternalOptimizer
 
     SubClassOf: 
-        Software
+        <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
 Class: Factsheet
@@ -744,24 +731,6 @@ Class: GridModel
         SoftwareElement
     
     
-Class: Identifier
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An Identifier is an information artifact used to identify an entity."@en
-    
-    SubClassOf: 
-        InformationArtifact
-    
-    
-Class: InformationArtifact
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An information artifact is an entity that contains information about some thing in digital or written form."@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
 Class: InstallationGuide
 
     SubClassOf: 
@@ -796,12 +765,6 @@ Class: Logo
 
     SubClassOf: 
         CorporateIdentity
-    
-    
-Class: Mail
-
-    SubClassOf: 
-        Support
     
     
 Class: MarketModel
@@ -872,8 +835,7 @@ Class: ModelElement
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
     
     SubClassOf: 
-        InformationArtifact,
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
         part_of some Model
     
     
@@ -911,19 +873,13 @@ Class: ModelVariable
 Class: ModelingSoftware
 
     SubClassOf: 
-        Software
+        <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
 Class: Modus
 
     SubClassOf: 
-        InformationArtifact
-    
-    
-Class: Name
-
-    SubClassOf: 
-        Identifier
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: ObjectiveFunction
@@ -960,15 +916,6 @@ Class: OptimizationModel
     
     SubClassOf: 
         Model
-    
-    
-Class: Plot
-
-    SubClassOf: 
-        DataFormat
-    
-    DisjointWith: 
-        Database
     
     
 Class: Plotting
@@ -1044,16 +991,10 @@ Class: Public
         Funding
     
     
-Class: Quality
-
-    SubClassOf: 
-        SoftwareDescriptor
-    
-    
 Class: Reference
 
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: Robustness
@@ -1111,19 +1052,10 @@ Class: Social
         Type
     
     
-Class: Software
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A collection of information artifacts that tell a computer how to work."@en
-    
-    SubClassOf: 
-        InformationArtifact
-    
-    
 Class: SoftwareDescriptor
 
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: SoftwareElement
@@ -1132,13 +1064,13 @@ Class: SoftwareElement
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
     
     SubClassOf: 
-        Software
+        <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
 Class: SoftwareMaintenance
 
     SubClassOf: 
-        InformationArtifact
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: Solver
@@ -1166,7 +1098,7 @@ Class: SynthethicDataset
         <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
     
     SubClassOf: 
-        Dataset
+        <http://purl.obolibrary.org/obo/IAO_0000100>
     
     DisjointWith: 
         EmpiricalDataset
@@ -1181,7 +1113,7 @@ Class: Technical
 Class: TestDataset
 
     SubClassOf: 
-        Dataset
+        <http://purl.obolibrary.org/obo/IAO_0000100>
     
     
 Class: TimeHorizon
@@ -1200,15 +1132,6 @@ Class: TimeStep
 
     SubClassOf: 
         ModelVariable
-    
-    
-Class: Title
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A titel is a name for a information artifact."@en
-    
-    SubClassOf: 
-        Identifier
     
     
 Class: Transformation
@@ -1592,9 +1515,6 @@ Individual: gdx
         DataFormat
     
     
-DisjointClasses: 
-    Acronym,DOI,Title
-
 DisjointClasses: 
     LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
 
