@@ -65,6 +65,15 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
+
+    
 ObjectProperty: applies_technology
 
     Annotations: 
@@ -98,15 +107,6 @@ ObjectProperty: covers_energycarrier
         EnergyCarrier
     
     
-ObjectProperty: has_disposition
-
-    
-ObjectProperty: has_function
-
-    SubPropertyOf: 
-        has_disposition
-    
-    
 ObjectProperty: has_globalwarmingpotential
 
     SubPropertyOf: 
@@ -118,9 +118,6 @@ ObjectProperty: has_globalwarmingpotential
     Range: 
         GlobalWarmingPotential
     
-    
-ObjectProperty: has_input
-
     
 ObjectProperty: has_normal_state_of_matter
 
@@ -140,22 +137,13 @@ ObjectProperty: has_origin
         has_quality
     
     
-ObjectProperty: has_output
-
-    SubPropertyOf: 
-        has_participant
-    
-    
-ObjectProperty: has_participant
-
-    
 ObjectProperty: has_physical_input
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     Characteristics: 
         Functional,
@@ -166,7 +154,7 @@ ObjectProperty: has_physical_input
         EnergyGeneratorTechnology
     
     Range: 
-        has_disposition some EnergyCarrier
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
     
     
 ObjectProperty: has_physical_output
@@ -175,7 +163,7 @@ ObjectProperty: has_physical_output
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
     
     SubPropertyOf: 
-        has_output
+        <http://purl.obolibrary.org/obo/RO_0002234>
     
     
 ObjectProperty: has_pollutant
@@ -1103,7 +1091,7 @@ Class: EnergyGeneratorTechnology
     
     SubClassOf: 
         Technology,
-        has_physical_input some (has_disposition some <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>),
+        has_physical_input some (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier),
         has_physical_output some Power
     
     
@@ -1219,7 +1207,7 @@ There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur
     
     SubClassOf: 
         GreenhouseGas,
-        has_disposition some GreenhouseGas
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
     
     
 Class: FossilGenerator
@@ -1256,7 +1244,7 @@ Class: Fuel
     
     SubClassOf: 
         EnergyCarrier,
-        has_disposition some EnergyCarrier
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
     
     
 Class: Fusion
@@ -1351,7 +1339,7 @@ Class: GeothermalHeat
     
     SubClassOf: 
         Heat,
-        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: GeothermalPowerplant
@@ -1545,7 +1533,7 @@ Class: Hydrogen
     
     SubClassOf: 
         EnergyStorage,
-        has_disposition some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
         has_origin value synthetic
     
     
@@ -2108,8 +2096,8 @@ Class: PortionOfAir
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some <http://www.semanticweb.org/izzet_kilicarslan/ontologies/2019/9/untitled-ontology-10#EnergyCarrier>,
-        is_used_by some StorageUnit
+        is_used_by some StorageUnit,
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
     
     
 Class: PortionOfAnthracite
@@ -2150,13 +2138,13 @@ Class: PortionOfBiodiesel
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some LiquidBiofuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some LiquidBiofuel
     
     
 Class: PortionOfBiofuel
 
     EquivalentTo: 
-        has_disposition some Biofuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some Biofuel
     
     SubClassOf: 
         PortionOfFuel,
@@ -2172,7 +2160,7 @@ Class: PortionOfBiogas
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some Biofuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some Biofuel
     
     
 Class: PortionOfBiogasoline
@@ -2185,7 +2173,7 @@ Class: PortionOfBiogasoline
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some LiquidBiofuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some LiquidBiofuel
     
     
 Class: PortionOfBlastFurnaceGas
@@ -2216,7 +2204,7 @@ Class: PortionOfCoal
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some SolidFossilFuels,
+        <http://purl.obolibrary.org/obo/RO_0000091> some SolidFossilFuels,
         has_normal_state_of_matter value solid,
         has_origin value fossil
     
@@ -2296,7 +2284,7 @@ Class: PortionOfDieselFuel
 Class: PortionOfFuel
 
     EquivalentTo: 
-        has_disposition some Fuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel
     
     SubClassOf: 
         PortionOfMatter
@@ -2424,7 +2412,7 @@ Class: PortionOfLiquidAir
 Class: PortionOfLiquidBiofuel
 
     EquivalentTo: 
-        has_disposition some LiquidBiofuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some LiquidBiofuel
     
     SubClassOf: 
         PortionOfBiofuel,
@@ -2441,7 +2429,7 @@ Class: PortionOfManufacturedCoalBasedGas
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some SolidFossilFuels,
+        <http://purl.obolibrary.org/obo/RO_0000091> some SolidFossilFuels,
         has_normal_state_of_matter value gaseous,
         has_origin value fossil
     
@@ -2470,7 +2458,7 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
 Class: PortionOfMunicipalWasteFuel
 
     EquivalentTo: 
-        has_disposition some MunicipalWasteFuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some MunicipalWasteFuel
     
     SubClassOf: 
         PortionOfWasteFuel
@@ -2488,7 +2476,7 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
         has_normal_state_of_matter value gaseous,
         has_origin value fossil
     
@@ -2506,7 +2494,7 @@ Class: PortionOfNonAssociatedGas
 Class: PortionOfNonRenewableMunicipalWasteFuel
 
     EquivalentTo: 
-        has_disposition some NonRenewableMunicipalWasteFuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some NonRenewableMunicipalWasteFuel
     
     SubClassOf: 
         PortionOfMunicipalWasteFuel,
@@ -2529,7 +2517,7 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
         has_origin value fossil
     
     
@@ -2543,7 +2531,7 @@ This definition is without prejudice to the definition of renewable energy sourc
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some SolidFossilFuels,
+        <http://purl.obolibrary.org/obo/RO_0000091> some SolidFossilFuels,
         has_normal_state_of_matter value solid
     
     
@@ -2561,7 +2549,7 @@ Class: PortionOfPumpedWater
 Class: PortionOfRenewableMunicipalWasteFuel
 
     EquivalentTo: 
-        has_disposition some RenewableMunicipalWasteFuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some RenewableMunicipalWasteFuel
     
     SubClassOf: 
         PortionOfMunicipalWasteFuel,
@@ -2579,7 +2567,7 @@ Class: PortionOfSolidBiomass
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some Biofuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some Biofuel,
         has_normal_state_of_matter value solid,
         has_origin value biogenic,
         has_origin value renewable
@@ -2588,7 +2576,7 @@ Class: PortionOfSolidBiomass
 Class: PortionOfSolidFossilFuel
 
     EquivalentTo: 
-        has_disposition some SolidFossilFuels
+        <http://purl.obolibrary.org/obo/RO_0000091> some SolidFossilFuels
     
     SubClassOf: 
         PortionOfFuel,
@@ -2608,7 +2596,7 @@ Class: PortionOfSubBituminousCoal
 Class: PortionOfWasteFuel
 
     EquivalentTo: 
-        has_disposition some WasteFuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some WasteFuel
     
     SubClassOf: 
         PortionOfFuel
@@ -2622,7 +2610,7 @@ Class: PortionOfWater
     
     SubClassOf: 
         PortionOfMatter,
-        has_disposition some EnergyCarrier
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
     
     
 Class: PortionOfWoodAndOther
@@ -2892,7 +2880,7 @@ Class: SolarPower
     
     SubClassOf: 
         Energy,
-        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: SolarPowerPlant
@@ -3272,7 +3260,7 @@ Class: WindOffshore
 
     SubClassOf: 
         WindTurbine,
-        has_input some Sea
+        <http://purl.obolibrary.org/obo/RO_0002233> some Sea
     
     
 Class: WindOnshore
@@ -3294,7 +3282,7 @@ Class: WindPower
     
     SubClassOf: 
         PortionOfAir,
-        has_disposition some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: WindTurbine
