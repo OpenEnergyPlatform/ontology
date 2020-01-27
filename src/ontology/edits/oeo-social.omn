@@ -13,6 +13,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-social/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-social/>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -53,6 +54,9 @@ AnnotationProperty: rdfs:label
 
     
 Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
 ObjectProperty: conforms_to
@@ -142,9 +146,6 @@ ObjectProperty: has_institution
         has_participant,
         owl:topObjectProperty
     
-    
-ObjectProperty: has_part
-
     
 ObjectProperty: has_participant
 
@@ -352,7 +353,7 @@ Class: Organization
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some Person
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Person
     
     DisjointWith: 
         Person

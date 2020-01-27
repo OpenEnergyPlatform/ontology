@@ -13,6 +13,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-physical/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-physical/>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -56,6 +57,12 @@ Datatype: rdf:PlainLiteral
 
     
 ObjectProperty: <http://openenergy-platform.org/ontology/oeo-physical/has_role>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
 ObjectProperty: applies_technology
@@ -137,18 +144,6 @@ ObjectProperty: has_output
 
     SubPropertyOf: 
         has_participant
-    
-    
-ObjectProperty: has_part
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a whole and its part."@en
-    
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    InverseOf: 
-        part_of
     
     
 ObjectProperty: has_participant
@@ -267,18 +262,6 @@ ObjectProperty: is_used_by
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: part_of
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a part and the whole it belongs to."@en
-    
-    Characteristics: 
-        Transitive
-    
-    InverseOf: 
-        has_part
-    
-    
 ObjectProperty: uses
 
     SubPropertyOf: 
@@ -287,7 +270,7 @@ ObjectProperty: uses
     InverseOf: 
         is_used_by
     
-
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
 
     EquivalentTo: 
@@ -296,7 +279,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarr
     
     SubClassOf: 
         EnergyCarrier
-
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
 
     Annotations: 
@@ -304,7 +288,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
-
+    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -744,7 +728,7 @@ Class: BiomassPowerplant
     
     SubClassOf: 
         RegenerativePowerplant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: Bus
@@ -810,7 +794,7 @@ Class: CoalPowerplant
     
     SubClassOf: 
         FossilePowerplant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: Combustion
@@ -998,7 +982,7 @@ Class: ElectricityGrid
     
     SubClassOf: 
         Grid,
-        has_part some ElectricityGridComponent
+        <http://purl.obolibrary.org/obo/BFO_0000051> some ElectricityGridComponent
     
     
 Class: ElectricityGridComponent
@@ -1008,7 +992,7 @@ Class: ElectricityGridComponent
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        part_of some ElectricityGrid
+        <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
 Class: ElectricityProductionUnit
@@ -1293,7 +1277,7 @@ Class: GasPowerplant
     
     SubClassOf: 
         FossilePowerplant,
-        has_part some GasTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some GasTurbine
     
     
 Class: GasTurbine
@@ -1377,7 +1361,7 @@ Class: GeothermalPowerplant
     
     SubClassOf: 
         RegenerativePowerplant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: GlobalWarmingPotential
@@ -1527,7 +1511,7 @@ Class: HydroelectricPowerplant
     
     SubClassOf: 
         PowerGeneratingUnit,
-        has_part some WaterTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some WaterTurbine
     
     
 Class: Hydroelectricity
@@ -1572,7 +1556,7 @@ Class: HydrogenPowerplant
     
     SubClassOf: 
         ReactivePowerplant,
-        has_part some HydrogenTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some HydrogenTurbine
     
     
 Class: HydrogenTurbine
@@ -1952,7 +1936,7 @@ Class: NuclearPowerplant
     
     SubClassOf: 
         ReactivePowerplant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: Ocean
@@ -2001,7 +1985,7 @@ Class: OilPowerplant
 
     SubClassOf: 
         FossilePowerplant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: OnShoreWindElectricityGenerator
@@ -2097,7 +2081,7 @@ Class: PhotovoltaicPowerplant
     
     SubClassOf: 
         SolarPowerPlant,
-        has_part some PVPanel
+        <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
     
     
 Class: PlantOperation
@@ -2746,14 +2730,14 @@ Class: ReactivePowerplant
 
     SubClassOf: 
         PowerGeneratingUnit,
-        has_part some Turbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
     
     
 Class: RegenerativePowerplant
 
     SubClassOf: 
         PowerGeneratingUnit,
-        has_part some WindTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
 Class: RenewableGenerator
@@ -2919,7 +2903,7 @@ Class: SolarPowerPlant
     
     SubClassOf: 
         PowerGeneratingUnit,
-        Turbine or (has_part some PVPanel)
+        Turbine or (<http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel)
     
     
 Class: SolarThermalCollector
@@ -2962,7 +2946,7 @@ Class: SolarThermalPowerplant
     
     SubClassOf: 
         SolarPowerPlant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: SolidFossilFuels
@@ -3000,8 +2984,8 @@ Class: StorageUnit
     
     SubClassOf: 
         ElectricityGridComponent,
-        part_of some ElectricityGrid,
-        uses some EnergyStorageTechnology
+        uses some EnergyStorageTechnology,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
 Class: Subgrid
@@ -3011,8 +2995,8 @@ Class: Subgrid
     
     SubClassOf: 
         ElectricityGrid,
-        has_part some ElectricityGridComponent,
-        part_of some ElectricityGrid
+        <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some ElectricityGridComponent
     
     
 Class: SuperconductingMagneticEnergy
@@ -3223,7 +3207,7 @@ Class: WastePowerplant
     
     SubClassOf: 
         FossilePowerplant,
-        has_part some SteamTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: WaterElectricityGenerator
@@ -3281,7 +3265,7 @@ Class: WindFarm
     
     SubClassOf: 
         RegenerativePowerplant,
-        has_part some WindTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
 Class: WindOffshore
@@ -3298,7 +3282,7 @@ Class: WindOnshore
     
     SubClassOf: 
         RegenerativePowerplant,
-        has_part some WindTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
 Class: WindPower

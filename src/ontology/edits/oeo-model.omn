@@ -13,6 +13,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -53,6 +54,12 @@ AnnotationProperty: rdfs:label
 
     
 Datatype: rdf:PlainLiteral
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 
     
 ObjectProperty: conforms_to
@@ -103,7 +110,7 @@ ObjectProperty: has_constraint
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
     
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 ObjectProperty: has_contact
@@ -111,12 +118,6 @@ ObjectProperty: has_contact
     
 ObjectProperty: has_funding_source
 
-    
-ObjectProperty: has_input
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
-    
     
 ObjectProperty: has_license
 
@@ -143,7 +144,7 @@ ObjectProperty: has_numercical_input
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     Characteristics: 
         Irreflexive,
@@ -338,12 +339,6 @@ ObjectProperty: makes_assumption
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: part_of
-
-    Characteristics: 
-        Transitive
-    
-    
 ObjectProperty: references
 
     SubPropertyOf: 
@@ -398,13 +393,13 @@ ObjectProperty: uses_software_modelling
 ObjectProperty: utilizes_dataset
 
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 ObjectProperty: utilizes_program_parameter
 
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -874,7 +869,7 @@ Class: ModelElement
     SubClassOf: 
         InformationArtifact,
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        part_of some Model
+        <http://purl.obolibrary.org/obo/BFO_0000050> some Model
     
     
 Class: ModelExamples
