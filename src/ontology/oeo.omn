@@ -73,6 +73,18 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
+
+    
 ObjectProperty: appliesTo
 
     
@@ -81,6 +93,9 @@ ObjectProperty: comparesTo
     
 ObjectProperty: conforms_to
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: considers_User_behaviour_and_demand
 
@@ -124,9 +139,6 @@ ObjectProperty: covers_timeframe
         covers
     
     
-ObjectProperty: depends_on
-
-    
 ObjectProperty: distributes
 
     SubPropertyOf: 
@@ -145,14 +157,11 @@ ObjectProperty: further_reference_properties
         owl:topObjectProperty
     
     
-ObjectProperty: g_depends_on
-
-    SubPropertyOf: 
-        depends_on
-    
-    
 ObjectProperty: generates_dataset
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
     
 ObjectProperty: handles_uncertainty
 
@@ -180,36 +189,63 @@ ObjectProperty: has_Percentage
     
 ObjectProperty: has_approach_to_uncertainty
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051>
+    
     
 ObjectProperty: has_author
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: has_client
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: has_constraint
 
     
 ObjectProperty: has_contact
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: has_documentation
 
     
 ObjectProperty: has_funding_source
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
-ObjectProperty: has_input
-
     
 ObjectProperty: has_institution
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: has_license
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    
+ObjectProperty: has_logo
+
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051>
+    
     
 ObjectProperty: has_mathematical_objective
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051>
+    
     
 ObjectProperty: has_methodical_Focus
 
@@ -229,6 +265,9 @@ ObjectProperty: has_numercical_input
     
 ObjectProperty: has_numerical_output
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
     Characteristics: 
         Irreflexive,
         Asymmetric
@@ -237,17 +276,11 @@ ObjectProperty: has_numerical_output
 ObjectProperty: has_origin
 
     
-ObjectProperty: has_output
-
-    
-ObjectProperty: has_part
-
-    
-ObjectProperty: has_participant
-
-    
 ObjectProperty: has_physical_input
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
     Characteristics: 
         Functional,
         Irreflexive,
@@ -256,6 +289,9 @@ ObjectProperty: has_physical_input
     
 ObjectProperty: has_physical_output
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
     Characteristics: 
         Irreflexive,
         Asymmetric
@@ -266,14 +302,14 @@ ObjectProperty: has_pollutant
     
 ObjectProperty: has_programvariable
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: has_quality
 
     
 ObjectProperty: has_resolution
-
-    
-ObjectProperty: has_role
 
     
 ObjectProperty: has_sink
@@ -300,7 +336,7 @@ ObjectProperty: has_subregion
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a region and a smaller region within."@en
     
     SubPropertyOf: 
-        has_part
+        <http://purl.obolibrary.org/obo/BFO_0000051>
     
     
 ObjectProperty: has_temporal_resolution
@@ -308,6 +344,9 @@ ObjectProperty: has_temporal_resolution
     
 ObjectProperty: has_tool
 
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
     
 ObjectProperty: isEqual
 
@@ -332,18 +371,6 @@ ObjectProperty: is_used_by
     
 ObjectProperty: owl:topObjectProperty
 
-    
-ObjectProperty: part_of
-
-    Characteristics: 
-        Transitive
-    
-    
-ObjectProperty: s_depends_on
-
-    SubPropertyOf: 
-        depends_on
-    
     
 ObjectProperty: suited_for_many_scenarios
 
@@ -425,9 +452,4 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
-    
-
-    
-
-    
     
