@@ -14,6 +14,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
 Import: <http://open-energy-ontology.org/ontology/imports/iao-module.owl>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -56,10 +57,25 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
+
+    
 ObjectProperty: conforms_to
 
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     
 ObjectProperty: data_provided
@@ -71,7 +87,7 @@ ObjectProperty: data_provided
 ObjectProperty: generates_dataset
 
     SubPropertyOf: 
-        has_output
+        <http://purl.obolibrary.org/obo/RO_0002234>
     
     
 ObjectProperty: hasNumeral
@@ -83,7 +99,7 @@ ObjectProperty: hasUnitofMeasurement
 ObjectProperty: has_approach_to_uncertainty
 
     SubPropertyOf: 
-        has_part
+        <http://purl.obolibrary.org/obo/BFO_0000051>
     
     
 ObjectProperty: has_author
@@ -104,7 +120,7 @@ ObjectProperty: has_constraint
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
     
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 ObjectProperty: has_contact
@@ -113,29 +129,23 @@ ObjectProperty: has_contact
 ObjectProperty: has_funding_source
 
     
-ObjectProperty: has_input
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
-    
-    
 ObjectProperty: has_license
 
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     
 ObjectProperty: has_logo
 
     SubPropertyOf: 
-        has_part,
-        is_referenced_by
+        is_referenced_by,
+        <http://purl.obolibrary.org/obo/BFO_0000051>
     
     
 ObjectProperty: has_mathematical_objective
 
     SubPropertyOf: 
-        has_part
+        <http://purl.obolibrary.org/obo/BFO_0000051>
     
     
 ObjectProperty: has_numercical_input
@@ -144,7 +154,7 @@ ObjectProperty: has_numercical_input
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
     
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     Characteristics: 
         Irreflexive,
@@ -160,7 +170,7 @@ ObjectProperty: has_numerical_output
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
     
     SubPropertyOf: 
-        has_output
+        <http://purl.obolibrary.org/obo/RO_0002234>
     
     Characteristics: 
         Irreflexive,
@@ -200,28 +210,13 @@ ObjectProperty: has_objectivevariable
         has_objective
     
     
-ObjectProperty: has_output
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
-    
-    SubPropertyOf: 
-        has_participant
-    
-    
-ObjectProperty: has_part
-
-    
-ObjectProperty: has_participant
-
-    
 ObjectProperty: has_physical_output
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
     
     SubPropertyOf: 
-        has_output
+        <http://purl.obolibrary.org/obo/RO_0002234>
     
     Characteristics: 
         Irreflexive,
@@ -234,7 +229,7 @@ ObjectProperty: has_programvariable
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     
 ObjectProperty: has_resolution
@@ -273,7 +268,7 @@ ObjectProperty: has_tool
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     Domain: 
         ModelCalculation
@@ -333,12 +328,6 @@ ObjectProperty: makes_assumption
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: part_of
-
-    Characteristics: 
-        Transitive
-    
-    
 ObjectProperty: references
 
     SubPropertyOf: 
@@ -393,13 +382,13 @@ ObjectProperty: uses_software_modelling
 ObjectProperty: utilizes_dataset
 
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 ObjectProperty: utilizes_program_parameter
 
     SubPropertyOf: 
-        has_input
+        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -804,7 +793,7 @@ Class: Model
     
     SubClassOf: 
         ModelingSoftware,
-        has_part some SoftwareElement
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SoftwareElement
     
     
 Class: ModelCalculation
@@ -836,7 +825,8 @@ Class: ModelElement
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
-        part_of some Model
+        <http://purl.obolibrary.org/obo/BFO_0000050> some Model
+
     
     
 Class: ModelExamples

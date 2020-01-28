@@ -51,6 +51,7 @@ Here is a template for new release sections
 - rename CONTRIBUTE.md CONTRIBUTING.md (#144)
 - individuals without types (#191)
 - import unit-ontology (#215)
+- import ro-ontology replacing some of our relations (#216)
 
 
 ### Removed

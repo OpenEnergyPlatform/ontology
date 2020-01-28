@@ -13,6 +13,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-social/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-social/>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -55,6 +56,12 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
 ObjectProperty: conforms_to
 
     Domain: 
@@ -85,7 +92,7 @@ ObjectProperty: has_author
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     Range: 
         Agent
@@ -97,7 +104,7 @@ ObjectProperty: has_client
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     Range: 
         Agent
@@ -109,7 +116,7 @@ ObjectProperty: has_contact
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     
 ObjectProperty: has_funding_source
@@ -118,7 +125,7 @@ ObjectProperty: has_funding_source
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
     
     SubPropertyOf: 
-        has_participant
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
     Range: 
         Agent
@@ -130,21 +137,8 @@ ObjectProperty: has_institution
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
     
     SubPropertyOf: 
-        has_participant,
-        owl:topObjectProperty
+        <http://purl.obolibrary.org/obo/RO_0000057>
     
-    
-ObjectProperty: has_part
-
-    
-ObjectProperty: has_participant
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: has_role
-
     
 ObjectProperty: owl:topObjectProperty
 
@@ -343,7 +337,7 @@ Class: Organization
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        has_part some Person
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Person
     
     DisjointWith: 
         Person
