@@ -51,7 +51,9 @@ Here is a template for new release sections
 - rename CONTRIBUTE.md CONTRIBUTING.md (#144)
 - individuals without types (#191)
 - import unit-ontology (#215)
-- import ro-ontology replacing some of our relations (#216)
+- import ro-ontology module replacing some of our relations (#216)
+- replace InformationArtifact with information content entity from imported iao-ontology module (#223)
+- unify -Energy and -Power classes (#225)
 
 
 ### Removed
