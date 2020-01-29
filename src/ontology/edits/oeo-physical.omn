@@ -288,6 +288,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
         <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wind is a process of air naturally moving."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -1215,7 +1224,7 @@ Class: HeatPumpHeatGenerator
         HeatGenerator
     
     
-Class: HydroPower
+Class: HydroEnergy
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydropower or water power [...] is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes."@en,
@@ -1248,7 +1257,7 @@ Class: Hydroelectricity
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
     
     SubClassOf: 
-        HydroPower
+        HydroEnergy
     
     
 Class: Hydrofluorocarbon
@@ -1607,16 +1616,7 @@ Class: NonRenewableMunicipalWasteFuel
         has_origin value fossil
     
     
-Class: NuclearEnergyProduction
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "ways to produce energy through the use of nuclear power"
-    
-    SubClassOf: 
-        EnergyProduction
-    
-    
-Class: NuclearPower
+Class: NuclearEnergy
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear power is the use of nuclear reactions that release nuclear energy to generate heat, which most frequently is then used in steam turbines to produce electricity in a nuclear power plant. Nuclear power can be obtained from nuclear fission, nuclear decay and nuclear fusion. Presently, the vast majority of electricity from nuclear power is produced by nuclear fission of elements in the actinide series of the periodic table. Nuclear decay processes are used in niche applications such as radioisotope thermoelectric generators. The possibility of generating electricity from nuclear fusion is still at a research phase with no commercial applications. This article mostly deals with nuclear fission power for electricity generation."@en,
@@ -1624,6 +1624,15 @@ Class: NuclearPower
     
     SubClassOf: 
         Energy
+    
+    
+Class: NuclearEnergyProduction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "ways to produce energy through the use of nuclear power"
+    
+    SubClassOf: 
+        EnergyProduction
     
     
 Class: NuclearPowerGenerator
@@ -1778,7 +1787,7 @@ Class: PhotovoltaicGenerator
 
     SubClassOf: 
         Generator,
-        uses some SolarPower
+        uses some SolarEnergy
     
     
 Class: PhotovoltaicPowerplant
@@ -2563,17 +2572,7 @@ Class: Sodium-SulfurBattery
         MoltenStateBattery
     
     
-Class: SolarPhotovoltaic
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
-    
-    SubClassOf: 
-        EnergyProduction
-    
-    
-Class: SolarPower
+Class: SolarEnergy
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
@@ -2582,6 +2581,16 @@ Class: SolarPower
     SubClassOf: 
         Energy,
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+    
+    
+Class: SolarPhotovoltaic
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
+    
+    SubClassOf: 
+        EnergyProduction
     
     
 Class: SolarPowerPlant
@@ -2889,7 +2898,7 @@ Class: WaterTurbine
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        has_physical_input only HydroPower
+        has_physical_input only HydroEnergy
     
     
 Class: Wave
@@ -2916,6 +2925,19 @@ Class: WindElectricityGenerator
     
     SubClassOf: 
         RenewableGenerator
+    
+    
+Class: WindEnergy
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
+    
+    SubClassOf: 
+        Energy,
+        uses some <http://openenergy-platform.org/ontology/oeo-physical/Wind>,
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
     
     
 Class: WindFarm
@@ -2946,18 +2968,6 @@ Class: WindOnshore
         <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
-Class: WindPower
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"
-    
-    SubClassOf: 
-        PortionOfAir,
-        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
-    
-    
 Class: WindTurbine
 
     Annotations: 
@@ -2969,8 +2979,8 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        uses some WindPower,
-        has_physical_input only WindPower
+        uses some WindEnergy,
+        has_physical_input only WindEnergy
     
     
 Class: Year
