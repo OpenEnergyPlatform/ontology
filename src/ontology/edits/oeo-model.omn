@@ -500,7 +500,7 @@ Class: BooleanVariable
         <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
+        Variable
     
     
 Class: CitationReference
@@ -568,7 +568,7 @@ Class: CorporateIdentity
 Class: Cost
 
     SubClassOf: 
-        ModelVariable
+        Variable
     
     
 Class: DOI
@@ -765,7 +765,7 @@ Class: MarketModel
 Class: MathematicalConcept
 
     SubClassOf: 
-        ModelElement
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: Maximization
@@ -809,24 +809,7 @@ Class: ModelCalculation
 Class: ModelComponent
 
     SubClassOf: 
-        ModelElement
-    
-    
-Class: ModelConstraint
-
-    SubClassOf: 
-        ModelComponent
-    
-    
-Class: ModelElement
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model element is an elementary model component."@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some Model
-
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: ModelExamples
@@ -851,15 +834,6 @@ Class: ModelFunction
         Model
     
     
-Class: ModelVariable
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model variable is a variable inside a model."@en
-    
-    SubClassOf: 
-        ModelElement
-    
-    
 Class: ModelingSoftware
 
     SubClassOf: 
@@ -875,7 +849,7 @@ Class: Modus
 Class: ObjectiveFunction
 
     SubClassOf: 
-        ModelElement
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: OpenSource
@@ -966,7 +940,7 @@ Class: ProgramParameter
         <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en
     
     SubClassOf: 
-        ModelElement
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: Project
@@ -1109,19 +1083,19 @@ Class: TestDataset
 Class: TimeHorizon
 
     SubClassOf: 
-        ModelVariable
+        Variable
     
     
 Class: TimeSeries
 
     SubClassOf: 
-        ModelVariable
+        Variable
     
     
 Class: TimeStep
 
     SubClassOf: 
-        ModelVariable
+        Variable
     
     
 Class: Transformation
@@ -1160,7 +1134,16 @@ Class: UserDocumentation
 Class: Validation
 
     SubClassOf: 
-        ModelElement
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: Variable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Variable is an InformationArtifact that represents a changable value, vector, matrix or function within a mathematical expression."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: VariableOperationCost
