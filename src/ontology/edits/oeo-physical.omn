@@ -30,6 +30,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
@@ -906,7 +909,7 @@ Class: FieldPhotovoltaicGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
     
     SubClassOf: 
-        PhotovoltaicElectricityGenerator
+        PhotovoltaicGenerator
     
     DisjointWith: 
         RooftopPhotovoltaicGenerator
@@ -1730,18 +1733,6 @@ Class: PFC
         has_origin value fossil
     
     
-Class: PVPanel
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "hotovoltaic solar panels absorb sunlight as a source of energy to generate electricity. A photovoltaic (PV) module is a packaged, connected assembly of typically 6x10 photovoltaic solar cells. Photovoltaic modules constitute the photovoltaic array of a photovoltaic system that generates and supplies solar electricity in commercial and residential applications."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_panel&oldid=906976047"@en
-    
-    SubClassOf: 
-        EnergyGeneratorTechnology,
-        has_physical_output some Power,
-        has_physical_input only SolarPhotovoltaic
-    
-    
 Class: ParticulateMatter
 
     Annotations: 
@@ -1774,17 +1765,12 @@ Class: Perfluorocarbon
         FluorinatedGreenhouseGas
     
     
-Class: PhotovoltaicElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
-    
-    SubClassOf: 
-        RenewableGeneratorTechnology
-    
-    
 Class: PhotovoltaicGenerator
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator is an energy generator that uses power from the sun to generate electricity.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PVPanel"
+    
     SubClassOf: 
         Generator,
         uses some SolarEnergy
@@ -1796,8 +1782,7 @@ Class: PhotovoltaicPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
     
     SubClassOf: 
-        SolarPowerPlant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
+        SolarPowerPlant
     
     
 Class: PlantOperation
@@ -2507,7 +2492,7 @@ Class: RooftopPhotovoltaicGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity generator is a photovoltaic electricity generator that is installed on top of the roof of a building."@en
     
     SubClassOf: 
-        PhotovoltaicElectricityGenerator
+        PhotovoltaicGenerator
     
     DisjointWith: 
         FieldPhotovoltaicGenerator
@@ -2600,8 +2585,7 @@ Class: SolarPowerPlant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_power&oldid=904827092"@en
     
     SubClassOf: 
-        PowerGeneratingUnit,
-        Turbine or (<http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel)
+        PowerGeneratingUnit
     
     
 Class: SolarThermalCollector
@@ -3253,9 +3237,6 @@ Individual: synthetic
         has_origin some origin
     
     
-DisjointClasses: 
-    BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
-
 DisjointClasses: 
     BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
 
