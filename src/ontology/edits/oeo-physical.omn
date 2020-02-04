@@ -30,6 +30,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
@@ -267,6 +270,61 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
     
     SubClassOf: 
         Energy
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfCarbonDioxide>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It is a gas that occurs naturally in the atmosphere as a trace gas and it is a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfMethane>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It is a gas that occurs naturally in the atmosphere as a trace gas and it is a greenhouse gas. As it can be oxidised it is a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CH4"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrogenTrifluoride>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen trifluoride is a portion of matter with the chemical formula NF3. It is a potent greenhouse gas from anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NF3"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrousOxide>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrous oxide is a portion of matter with the chemical formula N2O. It is a gas that occurs naturally in the atmosphere as a trace gas and it is a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "N2O"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfSulphurHexafluoride>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It is a potent greenhouse gas from anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SF6"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
@@ -954,8 +1012,7 @@ There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur
         <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        GreenhouseGas,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+        GreenhouseGas
     
     
 Class: FossilGenerator
@@ -1138,19 +1195,6 @@ Class: Grid
         <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
-Class: HFC
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
-    
-    EquivalentTo: 
-        Hydrofluorocarbon
-    
-    SubClassOf: 
-        FluorinatedGreenhouseGas
-    
-    
 Class: HardCoalPowerplant
 
     Annotations: 
@@ -1266,11 +1310,9 @@ Class: Hydrofluorocarbon
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
     
-    EquivalentTo: 
-        HFC
-    
     SubClassOf: 
-        FluorinatedGreenhouseGas
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGas
     
     
 Class: Hydrogen
@@ -1716,20 +1758,6 @@ Class: OnShoreWindElectricityGenerator
         OffShoreWindElectricityGenerator
     
     
-Class: PFC
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorocarbons, sometimes referred to as perfluorocarbons or PFCs, are, strictly speaking, organofluorine compounds with the formula CxFy, i.e. they contain only carbon and fluorine, though the terminology is not strictly followed. Compounds with the prefix perfluoro- are hydrocarbons, including those with heteroatoms, wherein all C-H bonds have been replaced by C-F bonds."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
-    
-    EquivalentTo: 
-        Perfluorocarbon
-    
-    SubClassOf: 
-        FluorinatedGreenhouseGas,
-        has_origin value fossil
-    
-    
 Class: PVPanel
 
     Annotations: 
@@ -1767,11 +1795,9 @@ Class: Perfluorocarbon
         <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorocarbons, sometimes referred to as perfluorocarbons or PFCs, are, strictly speaking, organofluorine compounds with the formula CxFy, i.e. they contain only carbon and fluorine, though the terminology is not strictly followed. Compounds with the prefix perfluoro- are hydrocarbons, including those with heteroatoms, wherein all C-H bonds have been replaced by C-F bonds."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
     
-    EquivalentTo: 
-        PFC
-    
     SubClassOf: 
-        FluorinatedGreenhouseGas
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGas
     
     
 Class: PhotovoltaicElectricityGenerator
@@ -3008,50 +3034,19 @@ Class: state_of_matter
         <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
-Individual: CH4
+Individual: <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is anthropogenic if it was created by human activity."
+    
     Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        Methane
-    
-    
-Individual: CO2
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        Carbon_dioxide
-    
-    
-Individual: Carbon_dioxide
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        CO2
+        origin
     
     
 Individual: Cooking
 
     Types: 
         ResidentialDemand
-    
-    
-Individual: HFC
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
-    
-    Types: 
-        FluorinatedGreenhouseGas
-    
-    Facts:  
-     is_equivalent_to  Hydrofluorocarbon
     
     
 Individual: Heat
@@ -3065,113 +3060,16 @@ Individual: Heat
         ResidentialDemand
     
     
-Individual: Hydrofluorocarbon
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
-    
-    Types: 
-        FluorinatedGreenhouseGas
-    
-    Facts:  
-     is_equivalent_to  HFC
-    
-    
 Individual: Light
 
     Types: 
         ResidentialDemand
     
     
-Individual: Methane
-
-    Types: 
-        GreenhouseGas,
-        VolatileOrganicCompound
-    
-    SameAs: 
-        CH4
-    
-    
-Individual: N2O
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        Nitrous_oxide
-    
-    
-Individual: NF3
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        Nitrogen_trifluoride
-    
-    
-Individual: Nitrogen_trifluoride
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        NF3
-    
-    
-Individual: Nitrous_oxide
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        N2O
-    
-    
-Individual: PFC
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorocarbons, sometimes referred to as perfluorocarbons or PFCs, are, strictly speaking, organofluorine compounds with the formula CxFy, i.e. they contain only carbon and fluorine, though the terminology is not strictly followed. Compounds with the prefix perfluoro- are hydrocarbons, including those with heteroatoms, wherein all C-H bonds have been replaced by C-F bonds."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
-    
-    Types: 
-        FluorinatedGreenhouseGas
-    
-    
-Individual: Perfluorocarbon
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorocarbons, sometimes referred to as perfluorocarbons or PFCs, are, strictly speaking, organofluorine compounds with the formula CxFy, i.e. they contain only carbon and fluorine, though the terminology is not strictly followed. Compounds with the prefix perfluoro- are hydrocarbons, including those with heteroatoms, wherein all C-H bonds have been replaced by C-F bonds."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Fluorocarbon&oldid=881053361"@en
-    
-    Types: 
-        FluorinatedGreenhouseGas
-    
-    
-Individual: SF6
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        Sulphur_hexafluoride
-    
-    
 Individual: SmartMetre
 
     Types: 
         Appliance
-    
-    
-Individual: Sulphur_hexafluoride
-
-    Types: 
-        GreenhouseGas
-    
-    SameAs: 
-        SF6
     
     
 Individual: biogenic
