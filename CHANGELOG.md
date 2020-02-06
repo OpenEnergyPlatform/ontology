@@ -55,6 +55,7 @@ Here is a template for new release sections
 - replace InformationArtifact with information content entity from imported iao-ontology module (#223)
 - unify -Energy and -Power classes (#225)
 - ModelElement and subbclasses
+- Quantity and subclasses (#239)
 
 
 ### Removed
