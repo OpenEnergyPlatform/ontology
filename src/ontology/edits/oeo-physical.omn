@@ -1323,19 +1323,6 @@ Class: Hydrofluorocarbon
         FluorinatedGreenhouseGas
     
     
-Class: Hydrogen
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a chemical element with chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
-    
-    SubClassOf: 
-        PortionOfMatter,
-        has_disposition CombustionFuel
-        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
-        has_origin value synthetic
-    
-    
 Class: HydrogenPowerplant
 
     Annotations: 
@@ -1354,7 +1341,7 @@ Class: HydrogenTurbine
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        has_physical_input only Hydrogen
+        has_physical_input only PortionOfHydrogen
     
     
 Class: HydrogenVehicle
@@ -2128,6 +2115,18 @@ Class: PortionOfHeatingOil
         PortionOfGasDieselOil
     
     
+Class: PortionOfHydrogen
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a chemical element with chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
+        has_origin value synthetic
+    
+    
 Class: PortionOfIndustrialWasteFuel
 
     SubClassOf: 
@@ -2867,7 +2866,7 @@ Class: UndergroundHydrogenStorage
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780"
     
     SubClassOf: 
-        Hydrogen
+        EnergyStorage
     
     
 Class: UndirectedEdge
@@ -3339,3 +3338,4 @@ DisjointClasses:
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
