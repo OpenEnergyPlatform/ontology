@@ -302,7 +302,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
 Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000119> "\"Nuclear fuel is an energy carrier used in nuclear power stations to produce heat to power turbines. Heat is created when nuclear fuel undergoes nuclear fission.\""
+        <http://purl.obolibrary.org/obo/IAO_0000119> "\"Nuclear fuel is an energy carrier used in nuclear power stations to produce heat for steam turbines. Heat is created when the nuclear fuel undergoes nuclear fission.\""
     
     SubClassOf: 
         EnergyCarrier
@@ -1330,7 +1330,8 @@ Class: Hydrogen
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
     
     SubClassOf: 
-        EnergyStorage,
+        PortionOfMatter,
+        has_disposition CombustionFuel
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         has_origin value synthetic
     
@@ -3338,4 +3339,3 @@ DisjointClasses:
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
