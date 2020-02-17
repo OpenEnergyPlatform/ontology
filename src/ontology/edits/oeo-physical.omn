@@ -117,7 +117,7 @@ ObjectProperty: has_globalwarmingpotential
         owl:topObjectProperty
     
     Domain: 
-        GreenhouseGas
+        GreenhouseGasExacerbator
     
     Range: 
         GlobalWarmingPotential
@@ -280,7 +280,33 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfCarbonDiox
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfFluorinatedGreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfFluorinatedGreenhouseGas is a PortionOfGreenhouseGas with the disposition FluorinatedGreenhouseGasExacerbator."
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator)
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfGreenhouseGas is a PortionOfMatter with the disposition GreenhouseGasExacerbator."
+    
+    EquivalentTo: 
+        PortionOfMatter
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator)
+    
+    SubClassOf: 
+        PortionOfMatter
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfMethane>
@@ -292,7 +318,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfMethane>
     SubClassOf: 
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrogenTrifluoride>
@@ -303,7 +329,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrogenTr
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGas,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
@@ -315,7 +341,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrousOxi
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfSulphurHexafluoride>
@@ -326,7 +352,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfSulphurHex
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGas,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
@@ -1006,16 +1032,16 @@ Class: FlowBattery
         Battery
     
     
-Class: FluorinatedGreenhouseGas
+Class: FluorinatedGreenhouseGasExacerbator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated greenhouse gases (F-gases) are man-made gases that can stay in the atmosphere for centuries. As they contribute to a global greenhouse effect they are greenhouse gases.
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated greenhouse gases (F-gases) exacerbator is a GreenhouseGasExacerbator disposition of man-made gases that can stay in the atmosphere for centuries. As they contribute to a global greenhouse effect they are greenhouse gases.
 
 There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6) and nitrogen trifluoride (NF3)."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        GreenhouseGas
+        GreenhouseGasExacerbator
     
     
 Class: FossilGenerator
@@ -1178,10 +1204,10 @@ Class: Graph
         <http://purl.obolibrary.org/obo/BFO_0000024>
     
     
-Class: GreenhouseGas
+Class: GreenhouseGasExacerbator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas is a gas that absorbs and emits radiant energy within the thermal infrared range. Greenhouse gases cause the greenhouse effect.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas exacerbator is a pollutant disposition of a gas to absorb and emit radiant energy within the thermal infrared range. Greenhouse gases cause the greenhouse effect.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Greenhouse_gas&oldid=880592155"
     
     SubClassOf: 
@@ -2093,7 +2119,7 @@ Class: PortionOfHydrofluorocarbon
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGas,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
@@ -2292,7 +2318,7 @@ Class: PortionOfPerfluorocarbon
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGas,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
@@ -3184,3 +3210,4 @@ DisjointClasses:
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
