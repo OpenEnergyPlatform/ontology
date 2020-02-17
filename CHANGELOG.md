@@ -54,6 +54,7 @@ Here is a template for new release sections
 - import ro-ontology module replacing some of our relations (#216)
 - replace InformationArtifact with information content entity from imported iao-ontology module (#223)
 - unify -Energy and -Power classes (#225)
+- ModelElement and subbclasses
 
 
 ### Removed

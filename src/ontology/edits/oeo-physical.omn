@@ -354,7 +354,57 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfSulphurHex
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
+
+Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilCombustionFuel is a CombustionFuel with the origin fossil.",
+        rdfs:comment "This class is used to implement the subset relationship between origins fossil and geogenic: Every object with the origin fossil also has the origin geogenic."
     
+    EquivalentTo: 
+        CombustionFuel
+         and (has_origin value fossil)
+    
+    SubClassOf: 
+        CombustionFuel,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatter>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilPortionOfMatter is a PortionOfMatter with the origin fossil.",
+        rdfs:comment "This class is used to implement the subset relationship between origins fossil and geogenic: Every object with the origin fossil also has the origin geogenic."
+    
+    EquivalentTo: 
+        PortionOfMatter
+         and (has_origin value fossil)
+    
+    SubClassOf: 
+        PortionOfMatter,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000119> "\"Nuclear fuel is an energy carrier used in nuclear power stations to produce heat for steam turbines. Heat is created when the nuclear fuel undergoes nuclear fission.\""
+    
+    SubClassOf: 
+        EnergyCarrier
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Uranium is a PortionOfMatter that has the atomic number 92. It is a silver-grey metal."
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>,
+        has_normal_state_of_matter value solid,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
+
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
 
@@ -552,7 +602,7 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109"
     
     SubClassOf: 
-        Fuel,
+        CombustionFuel,
         has_origin value biogenic,
         has_origin value renewable
     
@@ -652,6 +702,16 @@ Class: Combustion
 
     SubClassOf: 
         TransportDemand
+    
+    
+Class: CombustionFuel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "CombustionFuel is an EnergyCarrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances."
+    
+    SubClassOf: 
+        EnergyCarrier,
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
     
     
 Class: CommericalDemand
@@ -1071,16 +1131,6 @@ Class: FossilePowerplant
         PowerGeneratingUnit
     
     
-Class: Fuel
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel is an EnergyCarrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances."
-    
-    SubClassOf: 
-        EnergyCarrier,
-        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
-    
-    
 Class: Fusion
 
     Annotations: 
@@ -1343,6 +1393,19 @@ Class: Hydrogen
         EnergyStorage,
         <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
         has_origin value synthetic
+
+Class: Hydrofluorocarbon
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
+    
+    EquivalentTo: 
+        HFC
+    
+    SubClassOf: 
+        FluorinatedGreenhouseGas
+
     
     
 Class: HydrogenPowerplant
@@ -1363,7 +1426,7 @@ Class: HydrogenTurbine
     SubClassOf: 
         Turbine,
         has_physical_output some Power,
-        has_physical_input only Hydrogen
+        has_physical_input only PortionOfHydrogen
     
     
 Class: HydrogenVehicle
@@ -2045,7 +2108,7 @@ Class: PortionOfDieselFuel
 Class: PortionOfFuel
 
     EquivalentTo: 
-        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel
     
     SubClassOf: 
         PortionOfMatter
@@ -2110,6 +2173,7 @@ Class: PortionOfHeatingOil
         PortionOfGasDieselOil
     
     
+
 Class: PortionOfHydrofluorocarbon
 
     Annotations: 
@@ -2121,6 +2185,18 @@ Class: PortionOfHydrofluorocarbon
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
+
+Class: PortionOfHydrogen
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a chemical element with chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
+        has_origin value synthetic
+
     
     
 Class: PortionOfIndustrialWasteFuel
@@ -2250,7 +2326,7 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         has_normal_state_of_matter value gaseous,
         has_origin value fossil
     
@@ -2291,7 +2367,7 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         has_origin value fossil
     
     
@@ -2712,7 +2788,7 @@ Class: SolidFossilFuels
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solid fossil fuels are fuels of fossil origin and that have a solid state of matter under normal conditions."@en
     
     SubClassOf: 
-        Fuel,
+        CombustionFuel,
         has_normal_state_of_matter value solid,
         has_origin value fossil
     
@@ -2875,7 +2951,7 @@ Class: UndergroundHydrogenStorage
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780"
     
     SubClassOf: 
-        Hydrogen
+        EnergyStorage
     
     
 Class: UndirectedEdge
@@ -2921,11 +2997,11 @@ Class: WasteFuel
         rdfs:comment "The energy content of WasteFuel is typically released by incineration or gasification."
     
     EquivalentTo: 
-        Fuel
+        CombustionFuel
          and (<http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo-physical/Waste>)
     
     SubClassOf: 
-        Fuel
+        CombustionFuel
     
     
 Class: WastePowerplant
@@ -3067,6 +3143,7 @@ Class: state_of_matter
         <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
+
 Individual: <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
 
     Annotations: 
@@ -3118,7 +3195,7 @@ Individual: biogenic
 Individual: fossil
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is fossil if it was created by natural processes lasting thousands or millions of years.
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is fossil if it was created from organic material by geolocial processes lasting thousands or millions of years.
 
 In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain."
     
