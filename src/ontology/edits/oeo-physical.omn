@@ -317,7 +317,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfMethane>
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
     
     
@@ -1391,7 +1391,7 @@ Class: Hydrogen
     
     SubClassOf: 
         EnergyStorage,
-        <http://purl.obolibrary.org/obo/RO_0000091> some Fuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         has_origin value synthetic
 
 Class: Hydrofluorocarbon
@@ -1400,11 +1400,9 @@ Class: Hydrofluorocarbon
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
     
-    EquivalentTo: 
-        HFC
     
     SubClassOf: 
-        FluorinatedGreenhouseGas
+        FluorinatedGreenhouseGasExacerbator
 
     
     
@@ -3157,6 +3155,14 @@ Individual: Cooking
 
     Types: 
         ResidentialDemand
+
+Individual: <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x is geogenic if it is the result of geological processes."
+    
+    Types: 
+        origin
     
     
 Individual: Heat
