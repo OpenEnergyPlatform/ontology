@@ -117,7 +117,7 @@ ObjectProperty: has_globalwarmingpotential
         owl:topObjectProperty
     
     Domain: 
-        GreenhouseGasExacerbator
+        GreenhouseEffect
     
     Range: 
         GlobalWarmingPotential
@@ -272,89 +272,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
         Energy
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfCarbonDioxide>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It is a gas that occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfFluorinatedGreenhouseGas>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfFluorinatedGreenhouseGas is a PortionOfGreenhouseGas with the disposition FluorinatedGreenhouseGasExacerbator."
-    
-    EquivalentTo: 
-        <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
-         and (<http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator)
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfGreenhouseGas is a PortionOfMatter with the disposition GreenhouseGasExacerbator."
-    
-    EquivalentTo: 
-        PortionOfMatter
-         and (<http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator)
-    
-    SubClassOf: 
-        PortionOfMatter
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfMethane>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It is a gas that occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be usede as a fuel.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CH4"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrogenTrifluoride>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen trifluoride is a portion of matter with the chemical formula NF3. It can work as a potent greenhouse gas and has an anthropogenic origin.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "NF3"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
-        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrousOxide>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrous oxide is a portion of matter with the chemical formula N2O. It is a gas that occurs naturally in the atmosphere as a trace gas and it can work as a greenhouse gas.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "N2O"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGasExacerbator
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfSulphurHexafluoride>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It can work as a potent greenhouse gas and has an anthropogenic origin.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "SF6"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
-        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
-
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
 
     Annotations: 
@@ -394,6 +311,90 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
         EnergyCarrier
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfCarbonDioxide>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It is a gas that occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffect
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfFluorinatedGreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfFluorinatedGreenhouseGas is a PortionOfGreenhouseGas with the disposition FluorinatedGreenhouseEffect."
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseEffect)
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfGreenhouseGas is a PortionOfMatter with the disposition GreenhouseEffect."
+    
+    EquivalentTo: 
+        PortionOfMatter
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffect)
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfMethane>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It is a gas that occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be usede as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CH4"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffect
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrogenTrifluoride>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen trifluoride is a portion of matter with the chemical formula NF3. It can work as a potent greenhouse gas and has an anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NF3"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseEffect,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfNitrousOxide>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrous oxide is a portion of matter with the chemical formula N2O. It is a gas that occurs naturally in the atmosphere as a trace gas and it can work as a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "N2O"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffect
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfSulphurHexafluoride>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It can work as a potent greenhouse gas and has an anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SF6"
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseEffect,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
 
     Annotations: 
@@ -404,7 +405,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>,
         has_normal_state_of_matter value solid,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
-
+    
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
 
@@ -1092,16 +1093,14 @@ Class: FlowBattery
         Battery
     
     
-Class: FluorinatedGreenhouseGasExacerbator
+Class: FluorinatedGreenhouseEffect
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated greenhouse gases (F-gases) exacerbator is a GreenhouseGasExacerbator disposition of man-made gases that can stay in the atmosphere for centuries. As they contribute to a global greenhouse effect they are greenhouse gases.
-
-There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6) and nitrogen trifluoride (NF3)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated greenhouse effect is the GreenhouseEffect of man-made gases that can stay in the atmosphere for centuries."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        GreenhouseGasExacerbator
+        GreenhouseEffect
     
     
 Class: FossilGenerator
@@ -1254,7 +1253,7 @@ Class: Graph
         <http://purl.obolibrary.org/obo/BFO_0000024>
     
     
-Class: GreenhouseGasExacerbator
+Class: GreenhouseEffect
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas exacerbator is a pollutant disposition of a gas to absorb and emit radiant energy within the thermal infrared range. Greenhouse gases cause the greenhouse effect.",
@@ -1383,6 +1382,16 @@ Class: Hydroelectricity
         HydroEnergy
     
     
+Class: Hydrofluorocarbon
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
+    
+    SubClassOf: 
+        FluorinatedGreenhouseEffect
+    
+    
 Class: Hydrogen
 
     Annotations: 
@@ -1393,17 +1402,6 @@ Class: Hydrogen
         EnergyStorage,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         has_origin value synthetic
-
-Class: Hydrofluorocarbon
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrofluorocarbons (HFCs) are organic compounds that contain fluorine and hydrogen atoms, and are the most common type of organofluorine compounds. They are frequently used in air conditioning and as refrigerants in place of the older chlorofluorocarbons such as R-12 and hydrochlorofluorocarbons such as R-21."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydrofluorocarbon&oldid=904556263"@en
-    
-    
-    SubClassOf: 
-        FluorinatedGreenhouseGasExacerbator
-
     
     
 Class: HydrogenPowerplant
@@ -2171,7 +2169,6 @@ Class: PortionOfHeatingOil
         PortionOfGasDieselOil
     
     
-
 Class: PortionOfHydrofluorocarbon
 
     Annotations: 
@@ -2181,9 +2178,10 @@ Class: PortionOfHydrofluorocarbon
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseEffect,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
-
+    
+    
 Class: PortionOfHydrogen
 
     Annotations: 
@@ -2194,7 +2192,6 @@ Class: PortionOfHydrogen
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustionFuel,
         has_origin value synthetic
-
     
     
 Class: PortionOfIndustrialWasteFuel
@@ -2392,7 +2389,7 @@ Class: PortionOfPerfluorocarbon
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseGasExacerbator,
+        <http://purl.obolibrary.org/obo/RO_0000091> some FluorinatedGreenhouseEffect,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
@@ -3141,7 +3138,6 @@ Class: state_of_matter
         <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
-
 Individual: <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
 
     Annotations: 
@@ -3151,11 +3147,6 @@ Individual: <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
         origin
     
     
-Individual: Cooking
-
-    Types: 
-        ResidentialDemand
-
 Individual: <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
 
     Annotations: 
@@ -3163,6 +3154,12 @@ Individual: <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     Types: 
         origin
+    
+    
+Individual: Cooking
+
+    Types: 
+        ResidentialDemand
     
     
 Individual: Heat
