@@ -179,7 +179,7 @@ ObjectProperty: has_pollutant
         Emission
     
     Range: 
-        Pollutant
+        Pollution
     
     
 ObjectProperty: has_quality
@@ -337,7 +337,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfFluorinate
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfGreenhouseGas>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfGreenhouseGas is a PortionOfMatter that has the disposition to contribute to the greenhouse effect in the atmosphere"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfGreenhouseGas is a PortionOfMatter that has the GreenhouseEffectDisposition."
     
     EquivalentTo: 
         PortionOfMatter
@@ -513,14 +513,14 @@ Class: AgriculturalDemand
         Demand
     
     
-Class: AirPollutant
+Class: AirPollution
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"@en
     
     SubClassOf: 
-        Pollutant
+        Pollution
     
     
 Class: AmbientHeat
@@ -895,13 +895,10 @@ Class: ElectricityProductionUnit
 Class: Emission
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "1. Emissions are waste from production, distribution and consumption, which are distributed to environmental media. Emmision is often restricted to pollutants.
-        
-        2. Emissions generally means discharge of any interference in the environment. The source is called the issuer. Each emission causes an immission."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Emmision"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission is a process releasing byproducts from human activity (e.g. production, distribution or consumption) into the environment."@en
     
     SubClassOf: 
-        Quantity
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: EmissionFactor
@@ -1243,10 +1240,19 @@ Class: Graph
 Class: GreenhouseEffectDisposition
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse effect disposition is a pollutant disposition of a gas to absorb and emit radiant energy within the thermal infrared range."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse effect disposition is a disposition of a gas to contribute to GreenhousegasEmission."
     
     SubClassOf: 
-        Pollutant
+        <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
+Class: GreenhousegasEmission
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "GreenhousegasEmission is an Emission that releases a greenhouse gas."
+    
+    SubClassOf: 
+        Emission
     
     
 Class: Grid
@@ -1662,6 +1668,15 @@ Class: NaturalGasGenerator
         FossilGenerator
     
     
+Class: NegativeEmission
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "NegativeEmission is the process of absorbing a substance (that was emitted before, typically a pollution)."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
 Class: NetworkNode
 
     Annotations: 
@@ -1830,7 +1845,7 @@ Class: ParticulateMatter
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Particulates&oldid=906795232"@en
     
     SubClassOf: 
-        AirPollutant
+        AirPollution
     
     
 Class: Percentage
@@ -1874,14 +1889,13 @@ Class: PlantOperation
         CommonParameters
     
     
-Class: Pollutant
+Class: Pollution
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A pollutant is a substance or energy introduced into the environment that has undesired effects, or adversely affects the usefulness of a resource. A pollutant may cause long- or short-term damage by changing the growth rate of plant or animal species, or by interfering with human amenities, comfort, health, or property values."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pollutant&oldid=906519011"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Pollution is an Emission with a negative effect on the environment or organisms."@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000016>
+        Emission
     
     
 Class: PortionOfAir
@@ -2950,7 +2964,7 @@ Some VOCs are dangerous to human health or cause harm to the environment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Volatile_organic_compound&oldid=880677383"
     
     SubClassOf: 
-        AirPollutant
+        AirPollution
     
     
 Class: Warehouse
