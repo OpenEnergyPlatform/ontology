@@ -19,11 +19,10 @@ If you already have ideas for the solution describe them here
 
 - [ ] I discussed the issue with someone else than me before working on a solution
 - [ ] I already read the **latest** version of the [workflow](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTE.md) for this repository
+- [ ] I added this issue to the Project 'Issues'. If suitable, I add it to further Projects. 
 - [ ] The [goal](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) of this ontology is clear to me 
 
 I am aware that
 - [ ] every new entry in the ontology should have an annotation
 - [ ] classes should arise from concepts rather than from words
 - [ ] class or property names should follow the [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case)
-
-
