@@ -13,9 +13,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/iao-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
-Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -443,6 +443,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: <http://purl.obolibrary.org/obo/IAO_0000010>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000027>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000028>
 
     
@@ -626,8 +629,12 @@ Class: DataProcessingSoftware
     
 Class: Database
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Database is an information content entity that stores data items and data sets."
+    
     SubClassOf: 
-        DataFormat
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/IAO_0000027>
     
     
 Class: Documentation
