@@ -336,10 +336,10 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a generator that converts light into electrical energy."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a RenewableGenerator that converts light into electrical energy."
     
     SubClassOf: 
-        Generator
+        RenewableGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
@@ -948,12 +948,6 @@ Class: EnergyFromElectricityInTraffic
         EnergyCarrierQuantity
     
     
-Class: EnergyGenerator
-
-    SubClassOf: 
-        Generator
-    
-    
 Class: EnergyGeneratorTechnology
 
     Annotations: 
@@ -1015,13 +1009,13 @@ Class: FederalState
 Class: FieldPhotovoltaicGenerator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity powerplant is a PhotovoltaicPowerplant that is installed out in the open on the ground."@en
     
     SubClassOf: 
-        PhotovoltaicElectricityGenerator
+        PhotovoltaicPowerplant
     
     DisjointWith: 
-        RooftopPhotovoltaicGenerator
+        RooftopPhotovoltaicPowerplant
     
     
 Class: Fission
@@ -1760,16 +1754,16 @@ Class: OceanPowerplant
         HydroPowerplant
     
     
-Class: OffShoreWindElectricityGenerator
+Class: OffShoreWindFarm
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind electricity generator is a wind electricity generator that is build off shore above or in the ocean."@en
     
     SubClassOf: 
-        WindElectricityGenerator
+        WindFarm
     
     DisjointWith: 
-        OnShoreWindElectricityGenerator
+        OnShoreWindFarm
     
     
 Class: Office
@@ -1794,16 +1788,16 @@ Class: OilPowerplant
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
-Class: OnShoreWindElectricityGenerator
+Class: OnShoreWindFarm
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind electricity generator is a wind electricity generator that is build on land."@en
     
     SubClassOf: 
-        WindElectricityGenerator
+        WindFarm
     
     DisjointWith: 
-        OffShoreWindElectricityGenerator
+        OffShoreWindFarm
     
     
 Class: PFC
@@ -1865,19 +1859,10 @@ Class: Perfluorocarbon
         FluorinatedGreenhouseGas
     
     
-Class: PhotovoltaicElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
-    
-    SubClassOf: 
-        Generator
-    
-    
 Class: PhotovoltaicPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PhotovoltaicPowerplant is a Powerplant having an aggregate of PVPanels as its PowerGeneratingUnits."@en
     
     SubClassOf: 
         SolarPowerPlant,
@@ -2595,13 +2580,13 @@ Class: Retail
         CommericalDemand
     
     
-Class: RooftopPhotovoltaicGenerator
+Class: RooftopPhotovoltaicPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity generator is a photovoltaic electricity generator that is installed on top of the roof of a building."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity powerplant is a photovoltaic powerplant that is installed on top of the roof of a building."@en
     
     SubClassOf: 
-        PhotovoltaicElectricityGenerator
+        PhotovoltaicPowerplant
     
     DisjointWith: 
         FieldPhotovoltaicGenerator
@@ -2694,7 +2679,7 @@ Class: SolarPowerPlant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_power&oldid=904827092"@en
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        RegenerativePowerplant,
         Turbine or (<http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel)
     
     
@@ -2705,7 +2690,7 @@ Class: SolarThermalCollector
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
     
     SubClassOf: 
-        EnergyGenerator,
+        Generator,
         has_physical_output some Power,
         has_physical_input only SolarThermalHeat
     
@@ -2841,7 +2826,7 @@ Class: TidalStreamGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
     
     SubClassOf: 
-        EnergyGenerator,
+        Generator,
         has_physical_output some Power,
         has_physical_input only TideWaveOcean
     
@@ -3049,16 +3034,6 @@ Class: WindOffshore
     SubClassOf: 
         WindTurbine,
         <http://purl.obolibrary.org/obo/RO_0002233> some Sea
-    
-    
-Class: WindOnshore
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Onshore wind power is the complement to Offshore wind power. It is harvested on land."@en
-    
-    SubClassOf: 
-        ArtificialObject,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
 Class: WindTurbine
@@ -3356,13 +3331,7 @@ Individual: synthetic
     
     
 DisjointClasses: 
-    BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
-
-DisjointClasses: 
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
-
-DisjointClasses: 
-    ElectricityGenerator,EnergyGenerator,EnergyStorage,EnergyTransfer,HeatGenerator
 
 DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
