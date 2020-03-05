@@ -13,8 +13,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-physical/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-physical/>
-Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <http://purl.obolibrary.org/obo/uo/releases/2019-04-01/uo.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
@@ -270,6 +270,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
         Energy
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
+
+    Annotations: 
+        rdfs:comment "rename later to EnergyConverter"
+    
+    SubClassOf: 
+        ArtificialObject
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
 
     Annotations: 
@@ -319,6 +328,12 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>,
         has_normal_state_of_matter value solid,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
+
+    SubClassOf: 
+        ArtificialObject
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
@@ -1044,7 +1059,7 @@ Class: FossilGeneratorTechnology
 Class: FossilePowerplant
 
     SubClassOf: 
-        PowerGeneratingUnit
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
     
     
 Class: Fusion
@@ -1096,7 +1111,7 @@ Class: Generator
 Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
-        ArtificialObject,
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>,
         uses some EnergyCarrier,
         uses some EnergyGeneratorTechnology
     
@@ -1289,7 +1304,7 @@ Class: HydroEnergy
 Class: HydroPowerplant
 
     SubClassOf: 
-        ArtificialObject
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
     
     
 Class: HydroelectricPowerplant
@@ -1298,7 +1313,7 @@ Class: HydroelectricPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en
     
     SubClassOf: 
-        PowerGeneratingUnit,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some WaterTurbine
     
     
@@ -1446,7 +1461,7 @@ Class: InstalledPowerQuantity
 Class: InternalCombustion
 
     SubClassOf: 
-        EnergyGeneratorTechnology
+        ArtificialObject
     
     
 Class: InternalCombustionVehicle
@@ -1707,7 +1722,7 @@ Class: Ocean
 Class: OceanPowerplant
 
     SubClassOf: 
-        ArtificialObject
+        HydroPowerplant
     
     
 Class: OffShoreWindElectricityGenerator
@@ -1777,7 +1792,7 @@ Class: PVPanel
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_panel&oldid=906976047"@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        Generator,
         has_physical_output some Power,
         has_physical_input only SolarPhotovoltaic
     
@@ -1820,7 +1835,7 @@ Class: PhotovoltaicElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
     
     SubClassOf: 
-        RenewableGeneratorTechnology
+        Generator
     
     
 Class: PhotovoltaicGenerator
@@ -2416,7 +2431,7 @@ Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
 Class: PowerGeneratingUnit
 
     SubClassOf: 
-        NetworkNode,
+        ArtificialObject,
         uses some EnergyGeneratorTechnology,
         uses some EnergyStorageTechnology,
         uses some EnergyTransferTechnology
@@ -2488,14 +2503,14 @@ Class: Rail
 Class: ReactivePowerplant
 
     SubClassOf: 
-        PowerGeneratingUnit,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
     
     
 Class: RegenerativePowerplant
 
     SubClassOf: 
-        PowerGeneratingUnit,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
@@ -2652,7 +2667,7 @@ Class: SolarPowerPlant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_power&oldid=904827092"@en
     
     SubClassOf: 
-        PowerGeneratingUnit,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         Turbine or (<http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel)
     
     
@@ -2858,7 +2873,7 @@ Class: Turbine
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Turbine&oldid=905470312"
     
     SubClassOf: 
-        EnergyGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
     
     
 Class: UndergroundHydrogenStorage
@@ -3319,9 +3334,6 @@ DisjointClasses:
 
 DisjointClasses: 
     BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
-
-DisjointClasses: 
-    Bus,Generator,PowerGeneratingUnit,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
 DisjointClasses: 
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
