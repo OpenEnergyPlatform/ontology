@@ -152,9 +152,6 @@ ObjectProperty: has_physical_input
         Irreflexive,
         Asymmetric
     
-    Domain: 
-        EnergyGeneratorTechnology
-    
     Range: 
         <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
     
@@ -820,17 +817,7 @@ Class: ElectricityExport
 Class: ElectricityGenerator
 
     SubClassOf: 
-        Generator,
-        applies_technology some ElectricityGeneratorTechnology
-    
-    
-Class: ElectricityGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generator technology is an technology used to transform energy from some source into electricity."@en
-    
-    SubClassOf: 
-        EnergyGeneratorTechnology
+        Generator
     
     
 Class: ElectricityGrid
@@ -948,17 +935,6 @@ Class: EnergyFromElectricityInTraffic
         EnergyCarrierQuantity
     
     
-Class: EnergyGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
-    
-    SubClassOf: 
-        Technology,
-        has_physical_input some (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier),
-        has_physical_output some Power
-    
-    
 Class: EnergyProduction
 
     SubClassOf: 
@@ -968,33 +944,13 @@ Class: EnergyProduction
 Class: EnergyStorage
 
     SubClassOf: 
-        ArtificialObject,
-        applies_technology some EnergyStorageTechnology
-    
-    
-Class: EnergyStorageTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
-    
-    SubClassOf: 
-        Technology
+        ArtificialObject
     
     
 Class: EnergyTransfer
 
     SubClassOf: 
-        ArtificialObject,
-        applies_technology some EnergyTransferTechnology
-    
-    
-Class: EnergyTransferTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
-    
-    SubClassOf: 
-        Technology
+        ArtificialObject
     
     
 Class: FederalState
@@ -1073,18 +1029,6 @@ Class: FossilGenerator
         RenewableGenerator
     
     
-Class: FossilGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil electricity generator technology is an electricity generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate electricity."@en
-    
-    SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    DisjointWith: 
-        RenewableGeneratorTechnology
-    
-    
 Class: FossilePowerplant
 
     SubClassOf: 
@@ -1141,8 +1085,7 @@ Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>,
-        uses some EnergyCarrier,
-        uses some EnergyGeneratorTechnology
+        uses some EnergyCarrier
     
     DisjointWith: 
         Line
@@ -1300,15 +1243,6 @@ Class: HeatGenerator
 
     SubClassOf: 
         Generator
-    
-    
-Class: HeatGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generator technology is an technology used to transform energy from some source into heat."@en
-    
-    SubClassOf: 
-        EnergyGeneratorTechnology
     
     
 Class: HeatPumpHeatGenerator
@@ -2535,18 +2469,6 @@ Class: RenewableGenerator
         FossilGenerator
     
     
-Class: RenewableGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable electricity generator technology is an electricity generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate electricity."@en
-    
-    SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    DisjointWith: 
-        FossilGeneratorTechnology
-    
-    
 Class: RenewableMunicipalWasteFuel
 
     Annotations: 
@@ -2761,7 +2683,6 @@ Class: StorageUnit
     
     SubClassOf: 
         ElectricityGridComponent,
-        uses some EnergyStorageTechnology,
         <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
@@ -3332,15 +3253,6 @@ Individual: synthetic
     
 DisjointClasses: 
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
-
-DisjointClasses: 
-    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
-
-DisjointClasses: 
-    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
-
-DisjointClasses: 
-    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
