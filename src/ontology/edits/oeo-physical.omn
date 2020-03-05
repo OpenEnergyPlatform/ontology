@@ -270,6 +270,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
         Energy
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ElectroMotiveGenerator is a Generator that converts kinetic energy into electric energy."
+    
+    SubClassOf: 
+        Generator
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
 
     Annotations: 
@@ -309,6 +318,12 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/GasEnergyConverter>
+
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
 
     Annotations: 
@@ -316,6 +331,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
     
     SubClassOf: 
         EnergyCarrier
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a generator that converts light into electrical energy."
+    
+    SubClassOf: 
+        Generator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
@@ -332,6 +356,9 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Powerplant is an aggregate of EnergyConverters that is connected to an electric grid."
+    
     SubClassOf: 
         ArtificialObject
     
@@ -362,6 +389,14 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
+
+    SubClassOf: 
+        PowerGeneratingUnit,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1080,7 +1115,7 @@ Class: GasPowerplant
     
     SubClassOf: 
         FossilePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some GasTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GasEnergyConverter>
     
     
 Class: GasTurbine
@@ -1467,7 +1502,7 @@ Class: InternalCombustion
 Class: InternalCombustionVehicle
 
     SubClassOf: 
-        Generator
+        ArtificialObject
     
     
 Class: Land
@@ -1792,8 +1827,9 @@ Class: PVPanel
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_panel&oldid=906976047"@en
     
     SubClassOf: 
-        Generator,
+        PowerGeneratingUnit,
         has_physical_output some Power,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/PVCell>,
         has_physical_input only SolarPhotovoltaic
     
     
@@ -1836,13 +1872,6 @@ Class: PhotovoltaicElectricityGenerator
     
     SubClassOf: 
         Generator
-    
-    
-Class: PhotovoltaicGenerator
-
-    SubClassOf: 
-        Generator,
-        uses some SolarEnergy
     
     
 Class: PhotovoltaicPowerplant
@@ -2432,9 +2461,7 @@ Class: PowerGeneratingUnit
 
     SubClassOf: 
         ArtificialObject,
-        uses some EnergyGeneratorTechnology,
-        uses some EnergyStorageTechnology,
-        uses some EnergyTransferTechnology
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Generator
     
     
 Class: PowerPlantData
@@ -3010,12 +3037,11 @@ Class: WindEnergy
 Class: WindFarm
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm uses wind turbines and and wind to generate renewable energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm is an aggregate of WindEnergyConverter that are connected to electricity."@en
     
     SubClassOf: 
         RegenerativePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
     
     
 Class: WindOffshore
@@ -3031,7 +3057,7 @@ Class: WindOnshore
         <http://purl.obolibrary.org/obo/IAO_0000115> "Onshore wind power is the complement to Offshore wind power. It is harvested on land."@en
     
     SubClassOf: 
-        RegenerativePowerplant,
+        ArtificialObject,
         <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
     
     
@@ -3331,9 +3357,6 @@ Individual: synthetic
     
 DisjointClasses: 
     BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
-
-DisjointClasses: 
-    BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
 
 DisjointClasses: 
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
