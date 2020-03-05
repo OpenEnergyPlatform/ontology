@@ -814,12 +814,6 @@ Class: ElectricityExport
         Quantity
     
     
-Class: ElectricityGenerator
-
-    SubClassOf: 
-        Generator
-    
-    
 Class: ElectricityGrid
 
     Annotations: 
@@ -1023,7 +1017,7 @@ There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur
 Class: FossilGenerator
 
     SubClassOf: 
-        ElectricityGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
     
     DisjointWith: 
         RenewableGenerator
@@ -1074,7 +1068,7 @@ Class: GasTurbineGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
     
     SubClassOf: 
-        ElectricityGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
     
     
 Class: Generator
@@ -2463,7 +2457,7 @@ Class: RegenerativePowerplant
 Class: RenewableGenerator
 
     SubClassOf: 
-        ElectricityGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
     
     DisjointWith: 
         FossilGenerator
@@ -2747,7 +2741,7 @@ Class: TidalStreamGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
     
     SubClassOf: 
-        Generator,
+        WaterElectricityGenerator,
         has_physical_output some Power,
         has_physical_input only TideWaveOcean
     
@@ -2948,13 +2942,6 @@ Class: WindFarm
     SubClassOf: 
         RegenerativePowerplant,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
-    
-    
-Class: WindOffshore
-
-    SubClassOf: 
-        WindTurbine,
-        <http://purl.obolibrary.org/obo/RO_0002233> some Sea
     
     
 Class: WindTurbine
