@@ -315,7 +315,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/GasEnergyConverter>
+Class: <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
 
     SubClassOf: 
         PowerGeneratingUnit
@@ -390,6 +390,9 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
 
+    Annotations: 
+        rdfs:comment "A WindEnergyConverter is the PowerGeneratingUnit that uses wind energy."
+    
     SubClassOf: 
         PowerGeneratingUnit,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>,
@@ -941,12 +944,6 @@ Class: EnergyStorage
         ArtificialObject
     
     
-Class: EnergyTransfer
-
-    SubClassOf: 
-        ArtificialObject
-    
-    
 Class: FederalState
 
     Annotations: 
@@ -1047,7 +1044,7 @@ Class: GasPowerplant
     
     SubClassOf: 
         FossilePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GasEnergyConverter>
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
     
     
 Class: GasTurbine
@@ -1260,6 +1257,9 @@ Class: HydroEnergy
     
 Class: HydroPowerplant
 
+    Annotations: 
+        rdfs:comment "will be discussed later"
+    
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
     
@@ -1270,7 +1270,7 @@ Class: HydroelectricPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        HydroPowerplant,
         <http://purl.obolibrary.org/obo/BFO_0000051> some WaterTurbine
     
     
@@ -1303,7 +1303,7 @@ Class: HydrogenPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen powerplant uses hydrogen to generate electricity."@en
     
     SubClassOf: 
-        ReactivePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some HydrogenTurbine
     
     
@@ -1663,7 +1663,7 @@ Class: NuclearPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power_plant&oldid=867102016"
     
     SubClassOf: 
-        ReactivePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
@@ -2438,13 +2438,6 @@ Class: Rail
 
     SubClassOf: 
         TransportDemand
-    
-    
-Class: ReactivePowerplant
-
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
     
     
 Class: RegenerativePowerplant
