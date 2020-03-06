@@ -13,9 +13,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/iao-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
-Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -458,6 +458,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000100>
 Class: <http://purl.obolibrary.org/obo/IAO_0000300>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000310>
+
+    
 Class: API
 
     SubClassOf: 
@@ -669,8 +672,12 @@ Class: ExternalOptimizer
     
 Class: Factsheet
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A factsheet is a document that collects information about a specific topic in a structured way.",
+        rdfs:comment "this entity is general and not specific to the OEP factsheets."
+    
     SubClassOf: 
-        EmpiricalDataset
+        <http://purl.obolibrary.org/obo/IAO_0000310>
     
     
 Class: FixedOperationCost
