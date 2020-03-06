@@ -953,18 +953,6 @@ Class: FederalState
         Land
     
     
-Class: FieldPhotovoltaicGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity powerplant is a PhotovoltaicPowerplant that is installed out in the open on the ground."@en
-    
-    SubClassOf: 
-        PhotovoltaicPowerplant
-    
-    DisjointWith: 
-        RooftopPhotovoltaicPowerplant
-    
-    
 Class: Fission
 
     Annotations: 
@@ -2498,7 +2486,7 @@ Class: RooftopPhotovoltaicPowerplant
         PhotovoltaicPowerplant
     
     DisjointWith: 
-        FieldPhotovoltaicGenerator
+        SolarPark
     
     
 Class: RunOfRiverElectricityGenerator
@@ -2569,6 +2557,18 @@ Class: SolarEnergy
     SubClassOf: 
         Energy,
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
+    
+    
+Class: SolarPark
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar park (also: solar farm, field photovoltaic electricity powerplant)  is a PhotovoltaicPowerplant that is installed out in the open on the ground."@en
+    
+    SubClassOf: 
+        PhotovoltaicPowerplant
+    
+    DisjointWith: 
+        RooftopPhotovoltaicPowerplant
     
     
 Class: SolarPhotovoltaic
