@@ -261,7 +261,8 @@ ObjectProperty: uses
 Class: <http://openenergy-platform.org/ontology/oeo-physical/BiomassPowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some BiomassElectricityGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
@@ -276,7 +277,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some CoalElectricityGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
@@ -330,7 +332,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>
 
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some FossileGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
@@ -342,7 +345,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GeothermalPowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some GeothermalGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/HardCoalPowerUnit>
@@ -351,16 +355,35 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/HardCoalPowerUnit>
         <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/HydroGenerator>
+
+    Annotations: 
+        rdfs:comment "will be discussed later"
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/HydroPowerUnit>
 
+    Annotations: 
+        rdfs:comment "will be discussed later"
+    
     SubClassOf: 
         PowerGeneratingUnit
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/HydrogenGenerator>
+
+    SubClassOf: 
+        Generator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/HydrogenPowerUnit>
 
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/HydrogenGenerator>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/LignitePowerUnit>
@@ -381,13 +404,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>
 
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some NuclearPowerGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OilElectricityGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
@@ -396,7 +421,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a RenewableGenerator that converts light into electrical energy."
     
     SubClassOf: 
-        RegenerativeGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/SolarGenerator>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
@@ -423,7 +448,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
 
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some RegenerativeGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
@@ -436,16 +462,24 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarr
         EnergyCarrier
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarGenerator>
+
+    SubClassOf: 
+        RegenerativeGenerator
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/SolarGenerator>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarThermalPowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SolarThermalHeatGenerator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
@@ -457,10 +491,17 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Waste>
         <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteElectricityGenerator>
+
+    SubClassOf: 
+        FossileGenerator
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>
 
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WasteElectricityGenerator>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
@@ -479,8 +520,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some WindElectricityGenerator
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1133,15 +1174,6 @@ Class: GasTurbine
         Turbine,
         has_physical_output some Power,
         has_physical_input only PortionOfNaturalGas
-    
-    
-Class: GasTurbineGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
     
     
 Class: Generator
@@ -2698,7 +2730,7 @@ Class: SolarThermalCollector
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
     
     SubClassOf: 
-        Generator,
+        ArtificialObject,
         has_physical_output some Power,
         has_physical_input only SolarThermalHeat
     
@@ -2721,7 +2753,7 @@ Class: SolarThermalHeatGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
     
     SubClassOf: 
-        HeatGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/SolarGenerator>
     
     
 Class: SolarThermalPowerplant
@@ -2973,7 +3005,7 @@ Class: WaterElectricityGenerator
         <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
     
     SubClassOf: 
-        RegenerativeGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/HydroGenerator>
     
     
 Class: WaterTurbine
