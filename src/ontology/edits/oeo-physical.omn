@@ -312,6 +312,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenera
 Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformer is an artificial object that transforms or changes a certain type of energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
         rdfs:comment "rename later to EnergyConverter"
@@ -521,7 +522,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
 
     Annotations: 
-        rdfs:comment "A WindEnergyConverter is the PowerGeneratingUnit that uses wind energy."
+        rdfs:comment "A WindEnergyConverter is a RegenerativePowerUnit that uses wind energy."
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
@@ -1138,8 +1139,7 @@ Class: GasTurbine
 Class: Generator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
-Source: https://en.wikipedia.org/wiki/Electric_generator"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is an energy transformer that converts other forms of energy into electrical energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
@@ -1291,19 +1291,22 @@ Class: HeatDemand
         Demand
     
     
-Class: HeatGenerator
-
-    SubClassOf: 
-        Generator
-    
-    
-Class: HeatPumpHeatGenerator
+Class: HeatPump
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
     
     SubClassOf: 
-        HeatGenerator
+        Heater
+    
+    
+Class: Heater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Heater is an energy transformer that converts other forms of energy into useful heat."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
     
     
 Class: HydroEnergy
@@ -2414,6 +2417,7 @@ Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
 Class: PowerGeneratingUnit
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an artificial object that contains a generator, among other parts.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
@@ -2640,7 +2644,7 @@ Class: SolarThermalCollector
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
     
     SubClassOf: 
-        ArtificialObject,
+        Heater,
         has_physical_output some Power,
         has_physical_input only SolarThermalHeat
     
