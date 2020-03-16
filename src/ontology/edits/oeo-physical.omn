@@ -70,6 +70,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000086>
 
     
@@ -279,7 +282,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "EnergyStorage is the function of an EnergyCarrier to contain energy for conversion as usable energy later or somewhere else. This could be converted for use in, for example, an appliance or vehicle. Such carriers include springs, electrical batteries, capacitors, pressurized air, dammed water, hydrogen, petroleum, coal, wood, and natural gas and all fuels",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "EnergyStorage is a function of an ArtificialObject that has been engineered to contain energy for conversion as usable energy later.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
     
@@ -434,6 +437,9 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarr
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ThermalEnergyStorage is an EnergyStorage that stores thermal energy for later use."
+    
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
@@ -588,7 +594,8 @@ Class: Battery
     
     SubClassOf: 
         EnergyStorageObject,
-        is_used_by some StorageUnit
+        is_used_by some StorageUnit,
+        <http://purl.obolibrary.org/obo/RO_0000085> some BatteryStorage
     
     
 Class: BatteryElectric
@@ -1029,7 +1036,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
     
     SubClassOf: 
         ArtificialObject,
-        applies_technology some EnergyStorageTechnology
+        applies_technology some EnergyStorageTechnology,
+        <http://purl.obolibrary.org/obo/RO_0000085> some <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     
 Class: EnergyStorageTechnology
@@ -2539,7 +2547,7 @@ Class: PowerToGasSystem
 Class: PumpedStorage
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) uses water from a higher reservoir to generate energy"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) is an energy storage that uses water from a higher reservoir to generate energy."@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>,
