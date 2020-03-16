@@ -56,7 +56,7 @@ Here is a template for new release sections
 - unify -Energy and -Power classes (#225)
 - ModelElement and subbclasses
 - update issue templates 'workflow checklist' (#258)
-- Generator (#179)
+- Generator (#273)
 
 
 ### Removed
