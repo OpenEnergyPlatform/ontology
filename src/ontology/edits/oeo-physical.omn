@@ -118,7 +118,7 @@ ObjectProperty: covers_energycarrier
         covers
     
     Range: 
-        EnergyCarrier
+        EnergyCarrierDisposition
     
     
 ObjectProperty: has_globalwarmingpotential
@@ -168,7 +168,7 @@ ObjectProperty: has_physical_input
         EnergyGeneratorTechnology
     
     Range: 
-        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
     
     
 ObjectProperty: has_physical_output
@@ -287,7 +287,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
     
     SubClassOf: 
-        EnergyCarrier,
+        EnergyCarrierDisposition,
         <http://purl.obolibrary.org/obo/BFO_0000034>
     
     
@@ -327,7 +327,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
         <http://purl.obolibrary.org/obo/IAO_0000119> "\"Nuclear fuel is an energy carrier used in nuclear power stations to produce heat for steam turbines. Heat is created when the nuclear fuel undergoes nuclear fission.\""
     
     SubClassOf: 
-        EnergyCarrier
+        EnergyCarrierDisposition
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfCarbonDioxide>
@@ -428,11 +428,11 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfUranium>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableEnergyCarrier>
 
     EquivalentTo: 
-        EnergyCarrier
+        EnergyCarrierDisposition
          and (has_origin value renewable)
     
     SubClassOf: 
-        EnergyCarrier
+        EnergyCarrierDisposition
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
@@ -733,8 +733,8 @@ Class: CombustionFuel
         <http://purl.obolibrary.org/obo/IAO_0000115> "CombustionFuel is an EnergyCarrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances."
     
     SubClassOf: 
-        EnergyCarrier,
-        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
+        EnergyCarrierDisposition,
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
     
     
 Class: CommericalDemand
@@ -950,10 +950,10 @@ Class: Energy
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: EnergyCarrier
+Class: EnergyCarrierDisposition
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An EnergyCarrier is a disposition of an object or objectAggregate that contains energy for conversion as usable energy."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EnergyCarrierDisposition is a disposition of an object or objectAggregate that contains energy for conversion as usable energy."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>
@@ -1017,7 +1017,7 @@ Class: EnergyGeneratorTechnology
     
     SubClassOf: 
         Technology,
-        has_physical_input some (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier),
+        has_physical_input some (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition),
         has_physical_output some Power
     
     
@@ -1196,7 +1196,7 @@ Source: https://en.wikipedia.org/wiki/Electric_generator"@en
     
     SubClassOf: 
         ArtificialObject,
-        uses some EnergyCarrier,
+        uses some EnergyCarrierDisposition,
         uses some EnergyGeneratorTechnology
     
     DisjointWith: 
@@ -1947,7 +1947,7 @@ Class: PortionOfAir
     SubClassOf: 
         PortionOfMatter,
         is_used_by some StorageUnit,
-        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
     
     
 Class: PortionOfAnthracite
@@ -2496,7 +2496,7 @@ Class: PortionOfWater
     
     SubClassOf: 
         PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrier
+        <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
     
     
 Class: PortionOfWoodAndOther
