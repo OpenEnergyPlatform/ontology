@@ -665,6 +665,7 @@ Class: Biodiesel
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
+        has_normal_state_of_matter value liquid,
         has_origin value biogenic
     
     
@@ -724,6 +725,7 @@ Class: Biogasoline
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
+        has_normal_state_of_matter value liquid,
         has_origin value biogenic
     
     
@@ -785,7 +787,9 @@ Class: Charcoal
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en
     
     SubClassOf: 
-        PortionOfMatter
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition
     
     
 Class: City
@@ -1969,6 +1973,8 @@ Class: ManufacturedCoalBasedGas
     
     SubClassOf: 
         PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value gaseous,
         has_origin value fossil
     
@@ -2243,6 +2249,7 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     
     SubClassOf: 
         PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_origin value fossil
     
@@ -2730,6 +2737,7 @@ Class: SolidFossilFuel
     EquivalentTo: 
         (<http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition)
          and (has_normal_state_of_matter value solid)
+         and (has_origin value fossil)
     
     SubClassOf: 
         Fuel,
@@ -2953,6 +2961,9 @@ Class: WasteFuel
     EquivalentTo: 
         Fuel
          and (<http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition
     
     
 Class: WastePowerplant
