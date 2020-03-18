@@ -313,6 +313,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
         <http://purl.obolibrary.org/obo/BFO_0000034>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/FluorinatedGreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "FluorinatedGreenhouseGas is a GreenhouseGas that is produced by fluorination. Hence they contains Fluor (F) atoms and are of anthropogenic origin."
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo-physical/NitrogenTrifluoride> or <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride> or Hydrofluorocarbon or Perfluorocarbon
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
 
     Annotations: 
@@ -341,21 +353,9 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
         PortionOfMatter,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
- 
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/FluorinatedGreenhouseGas>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "FluorinatedGreenhouseGas is a GreenhouseGas that is produced by fluorination. Hence they contains Fluor (F) atoms and are of anthropogenic origin."
-    
-    EquivalentTo: 
-        <http://openenergy-platform.org/ontology/oeo-physical/NitrogenTrifluoride> or <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride> or Hydrofluorocarbon or Perfluorocarbon
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
-        
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
+
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A GreenhouseGas is a portion of matter that has the disposition to contribute to the greenhouse effect.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
@@ -413,18 +413,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearEnergyCarrie
         EnergyCarrierDisposition
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PortionOfFluorinatedGreenhouseGas>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PortionOfFluorinatedGreenhouseGas is a PortionOfGreenhouseGas that is produced by fluorination. Hence they contains Fluor (F) atoms and are of anthropogenic origin."
-    
-    EquivalentTo: 
-        <http://openenergy-platform.org/ontology/oeo-physical/NitrogenTrifluoride> or <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride> or Hydrofluorocarbon or Perfluorocarbon
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
 
     Annotations: 
@@ -449,6 +437,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ThermalEnergyStorage is an EnergyStorage that stores thermal energy for later use."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Uranium>
 
     Annotations: 
@@ -460,15 +457,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Uranium>
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearEnergyCarrierDisposition>,
         has_normal_state_of_matter value solid,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A ThermalEnergyStorage is an EnergyStorage that stores thermal energy for later use."
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>
@@ -932,7 +920,6 @@ Class: CombustionFuel
     
     SubClassOf: 
         Fuel
-
     
     
 Class: CommericalDemand
@@ -2469,17 +2456,6 @@ Class: PortionOfSolidBiomass
         has_origin value renewable
     
     
-Class: PumpedWater
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
-    
-    SubClassOf: 
-        Water,
-        is_used_by some StorageUnit
-        
-    
 Class: Power
 
     Annotations: 
@@ -2533,7 +2509,18 @@ Class: PumpedStoragePlant
     SubClassOf: 
         HydroelectricPowerplant
     
+    
+Class: PumpedWater
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
+    
+    SubClassOf: 
+        Water,
+        is_used_by some StorageUnit
+    
+    
 Class: PumpstoragePowerplant
 
     SubClassOf: 
@@ -3316,3 +3303,4 @@ DisjointClasses:
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
+
