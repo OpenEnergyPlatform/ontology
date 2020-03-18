@@ -70,6 +70,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000086>
 
     
@@ -298,6 +301,18 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
         Energy
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "EnergyStorage is a function of an ArtificialObject that has been engineered to contain energy for conversion as usable energy later.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
+    
+    SubClassOf: 
+        EnergyCarrierDisposition,
+        <http://purl.obolibrary.org/obo/BFO_0000034>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
 
     Annotations: 
@@ -326,9 +341,21 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
         PortionOfMatter,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
+ 
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/FluorinatedGreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "FluorinatedGreenhouseGas is a GreenhouseGas that is produced by fluorination. Hence they contains Fluor (F) atoms and are of anthropogenic origin."
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo-physical/NitrogenTrifluoride> or <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride> or Hydrofluorocarbon or Perfluorocarbon
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
+        
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
-
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A GreenhouseGas is a portion of matter that has the disposition to contribute to the greenhouse effect.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
@@ -435,6 +462,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Uranium>
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ThermalEnergyStorage is an EnergyStorage that stores thermal energy for later use."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>
 
     Annotations: 
@@ -490,6 +526,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000030>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000034>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000038>
@@ -624,8 +663,9 @@ Class: Battery
         <http://purl.obolibrary.org/obo/IAO_0000115> "A Battery is a device using different chemical or physical reactions to store energy."@en
     
     SubClassOf: 
-        Thermal,
-        is_used_by some StorageUnit
+        EnergyStorageObject,
+        is_used_by some StorageUnit,
+        <http://purl.obolibrary.org/obo/RO_0000085> some BatteryStorage
     
     
 Class: BatteryElectric
@@ -640,7 +680,7 @@ Class: BatteryStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en
     
     SubClassOf: 
-        EnergyStorage
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     DisjointWith: 
         MethanationGasStorage
@@ -892,6 +932,7 @@ Class: CombustionFuel
     
     SubClassOf: 
         Fuel
+
     
     
 Class: CommericalDemand
@@ -1030,7 +1071,7 @@ Class: ElectricVehicle
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Electric_vehicle&oldid=906776214"@en
     
     SubClassOf: 
-        EnergyStorage
+        ArtificialObject
     
     
 Class: ElectricalEnergy
@@ -1152,8 +1193,7 @@ Class: Energy
 Class: EnergyCarrierDisposition
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An EnergyCarrier is a disposition of an object or objectAggregate that contains energy for conversion as usable energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Energy_carrier&oldid=828742268"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EnergyCarrierDisposition is a disposition of an object or objectAggregate that contains energy for conversion as usable energy."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>
@@ -1227,11 +1267,17 @@ Class: EnergyProduction
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: EnergyStorage
+Class: EnergyStorageObject
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EnergyStorageObject is an artificial object that has the function EnergyStorage.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
+    
     SubClassOf: 
         ArtificialObject,
-        applies_technology some EnergyStorageTechnology
+        applies_technology some EnergyStorageTechnology,
+        <http://purl.obolibrary.org/obo/RO_0000085> some <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     
 Class: EnergyStorageTechnology
@@ -1985,7 +2031,7 @@ Class: MethanationGasStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en
     
     SubClassOf: 
-        EnergyStorage
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     DisjointWith: 
         BatteryStorage
@@ -2423,6 +2469,17 @@ Class: PortionOfSolidBiomass
         has_origin value renewable
     
     
+Class: PumpedWater
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
+    
+    SubClassOf: 
+        Water,
+        is_used_by some StorageUnit
+        
+    
 Class: Power
 
     Annotations: 
@@ -2448,23 +2505,23 @@ Class: PowerPlantData
         CommonParameters
     
     
-Class: PowerToGas
+Class: PowerToGasSystem
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power-to-gas (often abbreviated P2G) is a technology that converts electrical power to a gas fuel. When using surplus power from wind generation, the concept is sometimes called windgas. There are currently three methods in use; all use electricity to split water into hydrogen and oxygen by means of electrolysis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "a power-to-gas (often abbreviated P2G) system is an energy storage object that converts electrical power to a gas fuel. When using surplus power from wind generation, the concept is sometimes called windgas. There are currently three methods in use; all use electricity to split water into hydrogen and oxygen by means of electrolysis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en
     
     SubClassOf: 
-        EnergyStorage
+        EnergyStorageObject
     
     
 Class: PumpedStorage
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) uses water from a higher reservoir to generate energy"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) is an energy storage that uses water from a higher reservoir to generate energy."@en
     
     SubClassOf: 
-        EnergyStorage,
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>,
         is_used_by some StorageUnit
     
     
@@ -2476,18 +2533,7 @@ Class: PumpedStoragePlant
     SubClassOf: 
         HydroelectricPowerplant
     
-    
-Class: PumpedWater
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "energy in the form of gravitational potential energy of water, pumped from a lower elevation reservoir to a higher elevation"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
-    
-    SubClassOf: 
-        Water,
-        is_used_by some StorageUnit
-    
-    
 Class: PumpstoragePowerplant
 
     SubClassOf: 
@@ -2616,6 +2662,17 @@ Class: RunOfRiverPowerplant
     
     DisjointWith: 
         ReservoirPowerplant, TidalPowerPlant
+    
+    
+Class: SMES
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Superconducting magnetic energy storage (SMES) systems store energy in the magnetic field created by the flow of direct current in a superconducting coil which has been cryogenically cooled to a temperature below its superconducting critical temperature.
+          A typical SMES system includes three parts: superconducting coil, power conditioning system and cryogenically cooled refrigerator. Once the superconducting coil is charged, the current will not decay and the magnetic energy can be stored indefinitely."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Superconducting_magnetic_energy_storage&oldid=902190687"
+    
+    SubClassOf: 
+        EnergyStorageObject
     
     
 Class: Sea
@@ -2795,17 +2852,6 @@ Class: Subgrid
         <http://purl.obolibrary.org/obo/BFO_0000051> some ElectricityGridComponent
     
     
-Class: SuperconductingMagneticEnergy
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Superconducting magnetic energy storage (SMES) systems store energy in the magnetic field created by the flow of direct current in a superconducting coil which has been cryogenically cooled to a temperature below its superconducting critical temperature.
-          A typical SMES system includes three parts: superconducting coil, power conditioning system and cryogenically cooled refrigerator. Once the superconducting coil is charged, the current will not decay and the magnetic energy can be stored indefinitely."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Superconducting_magnetic_energy_storage&oldid=902190687"
-    
-    SubClassOf: 
-        EnergyStorage
-    
-    
 Class: Technology
 
     Annotations: 
@@ -2813,16 +2859,6 @@ Class: Technology
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
-Class: Thermal
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Thermal energy storage (TES) is a technology that stocks thermal energy by heating or cooling a storage medium so that the stored energy can be used at a later time for heating and cooling applications and power generation. TES systems are used particularly in buildings and in industrial processes."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Sarbu, Ioan & Sebarchievici, C. (2018). A Comprehensive Review of Thermal Energy Storage. Sustainability (Switzerland). 10. 10.3390/su10010191. "
-    
-    SubClassOf: 
-        EnergyStorage
     
     
 Class: TidalPowerPlant
@@ -2914,7 +2950,7 @@ Class: UndergroundHydrogenStorage
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780"
     
     SubClassOf: 
-        EnergyStorage
+        ArtificialObject
     
     
 Class: UndirectedEdge
@@ -3267,7 +3303,7 @@ DisjointClasses:
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
 
 DisjointClasses: 
-    ElectricityGenerator,EnergyGenerator,EnergyStorage,EnergyTransfer,HeatGenerator
+    ElectricityGenerator,EnergyGenerator,EnergyStorageObject,EnergyTransfer,HeatGenerator
 
 DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
@@ -3280,4 +3316,3 @@ DisjointClasses:
 
 DisjointClasses: 
     Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
