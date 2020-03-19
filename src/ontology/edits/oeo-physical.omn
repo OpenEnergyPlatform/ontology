@@ -2266,12 +2266,6 @@ Class: Office
         CommericalDemand
     
     
-Class: Oil
-
-    SubClassOf: 
-        PortionOfMatter
-    
-    
 Class: OilAndPetroleumProducts
 
     Annotations: 
@@ -2350,6 +2344,7 @@ This definition is without prejudice to the definition of renewable energy sourc
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value solid,
+        has_origin value biogenic,
         has_origin value fossil
     
     
@@ -2448,8 +2443,13 @@ Class: PortionOfSolidBiomass
         rdfs:label "SolidBiofuel"@en,
         rdfs:label "SolidBiomass"@en
     
+    EquivalentTo: 
+        (has_normal_state_of_matter value solid)
+         and (has_origin value biogenic)
+    
     SubClassOf: 
         PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value solid,
         has_origin value biogenic,
