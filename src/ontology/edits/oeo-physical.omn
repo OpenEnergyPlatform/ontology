@@ -597,7 +597,6 @@ Class: Battery
     
     SubClassOf: 
         EnergyStorageObject,
-        is_used_by some StorageUnit,
         <http://purl.obolibrary.org/obo/RO_0000085> some BatteryStorage
     
     
@@ -744,12 +743,6 @@ Class: CommericalDemand
 
     SubClassOf: 
         Demand
-    
-    
-Class: CommonParameters
-
-    SubClassOf: 
-        ElectricityProductionUnit
     
     
 Class: ConsumptionQuantity
@@ -914,12 +907,6 @@ Class: ElectricityGridComponent
         <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
-Class: ElectricityProductionUnit
-
-    SubClassOf: 
-        ElectricityGridComponent
-    
-    
 Class: Emission
 
     Annotations: 
@@ -1050,13 +1037,6 @@ Class: EnergyStorageTechnology
     
     SubClassOf: 
         Technology
-    
-    
-Class: EnergyTransfer
-
-    SubClassOf: 
-        ArtificialObject,
-        applies_technology some EnergyTransferTechnology
     
     
 Class: EnergyTransferTechnology
@@ -1543,12 +1523,6 @@ Class: InstalledPowerQuantity
         Quantity
     
     
-Class: InternalCombustion
-
-    SubClassOf: 
-        EnergyGeneratorTechnology
-    
-    
 Class: InternalCombustionVehicle
 
     Annotations: 
@@ -1927,12 +1901,6 @@ Class: PhotovoltaicPowerplant
         <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
     
     
-Class: PlantOperation
-
-    SubClassOf: 
-        CommonParameters
-    
-    
 Class: Pollution
 
     Annotations: 
@@ -1952,7 +1920,6 @@ Class: PortionOfAir
     
     SubClassOf: 
         PortionOfMatter,
-        is_used_by some StorageUnit,
         <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
     
     
@@ -2121,8 +2088,7 @@ Class: PortionOfDammedWater
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en
     
     SubClassOf: 
-        PortionOfWater,
-        is_used_by some StorageUnit
+        PortionOfWater
     
     
 Class: PortionOfDieselFuel
@@ -2434,8 +2400,7 @@ Class: PortionOfPumpedWater
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Pumped-storage_hydroelectricity&oldid=906590319"@en
     
     SubClassOf: 
-        PortionOfWater,
-        is_used_by some StorageUnit
+        PortionOfWater
     
     
 Class: PortionOfRenewableMunicipalWasteFuel
@@ -2534,12 +2499,6 @@ Class: PowerGeneratingUnit
         uses some EnergyTransferTechnology
     
     
-Class: PowerPlantData
-
-    SubClassOf: 
-        CommonParameters
-    
-    
 Class: PowerToGasSystem
 
     Annotations: 
@@ -2556,8 +2515,7 @@ Class: PumpedStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) is an energy storage that uses water from a higher reservoir to generate energy."@en
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>,
-        is_used_by some StorageUnit
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     
 Class: PumpedStoragePlant
@@ -2848,17 +2806,6 @@ Class: StorageHydropowerplant
 
     SubClassOf: 
         ReservoirPowerplant
-    
-    
-Class: StorageUnit
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en
-    
-    SubClassOf: 
-        ElectricityGridComponent,
-        uses some EnergyStorageTechnology,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
 Class: Subgrid
@@ -3295,13 +3242,7 @@ DisjointClasses:
     BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
 
 DisjointClasses: 
-    Bus,Generator,PowerGeneratingUnit,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
-
-DisjointClasses: 
-    ElectricityGenerator,EnergyGenerator,EnergyStorageObject,EnergyTransfer,HeatGenerator
 
 DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
@@ -3312,5 +3253,3 @@ DisjointClasses:
 DisjointClasses: 
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
-DisjointClasses: 
-    Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
