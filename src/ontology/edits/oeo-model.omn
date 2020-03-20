@@ -531,7 +531,7 @@ Class: CodeDocumentation
         <http://purl.obolibrary.org/obo/IAO_0000115> "A CodeDocumentation is a Documentation explaining and annotating software code."^^xsd:string
     
     SubClassOf: 
-        Documentation
+        SoftwareDocumentation
     
     
 Class: CodeSource
@@ -662,12 +662,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/272"
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/IAO_0000027>
     
     
-Class: Documentation
-
-    SubClassOf: 
-        SoftwareMaintenance
-    
-    
 Class: Ecological
 
     SubClassOf: 
@@ -718,13 +712,7 @@ Class: FixedOperationCost
 
     SubClassOf: 
         Cost
-    
-    
-Class: Framework
-
-    SubClassOf: 
-        SoftwareElement
-    
+      
     
 Class: FrameworkFactsheet
 
@@ -774,7 +762,7 @@ Class: InstallationGuide
         <http://purl.obolibrary.org/obo/IAO_0000115> "An InstallationGuide is a Documentation intended to help Users install a Software."^^xsd:string
     
     SubClassOf: 
-        Documentation
+        SoftwareDocumentation
     
     
 Class: Interface
@@ -1117,10 +1105,28 @@ Class: SoftwareDescriptor
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
+Class: SoftwareDocumentation
+
+    Annotations: 
+        rdfs:comment "A software documentation is a document containing explanations and tutorials how to use a program and is delivered with that program."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    
 Class: SoftwareElement
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: SoftwareFramework
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SoftwareFramework is a Software that is generic and can be adapted to a specific application."
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
@@ -1225,7 +1231,7 @@ Class: UserDocumentation
         <http://purl.obolibrary.org/obo/IAO_0000115> "A UserDocumentation is a Documentation intended to assist Users in using the software."^^xsd:string
     
     SubClassOf: 
-        Documentation
+        SoftwareDocumentation
     
     
 Class: Validation
@@ -1258,13 +1264,13 @@ Class: Website
 Individual: <http://openenergy-platform.org/ontology/oeo/C++>
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/MS_Excel/VBA>
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/Spatial(GIS)>
@@ -1360,7 +1366,7 @@ Individual: False
 Individual: Fortran
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: FuzzyLogic
@@ -1372,7 +1378,7 @@ Individual: FuzzyLogic
 Individual: GAMS
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: GLPK
@@ -1384,7 +1390,7 @@ Individual: GLPK
 Individual: GNU
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Gurobi
@@ -1408,7 +1414,7 @@ Individual: Inactive
 Individual: Java
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: LinearProgramming
@@ -1426,7 +1432,7 @@ Individual: MOSEK
 Individual: MS_Excel
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Macro-Economic
@@ -1438,13 +1444,13 @@ Individual: Macro-Economic
 Individual: MathProg
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Matlab
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: MixedIntegerLinearProgramming
@@ -1456,7 +1462,7 @@ Individual: MixedIntegerLinearProgramming
 Individual: Modellca
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: MonteCarlo
@@ -1489,7 +1495,7 @@ Individual: Other
 Individual: PHP
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Passive
@@ -1501,19 +1507,19 @@ Individual: Passive
 Individual: Python
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: R
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Ruby
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Simulation
