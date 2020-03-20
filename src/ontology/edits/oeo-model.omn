@@ -620,7 +620,7 @@ Class: DataFormat
 Class: DataPostprocessing
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "DataPostProcessing is DataProcessing happening after the main processing happened to prepare the data for output."^^xsd:string
+        <http://purl.obolibrary.org/obo/IAO_0000115> "DataPostProcessing is DataProcessing that transforms the output of a model calculation into a form that is suitable for presentation."^^xsd:string
     
     SubClassOf: 
         DataProcessing
@@ -629,7 +629,7 @@ Class: DataPostprocessing
 Class: DataPreprocessing
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "DataPreProcessing is DataProcessing happening to the raw data to prepare it for the main processing."^^xsd:string
+        <http://purl.obolibrary.org/obo/IAO_0000115> "DataPreProcessing is DataProcessing that transforms the input into a form that is useable for a model calculation."^^xsd:string
     
     SubClassOf: 
         DataProcessing
@@ -639,10 +639,13 @@ Class: DataProcessing
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/252
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/289"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/289",
+        rdfs:comment "data processing is a transformation in which a data item gets transformed."
+
     
     SubClassOf: 
-        SoftwareElement
+        Transformation,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/IAO_0000027>
     
     
 Class: DataProcessingSoftware
@@ -963,24 +966,6 @@ Class: PoliticalAssumption
     
     SubClassOf: 
         Assumption
-    
-    
-Class: Postprocessing
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Postprocessing is a transformation that transforms the output of a model calculation into a form that is suitable for presentation."@en
-    
-    SubClassOf: 
-        Transformation
-    
-    
-Class: Preprocessing
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Preprocessing is a transformation that transforms the input into a form that is useable for a model calculation."@en
-    
-    SubClassOf: 
-        Transformation
     
     
 Class: PrimaryOutputs
