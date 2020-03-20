@@ -13,9 +13,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/iao-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
-Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -35,6 +35,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/title>
@@ -59,6 +62,9 @@ AnnotationProperty: rdfs:label
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
@@ -443,6 +449,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: <http://purl.obolibrary.org/obo/IAO_0000010>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000027>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000028>
 
     
@@ -458,8 +467,14 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000100>
 Class: <http://purl.obolibrary.org/obo/IAO_0000300>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000310>
+
+    
 Class: API
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An API (Application Programming Interface) is an Interface allowing two Software applications to communicate with each other."^^xsd:string
+    
     SubClassOf: 
         Interface
     
@@ -492,12 +507,6 @@ Class: Assumption
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
-Class: AutoModelGenerator
-
-    SubClassOf: 
-        SoftwareElement
-    
-    
 Class: BooleanVariable
 
     Annotations: 
@@ -509,18 +518,27 @@ Class: BooleanVariable
     
 Class: CitationReference
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CitationReference is a Reference stating where a citation was taken from."^^xsd:string
+    
     SubClassOf: 
         Reference
     
     
 Class: CodeDocumentation
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CodeDocumentation is a Documentation explaining and annotating software code."^^xsd:string
+    
     SubClassOf: 
-        Documentation
+        SoftwareDocumentation
     
     
 Class: CodeSource
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CodeSource is a DataDescriptor describing the origin of some code."^^xsd:string
+    
     SubClassOf: 
         DataDescriptor
     
@@ -531,18 +549,11 @@ Class: CollaborativeProgramming
         OpenSource
     
     
-Class: Community
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a person or organization that uses economic services or commodities. A consumer is one that buys good for consumption and not for the resale and commercial purpose. The consumer is an individual who pays some amount of money or the thing required to consume goods and services produced."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Consumer&oldid=906220763"@en
-    
-    SubClassOf: 
-        Support
-    
-    
 Class: ComputationTime
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "ComputationTime is a SoftwareDescriptor describing how long a Software or an Algorithm needs to compute."^^xsd:string
+    
     SubClassOf: 
         SoftwareDescriptor
     
@@ -587,12 +598,18 @@ source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en
     
 Class: DataDescriptor
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DataDescriptor is an information content entity that contains additional information about some data."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: DataFormat
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DataFormat is a DataDescriptor that describes in which format the data is encoded."^^xsd:string
+    
     SubClassOf: 
         DataDescriptor
     
@@ -602,12 +619,18 @@ Class: DataFormat
     
 Class: DataPostprocessing
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "DataPostProcessing is DataProcessing happening after the main processing happened to prepare the data for output."^^xsd:string
+    
     SubClassOf: 
         DataProcessing
     
     
 Class: DataPreprocessing
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "DataPreProcessing is DataProcessing happening to the raw data to prepare it for the main processing."^^xsd:string
+    
     SubClassOf: 
         DataProcessing
     
@@ -620,20 +643,23 @@ Class: DataProcessing
     
 Class: DataProcessingSoftware
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "DataProcessingSoftware is Software used in the context of DataProcessing."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
 Class: Database
 
-    SubClassOf: 
-        DataFormat
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Database is an information content entity that stores data items and data sets.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/253
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/272"
     
-    
-Class: Documentation
-
     SubClassOf: 
-        SoftwareMaintenance
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/IAO_0000027>
     
     
 Class: Ecological
@@ -663,36 +689,36 @@ Class: EmpiricalDataset
     
 Class: ExternalOptimizer
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ExternalOptimizer is a Software external to a Model that computes an Optimization."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
 Class: Factsheet
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A factsheet is a document that collects information about a specific topic in a structured way.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/250
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/271",
+        rdfs:comment "this entity is general and not specific to the OEP factsheets."
+    
     SubClassOf: 
-        EmpiricalDataset
+        <http://purl.obolibrary.org/obo/IAO_0000310>
     
     
 Class: FixedOperationCost
 
     SubClassOf: 
         Cost
-    
-    
-Class: Forum
-
-    SubClassOf: 
-        Support
-    
-    
-Class: Framework
-
-    SubClassOf: 
-        SoftwareElement
-    
+      
     
 Class: FrameworkFactsheet
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FrameworkFactsheet is a Factsheet that contains information about a software framework."^^xsd:string
+    
     SubClassOf: 
         Factsheet
     
@@ -711,6 +737,9 @@ Class: Funding
     
 Class: GUI
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GUI (Graphical User Interface)  is an Interface allowing Users to communicate with a Software application through a graphical window."^^xsd:string
+    
     SubClassOf: 
         Interface
     
@@ -720,18 +749,27 @@ Class: GUI
     
 Class: GridModel
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GridModel is a Model is about the ElectricityGrid."^^xsd:string
+    
     SubClassOf: 
         SoftwareElement
     
     
 Class: InstallationGuide
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An InstallationGuide is a Documentation intended to help Users install a Software."^^xsd:string
+    
     SubClassOf: 
-        Documentation
+        SoftwareDocumentation
     
     
 Class: Interface
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An Interface is a SoftwareElement that enables an Agent to interact with a software."^^xsd:string
+    
     SubClassOf: 
         SoftwareElement
     
@@ -744,14 +782,11 @@ Class: InvestmentCost
     
 Class: License
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A License is a SoftwareDescriptor that determines the official permissions for using the software."^^xsd:string
+    
     SubClassOf: 
         SoftwareDescriptor
-    
-    
-Class: LinearOptimalPowerflow
-
-    SubClassOf: 
-        GridModel
     
     
 Class: Logo
@@ -762,6 +797,9 @@ Class: Logo
     
 Class: MarketModel
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A MarketModel is a Model is about the EnergyMarket."^^xsd:string
+    
     SubClassOf: 
         Model
     
@@ -774,6 +812,9 @@ Class: MathematicalConcept
     
 Class: Maximization
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Minimization is a ModelFunction that minimizes some Variable of a Model."^^xsd:string
+    
     SubClassOf: 
         ModelFunction
     
@@ -824,14 +865,11 @@ Class: ModelComponent
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: ModelExamples
-
-    SubClassOf: 
-        Support
-    
-    
 Class: ModelFactsheet
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ModelFactsheet is a Factsheet that contains information about a model."^^xsd:string
+    
     SubClassOf: 
         Factsheet
     
@@ -854,18 +892,27 @@ Class: ModelingSoftware
     
 Class: Modus
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Modus is an information content entity describing the state of activity something has, e.g. active, inactive or passive."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: ObjectiveFunction
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ObjectiveFunction is an information content entity stating the function that should be maximised or minimised to solve the problem."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: OpenSource
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "OpenSource is a SoftwareDescriptor labeling software whose source code is available online for free and can be modified or redistributed."^^xsd:string
+    
     SubClassOf: 
         SoftwareDescriptor
     
@@ -896,6 +943,9 @@ Class: OptimizationModel
     
 Class: Plotting
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Plotting is DataProcessing where data is visualised in form of a diagram."^^xsd:string
+    
     SubClassOf: 
         DataProcessing
     
@@ -929,12 +979,18 @@ Class: Preprocessing
     
 Class: PrimaryOutputs
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PrimaryOutputs is a ContentDescriptor stating the main outputs of the content."^^xsd:string
+    
     SubClassOf: 
         ContentDescriptor
     
     
 Class: PrimaryPurpose
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PrimaryPurpose is a ContentDescriptor stating the main purpose of a content."^^xsd:string
+    
     SubClassOf: 
         ContentDescriptor
     
@@ -969,12 +1025,18 @@ Class: Public
     
 Class: Reference
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Reference is an information content entity naming a relevant document, position in a document or address."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: Robustness
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Robustness is Validation stating how secure sth is against changes."^^xsd:string
+    
     SubClassOf: 
         Validation
     
@@ -991,6 +1053,9 @@ There is not yet a consens about the definition."@en
     
 Class: ScenarioFactsheet
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ScenarioFactsheet is a Factsheet that contains information about a Scenario."^^xsd:string
+    
     SubClassOf: 
         Factsheet
     
@@ -1018,6 +1083,9 @@ Class: SimulationModel
     
 Class: SingleNodeModel
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SingleNodeModel is a GridModel where a region is represented as a single node."^^xsd:string
+    
     SubClassOf: 
         GridModel
     
@@ -1030,14 +1098,35 @@ Class: Social
     
 Class: SoftwareDescriptor
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SoftwareDescriptor is an information content entity that contains additional information about the software."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: SoftwareDocumentation
+
+    Annotations: 
+        rdfs:comment "A software documentation is a document containing explanations and tutorials how to use a program and is delivered with that program."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
     
     
 Class: SoftwareElement
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a part of a model."@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: SoftwareFramework
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SoftwareFramework is a Software that is generic and can be adapted to a specific application."
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
@@ -1051,6 +1140,9 @@ Class: SoftwareMaintenance
     
 Class: Solver
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Solver is a SoftwareElement that solves a mathematical problem."^^xsd:string
+    
     SubClassOf: 
         SoftwareElement
     
@@ -1060,18 +1152,11 @@ Class: Study
     SubClassOf: 
         Reference
     
-    
-Class: Support
-
-    SubClassOf: 
-        SoftwareMaintenance
-    
-    
 Class: SynthethicDataset
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is optained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is obtained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000100>
@@ -1088,6 +1173,9 @@ Class: Technical
     
 Class: TestDataset
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A TestDataset is a data set used for testing."^^xsd:string
+    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000100>
     
@@ -1119,7 +1207,7 @@ Class: Transformation
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: TranshipmentModel
+Class: TransshipmentModel
 
     SubClassOf: 
         GridModel
@@ -1139,8 +1227,11 @@ Class: Uncertainty
     
 Class: UserDocumentation
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A UserDocumentation is a Documentation intended to assist Users in using the software."^^xsd:string
+    
     SubClassOf: 
-        Documentation
+        SoftwareDocumentation
     
     
 Class: Validation
@@ -1152,7 +1243,7 @@ Class: Validation
 Class: Variable
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A Variable is an InformationArtifact that represents a changable value, vector, matrix or function within a mathematical expression."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Variable is an information content entity that represents a changeable value, vector, matrix or function within a mathematical expression."@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
@@ -1170,22 +1261,16 @@ Class: Website
         CorporateIdentity
     
     
-Class: Workshop
-
-    SubClassOf: 
-        Support
-    
-    
 Individual: <http://openenergy-platform.org/ontology/oeo/C++>
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/MS_Excel/VBA>
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/Spatial(GIS)>
@@ -1281,7 +1366,7 @@ Individual: False
 Individual: Fortran
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: FuzzyLogic
@@ -1293,7 +1378,7 @@ Individual: FuzzyLogic
 Individual: GAMS
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: GLPK
@@ -1305,7 +1390,7 @@ Individual: GLPK
 Individual: GNU
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Gurobi
@@ -1329,7 +1414,7 @@ Individual: Inactive
 Individual: Java
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: LinearProgramming
@@ -1347,7 +1432,7 @@ Individual: MOSEK
 Individual: MS_Excel
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Macro-Economic
@@ -1359,13 +1444,13 @@ Individual: Macro-Economic
 Individual: MathProg
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Matlab
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: MixedIntegerLinearProgramming
@@ -1377,7 +1462,7 @@ Individual: MixedIntegerLinearProgramming
 Individual: Modellca
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: MonteCarlo
@@ -1410,7 +1495,7 @@ Individual: Other
 Individual: PHP
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Passive
@@ -1422,19 +1507,19 @@ Individual: Passive
 Individual: Python
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: R
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Ruby
 
     Types: 
-        Framework
+        SoftwareFramework
     
     
 Individual: Simulation
@@ -1499,7 +1584,4 @@ Individual: gdx
     Types: 
         DataFormat
     
-    
-DisjointClasses: 
-    LinearOptimalPowerflow,SingleNodeModel,TranshipmentModel
 

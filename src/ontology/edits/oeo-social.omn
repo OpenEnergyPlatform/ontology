@@ -13,8 +13,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo-social/>
 <http://openenergy-platform.org/ontology/v0.0.1/oeo-social/>
-Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -31,6 +31,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/title>
@@ -201,7 +204,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: Agent
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -214,6 +219,15 @@ Class: Author
     
     SubClassOf: 
         Agent
+    
+    
+Class: CarbonDioxideEmissionTrafficSector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en
+    
+    SubClassOf: 
+        Sector
     
     
 Class: Client
@@ -377,7 +391,8 @@ Class: Prosumer
 Class: Sector
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000027>
@@ -386,7 +401,8 @@ Class: Sector
 Class: SectorDivision
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorDivision is a specific way to subdivide a system."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorDivision is a specific way to subdivide a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
