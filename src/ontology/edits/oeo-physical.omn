@@ -652,7 +652,6 @@ Class: Battery
     
     SubClassOf: 
         EnergyStorageObject,
-        is_used_by some StorageUnit,
         <http://purl.obolibrary.org/obo/RO_0000085> some BatteryStorage
     
     
@@ -928,11 +927,7 @@ Class: CommericalDemand
         Demand
     
     
-Class: CommonParameters
-
-    SubClassOf: 
-        ElectricityProductionUnit
-    
+   
     
 Class: CompressedAir
 
@@ -941,8 +936,7 @@ Class: CompressedAir
     
     SubClassOf: 
         Air
-    
-    
+
 Class: ConsumptionQuantity
 
     Annotations: 
@@ -1138,12 +1132,6 @@ Class: ElectricityGridComponent
         <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
-Class: ElectricityProductionUnit
-
-    SubClassOf: 
-        ElectricityGridComponent
-    
-    
 Class: Emission
 
     Annotations: 
@@ -1274,13 +1262,6 @@ Class: EnergyStorageTechnology
     
     SubClassOf: 
         Technology
-    
-    
-Class: EnergyTransfer
-
-    SubClassOf: 
-        ArtificialObject,
-        applies_technology some EnergyTransferTechnology
     
     
 Class: EnergyTransferTechnology
@@ -1853,12 +1834,6 @@ Class: InstalledPowerQuantity
         Quantity
     
     
-Class: InternalCombustion
-
-    SubClassOf: 
-        EnergyGeneratorTechnology
-    
-    
 Class: InternalCombustionVehicle
 
     Annotations: 
@@ -2056,11 +2031,7 @@ Class: MoltenStateBattery
         Battery
     
     
-Class: Month
-
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000038>
-    
+  
     
 Class: MotorGasoline
 
@@ -2073,7 +2044,7 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
     SubClassOf: 
         Gasoline
     
-    
+
 Class: MunicipalWasteFuel
 
     Annotations: 
@@ -2157,7 +2128,7 @@ Class: NonAssociatedGas
     
     SubClassOf: 
         NaturalGas
-    
+   
     
 Class: NonMethaneVolatileOrganicCompound
 
@@ -2475,12 +2446,6 @@ Class: PowerGeneratingUnit
         uses some EnergyTransferTechnology
     
     
-Class: PowerPlantData
-
-    SubClassOf: 
-        CommonParameters
-    
-    
 Class: PowerToGasSystem
 
     Annotations: 
@@ -2497,8 +2462,7 @@ Class: PumpedStorage
         <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) is an energy storage that uses water from a higher reservoir to generate energy."@en
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>,
-        is_used_by some StorageUnit
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
     
     
 Class: PumpedStoragePlant
@@ -2806,7 +2770,7 @@ Class: StorageHydropowerplant
     SubClassOf: 
         ReservoirPowerplant
     
-    
+ 
 Class: StorageUnit
 
     Annotations: 
@@ -2826,8 +2790,7 @@ Class: SubBituminousCoal
     
     SubClassOf: 
         Coal
-    
-    
+
 Class: Subgrid
 
     Annotations: 
@@ -3114,7 +3077,7 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
         uses some WindEnergy,
         has_physical_input only WindEnergy
     
-    
+
 Class: WoodAndOther
 
     Annotations: 
@@ -3125,13 +3088,7 @@ Class: WoodAndOther
         PortionOfSolidBiomass,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>
     
-    
-Class: Year
 
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000038>
-    
-    
 Class: origin
 
     Annotations: 
@@ -3284,13 +3241,7 @@ DisjointClasses:
     BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
 
 DisjointClasses: 
-    Bus,Generator,PowerGeneratingUnit,ShuntImpedance,StorageUnit,Subgrid,Transformer
-
-DisjointClasses: 
     CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
-
-DisjointClasses: 
-    ElectricityGenerator,EnergyGenerator,EnergyStorageObject,EnergyTransfer,HeatGenerator
 
 DisjointClasses: 
     ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
@@ -3301,6 +3252,4 @@ DisjointClasses:
 DisjointClasses: 
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
 
-DisjointClasses: 
-    Generator,ShuntImpedance,StorageUnit,Subgrid,Transformer
 
