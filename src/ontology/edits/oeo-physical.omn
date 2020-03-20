@@ -816,7 +816,9 @@ Class: Charcoal
     SubClassOf: 
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
-        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
+        has_normal_state_of_matter value solid,
+        has_origin value biogenic
     
     
 Class: City
@@ -927,8 +929,6 @@ Class: CommericalDemand
         Demand
     
     
-   
-    
 Class: CompressedAir
 
     Annotations: 
@@ -936,7 +936,8 @@ Class: CompressedAir
     
     SubClassOf: 
         Air
-
+    
+    
 Class: ConsumptionQuantity
 
     Annotations: 
@@ -1843,6 +1844,18 @@ Class: InternalCombustionVehicle
         Generator
     
     
+Class: JetFuel
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        rdfs:label "JetFuel"@en,
+        rdfs:label "KeroseneTypeJetFuel"@en
+    
+    SubClassOf: 
+        Kerosene
+    
+    
 Class: Kerosene
 
     Annotations: 
@@ -2031,8 +2044,6 @@ Class: MoltenStateBattery
         Battery
     
     
-  
-    
 Class: MotorGasoline
 
     Annotations: 
@@ -2044,7 +2055,7 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
     SubClassOf: 
         Gasoline
     
-
+    
 Class: MunicipalWasteFuel
 
     Annotations: 
@@ -2128,7 +2139,7 @@ Class: NonAssociatedGas
     
     SubClassOf: 
         NaturalGas
-   
+    
     
 Class: NonMethaneVolatileOrganicCompound
 
@@ -2315,7 +2326,6 @@ This definition is without prejudice to the definition of renewable energy sourc
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value solid,
-        has_origin value biogenic,
         has_origin value fossil
     
     
@@ -2366,7 +2376,6 @@ Class: PhotovoltaicPowerplant
         <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
     
     
-    
 Class: Pollution
 
     Annotations: 
@@ -2376,18 +2385,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234"
     
     SubClassOf: 
         Emission
-    
-    
-Class: JetFuel
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Distillate used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International Air Transport Association (IATA)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "JetFuel"@en,
-        rdfs:label "KeroseneTypeJetFuel"@en
-    
-    SubClassOf: 
-        Kerosene
     
     
 Class: PortionOfMatter
@@ -2765,7 +2762,7 @@ Class: StorageHydropowerplant
     SubClassOf: 
         ReservoirPowerplant
     
- 
+    
 Class: StorageUnit
 
     Annotations: 
@@ -2785,7 +2782,8 @@ Class: SubBituminousCoal
     
     SubClassOf: 
         Coal
-
+    
+    
 Class: Subgrid
 
     Annotations: 
@@ -3072,7 +3070,7 @@ Wind turbines are manufactured in a wide range of vertical and horizontal axis. 
         uses some WindEnergy,
         has_physical_input only WindEnergy
     
-
+    
 Class: WoodAndOther
 
     Annotations: 
@@ -3083,7 +3081,7 @@ Class: WoodAndOther
         PortionOfSolidBiomass,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>
     
-
+    
 Class: origin
 
     Annotations: 
@@ -3246,3 +3244,4 @@ DisjointClasses:
 
 DisjointClasses: 
     EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+
