@@ -284,7 +284,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerUnit is a RegenerativePowerUnit using biofuel as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        uses some Biofuel
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/BiogasPowerUnit>
@@ -293,7 +294,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/BiogasPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A BioGasPowerUnit is a BiofuelPowerUnit using biogas as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>,
+        uses some Biogas
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/BiogasPowerplant>
@@ -340,7 +342,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerUnit is a FossilPowerUnit using Coal as Fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        uses some Coal
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectricHeatPump>
@@ -432,7 +435,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilPowerUnit is a PowerGeneratingUnit using FossilCombustionFuel as Fuel."
     
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        uses some <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FuelCell>
@@ -483,7 +487,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/HardCoalPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A HardCoalPowerUnit is a CoalPowerUnit using HardCoal as Fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>,
+        uses some HardCoal
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/HydroPowerUnit>
@@ -502,13 +507,17 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/HydrogenPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A HydrogenPowerUnit is a PowerGeneratingUnit using hydrogen as fuel."
     
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        uses some Hydrogen
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/LignitePowerUnit>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A LignitePowerUnit is a CoalPowerUnit using Lignite as Fuel."
+    
+    EquivalentTo: 
+        uses some Lignite
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
@@ -564,7 +573,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A NuclearPowerUnit is a PowerGeneratingUnit using nuclear fuel as fuel."
     
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        uses some NuclearFuel
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
@@ -573,7 +583,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A OilPowerUnit is a FossilPowerUnit using oil as Fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        uses some OilAndPetroleumProducts
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
@@ -602,7 +613,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUn
         <http://purl.obolibrary.org/obo/IAO_0000115> "A RegenerativePowerUnit is a PowerGeneratingUnit using regenerative fuels as fuel."
     
     SubClassOf: 
-        PowerGeneratingUnit
+        PowerGeneratingUnit,
+        uses some <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
@@ -642,7 +654,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerUn
         <http://purl.obolibrary.org/obo/IAO_0000115> "A SolidBiomassPowerUnit is a BiomassPowerUnit using solid biomass as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/BiomassPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/BiomassPowerUnit>,
+        uses some PortionOfSolidBiomass
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerplant>
@@ -693,7 +706,8 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>
         <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerUnit is a FossilPowerUnit using waste as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        uses some WasteFuel
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>
