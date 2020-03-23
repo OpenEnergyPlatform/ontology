@@ -38,7 +38,7 @@ Here is a template for new release sections
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
 - Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)
-- FluorinatedGreenhouseGas (#88)
+- FluorinatedGreenhouseGas (#88) and GreenhouseGas (#234)
 - agent and subclasses (#51)
 - pollutant and subclasses (#51)
 - structure of the ontology (#47)
@@ -57,6 +57,7 @@ Here is a template for new release sections
 - ModelElement and subbclasses
 - update issue templates 'workflow checklist' (#258)
 - Generator (#273)
+- EnergyStorage (#276)
 
 
 ### Removed
