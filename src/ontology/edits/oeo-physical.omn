@@ -267,6 +267,17 @@ ObjectProperty: uses
         is_used_by
     
     
+Class: <http://openenergy-platform.org/ontology/FuelRole>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel role is a role of a portion of matter that has the disposition to be an energy carrier and is used in a process that releases the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
 
     Annotations: 
@@ -301,16 +312,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/BiomassPowerUnit>
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
-
-Class: <http://openenergy-platform.org/ontology/FuelRole>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel role is a role of a portion of matter that has the disposition to be an energy carrier and is used in a process that releases the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/CarbonDioxide>
@@ -322,7 +323,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/CarbonDioxide>
     SubClassOf: 
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffectDisposition
-
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
@@ -361,17 +361,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenera
         Generator
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformer is an artificial object that transforms or changes a certain type of energy.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
-        rdfs:comment "rename later to EnergyConvertingDevice"
-    
-    SubClassOf: 
-        ArtificialObject
-
 Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
 
     Annotations: 
@@ -384,6 +373,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
         <http://purl.obolibrary.org/obo/BFO_0000034>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformer is an artificial object that transforms or changes a certain type of energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
+        rdfs:comment "rename later to EnergyConvertingDevice"
+    
+    SubClassOf: 
+        ArtificialObject
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FluorinatedGreenhouseGas>
 
     Annotations: 
@@ -394,7 +395,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FluorinatedGreenhou
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
-
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
@@ -462,6 +462,21 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/GeothermalPowerUnit
         <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GreenhouseGas is a portion of matter that has the disposition to contribute to the greenhouse effect.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234"
+    
+    EquivalentTo: 
+        PortionOfMatter
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffectDisposition)
+    
+    SubClassOf: 
+        PortionOfMatter
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/HardCoalPowerUnit>
 
     Annotations: 
@@ -497,49 +512,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/LignitePowerUnit>
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
-    
-
-Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
-
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A GreenhouseGas is a portion of matter that has the disposition to contribute to the greenhouse effect.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234"
-    
-    EquivalentTo: 
-        PortionOfMatter
-         and (<http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseEffectDisposition)
-    
-    SubClassOf: 
-        PortionOfMatter
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A NuclearPowerUnit is a PowerGeneratingUnit using nuclear fuel as fuel."
-    
-    SubClassOf: 
-        PowerGeneratingUnit
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A OilPowerUnit is a FossilPowerUnit using oil as Fuel."
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a Generator that converts light into electrical energy."
-    
-    SubClassOf: 
-        Generator
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Methane>
@@ -586,6 +558,33 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearEnergyCarrie
         EnergyCarrierDisposition
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A NuclearPowerUnit is a PowerGeneratingUnit using nuclear fuel as fuel."
+    
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A OilPowerUnit is a FossilPowerUnit using oil as Fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a Generator that converts light into electrical energy."
+    
+    SubClassOf: 
+        Generator
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
 
     Annotations: 
@@ -605,8 +604,9 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUn
     SubClassOf: 
         PowerGeneratingUnit
     
-
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
+
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A RenewableFuel is a portion of matter that has a renewable origin and an energy carrier disposition that is used as a fuel."
     
@@ -616,39 +616,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It can work as a potent greenhouse gas and has an anthropogenic origin.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "SF6"
-    
-    SubClassOf: 
-        PortionOfMatter,
-        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A ThermalEnergyStorage is an EnergyStorage that stores thermal energy for later use."
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/Uranium>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Uranium is a PortionOfMatter that has the atomic number 92. It is a silver-grey metal."
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
-        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearEnergyCarrierDisposition>,
-        has_normal_state_of_matter value solid,
-        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>
@@ -687,12 +654,37 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerpl
         BiomassPowerplant
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>
+Class: <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride>
+
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "WasteRole is a role of an object aggregate that has been discarded after primary use."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It can work as a potent greenhouse gas and has an anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SF6"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        PortionOfMatter,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/ThermalEnergyStorage>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ThermalEnergyStorage is an EnergyStorage that stores thermal energy for later use."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/Uranium>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Uranium is a PortionOfMatter that has the atomic number 92. It is a silver-grey metal."
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearEnergyCarrierDisposition>,
+        has_normal_state_of_matter value solid,
+        has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>
@@ -702,6 +694,15 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "WasteRole is a role of an object aggregate that has been discarded after primary use."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
@@ -918,7 +919,7 @@ Class: BatteryStorage
     DisjointWith: 
         MethanationGasStorage
     
-      
+    
 Class: Biodiesel
 
     Annotations: 
@@ -932,7 +933,7 @@ Class: Biodiesel
         has_normal_state_of_matter value liquid,
         has_origin value biogenic
     
-
+    
 Class: Biofuel
 
     Annotations: 
@@ -951,6 +952,16 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         has_origin value biogenic,
         has_origin value renewable
     
+    
+Class: BiofuelPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerplant is a RegenerativePowerplant having an aggregate of BiofuelPowerUnits as its PowerGeneratingUnits."
+    
+    SubClassOf: 
+        RegenerativePowerplant
+    
+    
 Class: Biogas
 
     Annotations: 
@@ -963,14 +974,7 @@ Class: Biogas
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_origin value biogenic
     
-Class: BiofuelPowerplant
     
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerplant is a RegenerativePowerplant having an aggregate of BiofuelPowerUnits as its PowerGeneratingUnits."
-    
-    SubClassOf: 
-        RegenerativePowerplant
-     
 Class: Biogasoline
 
     Annotations: 
@@ -985,7 +989,6 @@ Class: Biogasoline
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value liquid,
         has_origin value biogenic
-    
     
     
 Class: BiomassPowerplant
@@ -1050,7 +1053,7 @@ Class: City
     SubClassOf: 
         Land
     
-
+    
 Class: Coal
 
     Annotations: 
@@ -1063,6 +1066,7 @@ Class: Coal
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value solid,
         has_origin value fossil
+    
     
 Class: CoalPowerplant
 
@@ -1474,19 +1478,6 @@ Class: FlowBattery
         Battery
     
     
-Class: FluorinatedGreenhouseGas
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fluorinated greenhouse gases (F-gases) are man-made gases that can stay in the atmosphere for centuries. As they contribute to a global greenhouse effect they are greenhouse gases.
-
-There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur hexafluoride (SF6) and nitrogen trifluoride (NF3)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>,
-        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
-    
-    
 Class: FossilPowerplant
 
     Annotations: 
@@ -1587,6 +1578,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
+    
+    DisjointWith: 
+        Line
     
     
 Class: GeographicCoordinate
@@ -2205,7 +2199,8 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value gaseous,
         has_origin value fossil
-        
+    
+    
 Class: NegativeEmission
 
     Annotations: 
@@ -2307,7 +2302,7 @@ Class: NuclearFuel
     SubClassOf: 
         Fuel
     
- 
+    
 Class: NuclearPowerplant
 
     Annotations: 
@@ -2352,6 +2347,21 @@ Class: Office
         CommericalDemand
     
     
+Class: OilAndPetroleumProducts
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum (/pəˈtroʊliəm/) is a naturally occurring, yellowish-black liquid found in geological formations beneath the Earth's surface. It is commonly refined into various types of fuels. Components of petroleum are separated using a technique called fractional distillation, i.e. separation of a liquid mixture into fractions differing in boiling point by means of distillation, typically using a fractionating column.
+
+It consists of hydrocarbons of various molecular weights and other organic compounds. The name petroleum covers both naturally occurring unprocessed crude oil and petroleum products that are made up of refined crude oil. A fossil fuel, petroleum is formed when large quantities of dead organisms, mostly zooplankton and algae, are buried underneath sedimentary rock and subjected to both intense heat and pressure."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
+    
+    SubClassOf: 
+        PortionOfMatter,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
+        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
+        has_origin value fossil
+    
+    
 Class: OilPowerplant
 
     Annotations: 
@@ -2375,21 +2385,6 @@ Class: OnShoreWindFarm
         OffShoreWindFarm
     
     
-Class: OilAndPetroleumProducts
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum (/pəˈtroʊliəm/) is a naturally occurring, yellowish-black liquid found in geological formations beneath the Earth's surface. It is commonly refined into various types of fuels. Components of petroleum are separated using a technique called fractional distillation, i.e. separation of a liquid mixture into fractions differing in boiling point by means of distillation, typically using a fractionating column.
-
-It consists of hydrocarbons of various molecular weights and other organic compounds. The name petroleum covers both naturally occurring unprocessed crude oil and petroleum products that are made up of refined crude oil. A fossil fuel, petroleum is formed when large quantities of dead organisms, mostly zooplankton and algae, are buried underneath sedimentary rock and subjected to both intense heat and pressure."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Petroleum&oldid=868006507"@en
-    
-    SubClassOf: 
-        PortionOfMatter,
-        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/FuelRole>,
-        <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
-        has_origin value fossil
-    
-    
 Class: PVPanel
 
     Annotations: 
@@ -2401,18 +2396,6 @@ Class: PVPanel
         has_physical_output some Power,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/PVCell>,
         has_physical_input only SolarPhotovoltaic
-    
-    
-    
-Class: PhotovoltaicPowerplant
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PhotovoltaicPowerplant is a RegenerativePowerplant having an aggregate of PVPanels as its PowerGeneratingUnits."@en
-    
-    SubClassOf: 
-        SolarPowerPlant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
-        
     
     
 Class: ParticulateMatter
@@ -2461,7 +2444,7 @@ Class: Perfluorocarbon
         PortionOfMatter,
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
-      
+    
 Class: PhotovoltaicGenerator
 
     SubClassOf: 
@@ -2472,6 +2455,7 @@ Class: PhotovoltaicGenerator
 Class: PhotovoltaicPowerplant
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PhotovoltaicPowerplant is a RegenerativePowerplant having an aggregate of PVPanels as its PowerGeneratingUnits."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
     
     SubClassOf: 
@@ -3028,7 +3012,7 @@ Class: Water
     SubClassOf: 
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
-
+    
     
 Class: WaterTurbine
 
