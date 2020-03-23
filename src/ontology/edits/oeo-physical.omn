@@ -498,8 +498,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/LignitePowerUnit>
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
     
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearFuel>
 
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
 
@@ -1485,8 +1483,8 @@ There are four types: hydrofluorocarbons (HFCs), perfluorocarbons (PFCs), sulfur
         <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Fluorinated_gases&oldid=902170998"@en
     
     SubClassOf: 
-        GreenhouseGas,
-        <http://purl.obolibrary.org/obo/RO_0000091> some GreenhouseGas
+        <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>,
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
     
     
 Class: FossilPowerplant
@@ -1588,11 +1586,7 @@ Class: Generator
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>,
-        uses some EnergyCarrier
-    
-    DisjointWith: 
-        Line
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyTransformer>
     
     
 Class: GeographicCoordinate
@@ -1863,7 +1857,7 @@ Class: HydrogenTurbine
     SubClassOf: 
         GasTurbine,
         has_physical_output some Power,
-        has_physical_input only PortionOfHydrogen
+        has_physical_input only Hydrogen
     
     
 Class: HydrogenVehicle
@@ -2418,34 +2412,7 @@ Class: PhotovoltaicPowerplant
     SubClassOf: 
         SolarPowerPlant,
         <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
-    
         
-Class: OilElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
-    
-    SubClassOf: 
-        FossilGenerator
-    
-    
-Class: OilPowerplant
-
-    SubClassOf: 
-        FossilePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
-    
-    
-Class: OnShoreWindElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind electricity generator is a wind electricity generator that is build on land."@en
-    
-    SubClassOf: 
-        WindElectricityGenerator
-    
-    DisjointWith: 
-        OffShoreWindElectricityGenerator
     
     
 Class: ParticulateMatter
@@ -3286,21 +3253,3 @@ Individual: synthetic
         has_origin some origin
     
     
-DisjointClasses: 
-    BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
-
-DisjointClasses: 
-    BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
-
-DisjointClasses: 
-    CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
-
-DisjointClasses: 
-    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
-
-DisjointClasses: 
-    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
-
-DisjointClasses: 
-    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
-
