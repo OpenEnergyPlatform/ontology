@@ -307,15 +307,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/BiogasPowerplant>
         BiofuelPowerplant
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/BiomassPowerUnit>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiomassPowerUnit is a BiofuelPowerUnit using biomass as fuel."
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/CarbonDioxide>
 
     Annotations: 
@@ -655,7 +646,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerUn
         <http://purl.obolibrary.org/obo/IAO_0000115> "A SolidBiomassPowerUnit is a BiomassPowerUnit using solid biomass as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/BiomassPowerUnit>,
+        <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>,
         uses some PortionOfSolidBiomass
     
     
@@ -665,7 +656,7 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerpl
         <http://purl.obolibrary.org/obo/IAO_0000115> "A SolidBiomassPowerplant is a BiomassPowerplant having an aggregate of SolidBiomassPowerUnits as its PowerGeneratingUnits."
     
     SubClassOf: 
-        BiomassPowerplant
+        BiofuelPowerplant
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride>
@@ -1004,17 +995,6 @@ Class: Biogasoline
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value liquid,
         has_origin value biogenic
-    
-    
-Class: BiomassPowerplant
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiomassPowerplant is a BiofuelPowerplant having an aggregate of BiomassPowerUnits as its PowerGeneratingUnits."@en
-    
-    SubClassOf: 
-        BiofuelPowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerUnit>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: BlastFurnaceGas
@@ -1515,7 +1495,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
          and (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition)
     
     SubClassOf: 
-        PortionOfMatter
+        PortionOfMatter,
+        uses some 
+            (Fuel
+             and (has_state_of_matter value gaseous))
     
     
 Class: Fusion
