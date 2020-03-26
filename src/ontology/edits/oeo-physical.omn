@@ -720,10 +720,10 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
+Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConvertingUnit>
 
     Annotations: 
-        rdfs:comment "A WindEnergyConverter is a RegenerativePowerUnit that uses wind energy."
+        definition "A WindEnergyConvertiongUnit is a RegenerativePowerUnit that uses wind energy."
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
@@ -1438,6 +1438,19 @@ Class: FederalState
     
     SubClassOf: 
         Land
+    
+    
+Class: FieldPhotovoltaicPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FieldPhotovoltaicPowerplant (also: solar farm, solar park) is a PhotovoltaicPowerplant that is installed out in the open on the ground."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Solar park"
+    
+    SubClassOf: 
+        PhotovoltaicPowerplant
+    
+    DisjointWith: 
+        RooftopPhotovoltaicPowerplant
     
     
 Class: Fission
@@ -2637,7 +2650,7 @@ Class: RooftopPhotovoltaicPowerplant
         PhotovoltaicPowerplant
     
     DisjointWith: 
-        SolarPark
+        FieldPhotovoltaicPowerplant
     
     
 Class: RunOfRiverPowerplant
@@ -2710,18 +2723,6 @@ Class: SolarEnergy
     SubClassOf: 
         Energy,
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
-    
-    
-Class: SolarPark
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar park (also: solar farm, field photovoltaic electricity powerplant) is a PhotovoltaicPowerplant that is installed out in the open on the ground."@en
-    
-    SubClassOf: 
-        PhotovoltaicPowerplant
-    
-    DisjointWith: 
-        RooftopPhotovoltaicPowerplant
     
     
 Class: SolarPhotovoltaic
@@ -3053,7 +3054,7 @@ Class: WindFarm
     
     SubClassOf: 
         RegenerativePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConverter>
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConvertingUnit>
     
     
 Class: WindTurbine
