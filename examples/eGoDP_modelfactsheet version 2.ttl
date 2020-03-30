@@ -1,0 +1,122 @@
+@base <http://openenergy-platform.org/ontology/examples/eGoDP_modelfactsheet.ttl/>.
+@prefix oeo: <http://openenergy-platform.org/ontology/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+@prefix mi: "missing!".
+
+
+#https://openenergy-platform.org/factsheets/models/35/
+<DataProcessing_DataModeloftheGermanElectricitySystem> a oeo:Model.
+#(part of the open_eGo project) (eGoDP)
+
+# Basic Information
+<DataProcessing_DataModeloftheGermanElectricitySystem> dct:title "DataProcessing – Data Model of the German Electricity System (part of the open_eGo project) (eGoDP)" .
+#Acronym 	eGoDP
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_methodical_Focus :DataModel , :OpenSourceandOpenData , :Germanelectricitysystems .
+#Institution(s) 	ZNES Flensburg (ZNES), Reiner Lemoine Institut (RLI), DLR Institute of Networked Energy Systems (DLR), Otto-von-Guericke-Universität Magdeburg (OvGU)
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_institution "ZNESFlensburg"^^xsd:string , "ReinerLemoineInstitut"^^xsd:string , "DLRInstituteofNetworkesEnergySystems"^^xsd:string , "OvGU"^^xsd:string .
+#Author(s) (institution, working field, active time period) 	Ludwig Hülk (RLI), Guido Pleßmann (RLI), Ulf Müller (ZNES), Ilka Cußmann (ZNES), Lukas Wienholt (DLR), Martin Glauer (OvGU), GitHub community
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_author "LudwigHuelkRLI"^^xsd:string , "GuidoPleßmannRLI"^^xsd:string , "UlfMuellerZNES"^^xsd:string ,
+                                                                   "IlkaCußmannZNES"^^xsd:string , "LukasWienholtDLR"^^xsd:string , "MartinGlauerOvGU"^^xsd:string , "GitHubCommunity"^^xsd:string .
+#Current contact person 	Ludwig Hülk
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_contact "LudwigHuelk"^^xsd:string .
+#<DataProcessing_DataModeloftheGermanElectricitySystem>
+:LudwigHuelkRLI foaf:mbox "<ludwig.huelk@rl-institut.de>"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_website "<https://openegoproject.wordpress.com/>"^^xsd:string.
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_logo "<.../media/logos/open_ego_logo.png>"^^xsd:string . #?
+
+########
+#primary_purpose and primary_output are classes right now, at least primary_output should just be a property
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_primary_purpose "The DataProcessing is a collection of scripts to process input data to be used for the other eGo-Tools. The resulting input data is published and available."^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_primary_output :Substations , :GridDistricts , :Loadareas .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_support_community_forum true .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:uses_framework false . 
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_documentation <https://github.com/openego/data_processing> .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:documentation_quality 	"not available"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_funding_source	"BMWi_project_open_eGo"^^xsd:string . #(6. Forschungsprogramm)
+# <DataProcessing_DataModeloftheGermanElectricitySystem> :num_of_developers "less than 10" .
+# <DataProcessing_DataModeloftheGermanElectricitySystem> :num_of_users "less than 10" .
+
+#Openness
+<DataProcessing_DataModeloftheGermanElectricitySystem> :has_opennessinformation [ a :Openessinformation;
+                                          mi:is_open_source true ;
+                                          oeo:has_license :AfferoGeneralPublicLicenseVersion3 ;
+                                          oeo:source_code_available true ;
+                                          oeo:is_available_on_GitHub true ;
+                                          oeo:link_to_source_code <https://github.com/openego/data_processing> ;
+                                          :data_provided true ;
+                                          :cooperative_programming true ] . # = is it possible to join the programming group?
+# GitHub Organisation
+# GitHub Contributions Graph
+
+#Software
+#Modelling software
+<DataProcessing_DataModeloftheGermanElectricitySystem> :software [] .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:uses_software_modelling "Python"^^xsd:string, "PostgreSQL"^^xsd:string, "pandas"^^xsd:string, "workalender"^^xsd:string,
+                                                       "oemof.db"^^xsd:string, "demandlib"^^xsd:string, "ego.io"^^xsd:string, "geoalchemy2"^^xsd:string.
+#Internal data processing software 	Python, PostgreSQL
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:uses_software_internal_data_processing "Python"^^xsd:string, "PostgreSQL"^^xsd:string.
+     
+#zwei SubProperties :uses_software_modelling, :uses_software_internal_data_processing of :uses_software ?
+<DataProcessing_DataModeloftheGermanElectricitySystem> :uses_external_optimizer false .
+<DataProcessing_DataModeloftheGermanElectricitySystem> :has_GUI false .
+
+#References
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:is_referenced_by "<https://openegoproject.wordpress.com/publications/>"^^xsd:string.
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:example_research_questions "How can open data be accessed to generate a data set to compare various models?" , "How can data be extracted with ensured quality?"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:further_reference_properties "Data schemes available: http://oep.iks.cs.ovgu.de/dataedit/schemas"^^xsd:string . #rdfs:comment
+
+# Coverage, we just have covers_sector!
+# Modeled energy sectors (final energy)	electricity
+<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_energy_sector oeo:ElectricitySector .
+# Modeled demand sectors	Households, Industry, Commercial sector
+<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_demand_sector oeo:HouseholdSector, oeo:IndustrySector, oeo:CommercialSector.
+         
+# SubProperties von :covers_sector
+#Modelled energy carriers (primary energy carrier)
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:covers_energycarrier (oeo:PortionOfNaturalGas oeo:PortionOfBiogas oeo:PortionOfHydrogen
+                                                      oeo:PortionOfPetrol oeo:PortionOfHardCoal oeo:PortionOfLignite oeo:PortionOfUranium oeo:PortionOfSolidBiomass
+                                                      oeo:PortionOfSolarEnergy oeo:PortionOfWind oeo:PortionOfHydropower oeo:PortionOfGeothermal).
+
+#Modeled technologies: components for generation or conversion
+# :covers_generation-conversion_technology
+#Modeled technologies: components for transfer, infrastructure or grid
+<DataProcessing_DataModeloftheGermanElectricitySystem> :covers_transfer_infrastructure_grid_technology :ElectricityDistribution , :ElectricityTransmission .
+#Properties electrical grid AC load flow
+<DataProcessing_DataModeloftheGermanElectricitySystem> :considers_User_behaviour_and_demand false .
+# :considers_Changes_in_efficiency
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:covers_region :Germany . #and neighboring countries
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_spatial_resolution "national states, regions, NUTS 3, municipalities, districts" .
+#:has_time_resolution
+# Comment on geographic (spatial) resolution
+# Observation period	-
+# Additional dimensions (sector)	-
+
+#Mathematical Properties
+# Model class (optimisation)	- Model class (simulation)	- über Subclasses
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_mathematical_properties _:x .
+
+#whats meant with "other_mathematical_property"?
+<DataProcessing_DataModeloftheGermanElectricitySystem> :other_mathematical_property _:DataScripts .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_mathematical_objective _:DataScripts .
+_:DataScripts a :Modelcomponent . # has_mathematical_objective subclass of has_part ?
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:has_approach_to_uncertainty "Deterministic"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> oeo:suited_for_many_scenarios false .
+
+<DataProcessing_DataModeloftheGermanElectricitySystem> :computationinformation _:y .
+      _:y oeo:has_typical_computation_time "more than a day"^^xsd:string .
+      _:y oeo:has_typical_computation_hardware :PostgreSQLDatabaseServerOEP . #
+#Technical data anchored in the model
+
+# Model Integration
+  #Interfaces
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_Model_file_format ".sql"^^xsd:string , ".py"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_Input_data_file_format  "oedb"^^xsd:string .
+<DataProcessing_DataModeloftheGermanElectricitySystem> mi:has_Output_data_file_format "oedb"^^xsd:string .
+  # Integration with other models
+  <DataProcessing_DataModeloftheGermanElectricitySystem> mi:is_integrated_in_model false.
+  # Integration of other models
+  <DataProcessing_DataModeloftheGermanElectricitySystem> mi:integrates_other_model false.
