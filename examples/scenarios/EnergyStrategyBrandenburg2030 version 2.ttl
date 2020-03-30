@@ -1,0 +1,311 @@
+
+@base <http://openenergy-platform.org/ontology/EnergyStrategyBrandenburg.ttl/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oeo: <https://github.com/OpenEnergyPlatform/ontology/blob/feature/Scenario/oeo.omn>.
+@prefix mi: <missing!>.
+
+<EnergyStrategy2030> a oeo:Scenario.
+<EnergyStrategy2030> oeo:has_institution "ReinerLemoineInstitut"^^xsd:string, "HTWBerlin"^^xsd:string.
+<EnergyStrategy2030> oeo:has_author "ElisaGaudchau"^^xsd:string, "BeritMüller"^^xsd:string, "JochenTwele"^^xsd:string, "JensFortmann"^^xsd:string.
+<EnergyStrategy2030> oeo:has_client "Buendnis90DieGruenen"^^xsd:string.
+
+<EnergyStrategy2030> oeo:has_tool "oemof_abbb"^^xsd:string.
+
+<EnergyStrategy2030> oeo:uses_dataset "abbb_constaints"^^xsd:string, "abbb_demand"^^xsd:string, "abbb_emob"^^xsd:string, "abbb_regions"^^xsd:string, "abbb_simulation_parameter"^^xsd:string, "abbb_transformer"^^xsd:string, "abbb_transmission_capacity"^^xsd:string.
+
+# class or value? Issue opened #170
+<EnergyStrategy2030> oeo:covers_region mi:Brandenburg.
+mi:Brandenburg oeo:has_subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:OderlandSpree, mi:LausitzSpreewald, mi:HavellandFläming.
+
+<EnergyStrategy2030> oeo:covers_sector oeo:IndustrySector, oeo:TrafficSector, oeo:TCSSector, oeo:HouseholdSector, oeo:HeatSector, oeo:ElectricitySector.
+
+# Issue opened for some classes that exist too often #159, #160, #161
+<EnergyStrategy2030> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator.
+
+#special constraint case called ValueRestriction or sth like that?
+#CarbonDioxideEmission etc are Process Profiles!
+#constraint as equivalent class: all classes with relationship "is_constraint_of"
+<EnergyStrategy2030> oeo:has_constraint _:CarbonDioxideEmission2030.
+_:CarbonDioxideEmissions2030 a oeo:CarbonDioxideEmission;
+        mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+# what is CarbonDioxideEmission1990? source: "... sollten bis 2030 72 % der CO2-Emissionen gegenüber 1990 eingespart werden." 
+#Instanz (Jahr 1990) des process profiles CO2-Emissionen 
+        mi:has_quantity [oeo:hasMaximum [oeo:hasNumeral "25.000.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons; 
+                                            oeo:isEqual [a mi:PercentageOfQuantity; oeo:has_Percentage "28"^^xsd:integer; 
+                                                            mi:has_quantity [mi:is_quantity_of _:CarbonDioxideEmission1990]]]].
+            _:CarbonDioxideEmission1990 a oeo:CarbonDioxideEmission;
+                mi:hasTimeSpan [oeo:hasYear "1990"^^xsd:integer].
+
+<EnergyStrategy2030> oeo:has_constraint _:ElectricityExport2030.
+_:ElectricityExport2030 a oeo:ElectricityExport;
+    mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+    mi:has_quantity [oeo:isEqual [oeo:hasNumeral "42"^^xsd:integer; oeo:hasUnitofMeasurement oeo:TerraWattHours]].
+
+
+<EnergyStrategy2030> oeo:has_constraint _:Windpower2030.
+_:Windpower2030 a oeo:InstalledPowerFromWind;
+    mi:hasTimeSpan [oeo:hasYear "2030"^^xsd:integer];
+    mi:has_quantity [oeo:isEqual [oeo:hasNumeral "10500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt]].
+
+<EnergyStrategy2030> oeo:has_constraint _:PhotovolticPower2030.
+_:PhotovolticPower2030 a oeo:InstalledPowerFromPhotovoltaics;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "3500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+
+<EnergyStrategy2030> oeo:has_constraint _:BiomassPower2030.
+_:BiomassPower2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromBiomass;
+    oeo:hasYear "2030"^^xsd:integer;
+# that shouldnt be an object but split into a sentence/ relationship
+    oeo:isEqual mi:InstalledPowerFromBiomass2015.
+
+<EnergyStrategy2030> oeo:has_constraint _:SolarThermalPower2030.
+_:SolarThermalPower2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledHeatFromSolar;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "2500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
+
+<EnergyStrategy2030> oeo:has_constraint _:HeatPump2030.
+_:HeatPump2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledHeatFromHeatPump;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "2500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:GigaWattHours].
+
+<EnergyStrategy2030> oeo:has_constraint _:HeatConsumption2030.
+_:HeatConsumption2030 a oeo:Constraint;
+    oeo:appliesTo oeo:HeatConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+# what is HeatConsumption2007?
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "66"^^xsd:integer; oeo:appliesTo mi:HeatConsumption2007].
+
+<EnergyStrategy2030> oeo:has_constraint _:ElectricityConsumption2030.
+_:ElectricityConsumption2030 a oeo:Constraint;
+    oeo:appliesTo oeo:ElectricityConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+# what is ElectricityConsumption2007?
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "91"^^xsd:integer; oeo:appliesTo mi:ElectricityConsumption2007].
+
+<EnergyStrategy2030> oeo:has_constraint _:EnergyConsumption2030.
+_:EnergyConsumption2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+# what is EnergyConsumption2007?
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "77"^^xsd:integer; oeo:appliesTo mi:EnergyConsumption2007].
+
+<EnergyStrategy2030> oeo:has_constraint _:AlternativeFuelsAndPropulsion2030.
+_:AlternativeFuelsAndPropulsion2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyFromAlternativeFuelsAndPropulsionInTraffic;
+    oeo:hasYear "2030"^^xsd:integer;
+# we just have EnergyFromAlternativeFuelsAndPropulsionInTraffic, EnergyFromElectricityInTraffic and EnergyFromBioFuelInTraffic
+# subclasses of EnergyCarrierQuantity
+# Issue opened to add EnergyInTraffic #170
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "18"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
+
+<EnergyStrategy2030> oeo:has_constraint _:BioFuel2030.
+_:BioFuel2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyFromBioFuelInTraffic;
+    oeo:hasYear "2030"^^xsd:integer;
+# same as above
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "8"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
+
+<EnergyStrategy2030> oeo:has_constraint _:ElectricMobility2030.
+_:ElectricMobility2030 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyFromElectricityInTraffic;
+    oeo:hasYear "2030"^^xsd:integer;
+# same as above
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "10"^^xsd:integer; oeo:appliesTo mi:EnergyInTraffic].
+
+# assumption != constraint so I changed to constraint
+<EnergyStrategy2030> oeo:has_constraint _:CarbonDioxideEmissionTraffic2030.
+_:CarbonDioxideEmissionTraffic2030 a oeo:Constraint;
+    oeo:appliesTo oeo:CarbonDioxideEmissionTrafficSector;
+    oeo:hasYear "2030"^^xsd:integer;
+# what is CarbonDioxideEmissionTrafficSector1990?
+# numeral cant be equal to a percentage, has to be reformulated
+# Numeral has to be class so I can anonymously access one that belongs to an entity like CarbonDioxideEmissionTrafficSector1990 (which shouldnt be an entity btw) #171
+# relationships with three entities (numeral2, that is percentage of numeral1) arent possible so a class PercentageOf is needed #172
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "82"^^xsd:integer; oeo:appliesTo mi:CarbonDioxideEmissionTrafficSector1990];
+#constraint can't be equal to numeral
+    oeo:isEqual [oeo:hasNumeral "4500000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
+
+#I made assumptions values as standard because they cant easily be  partinioned
+<EnergyStrategy2030> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
+
+<EnergyStrategy2030> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
+
+<EnergyStrategy2030> oeo:has_constraint _:Gas2030.
+_:Gas2030 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromGas;
+    oeo:hasYear "2030"^^xsd:integer;
+#constraint cant be equal to numeral
+    oeo:isEqual [oeo:hasNumeral "1500"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+
+<EnergyStrategy2030> oeo:makes_assumption "GasDevelopmentEqualAmongRegions"^^xsd:string.
+
+<EnergyStrategy2030> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
+
+<EnergyStrategy2030> oeo:has_constraint _:InstalledPowerFromThermalPowerplants.
+_:InstalledPowerFromThermalPowerplants a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:isEqual [oeo:hasNumeral "4132"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Megawatt].
+
+
+#repetitions of the same problems from here on
+<EnergyStrategy2030_2> a oeo:Scenario.
+<EnergyStrategy2030_2> oeo:has_institution "ReinerLemoineInstitut"^^xsd:string, "HTWBerlin"^^xsd:string.
+<EnergyStrategy2030_2> oeo:has_author "ElisaGaudchau"^^xsd:string, "BeritMüller"^^xsd:string, "JochenTwele"^^xsd:string, "JensFortmann"^^xsd:string.
+<EnergyStrategy2030_2> oeo:has_client "Buendnis90DieGruenen"^^xsd:string.
+
+
+<EnergyStrategy2030_2> oeo:has_tool "oemof_abbb"^^xsd:string.
+
+<EnergyStrategy2030_2> oeo:uses_dataset "abbb_constaints"^^xsd:string, "abbb_demand"^^xsd:string, "abbb_emob"^^xsd:string, "abbb_regions"^^xsd:string, "abbb_simulation_parameter"^^xsd:string, "abbb_transformer"^^xsd:string, "abbb_transmission_capacity"^^xsd:string.
+
+
+<EnergyStrategy2030_2> oeo:covers_region mi:Brandenburg.
+:Brandenburg oeo:has_Subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:OderlandSpree, mi:LausitzSpreewald, mi:HavellandFläming.
+
+<EnergyStrategy2030_2> oeo:covers_sector oeo:IndustrySector, oeo:TrafficSector, oeo:TCSSector, oeo:HouseholdSector, oeo:HeatSector, oeo:ElectricitySector.
+
+<EnergyStrategy2030_2> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:Emmissions2030_2.
+_:Emmissions2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:CarbonDioxideEmission;
+    oeo:hasYear "2030"^^xsd:integer;
+    oeo:hasMaximum [oeo:hasNumeral "20.070.000"^^xsd:integer; oeo:hasUnitofMeasurement oeo:Tons].
+
+<EnergyStrategy2030_2> oeo:has_constraint _:Export2030_2.
+_:Export2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:ElectricityExport;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "21331"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:GigaWattHours.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:Windpower2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:PhotovolticPower2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:BiomassPower2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:SolarThermalPower2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:HeatPump2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:HeatConsumption2030_2.
+_:HeatConsumption2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:HeatConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+    #needs percentage class
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "83"^^xsd:integer; oeo:appliesTo mi:HeatConsumption2007].
+
+<EnergyStrategy2030_2> oeo:has_constraint _:EnergyConsumption2030_2.
+_:EnergyConsumption2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:EnergyConsumption;
+    oeo:hasYear "2030"^^xsd:integer;
+    #needs percentage class
+    oeo:isEqual [a oeo:Percentage; oeo:has_Percentage "87"^^xsd:integer; oeo:appliesTo mi:EnergyConsumption2007].
+
+<EnergyStrategy2030_2> oeo:has_constraint _:AlternativeFuelsAndPropulsion2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:BioFuel2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:ElectricMobility2030.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:CarbonDioxideEmissionTraffic2030.
+
+<EnergyStrategy2030_2> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
+
+<EnergyStrategy2030_2> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:Gas2030_2.
+_:Gas2030_2 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromGas;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "846"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:Megawatt.
+
+<EnergyStrategy2030_2> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
+
+<EnergyStrategy2030_2> oeo:has_constraint _:InstalledPowerFromThermalPowerplants_2.
+_:InstalledPowerFromThermalPowerplants_2 a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "3477"^^xsd:integer;
+    oeo:hasUnitofMeasurement oeo:Megawatt.
+
+
+<EnergyStrategy2030_3> a oeo:Scenario.
+<EnergyStrategy2030_3> oeo:has_institution "ReinerLemoineInstitut"^^xsd:string, "HTWBerlin"^^xsd:string.
+<EnergyStrategy2030_3> oeo:has_author "ElisaGaudchau"^^xsd:string, "BeritMüller"^^xsd:string, "JochenTwele"^^xsd:string, "JensFortmann"^^xsd:string.
+<EnergyStrategy2030_3> oeo:has_client "Buendnis90DieGruenen"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:has_tool "oemof_abbb"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:uses_dataset "abbb_constaints"^^xsd:string, "abbb_demand"^^xsd:string, "abbb_emob"^^xsd:string, "abbb_regions"^^xsd:string, "abbb_simulation_parameter"^^xsd:string, "abbb_transformer"^^xsd:string, "abbb_transmission_capacity"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:covers_region mi:Brandenburg.
+:Brandenburg oeo:has_Subregion mi:PrignitzOberhavel, mi:UckermarkBarnim, mi:OderlandSpree, mi:LausitzSpreewald, mi:HavellandFläming.
+
+<EnergyStrategy2030_3> oeo:covers_sector oeo:IndustrySector, oeo:TrafficSector, oeo:TCSSector, oeo:HouseholdSector, oeo:HeatSector, oeo:ElectricitySector.
+
+<EnergyStrategy2030_3> oeo:covers_technology oeo:OnShoreWindElectricityGenerator, oeo:PhotovoltaicElectricityGenerator, oeo:BiomassElectricityGenerator, oeo:BiogasElectricityGenerator, oeo:SolarThermalHeatGenerator, oeo:HeatPumpHeatGenerator. 
+
+<EnergyStrategy2030_3> oeo:has_constraint _:Emmissions2030_2.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:Export2030_2.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:Windpower2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:PhotovolticPower2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:BiomassPower2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:SolarThermalPower2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:HeatPump2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:HeatConsumption2030_2.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:EnergyConsumption2030_2.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:AlternativeFuelsAndPropulsion2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:BioFuel2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:ElectricMobility2030.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:CarbonDioxideEmissionTraffic2030.
+
+<EnergyStrategy2030_3> oeo:makes_assumption "WindPVDevelopmentProportionalToArea"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:uses_dataset "PowerplantListBundesnetzargentur2015"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:Gas2030_2.
+
+<EnergyStrategy2030_3> oeo:makes_assumption "ShutDownJaenschwalde"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:makes_assumption "ShutDownSchwarzePumpe"^^xsd:string.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:NoCoal.
+_:NoCoal a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromCoalPowerPlant;
+    oeo:hasYear "2030"^^xsd:integer;
+    #isequal
+    oeo:hasNumeral "0"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:Megawatt.
+
+<EnergyStrategy2030_3> oeo:has_constraint _:InstalledPowerFromThermalPowerplants_3.
+_:InstalledPowerFromThermalPowerplants_3 
+    a oeo:Constraint;
+    oeo:appliesTo oeo:InstalledPowerFromThermalPowerplants;
+    oeo:hasYear "2030"^^xsd:integer;
+    #combine numeral and unit to one thing?
+    #isequal
+    oeo:hasNumeral "1977"^^xsd:integer; 
+    oeo:hasUnitofMeasurement oeo:Megawatt.

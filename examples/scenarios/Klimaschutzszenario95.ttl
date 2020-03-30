@@ -1,0 +1,42 @@
+@base <http://openenergy-platform.org/ontology/EnergyStrategyBrandenburg.ttl/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oeo: <https://github.com/OpenEnergyPlatform/ontology/blob/feature/Scenario/oeo.omn>.
+@prefix mi: <missing!>.
+
+#study
+<KS95> a oeo:Scenario;
+    mi:has_study_name "Klimaschutzszenario 2050. 2. Endbericht";
+    oeo:has_author "Julia Repenning", "Lukas Emele", "Ruth Blanck", "Hannes Böttcher", 
+                    "Günter Dehoust", "Hannah Förster", "Benjamin Greiner", "Ralph Harthan",
+                    "Klaus Henneberg", "Hauke Hermann", "Wolfram Jörß", "Charlotte Loreck", 
+                    "Sylive Ludig", "Felix Chri. Matthes", "Margarethe Scheffler", 
+                    "Katja Schumachen", "Kirsten Wiegmann", "Carina Zell-Ziegler", 
+                    "Sibylle Braungardt", "Wolfgang Eichhammer", "Rainer Elsland", 
+                    "Tobias Fleiter", "Johannes Hartwig", "Judit Kockat", "Ben Pfluger", 
+                    "Wolfgang Schade", "Barbara Schlomann", "Frank Sensfuß", 
+                    "Hans-Joachim Ziesing";
+    oeo:has_client "Bundesministerium für Umwelt, Naturschutz, Bau und Reaktorsicherheit";
+    oeo:has_funding_source oeo:Public;
+
+    #correcly this is the citation doi
+    mi:has_DOI_identifier "https://www.oeko.de/oekodoc/2451/2015-608-de.pdf";
+    oeo:covers_region mi:Germany;
+    oeo:covers_timeframe (2020 2030 2050);
+    mi:has_target_year true;
+    mi:has_transformation_path false;
+    mi:covers_energy_sector (oeo:ElectricitySector oeo:HeatSector mi:LiquidFuelSector mi:GasSector );
+    mi:covers_demand_sector (oeo:HouseholdSector oeo:IndustrySector mi:CommercialSector oeo:TransportSector);
+    oeo:coversTechnology true; # PV, wind, hydro, biomass, biogas, solar thermal
+    mi:has_sensitivity false;
+    #technologies included: 5 year time steps
+
+#empirical data
+    mi:has_name "Klimaschutzszenario 95 (KS95)"; #name of scenario
+
+#assumptions
+    #some stuff where its written to see tables
+    mi:has_postprocessing false.
+
+#results
+    
