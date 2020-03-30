@@ -1508,10 +1508,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
          and (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition)
     
     SubClassOf: 
-        PortionOfMatter,
-        uses some 
-            (Fuel
-             and (has_state_of_matter value gaseous))
+        PortionOfMatter
     
     
 Class: Fusion
@@ -1588,7 +1585,8 @@ Class: Generator
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>,
+        has_physical_output some ElectricalEnergy
     
     DisjointWith: 
         Line
@@ -1763,7 +1761,8 @@ Class: Heater
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>,
+        has_physical_output some Heat
     
     
 Class: HeatingOil
