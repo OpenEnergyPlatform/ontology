@@ -164,9 +164,6 @@ ObjectProperty: has_physical_input
         Irreflexive,
         Asymmetric
     
-    Domain: 
-        EnergyGeneratorTechnology
-    
     Range: 
         <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
     
@@ -281,6 +278,35 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
         <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerUnit is a RegenerativePowerUnit using biofuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        uses some Biofuel
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/BiogasPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BioGasPowerUnit is a BiofuelPowerUnit using biogas as fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>,
+        uses some Biogas
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/BiogasPowerplant>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiogasPowerplant is a BiofuelPowerplant having an aggregate of BiogasPowerUnits as its PowerGeneratingUnits."
+    
+    SubClassOf: 
+        BiofuelPowerplant
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/CarbonDioxide>
 
     Annotations: 
@@ -299,6 +325,46 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/ChemicalEnergy>
     
     SubClassOf: 
         Energy
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerUnit is a FossilPowerUnit using Coal as Fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        uses some Coal
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectricHeatPump>
+
+    Annotations: 
+        rdfs:comment "An electric heat pump is a heat pump that uses electric energy as drive energy."
+    
+    SubClassOf: 
+        HeatPump
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/ElectroMotiveGenerator>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ElectroMotiveGenerator is a Generator that converts kinetic energy into electric energy."
+    
+    SubClassOf: 
+        Generator
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting device is an artificial object that transforms or changes a certain type of energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
+        rdfs:comment "formerly called EnergyTransformer"
+    
+    SubClassOf: 
+        ArtificialObject
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
@@ -354,6 +420,43 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilPowerUnit is a PowerGeneratingUnit using FossilCombustionFuel."
+    
+    SubClassOf: 
+        PowerGeneratingUnit,
+        uses some <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/FuelCell>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FuelCell is a Generator that converts chemical energy into electricity using redox reactions."
+    
+    SubClassOf: 
+        Generator
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GasFiredPowerUnit is a FossilPowerUnit using gas as Fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/GeothermalPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GeothermalPowerUnit is a RegenerativePowerUnit using geothermal heat."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
 
     Annotations: 
@@ -367,6 +470,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234"
     
     SubClassOf: 
         PortionOfMatter
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/HardCoalPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A HardCoalPowerUnit is a CoalPowerUnit using HardCoal as Fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>,
+        uses some HardCoal
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/HydroPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A HydroPowerUnit is a PowerGeneratingUnit using the potential and/or kinetic energy of water.",
+        rdfs:comment "will be discussed later"
+    
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/HydrogenPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A HydrogenPowerUnit is a PowerGeneratingUnit using hydrogen as fuel."
+    
+    SubClassOf: 
+        PowerGeneratingUnit,
+        uses some Hydrogen
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/LignitePowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A LignitePowerUnit is a CoalPowerUnit using Lignite as Fuel."
+    
+    EquivalentTo: 
+        uses some Lignite
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Methane>
@@ -413,6 +558,56 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearEnergyCarrie
         EnergyCarrierDisposition
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A NuclearPowerUnit is a PowerGeneratingUnit using nuclear fuel."
+    
+    SubClassOf: 
+        PowerGeneratingUnit,
+        uses some NuclearFuel
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A OilPowerUnit is a FossilPowerUnit using oil as Fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        uses some OilAndPetroleumProducts
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVCell is a Generator that converts light into electrical energy."
+    
+    SubClassOf: 
+        Generator
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Powerplant is an aggregate of EnergyConverters that is connected to an electric grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
+    
+    SubClassOf: 
+        ArtificialObject
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A RegenerativePowerUnit is a PowerGeneratingUnit using regenerative fuels."
+    
+    SubClassOf: 
+        PowerGeneratingUnit,
+        uses some <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
 
     Annotations: 
@@ -424,6 +619,44 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarPowerUnit is a RegenerativePowerUnit using solar power."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarThermalPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarThermalPowerUnit is a SolarPowerUnit that has SolarThermalCollectors as parts."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some SolarThermalCollector
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolidBiomassPowerUnit is a BiomassPowerUnit using solid biomass as fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>,
+        uses some PortionOfSolidBiomass
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/SolidBiomassPowerplant>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolidBiomassPowerplant is a BiomassPowerplant having an aggregate of SolidBiomassPowerUnits as its PowerGeneratingUnits."
+    
+    SubClassOf: 
+        BiofuelPowerplant
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SulphurHexafluoride>
@@ -459,6 +692,16 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Uranium>
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerUnit is a FossilPowerUnit using waste as fuel."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        uses some WasteFuel
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WasteRole>
 
     Annotations: 
@@ -475,6 +718,16 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/Wind>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConvertingUnit>
+
+    Annotations: 
+        definition "A WindEnergyConvertiongUnit is a RegenerativePowerUnit that uses wind energy."
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -673,15 +926,6 @@ Class: BatteryStorage
         MethanationGasStorage
     
     
-Class: BioElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A bio electricity generator is a renewable energy generator that uses biomass or biogas to generate electricity."@en
-    
-    SubClassOf: 
-        RenewableGenerator
-    
-    
 Class: Biodiesel
 
     Annotations: 
@@ -715,6 +959,15 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
         has_origin value renewable
     
     
+Class: BiofuelPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerplant is a RegenerativePowerplant having an aggregate of BiofuelPowerUnits as its PowerGeneratingUnits."
+    
+    SubClassOf: 
+        RegenerativePowerplant
+    
+    
 Class: Biogas
 
     Annotations: 
@@ -724,18 +977,6 @@ Class: Biogas
         Biofuel,
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_origin value biogenic
-    
-    
-Class: BiogasElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas electricity generator is a bio energy generator that uses biogas to generate electricity."@en
-    
-    SubClassOf: 
-        BioElectricityGenerator
-    
-    DisjointWith: 
-        BiomassElectricityGenerator
     
     
 Class: Biogasoline
@@ -752,28 +993,6 @@ Class: Biogasoline
         <http://purl.obolibrary.org/obo/RO_0000091> some CombustibleEnergyCarrierDisposition,
         has_normal_state_of_matter value liquid,
         has_origin value biogenic
-    
-    
-Class: BiomassElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass electricity generator is a bio energy generator that uses biomass to generate electricity."@en
-    
-    SubClassOf: 
-        BioElectricityGenerator
-    
-    DisjointWith: 
-        BiogasElectricityGenerator
-    
-    
-Class: BiomassPowerplant
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass powerplant uses biomass to generate electricity or heat."@en
-    
-    SubClassOf: 
-        RegenerativePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
 Class: BlastFurnaceGas
@@ -842,23 +1061,14 @@ Class: Coal
         has_origin value fossil
     
     
-Class: CoalElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal electricity generator technology uses coal to generate electricity."@en
-    
-    SubClassOf: 
-        FossilGenerator
-    
-    
 Class: CoalPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal-fired power station or coal power plant is a thermal power station which burns coal to generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal-fired_power_station&oldid=905322370"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerplant is a FossilePowerplant having an aggregate of CoalPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        FossilePowerplant,
+        FossilPowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
@@ -1094,22 +1304,6 @@ Class: ElectricityExport
         Quantity
     
     
-Class: ElectricityGenerator
-
-    SubClassOf: 
-        Generator,
-        applies_technology some ElectricityGeneratorTechnology
-    
-    
-Class: ElectricityGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generator technology is an technology used to transform energy from some source into electricity."@en
-    
-    SubClassOf: 
-        EnergyGeneratorTechnology
-    
-    
 Class: ElectricityGrid
 
     Annotations: 
@@ -1217,23 +1411,6 @@ Class: EnergyFromElectricityInTraffic
         EnergyCarrierQuantity
     
     
-Class: EnergyGenerator
-
-    SubClassOf: 
-        Generator
-    
-    
-Class: EnergyGeneratorTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy generator technology is an technology used to transform energy into a form such that it is useable."@en
-    
-    SubClassOf: 
-        Technology,
-        has_physical_input some (<http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition),
-        has_physical_output some Power
-    
-    
 Class: EnergyProduction
 
     SubClassOf: 
@@ -1248,27 +1425,7 @@ Class: EnergyStorageObject
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276"
     
     SubClassOf: 
-        ArtificialObject,
-        applies_technology some EnergyStorageTechnology,
-        <http://purl.obolibrary.org/obo/RO_0000085> some <http://openenergy-platform.org/ontology/oeo-physical/EnergyStorage>
-    
-    
-Class: EnergyStorageTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is a technology used for storing energy."@en
-    
-    SubClassOf: 
-        Technology
-    
-    
-Class: EnergyTransferTechnology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer technology is a technology used to transport energy or a carrier of energy."@en
-    
-    SubClassOf: 
-        Technology
+        ArtificialObject
     
     
 Class: FederalState
@@ -1280,16 +1437,17 @@ Class: FederalState
         Land
     
     
-Class: FieldPhotovoltaicGenerator
+Class: FieldPhotovoltaicPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A field photovoltaic electricity generator is a photovoltaic electricity generator that is installed out in the open on the ground."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FieldPhotovoltaicPowerplant (also: solar farm, solar park) is a PhotovoltaicPowerplant that is installed out in the open on the ground."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Solar park"
     
     SubClassOf: 
-        PhotovoltaicElectricityGenerator
+        PhotovoltaicPowerplant
     
     DisjointWith: 
-        RooftopPhotovoltaicGenerator
+        RooftopPhotovoltaicPowerplant
     
     
 Class: Fission
@@ -1325,31 +1483,14 @@ Class: FlowBattery
         Battery
     
     
-Class: FossilGenerator
-
-    SubClassOf: 
-        ElectricityGenerator
-    
-    DisjointWith: 
-        RenewableGenerator
-    
-    
-Class: FossilGeneratorTechnology
+Class: FossilPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil electricity generator technology is an electricity generator techonolgy that uses fossil fuels such as oil, coal and natural gas to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilPowerplant is a Powerplant having an aggregate of FossilPowerUnits as its PowerGeneratingUnits."
     
     SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    DisjointWith: 
-        RenewableGeneratorTechnology
-    
-    
-Class: FossilePowerplant
-
-    SubClassOf: 
-        PowerGeneratingUnit
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
     
     
 Class: Fuel
@@ -1391,12 +1532,11 @@ Class: GasDieselOil
 Class: GasPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas-fired power plant or gas-fired power station or natural gas power plant is a thermal power station which burns natural gas to generate electricity. Natural gas power stations generate a quarter of world electricity and a significant part of global greenhouse gas emissions and thus global warming."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Gas-fired_power_plant&oldid=905149105"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GasPowerplant is a FossilPowerplant having an aggregate of GasFiredPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        FossilePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some GasTurbine
+        FossilPowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
     
     
 Class: GasTurbine
@@ -1409,15 +1549,6 @@ Class: GasTurbine
         Turbine,
         has_physical_output some Power,
         has_physical_input only NaturalGas
-    
-    
-Class: GasTurbineGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine generator is a electricity generator that uses hot or high pressure gas to produce electricity."@en
-    
-    SubClassOf: 
-        ElectricityGenerator
     
     
 Class: Gasoline
@@ -1446,16 +1577,13 @@ The production of other coal gases (i.e. coke oven gas, blast furnace gas and ox
 Class: Generator
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is a grid component that converts motive power (mechanical energy) into electrical power for use in an external circuit.
-Source: https://en.wikipedia.org/wiki/Electric_generator"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is an energy converting device that converts other forms of energy into electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
-        ArtificialObject,
-        uses some EnergyCarrierDisposition,
-        uses some EnergyGeneratorTechnology
-    
-    DisjointWith: 
-        Line
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>,
+        has_physical_output some ElectricalEnergy
     
     
 Class: GeographicCoordinate
@@ -1471,16 +1599,6 @@ Class: GeographicRegion
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000006>
-    
-    
-Class: GeothermalGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal generator uses geothermal energy to generate electricity."
-    
-    SubClassOf: 
-        Generator,
-        uses some Heat
     
     
 Class: GeothermalHeat
@@ -1499,10 +1617,11 @@ Class: GeothermalHeat
 Class: GeothermalPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal generator uses geothermal energy to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GeothermalPowerplant is a RegenerativePowerplant having an aggregate of GeothermalPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
         RegenerativePowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GeothermalPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
@@ -1572,10 +1691,11 @@ Class: HardCoal
 Class: HardCoalPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hard coal powerplant burns coal to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A HardCoalPowerplant is a CoalPowerplant having an aggregate of HardCoalPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        CoalPowerplant
+        CoalPowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/HardCoalPowerUnit>
     
     
 Class: Hardware
@@ -1618,28 +1738,25 @@ Class: HeatDemand
         Demand
     
     
-Class: HeatGenerator
-
-    SubClassOf: 
-        Generator
-    
-    
-Class: HeatGeneratorTechnology
+Class: HeatPump
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generator technology is an technology used to transform energy from some source into heat."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump is a heater that transforms low temperature heat to high temperature heat using external energy."@en
     
     SubClassOf: 
-        EnergyGeneratorTechnology
+        Heater
     
     
-Class: HeatPumpHeatGenerator
+Class: Heater
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump heat generator is a heat generator that uses a heat pump to generate heat."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Heater is an energy converting device that converts other forms of energy into useful heat.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
-        HeatGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>,
+        has_physical_output some Heat
     
     
 Class: HeatingOil
@@ -1666,8 +1783,12 @@ Class: HydroEnergy
     
 Class: HydroPowerplant
 
+    Annotations: 
+        rdfs:comment "will be discussed later"
+    
     SubClassOf: 
-        ArtificialObject
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/HydroPowerUnit>
     
     
 Class: HydroelectricPowerplant
@@ -1676,7 +1797,7 @@ Class: HydroelectricPowerplant
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en
     
     SubClassOf: 
-        PowerGeneratingUnit,
+        HydroPowerplant,
         <http://purl.obolibrary.org/obo/BFO_0000051> some WaterTurbine
     
     
@@ -1718,10 +1839,11 @@ Class: Hydrogen
 Class: HydrogenPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen powerplant uses hydrogen to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A HydrogenPowerplant is a Powerplant having an aggregate of HydrogenPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        ReactivePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/HydrogenPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some HydrogenTurbine
     
     
@@ -1731,8 +1853,9 @@ Class: HydrogenTurbine
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen turbine is a turbine fueled with liquid hydrogen."@en
     
     SubClassOf: 
-        Turbine,
-        has_physical_output some Power
+        GasTurbine,
+        has_physical_output some Power,
+        has_physical_input only Hydrogen
     
     
 Class: HydrogenVehicle
@@ -1838,7 +1961,7 @@ Class: InternalCombustionVehicle
         <http://purl.obolibrary.org/obo/IAO_0000115> "An InternalCombustionVehicle is an ArtificialObject that is a vehicle powered by internal combustion engine."
     
     SubClassOf: 
-        Generator
+        ArtificialObject
     
     
 Class: JetFuel
@@ -1905,10 +2028,11 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
 Class: LignitePowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite powerplant burns lignite to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A LignitePowerplant is a CoalPowerplant having an aggregate of LignitePowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        CoalPowerplant
+        CoalPowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/LignitePowerUnit>
     
     
 Class: Line
@@ -1919,9 +2043,6 @@ Class: Line
     
     SubClassOf: 
         Link
-    
-    DisjointWith: 
-        Generator
     
     
 Class: Link
@@ -2077,15 +2198,6 @@ It does not include gases created by anaerobic digestion of biomass (e.g. munici
         has_origin value fossil
     
     
-Class: NaturalGasGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas electricity generator technology uses natural gas to generate electricity."@en
-    
-    SubClassOf: 
-        FossilGenerator
-    
-    
 Class: NegativeEmission
 
     Annotations: 
@@ -2188,23 +2300,14 @@ Class: NuclearFuel
         Fuel
     
     
-Class: NuclearPowerGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear generator technology is a fossil electricity generator that uses nuclear reactions to generate electricity."@en
-    
-    SubClassOf: 
-        FossilGenerator
-    
-    
 Class: NuclearPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear power plant or nuclear power station is a thermal power station in which the heat source is a nuclear reactor. As it is typical of thermal power stations, heat is used to generate steam that drives a steam turbine connected to a generator that produces electricity.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_power_plant&oldid=867102016"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A NuclearPowerplant is a Powerplant having an aggregate of NuclearPowerUnits as its PowerGeneratingUnits."
     
     SubClassOf: 
-        ReactivePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
@@ -2220,19 +2323,19 @@ Class: Ocean
 Class: OceanPowerplant
 
     SubClassOf: 
-        ArtificialObject
+        HydroPowerplant
     
     
-Class: OffShoreWindElectricityGenerator
+Class: OffShoreWindFarm
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An off shore wind electricity generator is a wind electricity generator that is build off shore above or in the ocean."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An offshore wind farm is a WindFarm that is build in a body of water, usually the ocean."@en
     
     SubClassOf: 
-        WindElectricityGenerator
+        WindFarm
     
     DisjointWith: 
-        OnShoreWindElectricityGenerator
+        OnShoreWindFarm
     
     
 Class: Office
@@ -2256,43 +2359,39 @@ It consists of hydrocarbons of various molecular weights and other organic compo
         has_origin value fossil
     
     
-Class: OilElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil electricity generator technology uses oil to generate electricity."@en
-    
-    SubClassOf: 
-        FossilGenerator
-    
-    
 Class: OilPowerplant
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An OilPowerplant is a FossilPowerplant having an aggregate of OilPowerUnits as its PowerGeneratingUnits."
+    
     SubClassOf: 
-        FossilePowerplant,
+        FossilPowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
-Class: OnShoreWindElectricityGenerator
+Class: OnShoreWindFarm
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An on shore wind electricity generator is a wind electricity generator that is build on land."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An onshore wind farm is a WindFarm that is build on land."@en
     
     SubClassOf: 
-        WindElectricityGenerator
+        WindFarm
     
     DisjointWith: 
-        OffShoreWindElectricityGenerator
+        OffShoreWindFarm
     
     
 Class: PVPanel
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "hotovoltaic solar panels absorb sunlight as a source of energy to generate electricity. A photovoltaic (PV) module is a packaged, connected assembly of typically 6x10 photovoltaic solar cells. Photovoltaic modules constitute the photovoltaic array of a photovoltaic system that generates and supplies solar electricity in commercial and residential applications."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_panel&oldid=906976047"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PVPanel (photovoltaic panel) is a SolarPowerUnit absorbing sunlight as a source of energy to generate electricity."@en,
+        rdfs:comment "A photovoltaic (PV) module is a packaged, connected assembly of typically 6x10 photovoltaic solar cells. Photovoltaic modules constitute the photovoltaic array of a photovoltaic system that generates and supplies solar electricity in commercial and residential applications."
     
     SubClassOf: 
-        EnergyGeneratorTechnology,
+        <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>,
         has_physical_output some Power,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/PVCell>,
         has_physical_input only SolarPhotovoltaic
     
     
@@ -2342,26 +2441,10 @@ Class: Perfluorocarbon
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/anthropogenic>
     
     
-Class: PhotovoltaicElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic electricity generator is a renewable energy generator that uses power from the sun to generate electricity."@en
-    
-    SubClassOf: 
-        RenewableGeneratorTechnology
-    
-    
-Class: PhotovoltaicGenerator
-
-    SubClassOf: 
-        Generator,
-        uses some SolarEnergy
-    
-    
 Class: PhotovoltaicPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic generator uses PVPanels and solar energy to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PhotovoltaicPowerplant is a RegenerativePowerplant having an aggregate of PVPanels as its PowerGeneratingUnits."@en
     
     SubClassOf: 
         SolarPowerPlant,
@@ -2423,11 +2506,14 @@ Source: https://en.wikipedia.org/wiki/Power_(physics)"@en
     
 Class: PowerGeneratingUnit
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an artificial object that contains a generator, among other parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
+    
     SubClassOf: 
-        NetworkNode,
-        uses some EnergyGeneratorTechnology,
-        uses some EnergyStorageTechnology,
-        uses some EnergyTransferTechnology
+        ArtificialObject,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some Generator
     
     
 Class: PowerToGasSystem
@@ -2496,39 +2582,14 @@ Class: Rail
         TransportDemand
     
     
-Class: ReactivePowerplant
-
-    SubClassOf: 
-        PowerGeneratingUnit,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
-    
-    
 Class: RegenerativePowerplant
 
-    SubClassOf: 
-        PowerGeneratingUnit,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
-    
-    
-Class: RenewableGenerator
-
-    SubClassOf: 
-        ElectricityGenerator
-    
-    DisjointWith: 
-        FossilGenerator
-    
-    
-Class: RenewableGeneratorTechnology
-
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable electricity generator technology is an electricity generator techonolgy that uses resources that are practically unlimited or regenerate quickly to generate electricity."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A RegenerativePowerplant is a Powerplant having an aggregate of RegenerativePowerUnits as its PowerGeneratingUnits."
     
     SubClassOf: 
-        ElectricityGeneratorTechnology
-    
-    DisjointWith: 
-        FossilGeneratorTechnology
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
     
     
 Class: RenewableMunicipalWasteFuel
@@ -2564,25 +2625,16 @@ Class: Retail
         CommericalDemand
     
     
-Class: RooftopPhotovoltaicGenerator
+Class: RooftopPhotovoltaicPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic electricity generator is a photovoltaic electricity generator that is installed on top of the roof of a building."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rooftop photovoltaic powerplant is a photovoltaic powerplant that is installed on top of the roof of a building."@en
     
     SubClassOf: 
-        PhotovoltaicElectricityGenerator
+        PhotovoltaicPowerplant
     
     DisjointWith: 
-        FieldPhotovoltaicGenerator
-    
-    
-Class: RunOfRiverElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river electricity generator is a water energy generator that stores little or no water and produces electricity."@en
-    
-    SubClassOf: 
-        WaterElectricityGenerator
+        FieldPhotovoltaicPowerplant
     
     
 Class: RunOfRiverPowerplant
@@ -2670,23 +2722,21 @@ Class: SolarPhotovoltaic
 Class: SolarPowerPlant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar power is the conversion of energy from sunlight into electricity, either directly using photovoltaics (PV), indirectly using concentrated solar power, or a combination. Concentrated solar power systems use lenses or mirrors and tracking systems to focus a large area of sunlight into a small beam. Photovoltaic cells convert light into an electric current using the photovoltaic effect."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_power&oldid=904827092"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarPowerplant is a Powerplant having an aggregate of SolarPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        PowerGeneratingUnit,
-        Turbine or (<http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel)
+        RegenerativePowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
     
     
 Class: SolarThermalCollector
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal collector collects heat by absorbing sunlight. The term \"solar collector\" commonly refers to a device for solar hot water heating, but may refer to large power generating installations such as solar parabolic troughs and solar towers or non water heating devices such as solar air heaters."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal collector is a heater that absorbs solar radiation to convert it into heat."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en
     
     SubClassOf: 
-        EnergyGenerator,
-        has_physical_output some Power,
+        Heater,
         has_physical_input only SolarThermalHeat
     
     
@@ -2702,22 +2752,14 @@ Class: SolarThermalHeat
         Heat
     
     
-Class: SolarThermalHeatGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal heat generator is a heat generator that uses solar power to produce heat."@en
-    
-    SubClassOf: 
-        HeatGenerator
-    
-    
 Class: SolarThermalPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "uses solar thermal energy to generate electrical energy"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarThermalPowerplant is a Powerplant consisting of SolarThermalPowerUnits."@en
     
     SubClassOf: 
         SolarPowerPlant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/SolarThermalPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
@@ -2761,7 +2803,6 @@ Class: StorageUnit
     
     SubClassOf: 
         ElectricityGridComponent,
-        uses some EnergyStorageTechnology,
         <http://purl.obolibrary.org/obo/BFO_0000050> some ElectricityGrid
     
     
@@ -2807,17 +2848,6 @@ Class: TidalPowerPlant
     
     DisjointWith: 
         RunOfRiverPowerplant
-    
-    
-Class: TidalStreamGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en
-    
-    SubClassOf: 
-        EnergyGenerator,
-        has_physical_output some Power,
-        has_physical_input only TideWaveOcean
     
     
 Class: TidalStreamPowerplant
@@ -2870,11 +2900,10 @@ Class: TransportDemand
 Class: Turbine
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbine [...] is a rotary mechanical device that extracts energy from a fluid flow and converts it into useful work. The work produced by a turbine can be used for generating electrical power when combined with a generator."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Turbine&oldid=905470312"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbine is an energy converting device that converts energy from a moving fluid flow into rotational energy."@en
     
     SubClassOf: 
-        EnergyGenerator
+        <http://openenergy-platform.org/ontology/oeo-physical/EnergyConvertingDevice>
     
     
 Class: UndergroundHydrogenStorage
@@ -2940,11 +2969,11 @@ Class: WasteFuel
 Class: WastePowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste-to-energy plant is a waste management facility that combusts wastes to produce electricity. This type of power plant is sometimes called a trash-to-energy, municipal waste incineration, energy recovery, or resource recovery plant."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Waste-to-energy_plant&oldid=904634168"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerplant is a FossilPowerplant having an aggregate of WastePowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        FossilePowerplant,
+        FossilPowerplant,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
     
@@ -2957,15 +2986,6 @@ Class: Water
     SubClassOf: 
         PortionOfMatter,
         <http://purl.obolibrary.org/obo/RO_0000091> some EnergyCarrierDisposition
-    
-    
-Class: WaterElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electricity generator is a renewable energy generator that uses power from water to generate electricity."@en
-    
-    SubClassOf: 
-        RenewableGenerator
     
     
 Class: WaterTurbine
@@ -2997,15 +3017,6 @@ Class: WavePowerPlant
         uses some Wave
     
     
-Class: WindElectricityGenerator
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind electricity generator technology uses wind power to generate electricity."@en
-    
-    SubClassOf: 
-        RenewableGenerator
-    
-    
 Class: WindEnergy
 
     Annotations: 
@@ -3022,29 +3033,11 @@ Class: WindEnergy
 Class: WindFarm
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm uses wind turbines and and wind to generate renewable energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Wind_turbine&oldid=867838943"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A WindFarm is a RegenerativePowerplant having an aggregate of WindEnergyConverters as its PowerGeneratingUnits."@en
     
     SubClassOf: 
         RegenerativePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
-    
-    
-Class: WindOffshore
-
-    SubClassOf: 
-        WindTurbine,
-        <http://purl.obolibrary.org/obo/RO_0002233> some Sea
-    
-    
-Class: WindOnshore
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Onshore wind power is the complement to Offshore wind power. It is harvested on land."@en
-    
-    SubClassOf: 
-        RegenerativePowerplant,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some WindTurbine
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConvertingUnit>
     
     
 Class: WindTurbine
@@ -3219,20 +3212,5 @@ Individual: synthetic
     
     
 DisjointClasses: 
-    BioElectricityGenerator,PhotovoltaicElectricityGenerator,WaterElectricityGenerator,WindElectricityGenerator
-
-DisjointClasses: 
-    BiomassPowerplant,CoalPowerplant,GasPowerplant,GeothermalGenerator,HydroPowerplant,NuclearPowerplant,OceanPowerplant,OilPowerplant,PhotovoltaicGenerator,WastePowerplant,WindTurbine
-
-DisjointClasses: 
-    CoalElectricityGenerator,NaturalGasGenerator,NuclearPowerGenerator,OilElectricityGenerator
-
-DisjointClasses: 
-    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
-
-DisjointClasses: 
-    ElectricityGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology,HeatGeneratorTechnology
-
-DisjointClasses: 
-    EnergyGeneratorTechnology,EnergyStorageTechnology,EnergyTransferTechnology
+    Generator,Heater,Turbine
 
