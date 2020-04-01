@@ -58,6 +58,7 @@ Here is a template for new release sections
 - update issue templates 'workflow checklist' (#258)
 - Generator (#273)
 - EnergyStorage (#276)
+- Turbine (#299)
 
 
 ### Removed
