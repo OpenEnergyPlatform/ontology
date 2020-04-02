@@ -4,6 +4,8 @@
 
 Developing a common ontology for energy system analysis and scenarios.
 
+## Introduction
+
 ## Scope of this ontology
 
 This **domain** ontology is a joint effort to represent the energy-system modelling context based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability & transferability within the energy system modelling context. This ontology makes use of the Basic Formal Ontology ( [BFO](https://github.com/OpenEnergyPlatform/ontology/wiki) )and its principles.
