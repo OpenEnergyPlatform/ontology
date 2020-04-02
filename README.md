@@ -16,7 +16,11 @@ This repository is licensed under CC0 1.0 Universell (CC0 1.0) Public Domain Ded
 
 ## Installation
 
-* [protégé](https://protege.stanford.edu/)
+The ontology can be downloaded from github: https://github.com/OpenEnergyPlatform/ontology
+
+To open the ontology the program [protégé](https://protege.stanford.edu/) is recommended.
+
+The complete ontology is found under src/ontology/oeo.omn. Own modules can be seen in the src/ontology/edits folder and imported modules under src/ontology/imports.
 
 ## Contributing and developing
 Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
