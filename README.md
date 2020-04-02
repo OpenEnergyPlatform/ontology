@@ -23,6 +23,8 @@ To open the ontology the program [protégé](https://protege.stanford.edu/) is r
 The complete ontology is found under src/ontology/oeo.omn. Own modules can be seen in the src/ontology/edits folder and imported modules under src/ontology/imports.
 
 ## Contributing and developing
+The development of the ontology happens mainly on [github](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by telcos to review the progress and discuss more complicated topics. 
+
 Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
  
 The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [github issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
