@@ -281,10 +281,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
 Class: <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerUnit is a RegenerativePowerUnit using biofuel."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerUnit is a PowerGeneratingUnit using biofuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        PowerGeneratingUnit,
         uses some Biofuel
     
     
@@ -332,10 +332,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/214"
 Class: <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerUnit is a FossilPowerUnit using Coal as Fuel."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerUnit is a PowerGeneratingUnit using coal as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        PowerGeneratingUnit,
         uses some Coal
     
     
@@ -422,16 +422,6 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPortionOfMatt
         has_origin value <http://openenergy-platform.org/ontology/oeo-physical/geogenic>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilPowerUnit is a PowerGeneratingUnit using FossilCombustionFuel."
-    
-    SubClassOf: 
-        PowerGeneratingUnit,
-        uses some <http://openenergy-platform.org/ontology/oeo-physical/FossilCombustionFuel>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo-physical/FuelCell>
 
     Annotations: 
@@ -444,19 +434,22 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/FuelCell>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A GasFiredPowerUnit is a FossilPowerUnit using gas as Fuel."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GasFiredPowerUnit is a PowerGeneratingUnit using gas as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
+        PowerGeneratingUnit,
+        uses some 
+            (Fuel
+             and (has_normal_state_of_matter value gaseous))
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GeothermalPowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A GeothermalPowerUnit is a RegenerativePowerUnit using geothermal heat."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GeothermalPowerGeneratingUnit is a PowerUnit using geothermal heat."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+        PowerGeneratingUnit
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/GreenhouseGas>
@@ -575,10 +568,10 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/NuclearPowerUnit>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A OilPowerUnit is a FossilPowerUnit using oil as Fuel."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A OilPowerUnit is a PowerGeneratingUnit using oil as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        PowerGeneratingUnit,
         uses some OilAndPetroleumProducts
     
     
@@ -594,22 +587,12 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/PVCell>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A Powerplant is an aggregate of EnergyConverters that is connected to an electric grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Powerplant is an aggregate of PowerGeneratingUnits that feeds electric energy into an electric grid.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273"
     
     SubClassOf: 
         ArtificialObject
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A RegenerativePowerUnit is a PowerGeneratingUnit using regenerative fuels."
-    
-    SubClassOf: 
-        PowerGeneratingUnit,
-        uses some <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
@@ -628,10 +611,10 @@ Class: <http://openenergy-platform.org/ontology/oeo-physical/RenewableFuel>
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarPowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarPowerUnit is a RegenerativePowerUnit using solar power."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarPowerUnit is a PowerGeneratingUnit using solar power."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
+        PowerGeneratingUnit
     
     
 Class: <http://openenergy-platform.org/ontology/oeo-physical/SolarThermalPowerUnit>
@@ -701,10 +684,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237"
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerUnit is a FossilPowerUnit using waste as fuel."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerUnit is a PowerGeneratingUnit using waste as fuel."
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>,
+        PowerGeneratingUnit,
         uses some WasteFuel
     
     
@@ -733,11 +716,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225"
 Class: <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConvertingUnit>
 
     Annotations: 
-        definition "A WindEnergyConvertingUnit is a RegenerativePowerUnit that uses wind energy.",
+        definition "A WindEnergyConvertingUnit is a PowerGeneratingUnit that uses wind energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "wind turbine"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>,
+        PowerGeneratingUnit,
         <http://purl.obolibrary.org/obo/BFO_0000051> some Turbine
     
     
@@ -976,10 +959,11 @@ Biofuels can be derived directly from plants (i.e. energy crops), or indirectly 
 Class: BiofuelPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerplant is a RegenerativePowerplant having an aggregate of BiofuelPowerUnits as its PowerGeneratingUnits."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A BiofuelPowerplant is a Powerplant having an aggregate of BiofuelPowerUnits as its PowerGeneratingUnits."
     
     SubClassOf: 
-        RegenerativePowerplant
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/BiofuelPowerUnit>
     
     
 Class: Biogas
@@ -1078,10 +1062,10 @@ Class: Coal
 Class: CoalPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerplant is a FossilePowerplant having an aggregate of CoalPowerUnits as its PowerGeneratingUnits."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CoalPowerplant is a Powerplant having an aggregate of CoalPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        FossilPowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/CoalPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
@@ -1503,16 +1487,6 @@ Class: FlowBattery
         Battery
     
     
-Class: FossilPowerplant
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A FossilPowerplant is a Powerplant having an aggregate of FossilPowerUnits as its PowerGeneratingUnits."
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/FossilPowerUnit>
-    
-    
 Class: Fuel
 
     Annotations: 
@@ -1526,6 +1500,34 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279"
     
     SubClassOf: 
         PortionOfMatter
+    
+    
+Class: FueledPowerUnit
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FueledPowerUnit is a PowerGeneratingUnit that uses fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306"
+    
+    EquivalentTo: 
+        uses some Fuel
+    
+    SubClassOf: 
+        PowerGeneratingUnit
+    
+    
+Class: FueledPowerplant
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A FueledPowerplant is a Powerplant that has FueledPowerUnits as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000051> some FueledPowerUnit
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>
     
     
 Class: Fusion
@@ -1552,10 +1554,10 @@ Class: GasDieselOil
 Class: GasPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A GasPowerplant is a FossilPowerplant having an aggregate of GasFiredPowerUnits as its PowerGeneratingUnits."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GasPowerplant is a Powerplant having an aggregate of GasFiredPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        FossilPowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GasFiredPowerUnit>
     
     
@@ -1640,10 +1642,10 @@ Class: GeothermalHeat
 Class: GeothermalPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A GeothermalPowerplant is a RegenerativePowerplant having an aggregate of GeothermalPowerUnits as its PowerGeneratingUnits."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GeothermalPowerplant is a Powerplant having an aggregate of GeothermalPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        RegenerativePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/GeothermalPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
@@ -2395,10 +2397,10 @@ It consists of hydrocarbons of various molecular weights and other organic compo
 Class: OilPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An OilPowerplant is a FossilPowerplant having an aggregate of OilPowerUnits as its PowerGeneratingUnits."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An OilPowerplant is a Powerplant having an aggregate of OilPowerUnits as its PowerGeneratingUnits."
     
     SubClassOf: 
-        FossilPowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/OilPowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
@@ -2477,7 +2479,7 @@ Class: Perfluorocarbon
 Class: PhotovoltaicPowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PhotovoltaicPowerplant is a RegenerativePowerplant having an aggregate of PVPanels as its PowerGeneratingUnits."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PhotovoltaicPowerplant is a Powerplant having an aggregate of PVPanels as its PowerGeneratingUnits."@en
     
     SubClassOf: 
         SolarPowerPlant,
@@ -2615,16 +2617,6 @@ Class: Rail
         TransportDemand
     
     
-Class: RegenerativePowerplant
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A RegenerativePowerplant is a Powerplant having an aggregate of RegenerativePowerUnits as its PowerGeneratingUnits."
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/RegenerativePowerUnit>
-    
-    
 Class: RenewableMunicipalWasteFuel
 
     Annotations: 
@@ -2760,7 +2752,7 @@ Class: SolarPowerPlant
         <http://purl.obolibrary.org/obo/IAO_0000115> "A SolarPowerplant is a Powerplant having an aggregate of SolarPowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        RegenerativePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some PVPanel
     
     
@@ -3007,10 +2999,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/207",
 Class: WastePowerplant
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerplant is a FossilPowerplant having an aggregate of WastePowerUnits as its PowerGeneratingUnits."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A WastePowerplant is a Powerplant having an aggregate of WastePowerUnits as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        FossilPowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WastePowerUnit>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some SteamTurbine
     
@@ -3074,10 +3066,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225"
 Class: WindFarm
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A WindFarm is a RegenerativePowerplant having an aggregate of WindEnergyConverters as its PowerGeneratingUnits."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A WindFarm is a Powerplant having an aggregate of WindEnergyConverters as its PowerGeneratingUnits."@en
     
     SubClassOf: 
-        RegenerativePowerplant,
+        <http://openenergy-platform.org/ontology/oeo-physical/Powerplant>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo-physical/WindEnergyConvertingUnit>
     
     
