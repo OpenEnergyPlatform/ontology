@@ -6,6 +6,8 @@ Developing a common ontology for energy system analysis and scenarios.
 
 ## Introduction
 
+The Open Energy Ontology (OEO) is a domain ontology of the energy-system modelling context. It is developed as part of the [Open Energy Family](https://github.com/OpenEnergyPlatform). The OEO is published on github as open source software. The language used is the Manchester OWL Syntax. The OEO is still under development and not released yet. A Steering Committee was created to accompany the development, increase awareness of the ontology and include it in current projects.
+
 ## Scope of this ontology
 
 This **domain** ontology is a joint effort to represent the energy-system modelling context based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability & transferability within the energy system modelling context. This ontology makes use of the Basic Formal Ontology ( [BFO](https://github.com/OpenEnergyPlatform/ontology/wiki) )and its principles.
