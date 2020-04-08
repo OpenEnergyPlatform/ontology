@@ -18,8 +18,8 @@ Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
-    <http://purl.org/dc/terms/title> "Open Energy Ontology (Social module)",
-    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles."
+    <http://purl.org/dc/terms/title> "Open energy Ontology (social module)",
+    rdfs:comment "The Open energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles."
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
@@ -69,10 +69,10 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 ObjectProperty: conforms_to
 
     Domain: 
-        conforms_to some SectorDivision
+        conforms_to some OEO_00000368
     
     Range: 
-        Sector
+        OEO_00000367
     
     
 ObjectProperty: covers
@@ -87,7 +87,7 @@ ObjectProperty: covers_sector
         covers
     
     Range: 
-        Sector
+        OEO_00000367
     
     
 ObjectProperty: has_author
@@ -99,7 +99,7 @@ ObjectProperty: has_author
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     Range: 
-        Agent
+        OEO_00000051
     
     
 ObjectProperty: has_client
@@ -111,7 +111,7 @@ ObjectProperty: has_client
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     Range: 
-        Agent
+        OEO_00000051
     
     
 ObjectProperty: has_contact
@@ -132,7 +132,7 @@ ObjectProperty: has_funding_source
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     Range: 
-        Agent
+        OEO_00000051
     
     
 ObjectProperty: has_institution
@@ -146,15 +146,6 @@ ObjectProperty: has_institution
     
 ObjectProperty: owl:topObjectProperty
 
-    
-Class: <http://openenergy-platform.org/ontology/oeo-social/Producer>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods to sell them."
-    
-    SubClassOf: 
-        Agent
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -201,119 +192,139 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
-Class: Agent
+Class: OEO_00000045
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods to sell them.",
+        rdfs:label "producer"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
+        rdfs:label "agent"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
-Class: Author
+Class: OEO_00000064
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
+        rdfs:label "author"
     
     SubClassOf: 
-        Agent
+        OEO_00000051
     
     
-Class: CarbonDioxideEmissionTrafficSector
+Class: OEO_00000083
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en,
+        rdfs:label "carbon dioxide emission traffic sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: Client
+Class: OEO_00000087
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
+        rdfs:label "client"
     
     SubClassOf: 
-        Agent
+        OEO_00000051
     
     
-Class: CommerceSector
+Class: OEO_00000100
 
     Annotations: 
-        rdfs:label "ServiceSector"@en
+        rdfs:label "service sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: Consumer
+Class: OEO_00000105
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a user of a commercial product or service."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a user of a commercial product or service."@en,
+        rdfs:label "consumer"
     
     SubClassOf: 
-        User
+        OEO_00000431
     
     
-Class: ContactPerson
+Class: OEO_00000107
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A ContactPerson is an agent that can be contacted for help or information about a specific service or good."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
+        rdfs:label "contact person"
     
     SubClassOf: 
-        Agent
+        OEO_00000051
     
     
-Class: DemandSector
+Class: OEO_00000128
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en,
+        rdfs:label "demand sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: ElectricitySector
+Class: OEO_00000145
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en,
+        rdfs:label "electricity sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: EnergySector
+Class: OEO_00000158
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en,
+        rdfs:label "energy sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: HeatSector
+Class: OEO_00000213
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
-        rdfs:label "HeatingCoolingSector"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "energy used for heating and cooling for buildings and industry"@en,
+        rdfs:label "heating and cooling sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: HouseholdSector
+Class: OEO_00000214
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en,
+        rdfs:label "household sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: IndustrySector
+Class: OEO_00000227
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
@@ -330,112 +341,123 @@ Class: IndustrySector
 * Wood and wood products (other than pulp and paper)
 * Construction
 * Textile and leather
-* Non-specified (any manufacturing industry not included above)"@en
+* Non-specified (any manufacturing industry not included above)"@en,
+        rdfs:label "industry sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: Institution
+Class: OEO_00000238
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en,
+        rdfs:label "institution"
     
     SubClassOf: 
-        Organization
+        OEO_00000315
     
     
-Class: Organization
+Class: OEO_00000315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en,
+        rdfs:label "organization"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some Person
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000323
     
     DisjointWith: 
-        Person
+        OEO_00000323
     
     
-Class: Person
+Class: OEO_00000323
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human beeing."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human being."@en,
+        rdfs:label "person"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000030>
     
     DisjointWith: 
-        Organization
+        OEO_00000315
     
     
-Class: PoliticalParty
+Class: OEO_00000329
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en,
+        rdfs:label "political party"
     
     SubClassOf: 
-        Organization
+        OEO_00000315
     
     
-Class: Prosumer
+Class: OEO_00000341
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is an agent who is producer and consumer at the same time."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is an agent who is producer and consumer at the same time."@en,
+        rdfs:label "prosumer"
     
     SubClassOf: 
-        Agent
+        OEO_00000051
     
     
-Class: Sector
+Class: OEO_00000367
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
+        rdfs:label "sector"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
-Class: SectorDivision
+Class: OEO_00000368
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A SectorDivision is a specific way to subdivide a system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector division is a specific way to subdivide a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
+        rdfs:label "sector division"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
-Class: SoftwareDeveloper
+Class: OEO_00000379
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A SoftwareDeveloper is an agent that creates computer software."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A software developer is an agent that creates computer software.",
+        rdfs:label "software developer"
     
     SubClassOf: 
-        Agent
+        OEO_00000051
     
     
-Class: TCSSector
+Class: OEO_00000405
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en,
+        rdfs:label "TCS sector"
     
     SubClassOf: 
-        DemandSector
+        OEO_00000128
     
     
-Class: TrafficSector
+Class: OEO_00000418
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en,
+        rdfs:label "traffic sector"
     
     SubClassOf: 
-        DemandSector
+        OEO_00000128
     
     
-Class: TransportSector
+Class: OEO_00000422
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
@@ -445,35 +467,38 @@ Class: TransportSector
 * Rail, including industrial railways.
 * Pipeline transport
 * Domestic navigation
-* Non-specified: includes all transport not elsewhere specified."@en
+* Non-specified: includes all transport not elsewhere specified."@en,
+        rdfs:label "transport sector"
     
     SubClassOf: 
-        Sector
+        OEO_00000367
     
     
-Class: User
+Class: OEO_00000431
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A user is an agent that employs an aid, tool or information system to achieve a goal/benefit."
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A user is an agent that employs an aid, tool or information system to achieve a goal/benefit.",
+        rdfs:label "user"
     
     SubClassOf: 
-        Agent
+        OEO_00000051
     
     
-Individual: Eurostat_Energy_Balances
+Individual: OEO_00000160
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The concept of \"energy balance\" is an accounting framework for the compilation and understanding of data on all energy products entering, exiting and being used in a country. The energy balance is the most complete statistical accounting of energy products and their flow in the economy. Columns of the energy balance represent energy products (fuels). Rows represent energy flows.
 
 The energy balance expresses all forms of energy in a common accounting unit. The balance shows the relationships between supply, inputs to the energy transformation processes and their outputs as well as the actual energy consumption by different sectors of end-use.",
         <http://purl.obolibrary.org/obo/IAO_0000116> "This is a general description of an energy balance. A link to a complete Eurostat energy balance is provided under the URL for 'definition source'",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php/Energy_balance#What_is_an_energy_balance.3F"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php/Energy_balance#What_is_an_energy_balance.3F",
+        rdfs:label "eurostat_ energy_ balances"
     
     Types: 
-        SectorDivision
+        OEO_00000368
     
     
-Individual: German_Energy_Balances
+Individual: OEO_00000193
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Das Schema der Energiebilanzen umfasst eine Matrix von 33 Spalten und 68 Zeilen (einschließlich der Summenspalten und -zeilen). In der horizontalen Gliederung (Spalten) werden die Energieträger ausgewiesen, die der energetischen und nichtenergetischen Nutzung dienen. In der vertikalen Gliederung (Zeilen) werden für die jeweiligen Energieträger Aufkommen, Umwandlung und Verwendung erfasst.
@@ -503,60 +528,65 @@ In der Primärenergiebilanz werden die Energieträger mit ihrem Mengenaufkommen 
     Hochseebunkerungen (Heizöl, Dieselkraftstoff und Schmierstoffe für die nationale und internationale Seeschifffahrt in deutschen Häfen. Ohne Lieferungen an Binnen- und Küstenmotorschiffe und Fischerei, die zum Sektor Verkehr (Endenergieverbrauch) zählen.)
     Bestandsveränderungen, getrennt erfasst nach Bestandsentnahmen und -aufstockungen",
         <http://purl.obolibrary.org/obo/IAO_0000116> "The German Energy Balance is managed by the 'AG Energiebilanzen', where aso the energy balances can be found: https://ag-energiebilanzen.de/",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://de.wikipedia.org/w/index.php?title=Energiebilanz_(Energiewirtschaft)&oldid=176259115"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://de.wikipedia.org/w/index.php?title=Energiebilanz_(Energiewirtschaft)&oldid=176259115",
+        rdfs:label "german_ energy_ balances"
     
     Types: 
-        SectorDivision
+        OEO_00000368
     
     
-Individual: IPCC_1996_Guidelines
+Individual: OEO_00000242
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 1996 (revised).",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/gl/invs6.html"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/gl/invs6.html",
+        rdfs:label "ipcc_1996_ guidelines"
     
     Types: 
-        SectorDivision
+        OEO_00000368
     
     
-Individual: IPCC_2006_Guidelines
+Individual: OEO_00000243
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 2006.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/2006gl/index.html"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.ipcc-nggip.iges.or.jp/public/2006gl/index.html",
+        rdfs:label "ipcc_2006_ guidelines"
     
     Types: 
-        SectorDivision
+        OEO_00000368
     
     
-Individual: NACE_Sectors
+Individual: OEO_00000291
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The Statistical classification of economic activities in the European Community, abbreviated as NACE, is the classification of economic activities in the European Union (EU); the term NACE is derived from the French Nomenclature statistique des activités économiques dans la Communauté européenne. Various NACE versions have been developed since 1970.
 
 NACE is a four-digit classification providing the framework for collecting and presenting a large range of statistical data according to economic activity in the fields of economic statistics (e.g. production, employment and national accounts) and in other statistical domains developed within the European statistical system (ESS).",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_classification_of_economic_activities_in_the_European_Community_(NACE)"
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Statistical_classification_of_economic_activities_in_the_European_Community_(NACE)",
+        rdfs:label "nace_ sectors"
     
     Types: 
-        SectorDivision
+        OEO_00000368
     
     
-Individual: Renewable_Energy_Directive_Sectors
+Individual: OEO_00000355
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000116> "The Renewable Energy Directive has been revised, but this should have had no impacts on the sectoral definitions. Factsheet on revision: https://ec.europa.eu/energy/sites/ener/files/documents/directive_renewable_factsheet.pdf",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028"
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The Renewable energy Directive has been revised, but this should have had no impacts on the sectoral definitions. factsheet on revision: https://ec.europa.eu/energy/sites/ener/files/documents/directive_renewable_factsheet.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028",
+        rdfs:label "renewable_ energy_ directive_ sectors"
     
     Types: 
-        SectorDivision
+        OEO_00000368
     
     
 DisjointClasses: 
-    CommerceSector,HouseholdSector,IndustrySector
+    OEO_00000100,OEO_00000214,OEO_00000227
 
 DisjointClasses: 
-    ElectricitySector,HeatSector,TransportSector
+    OEO_00000145,OEO_00000213,OEO_00000422
 
 DisjointClasses: 
-    HouseholdSector,IndustrySector,TCSSector,TrafficSector
+    OEO_00000214,OEO_00000227,OEO_00000405,OEO_00000418
 
