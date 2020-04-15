@@ -68,5 +68,7 @@ Here is a template for new release sections
 - contact and subclasses (#101)
 - subclasses of assumption (#102)
 - delete cost and subclasses (#326)
+- GeographicRegion and subclasses (#322)
+
 
 
