@@ -67,6 +67,7 @@ Here is a template for new release sections
   ontology inconsistent (#51)
 - contact and subclasses (#101)
 - subclasses of assumption (#102)
+- GeographicRegion and subclasses (#322)
 
 
 
