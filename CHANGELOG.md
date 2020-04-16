@@ -67,6 +67,10 @@ Here is a template for new release sections
   ontology inconsistent (#51)
 - contact and subclasses (#101)
 - subclasses of assumption (#102)
+- time step, time series, time horizon (#327)
+- type and subclasses (#325)
+- cost and subclasses (#326)
+- GeographicRegion and subclasses (#322)
 
 
 
