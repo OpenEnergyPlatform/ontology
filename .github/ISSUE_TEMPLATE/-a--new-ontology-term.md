@@ -23,6 +23,5 @@ If you already have ideas for the solution describe them here
 - [ ] The [goal](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) of this ontology is clear to me 
 
 I am aware that
-- [ ] every new entry in the ontology should have an annotation
+- [ ] every entry in the ontology should have a definition
 - [ ] classes should arise from concepts rather than from words
-- [ ] class or property names should follow the [UpperCamelCase](https://en.wikipedia.org/wiki/Camel_case)

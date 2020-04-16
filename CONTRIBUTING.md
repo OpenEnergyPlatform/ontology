@@ -3,6 +3,7 @@
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
+- please make sure you changed your protégé settings to [numerical identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers) and got a personal ID to add new classes.
 
 ### Contribution of OEO content
 Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
