@@ -35,6 +35,7 @@ Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for 
 The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [github issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
 
 ## Teams tag
+Experts in ontology engineering, economy and energy-system modelling work together to combine domain knowledge with knowledge about how an ontology should be designed.
 
 If you have a specific question about ontology, modelling or economy (in context of the ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these team to notify its members that you need their feedback/help.
 
