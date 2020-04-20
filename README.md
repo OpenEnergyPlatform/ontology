@@ -28,7 +28,7 @@ The complete ontology is found under src/ontology/oeo.omn. Own modules can be se
 ## Contributing and developing
 This is an interdisciplinary, open source project, help is always appreciated! 
 
-The development of the ontology happens mainly on [github](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by telcos to review the progress and discuss more complicated topics. 
+The development of the ontology happens mainly on [github](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by (online) developer meetings to review the progress and discuss more complicated topics. 
 
 Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
  
