@@ -74,6 +74,7 @@ Here is a template for new release sections
 - type and subclasses (#325)
 - cost and subclasses (#326)
 - GeographicRegion and subclasses (#322)
+- Validation and subclasses (#347)
 - SoftwareElement (#348)
 
 
