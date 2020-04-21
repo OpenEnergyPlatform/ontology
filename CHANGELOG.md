@@ -62,6 +62,7 @@ Here is a template for new release sections
 - Turbine (#299)
 - Change to use numeric identifiers for classes and individuals (#133)
 - change origin individuals to classes (#321)
+- change model def (#180)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
