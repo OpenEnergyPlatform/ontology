@@ -77,5 +77,6 @@ Here is a template for new release sections
 - GeographicRegion and subclasses (#322)
 - Validation and subclasses (#347)
 - SoftwareElement (#348)
+- unused object properties (#351)
 
 
