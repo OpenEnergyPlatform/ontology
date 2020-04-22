@@ -2537,13 +2537,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
 Class: OEO_00000318
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Atmospheric aerosol particles – also known as atmospheric particulate matter, particulate matter (PM), particulates, or suspended particulate matter (SPM) – are portions of matter consisting of microscopic solid or liquid matter suspended in the atmosphere of Earth. The term aerosol commonly refers to the particulate/air mixture, as opposed to the particulate matter alone.Sources of particulate matter can be natural or anthropogenic.They have impacts on climate and precipitation that adversely affect human health, in addition to direct inhalation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Particulates&oldid=906795232"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Particulate matter is a portion of matter consisting of small particles. It can at as an air pollutant."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PM",
         rdfs:label "particulate matter"
     
     SubClassOf: 
         OEO_00000331,
-        (has_normal_state_of_matter value OEO_00000256) or (has_normal_state_of_matter value OEO_00000390)
+        (has_normal_state_of_matter value OEO_00000256) or (has_normal_state_of_matter value OEO_00000390),
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
     
     
 Class: OEO_00000320
@@ -3311,18 +3312,6 @@ Class: OEO_00010007
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
     
     
-Class: OEO_00010008
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Particulate matter is a portion of matter consisting of small particles. It can at as an air pollutant.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "PM",
-        rdfs:label "particulate matter"@de
-    
-    SubClassOf: 
-        OEO_00000331,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
-    
-    
 Class: OEO_00010009
 
     Annotations: 
@@ -3330,7 +3319,7 @@ Class: OEO_00010009
         rdfs:label "PM10"@de
     
     SubClassOf: 
-        OEO_00010008
+        OEO_00000318
     
     
 Class: OEO_00010010
@@ -3340,7 +3329,7 @@ Class: OEO_00010010
         rdfs:label "PM2.5"@de
     
     SubClassOf: 
-        OEO_00010008
+        OEO_00000318
     
     
 Class: OEO_00030000
