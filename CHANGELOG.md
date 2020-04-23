@@ -35,6 +35,7 @@ Here is a template for new release sections
 - RenewableEnergyCarrier (#206)
 - ChemicalEnergy (#214)
 - scenario subclasses (#344)
+- state of matter defined classes (#354)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
