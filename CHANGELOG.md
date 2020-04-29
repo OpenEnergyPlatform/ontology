@@ -42,7 +42,7 @@ Here is a template for new release sections
 - Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)
 - FluorinatedGreenhouseGas (#88) and GreenhouseGas (#234)
 - agent and subclasses (#51)
-- pollutant and subclasses (#51)
+- pollutant and subclasses (#51, #356)
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
 - StateOfMatter and subclasses (#45)
