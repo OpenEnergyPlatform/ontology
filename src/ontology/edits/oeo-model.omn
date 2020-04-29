@@ -88,41 +88,11 @@ ObjectProperty: conforms_to
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     
-ObjectProperty: data_provided
-
-    SubPropertyOf: 
-        is_referenced_by
-    
-    
-ObjectProperty: generates_dataset
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    
-ObjectProperty: hasNumeral
-
-    
-ObjectProperty: hasUnitofMeasurement
-
-    
-ObjectProperty: has_approach_to_uncertainty
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
-    
 ObjectProperty: has_author
 
     
 ObjectProperty: has_client
 
-    
-ObjectProperty: has_complexity
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
     
 ObjectProperty: has_constraint
 
@@ -138,25 +108,6 @@ ObjectProperty: has_contact
     
 ObjectProperty: has_funding_source
 
-    
-ObjectProperty: has_license
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_logo
-
-    SubPropertyOf: 
-        is_referenced_by,
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
-    
-ObjectProperty: has_mathematical_objective
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
     
 ObjectProperty: has_numercical_input
 
@@ -254,12 +205,6 @@ ObjectProperty: has_spatial_resolution
         has_resolution
     
     
-ObjectProperty: has_support_community_forum
-
-    SubPropertyOf: 
-        is_referenced_by
-    
-    
 ObjectProperty: has_temporal_resolution
 
     Annotations: 
@@ -284,45 +229,6 @@ ObjectProperty: has_tool
         OEO_00000274
     
     
-ObjectProperty: has_typical_computation_hardware
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: has_typical_computation_time
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: has_website
-
-    SubPropertyOf: 
-        is_referenced_by
-    
-    
-ObjectProperty: is_available_on_GitHub
-
-    SubPropertyOf: 
-        is_referenced_by
-    
-    
-ObjectProperty: is_referenced_by
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    InverseOf: 
-        references
-    
-    
-ObjectProperty: link_to_source_code
-
-    SubPropertyOf: 
-        is_referenced_by
-    
-    
 ObjectProperty: makes_assumption
 
     Annotations: 
@@ -335,21 +241,6 @@ ObjectProperty: makes_assumption
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: references
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    InverseOf: 
-        is_referenced_by
-    
-    
-ObjectProperty: source_code_available
-
-    SubPropertyOf: 
-        is_referenced_by
-    
-    
 ObjectProperty: uses
 
     
@@ -360,42 +251,6 @@ ObjectProperty: uses_dataset
     
     SubPropertyOf: 
         uses
-    
-    
-ObjectProperty: uses_external_optimizer
-
-    SubPropertyOf: 
-        uses
-    
-    
-ObjectProperty: uses_software
-
-    SubPropertyOf: 
-        uses
-    
-    
-ObjectProperty: uses_software_internal_data_processing
-
-    SubPropertyOf: 
-        uses_software
-    
-    
-ObjectProperty: uses_software_modelling
-
-    SubPropertyOf: 
-        uses_software
-    
-    
-ObjectProperty: utilizes_dataset
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    
-ObjectProperty: utilizes_program_parameter
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -735,25 +590,6 @@ Class: OEO_00000172
         OEO_00000162
     
     
-Class: OEO_00000177
-
-    Annotations: 
-        rdfs:label "funding"
-    
-    SubClassOf: 
-        OEO_00000383
-    
-    
-Class: OEO_00000201
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid model is a model about the electricity grid."^^xsd:string,
-        rdfs:label "grid model"
-    
-    SubClassOf: 
-        OEO_00000274
-    
-    
 Class: OEO_00000202
 
     Annotations: 
@@ -918,6 +754,9 @@ Class: OEO_00000278
 Class: OEO_00000279
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A modeling software is a software used to create and maintain a (mathematical) model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/338
+        pull request: https://github.com/OpenEnergyPlatform/ontology/pull/345",
         rdfs:label "modeling software"
     
     SubClassOf: 
@@ -1020,15 +859,6 @@ Class: OEO_00000337
         OEO_00000108
     
     
-Class: OEO_00000338
-
-    Annotations: 
-        rdfs:label "private"
-    
-    SubClassOf: 
-        OEO_00000177
-    
-    
 Class: OEO_00000339
 
     Annotations: 
@@ -1047,15 +877,6 @@ Class: OEO_00000340
     
     SubClassOf: 
         OEO_00000353
-    
-    
-Class: OEO_00000342
-
-    Annotations: 
-        rdfs:label "public"
-    
-    SubClassOf: 
-        OEO_00000177
     
     
 Class: OEO_00000353
@@ -1116,11 +937,13 @@ Class: OEO_00000371
 Class: OEO_00000372
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A single node model is a grid model where a region is represented as a single node."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A single node model is a model where a region is represented as a single node.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
         rdfs:label "single node model"
     
     SubClassOf: 
-        OEO_00000201
+        OEO_00000274
     
     
 Class: OEO_00000378
@@ -1222,10 +1045,13 @@ Class: OEO_00000419
 Class: OEO_00000423
 
     Annotations: 
-        rdfs:label "transshipment model"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity transshipment model is a model that applies the transshipment problem to the electricity grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "electricity transshipment model"
     
     SubClassOf: 
-        OEO_00000201
+        OEO_00000274
     
     
 Class: OEO_00000432
@@ -1303,6 +1129,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
     
     SubClassOf: 
         OEO_00000364
+    
+    
+Class: OEO_00030015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "energy system model"@de
+    
+    SubClassOf: 
+        OEO_00000274
     
     
 Individual: OEO_00000046

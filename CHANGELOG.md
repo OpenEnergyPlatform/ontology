@@ -35,6 +35,7 @@ Here is a template for new release sections
 - RenewableEnergyCarrier (#206)
 - ChemicalEnergy (#214)
 - scenario subclasses (#344)
+- state of matter defined classes (#354)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
@@ -62,6 +63,7 @@ Here is a template for new release sections
 - Turbine (#299)
 - Change to use numeric identifiers for classes and individuals (#133)
 - change origin individuals to classes (#321)
+- modeling software (#345)
 - change model def (#180)
 
 ### Removed
@@ -76,5 +78,6 @@ Here is a template for new release sections
 - GeographicRegion and subclasses (#322)
 - Validation and subclasses (#347)
 - SoftwareElement (#348)
+- unused object properties (#351)
 
 
