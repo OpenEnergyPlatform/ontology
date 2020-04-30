@@ -83,5 +83,7 @@ Here is a template for new release sections
 - SoftwareElement (#348)
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
+- quantity subclasses (#368)
+
 
 
