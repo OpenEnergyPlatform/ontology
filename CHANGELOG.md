@@ -80,5 +80,6 @@ Here is a template for new release sections
 - Validation and subclasses (#347)
 - SoftwareElement (#348)
 - unused object properties (#351)
+- quantity subclasses (#368)
 
 
