@@ -66,6 +66,7 @@ Here is a template for new release sections
 - modeling software (#345)
 - change model def (#180)
 - change energy class (#224)
+- change power definition (#79)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
