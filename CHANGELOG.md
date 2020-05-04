@@ -36,6 +36,7 @@ Here is a template for new release sections
 - ChemicalEnergy (#214)
 - scenario subclasses (#344)
 - state of matter defined classes (#354)
+- energy transformation (#77)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
@@ -81,6 +82,8 @@ Here is a template for new release sections
 - Validation and subclasses (#347)
 - SoftwareElement (#348)
 - unused object properties (#351)
+- remove energy production and subclasses (#77)
 - quantity subclasses (#368)
+
 
 
