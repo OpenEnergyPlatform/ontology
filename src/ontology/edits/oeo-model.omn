@@ -1,0 +1,1611 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: obda: <https://w3id.org/obda/vocabulary#>
+Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+
+Ontology: <http://openenergy-platform.org/ontology/oeo-model/>
+<http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
+Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
+Import: <http://open-energy-ontology.org/ontology/imports/iao-module.owl>
+Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
+Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
+AnnotationProperty: rdfs:comment
+
+    
+AnnotationProperty: rdfs:isDefinedBy
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
+
+    
+ObjectProperty: conforms_to
+
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    
+ObjectProperty: has_author
+
+    
+ObjectProperty: has_client
+
+    
+ObjectProperty: has_constraint
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
+    
+ObjectProperty: has_contact
+
+    
+ObjectProperty: has_funding_source
+
+    
+ObjectProperty: has_numercical_input
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        OEO_00000419
+    
+    
+ObjectProperty: has_numerical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        OEO_00000419
+    
+    
+ObjectProperty: has_objective
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+    
+    Domain: 
+        OEO_00000313
+    
+    
+ObjectProperty: has_objectivefunction
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_objectivevariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+    
+    SubPropertyOf: 
+        has_objective
+    
+    
+ObjectProperty: has_physical_output
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    
+ObjectProperty: has_programvariable
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    
+ObjectProperty: has_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the resolution it uses."@en
+    
+    
+ObjectProperty: has_spatial_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_temporal_resolution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
+    
+    SubPropertyOf: 
+        has_resolution
+    
+    
+ObjectProperty: has_tool
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    Domain: 
+        OEO_00000275
+    
+    Range: 
+        OEO_00000274
+    
+    
+ObjectProperty: makes_assumption
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+ObjectProperty: uses
+
+    
+ObjectProperty: uses_dataset
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
+    
+    SubPropertyOf: 
+        uses
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000016>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000024>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000029>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000038>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000010>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000027>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000028>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000100>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000300>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000310>
+
+    
+Class: OEO_00000048
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is an abbreviation of the title by using the first letters of each part of the title."@en,
+        rdfs:label "acronym"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000028>
+    
+    
+Class: OEO_00000057
+
+    Annotations: 
+        rdfs:label "analytical approach"
+    
+    SubClassOf: 
+        OEO_00000108
+    
+    
+Class: OEO_00000059
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An API (Application Programming interface) is a software interface allowing two Software applications to communicate with each other.",
+        rdfs:label "API"
+    
+    SubClassOf: 
+        OEO_00000239
+    
+    DisjointWith: 
+        OEO_00000202
+    
+    
+Class: OEO_00000063
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en,
+        rdfs:label "assumption"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000078
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en,
+        rdfs:label "boolean variable"
+    
+    SubClassOf: 
+        OEO_00000435
+    
+    
+Class: OEO_00000085
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A citation reference is a reference stating where a citation was taken from."^^xsd:string,
+        rdfs:label "citation reference"
+    
+    SubClassOf: 
+        OEO_00000353
+    
+    
+Class: OEO_00000090
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A code documentation is a documentation explaining and annotating software code."^^xsd:string,
+        rdfs:label "code documentation"
+    
+    SubClassOf: 
+        OEO_00000380
+    
+    
+Class: OEO_00000091
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A code source is a data descriptor describing the origin of some code."^^xsd:string,
+        rdfs:label "code source"
+    
+    SubClassOf: 
+        OEO_00000119
+    
+    
+Class: OEO_00000103
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "computation time is a software descriptor describing how long a Software or an Algorithm needs to compute."^^xsd:string,
+        rdfs:label "computation time"
+    
+    SubClassOf: 
+        OEO_00000378
+    
+    
+Class: OEO_00000104
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
+        rdfs:label "constraint"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000108
+
+    Annotations: 
+        rdfs:label "content descriptor"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000111
+
+    Annotations: 
+        rdfs:label "corporate identity"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000118
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A database is an information content entity that stores data items and data sets.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/253
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/272",
+        rdfs:label "database"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/IAO_0000027>
+    
+    
+Class: OEO_00000119
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A data descriptor is an information content entity that contains additional information about some data."^^xsd:string,
+        rdfs:label "data descriptor"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000120
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A data format is a data descriptor that describes in which format the data is encoded."^^xsd:string,
+        rdfs:label "data format"
+    
+    SubClassOf: 
+        OEO_00000119
+    
+    DisjointWith: 
+        OEO_00000312
+    
+    
+Class: OEO_00000122
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Data postprocessing is data processing that transforms the output of a model calculation into a form that is suitable for presentation."^^xsd:string,
+        rdfs:label "data postprocessing"
+    
+    SubClassOf: 
+        OEO_00000124
+    
+    
+Class: OEO_00000123
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Data preprocessing is data processing that transforms the input into a form that is useable for a model calculation."^^xsd:string,
+        rdfs:label "data preprocessing"
+    
+    SubClassOf: 
+        OEO_00000124
+    
+    
+Class: OEO_00000124
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/252
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/289",
+        rdfs:comment "data processing is a transformation in which a data item gets transformed.",
+        rdfs:label "data processing"
+    
+    SubClassOf: 
+        OEO_00000419,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/IAO_0000027>
+    
+    
+Class: OEO_00000125
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "data processing software is software used in the context of data processing."^^xsd:string,
+        rdfs:label "data processing software"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: OEO_00000133
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A DOI (digital object identifier) is a persistent identifier or handle used to uniquely identify objects, standardized by the International Organization for Standardization (ISO).
+source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en,
+        rdfs:label "DOI"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000028>
+    
+    
+Class: OEO_00000149
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en,
+        rdfs:label "empirical dataset"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    DisjointWith: 
+        OEO_00000403
+    
+    
+Class: OEO_00000161
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An external optimizer is a software external to a model that computes an optimization."^^xsd:string,
+        rdfs:label "external optimizer"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: OEO_00000162
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A factsheet is a document that collects information about a specific topic in a structured way.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/250
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/271",
+        rdfs:comment "this entity is general and not specific to the OEP factsheets.",
+        rdfs:label "factsheet"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    
+Class: OEO_00000172
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A framework factsheet is a factsheet that contains information about a software framework."^^xsd:string,
+        rdfs:label "framework factsheet"
+    
+    SubClassOf: 
+        OEO_00000162
+    
+    
+Class: OEO_00000202
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GUI (Graphical user interface)  is a software interface allowing users to communicate with a software application through a graphical window.",
+        rdfs:label "GUI"
+    
+    SubClassOf: 
+        OEO_00000239
+    
+    DisjointWith: 
+        OEO_00000059
+    
+    
+Class: OEO_00000228
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An installation guide is a documentation intended to help users install a Software."^^xsd:string,
+        rdfs:label "installation guide"
+    
+    SubClassOf: 
+        OEO_00000380
+    
+    
+Class: OEO_00000239
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A software interface is a software that enables an agent to interact with it.",
+        rdfs:label "software interface"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: OEO_00000249
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A license is a software descriptor that determines the official permissions for using the software."^^xsd:string,
+        rdfs:label "license"
+    
+    SubClassOf: 
+        OEO_00000378
+    
+    
+Class: OEO_00000261
+
+    Annotations: 
+        rdfs:label "logo"
+    
+    SubClassOf: 
+        OEO_00000111
+    
+    
+Class: OEO_00000264
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market model is a model is about the EnergyMarket."^^xsd:string,
+        rdfs:label "market model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000265
+
+    Annotations: 
+        rdfs:label "mathematical concept"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000268
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "maximization is a model function that maximizes some variable of a model."^^xsd:string,
+        rdfs:label "maximization"
+    
+    SubClassOf: 
+        OEO_00000278
+    
+    
+Class: OEO_00000270
+
+    Annotations: 
+        rdfs:label "methodical focus"
+    
+    SubClassOf: 
+        OEO_00000108
+    
+    
+Class: OEO_00000272
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "minimization is a model function that minimizes some variable of a model.",
+        rdfs:label "minimization"
+    
+    SubClassOf: 
+        OEO_00000278
+    
+    
+Class: OEO_00000274
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealized reproduction of a system and its behaviours."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/180
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/208
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
+        rdfs:label "model"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: OEO_00000275
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en,
+        rdfs:label "model calculation"
+    
+    SubClassOf: 
+        OEO_00000419,
+        has_tool some OEO_00000274
+    
+    
+Class: OEO_00000276
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model component is a generically dependent continuant that is part of a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "model element",
+        rdfs:label "model component"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000274
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: OEO_00000277
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model factsheet is a factsheet that contains information about a model."^^xsd:string,
+        rdfs:label "model factsheet"
+    
+    SubClassOf: 
+        OEO_00000162
+    
+    
+Class: OEO_00000278
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The function that calculates the costs of the energy system in a simulation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model function is a model component that is a function."@en,
+        rdfs:label "model function"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000279
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A modeling software is a software used to create and maintain a (mathematical) model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/338
+        pull request: https://github.com/OpenEnergyPlatform/ontology/pull/345",
+        rdfs:label "modeling software"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: OEO_00000281
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A modus is an information content entity describing the state of activity something has, e.g. active, inactive or passive."^^xsd:string,
+        rdfs:label "modus"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000304
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An objective function is an information content entity stating the function that should be maximised or minimised to solve the problem."^^xsd:string,
+        rdfs:label "objective function"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000312
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "open source is a software descriptor labeling software whose source code is available online for free and can be modified or redistributed."^^xsd:string,
+        rdfs:label "open source"
+    
+    SubClassOf: 
+        OEO_00000378
+    
+    DisjointWith: 
+        OEO_00000120
+    
+    
+Class: OEO_00000313
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en,
+        rdfs:label "optimization"
+    
+    SubClassOf: 
+        OEO_00000275
+    
+    DisjointWith: 
+        OEO_00000370
+    
+    
+Class: OEO_00000314
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en,
+        rdfs:label "optimization model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000327
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Plotting is data processing where data is visualised in form of a diagram."^^xsd:string,
+        rdfs:label "plotting"
+    
+    SubClassOf: 
+        OEO_00000124
+    
+    
+Class: OEO_00000328
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political assumption is an assumption about political measures taken."@en,
+        rdfs:label "political assumption"
+    
+    SubClassOf: 
+        OEO_00000063
+    
+    
+Class: OEO_00000336
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "primary outputs is a content descriptor stating the main outputs of the content."^^xsd:string,
+        rdfs:label "primary outputs"
+    
+    SubClassOf: 
+        OEO_00000108
+    
+    
+Class: OEO_00000337
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary purpose is a content descriptor stating the main purpose of a content."^^xsd:string,
+        rdfs:label "primary purpose"
+    
+    SubClassOf: 
+        OEO_00000108
+    
+    
+Class: OEO_00000339
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable that influences the output of  a calculation in the program but has no meaning outside of the program."@en,
+        rdfs:label "program parameter"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000340
+
+    Annotations: 
+        rdfs:label "project"
+    
+    SubClassOf: 
+        OEO_00000353
+    
+    
+Class: OEO_00000353
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reference is an information content entity naming a relevant document, position in a document or address."^^xsd:string,
+        rdfs:label "reference"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000364
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario is an information content entity that contains statements about a possible future development based on a coherent and internally consistent set of assumptions and their motivation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+        rdfs:label "scenario"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000365
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario factsheet is a factsheet that contains information about a scenario."^^xsd:string,
+        rdfs:label "scenario factsheet"
+    
+    SubClassOf: 
+        OEO_00000162
+    
+    
+Class: OEO_00000370
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en,
+        rdfs:label "simulation"
+    
+    SubClassOf: 
+        OEO_00000275
+    
+    DisjointWith: 
+        OEO_00000313
+    
+    
+Class: OEO_00000371
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en,
+        rdfs:label "simulation model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000372
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A single node model is a model where a region is represented as a single node.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "single node model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000378
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A software descriptor is an information content entity that contains additional information about the software."^^xsd:string,
+        rdfs:label "software descriptor"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000380
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/251
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/285",
+        rdfs:comment "A software documentation is a document containing explanations and tutorials how to use a program and is delivered with that program.",
+        rdfs:label "software documentation"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    
+Class: OEO_00000382
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A software framework is a Software that is generic and can be adapted to a specific application.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/286",
+        rdfs:label "software framework"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: OEO_00000383
+
+    Annotations: 
+        rdfs:label "software maintenance"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000392
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solver is a software that solves a mathematical problem.",
+        rdfs:label "solver"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000010>
+    
+    
+Class: OEO_00000400
+
+    Annotations: 
+        rdfs:label "study"
+    
+    SubClassOf: 
+        OEO_00000353
+    
+    
+Class: OEO_00000403
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is obtained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en,
+        rdfs:label "synthethic dataset"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    DisjointWith: 
+        OEO_00000149
+    
+    
+Class: OEO_00000408
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A test dataset is a data set used for testing."^^xsd:string,
+        rdfs:label "test dataset"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    
+Class: OEO_00000419
+
+    Annotations: 
+        definition "A transformation is a process that transforms one or more inputs into at least one output."@en,
+        rdfs:label "transformation"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00000423
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity transshipment model is a model that applies the transshipment problem to the electricity grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "electricity transshipment model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000432
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A user documentation is a documentation intended to assist users in using the software."^^xsd:string,
+        rdfs:label "user documentation"
+    
+    SubClassOf: 
+        OEO_00000380
+    
+    
+Class: OEO_00000435
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A variable is an information content entity that represents a changeable value, vector, matrix or function within a mathematical expression."@en,
+        rdfs:label "variable"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00000445
+
+    Annotations: 
+        rdfs:label "website"
+    
+    SubClassOf: 
+        OEO_00000111
+    
+    
+Class: OEO_00030007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A climate scenario is a scenario that describes a possible future state of a climate system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+        rdfs:label "climate scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00030008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic scenario is a scenario that describes a possible future state of an economic system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+        rdfs:label "economic scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00030009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission scenario is a scenario that describes a possible emission trajectory.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+        rdfs:label "emission scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00030010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy scenario is a scenario that describes a possible future state of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+        rdfs:label "energy scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00030015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "energy system model"@de
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Individual: OEO_00000046
+
+    Annotations: 
+        rdfs:label "accounting"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000049
+
+    Annotations: 
+        rdfs:label "active"
+    
+    Types: 
+        OEO_00000281
+    
+    
+Individual: OEO_00000052
+
+    Annotations: 
+        rdfs:label "agent based programming"
+    
+    Types: 
+        OEO_00000265
+    
+    
+Individual: OEO_00000067
+
+    Annotations: 
+        rdfs:label "back casting"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000079
+
+    Annotations: 
+        rdfs:label "bottom up"
+    
+    Types: 
+        OEO_00000057
+    
+    
+Individual: OEO_00000081
+
+    Annotations: 
+        rdfs:label "c++"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000092
+
+    Annotations: 
+        rdfs:label "coin- or_cbc"
+    
+    Types: 
+        OEO_00000392
+    
+    
+Individual: OEO_00000114
+
+    Annotations: 
+        rdfs:label "cplex"
+    
+    Types: 
+        OEO_00000392
+    
+    
+Individual: OEO_00000116
+
+    Annotations: 
+        rdfs:label "csv"
+    
+    Types: 
+        OEO_00000120
+    
+    
+Individual: OEO_00000121
+
+    Annotations: 
+        rdfs:label "data frame"
+    
+    Types: 
+        OEO_00000120
+    
+    
+Individual: OEO_00000130
+
+    Annotations: 
+        rdfs:label "dict"
+    
+    Types: 
+        OEO_00000120
+    
+    
+Individual: OEO_00000134
+
+    Annotations: 
+        rdfs:label "dynamic programming"
+    
+    Types: 
+        OEO_00000265
+    
+    
+Individual: OEO_00000136
+
+    Annotations: 
+        rdfs:label "econometric"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000138
+
+    Annotations: 
+        rdfs:label "economic equilibrium"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000163
+
+    Annotations: 
+        rdfs:label "false"
+    
+    Types: 
+        OEO_00000078
+    
+    
+Individual: OEO_00000170
+
+    Annotations: 
+        rdfs:label "fortran"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000179
+
+    Annotations: 
+        rdfs:label "fuzzy logic"
+    
+    Types: 
+        OEO_00000265
+    
+    
+Individual: OEO_00000180
+
+    Annotations: 
+        rdfs:label "gams"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000187
+
+    Annotations: 
+        rdfs:label "gdx"
+    
+    Types: 
+        OEO_00000120
+    
+    
+Individual: OEO_00000195
+
+    Annotations: 
+        rdfs:label "glpk"
+    
+    Types: 
+        OEO_00000392
+    
+    
+Individual: OEO_00000196
+
+    Annotations: 
+        rdfs:label "gnu"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000203
+
+    Annotations: 
+        rdfs:label "gurobi"
+    
+    Types: 
+        OEO_00000392
+    
+    
+Individual: OEO_00000215
+
+    Annotations: 
+        rdfs:label "hybrid"
+    
+    Types: 
+        OEO_00000057
+    
+    
+Individual: OEO_00000225
+
+    Annotations: 
+        rdfs:label "inactive"
+    
+    Types: 
+        OEO_00000281
+    
+    
+Individual: OEO_00000244
+
+    Annotations: 
+        rdfs:label "java"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000254
+
+    Annotations: 
+        rdfs:label "linear programming"
+    
+    Types: 
+        OEO_00000265
+    
+    
+Individual: OEO_00000262
+
+    Annotations: 
+        rdfs:label "macroeconomic"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000266
+
+    Annotations: 
+        rdfs:label "math prog"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000267
+
+    Annotations: 
+        rdfs:label "matlab"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000273
+
+    Annotations: 
+        rdfs:label "mixed integer linear programming"
+    
+    Types: 
+        OEO_00000265
+    
+    
+Individual: OEO_00000280
+
+    Annotations: 
+        rdfs:label "modelica"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000284
+
+    Annotations: 
+        rdfs:label "monte carlo"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000285
+
+    Annotations: 
+        rdfs:label "mosek"
+    
+    Types: 
+        OEO_00000392
+    
+    
+Individual: OEO_00000287
+
+    Annotations: 
+        rdfs:label "ms_ excel"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000288
+
+    Annotations: 
+        rdfs:label "vba"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000289
+
+    Annotations: 
+        rdfs:label "multi criteria"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000313
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en,
+        rdfs:label "optimization"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000317
+
+    Annotations: 
+        rdfs:label "other"
+    
+    Types: 
+        OEO_00000057
+    
+    
+Individual: OEO_00000319
+
+    Annotations: 
+        rdfs:label "passive"
+    
+    Types: 
+        OEO_00000281
+    
+    
+Individual: OEO_00000325
+
+    Annotations: 
+        rdfs:label "php"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000349
+
+    Annotations: 
+        rdfs:label "python"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000351
+
+    Annotations: 
+        rdfs:label "r"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000362
+
+    Annotations: 
+        rdfs:label "ruby"
+    
+    Types: 
+        OEO_00000382
+    
+    
+Individual: OEO_00000370
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en,
+        rdfs:label "simulation"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000393
+
+    Annotations: 
+        rdfs:label "spatial(gis)"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000394
+
+    Annotations: 
+        rdfs:label "spreadsheet"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000397
+
+    Annotations: 
+        rdfs:label "stochastic"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000416
+
+    Annotations: 
+        rdfs:label "toolbox"
+    
+    Types: 
+        OEO_00000270
+    
+    
+Individual: OEO_00000417
+
+    Annotations: 
+        rdfs:label "top down"
+    
+    Types: 
+        OEO_00000057
+    
+    
+Individual: OEO_00000424
+
+    Annotations: 
+        rdfs:label "true"
+    
+    Types: 
+        OEO_00000078
+    
+    
+Individual: OEO_00000426
+
+    Annotations: 
+        rdfs:label "txt"
+    
+    Types: 
+        OEO_00000120
+    
+    
+Individual: OEO_00000450
+
+    Annotations: 
+        rdfs:label "xlsx"
+    
+    Types: 
+        OEO_00000120
+    
+    
+Individual: OEO_00000451
+
+    Annotations: 
+        rdfs:label "xml"
+    
+    Types: 
+        OEO_00000120
+    
+    
