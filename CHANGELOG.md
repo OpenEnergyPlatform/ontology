@@ -37,6 +37,7 @@ Here is a template for new release sections
 - scenario subclasses (#344)
 - state of matter defined classes (#354)
 - energy transformation (#77)
+- process attribute (#386)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
@@ -68,6 +69,7 @@ Here is a template for new release sections
 - change model def (#180)
 - change energy class (#224)
 - change power definition (#79)
+- change quantity class (#386)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
