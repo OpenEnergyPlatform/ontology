@@ -247,6 +247,9 @@ ObjectProperty: <http://openenergy-platform.org/ontology/oeo/is_used_by>
         <http://openenergy-platform.org/ontology/oeo/uses>
     
     
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/process_attribute_of>
+
+    
 ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses>
 
     SubPropertyOf: 
@@ -1542,12 +1545,13 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000206>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000207>
-    Annotations:
+
+    Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
        The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en,
         rdfs:label "heat"
-
+    
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000150>
     
@@ -2193,14 +2197,15 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000332>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000333>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the quantity that represents the amount of energy transformed or transferred per time unit"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that represents the amount of energy transformed or transferred per time unit."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/79
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369",
         rdfs:comment "Power is the derivative of energy transformation over time",
         rdfs:label "power"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000350>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00030019>,
+        <http://openenergy-platform.org/ontology/oeo/process_attribute_of> some OEO_00020003
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000334>
@@ -2264,12 +2269,12 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000348>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000350>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "other Idea: A number together with a unit of measurement to quantify an entity."@en,
-        rdfs:label "quantity"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is a generically depenent continuant defined by a numeral together with a unit of measurement to quantify an entity."@en,
+        rdfs:label "quantity value"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000356>
@@ -2871,6 +2876,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
         <http://openenergy-platform.org/ontology/oeo/OEO_00000316>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030019>
+
+    Annotations: 
+        rdfs:label "process attribute"@de
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000144>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -2919,6 +2933,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000144>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
     SubClassOf: 
@@ -2948,7 +2965,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/371",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
-
+    
 Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000182>
 
     Annotations: 
