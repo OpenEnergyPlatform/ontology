@@ -68,6 +68,7 @@ Here is a template for new release sections
 - change model def (#180)
 - change energy class (#224)
 - change power definition (#79)
+- grid, link, node, gris component (#36, #231)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
