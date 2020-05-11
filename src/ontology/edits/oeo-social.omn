@@ -66,6 +66,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
+
+    
 ObjectProperty: conforms_to
 
     Domain: 
@@ -195,7 +198,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: OEO_00000045
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods to sell them.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         rdfs:label "producer"
     
     SubClassOf: 
@@ -361,11 +366,13 @@ Class: OEO_00000238
 Class: OEO_00000315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a structure with multiple people that has a collective goal."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a role depending on a society that has a collective goal and a set of organization rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         rdfs:label "organization"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000323
     
     DisjointWith: 
@@ -482,6 +489,48 @@ Class: OEO_00000431
     
     SubClassOf: 
         OEO_00000051
+    
+    
+Class: OEO_00030016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organizational energy producer is an organization that undertakes the generation of electricity and/or heat.\"",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:label "organizational energy producer"
+    
+    SubClassOf: 
+        OEO_00000315,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000045
+    
+    
+Class: OEO_00030017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy autoproducer is an organizational energy producer who produces electrical energy and/or heat wholly or partly for their own use as an activity which supports their primary activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:comment "They may be privately or publicly owned.",
+        rdfs:label "energy autoproducer"
+    
+    SubClassOf: 
+        OEO_00030016
+    
+    
+Class: OEO_00030018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A main activity energy producer is an organizational energy producer whose primary activity is electrical energy and/or heat production.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:comment "They may be privately or publicly owned. Note that the sale need not take place through the public grid.",
+        rdfs:label "main activity energy producer"
+    
+    SubClassOf: 
+        OEO_00030016
     
     
 Individual: OEO_00000160
