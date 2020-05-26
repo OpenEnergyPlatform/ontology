@@ -36,6 +36,7 @@ Here is a template for new release sections
 - ChemicalEnergy (#214)
 - scenario subclasses (#344)
 - state of matter defined classes (#354)
+- energy producers (#370)
 - energy transformation (#77)
 
 ### Changed
