@@ -768,13 +768,17 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000044>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000047>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
-Generally, flows in the model can not be controlled but are a function of the resitance and electrochemical potential difference."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An AC-line is a powerline for transferring high voltage alternating current."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:comment "undirected",
-        rdfs:label "AC-Line"@en
+        rdfs:label "AC-line"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000253>
+    
+    DisjointWith: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000126>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000054>
@@ -973,16 +977,6 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000077>
         <http://openenergy-platform.org/ontology/oeo/OEO_00000263>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000080>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
-        rdfs:label "bus"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000294>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000082>
 
     Annotations: 
@@ -1131,13 +1125,17 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000117>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000126>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
-Genreally, flows in the model can be controlled/optimized."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An HVDC-line is a powerline for transferring high voltage direct current."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:comment "directed",
-        rdfs:label "HVDC-Line"@en
+        rdfs:label "HVDC-line"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000253>
+    
+    DisjointWith: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000047>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000129>
@@ -1195,25 +1193,31 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000139>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000143>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a grid that distributes electrical energy / electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a supply grid that distributes electrical energy / electricity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/138
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/165",
         rdfs:label "electricity grid"
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000200>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00000144>
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00000144>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 <http://openenergy-platform.org/ontology/oeo/OEO_00000253>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000144>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid component is a part of an electrical grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid component is a grid component that is part of an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:label "electricity grid component"
     
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000143>)
+    
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000143>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000146>
@@ -1460,15 +1464,6 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000192>
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00000396>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000197>
-
-    Annotations: 
-        rdfs:label "graph"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000024>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000198>
 
     Annotations: 
@@ -1496,11 +1491,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000200>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/114
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A supply grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "grid",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "network",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/114
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/137",
-        rdfs:comment "Synonym: Network"@en,
-        rdfs:label "grid"
+        rdfs:label "supply grid"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000027>
@@ -1762,20 +1761,26 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000252>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000253>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An uninterrupted transmission system between two nodes in the electric grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A powerline is a grid component that is an uninterrupted transmission system between two nodes in an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:label "power line"@en
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000255>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000255>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000143>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000255>
 
     Annotations: 
-        rdfs:label "link"
+        <http://openenergy-platform.org/ontology/oeo/definition> "A grid component link is a grid component that serves as a connection between two other grid components."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "grid component link"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000024>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
     
     DisjointWith: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000296>
@@ -1923,23 +1928,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000294>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A network node is a node in an electrical grid."@en,
-        rdfs:label "network node"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000296>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000296>
 
     Annotations: 
-        rdfs:label "node"
+        <http://openenergy-platform.org/ontology/oeo/definition> "A grid node is a grid component of a supply grid where two or more links meet."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "grid node"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000024>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
     
     DisjointWith: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000255>
@@ -2298,18 +2296,6 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000361>
         <http://openenergy-platform.org/ontology/oeo/OEO_00000165>
     
     
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000369>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
-
-Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en,
-        rdfs:label "shunt impedance"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000294>
-    
-    
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000374>
 
     Annotations: 
@@ -2452,12 +2438,12 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000396>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000399>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores energy."@en,
         rdfs:label "storage unit"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000144>,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000143>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000200>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000401>
@@ -2486,14 +2472,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/334",
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000420>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
-2. A transformer is a static machine used for transforming power from one circuit to another without changing frequency. This is a very basic definition of transformer. Since there is no rotating or moving part so transformer is a static device. Transformer operates on ac supply. Transformer works on the principle of mutual induction.
-
-Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformer is an electricity grid component that passively transfers electrical energy from one electrical circuit to another."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:comment "Source: https://en.wikipedia.org/wiki/Transformer"@en,
         rdfs:label "transformer"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000294>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000143>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000425>
@@ -2515,15 +2502,6 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000429>
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000061>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000430>
-
-    Annotations: 
-        rdfs:label "undirected edge"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000255>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000437>
@@ -2662,7 +2640,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010000>
         <http://purl.obolibrary.org/obo/IAO_0000118> "NH3",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "ammonia"@de
+        rdfs:label "ammonia"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>,
@@ -2677,7 +2655,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010001>
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "carbon monoxide"@de
+        rdfs:label "carbon monoxide"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>,
@@ -2692,7 +2670,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010002>
         <http://purl.obolibrary.org/obo/IAO_0000118> "NOx",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "nitrogen oxides"@de
+        rdfs:label "nitrogen oxides"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>,
@@ -2709,7 +2687,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010003>
         <http://purl.obolibrary.org/obo/IAO_0000118> "nitrogen oxide",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "nitric oxide"@de
+        rdfs:label "nitric oxide"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00010002>
@@ -2722,7 +2700,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010004>
         <http://purl.obolibrary.org/obo/IAO_0000118> "NO2",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "nitrogen dioxide"@de
+        rdfs:label "nitrogen dioxide"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00010002>
@@ -2735,7 +2713,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010007>
         <http://purl.obolibrary.org/obo/IAO_0000118> "SO2",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "sulphur dioxide"@de
+        rdfs:label "sulphur dioxide"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>,
@@ -2750,7 +2728,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010009>
         <http://purl.obolibrary.org/obo/IAO_0000119> "This definition is partly based on Article 2 of the European Air Quality Directive (2008/50/EC): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "PM10"@de
+        rdfs:label "PM10"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000318>
@@ -2763,7 +2741,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010010>
         <http://purl.obolibrary.org/obo/IAO_0000119> "This definition is partly based on Article 2 of the European Air Quality Directive (2008/50/EC): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "PM2.5"@de
+        rdfs:label "PM2.5"@en
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000318>
@@ -2775,7 +2753,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010011>
         <http://purl.obolibrary.org/obo/IAO_0000115> "The volatility disposition is the disposition of a portion of matter to sublimate or evaporate from the solid or liquid form and enter the surrounding air.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "volatility"@de
+        rdfs:label "volatility"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>
@@ -2787,7 +2765,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010012>
         <http://purl.obolibrary.org/obo/IAO_0000115> "An air pollutant is a portion of matter that has the disposition to participates in air pollution.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
-        rdfs:label "air pollutant"@de
+        rdfs:label "air pollutant"@en
     
     EquivalentTo: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>
@@ -2795,6 +2773,67 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
+
+    Annotations: 
+        <http://openenergy-platform.org/ontology/oeo/definition> "A grid component is an artificial object that is a discrete part of a supply grid serving a specific purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
+        rdfs:label "grid component"@en
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000061>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000200>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00020007>
+
+    Annotations: 
+        <http://openenergy-platform.org/ontology/oeo/definition> "A gas grid component is a grid component that is part of a gas grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "gas grid component"@en
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020004)
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00020008>
+
+    Annotations: 
+        <http://openenergy-platform.org/ontology/oeo/definition> "A heating grid component is a grid component that is part of a heating grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "heating grid component"@en
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020005)
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00020009>
+
+    Annotations: 
+        <http://openenergy-platform.org/ontology/oeo/definition> "A switchyard is an electricity grid component that connects different levels of voltage"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "switchyard"@en
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00020006>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://openenergy-platform.org/ontology/oeo/OEO_00000143>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00000420>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030000>
@@ -2945,10 +2984,36 @@ Class: OEO_00020003
         <http://openenergy-platform.org/ontology/oeo/definition> "Energy transformation is a process in which one ore more certain types of energy as input result in certain types of energy as output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/77
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/371",
-        rdfs:label "Energy transformation"@de
+        rdfs:label "Energy transformation"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00020004
+
+    Annotations: 
+        <http://openenergy-platform.org/ontology/oeo/definition> "A gas grid is a supply grid that distributes gaseous fuel, e.g. methane.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/385",
+        rdfs:label "gas grid"@en
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000200>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00020007>
+    
+    
+Class: OEO_00020005
+
+    Annotations: 
+        <http://openenergy-platform.org/ontology/oeo/definition> "A heating grid is a supply grid that distributes thermal energy via circulating steam or liquids."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/385",
+        rdfs:label "heating grid"@en
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000200>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00020008>
     
     
 Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000182>
