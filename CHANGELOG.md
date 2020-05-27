@@ -38,6 +38,7 @@ Here is a template for new release sections
 - state of matter defined classes (#354)
 - energy producers (#370)
 - energy transformation (#77)
+- synthetic fuels (#401)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
