@@ -4,13 +4,9 @@ language: java
 before_script:
   - mkdir $TRAVIS_BUILD_DIR/.logs
   - mkdir lib
-  - mkdir bin
-  - wget https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar > lib/robot
-  - curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > lib/robot
-  - ln -s lib/robot bin/robot
-  - chmod u+x lib/robot
-  - LOCAL_BIN=`pwd`/bin
-  - export PATH="$LOCAL_BIN:$PATH"
+  - wget https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar -O lib/robot.jar
+  - TRAVIS_BASE=`pwd`
+  - alias robot="java -jar $TRAVIS_BASE/lib/robot.jar verify"
 
 script:
   - cd $TRAVIS_BUILD_DIR
