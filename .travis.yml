@@ -1,14 +1,15 @@
 dist: bionic
-sudo: false
-language: python
+language: java
 
 before_script:
   - mkdir $TRAVIS_BUILD_DIR/.logs
-  - pip install robotframework
+  - wget https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar
+  - curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > /usr/local/lib/robot
+  - ln -s /usr/local/lib/robot /usr/local/bin/robot
+  - chmod u+x /usr/local/lib/robot
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - pwd
   - robot validate-profile --input src/ontology/oeo.omn --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
   - robot verify --input src/ontology/edits/oeo-physical.omn --queries tests/verify/*
 
