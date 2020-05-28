@@ -3,11 +3,11 @@ sudo: false
 language: python
 
 before_script:
-  mkdir .logs
-  pip install robotframework
+  - mkdir .logs
+  - pip install robotframework
 
 script:
-  robot validate-profile --input src/ontology/oeo.omn --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
+  - robot validate-profile --input src/ontology/oeo.omn --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
 
 after_failure:
   - more .log/* | cat
