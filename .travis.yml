@@ -6,9 +6,10 @@ before_script:
   - mkdir lib
   - wget https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar -O lib/robot.jar
   - TRAVIS_BASE=`pwd`
-  - alias robot="java -jar $TRAVIS_BASE/lib/robot.jar verify"
-
+ 
 script:
+  - alias robot="java -jar $TRAVIS_BASE/lib/robot.jar"
+  - alias
   - cd $TRAVIS_BUILD_DIR
   - robot validate-profile --input src/ontology/oeo.omn --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
   - robot verify --input src/ontology/edits/oeo-physical.omn --queries tests/verify/*
