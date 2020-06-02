@@ -36,6 +36,7 @@ Here is a template for new release sections
 - ChemicalEnergy (#214)
 - scenario subclasses (#344)
 - state of matter defined classes (#354)
+- energy producers (#370)
 - energy transformation (#77)
 - process attribute (#386)
 
@@ -70,6 +71,7 @@ Here is a template for new release sections
 - change energy class (#224)
 - change power definition (#79)
 - change quantity class (#386)
+- grid, link, node, grid component (#36, #231)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
