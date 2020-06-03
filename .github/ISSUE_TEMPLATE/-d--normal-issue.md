@@ -18,4 +18,4 @@ If you already have ideas for the solution describe them here
 ## Workflow checklist
 
 - [ ] I am aware of the [workflow](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) for this repository
-- [ ] I added this issue to the Project 'Issues'. If suitable, I add it to further Projects.
+

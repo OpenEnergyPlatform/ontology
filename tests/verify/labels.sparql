@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+SELECT ?classes_without_label 
+WHERE { 
+    ?classes_without_label a owl:Class . 
+    MINUS {?classes_without_label rdfs:label ?l} 
+    FILTER (!isBlank(?classes_without_label))
+    FILTER (strstarts(str(?classes_without_label), 
+                      "http://openenergy-platform.org/ontology/oeo"))
+}
