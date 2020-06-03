@@ -65,6 +65,18 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/OEO_00030021>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A relation between a process and a process attribute that existentially depends on it.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "has_process_attribute"@de
+    
+    InverseOf: 
+        <http://openenergy-platform.org/ontology/oeo/process_attribute_of>
+    
+    
 ObjectProperty: <http://openenergy-platform.org/ontology/oeo/applies_technology>
 
     Annotations: 
@@ -163,18 +175,6 @@ ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_physical_output
         <http://purl.obolibrary.org/obo/RO_0002234>
     
     
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_pollutant>
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    Domain: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000147>
-    
-    Range: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000330>
-    
-    
 ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_sink>
 
     SubPropertyOf: 
@@ -247,6 +247,17 @@ ObjectProperty: <http://openenergy-platform.org/ontology/oeo/is_used_by>
         <http://openenergy-platform.org/ontology/oeo/uses>
     
     
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/process_attribute_of>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A relation between a process attribute and the process it existentially depends on.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386"
+    
+    InverseOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00030021>
+    
+    
 ObjectProperty: <http://openenergy-platform.org/ontology/oeo/uses>
 
     SubPropertyOf: 
@@ -263,6 +274,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
@@ -800,10 +814,13 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000055>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410",
         rdfs:label "air pollution"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000330>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000330>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://openenergy-platform.org/ontology/oeo/OEO_00010012>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000056>
@@ -1058,8 +1075,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000097>
         rdfs:label "combustible energy carrier disposition"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000151>,
-        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo/OEO_00000151>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000151>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000099>
@@ -1470,12 +1486,15 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000199>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission is an emission that releases a greenhouse gas.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "greenhouse gas emission"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000147>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000147>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://openenergy-platform.org/ontology/oeo/OEO_00000020>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000200>
@@ -2181,14 +2200,20 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000332>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000333>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the quantity that represents the amount of energy transformed or transferred per time unit"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/79
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that is the amount of energy transformed or transferred per time unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/79
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369",
         rdfs:comment "Power is the derivative of energy transformation over time",
         rdfs:label "power"
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000350>
+        <http://openenergy-platform.org/ontology/oeo/OEO_00030019>,
+        <http://openenergy-platform.org/ontology/oeo/process_attribute_of> some OEO_00020003
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000334>
@@ -2252,12 +2277,14 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000348>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000350>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "other Idea: A number together with a unit of measurement to quantify an entity."@en,
-        rdfs:label "quantity"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is a generically depenent continuant defined by a numeral together with a unit of measurement to quantify an entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "quantity value"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000356>
@@ -2975,6 +3002,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
         <http://openenergy-platform.org/ontology/oeo/OEO_00000316>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030019>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "process attribute"@de
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000003>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -3021,6 +3060,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000144>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
@@ -3078,7 +3120,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/385",
         <http://openenergy-platform.org/ontology/oeo/OEO_00000200>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/OEO_00020008>
     
-    
+
 Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000182>
 
     Annotations: 

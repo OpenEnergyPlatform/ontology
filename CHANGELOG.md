@@ -39,6 +39,7 @@ Here is a template for new release sections
 - energy producers (#370)
 - energy transformation (#77)
 - synthetic fuels (#401)
+- process attribute (#386)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
@@ -70,6 +71,7 @@ Here is a template for new release sections
 - change model def (#180)
 - change energy class (#224)
 - change power definition (#79)
+- change quantity to quantity value (#386)
 - grid, link, node, grid component (#36, #231)
 
 ### Removed

@@ -56,21 +56,22 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/):
     git push
     ```
     If your branch does not exist on the remote server yet, git will provide you with instructions, simply follow them
-6. Submit a pull request (PR)
+6. Make sure that all automated tests are successful. This will be indicated by a green or red icon next to your most recent commit.
+7. Submit a pull request (PR)
     - Follow the [steps](https://help.github.com/en/articles/creating-a-pull-request) of the github help to create the PR.
     - Please note that your PR should be directed from your branch (for example `myfeature`) towards the branch `dev`
     - To make reviewing easier, briefly describe the changes you have made in the pull request and summarise the discussion and conclusions in the associated issue. 
     - Write the corresponding issue number in the pull request so that they are linked. Write it with one of the [special keywords](https://help.github.com/en/github/managing-your-work-on-github/closing-issues-using-keywords) so that the issue will be automatically closed when the PR is merged (example: `Closes #<your issue number>`)
     - Add appropriate labels. See [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Usage-of-github-labels) for more information.
-7. Describe briefly (i.e. in one or two lines) what you changed in the `CHANGELOG.md` file. End the description by the number in parenthesis `(#<your PR number>)` 
-8. Add [term tracker items](https://github.com/OpenEnergyPlatform/ontology/wiki/term-tracker-item) to the main changed classes of the ontology
-9. Commit the changes of steps 7 and 8
-10. [Ask](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) for review of your PR.  
+8. Describe briefly (i.e. in one or two lines) what you changed in the `CHANGELOG.md` file. End the description by the number in parenthesis `(#<your PR number>)` 
+9. Add [term tracker items](https://github.com/OpenEnergyPlatform/ontology/wiki/term-tracker-item) to the main changed classes of the ontology
+10. Commit the changes of steps 7 and 8
+11. [Ask](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) for review of your PR.  
     As the issue will have been discussed and agreed on prior to implementation, the purpose of the review step post-implementation is to check that the implementation has been faithful to what was agreed. One or two reviewers may be needed depending on the nature of the change that has been made. If the change involves adding content (A), a domain expert should review the issue. If the change involves restructuring the ontology (B), an ontology expert should review. If the change involves both changes to content and restructuring (B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
 
-11. Check that, after this whole process, your branch does not have conflicts with `dev` (GitHub will prevent you from merging if there are conflicts). In case of conflicts you are responsible for fixing them on your branch before you merge (see below "Fixing merge conflicts" section)
+12. Check that, after this whole process, your branch does not have conflicts with `dev` (GitHub will prevent you from merging if there are conflicts). In case of conflicts you are responsible for fixing them on your branch before you merge (see below "Fixing merge conflicts" section)
     
-12. Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
+13. Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
    
    
 ### Fixing merge conflicts
