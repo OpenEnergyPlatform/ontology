@@ -70,7 +70,7 @@ Here is a template for new release sections
 - change model def (#180)
 - change energy class (#224)
 - change power definition (#79)
-- change quantity class (#386)
+- change quantity to quantity value (#386)
 - grid, link, node, grid component (#36, #231)
 
 ### Removed
