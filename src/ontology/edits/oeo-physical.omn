@@ -542,7 +542,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000024>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000025>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be usede as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be used as a fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CH4",
         rdfs:label "methane"
     
@@ -1639,13 +1639,13 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000219>
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000220>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a portion of matter with the chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty. It has a gaseous normal state of matter."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a portion of matter with the chemical formular H2. It has a gaseous normal state of matter. As it can be oxidised it can be used as a fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "H2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134",
         rdfs:label "hydrogen"
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>,
-        <http://openenergy-platform.org/ontology/oeo/has_origin> some <http://openenergy-platform.org/ontology/oeo/OEO_00030005>,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/OEO_00000001>,
         <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo/OEO_00000097>,
         <http://openenergy-platform.org/ontology/oeo/has_normal_state_of_matter> value <http://openenergy-platform.org/ontology/oeo/OEO_00000182>
@@ -2233,6 +2233,8 @@ Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000335>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "a power-to-gas (often abbreviated P2G) system is an energy storage object that converts electrical power to a gas fuel. When using surplus power from wind generation, the concept is sometimes called windgas. There are currently three methods in use; all use electricity to split water into hydrogen and oxygen by means of electrolysis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en,
         rdfs:label "power-to-gas system"
     
@@ -2792,6 +2794,117 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
         <http://openenergy-platform.org/ontology/oeo/OEO_00000331>
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010015>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil hydrogen is hydrogen with fossil origin. It is usually produced from fossil fuels applying the steam reforming process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "fossil hydrogen"@de
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000220>,
+        <http://openenergy-platform.org/ontology/oeo/has_origin> some <http://openenergy-platform.org/ontology/oeo/OEO_00030002>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010016>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic hydrogen is hydrogen with synthetic origin. It is usually produced from water applying the water electrolysis process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic hydrogen"@de
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000220>,
+        <http://openenergy-platform.org/ontology/oeo/has_origin> some <http://openenergy-platform.org/ontology/oeo/OEO_00030005>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010017>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic fuel is a fuel produced from one or more portion(s) of matter using electric energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "e-fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "electric fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic fuel"@de
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000173>
+         and (<http://openenergy-platform.org/ontology/oeo/has_origin> some <http://openenergy-platform.org/ontology/oeo/OEO_00030005>)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091> some <http://openenergy-platform.org/ontology/oeo/OEO_00000097>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010018>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic methane is synthetic fuel produced in a power-to-gas system from water and carbon dioxide using electric energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic methane"@de
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000025>,
+        <http://openenergy-platform.org/ontology/oeo/has_origin> some <http://openenergy-platform.org/ontology/oeo/OEO_00030005>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010019>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic liquid fuel is synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electric energy applying.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic liquid fuel"@de
+    
+    EquivalentTo: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00010017>
+         and (<http://openenergy-platform.org/ontology/oeo/has_normal_state_of_matter> value <http://openenergy-platform.org/ontology/oeo/OEO_00000256>)
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00010017>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010020>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid (often abbreviated P2L or PtL) system is an energy storage object that converts electrical power to a liquid fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2L",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PtL",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "power-to-liquid system"@de
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000159>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010021>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electrolyser is an energy converting device that uses an electric current to decompose water into hydrogen and oxygen gas. Electric energy is converted into chemical energy (and waste heat).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "water electrolyser"@de
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000011>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00010022>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A steam reformer is an energy converting device that produces syngas from hydrocarbons such as natural gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "steam reformer"@de
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00000011>
+    
+    
 Class: <http://openenergy-platform.org/ontology/oeo/OEO_00020006>
 
     Annotations: 
@@ -3064,7 +3177,7 @@ Class: OEO_00020003
         <http://openenergy-platform.org/ontology/oeo/definition> "Energy transformation is a process in which one ore more certain types of energy as input result in certain types of energy as output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/77
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/371",
-        rdfs:label "Energy transformation"@en
+        rdfs:label "energy transformation"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>

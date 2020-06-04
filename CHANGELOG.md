@@ -38,6 +38,7 @@ Here is a template for new release sections
 - state of matter defined classes (#354)
 - energy producers (#370)
 - energy transformation (#77)
+- synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
 
 ### Changed
