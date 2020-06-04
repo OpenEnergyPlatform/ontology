@@ -2,7 +2,7 @@
 
 out=$1
 
-OEO_VERSION="1.0.0"
+OEO_VERSION=`cat ../../../VERSION`
 
 if [[ -z $out ]]; then
     out="out"
@@ -29,6 +29,7 @@ function convert {
         cp $filepath $out/$ontology/${version}/$filename.$extension
     fi
 }
+
 
 
 cat pack.conf | while read -r line ; do
