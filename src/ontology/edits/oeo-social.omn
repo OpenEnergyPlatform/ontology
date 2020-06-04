@@ -156,6 +156,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000004>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000006>
 
     
@@ -366,10 +369,10 @@ Class: OEO_00000238
 Class: OEO_00000315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is a role depending on a society that has a collective goal and a set of organization rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role depending on a society that has a collective goal and a set of organization rules.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:label "organization"
+        rdfs:label "organization role"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
@@ -533,6 +536,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         OEO_00030016
     
     
+Class: OEO_00030022
+
+    Annotations: 
+        definition "An organization is an independent continuant that has the organization role.",
+        rdfs:label "organization"@de
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000004>
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000004>,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000045
+    
+    
 Individual: OEO_00000160
 
     Annotations: 
@@ -638,3 +656,4 @@ DisjointClasses:
 
 DisjointClasses: 
     OEO_00000214,OEO_00000227,OEO_00000405,OEO_00000418
+
