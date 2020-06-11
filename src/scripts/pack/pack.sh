@@ -11,25 +11,20 @@ fi
 function convert {
 
     filepath=$1
-    ontology=$2
-    version=$3
-    target_extension=$4
-    primary=$5
-
-    if [[ $version == OEO_VERSION ]] ; then
-        version="$OEO_VERSION"
-    fi
+    type=$2
+    target_extension=$3
 
     fullfilename=$(basename -- "$filepath")
     extension="${fullfilename##*.}"
     filename="${fullfilename%.*}"
     
-    target_path=$out/$ontology/$version
-    if [[ $primary == n ]]; then
-        target_path=$target_path/modules
+    target_path=$out/oeo/$OEO_VERSION
+    if [[ ! $type == main ]]; then
+        target_path=$target_path/$type
     fi
     mkdir -p $target_path
     if [[ ! $extension == $target_extension ]]; then
+        echo "robot convert --input $filepath --output $target_path/$filename.$target_extension --format $target_extension"
         robot convert --input $filepath --output $target_path/$filename.$target_extension --format $target_extension
     else
         cp $filepath $target_path/$filename.$extension
@@ -41,16 +36,14 @@ function convert {
 cat pack.conf | while read -r line ; do
     linearr=($line)
     path=${linearr[0]}
-    ontology=${linearr[1]}
-    primary=${linearr[2]}
-    version=${linearr[3]}
-    formats=${linearr[4]}
+    type=${linearr[1]}
+    formats=${linearr[2]}
     
     if [[ ! $path == \#* ]] && [ ! -z "$line" ]; then
         IFS=','
         read -a formatarr <<< "$formats"
         for format in ${formats}; do
-            convert ../../../$path $ontology $version $format $primary
+            convert ../../../$path $type $format
         done
         IFS=' '
     fi
