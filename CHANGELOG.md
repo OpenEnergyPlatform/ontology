@@ -16,7 +16,20 @@ Here is a template for new release sections
 ### Removed
 -
 ```
-## [Unreleased]
+
+## [unreleased]
+
+### Added
+- vehicle and subclasses (#431)
+- natural gas relation to methane (#431)
+
+### Changed
+-
+
+### Removed
+-
+
+## [1.0.0] - 2020-06-11
 
 ### Added
 - Concepts of biogenic, fossil, renewable and synthetic (#130)
@@ -40,8 +53,6 @@ Here is a template for new release sections
 - energy transformation (#77)
 - synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
-- vehicle and subclasses (#431)
-- natural gas relation to methane (#431)
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
