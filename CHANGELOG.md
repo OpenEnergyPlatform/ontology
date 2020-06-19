@@ -22,6 +22,7 @@ Here is a template for new release sections
 ### Added
 - vehicle and subclasses (#431)
 - natural gas relation to methane (#431)
+- ethanol (#445)
 
 ### Changed
 -
