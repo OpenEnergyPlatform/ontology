@@ -40,7 +40,7 @@ Here is a template for new release sections
 - energy transformation (#77)
 - synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
-- vehicle and subclasses (#431)
+- vehicle and subclasses and vehicle related energy converting devices and energy storage objects (#431, #435)
 - natural gas relation to methane (#431)
 
 ### Changed
