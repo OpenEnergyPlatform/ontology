@@ -188,15 +188,6 @@ ObjectProperty: has_physical_output
         Asymmetric
     
     
-ObjectProperty: has_programvariable
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
 ObjectProperty: has_resolution
 
     Annotations: 
@@ -221,44 +212,11 @@ ObjectProperty: has_temporal_resolution
         has_resolution
     
     
-ObjectProperty: has_tool
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    Domain: 
-        OEO_00000275
-    
-    Range: 
-        OEO_00000274
-    
-    
-ObjectProperty: makes_assumption
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
-    
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
 ObjectProperty: owl:topObjectProperty
 
     
 ObjectProperty: uses
 
-    
-ObjectProperty: uses_dataset
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
-    
-    SubPropertyOf: 
-        uses
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -641,7 +599,7 @@ Class: OEO_00000275
     
     SubClassOf: 
         OEO_00000419,
-        has_tool some OEO_00000274
+        uses some OEO_00000274
     
     
 Class: OEO_00000276
