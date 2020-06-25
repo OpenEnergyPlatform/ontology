@@ -525,7 +525,8 @@ Class: OEO_00000016
         rdfs:label "fuel cell"
     
     SubClassOf: 
-        OEO_00000188
+        OEO_00000188,
+        uses some OEO_00000220
     
     
 Class: OEO_00000017
@@ -1303,7 +1304,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         rdfs:label "electric vehicle"
     
     SubClassOf: 
-        OEO_00010023
+        OEO_00010023,
+        uses some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028
     
     
 Class: OEO_00000147
@@ -1760,13 +1763,15 @@ Class: OEO_00000226
 Class: OEO_00000240
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is a vehicle powered by internal combustion engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is a vehicle powered by an internal combustion engine.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         rdfs:label "internal combustion vehicle"
     
     SubClassOf: 
-        OEO_00010023
+        OEO_00010023,
+        uses some OEO_00000099,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010029
     
     
 Class: OEO_00000245
@@ -2985,13 +2990,134 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
 Class: OEO_00010023
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artifical object that used for transporting people or goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artifical object that is used for transporting people or goods.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
-        rdfs:label "vehicle"@de
+        rdfs:label "vehicle"@en
     
     SubClassOf: 
         OEO_00000061
+    
+    
+Class: OEO_00010024
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "BEV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A battery electric vehicle (BEV) is a vehicle that stores energy in an on-board battery.",
+        rdfs:label "battery electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000146,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026
+    
+    
+Class: OEO_00010025
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "FCEV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A fuel cell electric vehicle (FCEV) is a vehicle that uses electrical energy from a fuel cell.",
+        rdfs:label "fuel cell electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000146,
+        uses some OEO_00000220,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000016
+    
+    
+Class: OEO_00010026
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A traction battery is a battery that is used in vehicles for propulsion.",
+        rdfs:label "traction battery"@en
+    
+    SubClassOf: 
+        OEO_00000068
+    
+    
+Class: OEO_00010027
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "An electric motor is an energy converting device that converts electrical energy into kinetic energy.",
+        rdfs:label "electric motor"@en
+    
+    SubClassOf: 
+        OEO_00010032,
+        uses some OEO_00000139
+    
+    
+Class: OEO_00010028
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A traction motor is an electric motor used for propulsion.",
+        rdfs:label "traction motor"@en
+    
+    SubClassOf: 
+        OEO_00010027
+    
+    
+Class: OEO_00010029
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "An internal combustion engine is an energy converting device that converts chemical energy into into rotational energy using a cyclic combustion process.",
+        rdfs:label "internal combustion engine"@en
+    
+    SubClassOf: 
+        OEO_00010032,
+        uses some OEO_00000099
+    
+    
+Class: OEO_00010030
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PHEV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both a traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
+        rdfs:label "plug-in hybrid electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00010023,
+        uses some OEO_00000099,
+        uses some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010029
+    
+    
+Class: OEO_00010031
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A grid supplied electric vehicle is an electric vehicle that uses electrical energy via a conductor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        rdfs:label "grid supplied electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000146
+    
+    
+Class: OEO_00010032
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A motor is an energy converting device that converts other forms of energy into rotational kinetic energy.",
+        rdfs:label "motor"
+    
+    SubClassOf: 
+        OEO_00000011
     
     
 Class: OEO_00020001
