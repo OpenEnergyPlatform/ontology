@@ -34,13 +34,16 @@ Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for 
  
 The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [GitHub issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
 
-## Teams tag
-Experts in ontology engineering, economy and energy-system modelling work together to combine domain knowledge with knowledge about how an ontology should be designed.
+## Teams
+Experts in ontology engineering, economy and energy-system modelling work together collaboratively.
+We combine domain knowledge with knowledge about how an ontology should be designed.
 
-If you have a specific question about ontology, modelling or economy (in context of the ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these teams to notify its members that you need their feedback/help.
+If you have a specific question about ontology design, energy system modelling or economy (in context of this ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these teams (or persons) to notify its members that you need their feedback or help.
 
-- [@economy-experts](https://github.com/orgs/OpenEnergyPlatform/teams/economy-experts)
+The OEO is organised in an general team: 
+- [@oeo-dev](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/)
 
-- [@ontology-experts](https://github.com/orgs/OpenEnergyPlatform/teams/ontology-experts)
-
-- [@modelling-experts](https://github.com/orgs/OpenEnergyPlatform/teams/modelling-experts)
+and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/teams):
+- [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
+- [@oeo-domain-expert-energy-modelling ](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-energy-modelling)
+- [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
