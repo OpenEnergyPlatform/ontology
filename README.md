@@ -19,7 +19,7 @@ This repository is licensed under CC0 1.0 Universal (CC0 1.0) Public Domain Dedi
 
 ## Installation
 
-The released version of the ontology can be downloaded from  https://openenergy-platform.org/ontology/oeo.
+The released version of the ontology can be downloaded from  https://openenergy-platform.org/ontology/oeo or directly from [github](https://github.com/OpenEnergyPlatform/ontology/releases/).
 
 The currently developed version is available on GitHub: https://github.com/OpenEnergyPlatform/ontology
 
