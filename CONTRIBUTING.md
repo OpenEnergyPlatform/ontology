@@ -96,7 +96,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     - Add appropriate labels. See [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Usage-of-github-labels) for more information.
 8. 📗 Describe briefly (i.e. in one or two lines) what you changed in the `CHANGELOG.md` file. End the description by the number in parenthesis `(#<your PR number>)` 
 9. 📙 Add [term tracker items](https://github.com/OpenEnergyPlatform/ontology/wiki/term-tracker-item) to the main changed classes of the ontology
-10. 🔷 Commit the changes of steps 7 and 8
+
+    ![img](https://user-images.githubusercontent.com/56925445/78230560-c88ea580-74d1-11ea-921c-a9606c69563f.png)
+10. 🔷 stage, commit and push the changes of steps 7 and 8
 11. 🍏 [Ask](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) for review of your PR.  
     As the issue will have been discussed and agreed on prior to implementation, the purpose of the review step post-implementation is to check that the implementation has been faithful to what was agreed. One or two reviewers may be needed depending on the nature of the change that has been made. If the change involves adding content (A), a domain expert should review the issue. If the change involves restructuring the ontology (B), an ontology expert should review. If the change involves both changes to content and restructuring (B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
 
