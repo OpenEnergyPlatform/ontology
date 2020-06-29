@@ -59,7 +59,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     ```bash
     git checkout -b feature/myfeature
     ```
-    It is best to merge one's changes *as fast as possible* (i.e. do not wait for 6 months) to avoid merging conflicts
+    It is best to merge one's changes *as fast as possible* (i.e. do not wait for 2 months) to avoid merging conflicts
 3. 📙 or 📗 Open [Protégé](https://protege.stanford.edu/) or a text editor and work on the ontology. If you haven't already, make sure you change your protégé settings to use [numeric identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers).
 
     One can also edit the `oeo.omn` file in a text editor
