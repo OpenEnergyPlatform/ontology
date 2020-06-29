@@ -2,7 +2,6 @@ Prefix: : <http://openenergy-platform.org/ontology/oeo/>
 Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: obda: <https://w3id.org/obda/vocabulary#>
-Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -12,32 +11,39 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/>
-<http://openenergy-platform.org/ontology/v0.0.1/oeo/>
-Import: <http://openenergy-platform.org/ontology/v0.0.1/oeo-model/>
-Import: <http://openenergy-platform.org/ontology/v0.0.1/oeo-physical/>
-Import: <http://openenergy-platform.org/ontology/v0.0.1/oeo-social/>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-model.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-physical.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-social.omn>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
-    dc:contributor "Anna Kleinau",
-    dc:contributor "Christian Winger",
-    dc:contributor "Fabian Neuhaus",
-    dc:contributor "Hannah Förster",
-    dc:contributor "Izzet Kilicarslan",
-    dc:contributor "Janna Hastings",
+    dc:contributor "(0001) Lukas Emele (@l-emele)",
+    dc:contributor "(0002) Mirjam Stappel (@stap-m)",
+    dc:contributor "(0003) Anna Kleinau (@akleinau)",
+    dc:contributor "(0004) Janna Hastings (@jannahastings)",
+    dc:contributor "(0005) Vera Sehn (@Vera-IER)",
+    dc:contributor "(0006) Hannah Förster (@han-f)",
+    dc:contributor "(0007) Patrick Kuckertz (@p-kuckertz)",
+    dc:contributor "(0008) Carsten Hoyer-Klick (@carstenhoyerklick)",
+    dc:contributor "(0009) Christian Hofmann (@christian-rli)",
+    dc:contributor "(0010) Kevin Knosala (@k-knosala)",
+    dc:contributor "(0011) Ludwig Hülk (@Ludee)",
+    dc:contributor "(0012) Izzet Kilicarslan (@Izzet91)",
+    dc:contributor "(0013) Franziska Drathschmidt (@fradra)",
+    dc:contributor "(0023) Michaja Pehl (@0UmfHxcvx5J7JoaOhFSs5mncnisTJJ6q)",
+    dc:contributor "Christian Winger (@wingechr)",
+    dc:contributor "Fabian Neuhaus (@fabianneuhaus)",
     dc:contributor "Lara Christmann",
-    dc:contributor "Ludwig Hülk (@Ludee)",
-    dc:contributor "Lukas Emele",
-    dc:contributor "Martin Glauer",
-    dc:contributor "Mirjam Stappel",
-    dc:contributor "Patrick Kuckertz (@p-kuckertz)",
-    dc:contributor "Pierre-Francois Duc",
-    dc:contributor "Sebastian Cordes",
-    dc:contributor "Vera Sehn (@Vera-IER)",
-    <http://purl.org/dc/terms/title> "Open Energy Ontology",
-    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. 
+    dc:contributor "Martin Glauer (@MGlauer)",
+    dc:contributor "Pierre-Francois Duc (@Bachibouzouk)",
+    dc:contributor "Sebastian Cordes (@sebcordes)",
+    dc:contributor "Ulrich Frey (@ufrey)",
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. 
 
-It is developed in three modules: 'oeo-model', a module for all entities related to models and modelling; 'oeo-physical', a module for all entities related to the world of energy and energy generation, and 'oeo-social' for all relevant social and economic aspects of the energy domain."
+It is developed in three modules: 'oeo-model', a module for all entities related to models and modelling; 'oeo-physical', a module for all entities related to the world of energy and energy generation, and 'oeo-social' for all relevant social and economic aspects of the energy domain.",
+    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
@@ -51,10 +57,19 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
 AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: dc:description
+
+    
+AnnotationProperty: dc:license
 
     
 AnnotationProperty: definition
@@ -90,112 +105,18 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
-ObjectProperty: appliesTo
-
-    
-ObjectProperty: comparesTo
-
-    
 ObjectProperty: conforms_to
 
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     
-ObjectProperty: considers_User_behaviour_and_demand
-
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: contains
-
-    
 ObjectProperty: covers
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
-    
-    
-ObjectProperty: covers_region
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: covers_technology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: covers_timeframe
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: distributes
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: example_research_questions
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: further_reference_properties
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
-ObjectProperty: generates_dataset
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    
-ObjectProperty: handles_uncertainty
-
-    
-ObjectProperty: hasMaximum
-
-    SubPropertyOf: 
-        comparesTo
-    
-    
-ObjectProperty: hasMinimum
-
-    SubPropertyOf: 
-        comparesTo
-    
-    
-ObjectProperty: hasYear
-
-    
-ObjectProperty: has_Percentage
-
-    SubPropertyOf: 
-        comparesTo
-    
-    
-ObjectProperty: has_approach_to_uncertainty
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclasses)"
     
     
 ObjectProperty: has_author
@@ -219,9 +140,6 @@ ObjectProperty: has_contact
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     
-ObjectProperty: has_documentation
-
-    
 ObjectProperty: has_funding_source
 
     SubPropertyOf: 
@@ -232,30 +150,6 @@ ObjectProperty: has_institution
 
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_license
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_logo
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
-    
-ObjectProperty: has_mathematical_objective
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
-    
-ObjectProperty: has_methodical_Focus
-
-    SubPropertyOf: 
-        owl:topObjectProperty
     
     
 ObjectProperty: has_normal_state_of_matter
@@ -302,32 +196,8 @@ ObjectProperty: has_physical_output
         Asymmetric
     
     
-ObjectProperty: has_pollutant
-
-    
-ObjectProperty: has_programvariable
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_quality
-
-    
 ObjectProperty: has_resolution
 
-    
-ObjectProperty: has_sink
-
-    DisjointWith: 
-        has_source
-    
-    
-ObjectProperty: has_source
-
-    DisjointWith: 
-        has_sink
-    
     
 ObjectProperty: has_spatial_resolution
 
@@ -335,40 +205,10 @@ ObjectProperty: has_spatial_resolution
 ObjectProperty: has_state_of_matter
 
     
-ObjectProperty: has_subregion
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a region and a smaller region within."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
-    
 ObjectProperty: has_temporal_resolution
 
     
-ObjectProperty: has_tool
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: isEqual
-
-    SubPropertyOf: 
-        comparesTo
-    
-    
 ObjectProperty: is_applied_to_object
-
-    
-ObjectProperty: is_connected_to
-
-    Characteristics: 
-        Symmetric
-    
-    
-ObjectProperty: is_equivalent_to
 
     
 ObjectProperty: is_used_by
@@ -377,38 +217,12 @@ ObjectProperty: is_used_by
 ObjectProperty: owl:topObjectProperty
 
     
-ObjectProperty: suited_for_many_scenarios
-
-    
-ObjectProperty: transmits
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
 ObjectProperty: uses
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclass)"
     
-ObjectProperty: uses_dataset
-
-    
-ObjectProperty: uses_external_optimizer
-
-    
-ObjectProperty: uses_software
-
-    
-ObjectProperty: uses_software_internal_data_processing
-
-    
-ObjectProperty: uses_software_modelling
-
-    
-ObjectProperty: utilizes_dataset
-
-    
-ObjectProperty: utilizes_program_parameter
-
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000001>
 
@@ -456,5 +270,14 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: OEO_00000335
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
+    
+    
+Class: OEO_00010021
 
     

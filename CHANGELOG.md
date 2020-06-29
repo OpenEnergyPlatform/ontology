@@ -16,7 +16,22 @@ Here is a template for new release sections
 ### Removed
 -
 ```
-## [Unreleased]
+
+## [unreleased]
+
+### Added
+- vehicle and subclasses and vehicle related energy converting devices and energy storage objects (#431, #435)
+- natural gas relation to methane (#431)
+- ethanol (#445)
+- factsheet-covers-relationships (#440)
+
+### Changed
+-
+
+### Removed
+- unused object properties (#66)
+
+## [1.0.0] - 2020-06-11
 
 ### Added
 - Concepts of biogenic, fossil, renewable and synthetic (#130)
@@ -34,13 +49,20 @@ Here is a template for new release sections
 - object properties to describe models (#109)
 - RenewableEnergyCarrier (#206)
 - ChemicalEnergy (#214)
+- scenario subclasses (#344)
+- state of matter defined classes (#354)
+- energy producers (#370)
+- energy transformation (#77)
+- synthetic fuels and respective energy converting devices (#411)
+- process attribute (#386)
+
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
 - Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)
 - FluorinatedGreenhouseGas (#88) and GreenhouseGas (#234)
 - agent and subclasses (#51)
-- pollutant and subclasses (#51)
+- pollutant and subclasses (#51, #356)
 - structure of the ontology (#47)
 - change peat to solid and not gas (#39)
 - StateOfMatter and subclasses (#45)
@@ -60,6 +82,13 @@ Here is a template for new release sections
 - EnergyStorage (#276)
 - Turbine (#299)
 - Change to use numeric identifiers for classes and individuals (#133)
+- change origin individuals to classes (#321)
+- modeling software (#345)
+- change model def (#180)
+- change energy class (#224)
+- change power definition (#79)
+- change quantity to quantity value (#386)
+- grid, link, node, grid component (#36, #231)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
@@ -71,6 +100,11 @@ Here is a template for new release sections
 - type and subclasses (#325)
 - cost and subclasses (#326)
 - GeographicRegion and subclasses (#322)
+- Validation and subclasses (#347)
+- SoftwareElement (#348)
+- unused object properties (#351)
+- remove energy production and subclasses (#77)
+- quantity subclasses (#368)
 
 
 

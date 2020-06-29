@@ -2,7 +2,6 @@ Prefix: : <http://openenergy-platform.org/ontology/oeo/>
 Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: obda: <https://w3id.org/obda/vocabulary#>
-Prefix: oeo: <http://openenergy-platform.org/ontology/v0.0.1/oeo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -11,16 +10,16 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-Ontology: <http://openenergy-platform.org/ontology/oeo-physical/>
-<http://openenergy-platform.org/ontology/v0.0.1/oeo-physical/>
-Import: <http://open-energy-ontology.org/ontology/imports/iao-annotation-module.owl>
-Import: <http://open-energy-ontology.org/ontology/imports/ro-module.owl>
-Import: <http://purl.obolibrary.org/obo/uo/releases/2019-04-01/uo.owl>
-Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-physical/>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-physical.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/iao-minimal-module.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/uo-module.owl>
 
 Annotations: 
-    <http://purl.org/dc/terms/title> "Open Energy Ontology (Physical module)",
-    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Physical' module covers all those aspects of the world that are relevant for the energy systems domain, including physical entities such as generators, power lines, technologies, hardware, portions of matter; attributes of those, such as the energy they carry or release, whether they can be a pollutant, or their origins; representational transformations into maps and measures, such as coordinates, units, quantities; and the processes that modify the physical entities, such as energy production."
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Physical' module covers all those aspects of the world that are relevant for the energy systems domain, including physical entities such as generators, power lines, technologies, hardware, portions of matter; attributes of those, such as the energy they carry or release, whether they can be a pollutant, or their origins; representational transformations into maps and measures, such as coordinates, units, quantities; and the processes that modify the physical entities, such as energy production.",
+    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Physical module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
@@ -44,6 +43,12 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
 AnnotationProperty: dc:contributor
+
+    
+AnnotationProperty: dc:description
+
+    
+AnnotationProperty: dc:license
 
     
 AnnotationProperty: definition
@@ -70,6 +75,12 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
 
     
@@ -87,6 +98,18 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
+    
+ObjectProperty: OEO_00030021
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A relation between a process and a process attribute that existentially depends on it.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "has_process_attribute"@de
+    
+    InverseOf: 
+        process_attribute_of
+    
     
 ObjectProperty: applies_technology
 
@@ -129,9 +152,6 @@ ObjectProperty: has_globalwarmingpotential
     Domain: 
         OEO_00000198
     
-    Range: 
-        OEO_00000194
-    
     
 ObjectProperty: has_normal_state_of_matter
 
@@ -141,6 +161,12 @@ ObjectProperty: has_normal_state_of_matter
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000086>
     
+    Domain: 
+        OEO_00000331
+    
+    Range: 
+        OEO_00000395
+    
     
 ObjectProperty: has_origin
 
@@ -149,6 +175,12 @@ ObjectProperty: has_origin
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000086>
+    
+    Domain: 
+        OEO_00000331
+    
+    Range: 
+        OEO_00000316
     
     
 ObjectProperty: has_physical_input
@@ -177,18 +209,6 @@ ObjectProperty: has_physical_output
         <http://purl.obolibrary.org/obo/RO_0002234>
     
     
-ObjectProperty: has_pollutant
-
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    Domain: 
-        OEO_00000147
-    
-    Range: 
-        OEO_00000330
-    
-    
 ObjectProperty: has_sink
 
     SubPropertyOf: 
@@ -211,6 +231,12 @@ ObjectProperty: has_state_of_matter
 
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000086>
+    
+    Domain: 
+        OEO_00000331
+    
+    Range: 
+        OEO_00000395
     
     
 ObjectProperty: is_applied_to_object
@@ -237,15 +263,6 @@ ObjectProperty: is_connected_to
         Symmetric
     
     
-ObjectProperty: is_equivalent_to
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an definition and its synonym."@en
-    
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
-    
 ObjectProperty: is_used_by
 
     SubPropertyOf: 
@@ -257,6 +274,17 @@ ObjectProperty: is_used_by
     
 ObjectProperty: owl:topObjectProperty
 
+    
+ObjectProperty: process_attribute_of
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A relation between a process attribute and the process it existentially depends on.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386"
+    
+    InverseOf: 
+        OEO_00030021
+    
     
 ObjectProperty: uses
 
@@ -314,6 +342,15 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000144>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
@@ -374,13 +411,14 @@ Class: OEO_00000005
 Class: OEO_00000006
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It is a gas that occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2",
         rdfs:label "carbon dioxide"
     
     SubClassOf: 
         OEO_00000331,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000007
@@ -474,26 +512,10 @@ Class: OEO_00000014
     
     EquivalentTo: 
         OEO_00000099
-         and (has_origin value OEO_00000171)
+         and (has_origin some OEO_00030002)
     
     SubClassOf: 
-        has_origin value OEO_00000018
-    
-    
-Class: OEO_00000015
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil portion of matter is a portion of matter with the origin fossil.",
-        rdfs:comment "This class is used to implement the subset relationship between origins fossil and geogenic: Every object with the origin fossil also has the origin geogenic.",
-        rdfs:label "fossil portion of matter"
-    
-    EquivalentTo: 
-        OEO_00000331
-         and (has_origin value OEO_00000171)
-    
-    SubClassOf: 
-        OEO_00000331,
-        has_origin value OEO_00000018
+        has_origin some OEO_00030003
     
     
 Class: OEO_00000016
@@ -503,7 +525,8 @@ Class: OEO_00000016
         rdfs:label "fuel cell"
     
     SubClassOf: 
-        OEO_00000188
+        OEO_00000188,
+        uses some OEO_00000220
     
     
 Class: OEO_00000017
@@ -542,7 +565,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
          and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198)
     
     SubClassOf: 
-        OEO_00000331
+        OEO_00000331,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000021
@@ -567,17 +591,6 @@ Class: OEO_00000022
         uses some OEO_00000220
     
     
-Class: OEO_00000023
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro power unit is a power generating unit using the potential and/or kinetic energy of water.",
-        rdfs:comment "will be discussed later",
-        rdfs:label "hydro power unit"
-    
-    SubClassOf: 
-        OEO_00000334
-    
-    
 Class: OEO_00000024
 
     Annotations: 
@@ -594,7 +607,7 @@ Class: OEO_00000024
 Class: OEO_00000025
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It is a gas that occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be usede as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be used as a fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CH4",
         rdfs:label "methane"
     
@@ -602,31 +615,35 @@ Class: OEO_00000025
         OEO_00000331,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00010011,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000026
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen trifluoride is a portion of matter with the chemical formula NF3. It can work as a potent greenhouse gas and has an anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen trifluoride is a portion of matter with the chemical formula NF3. It has a gaseous normal state of matter. It can work as a potent greenhouse gas and has an anthropogenic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "NF3",
         rdfs:label "nitrogen trifluoride"
     
     SubClassOf: 
         OEO_00000331,
-        has_origin value OEO_00000002
+        has_origin some OEO_00030000,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000027
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrous oxide is a portion of matter with the chemical formula N2O. It is a gas that occurs naturally in the atmosphere as a trace gas and it can work as a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrous oxide is a portion of matter with the chemical formula N2O. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and it can work as a greenhouse gas.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "N2O",
         rdfs:label "nitrous oxide"
     
     SubClassOf: 
         OEO_00000331,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000028
@@ -693,7 +710,7 @@ Class: OEO_00000033
     
     EquivalentTo: 
         OEO_00000173
-         and (has_origin value OEO_00000354)
+         and (has_origin some OEO_00030004)
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
@@ -744,13 +761,14 @@ Class: OEO_00000037
 Class: OEO_00000038
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It can work as a potent greenhouse gas and has an anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It has a gaseous normal state of matter. It can work as a potent greenhouse gas and has an anthropogenic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "SF6",
         rdfs:label "sulphur hexafluoride"
     
     SubClassOf: 
         OEO_00000331,
-        has_origin value OEO_00000002
+        has_origin some OEO_00030000,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000039
@@ -773,10 +791,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030003,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000028,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000018
+        has_normal_state_of_matter value OEO_00000390
     
     
 Class: OEO_00000041
@@ -829,22 +847,17 @@ Class: OEO_00000044
 Class: OEO_00000047
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Alternating current high voltage transmission line. Can comprise multiple cables and multiple circuits.
-Generally, flows in the model can not be controlled but are a function of the resitance and electrochemical potential difference."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An AC-line is a powerline for transferring high voltage alternating current."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:comment "undirected",
-        rdfs:label "AC-Line"@en
+        rdfs:label "AC-line"@en
     
     SubClassOf: 
         OEO_00000253
     
-    
-Class: OEO_00000053
-
-    Annotations: 
-        rdfs:label "agricultural demand"
-    
-    SubClassOf: 
-        OEO_00000127
+    DisjointWith: 
+        OEO_00000126
     
     
 Class: OEO_00000054
@@ -857,7 +870,8 @@ Class: OEO_00000054
     SubClassOf: 
         OEO_00000331,
         is_used_by some OEO_00000399,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000055
@@ -865,10 +879,13 @@ Class: OEO_00000055
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Air pollution occurs when harmful or excessive quantities of substances including gases, particles, and biological molecules are introduced into Earth's atmosphere."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Air_pollution&oldid=877082014"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410",
         rdfs:label "air pollution"
     
     SubClassOf: 
-        OEO_00000330
+        OEO_00000330,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010012
     
     
 Class: OEO_00000056
@@ -892,15 +909,6 @@ Class: OEO_00000058
     
     SubClassOf: 
         OEO_00000204
-    
-    
-Class: OEO_00000060
-
-    Annotations: 
-        rdfs:label "appliance"
-    
-    SubClassOf: 
-        OEO_00000358
     
     
 Class: OEO_00000061
@@ -927,15 +935,6 @@ Class: OEO_00000062
         OEO_00000292
     
     
-Class: OEO_00000065
-
-    Annotations: 
-        rdfs:label "aviation"
-    
-    SubClassOf: 
-        OEO_00000421
-    
-    
 Class: OEO_00000066
 
     Annotations: 
@@ -956,15 +955,6 @@ Class: OEO_00000068
     SubClassOf: 
         OEO_00000159,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000070
-    
-    
-Class: OEO_00000069
-
-    Annotations: 
-        rdfs:label "battery electric"
-    
-    SubClassOf: 
-        OEO_00000421
     
     
 Class: OEO_00000070
@@ -989,10 +979,10 @@ Class: OEO_00000071
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000256,
-        has_origin value OEO_00000076
+        has_normal_state_of_matter value OEO_00000256
     
     
 Class: OEO_00000072
@@ -1002,17 +992,19 @@ Class: OEO_00000072
 
 Biofuels can be derived directly from plants (i.e. energy crops), or indirectly from agricultural, commercial, domestic, and/or industrial wastes.[1] Renewable biofuels generally involve contemporary carbon fixation, such as those that occur in plants or microalgae through the process of photosynthesis. Other renewable biofuels are made through the use or conversion of biomass (referring to recently living organisms, most often referring to plants or plant-derived materials). This biomass can be converted to convenient energy-containing substances in three different ways: thermal conversion, chemical conversion, and biochemical conversion. This biomass conversion can result in fuel in solid, liquid, or gas form. This new biomass can also be used directly for biofuels.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/396
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400",
         rdfs:label "biofuel"
     
     EquivalentTo: 
         OEO_00000173
-         and (has_origin value OEO_00000076)
+         and (has_origin some OEO_00030001)
     
     SubClassOf: 
         OEO_00000173,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_origin value OEO_00000076,
-        has_origin value OEO_00000354
+        has_origin some OEO_00030001,
+        has_origin some OEO_00030004,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
 Class: OEO_00000073
@@ -1034,8 +1026,9 @@ Class: OEO_00000074
     
     SubClassOf: 
         OEO_00000072,
+        has_origin some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_origin value OEO_00000076
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000075
@@ -1044,15 +1037,18 @@ Class: OEO_00000075
         <http://purl.obolibrary.org/obo/IAO_0000115> "Biogasoline is a portion of matter that includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Bioethanol"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/439
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445",
         rdfs:label "biogasoline",
         rdfs:label "biogasoline"@en
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030001,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000256,
-        has_origin value OEO_00000076
+        has_normal_state_of_matter value OEO_00000256
     
     
 Class: OEO_00000077
@@ -1066,26 +1062,6 @@ Class: OEO_00000077
         OEO_00000263
     
     
-Class: OEO_00000080
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A node in an electrical network."@en,
-        rdfs:label "bus"
-    
-    SubClassOf: 
-        OEO_00000294
-    
-    
-Class: OEO_00000082
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission quantity is a quantity that is about carbon dioxide."@en,
-        rdfs:label "carbon dioxide emission"
-    
-    SubClassOf: 
-        OEO_00000199
-    
-    
 Class: OEO_00000084
 
     Annotations: 
@@ -1095,10 +1071,10 @@ Class: OEO_00000084
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000076
+        has_normal_state_of_matter value OEO_00000390
     
     
 Class: OEO_00000088
@@ -1110,10 +1086,10 @@ Class: OEO_00000088
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030002,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000171
+        has_normal_state_of_matter value OEO_00000390
     
     
 Class: OEO_00000089
@@ -1167,17 +1143,7 @@ Class: OEO_00000097
         rdfs:label "combustible energy carrier disposition"
     
     SubClassOf: 
-        OEO_00000151,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151
-    
-    
-Class: OEO_00000098
-
-    Annotations: 
-        rdfs:label "combustion"
-    
-    SubClassOf: 
-        OEO_00000421
+        OEO_00000151
     
     
 Class: OEO_00000099
@@ -1196,15 +1162,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
         OEO_00000173
     
     
-Class: OEO_00000101
-
-    Annotations: 
-        rdfs:label "commercial demand"
-    
-    SubClassOf: 
-        OEO_00000127
-    
-    
 Class: OEO_00000102
 
     Annotations: 
@@ -1215,16 +1172,6 @@ Class: OEO_00000102
         OEO_00000054
     
     
-Class: OEO_00000106
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumption quantity is a quantity that describes the amount of consumption of some resource."@en,
-        rdfs:label "consumption quantity"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
 Class: OEO_00000115
 
     Annotations: 
@@ -1233,7 +1180,8 @@ Class: OEO_00000115
         rdfs:label "crude oil"
     
     SubClassOf: 
-        OEO_00000309
+        OEO_00000309,
+        has_normal_state_of_matter value OEO_00000256
     
     
 Class: OEO_00000117
@@ -1251,24 +1199,17 @@ Class: OEO_00000117
 Class: OEO_00000126
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Transmission system usind high voltage direct current.
-Genreally, flows in the model can be controlled/optimized."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An HVDC-line is a powerline for transferring high voltage direct current."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:comment "directed",
-        rdfs:label "HVDC-Line"@en
+        rdfs:label "HVDC-line"@en
     
     SubClassOf: 
         OEO_00000253
     
-    
-Class: OEO_00000127
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Demand is generally the need for energy, colloquially referred to as energy consumption.
-Source: https://wiki.openmod-initiative.org/wiki/Demand"@en,
-        rdfs:label "demand"
-    
-    SubClassOf: 
-        OEO_00000106
+    DisjointWith: 
+        OEO_00000047
     
     
 Class: OEO_00000129
@@ -1323,72 +1264,49 @@ Class: OEO_00000139
         OEO_00000150
     
     
-Class: OEO_00000140
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical load is an electrical component or portion of a circuit that consumes (active) electric power. This is opposed to a power source, such as a battery or generator, which produces power. In electric power circuits examples of loads are appliances and lights. The term may also refer to the power consumed by a circuit.
-
-    Source: https://en.wikipedia.org/wiki/Electrical_load"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "electrical load"@en,
-        rdfs:label "electrical demand"@en
-    
-    SubClassOf: 
-        OEO_00000127
-    
-    
-Class: OEO_00000141
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity consumption quantity is a consumption quantity about electricity."@en,
-        rdfs:label "electricity consumption"
-    
-    SubClassOf: 
-        OEO_00000106
-    
-    
-Class: OEO_00000142
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export quantity is a quantity that describes the amount of electricity that is exported from a geographic region."@en,
-        rdfs:label "electricity export"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
 Class: OEO_00000143
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a grid that distributes electrical energy / electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a supply grid that distributes electrical energy / electricity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/138
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/165",
         rdfs:label "electricity grid"
     
     SubClassOf: 
         OEO_00000200,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
+        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 OEO_00000253
     
     
 Class: OEO_00000144
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid component is a part of an electrical grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid component is a grid component that is part of an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:label "electricity grid component"
     
+    EquivalentTo: 
+        OEO_00020006
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143)
+    
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
+        OEO_00020006
     
     
 Class: OEO_00000146
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric vehicle, also called an EV, uses one or more electric motors or traction motors for propulsion. An electric vehicle may be powered through a collector system by electricity from off-vehicle sources, or may be self-contained with a battery, solar panels or an electric generator to convert fuel to electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Electric_vehicle&oldid=906776214"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric vehicle (abbreviated as EV) is a vehicle that uses one or more electric motors for propulsion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "EV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         rdfs:label "electric vehicle"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00010023,
+        uses some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028
     
     
 Class: OEO_00000147
@@ -1403,28 +1321,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: OEO_00000148
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission factors assume a linear relation between the intensity of the activity and the emission resulting from this activity:
-
-Emission (pollutant) = Activity * Emission Factor (pollutant)",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Emission_intensity&oldid=881841342",
-        rdfs:label "emission factor"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
 Class: OEO_00000150
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The property of matter and radiation which is manifest as a capacity to perform work (such as causing motion or the interaction of molecules)",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.lexico.com/en/definition/energy",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of matter and radiation which is manifest as a capacity to perform work (such as causing motion or the interaction of molecules)",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364",
+        rdfs:comment "Energy is power integrated over time.",
         rdfs:label "energy"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Class: OEO_00000151
@@ -1437,65 +1345,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>
-    
-    
-Class: OEO_00000152
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier quantity is a quantity about the amount of energy from a certain energy carrier."@en,
-        rdfs:label "energy carrier quantity"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
-Class: OEO_00000153
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption quantity is a consumption quantity about energy."@en,
-        rdfs:label "energy consumption"
-    
-    SubClassOf: 
-        OEO_00000106
-    
-    
-Class: OEO_00000154
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy from alternative fuels and populsion in traffic quantity is a energy carrier quantity that describes the amount alternative energy carriers are used in the traffic sector."@en,
-        rdfs:label "energy from alternative fuels and propulsion in traffic"
-    
-    SubClassOf: 
-        OEO_00000152
-    
-    
-Class: OEO_00000155
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy from bio fuel in traffic quantity is a energy carrier quantity that describes the amount of bio fuel as energy carrier in traffic."@en,
-        rdfs:label "energy from bio fuel in traffic"
-    
-    SubClassOf: 
-        OEO_00000152
-    
-    
-Class: OEO_00000156
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A energy from electricity in traffic quantity is a energy carrier quantity that describes the amount of electricity used as energy carrier in traffic."@en,
-        rdfs:label "energy from electricity in traffic"
-    
-    SubClassOf: 
-        OEO_00000152
-    
-    
-Class: OEO_00000157
-
-    Annotations: 
-        rdfs:label "energy production"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00000159
@@ -1522,28 +1371,6 @@ Class: OEO_00000165
     
     DisjointWith: 
         OEO_00000361
-    
-    
-Class: OEO_00000166
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In nuclear physics and nuclear chemistry, nuclear fission is a nuclear reaction or a radioactive decay process in which the nucleus of an atom splits into smaller, lighter nuclei. The fission process often produces free neutrons and gamma photons, and releases a very large amount of energy even by the energetic standards of radioactive decay. "@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_fission&oldid=905727345"@en,
-        rdfs:label "fission"
-    
-    SubClassOf: 
-        OEO_00000301
-    
-    
-Class: OEO_00000168
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "the motion of a gas or liquid",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Flow",
-        rdfs:label "flow"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00000169
@@ -1601,17 +1428,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
     
     SubClassOf: 
         OEO_00000334
-    
-    
-Class: OEO_00000178
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In nuclear chemistry, nuclear fusion is a reaction in which two or more atomic nuclei are combined to form one or more different atomic nuclei and subatomic particles (neutrons or protons). The difference in mass between the reactants and products is manifested as either the release or absorption of energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Nuclear_fusion&oldid=906947069"@en,
-        rdfs:label "fusion"
-    
-    SubClassOf: 
-        OEO_00000301
     
     
 Class: OEO_00000181
@@ -1726,28 +1542,6 @@ Class: OEO_00000192
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
-Class: OEO_00000194
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Global warming potential (GWP) is a measure of how much heat a greenhouse gas traps in the atmosphere up to a specific time horizon, relative to carbon dioxide. It compares the amount of heat trapped by a certain mass of the gas in question to the amount of heat trapped by a similar mass of carbon dioxide and is expressed as a factor of carbon dioxide (whose GWP is standardized to 1).
-
-A GWP is calculated over a specific time horizon, commonly 20, 100, or 500 years. User related choices such as the time horizon can greatly affect the numerical values obtained for carbon dioxide equivalents.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Global_warming_potential&oldid=878160191",
-        rdfs:label "global warming potential"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
-Class: OEO_00000197
-
-    Annotations: 
-        rdfs:label "graph"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000024>
-    
-    
 Class: OEO_00000198
 
     Annotations: 
@@ -1764,22 +1558,29 @@ Class: OEO_00000199
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission is an emission that releases a greenhouse gas.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "greenhouse gas emission"
     
     SubClassOf: 
-        OEO_00000147
+        OEO_00000147,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000020
     
     
 Class: OEO_00000200
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/114
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A supply grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "grid",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "network",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/114
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/137",
-        rdfs:comment "Synonym: Network"@en,
-        rdfs:label "grid"
+        rdfs:label "supply grid"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000027>
@@ -1813,9 +1614,9 @@ Class: OEO_00000205
 Class: OEO_00000206
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
-       The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hardware is an artificial object that is part of an electronic system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
         rdfs:label "hardware"
     
     SubClassOf: 
@@ -1832,26 +1633,6 @@ Class: OEO_00000207
     
     SubClassOf: 
         OEO_00000150
-    
-    
-Class: OEO_00000208
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat consumption quantity is a consumption quantity about heat."@en,
-        rdfs:label "heat consumption"
-    
-    SubClassOf: 
-        OEO_00000106
-    
-    
-Class: OEO_00000209
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The heat demand describes the needed amount of heat."@en,
-        rdfs:label "heat demand"
-    
-    SubClassOf: 
-        OEO_00000127
     
     
 Class: OEO_00000210
@@ -1901,17 +1682,6 @@ Class: OEO_00000216
         OEO_00000218
     
     
-Class: OEO_00000217
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydroelectric powerplant uses water to generate electricity."@en,
-        rdfs:label "hydroelectric powerplant"
-    
-    SubClassOf: 
-        OEO_00000224,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000442
-    
-    
 Class: OEO_00000218
 
     Annotations: 
@@ -1935,21 +1705,22 @@ Class: OEO_00000219
     
     SubClassOf: 
         OEO_00000331,
-        has_origin value OEO_00000002
+        has_origin some OEO_00030000
     
     
 Class: OEO_00000220
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a portion of matter with the chemical symbol H and atomic number 1. It is used in water electrolysis during the power-to-gas process as a storage medium for excess electricty."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Hydrogen"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrogen is a portion of matter with the chemical formular H2. It has a gaseous normal state of matter. As it can be oxidised it can be used as a fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "H2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134",
         rdfs:label "hydrogen"
     
     SubClassOf: 
         OEO_00000331,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_origin value OEO_00000404
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000221
@@ -1978,26 +1749,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
         has_physical_input only OEO_00000220
     
     
-Class: OEO_00000223
-
-    Annotations: 
-        rdfs:label "hydrogen vehicle"
-    
-    SubClassOf: 
-        OEO_00000421
-    
-    
-Class: OEO_00000224
-
-    Annotations: 
-        rdfs:comment "will be discussed later",
-        rdfs:label "hydro powerplant"
-    
-    SubClassOf: 
-        OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000023
-    
-    
 Class: OEO_00000226
 
     Annotations: 
@@ -2009,104 +1760,18 @@ Class: OEO_00000226
         OEO_00000439
     
     
-Class: OEO_00000229
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from heat pump quantity is a installed power quantity restricted to heat pump power plants."@en,
-        rdfs:label "installed heat from heat pump"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000230
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from solar quantity is a installed power quantity restricted to solar heat power plants."@en,
-        rdfs:label "installed heat from solar"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000231
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from biomass quantity is a installed power quantity restricted to biomass power plants."@en,
-        rdfs:label "installed power from biomass"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000232
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from coal power plants quantity is a installed power quantity restricted to coal power plants."@en,
-        rdfs:label "installed power from coal power plants"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000233
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from gas quantity is a installed power quantity restricted to gas power plants."@en,
-        rdfs:label "installed power from gas"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000234
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from photovoltaics quantity is a installed power quantity restricted to photovoltaic power plants."@en,
-        rdfs:label "installed power from photovoltaics"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000235
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from thermal power plants quantity is a installed power quantity restricted to thermal power plants."@en,
-        rdfs:label "installed power from thermal power plants"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000236
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power from wind quantity is a installed power quantity restricted to wind power plants."@en,
-        rdfs:label "installed power from wind"
-    
-    SubClassOf: 
-        OEO_00000237
-    
-    
-Class: OEO_00000237
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An installed power quantity is a quantity that describes the amount of power that some generators can generate."@en,
-        rdfs:label "installed power quantity"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
 Class: OEO_00000240
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is an artificial object that is a vehicle powered by internal combustion engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is a vehicle powered by an internal combustion engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         rdfs:label "internal combustion vehicle"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00010023,
+        uses some OEO_00000099,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010029
     
     
 Class: OEO_00000245
@@ -2160,8 +1825,8 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
     
     SubClassOf: 
         OEO_00000088,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000171
+        has_origin some OEO_00030002,
+        has_normal_state_of_matter value OEO_00000390
     
     DisjointWith: 
         OEO_00000204
@@ -2181,20 +1846,26 @@ Class: OEO_00000252
 Class: OEO_00000253
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An uninterrupted transmission system between two nodes in the electric grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A powerline is a grid component that is an uninterrupted transmission system between two nodes in an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
         rdfs:label "power line"@en
     
     SubClassOf: 
-        OEO_00000255
+        OEO_00000255,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
     
     
 Class: OEO_00000255
 
     Annotations: 
-        rdfs:label "link"
+        definition "A grid component link is a grid component that serves as a connection between two other grid components."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "grid component link"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000024>
+        OEO_00020006
     
     DisjointWith: 
         OEO_00000296
@@ -2217,15 +1888,13 @@ Class: OEO_00000258
         rdfs:label "liquid biofuel"
     
     EquivalentTo: 
-        OEO_00000173
+        OEO_00000072
          and (has_normal_state_of_matter value OEO_00000256)
-         and (has_origin value OEO_00000076)
     
     SubClassOf: 
-        OEO_00000072,
-        has_normal_state_of_matter value OEO_00000256,
-        has_origin value OEO_00000076,
-        has_origin value OEO_00000354
+        has_origin some OEO_00030001,
+        has_origin some OEO_00030004,
+        has_normal_state_of_matter value OEO_00000256
     
     
 Class: OEO_00000259
@@ -2247,10 +1916,10 @@ Class: OEO_00000263
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030002,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000182,
-        has_origin value OEO_00000171
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000269
@@ -2264,18 +1933,6 @@ Class: OEO_00000269
     
     DisjointWith: 
         OEO_00000070
-    
-    
-Class: OEO_00000271
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A microgrid is a localized group of electricity sources and loads that normally operates connected to and synchronous with the traditional wide area synchronous grid (macrogrid), but can also disconnect to \"island mode\" — and function autonomously as physical or economic conditions dictate. In this way, a microgrid can effectively integrate various sources of distributed generation (DG), especially Renewable energy Sources (RES) - renewable electricity, and can supply emergency power, changing between island and connected modes. "@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Microgrid&oldid=906195407"@en,
-        rdfs:label "microgrid"
-    
-    SubClassOf: 
-        OEO_00000143,
-        OEO_00000402
     
     
 Class: OEO_00000282
@@ -2334,14 +1991,17 @@ It includes both ‘non-associated’ gas originating from fields producing hydr
 
 It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/430
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         rdfs:label "natural gas"
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030002,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000182,
-        has_origin value OEO_00000171
+        has_normal_state_of_matter value OEO_00000182
     
     
 Class: OEO_00000293
@@ -2356,33 +2016,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: OEO_00000294
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A network node is a node in an electrical grid."@en,
-        rdfs:label "network node"
-    
-    SubClassOf: 
-        OEO_00000296
-    
-    
-Class: OEO_00000295
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A new power from photovoltaics quantity is a quantity that describes the amount of power from photovoltaic power plants that are going to be build in the future."@en,
-        rdfs:label "new power from photovoltaics"
-    
-    SubClassOf: 
-        OEO_00000350
-    
-    
 Class: OEO_00000296
 
     Annotations: 
-        rdfs:label "node"
+        definition "A grid node is a grid component of a supply grid where two or more links meet."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "grid node"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000024>
+        OEO_00020006
     
     DisjointWith: 
         OEO_00000255
@@ -2402,10 +2045,12 @@ Class: OEO_00000297
 Class: OEO_00000298
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-methane volatile organic compounds (NMVOCs) are volatile organic compounds of a large variety of chemically different compounds, such as benzene, ethanol, formaldehyde, cyclohexane, 1,1,1-trichloroethane or acetone.
-       Essentially, NMVOCs are identical to volatile organic compounds (VOCs), but with methane excluded. An important subset of NMVOCs are the non-methane hydrocarbons (NMHCs). Methane is excluded in air-pollution contexts because it is not harmful. Its low reactivity and thus long lifetime in the atmosphere, however, makes it an important greenhouse gas."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Non-methane_volatile_organic_compound&oldid=890812257"@en,
-        rdfs:label "non methane volatile organic compound"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A non-methane volatile organic compound (NMVOC) is a volatile organic compound other than methane."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NMVOC",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "This definition is partly based on Article 2 of the European Air Quality Directive (2008/50/EC): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "non-methane volatile organic compound"
     
     SubClassOf: 
         OEO_00000437
@@ -2420,7 +2065,7 @@ Class: OEO_00000299
     
     SubClassOf: 
         OEO_00000290,
-        has_origin value OEO_00000171
+        has_origin some OEO_00030002
     
     
 Class: OEO_00000300
@@ -2434,16 +2079,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
     
     SubClassOf: 
         OEO_00000150
-    
-    
-Class: OEO_00000301
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "ways to produce energy through the use of nuclear power",
-        rdfs:label "nuclear energy production"
-    
-    SubClassOf: 
-        OEO_00000157
     
     
 Class: OEO_00000302
@@ -2474,24 +2109,6 @@ Class: OEO_00000303
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
-Class: OEO_00000306
-
-    Annotations: 
-        rdfs:label "ocean powerplant"
-    
-    SubClassOf: 
-        OEO_00000224
-    
-    
-Class: OEO_00000307
-
-    Annotations: 
-        rdfs:label "office"
-    
-    SubClassOf: 
-        OEO_00000101
-    
-    
 Class: OEO_00000308
 
     Annotations: 
@@ -2516,9 +2133,9 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030002,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_origin value OEO_00000171
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
 Class: OEO_00000310
@@ -2561,12 +2178,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
 Class: OEO_00000318
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Atmospheric aerosol particles – also known as atmospheric particulate matter, particulate matter (PM), particulates, or suspended particulate matter (SPM) – are portions of matter consisting of microscopic solid or liquid matter suspended in the atmosphere of Earth. The term aerosol commonly refers to the particulate/air mixture, as opposed to the particulate matter alone.Sources of particulate matter can be natural or anthropogenic.They have impacts on climate and precipitation that adversely affect human health, in addition to direct inhalation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Particulates&oldid=906795232"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Particulate matter is a portion of matter consisting of small particles. It can act as an air pollutant."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PM",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
         rdfs:label "particulate matter"
     
     SubClassOf: 
-        OEO_00000331
+        OEO_00000331,
+        (has_normal_state_of_matter value OEO_00000256) or (has_normal_state_of_matter value OEO_00000390),
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
     
     
 Class: OEO_00000320
@@ -2580,20 +2201,10 @@ This definition is without prejudice to the definition of renewable energy sourc
     
     SubClassOf: 
         OEO_00000331,
+        has_origin some OEO_00030002,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000171
-    
-    
-Class: OEO_00000321
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A percentage is a ratio given as a fraction of 100."@en,
-        rdfs:label "percentage"
-    
-    SubClassOf: 
-        OEO_00000350
+        has_normal_state_of_matter value OEO_00000390
     
     
 Class: OEO_00000322
@@ -2605,7 +2216,7 @@ Class: OEO_00000322
     
     SubClassOf: 
         OEO_00000331,
-        has_origin value OEO_00000002
+        has_origin some OEO_00030000
     
     
 Class: OEO_00000324
@@ -2637,6 +2248,7 @@ Class: OEO_00000331
         <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is a part of a material entity that has a state_of_matter property."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279",
+        rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         rdfs:label "portion of matter"
     
     SubClassOf: 
@@ -2653,27 +2265,34 @@ Class: OEO_00000332
         rdfs:label "solid biofuel"@en
     
     EquivalentTo: 
-        (has_normal_state_of_matter value OEO_00000390)
-         and (has_origin value OEO_00000076)
+        OEO_00000072
+         and (has_normal_state_of_matter value OEO_00000390)
     
     SubClassOf: 
-        OEO_00000331,
+        has_origin some OEO_00030001,
+        has_origin some OEO_00030004,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000076,
-        has_origin value OEO_00000354
+        has_normal_state_of_matter value OEO_00000390
     
     
 Class: OEO_00000333
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the rate of doing work, the amount of energy transferred per unit time.
-Source: https://en.wikipedia.org/wiki/Power_(physics)"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that is the amount of energy transformed or transferred per time unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/79
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369",
+        rdfs:comment "Power is the derivative of energy transformation over time",
         rdfs:label "power"
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00030019,
+        process_attribute_of some OEO_00020003
     
     
 Class: OEO_00000334
@@ -2693,6 +2312,8 @@ Class: OEO_00000335
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "a power-to-gas (often abbreviated P2G) system is an energy storage object that converts electrical power to a gas fuel. When using surplus power from wind generation, the concept is sometimes called windgas. There are currently three methods in use; all use electricity to split water into hydrogen and oxygen by means of electrolysis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en,
         rdfs:label "power-to-gas system"
     
@@ -2710,16 +2331,6 @@ Class: OEO_00000343
         OEO_00000012
     
     
-Class: OEO_00000344
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage plant pumps water using surplus energy from a lower level to a higher reservoir. The reservoir functions as a storage unit. If needed, energy can be generated by letting the water flow back to the lower level"@en,
-        rdfs:label "pumped storage plant"
-    
-    SubClassOf: 
-        OEO_00000217
-    
-    
 Class: OEO_00000345
 
     Annotations: 
@@ -2729,24 +2340,6 @@ Class: OEO_00000345
     SubClassOf: 
         OEO_00000441,
         is_used_by some OEO_00000399
-    
-    
-Class: OEO_00000346
-
-    Annotations: 
-        rdfs:label "pumpstorage powerplant"
-    
-    SubClassOf: 
-        OEO_00000357
-    
-    
-Class: OEO_00000347
-
-    Annotations: 
-        rdfs:label "pumpstorage powerplant with natural influx"
-    
-    SubClassOf: 
-        OEO_00000357
     
     
 Class: OEO_00000348
@@ -2759,28 +2352,20 @@ Class: OEO_00000348
     SubClassOf: 
         OEO_00000034,
         has_physical_output some OEO_00000333,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000032,
-        has_physical_input only OEO_00000385
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000032
     
     
 Class: OEO_00000350
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Idea: A quantity is a property that is quantifiable by measurement."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "other Idea: A number together with a unit of measurement to quantify an entity."@en,
-        rdfs:label "quantity"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is a generically depenent continuant defined by a numeral together with a unit of measurement to quantify an entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "quantity value"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
-Class: OEO_00000352
-
-    Annotations: 
-        rdfs:label "rail"
-    
-    SubClassOf: 
-        OEO_00000421
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 Class: OEO_00000356
@@ -2792,38 +2377,8 @@ Class: OEO_00000356
     
     SubClassOf: 
         OEO_00000290,
-        has_origin value OEO_00000076,
-        has_origin value OEO_00000354
-    
-    
-Class: OEO_00000357
-
-    Annotations: 
-        rdfs:label "reservoir powerplant"
-    
-    SubClassOf: 
-        OEO_00000224
-    
-    DisjointWith: 
-        OEO_00000363
-    
-    
-Class: OEO_00000358
-
-    Annotations: 
-        rdfs:label "residential demand"
-    
-    SubClassOf: 
-        OEO_00000127
-    
-    
-Class: OEO_00000359
-
-    Annotations: 
-        rdfs:label "retail"
-    
-    SubClassOf: 
-        OEO_00000101
+        has_origin some OEO_00030001,
+        has_origin some OEO_00030004
     
     
 Class: OEO_00000361
@@ -2837,32 +2392,6 @@ Class: OEO_00000361
     
     DisjointWith: 
         OEO_00000165
-    
-    
-Class: OEO_00000363
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine installed on naturally running streams (in contrast to pump storage lakes)"@en,
-        rdfs:label "run of river powerplant"
-    
-    SubClassOf: 
-        OEO_00000217,
-        uses some OEO_00000168
-    
-    DisjointWith: 
-        OEO_00000357, OEO_00000409
-    
-    
-Class: OEO_00000369
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In electronics, a shunt is a device which allows electric current to pass around another point in the circuit by creating a low resistance path. The term is also widely used in photovoltaics to describe an unwanted short circuit between the front and back surface contacts of a solar cell, usually caused by wafer damage.
-
-Source: https://en.wikipedia.org/wiki/Shunt_%28electrical%29"@en,
-        rdfs:label "shunt impedance"
-    
-    SubClassOf: 
-        OEO_00000294
     
     
 Class: OEO_00000374
@@ -2911,17 +2440,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
     SubClassOf: 
         OEO_00000150,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000033
-    
-    
-Class: OEO_00000385
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sunlight converted into electricity by the use of solar cells usually made of semi-conducting material which exposed to light will generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "solar photovoltaic"
-    
-    SubClassOf: 
-        OEO_00000157
     
     
 Class: OEO_00000386
@@ -2981,14 +2499,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/164",
         rdfs:label "solid fossil fuel"
     
     EquivalentTo: 
-        (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097)
+        (has_origin some OEO_00030002)
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097)
          and (has_normal_state_of_matter value OEO_00000390)
-         and (has_origin value OEO_00000171)
     
     SubClassOf: 
         OEO_00000173,
-        has_normal_state_of_matter value OEO_00000390,
-        has_origin value OEO_00000171
+        has_origin some OEO_00030002,
+        has_normal_state_of_matter value OEO_00000390
     
     
 Class: OEO_00000395
@@ -3015,24 +2533,15 @@ Class: OEO_00000396
         has_physical_output some OEO_00000333
     
     
-Class: OEO_00000398
-
-    Annotations: 
-        rdfs:label "storage hydropowerplant"
-    
-    SubClassOf: 
-        OEO_00000357
-    
-    
 Class: OEO_00000399
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores energy."@en,
         rdfs:label "storage unit"
     
     SubClassOf: 
-        OEO_00000144,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
+        OEO_00020006,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000200
     
     
 Class: OEO_00000401
@@ -3046,95 +2555,33 @@ Class: OEO_00000401
         OEO_00000088
     
     
-Class: OEO_00000402
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A subgrid is a grid component that is a grid itself."@en,
-        rdfs:label "subgrid"
-    
-    SubClassOf: 
-        OEO_00000143,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144
-    
-    
 Class: OEO_00000407
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is an entity that is created by mental or phisical efford and used to help society?"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Technology is an information content entity that specifies how to create an artificial object."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/136
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/334",
         rdfs:label "technology"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
-Class: OEO_00000409
+Class: OEO_00000419
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "tidal power plant"
-    
-    SubClassOf: 
-        OEO_00000306,
-        uses some OEO_00000411
-    
-    DisjointWith: 
-        OEO_00000363
-    
-    
-Class: OEO_00000410
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A tidal stream generator uses tidal movement, wave motion or water current for electricity generation."@en,
-        rdfs:label "tidal stream powerplant"
-    
-    SubClassOf: 
-        OEO_00000217
-    
-    
-Class: OEO_00000411
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Tides are rise and fall of sea levels caused by the combined effects of the gravitational forces exerted by the moon and the sun, and the rotation of the earth.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Tide",
-        rdfs:label "tide"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
-    
-Class: OEO_00000412
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Mechanical energy derived from tidal movement, wave motion or ocean current and exploited for electricity generation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "tide wave ocean"
-    
-    SubClassOf: 
-        OEO_00000157
-    
     
 Class: OEO_00000420
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "1. A transformer is an electrical device that transfers electrical energy between two or more circuits through electromagnetic induction. A varying current in one coil of the transformer produces a varying magnetic field, which in turn induces a voltage in a second coil. Transformers are used to increase or decrease the alternating voltages in electric power applications.
-2. A transformer is a static machine used for transforming power from one circuit to another without changing frequency. This is a very basic definition of transformer. Since there is no rotating or moving part so transformer is a static device. Transformer operates on ac supply. Transformer works on the principle of mutual induction.
-
-Source: https://wiki.openmod-initiative.org/wiki/Transformer"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformer is an electricity grid component that passively transfers electrical energy from one electrical circuit to another."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:comment "Source: https://en.wikipedia.org/wiki/Transformer"@en,
         rdfs:label "transformer"
     
     SubClassOf: 
-        OEO_00000294
-    
-    
-Class: OEO_00000421
-
-    Annotations: 
-        rdfs:label "transport demand"
-    
-    SubClassOf: 
-        OEO_00000127
+        OEO_00020006,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
     
     
 Class: OEO_00000425
@@ -3159,50 +2606,23 @@ Class: OEO_00000429
         uses some OEO_00000220
     
     
-Class: OEO_00000430
-
-    Annotations: 
-        rdfs:label "undirected edge"
-    
-    SubClassOf: 
-        OEO_00000255
-    
-    
-Class: OEO_00000433
-
-    Annotations: 
-        rdfs:label "v2 grid"
-    
-    SubClassOf: 
-        OEO_00000421
-    
-    
 Class: OEO_00000437
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Volatile organic compounds (VOCs) are portions of matter consisting of organic chemicals that have a high vapor pressure at ordinary room temperature. Their high vapor pressure results from a low boiling point, which causes large numbers of molecules to evaporate or sublimate from the liquid or solid form of the compound and enter the surrounding air, a trait known as volatility.
-
-[...]
-
-VOCs are numerous, varied, and ubiquitous. They include both human-made and naturally occurring chemical compounds.
-
-[...]
-
-Some VOCs are dangerous to human health or cause harm to the environment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Volatile_organic_compound&oldid=880677383",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A volatile organic compound (VOC) is a portion of matter consisting of organic compounds that is capable of producing photochemical oxidants by reactions with nitrogen oxides in the presence of sunlight. Hence it can act as an air pollutant."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "VOC",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "This definition is partly based on Article 2 of the European Air Quality Directive (2008/50/EC): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
         rdfs:label "volatile organic compound"
+    
+    EquivalentTo: 
+        OEO_00000025 or OEO_00000298
     
     SubClassOf: 
         OEO_00000331
-    
-    
-Class: OEO_00000438
-
-    Annotations: 
-        rdfs:label "warehouse"
-    
-    SubClassOf: 
-        OEO_00000101
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00010011),
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
     
     
 Class: OEO_00000439
@@ -3243,7 +2663,8 @@ Class: OEO_00000441
     
     SubClassOf: 
         OEO_00000331,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
+        has_normal_state_of_matter value OEO_00000256
     
     
 Class: OEO_00000442
@@ -3258,27 +2679,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
         OEO_00000425,
         has_physical_output some OEO_00000333,
         has_physical_input only OEO_00000218
-    
-    
-Class: OEO_00000443
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "(Wind-)waves are water surface waves that occur on the free surface of the oceans.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Wind_wave",
-        rdfs:label "wave"
-    
-    SubClassOf: 
-        OEO_00000441
-    
-    
-Class: OEO_00000444
-
-    Annotations: 
-        rdfs:label "wave power plant"
-    
-    SubClassOf: 
-        OEO_00000306,
-        uses some OEO_00000443
     
     
 Class: OEO_00000446
@@ -3335,57 +2735,640 @@ Class: OEO_00000449
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001
     
     
-Individual: OEO_00000002
+Class: OEO_00010000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is anthropogenic if it was created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ammonia is a portion of matter with the chemical formula NH3. It has a gaseous normal state of matter and can act as an air pollutant. Synonyms are trihydridonitrogen and nitrogen trihydride.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NH3",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "ammonia"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055,
+        has_normal_state_of_matter value OEO_00000182
+    
+    
+Class: OEO_00010001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon monoxide is a portion of matter with the chemical formula CO. It has a gaseous normal state of matter and can act as an air pollutant.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "carbon monoxide"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055,
+        has_normal_state_of_matter value OEO_00000182
+    
+    
+Class: OEO_00010002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen oxides are a portion of matter consisting of compounds of nitrogen and oxygen. It is a collective term for numerous oxides of nitrogen with a gaseous normal state of matter. They can act as air pollutants.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NOx",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "nitrogen oxides"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055,
+        has_normal_state_of_matter value OEO_00000182
+    
+    
+Class: OEO_00010003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitric oxide is a portion of matter with the chemical formula NO. It is a gas and can act as an air pollutant. Synonyms are nitrogen oxide or nitrogen monoxide.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NO",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "nitrogen monoxide",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "nitrogen oxide",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "nitric oxide"@en
+    
+    SubClassOf: 
+        OEO_00010002
+    
+    
+Class: OEO_00010004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nitrogen dioxide is a portion of matter with the chemical formula NO2. It is a gas and can act as an air pollutant.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "NO2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "nitrogen dioxide"@en
+    
+    SubClassOf: 
+        OEO_00010002
+    
+    
+Class: OEO_00010007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur dioxide is a portion of matter with the chemical formula SO2. It has a gaseous normal state of matter and can act as an air pollutant.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SO2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "sulphur dioxide"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055,
+        has_normal_state_of_matter value OEO_00000182
+    
+    
+Class: OEO_00010009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PM10 is particulate matter which passes through a size-selective inlet as defined in the reference method for the sampling and measurement of PM10, EN 12341, with a 50 % efficiency cut-off at 10 µm aerodynamic diameter.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "This definition is partly based on Article 2 of the European Air Quality Directive (2008/50/EC): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "PM10"@en
+    
+    SubClassOf: 
+        OEO_00000318
+    
+    
+Class: OEO_00010010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PM2.5 is particulate matter which passes through a size-selective inlet as defined in the reference method for the sampling and measurement of PM2,5, EN 14907, with a 50 % efficiency cut-off at 2,5 µm aerodynamic diameter.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "This definition is partly based on Article 2 of the European Air Quality Directive (2008/50/EC): https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008L0050",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "PM2.5"@en
+    
+    SubClassOf: 
+        OEO_00000318
+    
+    
+Class: OEO_00010011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The volatility disposition is the disposition of a portion of matter to sublimate or evaporate from the solid or liquid form and enter the surrounding air.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "volatility"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
+Class: OEO_00010012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An air pollutant is a portion of matter that has the disposition to participates in air pollution.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+        rdfs:label "air pollutant"@en
+    
+    EquivalentTo: 
+        OEO_00000331
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055)
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00010015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil hydrogen is hydrogen with fossil origin. It is usually produced from fossil fuels applying the steam reforming process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "fossil hydrogen"@de
+    
+    SubClassOf: 
+        OEO_00000220,
+        has_origin some OEO_00030002
+    
+    
+Class: OEO_00010016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic hydrogen is hydrogen with synthetic origin. It is usually produced from water applying the water electrolysis process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic hydrogen"@de
+    
+    SubClassOf: 
+        OEO_00000220,
+        has_origin some OEO_00030005
+    
+    
+Class: OEO_00010017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic fuel is a fuel produced from one or more portion(s) of matter using electric energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "e-fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "electric fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic fuel"@de
+    
+    EquivalentTo: 
+        OEO_00000173
+         and (has_origin some OEO_00030005)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
+    
+    
+Class: OEO_00010018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic methane is synthetic fuel produced in a power-to-gas system from water and carbon dioxide using electric energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic methane"@de
+    
+    SubClassOf: 
+        OEO_00000025,
+        has_origin some OEO_00030005
+    
+    
+Class: OEO_00010019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic liquid fuel is synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electric energy applying.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "synthetic liquid fuel"@de
+    
+    EquivalentTo: 
+        OEO_00010017
+         and (has_normal_state_of_matter value OEO_00000256)
+    
+    SubClassOf: 
+        OEO_00010017
+    
+    
+Class: OEO_00010020
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid (often abbreviated P2L or PtL) system is an energy storage object that converts electrical power to a liquid fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2L",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PtL",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "power-to-liquid system"@de
+    
+    SubClassOf: 
+        OEO_00000159
+    
+    
+Class: OEO_00010021
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electrolyser is an energy converting device that uses an electric current to decompose water into hydrogen and oxygen gas. Electric energy is converted into chemical energy (and waste heat).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "water electrolyser"@de
+    
+    SubClassOf: 
+        OEO_00000011
+    
+    
+Class: OEO_00010022
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A steam reformer is an energy converting device that produces syngas from hydrocarbons such as natural gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+        rdfs:label "steam reformer"@de
+    
+    SubClassOf: 
+        OEO_00000011
+    
+    
+Class: OEO_00010023
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artifical object that is used for transporting people or goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+        rdfs:label "vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000061
+    
+    
+Class: OEO_00010024
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "BEV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A battery electric vehicle (BEV) is a vehicle that stores energy in an on-board battery.",
+        rdfs:label "battery electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000146,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026
+    
+    
+Class: OEO_00010025
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "FCEV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A fuel cell electric vehicle (FCEV) is a vehicle that uses electrical energy from a fuel cell.",
+        rdfs:label "fuel cell electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000146,
+        uses some OEO_00000220,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000016
+    
+    
+Class: OEO_00010026
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A traction battery is a battery that is used in vehicles for propulsion.",
+        rdfs:label "traction battery"@en
+    
+    SubClassOf: 
+        OEO_00000068
+    
+    
+Class: OEO_00010027
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "An electric motor is an energy converting device that converts electrical energy into kinetic energy.",
+        rdfs:label "electric motor"@en
+    
+    SubClassOf: 
+        OEO_00010032,
+        uses some OEO_00000139
+    
+    
+Class: OEO_00010028
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A traction motor is an electric motor used for propulsion.",
+        rdfs:label "traction motor"@en
+    
+    SubClassOf: 
+        OEO_00010027
+    
+    
+Class: OEO_00010029
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "An internal combustion engine is an energy converting device that converts chemical energy into into rotational energy using a cyclic combustion process.",
+        rdfs:label "internal combustion engine"@en
+    
+    SubClassOf: 
+        OEO_00010032,
+        uses some OEO_00000099
+    
+    
+Class: OEO_00010030
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PHEV",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both a traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
+        rdfs:label "plug-in hybrid electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00010023,
+        uses some OEO_00000099,
+        uses some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010029
+    
+    
+Class: OEO_00010031
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A grid supplied electric vehicle is an electric vehicle that uses electrical energy via a conductor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        rdfs:label "grid supplied electric vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000146
+    
+    
+Class: OEO_00010032
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+        dc:description "A motor is an energy converting device that converts other forms of energy into rotational kinetic energy.",
+        rdfs:label "motor"
+    
+    SubClassOf: 
+        OEO_00000011
+    
+    
+Class: OEO_00020001
+
+    Annotations: 
+        definition "Ethanol is a portion of matter with the chemical formula C2H6O. It has a liquid normal state of matter and can be used as a combustion fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/439
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445"@en,
+        rdfs:label "ethanol"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000075
+    
+    
+Class: OEO_00020003
+
+    Annotations: 
+        definition "Energy transformation is a process in which one ore more certain types of energy as input result in certain types of energy as output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/435
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/77
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/371",
+        rdfs:label "energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00000419
+    
+    
+Class: OEO_00020004
+
+    Annotations: 
+        definition "A gas grid is a supply grid that distributes gaseous fuel, e.g. methane.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/385",
+        rdfs:label "gas grid"@en
+    
+    SubClassOf: 
+        OEO_00000200,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020007
+    
+    
+Class: OEO_00020005
+
+    Annotations: 
+        definition "A heating grid is a supply grid that distributes thermal energy via circulating steam or liquids."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/385",
+        rdfs:label "heating grid"@en
+    
+    SubClassOf: 
+        OEO_00000200,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008
+    
+    
+Class: OEO_00020006
+
+    Annotations: 
+        definition "A grid component is an artificial object that is a discrete part of a supply grid serving a specific purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
+        rdfs:label "grid component"@en
+    
+    SubClassOf: 
+        OEO_00000061,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000200
+    
+    
+Class: OEO_00020007
+
+    Annotations: 
+        definition "A gas grid component is a grid component that is part of a gas grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "gas grid component"@en
+    
+    EquivalentTo: 
+        OEO_00020006
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020004)
+    
+    SubClassOf: 
+        OEO_00020006
+    
+    
+Class: OEO_00020008
+
+    Annotations: 
+        definition "A heating grid component is a grid component that is part of a heating grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "heating grid component"@en
+    
+    EquivalentTo: 
+        OEO_00020006
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020005)
+    
+    SubClassOf: 
+        OEO_00020006
+    
+    
+Class: OEO_00020009
+
+    Annotations: 
+        definition "A switchyard is an electricity grid component that connects different levels of voltage"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
+        rdfs:label "switchyard"@en
+    
+    SubClassOf: 
+        OEO_00020006,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000420
+    
+    
+Class: OEO_00030000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "anthropogenic"
     
-    Types: 
+    SubClassOf: 
         OEO_00000316
     
     
-Individual: OEO_00000018
+Class: OEO_00030001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is geogenic if it is the result of geological processes.",
-        rdfs:label "geogenic"
-    
-    Types: 
-        OEO_00000316
-    
-    
-Individual: OEO_00000076
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is biogenic if it is made by or produce from life forms.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "biogenic is an origin of portions of matter made by or produced from life forms.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
         rdfs:label "biogenic"
     
-    Types: 
-        OEO_00000316,
-        has_origin some OEO_00000316
+    SubClassOf: 
+        OEO_00000316
     
     
-Individual: OEO_00000110
+Class: OEO_00030002
 
     Annotations: 
-        rdfs:label "cooking"
-    
-    Types: 
-        OEO_00000358
-    
-    
-Individual: OEO_00000171
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is fossil if it was created from organic material by geolocial processes lasting thousands or millions of years.
+        <http://purl.obolibrary.org/obo/IAO_0000115> "fossil is an origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.
 
 In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
         rdfs:label "fossil"
     
-    Types: 
-        OEO_00000316,
-        has_origin some OEO_00000316
+    SubClassOf: 
+        OEO_00030003
+    
+    
+Class: OEO_00030003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
+        rdfs:label "geogenic"
+    
+    SubClassOf: 
+        OEO_00000316
+    
+    
+Class: OEO_00030004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of portions of matter that replenish on a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/397
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/398
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+        rdfs:label "renewable"
+    
+    SubClassOf: 
+        OEO_00000316
+    
+    
+Class: OEO_00030005
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "synthetic is an origin of portions of matter created artifically by a chemical process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+        rdfs:label "synthetic"
+    
+    SubClassOf: 
+        OEO_00000316
+    
+    
+Class: OEO_00030019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "process attribute"@de
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000003>
+    
+    
+Class: OEO_00230000
+
+    Annotations: 
+        definition "Storage capacity is the quantity value stating the maximum energy an energy storage object can store.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+        rdfs:label "storage capacity"
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00230001
+
+    Annotations: 
+        definition "Power rating is the quantity value stating the maximum power an energy converting device can convert.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+        rdfs:label "power rating"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00230002
+
+    Annotations: 
+        definition "Declared net capacity is the quantity value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+        rdfs:label "declared net capacity"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00230003
+
+    Annotations: 
+        definition "Nameplate capacity is the quantity value stating the maximum power a power generating unit or a power plant can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+        rdfs:label "nameplate capacity"@en
+    
+    SubClassOf: 
+        OEO_00000350
     
     
 Individual: OEO_00000182
@@ -3396,27 +3379,6 @@ Individual: OEO_00000182
     
     Types: 
         OEO_00000395
-    
-    
-Individual: OEO_00000207
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
-       The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en,
-        rdfs:label "heat"
-    
-    Types: 
-        OEO_00000358
-    
-    
-Individual: OEO_00000250
-
-    Annotations: 
-        rdfs:label "light"
-    
-    Types: 
-        OEO_00000358
     
     
 Individual: OEO_00000256
@@ -3439,27 +3401,6 @@ Individual: OEO_00000326
         OEO_00000395
     
     
-Individual: OEO_00000354
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is renewable if will replenish to replace the portion depleted in a finite amount of time in a human time scale.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Adapted from https://en.wikipedia.org/w/index.php?title=Renewable_resource&oldid=926207362",
-        rdfs:label "renewable"
-    
-    Types: 
-        OEO_00000316,
-        has_origin some OEO_00000316
-    
-    
-Individual: OEO_00000373
-
-    Annotations: 
-        rdfs:label "smart metre"
-    
-    Types: 
-        OEO_00000060
-    
-    
 Individual: OEO_00000390
 
     Annotations: 
@@ -3468,17 +3409,6 @@ Individual: OEO_00000390
     
     Types: 
         OEO_00000395
-    
-    
-Individual: OEO_00000404
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x is synthetic if it was created artifically by a chemical process.",
-        rdfs:label "synthetic"
-    
-    Types: 
-        OEO_00000316,
-        has_origin some OEO_00000316
     
     
 DisjointClasses: 
