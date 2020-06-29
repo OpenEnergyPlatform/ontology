@@ -10,7 +10,7 @@ Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontol
 
 programs used
 
- 🔷 - git: used for syncronising the code on your pc and online
+ 🔷 - git: used for synchronising the code on your PC and online
 
  🍏 - github: used for discussion and review
 
