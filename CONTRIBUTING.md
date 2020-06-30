@@ -84,7 +84,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     git push
     ```
     If your branch does not exist on the remote server yet, git will provide you with instructions, simply follow them
-6. 🍏 Make sure that all automated tests are successful. This will be indicated by a green or red icon next to your most recent commit.
+6. 🍏 Make sure that all automated tests are successful. This will be indicated by a green or red icon next to your most recent commit. In case an error occured that you don't know how to solve, write a comment in the PR and ask for help from the ontology-expert-team.
 
 **Review**
 
