@@ -28,48 +28,64 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 AnnotationProperty: dc:description
 
     
+AnnotationProperty: rdfs:comment
+
+    
 AnnotationProperty: rdfs:label
 
     
 Datatype: rdf:PlainLiteral
 
-ObjectProperty: uses
     
- Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclass)"
-
-    InverseOf: 
-        is_used_by
-
-ObjectProperty: is_used_by
-    
-    InverseOf: 
-        uses
-
-
 ObjectProperty: has_process_attribute
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000233> "A relation between a process and a process attribute that existentially depends on it.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
         rdfs:label "has_process_attribute"@de
     
     InverseOf: 
         process_attribute_of
+    
+    
+ObjectProperty: is_used_by
 
-
+    Annotations: 
+        rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472"
+    
+    InverseOf: 
+        uses
+    
     
 ObjectProperty: process_attribute_of
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000233> "A relation between a process attribute and the process it existentially depends on.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386"
     
     InverseOf: 
         has_process_attribute
+    
+    
+ObjectProperty: uses
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclass)
+https://github.com/OpenEnergyPlatform/ontology/pull/472 (move to oeo-shared)"
+    
+    InverseOf: 
+        is_used_by
+    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
