@@ -24,12 +24,13 @@ Here is a template for new release sections
 - natural gas relation to methane (#431)
 - ethanol (#445)
 - factsheet-covers-relationships (#440)
+- oeo-shared module (#450)
 
 ### Changed
--
+- move object properties to oeo-shared (#472)
 
 ### Removed
-- unused object properties (#66)
+- unused object properties (#452)
 
 ## [1.0.0] - 2020-06-11
 
