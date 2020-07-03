@@ -28,6 +28,7 @@ Here is a template for new release sections
 
 ### Changed
 - move object properties to oeo-shared (#472)
+- definition of sector (#477)
 
 ### Removed
 - unused object properties (#452)
