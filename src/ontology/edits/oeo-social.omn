@@ -1,4 +1,4 @@
-Prefix: : <http://openenergy-platform.org/ontology/oeo/oeo-social/>
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
 Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: obda: <https://w3id.org/obda/vocabulary#>
@@ -19,12 +19,6 @@ Annotations:
     dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (social module)"
 
-AnnotationProperty: <http://openenergy-platform.org/ontology/oeo/definition>
-
-    SubPropertyOf: 
-        rdfs:comment
-    
-    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
     
@@ -52,6 +46,12 @@ AnnotationProperty: dc:description
 AnnotationProperty: dc:license
 
     
+AnnotationProperty: definition
+
+    SubPropertyOf: 
+        rdfs:comment
+    
+    
 AnnotationProperty: rdfs:comment
 
     
@@ -64,84 +64,6 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/conforms_to>
-
-    Domain: 
-        <http://openenergy-platform.org/ontology/oeo/conforms_to> some <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
-    
-    Range: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers>
-
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/covers_sector>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
-    
-    SubPropertyOf: 
-        <http://openenergy-platform.org/ontology/oeo/covers>
-    
-    Range: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_author>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    Range: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_client>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    Range: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_contact>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_funding_source>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    Range: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-ObjectProperty: <http://openenergy-platform.org/ontology/oeo/has_institution>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
@@ -151,350 +73,86 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
+ObjectProperty: conforms_to
+
+    Domain: 
+        conforms_to some OEO_00000368
+    
+    Range: 
+        OEO_00000367
+    
+    
+ObjectProperty: covers
+
+    
+ObjectProperty: covers_sector
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
+    
+    SubPropertyOf: 
+        covers
+    
+    Range: 
+        OEO_00000367
+    
+    
+ObjectProperty: has_author
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    Range: 
+        OEO_00000051
+    
+    
+ObjectProperty: has_client
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    Range: 
+        OEO_00000051
+    
+    
+ObjectProperty: has_contact
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    
+ObjectProperty: has_funding_source
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    Range: 
+        OEO_00000051
+    
+    
+ObjectProperty: has_institution
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    
 ObjectProperty: owl:topObjectProperty
 
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000045>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:label "producer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organization that directs its activity towards achieving goals."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
-        rdfs:label "agent"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000064>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
-        rdfs:label "author"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000087>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
-        rdfs:label "client"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000100>
-
-    Annotations: 
-        rdfs:label "service sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000105>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a user of a commercial product or service."@en,
-        rdfs:label "consumer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000431>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000107>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
-        rdfs:label "contact person"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000128>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a sector that includes energy consumers."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
-        rdfs:label "energy demand sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000145>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en,
-        rdfs:label "electricity sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000158>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en,
-        rdfs:label "energy sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000213>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
-        rdfs:label "heating and cooling sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000214>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en,
-        rdfs:label "household sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000227>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
-
-* Iron and steel industry
-* Chemical and petrochemical industry
-* Non-ferrous metals
-* Non-metallic minerals
-* Transport equipment
-* Machinery
-* Mining (excluding fuels) and quarrying
-* Food and tobacco
-* Paper, pulp and print
-* Wood and wood products (other than pulp and paper)
-* Construction
-* Textile and leather
-* Non-specified (any manufacturing industry not included above)"@en,
-        rdfs:label "industry sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000238>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en,
-        rdfs:label "institution"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00030022>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000315>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of a society that has a collective goal and a set of organization rules.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:label "organization role"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
-    
-    DisjointWith: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000323>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000323>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human being."@en,
-        rdfs:label "person"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
-    
-    DisjointWith: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000315>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000329>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en,
-        rdfs:label "political party"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00030022>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000341>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is an agent who is producer and consumer at the same time."@en,
-        rdfs:label "prosumer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is generically dependent continuant that is a subdivision of a system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/477",
-        rdfs:label "sector"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector division is a specific way to subdivide a system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
-        rdfs:label "sector division"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000379>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A software developer is an agent that creates computer software.",
-        rdfs:label "software developer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000405>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en,
-        rdfs:label "TCS sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000128>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000418>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en,
-        rdfs:label "traffic sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000128>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000422>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
-
-* Domestic aviation
-* Road: fuels used in road vehicles as well as agricultural and industrial highway use
-* Rail, including industrial railways.
-* Pipeline transport
-* Domestic navigation
-* Non-specified: includes all transport not elsewhere specified."@en,
-        rdfs:label "transport sector"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000367>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00000431>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A user is an agent that employs an aid, tool or information system to achieve a goal/benefit.",
-        rdfs:label "user"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000051>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030016>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organizational energy producer is an organization that undertakes the generation of electricity and/or heat.\"",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:label "organizational energy producer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00030022>,
-        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/OEO_00000045>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030017>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy autoproducer is an organizational energy producer who produces electrical energy and/or heat wholly or partly for their own use as an activity which supports their primary activity.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:comment "They may be privately or publicly owned.",
-        rdfs:label "energy autoproducer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00030016>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030018>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A main activity energy producer is an organizational energy producer whose primary activity is electrical energy and/or heat production.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:comment "They may be privately or publicly owned. Note that the sale need not take place through the public grid.",
-        rdfs:label "main activity energy producer"
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00030016>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/OEO_00030022>
-
-    Annotations: 
-        <http://openenergy-platform.org/ontology/oeo/definition> "An organization is an immaterial entity that has the organization role and there exists some sort of legal framework that recognises the entity and its continued existence.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
-        rdfs:label "organization"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000141>,
-        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/OEO_00000315>
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -544,7 +202,349 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
-Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000160>
+Class: OEO_00000045
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:label "producer"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organization that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
+        rdfs:label "agent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00000064
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
+        rdfs:label "author"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000087
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
+        rdfs:label "client"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000100
+
+    Annotations: 
+        rdfs:label "service sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000105
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A consumer is a user of a commercial product or service."@en,
+        rdfs:label "consumer"
+    
+    SubClassOf: 
+        OEO_00000431
+    
+    
+Class: OEO_00000107
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
+        rdfs:label "contact person"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000128
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a sector that includes energy consumers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
+        rdfs:label "energy demand sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000145
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en,
+        rdfs:label "electricity sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000158
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en,
+        rdfs:label "energy sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000213
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
+        rdfs:label "heating and cooling sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000214
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en,
+        rdfs:label "household sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000227
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
+
+* Iron and steel industry
+* Chemical and petrochemical industry
+* Non-ferrous metals
+* Non-metallic minerals
+* Transport equipment
+* Machinery
+* Mining (excluding fuels) and quarrying
+* Food and tobacco
+* Paper, pulp and print
+* Wood and wood products (other than pulp and paper)
+* Construction
+* Textile and leather
+* Non-specified (any manufacturing industry not included above)"@en,
+        rdfs:label "industry sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000238
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en,
+        rdfs:label "institution"
+    
+    SubClassOf: 
+        OEO_00030022
+    
+    
+Class: OEO_00000315
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of a society that has a collective goal and a set of organization rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:label "organization role"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    DisjointWith: 
+        OEO_00000323
+    
+    
+Class: OEO_00000323
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human being."@en,
+        rdfs:label "person"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    DisjointWith: 
+        OEO_00000315
+    
+    
+Class: OEO_00000329
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en,
+        rdfs:label "political party"
+    
+    SubClassOf: 
+        OEO_00030022
+    
+    
+Class: OEO_00000341
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A prosumer is an agent who is producer and consumer at the same time."@en,
+        rdfs:label "prosumer"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000367
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is generically dependent continuant that is a subdivision of a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/477",
+        rdfs:label "sector"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: OEO_00000368
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector division is a specific way to subdivide a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
+        rdfs:label "sector division"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: OEO_00000379
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A software developer is an agent that creates computer software.",
+        rdfs:label "software developer"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000405
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en,
+        rdfs:label "TCS sector"
+    
+    SubClassOf: 
+        OEO_00000128
+    
+    
+Class: OEO_00000418
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en,
+        rdfs:label "traffic sector"
+    
+    SubClassOf: 
+        OEO_00000128
+    
+    
+Class: OEO_00000422
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
+
+* Domestic aviation
+* Road: fuels used in road vehicles as well as agricultural and industrial highway use
+* Rail, including industrial railways.
+* Pipeline transport
+* Domestic navigation
+* Non-specified: includes all transport not elsewhere specified."@en,
+        rdfs:label "transport sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00000431
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A user is an agent that employs an aid, tool or information system to achieve a goal/benefit.",
+        rdfs:label "user"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00030016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organizational energy producer is an organization that undertakes the generation of electricity and/or heat.\"",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:label "organizational energy producer"
+    
+    SubClassOf: 
+        OEO_00030022,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000045
+    
+    
+Class: OEO_00030017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy autoproducer is an organizational energy producer who produces electrical energy and/or heat wholly or partly for their own use as an activity which supports their primary activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:comment "They may be privately or publicly owned.",
+        rdfs:label "energy autoproducer"
+    
+    SubClassOf: 
+        OEO_00030016
+    
+    
+Class: OEO_00030018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A main activity energy producer is an organizational energy producer whose primary activity is electrical energy and/or heat production.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:comment "They may be privately or publicly owned. Note that the sale need not take place through the public grid.",
+        rdfs:label "main activity energy producer"
+    
+    SubClassOf: 
+        OEO_00030016
+    
+    
+Class: OEO_00030022
+
+    Annotations: 
+        definition "An organization is an immaterial entity that has the organization role and there exists some sort of legal framework that recognises the entity and its continued existence.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
+        rdfs:label "organization"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
+    
+    
+Individual: OEO_00000160
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The concept of \"energy balance\" is an accounting framework for the compilation and understanding of data on all energy products entering, exiting and being used in a country. The energy balance is the most complete statistical accounting of energy products and their flow in the economy. Columns of the energy balance represent energy products (fuels). Rows represent energy flows.
@@ -555,10 +555,10 @@ The energy balance expresses all forms of energy in a common accounting unit. Th
         rdfs:label "eurostat energy balances"
     
     Types: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
+        OEO_00000368
     
     
-Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000193>
+Individual: OEO_00000193
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Das Schema der Energiebilanzen umfasst eine Matrix von 33 Spalten und 68 Zeilen (einschließlich der Summenspalten und -zeilen). In der horizontalen Gliederung (Spalten) werden die Energieträger ausgewiesen, die der energetischen und nichtenergetischen Nutzung dienen. In der vertikalen Gliederung (Zeilen) werden für die jeweiligen Energieträger Aufkommen, Umwandlung und Verwendung erfasst.
@@ -592,10 +592,10 @@ In der Primärenergiebilanz werden die Energieträger mit ihrem Mengenaufkommen 
         rdfs:label "german energy balances"
     
     Types: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
+        OEO_00000368
     
     
-Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000242>
+Individual: OEO_00000242
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 1996 (revised).",
@@ -603,10 +603,10 @@ Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000242>
         rdfs:label "ipcc_1996_ guidelines"
     
     Types: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
+        OEO_00000368
     
     
-Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000243>
+Individual: OEO_00000243
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The sectoral approach taken for reporting greenhouse gas inventories under UNFCCC; version of 2006.",
@@ -614,10 +614,10 @@ Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000243>
         rdfs:label "ipcc_2006_ guidelines"
     
     Types: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
+        OEO_00000368
     
     
-Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000291>
+Individual: OEO_00000291
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The Statistical classification of economic activities in the European Community, abbreviated as NACE, is the classification of economic activities in the European Union (EU); the term NACE is derived from the French Nomenclature statistique des activités économiques dans la Communauté européenne. Various NACE versions have been developed since 1970.
@@ -627,10 +627,10 @@ NACE is a four-digit classification providing the framework for collecting and p
         rdfs:label "nace_ sectors"
     
     Types: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
+        OEO_00000368
     
     
-Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000355>
+Individual: OEO_00000355
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000116> "The Renewable energy Directive has been revised, but this should have had no impacts on the sectoral definitions. Factsheet on revision: https://ec.europa.eu/energy/sites/ener/files/documents/directive_renewable_factsheet.pdf",
@@ -638,15 +638,15 @@ Individual: <http://openenergy-platform.org/ontology/oeo/OEO_00000355>
         rdfs:label "renewable_ energy_ directive_ sectors"
     
     Types: 
-        <http://openenergy-platform.org/ontology/oeo/OEO_00000368>
+        OEO_00000368
     
     
 DisjointClasses: 
-    <http://openenergy-platform.org/ontology/oeo/OEO_00000100>,<http://openenergy-platform.org/ontology/oeo/OEO_00000214>,<http://openenergy-platform.org/ontology/oeo/OEO_00000227>
+    OEO_00000100,OEO_00000214,OEO_00000227
 
 DisjointClasses: 
-    <http://openenergy-platform.org/ontology/oeo/OEO_00000145>,<http://openenergy-platform.org/ontology/oeo/OEO_00000213>,<http://openenergy-platform.org/ontology/oeo/OEO_00000422>
+    OEO_00000145,OEO_00000213,OEO_00000422
 
 DisjointClasses: 
-    <http://openenergy-platform.org/ontology/oeo/OEO_00000214>,<http://openenergy-platform.org/ontology/oeo/OEO_00000227>,<http://openenergy-platform.org/ontology/oeo/OEO_00000405>,<http://openenergy-platform.org/ontology/oeo/OEO_00000418>
+    OEO_00000214,OEO_00000227,OEO_00000405,OEO_00000418
 
