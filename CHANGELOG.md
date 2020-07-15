@@ -29,6 +29,7 @@ Here is a template for new release sections
 
 ### Changed
 - move object properties to oeo-shared (#472)
+- definition of sector and sector subclasses (#477, #484)
 - definition of sector (#477)
 - object property conforms_to renamed to is_defined_by (#480)
 

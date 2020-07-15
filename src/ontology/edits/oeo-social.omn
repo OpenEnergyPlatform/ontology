@@ -28,6 +28,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
@@ -245,15 +248,6 @@ Class: OEO_00000087
         OEO_00000051
     
     
-Class: OEO_00000100
-
-    Annotations: 
-        rdfs:label "service sector"
-    
-    SubClassOf: 
-        OEO_00000367
-    
-    
 Class: OEO_00000105
 
     Annotations: 
@@ -277,8 +271,10 @@ Class: OEO_00000107
 Class: OEO_00000128
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en,
-        rdfs:label "demand sector"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy demand sector is a sector that covers energy consumers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "energy demand sector"
     
     SubClassOf: 
         OEO_00000367
@@ -287,19 +283,24 @@ Class: OEO_00000128
 Class: OEO_00000145
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity sector is a transformation sector that covers electricity generation and transport of electrical energy to consumers of electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "electricity sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000158
     
     
 Class: OEO_00000158
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en,
-        rdfs:label "energy sector"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation sector is a sector that covers energy production, energy transformation from primary to secondary energy and transport of energy to the demand sector.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy industry sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "energy transformation sector"
     
     SubClassOf: 
         OEO_00000367
@@ -308,41 +309,35 @@ Class: OEO_00000158
 Class: OEO_00000213
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heating and cooling sector is a sector that covers heating and cooling activities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "H&C sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "heating and cooling sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000128
     
     
 Class: OEO_00000214
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A household sector is a sector that covers households."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "private household sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "household sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000128
     
     
 Class: OEO_00000227
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
-
-* Iron and steel industry
-* Chemical and petrochemical industry
-* Non-ferrous metals
-* Non-metallic minerals
-* Transport equipment
-* Machinery
-* Mining (excluding fuels) and quarrying
-* Food and tobacco
-* Paper, pulp and print
-* Wood and wood products (other than pulp and paper)
-* Construction
-* Textile and leather
-* Non-specified (any manufacturing industry not included above)"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industry sector is a sector that covers industrial activities with other main purposes of energy transformation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "industry sector"
     
     SubClassOf: 
@@ -443,18 +438,13 @@ Class: OEO_00000379
 Class: OEO_00000405
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en,
-        rdfs:label "TCS sector"
-    
-    SubClassOf: 
-        OEO_00000128
-    
-    
-Class: OEO_00000418
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en,
-        rdfs:label "traffic sector"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commercial sector is a sector that covers non-industrial commercial activities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "TCS sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "service sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "trading, commerce and service sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "commercial sector"
     
     SubClassOf: 
         OEO_00000128
@@ -463,18 +453,14 @@ Class: OEO_00000418
 Class: OEO_00000422
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
-
-* Domestic aviation
-* Road: fuels used in road vehicles as well as agricultural and industrial highway use
-* Rail, including industrial railways.
-* Pipeline transport
-* Domestic navigation
-* Non-specified: includes all transport not elsewhere specified."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transport sector is a sector that covers transport of people and/or goods."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "traffic sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "transport sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000128
     
     
 Class: OEO_00000431
@@ -485,6 +471,43 @@ Class: OEO_00000431
     
     SubClassOf: 
         OEO_00000051
+    
+    
+Class: OEO_00010034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A building sector is a sector that covers buildings.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "building sector"
+    
+    SubClassOf: 
+        OEO_00000128
+    
+    
+Class: OEO_00010035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A agriculture, forestry and land use (AFOLU) sector is a sector that covers activities and natural processes from agriculture, forestry, land use and land use change.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "AFOLU sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "agriculture, forestry and land use sector"@de
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00010036
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste and wastewater sector is a sector that covers activities related the collection and treatment of waste and wastewater.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "waste and wastewater sector"@de
+    
+    SubClassOf: 
+        OEO_00000367
     
     
 Class: OEO_00030016
@@ -640,11 +663,5 @@ Individual: OEO_00000355
     
     
 DisjointClasses: 
-    OEO_00000100,OEO_00000214,OEO_00000227
-
-DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
-
-DisjointClasses: 
-    OEO_00000214,OEO_00000227,OEO_00000405,OEO_00000418
 
