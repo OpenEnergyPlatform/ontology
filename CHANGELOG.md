@@ -26,6 +26,7 @@ Here is a template for new release sections
 - factsheet-covers-relationships (#440)
 - oeo-shared module (#450)
 - object property definitions (#478)
+- energy and supply system (#493)
 
 ### Changed
 - move object properties to oeo-shared (#472)
