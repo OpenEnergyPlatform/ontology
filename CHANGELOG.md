@@ -27,7 +27,7 @@ Here is a template for new release sections
 - oeo-shared module (#450)
 - object property definitions (#478)
 - energy and supply system (#493)
-- primary energy production (#498)
+- primary energy production and subclasses (#498)
 
 ### Changed
 - move object properties to oeo-shared (#472)
