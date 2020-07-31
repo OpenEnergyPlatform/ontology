@@ -32,6 +32,8 @@ This is an interdisciplinary, open source project, help is always appreciated!
 
 The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by (online) developer meetings to review the progress and discuss more complicated topics. 
 
+If you're new to GitHub or ontologies check out our [how-to-help](https://github.com/OpenEnergyPlatform/ontology/wiki/How-to-help) article for some first advice and helpful links.
+
 Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
  
 The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [GitHub issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
