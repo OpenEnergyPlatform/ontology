@@ -364,7 +364,7 @@ Class: OEO_00000238
 Class: OEO_00000315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of a society that has a collective goal and a set of organization rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of an aggregate of people that has a collective goal and a set of organization rules.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         rdfs:label "organization role"
@@ -570,6 +570,75 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
+    
+    
+Class: OEO_00230013
+
+    Annotations: 
+        definition "A population is an aggregate of people in a spatial region."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "Population"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+    
+    
+Class: OEO_00230014
+
+    Annotations: 
+        definition "An urban population is a population living in urban areas, as defined by national statistical offices."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "United Nations Population Division. World Urbanization Prospects: 2018 Revision."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "Urban Population"@en
+    
+    SubClassOf: 
+        OEO_00230013
+    
+    DisjointWith: 
+        OEO_00230015
+    
+    
+Class: OEO_00230015
+
+    Annotations: 
+        definition "A rural population is a population living in rural areas, as defined by national statistical offices."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "United Nations Population Division. World Urbanization Prospects: 2018 Revision."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "Rural Population"@en
+    
+    SubClassOf: 
+        OEO_00230013
+    
+    DisjointWith: 
+        OEO_00230014
+    
+    
+Class: OEO_00230016
+
+    Annotations: 
+        definition "The labour force is the population of people ages 15 and older who supply labour to the production of goods and services.  It includes people who are currently employed and people who are unemployed but seeking work as well as first-time job-seekers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://databank.worldbank.org/reports.aspx?source=2&type=metadata&series=SL.TLF.TOTL.IN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "Labour Force"@en
+    
+    SubClassOf: 
+        OEO_00230013
+    
+    
+Class: OEO_00230017
+
+    Annotations: 
+        definition "The working age population is the population of people aged 15 to 65."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "Working Age Population"@en
+    
+    SubClassOf: 
+        OEO_00230013
     
     
 Individual: OEO_00000160

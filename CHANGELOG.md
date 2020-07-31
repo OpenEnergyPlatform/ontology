@@ -28,6 +28,7 @@ Here is a template for new release sections
 - object property definitions (#478)
 - energy and supply system (#493)
 - primary energy production and subclasses (#498)
+- study and study report (#497)
 
 ### Changed
 - move object properties to oeo-shared (#472)
