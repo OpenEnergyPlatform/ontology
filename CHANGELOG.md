@@ -29,6 +29,7 @@ Here is a template for new release sections
 - energy and supply system (#493)
 - primary energy production and subclasses (#498)
 - study and study report (#497)
+- exogeneous, endogeneous data (#482)
 
 ### Changed
 - move object properties to oeo-shared (#472)
