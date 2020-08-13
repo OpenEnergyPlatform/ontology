@@ -30,6 +30,7 @@ Here is a template for new release sections
 - primary energy production and subclasses (#498)
 - study and study report (#497)
 - exogeneous, endogeneous data (#482)
+- hub height, length value and has quantity value (#505)
 
 ### Changed
 - move object properties to oeo-shared (#472)
