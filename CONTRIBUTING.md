@@ -149,6 +149,7 @@ Try to follow [these conventions](https://chris.beams.io/posts/git-commit) for c
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
 - Do not end the commit message with a [period](https://chris.beams.io/posts/git-commit/#end) 
+
 You can use 
 ```bash
 git commit --amend
