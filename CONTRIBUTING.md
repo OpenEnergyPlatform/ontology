@@ -109,14 +109,12 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 13. 🍏 Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
    
    
-### Fixing merge conflicts
+### Fixing merge conflicts in git
 
-
-Avoid large merge conflicts by merging the updated `dev` versions in your branch.
-
+🔷 Avoid large merge conflicts by merging the updated `dev` versions in your branch.
 In case of conflicts between your branch and `dev` you must solve them either online via the "resolve conflicts" button or locally.
 
-1. Get the latest version of `dev`
+1. 🔷 Get the latest version of `dev`
     ```bash
     git checkout dev
     ```
@@ -125,22 +123,23 @@ In case of conflicts between your branch and `dev` you must solve them either on
     git pull
     ```
     
-2. Switch to your branch
+2. 🔷 Switch to your branch
 
     ```bash
     git checkout <your branch>
     ```
     
-3. Merge `dev` into your branch
+3. 🔷 Merge `dev` into your branch
     ```bash
     git merge dev
     ```
     
-4. The conflicts have to be [manually](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line) resolved
+4. 📗 The conflicts have to be [manually](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line) resolved
     
 
-### Conventions
-The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
+### Conventions for git and GitHub
+
+🔷 The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
 
 Examples of branch names : `feature/solving-duplicate-problems-#11` or `feature/add_ontology_new_class_#43`
 
