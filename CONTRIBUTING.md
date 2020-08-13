@@ -111,8 +111,8 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
    
 ### Fixing merge conflicts in git
 
-🔷 Avoid large merge conflicts by merging the updated `dev` versions in your branch.
-In case of conflicts between your branch and `dev` you must solve them either online via the "resolve conflicts" button or locally.
+Avoid large merge conflicts by merging the updated `dev` versions in your branch.
+In case of conflicts between your branch and `dev` you must solve them either online via the "resolve conflicts" button (🍏) or locally (🔷+📗).
 
 1. 🔷 Get the latest version of `dev`
     ```bash
@@ -123,13 +123,13 @@ In case of conflicts between your branch and `dev` you must solve them either on
     git pull
     ```
     
-2. 🔷 Switch to your branch
+2. Switch to your branch
 
     ```bash
     git checkout <your branch>
     ```
     
-3. 🔷 Merge `dev` into your branch
+3. Merge `dev` into your branch
     ```bash
     git merge dev
     ```
