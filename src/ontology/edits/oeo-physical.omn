@@ -291,6 +291,13 @@ ObjectProperty: OEO_00000533
         <http://purl.obolibrary.org/obo/RO_0002234>
     
     
+ObjectProperty: OEO_00140002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an entity and a quantity value.",
+        rdfs:label "has quantity value"@en
+    
+    
 ObjectProperty: owl:topObjectProperty
 
     
@@ -359,6 +366,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>
     
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000001>
+
     
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
 
@@ -843,7 +853,8 @@ Class: OEO_00000044
     
     SubClassOf: 
         OEO_00000334,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000425
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000425,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00140000
     
     
 Class: OEO_00000047
@@ -3389,6 +3400,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498",
     
     SubClassOf: 
         OEO_00030026
+    
+    
+Class: OEO_00140000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hub height is a quality of a wind energy converting unit that measures the distance between surface and center-line of the wind rotor.",
+        rdfs:label "hub height"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00140002 some OEO_00140001
+    
+    
+Class: OEO_00140001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Length value is a quantity value that has a length unit as unit.",
+        rdfs:label "length value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000001>
     
     
 Class: OEO_00230000
