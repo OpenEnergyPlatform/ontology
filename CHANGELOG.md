@@ -26,12 +26,18 @@ Here is a template for new release sections
 - factsheet-covers-relationships (#440)
 - oeo-shared module (#450)
 - object property definitions (#478)
+- energy and supply system (#493)
+- primary energy production and subclasses (#498)
+- study and study report (#497)
+- exogeneous, endogeneous data (#482)
+- hub height, length value and has quantity value (#505)
 
 ### Changed
 - move object properties to oeo-shared (#472)
 - definition of sector and sector subclasses (#477, #484)
 - definition of sector (#477)
 - object property conforms_to renamed to is_defined_by (#480)
+- model calculation (#504)
 
 ### Removed
 - unused object properties (#452)
