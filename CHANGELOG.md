@@ -31,6 +31,7 @@ Here is a template for new release sections
 - study and study report (#497)
 - exogeneous, endogeneous data (#482)
 - hub height, length value and has quantity value (#505)
+- transport and subclasses (#503)
 
 ### Changed
 - move object properties to oeo-shared (#472)
