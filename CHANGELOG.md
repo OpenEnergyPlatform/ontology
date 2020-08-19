@@ -30,12 +30,15 @@ Here is a template for new release sections
 - primary energy production and subclasses (#498)
 - study and study report (#497)
 - exogeneous, endogeneous data (#482)
+- hub height, length value and has quantity value (#505)
+- transport and subclasses (#517)
 
 ### Changed
 - move object properties to oeo-shared (#472)
 - definition of sector and sector subclasses (#477, #484)
 - definition of sector (#477)
 - object property conforms_to renamed to is_defined_by (#480)
+- model calculation (#504)
 - electrical energy definition (#524)
 
 ### Removed
@@ -115,6 +118,5 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
 
 
