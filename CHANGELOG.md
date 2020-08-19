@@ -36,6 +36,7 @@ Here is a template for new release sections
 - definition of sector and sector subclasses (#477, #484)
 - definition of sector (#477)
 - object property conforms_to renamed to is_defined_by (#480)
+- electrical energy definition (#524)
 
 ### Removed
 - unused object properties (#452)
