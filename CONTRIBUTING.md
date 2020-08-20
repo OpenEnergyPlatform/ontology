@@ -57,9 +57,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     ```
     Branch from `dev`
     ```bash
-    git checkout -b feature/myfeature
+    git checkout -b feature/myfeature-#issueNumber
     ```
-    It is best to merge one's changes *as fast as possible* (i.e. do not wait for 2 months) to avoid merging conflicts
+    It is best to merge one's changes *as fast as possible* (i.e. do not wait for 2 weeks) to avoid merging conflicts
 3. 📙 or 📗 Open [Protégé](https://protege.stanford.edu/) or a text editor and work on the ontology. If you haven't already, make sure you change your protégé settings to use [numeric identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers). Please choose the right module of the oeo to do your changes, oeo.omn is in most cases not the right file to change. Refer to [this article](https://github.com/OpenEnergyPlatform/ontology/wiki/how-to-use-prot%C3%A9g%C3%A9-to-change-the-ontology) for detailed explanations on working with protégé.
 
     One can also edit the files in a text editor
@@ -109,14 +109,12 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 13. 🍏 Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
    
    
-### Fixing merge conflicts
-
+### Fixing merge conflicts in git
 
 Avoid large merge conflicts by merging the updated `dev` versions in your branch.
+In case of conflicts between your branch and `dev` you must solve them either online via the "resolve conflicts" button (🍏) or locally (🔷+📗).
 
-In case of conflicts between your branch and `dev` you must solve them either online via the "resolve conflicts" button or locally.
-
-1. Get the latest version of `dev`
+1. 🔷 Get the latest version of `dev`
     ```bash
     git checkout dev
     ```
@@ -136,11 +134,12 @@ In case of conflicts between your branch and `dev` you must solve them either on
     git merge dev
     ```
     
-4. The conflicts have to be [manually](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line) resolved
+4. 📗 The conflicts have to be [manually](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line) resolved
     
 
-### Conventions
-The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
+### Conventions for git and GitHub
+
+🔷 The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
 
 Examples of branch names : `feature/solving-duplicate-problems-#11` or `feature/add_ontology_new_class_#43`
 
@@ -150,6 +149,7 @@ Try to follow [these conventions](https://chris.beams.io/posts/git-commit) for c
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
 - Do not end the commit message with a [period](https://chris.beams.io/posts/git-commit/#end) 
+
 You can use 
 ```bash
 git commit --amend
