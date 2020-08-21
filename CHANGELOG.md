@@ -31,6 +31,8 @@ Here is a template for new release sections
 - study and study report (#497)
 - exogeneous, endogeneous data (#482)
 - hub height, length value and has quantity value (#505)
+- annotation property unique individual identifier (#523)
+- sector individuals (#523)
 
 ### Changed
 - move object properties to oeo-shared (#472)
