@@ -99,6 +99,17 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation to connect a unit to a quantifiable entity that it is the unit of.",
+        rdfs:comment "This relation has been imported from UO.",
+        rdfs:label "is unit of"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
 ObjectProperty: OEO_00000501
 
     
@@ -112,7 +123,7 @@ ObjectProperty: OEO_00000521
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "the property of an artificial object to apply to a technology.",
-        rdfs:label "applies_technology"
+        rdfs:label "applies technology"
     
     Domain: 
         OEO_00000061
@@ -131,7 +142,7 @@ ObjectProperty: OEO_00000523
 
     Annotations: 
         rdfs:comment "A relation that holds between a publication/model calculation/model and the energycarrier it covers.",
-        rdfs:label "covers_energycarrier"
+        rdfs:label "covers energycarrier"
     
     SubPropertyOf: 
         OEO_00000522
@@ -146,7 +157,7 @@ ObjectProperty: OEO_00000524
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a portion of matter and the global warming potential it has.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/478",
-        rdfs:label "has_globalwarmingpotential"
+        rdfs:label "has global warming potential"
     
     SubPropertyOf: 
         owl:topObjectProperty
@@ -159,7 +170,7 @@ ObjectProperty: OEO_00000525
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The property of a technology to be applied to an artificial object.",
-        rdfs:label "is_applied_to_object"
+        rdfs:label "is applied to object"
     
     Domain: 
         OEO_00000407
@@ -177,7 +188,7 @@ ObjectProperty: OEO_00000526
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between two nodes in a graph that are connected to each other through an edge.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/478",
-        rdfs:label "is_connected_to"
+        rdfs:label "is connected to"
     
     SubPropertyOf: 
         owl:topObjectProperty
@@ -192,7 +203,7 @@ ObjectProperty: OEO_00000527
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a directed graph and a node in that graph that has edges ending but not starting there.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/478",
-        rdfs:label "has_sink"
+        rdfs:label "has sink"
     
     SubPropertyOf: 
         OEO_00000526
@@ -207,7 +218,7 @@ ObjectProperty: OEO_00000528
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a directed graph and a node in that graph that has edges starting but not ending there.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/478",
-        rdfs:label "has_source"
+        rdfs:label "has source"
     
     SubPropertyOf: 
         OEO_00000526
@@ -219,8 +230,8 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/478",
 ObjectProperty: OEO_00000529
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "x has_normal_state_of_matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)",
-        rdfs:label "has_normal_state_of_matter"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has normal state of matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)",
+        rdfs:label "has normal state of matter"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000086>
@@ -236,7 +247,7 @@ ObjectProperty: OEO_00000530
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "x has the origin of y",
-        rdfs:label "has_origin"
+        rdfs:label "has origin"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000086>
@@ -251,7 +262,7 @@ ObjectProperty: OEO_00000530
 ObjectProperty: OEO_00000531
 
     Annotations: 
-        rdfs:label "has_state_of_matter"
+        rdfs:label "has state of matter"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000086>
@@ -267,7 +278,7 @@ ObjectProperty: OEO_00000532
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en,
-        rdfs:label "has_physical_input"
+        rdfs:label "has physical input"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0002233>
@@ -285,10 +296,23 @@ ObjectProperty: OEO_00000533
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en,
-        rdfs:label "has_physical_output"
+        rdfs:label "has physical output"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0002234>
+    
+    
+ObjectProperty: OEO_00040010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A property that links a quantity value to a unit in which the quantity value has been expressed.",
+        rdfs:label "has unit"@en
+    
+    Domain: 
+        OEO_00000350
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 ObjectProperty: OEO_00140002
@@ -366,7 +390,7 @@ Class: <http://purl.obolibrary.org/obo/RO_0002577>
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000141>
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: <http://purl.obolibrary.org/obo/UO_0000001>
@@ -1271,8 +1295,10 @@ Class: OEO_00000132
 Class: OEO_00000139
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy is energy derived from electric potential energy or kinetic energy. [...] This energy is supplied by the combination of electric current and electric potential that is delivered by an electrical circuit"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy is a form of energy derived from the potential or kinetic energy of charged particles."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Electrical_energy"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
+pull request:  https://github.com/OpenEnergyPlatform/ontology/pull/524",
         rdfs:label "electrical energy"
     
     SubClassOf: 
@@ -2374,17 +2400,20 @@ Class: OEO_00000348
 Class: OEO_00000350
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is a generically dependent continuant defined by a numeral together with a unit of measurement to quantify an entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is an information content entity defined by a numeral together with a unit of measurement to quantify an entity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/495
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
         rdfs:label "quantity value"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000000>
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 Class: OEO_00000356

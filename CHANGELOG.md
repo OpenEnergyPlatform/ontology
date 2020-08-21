@@ -31,6 +31,7 @@ Here is a template for new release sections
 - study and study report (#497)
 - exogeneous, endogeneous data (#482)
 - hub height, length value and has quantity value (#505)
+- transport and subclasses (#517)
 - annotation property unique individual identifier (#523)
 - sector individuals (#523)
 
@@ -40,6 +41,7 @@ Here is a template for new release sections
 - definition of sector (#477)
 - object property conforms_to renamed to is_defined_by (#480)
 - model calculation (#504)
+- electrical energy definition (#524)
 
 ### Removed
 - unused object properties (#452)
@@ -118,6 +120,5 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
 
 
