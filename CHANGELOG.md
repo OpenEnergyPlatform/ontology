@@ -36,6 +36,7 @@ Here is a template for new release sections
 - sector individuals (#523)
 
 ### Changed
+- harmonise 'definition' annotation property (#529)
 - move object properties to oeo-shared (#472)
 - definition of sector and sector subclasses (#477, #484)
 - definition of sector (#477)
