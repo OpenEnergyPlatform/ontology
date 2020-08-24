@@ -32,6 +32,8 @@ Here is a template for new release sections
 - exogeneous, endogeneous data (#482)
 - hub height, length value and has quantity value (#505)
 - transport and subclasses (#517)
+- annotation property unique individual identifier (#523)
+- sector individuals (#523)
 
 ### Changed
 - move object properties to oeo-shared (#472)
