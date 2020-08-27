@@ -45,6 +45,7 @@ Here is a template for new release sections
 - model calculation (#504)
 - electrical energy definition (#524)
 - assumption (#525)
+- update original release date and teams in `README` (#535)
 - unit (#537)
 
 ### Removed
