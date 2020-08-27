@@ -45,9 +45,13 @@ We combine domain knowledge with knowledge about how an ontology should be desig
 If you have a specific question about ontology design, energy system modelling or economy (in context of this ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these teams (or persons) to notify its members that you need their feedback or help.
 
 The OEO is organised in an general team: 
-- [@oeo-dev](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/)
+- [@oeo-dev](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev)
 
 and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/teams):
-- [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
-- [@oeo-domain-expert-energy-modelling ](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-energy-modelling)
+- [@oeo-concept-owner](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-concept-owner)
+- [@oeo-domain-expert-economy](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-economy)
+- [@oeo-domain-expert-energy-modelling](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-energy-modelling)
 - [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
+- [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
+- [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
+- [@oeo-general-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-steering-committee)
