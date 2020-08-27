@@ -45,6 +45,7 @@ Here is a template for new release sections
 - model calculation (#504)
 - electrical energy definition (#524)
 - assumption (#525)
+- unit (#537)
 
 ### Removed
 - unused object properties (#452)
