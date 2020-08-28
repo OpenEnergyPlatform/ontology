@@ -32,14 +32,21 @@ Here is a template for new release sections
 - exogeneous, endogeneous data (#482)
 - hub height, length value and has quantity value (#505)
 - transport and subclasses (#517)
+- annotation property unique individual identifier (#523)
+- sector individuals (#523)
+- output and input data (#536)
 
 ### Changed
+- harmonise 'definition' annotation property (#529)
 - move object properties to oeo-shared (#472)
 - definition of sector and sector subclasses (#477, #484)
 - definition of sector (#477)
 - object property conforms_to renamed to is_defined_by (#480)
 - model calculation (#504)
 - electrical energy definition (#524)
+- assumption (#525)
+- update original release date and teams in `README` (#535)
+- unit (#537)
 
 ### Removed
 - unused object properties (#452)
