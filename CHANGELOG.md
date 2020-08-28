@@ -35,6 +35,7 @@ Here is a template for new release sections
 - annotation property unique individual identifier (#523)
 - sector individuals (#523)
 - output and input data (#536)
+- time step, time series, etc (#538)
 
 ### Changed
 - harmonise 'definition' annotation property (#529)
