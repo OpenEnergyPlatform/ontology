@@ -41,6 +41,17 @@ Datatype: rdf:PlainLiteral
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation to connect a unit to a quantifiable entity that it is the unit of.",
+        rdfs:comment "This relation has been imported from UO.",
+        rdfs:label "is unit of"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
 ObjectProperty: OEO_00000500
 
     Annotations: 
@@ -105,6 +116,19 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete u
         rdfs:label "covers"
     
     
+ObjectProperty: OEO_00040010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A property that links a quantity value to a unit in which the quantity value has been expressed.",
+        rdfs:label "has unit"@en
+    
+    Domain: 
+        OEO_00000350
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
@@ -113,17 +137,23 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
-Class: OEO_00140001
-
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Length value is a quantity value that has a length unit as unit.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
-        rdfs:label "length value"@en
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
+        rdfs:comment "The original defnition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
     
     SubClassOf: 
-        OEO_00000350,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000001>
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000001>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000046>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
     
 Class: OEO_00000350
 
@@ -151,6 +181,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00140001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Length value is a quantity value that has a length unit as unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
+        rdfs:label "length value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000001>
     
     
 Class: OEO_00140003
