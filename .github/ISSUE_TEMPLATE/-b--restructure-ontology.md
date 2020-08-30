@@ -2,7 +2,7 @@
 name: "[B] Restructure ontology"
 about: For restructuring existing parts of the ontology
 title: Your title should make sense if said after "The issue is <your issue title>"
-labels: "[B] restructure"
+labels: ["[B] restructure", "To do"]
 assignees: ''
 
 ---
