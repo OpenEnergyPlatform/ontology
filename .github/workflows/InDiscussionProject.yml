@@ -1,0 +1,22 @@
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  FindOutHowManyComments:
+    runs-on: ubuntu-latest
+    name: aJobThatMoves
+    steps:
+    - name: count
+      id: count
+      uses: akleinau/githubJSActions/DiscussedToColumn@master
+      with:
+        repo: https://api.github.com/repos/OpenEnergyPlatform/ontology
+    - name: printit
+      run: echo ${{ steps.count.outputs.continue }} 
+    - name: addToColumn
+      uses: peter-evans/create-or-update-project-card@v1
+      with:
+        project-name: Issues
+        column-name: In discussion
+        issue-number: ${{ steps.count.outputs.issue_number }} 
+      if: steps.count.outputs.continue == 'true'
