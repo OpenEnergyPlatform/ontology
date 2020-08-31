@@ -17,7 +17,7 @@ Here is a template for new release sections
 -
 ```
 
-## [unreleased]
+## [1.1] - 2020-09-01
 
 ### Added
 - vehicle and subclasses and vehicle related energy converting devices and energy storage objects (#431, #435)
