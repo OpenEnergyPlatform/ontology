@@ -11,10 +11,10 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-model.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-physical.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-social.omn>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-model.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-physical.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-social.omn>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -27,8 +27,12 @@ Annotations:
     dc:contributor "(0007) Patrick Kuckertz (@p-kuckertz)",
     dc:contributor "(0008) Carsten Hoyer-Klick (@carstenhoyerklick)",
     dc:contributor "(0009) Christian Hofmann (@christian-rli)",
+    dc:contributor "(0010) Kevin Knosala (@k-knosala)",
     dc:contributor "(0011) Ludwig Hülk (@Ludee)",
     dc:contributor "(0012) Izzet Kilicarslan (@Izzet91)",
+    dc:contributor "(0013) Franziska Drathschmidt (@fradra)",
+    dc:contributor "(0014) Simon Flügel (@sfluegel05)",
+    dc:contributor "(0015) Ulrich Frey (@litotes18)",
     dc:contributor "(0023) Michaja Pehl (@0UmfHxcvx5J7JoaOhFSs5mncnisTJJ6q)",
     dc:contributor "Christian Winger (@wingechr)",
     dc:contributor "Fabian Neuhaus (@fabianneuhaus)",
@@ -36,11 +40,11 @@ Annotations:
     dc:contributor "Martin Glauer (@MGlauer)",
     dc:contributor "Pierre-Francois Duc (@Bachibouzouk)",
     dc:contributor "Sebastian Cordes (@sebcordes)",
-    dc:contributor "Ulrich Frey (@ufrey)",
-    <http://purl.org/dc/terms/title> "Open Energy Ontology",
-    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. 
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. 
 
-It is developed in three modules: 'oeo-model', a module for all entities related to models and modelling; 'oeo-physical', a module for all entities related to the world of energy and energy generation, and 'oeo-social' for all relevant social and economic aspects of the energy domain."
+It is developed in three modules: 'oeo-model', a module for all entities related to models and modelling; 'oeo-physical', a module for all entities related to the world of energy and energy generation, and 'oeo-social' for all relevant social and economic aspects of the energy domain.",
+    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
@@ -54,17 +58,20 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
 AnnotationProperty: dc:contributor
 
     
-AnnotationProperty: definition
+AnnotationProperty: dc:description
 
-    SubPropertyOf: 
-        rdfs:comment
     
+AnnotationProperty: dc:license
+
     
 AnnotationProperty: rdfs:comment
 
@@ -93,162 +100,10 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
-ObjectProperty: conforms_to
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: covers
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the thing it covers."@en
-    
-    
-ObjectProperty: covers_region
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the region it covers."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: covers_technology
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the technology it models."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: covers_timeframe
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the timeframe it covers."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    
-ObjectProperty: has_author
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_client
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_constraint
-
-    
-ObjectProperty: has_contact
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_funding_source
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_institution
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_normal_state_of_matter
-
-    
-ObjectProperty: has_numercical_input
-
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
-    
-    
-ObjectProperty: has_numerical_output
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
-    
-    
-ObjectProperty: has_origin
-
-    
-ObjectProperty: has_physical_input
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    Characteristics: 
-        Functional,
-        Irreflexive,
-        Asymmetric
-    
-    
-ObjectProperty: has_physical_output
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
-    
-    
-ObjectProperty: has_programvariable
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_resolution
-
-    
-ObjectProperty: has_spatial_resolution
-
-    
-ObjectProperty: has_state_of_matter
-
-    
-ObjectProperty: has_temporal_resolution
-
-    
-ObjectProperty: has_tool
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: is_applied_to_object
-
-    
-ObjectProperty: is_equivalent_to
-
-    
-ObjectProperty: is_used_by
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
 ObjectProperty: owl:topObjectProperty
-
-    
-ObjectProperty: uses
-
-    
-ObjectProperty: uses_dataset
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000001>
@@ -297,5 +152,20 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000088>
+
+    
+Class: OEO_00000335
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
+    
+    
+Class: OEO_00000340
+
+    
+Class: OEO_00010021
 
     

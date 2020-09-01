@@ -9,8 +9,10 @@ before_script:
  
 script:
   - cd $TRAVIS_BUILD_DIR
-  - java -jar $TRAVIS_BASE/lib/robot.jar validate-profile --input src/ontology/oeo.omn --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
-  - java -jar $TRAVIS_BASE/lib/robot.jar verify --input src/ontology/edits/oeo-physical.omn --queries tests/verify/* > .logs/verify.log
+  - java -jar $TRAVIS_BASE/lib/robot.jar merge --input src/ontology/oeo.omn annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output results/merged.owl --output merged.owl > .logs/merge.txt
+  - java -jar $TRAVIS_BASE/lib/robot.jar validate-profile --input merged.owl --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
+  - java -jar $TRAVIS_BASE/lib/robot.jar verify --input merged.owl --queries tests/verify/* > .logs/verify.log
+
 
 after_failure:
   - more .log/* | cat

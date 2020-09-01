@@ -16,7 +16,42 @@ Here is a template for new release sections
 ### Removed
 -
 ```
-## [Unreleased]
+
+## [1.1.0] - 2020-09-01
+
+### Added
+- vehicle and subclasses and vehicle related energy converting devices and energy storage objects (#431, #435)
+- natural gas relation to methane (#431)
+- ethanol (#445)
+- factsheet-covers-relationships (#440)
+- oeo-shared module (#450)
+- object property definitions (#478)
+- energy and supply system (#493)
+- primary energy production and subclasses (#498)
+- study and study report (#497)
+- exogeneous, endogeneous data (#482)
+- hub height, length value and has quantity value (#505)
+- transport and subclasses (#517)
+- annotation property unique individual identifier (#523)
+- sector individuals (#523)
+- output and input data (#536)
+
+### Changed
+- harmonise 'definition' annotation property (#529)
+- move object properties to oeo-shared (#472)
+- definition of sector and sector subclasses (#477, #484)
+- definition of sector (#477)
+- object property conforms_to renamed to is_defined_by (#480)
+- model calculation (#504)
+- electrical energy definition (#524)
+- assumption (#525)
+- update original release date and teams in `README` (#535)
+- unit (#537)
+
+### Removed
+- unused object properties (#452)
+
+## [1.0.0] - 2020-06-11
 
 ### Added
 - Concepts of biogenic, fossil, renewable and synthetic (#130)
@@ -40,6 +75,7 @@ Here is a template for new release sections
 - energy transformation (#77)
 - synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
+
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
@@ -89,6 +125,5 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
 
 

@@ -11,14 +11,13 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-social/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-social.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/iao-annotation-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/ro-module.owl>
-Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-social.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
 
 Annotations: 
-    <http://purl.org/dc/terms/title> "Open Energy Ontology (social module)",
-    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles."
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles.",
+    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (social module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
@@ -27,6 +26,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
@@ -38,14 +40,20 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
+AnnotationProperty: OEO_00010037
+
+    
 AnnotationProperty: dc:contributor
 
     
-AnnotationProperty: definition
+AnnotationProperty: dc:description
 
-    SubPropertyOf: 
-        rdfs:comment
     
+AnnotationProperty: dc:identifier
+
+    
+AnnotationProperty: dc:license
+
     
 AnnotationProperty: rdfs:comment
 
@@ -59,6 +67,9 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
@@ -68,34 +79,33 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
-ObjectProperty: conforms_to
+ObjectProperty: OEO_00000504
 
-    Domain: 
-        conforms_to some OEO_00000368
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a continuant (A) and a continuant or occurant (B) in which (A) determines the semantic of (B)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/460
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/480/",
+        rdfs:label "is defined by"
+    
+    
+ObjectProperty: OEO_00000505
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en,
+        rdfs:label "covers sector"
+    
+    SubPropertyOf: 
+        OEO_00000522
     
     Range: 
         OEO_00000367
     
     
-ObjectProperty: covers
-
-    
-ObjectProperty: covers_sector
+ObjectProperty: OEO_00000506
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model calculation/model and the sector it models."@en
-    
-    SubPropertyOf: 
-        covers
-    
-    Range: 
-        OEO_00000367
-    
-    
-ObjectProperty: has_author
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its author."@en,
+        rdfs:label "has author"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
@@ -104,10 +114,11 @@ ObjectProperty: has_author
         OEO_00000051
     
     
-ObjectProperty: has_client
+ObjectProperty: OEO_00000507
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the client that requested its creation."@en,
+        rdfs:label "has client"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
@@ -116,19 +127,21 @@ ObjectProperty: has_client
         OEO_00000051
     
     
-ObjectProperty: has_contact
+ObjectProperty: OEO_00000508
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en,
+        rdfs:label "has contact"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     
-ObjectProperty: has_funding_source
+ObjectProperty: OEO_00000509
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en,
+        rdfs:label "has funding source"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
@@ -137,14 +150,18 @@ ObjectProperty: has_funding_source
         OEO_00000051
     
     
-ObjectProperty: has_institution
+ObjectProperty: OEO_00000510
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication and the institution in which it was created."@en,
+        rdfs:label "has institution"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0000057>
     
+    
+ObjectProperty: OEO_00000522
+
     
 ObjectProperty: owl:topObjectProperty
 
@@ -231,16 +248,6 @@ Class: OEO_00000064
         OEO_00000051
     
     
-Class: OEO_00000083
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide emission traffic sector quantity is a carbon dioxide emission quantity that is restricted to carbon dioxide from the traffic sector."@en,
-        rdfs:label "carbon dioxide emission traffic sector"
-    
-    SubClassOf: 
-        OEO_00000367
-    
-    
 Class: OEO_00000087
 
     Annotations: 
@@ -249,15 +256,6 @@ Class: OEO_00000087
     
     SubClassOf: 
         OEO_00000051
-    
-    
-Class: OEO_00000100
-
-    Annotations: 
-        rdfs:label "service sector"
-    
-    SubClassOf: 
-        OEO_00000367
     
     
 Class: OEO_00000105
@@ -283,8 +281,10 @@ Class: OEO_00000107
 Class: OEO_00000128
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand sector is a general term for different consumptions (households; industry; commercial sector; transport). It includes only energy demand sectors."@en,
-        rdfs:label "demand sector"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy demand sector is a sector that covers energy consumers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "energy demand sector"
     
     SubClassOf: 
         OEO_00000367
@@ -293,19 +293,24 @@ Class: OEO_00000128
 Class: OEO_00000145
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Covers all areas that deal with electrical energy (power generation; electricity transmission; electricity storage; electricity use)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://wiki.openmod-initiative.org/wiki/Electricity_sector"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity sector is a transformation sector that covers electricity generation and transport of electrical energy to consumers of electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "electricity sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000158
     
     
 Class: OEO_00000158
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy sector is a sector that contains the energy production."@en,
-        rdfs:label "energy sector"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation sector is a sector that covers energy production, energy transformation from primary to secondary energy and transport of energy to the demand sector.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy industry sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "energy transformation sector"
     
     SubClassOf: 
         OEO_00000367
@@ -314,41 +319,35 @@ Class: OEO_00000158
 Class: OEO_00000213
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy used for heating and cooling for buildings and industry"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heating and cooling sector is a sector that covers heating and cooling activities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "H&C sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "heating and cooling sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000128
     
     
 Class: OEO_00000214
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The household sector covers all private entities. A household is a  shared living unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A household sector is a sector that covers households."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "private household sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "household sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000128
     
     
 Class: OEO_00000227
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Industry consumption is specified as follows (energy used for transport by industry is not included here but is reported under transport):
-
-* Iron and steel industry
-* Chemical and petrochemical industry
-* Non-ferrous metals
-* Non-metallic minerals
-* Transport equipment
-* Machinery
-* Mining (excluding fuels) and quarrying
-* Food and tobacco
-* Paper, pulp and print
-* Wood and wood products (other than pulp and paper)
-* Construction
-* Textile and leather
-* Non-specified (any manufacturing industry not included above)"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industry sector is a sector that covers industrial activities with other main purposes of energy transformation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "industry sector"
     
     SubClassOf: 
@@ -358,7 +357,7 @@ Class: OEO_00000227
 Class: OEO_00000238
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serves a social purpose."@en,
         rdfs:label "institution"
     
     SubClassOf: 
@@ -368,7 +367,7 @@ Class: OEO_00000238
 Class: OEO_00000315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of a society that has a collective goal and a set of organization rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of an aggregate of people that has a collective goal and a set of organization rules.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         rdfs:label "organization role"
@@ -416,12 +415,13 @@ Class: OEO_00000341
 Class: OEO_00000367
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is a subdivision in an economic system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is generically dependent continuant that is a subdivision of a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/477",
         rdfs:label "sector"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Class: OEO_00000368
@@ -448,18 +448,13 @@ Class: OEO_00000379
 Class: OEO_00000405
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A TCS sector is a demand sector that includes the energy consumption from trade, commerce and services."@en,
-        rdfs:label "TCS sector"
-    
-    SubClassOf: 
-        OEO_00000128
-    
-    
-Class: OEO_00000418
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traffic sector is a demand sector that includes the energy consumption from traffic."@en,
-        rdfs:label "traffic sector"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commercial sector is a sector that covers non-industrial commercial activities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "TCS sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "service sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "trading, commerce and service sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "commercial sector"
     
     SubClassOf: 
         OEO_00000128
@@ -468,18 +463,14 @@ Class: OEO_00000418
 Class: OEO_00000422
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption in transport covers all transport activity (in mobile engines) regardless of the economic sector to which it is contributing, and is specified as follows:
-
-* Domestic aviation
-* Road: fuels used in road vehicles as well as agricultural and industrial highway use
-* Rail, including industrial railways.
-* Pipeline transport
-* Domestic navigation
-* Non-specified: includes all transport not elsewhere specified."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transport sector is a sector that covers transport of people and/or goods."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "traffic sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
         rdfs:label "transport sector"
     
     SubClassOf: 
-        OEO_00000367
+        OEO_00000128
     
     
 Class: OEO_00000431
@@ -490,6 +481,43 @@ Class: OEO_00000431
     
     SubClassOf: 
         OEO_00000051
+    
+    
+Class: OEO_00010034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A building sector is a sector that covers buildings.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "building sector"
+    
+    SubClassOf: 
+        OEO_00000128
+    
+    
+Class: OEO_00010035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A agriculture, forestry and land use (AFOLU) sector is a sector that covers activities and natural processes from agriculture, forestry, land use and land use change.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "AFOLU sector",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "agriculture, forestry and land use sector"
+    
+    SubClassOf: 
+        OEO_00000367
+    
+    
+Class: OEO_00010036
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste and wastewater sector is a sector that covers activities related the collection and treatment of waste and wastewater.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
+        rdfs:label "waste and wastewater sector"
+    
+    SubClassOf: 
+        OEO_00000367
     
     
 Class: OEO_00030016
@@ -537,7 +565,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00030022
 
     Annotations: 
-        definition "An organization is an immaterial entity that has the organization role and there exists some sort of legal framework that recognises the entity and its continued existence.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is an immaterial entity that has the organization role and there exists some sort of legal framework that recognises the entity and its continued existence.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
         rdfs:label "organization"
@@ -545,6 +573,80 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
+    
+    
+Class: OEO_00230013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A population is an aggregate of people in a spatial region."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
+https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "population"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+    
+    
+Class: OEO_00230014
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An urban population is a population living in urban areas, as defined by national statistical offices."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "United Nations Population Division. World Urbanization Prospects: 2018 Revision."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
+https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "urban population"@en
+    
+    SubClassOf: 
+        OEO_00230013
+    
+    DisjointWith: 
+        OEO_00230015
+    
+    
+Class: OEO_00230015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rural population is a population living in rural areas, as defined by national statistical offices."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "United Nations Population Division. World Urbanization Prospects: 2018 Revision."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+https://github.com/OpenEnergyPlatform/ontology/issues/479
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "rural population"@en
+    
+    SubClassOf: 
+        OEO_00230013
+    
+    DisjointWith: 
+        OEO_00230014
+    
+    
+Class: OEO_00230016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The labour force is the population of people ages 15 and older who supply labour to the production of goods and services.  It includes people who are currently employed and people who are unemployed but seeking work as well as first-time job-seekers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://databank.worldbank.org/reports.aspx?source=2&type=metadata&series=SL.TLF.TOTL.IN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
+https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "labour force"@en
+    
+    SubClassOf: 
+        OEO_00230013
+    
+    
+Class: OEO_00230017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The working age population is the population of people aged 15 to 65."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+https://github.com/OpenEnergyPlatform/ontology/issues/479
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
+        rdfs:label "working age population"@en
+    
+    SubClassOf: 
+        OEO_00230013
     
     
 Individual: OEO_00000160
@@ -644,11 +746,124 @@ Individual: OEO_00000355
         OEO_00000368
     
     
-DisjointClasses: 
-    OEO_00000100,OEO_00000214,OEO_00000227
+Individual: OEO_00010038
 
+    Annotations: 
+        OEO_00010037 "CRF 1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector energy is an energy sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: All GHG emissions arising from combustion and fugitive releases of fuels. Emissions from the non-energy uses of fuels are generally not included here, but reported under Industrial Processes and Product Use.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: energy"
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00000243
+    
+    
+Individual: OEO_00010039
+
+    Annotations: 
+        OEO_00010037 "CRF 1.A",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector fuel combustion is an energy sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: Emissions from the intentional oxidation of materials within an apparatus that is designed to raise heat and provide it either as heat or as mechanical work to a process or for use away from the apparatus.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: fuel combustion"
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00000243,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010038
+    
+    
+Individual: OEO_00010040
+
+    Annotations: 
+        OEO_00010037 "CRF 1.A.1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector energy industry is a sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: Comprises emissions from fuels combusted by the fuel extraction or energy-producing industries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: energy industry"
+    
+    Types: 
+        OEO_00000158
+    
+    Facts:  
+     OEO_00000504  OEO_00000243,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010039
+    
+    
+Individual: OEO_00010041
+
+    Annotations: 
+        OEO_00010037 "CRF 1.A.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector energy industry is a sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: Emissions from combustion of fuels in industry. Also includes combustion for the generation of electricity and heat for own use in these industries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: manufacturing industries and construction"
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000243,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010039
+    
+    
+Individual: OEO_00010042
+
+    Annotations: 
+        OEO_00010037 "CRF 1.A.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector energy industry is a sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: Emissions from the combustion and evaporation of fuel for all transport activity (excluding military transport), regardless of the sector, specifiedby sub-categories below. Emissions from fuel sold to any air or marine vessel engaged in international transport (1 A 3 a i and 1 A 3 d i) should as far as possible be excluded from the totals and subtotals in this category and should be reported separately.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: transport"
+    
+    Types: 
+        OEO_00000422
+    
+    Facts:  
+     OEO_00000504  OEO_00000243,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010039
+    
+    
+Individual: OEO_00010043
+
+    Annotations: 
+        OEO_00010037 "CRF 1.A.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector fuel combustion is an energy sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: Emissions from combustion activities as described below, including combustion for the generation of electricity and heat for own use in these sectors.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: fuel combustion - other sectors"
+    
+    Types: 
+        OEO_00000128
+    
+    Facts:  
+     OEO_00000504  OEO_00000243,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010039
+    
+    
+Individual: OEO_00010044
+
+    Annotations: 
+        OEO_00010037 "CRF 1.A.5",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The IPCC sector fuel combustion is an energy sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories: All remaining emissions from fuel combustion that are not specified elsewhere. Include emissions from fuel delivered to the military in the country and delivered to the military of other countries that are not engaged in multilateral operations.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "CRF sector: fuel combustion - other"
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00000243,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010039
+    
+    
 DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
 
-DisjointClasses: 
-    OEO_00000214,OEO_00000227,OEO_00000405,OEO_00000418

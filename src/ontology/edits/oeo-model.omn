@@ -11,15 +11,14 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-model/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-model.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/iao-annotation-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/iao-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/ro-module.owl>
-Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-model.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/iao-module.owl>
 
 Annotations: 
-    <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)",
-    rdfs:comment "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation."
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation.",
+    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 
@@ -45,11 +44,11 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: dc:contributor
 
     
-AnnotationProperty: definition
+AnnotationProperty: dc:description
 
-    SubPropertyOf: 
-        rdfs:comment
     
+AnnotationProperty: dc:license
+
     
 AnnotationProperty: rdfs:comment
 
@@ -81,96 +80,101 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
-ObjectProperty: conforms_to
-
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_author
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
-ObjectProperty: has_client
+ObjectProperty: OEO_00000503
 
     
-ObjectProperty: has_constraint
+ObjectProperty: OEO_00000511
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    
-ObjectProperty: has_contact
-
-    
-ObjectProperty: has_funding_source
-
-    
-ObjectProperty: has_numercical_input
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
-    
-    Domain: 
-        OEO_00000419
-    
-    
-ObjectProperty: has_numerical_output
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
-    
-    Domain: 
-        OEO_00000419
-    
-    
-ObjectProperty: has_objective
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en,
+        rdfs:label "has objective"
     
     Domain: 
         OEO_00000313
     
     
-ObjectProperty: has_objectivefunction
+ObjectProperty: OEO_00000512
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function."@en,
+        rdfs:label "has objective function"
     
     SubPropertyOf: 
-        has_objective
+        OEO_00000511
     
     
-ObjectProperty: has_objectivevariable
+ObjectProperty: OEO_00000513
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective variable."@en,
+        rdfs:label "has objective variable"
     
     SubPropertyOf: 
-        has_objective
+        OEO_00000511
     
     
-ObjectProperty: has_physical_output
+ObjectProperty: OEO_00000514
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model/model calculation and the resolution it uses."@en,
+        rdfs:label "has resolution"
+    
+    
+ObjectProperty: OEO_00000515
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en,
+        rdfs:label "has spatial resolution"
+    
+    SubPropertyOf: 
+        OEO_00000514
+    
+    
+ObjectProperty: OEO_00000516
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en,
+        rdfs:label "has temporal resolution"
+    
+    SubPropertyOf: 
+        OEO_00000514
+    
+    
+ObjectProperty: OEO_00000517
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en,
+        rdfs:label "has_constraint"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
+    
+ObjectProperty: OEO_00000518
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en,
+        rdfs:label "has_numerical_input"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
+    Characteristics: 
+        Irreflexive,
+        Asymmetric
+    
+    Domain: 
+        OEO_00000419
+    
+    
+ObjectProperty: OEO_00000519
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en,
+        rdfs:label "has_numerical_output"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0002234>
@@ -179,78 +183,15 @@ ObjectProperty: has_physical_output
         Irreflexive,
         Asymmetric
     
-    
-ObjectProperty: has_programvariable
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a model and a program variable it uses."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
-    
-ObjectProperty: has_resolution
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model/model calculation and the resolution it uses."@en
-    
-    
-ObjectProperty: has_spatial_resolution
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en
-    
-    SubPropertyOf: 
-        has_resolution
-    
-    
-ObjectProperty: has_temporal_resolution
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en
-    
-    SubPropertyOf: 
-        has_resolution
-    
-    
-ObjectProperty: has_tool
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that  holds between a model calculation and the model it is using."@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
-    
     Domain: 
-        OEO_00000275
-    
-    Range: 
-        OEO_00000274
+        OEO_00000419
     
     
-ObjectProperty: makes_assumption
+ObjectProperty: OEO_00000522
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and and an assumption made for its execution."@en
-    
-    SubPropertyOf: 
-        owl:topObjectProperty
-    
     
 ObjectProperty: owl:topObjectProperty
 
-    
-ObjectProperty: uses
-
-    
-ObjectProperty: uses_dataset
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and a dataset it uses as input."@en
-    
-    SubPropertyOf: 
-        uses
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -312,6 +253,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000030>
         <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000088>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000100>
 
     
@@ -347,12 +291,14 @@ Class: OEO_00000059
 Class: OEO_00000063
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The predicted demographic development for a country in the future."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is a statement about a property of a system or process that is considered to be true."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An assumption is an information content entity about a property of a system or process. It determines a part of a scenario content."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/353
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/525"@en,
         rdfs:label "assumption"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000364
     
     
 Class: OEO_00000078
@@ -548,10 +494,13 @@ Class: OEO_00000172
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A framework factsheet is a factsheet that contains information about a software framework."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/414
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440",
         rdfs:label "framework factsheet"
     
     SubClassOf: 
-        OEO_00000162
+        OEO_00000162,
+        OEO_00000522 some OEO_00000382
     
     
 Class: OEO_00000202
@@ -625,12 +574,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
 Class: OEO_00000275
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a transformation using at least one model."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a process of solving mathematical equations of a model."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/73
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/504"@en,
         rdfs:label "model calculation"
     
     SubClassOf: 
-        OEO_00000419,
-        has_tool some OEO_00000274
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000503 some OEO_00000274
     
     
 Class: OEO_00000276
@@ -651,10 +602,13 @@ Class: OEO_00000277
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model factsheet is a factsheet that contains information about a model."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/414
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440",
         rdfs:label "model factsheet"
     
     SubClassOf: 
-        OEO_00000162
+        OEO_00000162,
+        OEO_00000522 some OEO_00000274
     
     
 Class: OEO_00000279
@@ -794,10 +748,13 @@ Class: OEO_00000365
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario factsheet is a factsheet that contains information about a scenario."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/414
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440",
         rdfs:label "scenario factsheet"
     
     SubClassOf: 
-        OEO_00000162
+        OEO_00000162,
+        OEO_00000522 some OEO_00000364
     
     
 Class: OEO_00000370
@@ -914,13 +871,6 @@ Class: OEO_00000408
     
 Class: OEO_00000419
 
-    Annotations: 
-        definition "A transformation is a process that transforms one or more inputs into at least one output."@en,
-        rdfs:label "transformation"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
     
 Class: OEO_00000423
 
@@ -952,6 +902,43 @@ Class: OEO_00000435
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00020011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to investigate something."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497"@en,
+        rdfs:label "study"@en
+    
+    SubClassOf: 
+        OEO_00000340
+    
+    
+Class: OEO_00020012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study report is a report that is the output from some study."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497"@en,
+        rdfs:label "study report"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>,
+        <http://purl.obolibrary.org/obo/RO_0002353> some OEO_00020011
+    
+    
+Class: OEO_00020013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Output data is endogenous data that is determined by a model calculation and presented as a result.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/520
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/536",
+        rdfs:label "output data"
+    
+    SubClassOf: 
+        OEO_00030030
     
     
 Class: OEO_00030007
@@ -1012,6 +999,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
     
     SubClassOf: 
         OEO_00000274
+    
+    
+Class: OEO_00030029
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Exogenous data is a data item whose quantity value is determined outside of a model and is imposed on a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "input data",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500",
+        rdfs:label "exogenous data"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+    
+    
+Class: OEO_00030030
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Endogenous data is a data item whose quantity value is determined by a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500",
+        rdfs:label "endogenous data"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
     
     
 Individual: OEO_00000049
