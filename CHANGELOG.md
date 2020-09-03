@@ -17,6 +17,11 @@ Here is a template for new release sections
 -
 ```
 
+## [1.1.1] - 2020-09-03
+
+### Changed
+- Hot fix release solving an import problem as version number was not changed in the catalog files in the last release (#552, #553)
+
 ## [1.1.0] - 2020-09-01
 
 ### Added
