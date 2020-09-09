@@ -108,7 +108,7 @@ ObjectProperty: OEO_00000506
         rdfs:label "has author"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     Range: 
         OEO_00000051
@@ -121,7 +121,7 @@ ObjectProperty: OEO_00000507
         rdfs:label "has client"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     Range: 
         OEO_00000051
@@ -131,20 +131,22 @@ ObjectProperty: OEO_00000508
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en,
-        rdfs:label "has contact"
+        rdfs:label "has contact person"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     
 ObjectProperty: OEO_00000509
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an entity and its source of funding."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556",
         rdfs:label "has funding source"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        owl:topObjectProperty
     
     Range: 
         OEO_00000051
@@ -157,11 +159,20 @@ ObjectProperty: OEO_00000510
         rdfs:label "has institution"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     
 ObjectProperty: OEO_00000522
 
+    
+ObjectProperty: OEO_00140008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a publication/model and a continuant, in which the continuant is somehow involved in the creation of the publication/model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556",
+        rdfs:label "has contributor"@en
+    
     
 ObjectProperty: owl:topObjectProperty
 
