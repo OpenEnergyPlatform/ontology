@@ -13,14 +13,20 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-shared/>
 <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
 Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/iao-annotation-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/ro-module.owl>
-Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/uo-module.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/iao-minimal-module.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/ro-module.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/uo-module.owl>
+Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The\"Shared\" module covers all entities that are relevant for all our other modules. This includes shared imports like the BFO, IAO-annotation and RO- module."
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
 AnnotationProperty: OEO_00010037
 
     Annotations: 
@@ -32,12 +38,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
     SubPropertyOf: 
         dc:identifier
     
-    
-AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
-
-    
-AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
-
     
 AnnotationProperty: dc:description
 
@@ -118,6 +118,79 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete u
         rdfs:label "covers"
     
     
+ObjectProperty: OEO_00040010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A property that links a quantity value to a unit in which the quantity value has been expressed.",
+        rdfs:label "has unit"@en
+    
+    Domain: 
+        OEO_00000350
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+ObjectProperty: OEO_00140002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an entity and a quantity value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
+        rdfs:label "has quantity value"@en
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000000>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
+        rdfs:comment "The original defnition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000046>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>
+    
+    
+Class: OEO_00000350
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is an information content entity defined by a numeral together with a unit of measurement to quantify an entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/495
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
+        rdfs:label "quantity value"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
 Class: OEO_00000419
 
     Annotations: 
@@ -130,8 +203,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
-Class: <http://purl.obolibrary.org/obo/BFO_0000015>
-
 Class: OEO_00140003
 
     Annotations: 
@@ -192,65 +263,3 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
         OEO_00140003
     
     
-Class: OEO_00000350
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is an information content entity defined by a numeral together with a unit of measurement to quantify an entity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/495
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
-        rdfs:label "quantity value"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
-
-
-Class: <http://purl.obolibrary.org/obo/UO_0000000>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
-        rdfs:comment "The original defnition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-
-
-ObjectProperty: OEO_00040010
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A property that links a quantity value to a unit in which the quantity value has been expressed.",
-        rdfs:label "has unit"@en
-    
-    Domain: 
-        OEO_00000350
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/UO_0000000>
-
-    
-Class: <http://purl.obolibrary.org/obo/IAO_0000030>
-
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-
-
-Class: <http://purl.obolibrary.org/obo/UO_0000046>
-
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000141>
-        
-
-ObjectProperty: OEO_00140002
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an entity and a quantity value.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
-        rdfs:label "has quantity value"@en
