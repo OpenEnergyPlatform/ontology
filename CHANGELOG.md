@@ -22,6 +22,7 @@ Here is a template for new release sections
 ### Added
 - sensitivity analysis (#550)
 - has contributor (#530)
+- sponsor (#557)
 - economic value and gross domestic product (#559)
 
 ### Changed
