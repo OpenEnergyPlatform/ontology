@@ -22,6 +22,7 @@ Here is a template for new release sections
 ### Added
 - sensitivity analysis (#550)
 - has contributor (#530)
+- sponsor (#557)
 
 ### Changed
 - move subclasses of has participant (#530)
