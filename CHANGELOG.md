@@ -20,7 +20,6 @@ Here is a template for new release sections
 ## [unreleased]
 
 ### Added
-- sensitivity analysis (#550)
 
 ### Changed
 -
