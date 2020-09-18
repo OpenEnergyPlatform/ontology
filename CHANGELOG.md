@@ -27,6 +27,7 @@ Here is a template for new release sections
 
 ### Changed
 - move subclasses of has participant (#530)
+- licence (#561)
 
 ### Removed
 -
