@@ -24,6 +24,7 @@ Here is a template for new release sections
 - has contributor (#530)
 - sponsor (#557)
 - economic value and gross domestic product (#559)
+- has member and member of (#562)
 
 ### Changed
 - move subclasses of has participant (#530)
