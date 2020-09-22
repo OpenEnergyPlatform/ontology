@@ -24,6 +24,7 @@ Here is a template for new release sections
 - has contributor (#530)
 - sponsor (#557)
 - economic value and gross domestic product (#559)
+- time step, time series, etc (#538)
 
 ### Changed
 - move subclasses of has participant (#530)
@@ -50,7 +51,6 @@ Here is a template for new release sections
 - annotation property unique individual identifier (#523)
 - sector individuals (#523)
 - output and input data (#536)
-- time step, time series, etc (#538)
 
 ### Changed
 - harmonise 'definition' annotation property (#529)
