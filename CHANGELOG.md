@@ -20,6 +20,21 @@ Here is a template for new release sections
 ## [unreleased]
 
 ### Added
+- sensitivity analysis (#550)
+- has contributor (#530)
+- sponsor (#557)
+- economic value and gross domestic product (#559)
+
+### Changed
+- move subclasses of has participant (#530)
+- licence (#561)
+
+### Removed
+-
+
+## [1.1.0] - 2020-09-01
+
+### Added
 - vehicle and subclasses and vehicle related energy converting devices and energy storage objects (#431, #435)
 - natural gas relation to methane (#431)
 - ethanol (#445)

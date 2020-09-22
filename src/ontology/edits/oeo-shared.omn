@@ -11,10 +11,10 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-shared/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/iao-annotation-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/ro-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/imports/uo-module.owl>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/iao-annotation-module.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/ro-module.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/uo-module.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -25,6 +25,18 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
+    
+AnnotationProperty: OEO_00010037
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unique individual identifier is an identifier that is unique for one individual of a class. Unique individual identifiers follow usually a structure defined e.g. by a sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/461
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
+        rdfs:label "unique individual identifier"
+    
+    SubPropertyOf: 
+        dc:identifier
+    
     
 AnnotationProperty: dc:description
 
@@ -129,6 +141,15 @@ ObjectProperty: OEO_00040010
         <http://purl.obolibrary.org/obo/UO_0000000>
     
     
+ObjectProperty: OEO_00140002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an entity and a quantity value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
+        rdfs:label "has quantity value"@en
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
@@ -137,6 +158,15 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000031>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000148>
 
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
@@ -154,21 +184,31 @@ Class: <http://purl.obolibrary.org/obo/UO_0000001>
     
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
 
+
+Class: <http://purl.obolibrary.org/obo/UO_0000046>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>
+    
     
 Class: OEO_00000350
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is a generically dependent continuant defined by a numeral together with a unit of measurement to quantify an entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is an information content entity defined by a numeral together with a unit of measurement to quantify an entity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/495
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496",
+
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
         rdfs:label "quantity value"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000000>
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 Class: OEO_00000419

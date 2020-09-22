@@ -11,8 +11,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-social/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-social.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.0.0/oeo-shared.omn>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-social.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles.",
@@ -108,7 +108,7 @@ ObjectProperty: OEO_00000506
         rdfs:label "has author"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     Range: 
         OEO_00000051
@@ -121,7 +121,7 @@ ObjectProperty: OEO_00000507
         rdfs:label "has client"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     Range: 
         OEO_00000051
@@ -131,20 +131,22 @@ ObjectProperty: OEO_00000508
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and the person to contact with issues about it."@en,
-        rdfs:label "has contact"
+        rdfs:label "has contact person"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     
 ObjectProperty: OEO_00000509
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model and its source of funding."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an entity and its source of funding."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556",
         rdfs:label "has funding source"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        owl:topObjectProperty
     
     Range: 
         OEO_00000051
@@ -157,11 +159,20 @@ ObjectProperty: OEO_00000510
         rdfs:label "has institution"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0000057>
+        OEO_00140008
     
     
 ObjectProperty: OEO_00000522
 
+    
+ObjectProperty: OEO_00140008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a publication/model and a continuant, in which the continuant is somehow involved in the creation of the publication/model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556",
+        rdfs:label "has contributor"@en
+    
     
 ObjectProperty: owl:topObjectProperty
 
@@ -357,7 +368,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
 Class: OEO_00000238
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serve a social purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serves a social purpose."@en,
         rdfs:label "institution"
     
     SubClassOf: 
@@ -411,6 +422,9 @@ Class: OEO_00000341
     SubClassOf: 
         OEO_00000051
     
+    
+Class: OEO_00000350
+
     
 Class: OEO_00000367
 
@@ -574,6 +588,42 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
         <http://purl.obolibrary.org/obo/BFO_0000141>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
     
+
+Class: OEO_00140009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organization, or project by giving money, allowance of kind, services or other help.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
+        rdfs:label "sponsor"@en
+    
+    SubClassOf: 
+        OEO_00000051
+        
+        
+Class: OEO_00140012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic value is a quantity value that is economically relevant.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559",
+        rdfs:label "economic value"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00140013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gross domestic product is an economic value that represents the broadest measure of aggregate economic activity, measuring the total unduplicated market value of all final goods and services produced within a statistical area in a period.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559",
+        rdfs:label "gross domestic product"@en
+    
+    SubClassOf: 
+        OEO_00140012  
+        
     
 Class: OEO_00230013
 
@@ -866,3 +916,4 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
     
 DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
+
