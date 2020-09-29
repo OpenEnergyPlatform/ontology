@@ -26,6 +26,7 @@ Here is a template for new release sections
 - economic value and gross domestic product (#559)
 - time step, time series, etc (#538)
 - has member and member of (#562)
+- gross value added (#563)
 
 ### Changed
 - move subclasses of has participant (#530)
