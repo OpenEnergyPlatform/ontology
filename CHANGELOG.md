@@ -27,6 +27,7 @@ Here is a template for new release sections
 - time step, time series, etc (#538)
 - has member and member of (#562)
 - gross value added (#563)
+- validation and subclasses (#565)
 
 ### Changed
 - move subclasses of has participant (#530)
