@@ -34,7 +34,7 @@ Here is a template for new release sections
 - licence (#561)
 
 ### Removed
--
+- software maintenance (#566)
 
 ## [1.1.0] - 2020-09-01
 
