@@ -29,6 +29,8 @@ Here is a template for new release sections
 - gross value added (#563)
 - validation and subclasses (#565)
 - chemical reaction and subclasses (#568)
+- demand (#569)
+- consumption (#569)
 
 ### Changed
 - move subclasses of has participant (#530)
