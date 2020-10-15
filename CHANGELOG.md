@@ -28,6 +28,7 @@ Here is a template for new release sections
 - has member and member of (#562)
 - gross value added (#563)
 - validation and subclasses (#565)
+- chemical reaction and subclasses (#568)
 
 ### Changed
 - move subclasses of has participant (#530)
