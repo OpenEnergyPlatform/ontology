@@ -31,6 +31,7 @@ Here is a template for new release sections
 - chemical reaction and subclasses (#568)
 - demand (#569)
 - consumption (#569)
+- time stamp and time stamp alignment (#570)
 
 ### Changed
 - move subclasses of has participant (#530)
