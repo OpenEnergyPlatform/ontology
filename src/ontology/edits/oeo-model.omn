@@ -1065,13 +1065,16 @@ Class: OEO_00030033
         <http://purl.obolibrary.org/obo/IAO_0000115> "A time step is a one-dimensional temporal region that has a start time and an endtime and thus a finite duration.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
         rdfs:label "time step"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000038>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030032,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030035
+        ((<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030031)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030032)) or ((<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030035)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140043)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140044))
     
     
 Class: OEO_00030034
@@ -1151,6 +1154,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
     
     SubClassOf: 
         OEO_00140024
+    
+    
+Class: OEO_00140043
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a zero-dimensional temporal region that is used to describe a time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "time stamp"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000148>
+    
+    
+Class: OEO_00140044
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp alignment is a data descriptor that indicates the position of a time stamp in a time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "time stamp alignment"@en
+    
+    SubClassOf: 
+        OEO_00000119
     
     
 Individual: OEO_00000049
@@ -1430,5 +1457,44 @@ Individual: OEO_00000451
     
     Types: 
         OEO_00000120
+    
+    
+Individual: OEO_00140045
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A start alignment is a time stamp alignment indicating that the time stamp marks the start of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "left alignment",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "start alignment"@en
+    
+    Types: 
+        OEO_00140044
+    
+    
+Individual: OEO_00140046
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A middle alignment is a time stamp alignment indicating that the time stamp marks the middle of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "centre alignment",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "middle alignment"@en
+    
+    Types: 
+        OEO_00140044
+    
+    
+Individual: OEO_00140047
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An end alignment is a time stamp alignment indicating that the time stamp marks the end of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "right alignment",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "end alignment"@en
+    
+    Types: 
+        OEO_00140044
     
     
