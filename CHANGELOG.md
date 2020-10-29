@@ -32,6 +32,7 @@ Here is a template for new release sections
 - demand (#569)
 - consumption (#569)
 - time stamp and time stamp alignment (#570)
+- model descriptor and subclasses (#577)
 
 ### Changed
 - move subclasses of has participant (#530)
