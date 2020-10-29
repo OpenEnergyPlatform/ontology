@@ -33,6 +33,7 @@ Here is a template for new release sections
 - consumption (#569)
 - time stamp and time stamp alignment (#570)
 - model descriptor and subclasses (#577)
+- emission factor (#581)
 
 ### Changed
 - move subclasses of has participant (#530)
