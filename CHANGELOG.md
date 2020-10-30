@@ -33,12 +33,14 @@ Here is a template for new release sections
 - consumption (#569)
 - time stamp and time stamp alignment (#570)
 - model descriptor and subclasses (#577)
+- further sector individuals (#578)
 - emission factor (#581)
 - spatial regions (#585)
 
 ### Changed
 - move subclasses of has participant (#530)
 - licence (#561)
+- ipcc_year_guidelines to CRF sectors (IPCC year) (#578)
 - factsheet subclasses (#584)
 
 ### Removed
