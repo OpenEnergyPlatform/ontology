@@ -34,6 +34,7 @@ Here is a template for new release sections
 - time stamp and time stamp alignment (#570)
 - model descriptor and subclasses (#577)
 - emission factor (#581)
+- spatial regions (#585)
 
 ### Changed
 - move subclasses of has participant (#530)
