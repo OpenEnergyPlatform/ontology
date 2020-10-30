@@ -32,11 +32,14 @@ Here is a template for new release sections
 - demand (#569)
 - consumption (#569)
 - time stamp and time stamp alignment (#570)
+- model descriptor and subclasses (#577)
 - further sector individuals (#578)
+- emission factor (#581)
 
 ### Changed
 - move subclasses of has participant (#530)
 - licence (#561)
+- factsheet subclasses (#584)
 
 ### Removed
 - software maintenance (#566)
