@@ -39,6 +39,7 @@ Here is a template for new release sections
 ### Changed
 - move subclasses of has participant (#530)
 - licence (#561)
+- relabel ipcc_year_guidelines to CRF sectors (IPCC year) (#578)
 - factsheet subclasses (#584)
 
 ### Removed
