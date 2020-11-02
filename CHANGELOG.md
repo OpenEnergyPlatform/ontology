@@ -35,7 +35,7 @@ Here is a template for new release sections
 - model descriptor and subclasses (#577)
 - further sector individuals (#578)
 - emission factor (#581)
-- spatial regions (#585) 
+- spatial regions (#585)
 
 ### Changed
 - move subclasses of has participant (#530)
