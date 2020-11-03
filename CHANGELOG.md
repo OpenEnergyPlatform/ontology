@@ -17,7 +17,7 @@ Here is a template for new release sections
 -
 ```
 
-## [unreleased]
+## [1.2.0] - 2020-10-30
 
 ### Added
 - sensitivity analysis (#550)
