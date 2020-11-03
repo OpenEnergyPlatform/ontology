@@ -19,4 +19,9 @@ jobs:
         project-name: Issues
         column-name: In discussion
         issue-number: ${{ steps.count.outputs.issue_number }} 
-      if: steps.count.outputs.continue == 'true'
+      if: steps.count.outputs.continue == 'true' 
+    - name: remove to do label
+      uses: andymckay/labeler@master
+      with:
+        remove-labels: "To do"
+      if: steps.count.outputs.continue == 'true' 

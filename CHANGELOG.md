@@ -17,6 +17,35 @@ Here is a template for new release sections
 -
 ```
 
+## [1.2.0] - 2020-10-30
+
+### Added
+- sensitivity analysis (#550)
+- has contributor (#530)
+- sponsor (#557)
+- economic value and gross domestic product (#559)
+- time step, time series, etc (#538)
+- has member and member of (#562)
+- gross value added (#563)
+- validation and subclasses (#565)
+- chemical reaction and subclasses (#568)
+- demand (#569)
+- consumption (#569)
+- time stamp and time stamp alignment (#570)
+- model descriptor and subclasses (#577)
+- further sector individuals (#578)
+- emission factor (#581)
+- spatial regions (#585)
+
+### Changed
+- move subclasses of has participant (#530)
+- licence (#561)
+- ipcc_year_guidelines to CRF sectors (IPCC year) (#578)
+- factsheet subclasses (#584)
+
+### Removed
+- software maintenance (#566)
+
 ## [1.1.0] - 2020-09-01
 
 ### Added

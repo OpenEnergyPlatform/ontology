@@ -11,10 +11,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-physical/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-physical.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/iao-minimal-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/uo-module.owl>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-physical.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/imports/iao-minimal-module.owl>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Physical' module covers all those aspects of the world that are relevant for the energy systems domain, including physical entities such as generators, power lines, technologies, hardware, portions of matter; attributes of those, such as the energy they carry or release, whether they can be a pollutant, or their origins; representational transformations into maps and measures, such as coordinates, units, quantities; and the processes that modify the physical entities, such as energy production.",
@@ -95,14 +94,6 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation to connect a unit to a quantifiable entity that it is the unit of.",
-        rdfs:comment "This relation has been imported from UO.",
-        rdfs:label "is unit of"
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/UO_0000000>
-    
     
 ObjectProperty: OEO_00000501
 
@@ -298,25 +289,9 @@ ObjectProperty: OEO_00000533
     
 ObjectProperty: OEO_00040010
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A property that links a quantity value to a unit in which the quantity value has been expressed.",
-        rdfs:label "has unit"@en
-    
-    Domain: 
-        OEO_00000350
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/UO_0000000>
-    
     
 ObjectProperty: OEO_00140002
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an entity and a quantity value.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
-        rdfs:label "has quantity value"@en
-    
     
 ObjectProperty: owl:topObjectProperty
 
@@ -374,32 +349,15 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000144>
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
     
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
-        rdfs:comment "The original defnition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
     
 Class: <http://purl.obolibrary.org/obo/UO_0000001>
 
-    
-Class: <http://purl.obolibrary.org/obo/UO_0000046>
-
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000141>
-    
     
 Class: OEO_00000001
 
@@ -1359,6 +1317,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00000148
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that quantifies the emissions or removals of a gas per unit activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/243
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581",
+        rdfs:label "emission factor"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00000150
@@ -2398,22 +2369,6 @@ Class: OEO_00000348
     
 Class: OEO_00000350
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is an information content entity defined by a numeral together with a unit of measurement to quantify an entity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/495
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
-        rdfs:label "quantity value"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
-    
     
 Class: OEO_00000356
 
@@ -3456,6 +3411,79 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
     SubClassOf: 
         OEO_00000350,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000001>
+    
+    
+Class: OEO_00140033
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical reaction is a transformation that involves the interconversion of chemical species.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
+        rdfs:label "chemical reaction"@en
+    
+    SubClassOf: 
+        OEO_00000419
+    
+    
+Class: OEO_00140034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A redox reaction is a chemical reaction in which the oxidation of one reactant is coupled to the reduction of a second reactant.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "oxidation",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
+        rdfs:label "redox reaction"@en
+    
+    SubClassOf: 
+        OEO_00140033
+    
+    
+Class: OEO_00140035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Oxidation is a chemical reaction that describes the loss of electrons of an atom, an ion, or of certain atoms in a molecule and is a part of a redox reaction.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
+        rdfs:label "oxidation"@en
+    
+    SubClassOf: 
+        OEO_00140033
+    
+    
+Class: OEO_00140036
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Reduction is a chemical reaction that describes the gain of electrons of an atom, an ion, or of certain atoms in a molecule and is a part of a redox reaction.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
+        rdfs:label "reduction"@en
+    
+    SubClassOf: 
+        OEO_00140033
+    
+    
+Class: OEO_00140037
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrochemical reaction is a chemical reaction that describes the overall reactions of individual redox reactions being separated but connected by an external electric circuit and an intervening electrolyte.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
+        rdfs:label "electrochemical reaction"@en
+    
+    SubClassOf: 
+        OEO_00140033
+    
+    
+Class: OEO_00140038
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Combustion is an exothermic redox reaction between a fuel (the reductant) and an oxidant (usually atmospheric oxygen) which is initiated by a ignition source.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
+        rdfs:label "combustion"@en
+    
+    SubClassOf: 
+        OEO_00140034
     
     
 Class: OEO_00230000

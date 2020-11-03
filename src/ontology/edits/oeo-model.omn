@@ -11,9 +11,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-model/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-model.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.1.0/imports/iao-module.owl>
+<http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-model.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/imports/iao-module.owl>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation.",
@@ -69,6 +69,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
@@ -190,6 +193,9 @@ ObjectProperty: OEO_00000519
 ObjectProperty: OEO_00000522
 
     
+ObjectProperty: OEO_00040010
+
+    
 ObjectProperty: owl:topObjectProperty
 
     
@@ -238,6 +244,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000148>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000010>
 
     
@@ -264,6 +273,15 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000300>
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000310>
 
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000046>
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>
+    
     
 Class: OEO_00000048
 
@@ -495,12 +513,13 @@ Class: OEO_00000172
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A framework factsheet is a factsheet that contains information about a software framework."^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/414
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
         rdfs:label "framework factsheet"
     
     SubClassOf: 
         OEO_00000162,
-        OEO_00000522 some OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000382
     
     
 Class: OEO_00000202
@@ -534,16 +553,6 @@ Class: OEO_00000239
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
-    
-    
-Class: OEO_00000249
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A license is a software descriptor that determines the official permissions for using the software."^^xsd:string,
-        rdfs:label "license"
-    
-    SubClassOf: 
-        OEO_00000378
     
     
 Class: OEO_00000264
@@ -601,14 +610,20 @@ Class: OEO_00000276
 Class: OEO_00000277
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model factsheet is a factsheet that contains information about a model."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model factsheet is a model descriptor that contains a brief description of all relevant model information."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Since a model facsheet is a model descriptor as well as a factsheet, this class is implemented as equivalent class to OEO_00000277.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/414
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440 
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
         rdfs:label "model factsheet"
+    
+    EquivalentTo: 
+        OEO_00020031
     
     SubClassOf: 
         OEO_00000162,
-        OEO_00000522 some OEO_00000274
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000274
     
     
 Class: OEO_00000279
@@ -722,6 +737,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/418",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
+Class: OEO_00000350
+
+    
 Class: OEO_00000353
 
     Annotations: 
@@ -749,12 +767,13 @@ Class: OEO_00000365
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario factsheet is a factsheet that contains information about a scenario."^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/414
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/440
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
         rdfs:label "scenario factsheet"
     
     SubClassOf: 
         OEO_00000162,
-        OEO_00000522 some OEO_00000364
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000364
     
     
 Class: OEO_00000370
@@ -826,15 +845,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/286",
         <http://purl.obolibrary.org/obo/IAO_0000010>
     
     
-Class: OEO_00000383
-
-    Annotations: 
-        rdfs:label "software maintenance"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-    
-    
 Class: OEO_00000392
 
     Annotations: 
@@ -904,6 +914,18 @@ Class: OEO_00000435
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
+Class: OEO_00010051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sensitivity analysis is the process of comparing different model calculations based on a variation of input parameters (exogenous data items).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/483
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/550",
+        rdfs:label "sensitivity analysis"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
 Class: OEO_00020011
 
     Annotations: 
@@ -939,6 +961,173 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/536",
     
     SubClassOf: 
         OEO_00030030
+    
+    
+Class: OEO_00020015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A licence is an information content entity that contains an official permission or permit to do, use or own something.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "license",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/31
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/561",
+        rdfs:label "licence"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00020016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model descriptor is an information content entity that contains information about some model."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+        rdfs:label "model descriptor"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000274
+    
+    
+Class: OEO_00020017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A analytical approach is a model descriptor that contains information about the analysis strategy of a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+        rdfs:label "analytical appoach"@en
+    
+    SubClassOf: 
+        OEO_00020016
+    
+    
+Class: OEO_00020018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A methodical focus is a model descriptor that specifies the primary calculation method used in a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+        rdfs:label "methodical focus"@en
+    
+    SubClassOf: 
+        OEO_00020016,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000275
+    
+    
+Class: OEO_00020019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary modelling purpose is a model descriptor stating the main purpose of a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+        rdfs:label "primary modelling purpose"@en
+    
+    SubClassOf: 
+        OEO_00020016
+    
+    
+Class: OEO_00020022
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A model documentation is a model descriptor that contains a detailed description of a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+        rdfs:label "model documentation"@en
+    
+    SubClassOf: 
+        OEO_00020016
+    
+    
+Class: OEO_00020031
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model factsheet is a model descriptor that contains a brief description of all relevant model information."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+        rdfs:label "model factsheet"@en
+    
+    EquivalentTo: 
+        OEO_00000277
+    
+    SubClassOf: 
+        OEO_00020016
+    
+    
+Class: OEO_00020032
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
+The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
+In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
+The union of the study region and the interacting/ external region ist the considered region.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study region is a spatial region that is under investigation and consists entirely of one or more subregions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "study region"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00020033
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subregion is a spatial region that is a part of spatial region.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "subregion"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00020034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
+The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
+In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
+The union of the study region and the interacting/ external region ist the considered region.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study subregion is a subregion of a study region.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "study subregion"
+    
+    SubClassOf: 
+        OEO_00020033
+    
+    
+Class: OEO_00020035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
+The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
+In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
+The union of the study region and the interacting/ external region ist the considered region.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A considered region is a spatial region that is used in an analysis.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "considered region"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00020036
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
+The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
+In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
+The union of the study region and the interacting/ external region ist the considered region.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An interacting region is a spatial region that interacts with a study region. It is part of a considered region, but not a study region.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "external region",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "interacting region"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
     
     
 Class: OEO_00030007
@@ -995,7 +1184,7 @@ Class: OEO_00030015
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
-        rdfs:label "energy system model"@de
+        rdfs:label "energy system model"@en
     
     SubClassOf: 
         OEO_00000274
@@ -1024,6 +1213,133 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000027>
+    
+    
+Class: OEO_00030031
+
+    
+Class: OEO_00030032
+
+    
+Class: OEO_00030033
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time step is a one-dimensional temporal region that has a start time and an endtime and thus a finite duration.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "time step"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000038>,
+        ((<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030031)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030032)) or ((<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030035)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140043)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140044))
+    
+    
+Class: OEO_00030034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time series is a data set that references to a set of time steps or zero-dimensional temporal regions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
+        rdfs:label "time series"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030031,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030032,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030035,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00030033 or <http://purl.obolibrary.org/obo/BFO_0000148>)
+    
+    
+Class: OEO_00030035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A duration is a quantity value indicating the time span of a one-dimensional temporal region, measured in a time unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
+        rdfs:label "duration"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000038>
+    
+    
+Class: OEO_00140024
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Validation is the process of checking if something works correctly.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
+        rdfs:label "validation"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00140025
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Cross-checking against other models is a validation where a model gets cross-checked against other models of the domain.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
+        rdfs:label "cross-checking against other models"@en
+    
+    SubClassOf: 
+        OEO_00140024
+    
+    
+Class: OEO_00140026
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Checking against measurements is a validation where something gets checked by using relevant measurements.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
+        rdfs:label "checking against measurements"@en
+    
+    SubClassOf: 
+        OEO_00140024
+    
+    
+Class: OEO_00140027
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Checking against empirical data is a validation where something gets checked against empirical data.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
+        rdfs:label "checking against empirical data"@en
+    
+    SubClassOf: 
+        OEO_00140024
+    
+    
+Class: OEO_00140043
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a zero-dimensional temporal region that is used to describe a time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "time stamp"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000148>
+    
+    
+Class: OEO_00140044
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp alignment is a data descriptor that indicates the position of a time stamp in a time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "time stamp alignment"@en
+    
+    SubClassOf: 
+        OEO_00000119
     
     
 Individual: OEO_00000049
@@ -1303,5 +1619,98 @@ Individual: OEO_00000451
     
     Types: 
         OEO_00000120
+    
+    
+Individual: OEO_00020023
+
+    Annotations: 
+        rdfs:label "top down"@en
+    
+    Types: 
+        OEO_00020017
+    
+    
+Individual: OEO_00020024
+
+    Annotations: 
+        rdfs:label "bottom up"@en
+    
+    Types: 
+        OEO_00020017
+    
+    
+Individual: OEO_00020026
+
+    Annotations: 
+        rdfs:label "hybrid"@en
+    
+    Types: 
+        OEO_00020017
+    
+    
+Individual: OEO_00020027
+
+    Annotations: 
+        rdfs:label "spreadsheet"@en
+    
+    Types: 
+        OEO_00020018
+    
+    
+Individual: OEO_00020028
+
+    Annotations: 
+        rdfs:label "monte carlo"@en
+    
+    Types: 
+        OEO_00020018
+    
+    
+Individual: OEO_00020029
+
+    Annotations: 
+        rdfs:label "econometric"@en
+    
+    Types: 
+        OEO_00020018
+    
+    
+Individual: OEO_00140045
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A start alignment is a time stamp alignment indicating that the time stamp marks the start of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "left alignment",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "start alignment"@en
+    
+    Types: 
+        OEO_00140044
+    
+    
+Individual: OEO_00140046
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A middle alignment is a time stamp alignment indicating that the time stamp marks the middle of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "centre alignment",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "middle alignment"@en
+    
+    Types: 
+        OEO_00140044
+    
+    
+Individual: OEO_00140047
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An end alignment is a time stamp alignment indicating that the time stamp marks the end of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "right alignment",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
+        rdfs:label "end alignment"@en
+    
+    Types: 
+        OEO_00140044
     
     
