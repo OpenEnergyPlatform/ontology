@@ -17,7 +17,7 @@ Here is a template for new release sections
 -
 ```
 
-## [unreleased]
+## [1.2.0] - 2020-10-30
 
 ### Added
 - sensitivity analysis (#550)
@@ -32,11 +32,18 @@ Here is a template for new release sections
 - demand (#569)
 - consumption (#569)
 - time stamp and time stamp alignment (#570)
-- industrial process (589)
+- model descriptor and subclasses (#577)
+- further sector individuals (#578)
+- emission factor (#581)
+- spatial regions (#585)
+- industrial process (#589)
+
 
 ### Changed
 - move subclasses of has participant (#530)
 - licence (#561)
+- ipcc_year_guidelines to CRF sectors (IPCC year) (#578)
+- factsheet subclasses (#584)
 
 ### Removed
 - software maintenance (#566)
