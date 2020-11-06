@@ -17,6 +17,20 @@ Here is a template for new release sections
 -
 ```
 
+
+## unreleased
+
+### Added
+- industrial process (#589)
+-
+### Changed
+-
+
+### Removed
+
+
+
+
 ## [1.2.0] - 2020-10-30
 
 ### Added
@@ -36,7 +50,6 @@ Here is a template for new release sections
 - further sector individuals (#578)
 - emission factor (#581)
 - spatial regions (#585)
-- industrial process (#589)
 
 
 ### Changed
