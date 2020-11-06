@@ -51,7 +51,6 @@ Here is a template for new release sections
 - emission factor (#581)
 - spatial regions (#585)
 
-
 ### Changed
 - move subclasses of has participant (#530)
 - licence (#561)
@@ -169,5 +168,4 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
 
