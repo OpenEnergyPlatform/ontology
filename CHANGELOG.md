@@ -17,6 +17,20 @@ Here is a template for new release sections
 -
 ```
 
+
+## unreleased
+
+### Added
+- industrial process (#589)
+-
+### Changed
+-
+
+### Removed
+
+
+
+
 ## [1.2.0] - 2020-10-30
 
 ### Added
@@ -154,5 +168,4 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
 
