@@ -22,8 +22,9 @@ Here is a template for new release sections
 
 ### Added
 - industrial process (#589)
+- energy conversion efficiency and energy conversion performance (#591)
 - fuel-powered electricity generation (#592)
--
+
 ### Changed
 -
 
