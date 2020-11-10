@@ -22,6 +22,7 @@ Here is a template for new release sections
 
 ### Added
 - industrial process (#589)
+- Fuel-powered electricity generation and relations (#592)
 -
 ### Changed
 -
