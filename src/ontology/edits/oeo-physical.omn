@@ -95,6 +95,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     
+ObjectProperty: OEO_00000500
+
+    
 ObjectProperty: OEO_00000501
 
     
@@ -1319,7 +1322,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "emission"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00000148
     
     
 Class: OEO_00000148
@@ -1332,6 +1336,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581",
     
     SubClassOf: 
         OEO_00030019,
+        OEO_00000502 some OEO_00000147,
         OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
@@ -1426,7 +1431,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000175
     
     SubClassOf: 
-        OEO_00000031
+        OEO_00000031,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
     
     
 Class: OEO_00000175
@@ -1442,7 +1448,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
          and (OEO_00000503 some OEO_00000173)
     
     SubClassOf: 
-        OEO_00000334
+        OEO_00000334,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
     
     
 Class: OEO_00000181
@@ -3402,6 +3409,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/589",
         <http://purl.obolibrary.org/obo/BFO_0000015>,
         <http://purl.obolibrary.org/obo/RO_0002234> some 
             (<http://purl.obolibrary.org/obo/BFO_0000027> or <http://purl.obolibrary.org/obo/BFO_0000030>)
+    
+    
+Class: OEO_00050001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel-powered electricity generation is a transformation that contains at least two sub process: An energy transformation of chemical energy from fuel into electrical energy and an emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/582
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/592",
+        rdfs:label "fuel-powered electricity generation"@en
+    
+    SubClassOf: 
+        OEO_00000419,
+        OEO_00000500 some OEO_00000148,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000147,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175
     
     
 Class: OEO_00140000
