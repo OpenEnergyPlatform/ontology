@@ -26,7 +26,7 @@ Here is a template for new release sections
 - fuel-powered electricity generation (#592)
 
 ### Changed
--
+- powerplant (#594)
 
 ### Removed
 
