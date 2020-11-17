@@ -24,6 +24,8 @@ Here is a template for new release sections
 - industrial process (#589)
 - energy conversion efficiency and energy conversion performance (#591)
 - fuel-powered electricity generation (#592)
+- further IPCC sector individuals (#595)
+- sector division and sector individuals of Bundes-Klimaschutzgesetz (#595)
 
 ### Changed
 - powerplant (#594)
