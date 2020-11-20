@@ -29,6 +29,7 @@ Here is a template for new release sections
 
 ### Changed
 - powerplant (#594)
+- relations has part and part of (#599)
 
 ### Removed
 
