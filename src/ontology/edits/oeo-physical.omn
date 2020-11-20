@@ -95,6 +95,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     
+ObjectProperty: OEO_00000500
+
+    
 ObjectProperty: OEO_00000501
 
     
@@ -357,6 +360,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000001>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
 Class: OEO_00000001
@@ -678,13 +684,18 @@ Class: OEO_00000030
 Class: OEO_00000031
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A powerplant is an aggregate of power generating units that feeds electric energy into an electric grid.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A powerplant is an artificial object consisting of power generating units and a grid component that feeds electric energy into an electric grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/588
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/594
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
         rdfs:label "powerplant"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020006
     
     
 Class: OEO_00000032
@@ -1316,7 +1327,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "emission"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00000148
     
     
 Class: OEO_00000148
@@ -1329,6 +1341,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581",
     
     SubClassOf: 
         OEO_00030019,
+        OEO_00000502 some OEO_00000147,
         OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
@@ -1423,7 +1436,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000175
     
     SubClassOf: 
-        OEO_00000031
+        OEO_00000031,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
     
     
 Class: OEO_00000175
@@ -1439,7 +1453,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
          and (OEO_00000503 some OEO_00000173)
     
     SubClassOf: 
-        OEO_00000334
+        OEO_00000334,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
     
     
 Class: OEO_00000181
@@ -3321,7 +3336,7 @@ Class: OEO_00030019
         <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
-        rdfs:label "process attribute"@de
+        rdfs:label "process attribute"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000003>
@@ -3385,6 +3400,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498",
     
     SubClassOf: 
         OEO_00030026
+    
+    
+Class: OEO_00050000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial process is a process that has output object or object aggregates that are economic goods. An industrial process consists of several subprocesses. Examples of subprocesses that can be involved in an industrial process are energy transformations, mechanical operations and chemical reactions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/534
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/589",
+        rdfs:label "industrial process"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0002234> some 
+            (<http://purl.obolibrary.org/obo/BFO_0000027> or <http://purl.obolibrary.org/obo/BFO_0000030>)
+    
+    
+Class: OEO_00050001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel-powered electricity generation is a transformation that contains at least two sub process: An energy transformation of chemical energy from fuel into electrical energy and an emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/582
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/592",
+        rdfs:label "fuel-powered electricity generation"@en
+    
+    SubClassOf: 
+        OEO_00000419,
+        OEO_00000500 some OEO_00000148,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000147,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175
     
     
 Class: OEO_00140000
@@ -3484,6 +3530,60 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
     
     SubClassOf: 
         OEO_00140034
+    
+    
+Class: OEO_00140049
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion efficiency is a process attribute describing the ratio between the input of an energy transformation and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "energy conversion efficiency"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003,
+        OEO_00140002 some OEO_00140050
+    
+    
+Class: OEO_00140050
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "efficiency value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00140051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coefficient of performance value is a quantity value stating the ratio between the work input and the total output of an energy conversion process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "coefficient of performance value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00140052
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion performance is a process attribute describing the ratio between the non-heat input of an energy transformation and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "energy conversion performance"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003,
+        OEO_00140002 some OEO_00140051
     
     
 Class: OEO_00230000
