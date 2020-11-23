@@ -26,6 +26,9 @@ function convert {
     if [[ ! $extension == $target_extension ]]; then
         echo "robot convert --input $filepath --output $target_path/$filename.$target_extension --format $target_extension"
         robot convert --input $filepath --output $target_path/$filename.$target_extension --format $target_extension
+        if [[ $extension == omn && $target_extension == owl ]]; then
+            sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $target_path/$filename.owl
+        fi
     else
         cp $filepath $target_path/$filename.$extension
     fi
