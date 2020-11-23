@@ -26,9 +26,11 @@ Here is a template for new release sections
 - fuel-powered electricity generation (#592)
 - further IPCC sector individuals (#595)
 - sector division and sector individuals of Bundes-Klimaschutzgesetz (#595)
+- radiation (#600)
 
 ### Changed
 - powerplant (#594)
+- relations has part and part of (#599)
 
 ### Removed
 
