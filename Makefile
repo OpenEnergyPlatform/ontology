@@ -9,16 +9,14 @@ OWL_COPY := $(OWL_FILES:$(ONTOLOGY_SOURCE)/%.owl=$(VERSIONDIR)/%.owl)
 OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.omn) $(VERSIONDIR)/oeo.omn
 OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.omn
 
-
-
 RM=/bin/rm
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
-	robot convert --input $< --output $@ --format owl
+	$(ROBOT) convert --input $< --output $@ --format owl
 	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
 
 $(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
-	robot convert --input $< --output $@ --format owl
+	$(ROBOT) convert --input $< --output $@ --format owl
 	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
@@ -33,15 +31,21 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 
 .PHONY: all clean
 
-all: directories $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
+all: directories build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
 
 clean:
-	- $(RM) -r $(VERSIONDIR)
+	- $(RM) -r $(VERSIONDIR) $(ROBOT_PATH)
 
-directories: ${VERSIONDIR}/imports ${VERSIONDIR}/edits
+directories: ${VERSIONDIR}/imports ${VERSIONDIR}/modules
 
 ${VERSIONDIR}/imports:
-	${MKDIR_P} -p ${VERSIONDIR}/imports
+	${MKDIR_P} ${VERSIONDIR}/imports
 
-${VERSIONDIR}/edits:
-	${MKDIR_P} -p ${VERSIONDIR}/modules
+${VERSIONDIR}/modules:
+	${MKDIR_P} ${VERSIONDIR}/modules
+
+build/robot.jar: | build
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
+
+ROBOT_PATH := build/robot.jar
+ROBOT := java -jar $(ROBOT_PATH)
