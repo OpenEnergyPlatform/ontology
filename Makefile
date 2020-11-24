@@ -1,18 +1,21 @@
 MKDIR_P = mkdir -p
 VERSION:= $(shell cat VERSION)
-OURCEDIR := src
-BUILDDIR := build
-VERSIONDIR := $(BUILDDIR)/oeo/$(VERSION)
+VERSIONDIR := build/oeo/$(VERSION)
 ONTOLOGY_SOURCE := src/ontology
-OWL_FILES := $(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl")
-OMN_FILES := $(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.omn")
+OWL_FILES := $(shell find $(ONTOLOGY_SOURCE)/imports/* -type f -name "*.owl")
+OMN_FILES := $(shell find $(ONTOLOGY_SOURCE)/edits/* -type f -name "*.omn")
 
 OWL_COPY := $(OWL_FILES:$(ONTOLOGY_SOURCE)/%.owl=$(VERSIONDIR)/%.owl)
-OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits%.omn=$(VERSIONDIR)/modules/%.omn)
-OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) 
+OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.omn) $(VERSIONDIR)/oeo.omn
+OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.omn
+
 
 
 RM=/bin/rm
+
+$(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
+	robot convert --input $< --output $@ --format owl
+	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
 
 $(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
 	robot convert --input $< --output $@ --format owl
@@ -23,19 +26,22 @@ $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
 
 $(VERSIONDIR)/modules/%.omn: $(ONTOLOGY_SOURCE)/edits/%.omn
 	cp -a $< $@
-	
+
+$(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
+	cp -a $< $@
+
 
 .PHONY: all clean
 
 all: directories $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
 
 clean:
-	- $(RM) $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
+	- $(RM) -r $(VERSIONDIR)
 
 directories: ${VERSIONDIR}/imports ${VERSIONDIR}/edits
 
 ${VERSIONDIR}/imports:
-	${MKDIR_P} ${VERSIONDIR}/imports
+	${MKDIR_P} -p ${VERSIONDIR}/imports
 
 ${VERSIONDIR}/edits:
-	${MKDIR_P} ${VERSIONDIR}/edits
+	${MKDIR_P} -p ${VERSIONDIR}/modules
