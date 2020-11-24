@@ -8,20 +8,20 @@ OWL_FILES := $(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl")
 OMN_FILES := $(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.omn")
 
 OWL_COPY := $(OWL_FILES:$(ONTOLOGY_SOURCE)/%.owl=$(VERSIONDIR)/%.owl)
-OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/%.omn=$(VERSIONDIR)/%.omn)
-OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/%.omn=$(VERSIONDIR)/%.owl) 
+OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits%.omn=$(VERSIONDIR)/modules/%.omn)
+OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) 
 
 
 RM=/bin/rm
 
-$(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
+$(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
 	robot convert --input $< --output $@ --format owl
 	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
 	cp -a $< $@
 
-$(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
+$(VERSIONDIR)/modules/%.omn: $(ONTOLOGY_SOURCE)/edits/%.omn
 	cp -a $< $@
 	
 
