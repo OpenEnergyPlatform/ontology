@@ -27,6 +27,7 @@ Here is a template for new release sections
 - further IPCC sector individuals (#595)
 - sector division and sector individuals of Bundes-Klimaschutzgesetz (#595)
 - radiation (#600)
+- subclasses of energy unit (#608)
 
 ### Changed
 - powerplant (#594)
