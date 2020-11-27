@@ -17,11 +17,11 @@ ROBOT := java -jar $(ROBOT_PATH)
 
 
 define replace_devs
-	sed -i -E "s/$(OEP_BASE)\/dev\/([A-z/-\.]+)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
+	sed -i -E "s/$(OEP_BASE)\/dev\/([a-zA-Z/\.\-]+)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
 endef
 
 define replace_oms
-	sed -i -E "s/($(OEP_BASE)\/dev\/([A-z/-]+)\.)omn/\1owl/m" $1
+	sed -i -E "s/($(OEP_BASE)\/dev\/([a-zA-Z/\-]+)\.)omn/\1owl/m" $1
 endef
 
 define translate_to_owl
