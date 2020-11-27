@@ -28,6 +28,7 @@ Here is a template for new release sections
 - sector division and sector individuals of Bundes-Klimaschutzgesetz (#595)
 - radiation (#600)
 - subclasses of energy unit (#608)
+- flow / stock potential and subclasses (#607)
 
 ### Changed
 - powerplant (#594)
