@@ -11,7 +11,7 @@ OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/module
 
 RM=/bin/rm
 
-$(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
+$(VERSIONDIR)/oeo.owl: $(ONTOLOGY_SOURCE)/oeo.omn
 	$(ROBOT) convert --input $< --output $@ --format owl
 	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
 
