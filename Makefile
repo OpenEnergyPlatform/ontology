@@ -7,11 +7,11 @@ OMN_FILES := $(shell find $(ONTOLOGY_SOURCE)/edits/* -type f -name "*.omn")
 
 OWL_COPY := $(OWL_FILES:$(ONTOLOGY_SOURCE)/%.owl=$(VERSIONDIR)/%.owl)
 OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.omn) $(VERSIONDIR)/oeo.omn
-OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.omn
+OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.owl
 
 RM=/bin/rm
 
-$(VERSIONDIR)/oeo.owl: $(ONTOLOGY_SOURCE)/oeo.omn
+$(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
 	$(ROBOT) convert --input $< --output $@ --format owl
 	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
 
