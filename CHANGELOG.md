@@ -29,10 +29,12 @@ Here is a template for new release sections
 - radiation (#600)
 - subclasses of energy unit (#608)
 - flow / stock potential and subclasses (#607)
+- kinetic energy (#609)
 
 ### Changed
 - powerplant (#594)
 - relations has part and part of (#599)
+- heat, renamed to thermal energy (#609)
 
 ### Removed
 
