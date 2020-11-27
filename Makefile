@@ -5,19 +5,25 @@ ONTOLOGY_SOURCE := src/ontology
 OWL_FILES := $(shell find $(ONTOLOGY_SOURCE)/imports/* -type f -name "*.owl")
 OMN_FILES := $(shell find $(ONTOLOGY_SOURCE)/edits/* -type f -name "*.omn")
 
+OEP_BASE := http:\/\/openenergy-platform\.org\/ontology\/oeo
+
 OWL_COPY := $(OWL_FILES:$(ONTOLOGY_SOURCE)/%.owl=$(VERSIONDIR)/%.owl)
 OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.omn) $(VERSIONDIR)/oeo.omn
-OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.owl
+OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.wl
 
 RM=/bin/rm
 
+define translate_to_owl
+	$(ROBOT) convert --input $2 --output $1 --format owl
+	sed -i -E "s/($(OEP_BASE)\/dev\/([A-z-]+)\.)omn/\1owl/m" $1
+	sed -i -E "s/$(OEP_BASE)\/dev\/([A-z-]+\.owl)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
+endef
+
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
-	$(ROBOT) convert --input $< --output $@ --format owl
-	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
+	$(call translate_to_owl,$@,$<)
 
 $(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
-	$(ROBOT) convert --input $< --output $@ --format owl
-	sed -i -E "s/(http:\/\/openenergy-platform\.org\/ontology\/oeo\/releases\/(v[0-9]+\.[0-9]+\.[0-9]+)\/([A-z-]+)\.)omn/\1owl/m" $@
+	$(call translate_to_owl,$@,$<)
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
 	cp -a $< $@
