@@ -13,10 +13,14 @@ OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/module
 
 RM=/bin/rm
 
+define replace_devs
+	sed -i -E "s/$(OEP_BASE)\/dev\/([A-z/-\.]+)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
+endef
+
 define translate_to_owl
 	$(ROBOT) convert --input $2 --output $1 --format owl
-	sed -i -E "s/($(OEP_BASE)\/dev\/([A-z-]+)\.)omn/\1owl/m" $1
-	sed -i -E "s/$(OEP_BASE)\/dev\/([A-z-]+\.owl)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
+	sed -i -E "s/($(OEP_BASE)\/dev\/([A-z/-]+)\.)omn/\1owl/m" $1
+	$(call replace_devs,$1)
 endef
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
@@ -27,12 +31,15 @@ $(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
 	cp -a $< $@
+	$(call replace_devs,$@)
 
 $(VERSIONDIR)/modules/%.omn: $(ONTOLOGY_SOURCE)/edits/%.omn
 	cp -a $< $@
+	$(call replace_devs,$@)
 
 $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 	cp -a $< $@
+	$(call replace_devs,$@)
 
 
 .PHONY: all clean
