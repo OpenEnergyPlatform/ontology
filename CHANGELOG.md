@@ -30,6 +30,7 @@ Here is a template for new release sections
 - subclasses of energy unit (#608)
 - flow / stock potential and subclasses (#607)
 - kinetic energy (#609)
+- aggregation types (#610)
 
 ### Changed
 - powerplant (#594)
