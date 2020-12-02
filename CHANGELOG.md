@@ -31,6 +31,7 @@ Here is a template for new release sections
 - flow / stock potential and subclasses (#607)
 - kinetic energy (#609)
 - aggregation types (#610)
+- areal energy / power density classes, solar-related subclasses and corresponding unit classes (#615)
 
 ### Changed
 - powerplant (#594)
