@@ -32,6 +32,7 @@ Here is a template for new release sections
 - kinetic energy (#609)
 - aggregation types (#610)
 - subclasses of consumption and energy amount value (#613)
+- areal energy / power density classes, solar-related subclasses and corresponding unit classes (#615)
 
 ### Changed
 - powerplant (#594)
