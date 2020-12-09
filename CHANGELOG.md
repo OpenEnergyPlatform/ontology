@@ -38,6 +38,7 @@ Here is a template for new release sections
 - powerplant (#594)
 - relations has part and part of (#599)
 - heat, renamed to thermal energy (#609)
+- replace iao-annotation-module and iao-minimal-module with OBO metadata ontology, restructure iao-module (#616)
 
 ### Removed
 
