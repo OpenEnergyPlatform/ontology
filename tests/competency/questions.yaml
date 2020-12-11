@@ -15,3 +15,27 @@ inferable:
 #  emissions emitted by ... are greenhouse gas emissions
 
 non-inferable:
+
+# Wind turbines are not powered by coal
+- Given c is a wind turbine and c has_input some Coal
+  Then, infer that the scenario is inconsistent;
+
+# Hot things carry energy
+- Given HotThing is defined as a `bfo:material entity` and `ro:is_bearer_of` some `thermal energy`
+  Then, infer that every HotThing is an `oeo:energy_carrier`;
+
+# Renewable energy cannot come from non-renewable energy
+- Given c is a `energy conversion` and c `has_output` o and o is a renewable energy and c `has_input` i and i is an energy
+  Then, infer that i is a renewable energy ;
+
+# A scenario can be used in different model calculations
+- Given s is a scenario specification and m1 is an energy model and m2 is an energy model and mc1 is a model calculation that conforms_to s and mc2 is a model calculation that conforms_to s
+  Then don't infer that mc1 is mc2
+
+# An agent is not a person - this is a common mistake in the domain
+- No agent is a person
+
+# - Given a scenario has some assumption about energy prices, then this scenario covers the energy sector
+
+# - A pump storage stores kinetic energy
+
