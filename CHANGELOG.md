@@ -166,6 +166,7 @@ Here is a template for new release sections
 - change power definition (#79)
 - change quantity to quantity value (#386)
 - grid, link, node, grid component (#36, #231)
+- electricity as alternative term for electrical energy (#621)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
