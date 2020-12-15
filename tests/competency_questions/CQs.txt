@@ -1,6 +1,42 @@
 Competency Questions and corresponding implementations:
 
-1.	Is synthetic hydrogen a synthetic fuel?
+1.	Are biofuels renewable fuels?
+//biofuel SubClassOf 'renewable fuel'
+i.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+ii.	biofuel SubClassOf 'has origin' some renewable
+iii.	'renewable fuel' EquivalentTo fuel and ('has origin' some renewable)
+
+2.	Is carbon monoxide an air pollutant?
+//'carbon monoxide' SubClassOf 'air pollutant'
+
+i.	'carbon monoxide' SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.'carbon monoxide' SubClassOf 'participates in' some 'air pollution'
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
+
+3.	 Is nitrous oxide classified as a greenhouse gas?
+
+// 'nitrous oxide' SubClassOf 'greenhouse gas'
+
+i.	'nitrous oxide' SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	'nitrous oxide' SubClassOf 'has disposition' some 'greenhouse effect disposition'
+iv.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
+
+4.	Which are the types of fluorinated greenhouse gases?
+'fluorinated greenhouse gas' EquivalentTo 'nitrogen trifluoride' or 'sulphur hexafluoride' or hydrofluorocarbon or perfluorocarbon
+
+
+5.	Is methane gaseous under normal pressure (1 bar) and normal temperature (0°C)?
+
+// methane SubClassOf 'has normal state of matter' value gaseous
+
+i.	methane SubClassOf 'portion of matter'
+ii.	methane SubClassOf 'has disposition' some 'greenhouse effect disposition'
+iii.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
+iv.	'greenhouse gas' SubClassOf 'has normal state of matter' value gaseous
+
+6.	Is synthetic hydrogen a synthetic fuel?
 
 // OEO_00010016 SubClassOf OEO_00010017
 
@@ -11,43 +47,6 @@ iv.	hydrogen SubClassOf 'has role' some 'fuel role'
 v.	OEO_00010016 SubClassOf 'has origin' some synthetic
 vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
 vii.	OEO_00010017 EquivalentTo fuel and ('has origin' some synthetic)
-
-
-2.	Are biofuels renewable fuels?
-//biofuel SubClassOf 'renewable fuel'
-i.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
-ii.	biofuel SubClassOf 'has origin' some renewable
-iii.	'renewable fuel' EquivalentTo fuel and ('has origin' some renewable)
-
-3.	Is carbon monoxide an air pollutant?
-//'carbon monoxide' SubClassOf 'air pollutant'
-
-i.	'carbon monoxide' SubClassOf 'has normal state of matter' value gaseous
-ii.	'has normal state of matter' Domain 'portion of matter'
-iii.	'carbon monoxide' SubClassOf 'participates in' some 'air pollution'
-iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
-
-4.	 Is nitrous oxide classified as a greenhouse gas?
-
-// 'nitrous oxide' SubClassOf 'greenhouse gas'
-
-i.	'nitrous oxide' SubClassOf 'has normal state of matter' value gaseous
-ii.	'has normal state of matter' Domain 'portion of matter'
-iii.	'nitrous oxide' SubClassOf 'has disposition' some 'greenhouse effect disposition'
-iv.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
-
-5.	Which are the types of fluorinated greenhouse gases?
-'fluorinated greenhouse gas' EquivalentTo 'nitrogen trifluoride' or 'sulphur hexafluoride' or hydrofluorocarbon or perfluorocarbon
-
-
-6.	Is methane gaseous under normal pressure (1 bar) and normal temperature (0°C)?
-
-// methane SubClassOf 'has normal state of matter' value gaseous
-
-i.	methane SubClassOf 'portion of matter'
-ii.	methane SubClassOf 'has disposition' some 'greenhouse effect disposition'
-iii.	'greenhouse gas' EquivalentTo 'portion of matter' ('has disposition' some 'greenhouse effect disposition')
-iv.	'greenhouse gas' SubClassOf 'has normal state of matter' value gaseous
 
 
 7.	Is biodiesel a liquid biofuel?
@@ -154,7 +153,7 @@ vii.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fue
 i.	'waste power unit' SubClassOf uses some 'waste fuel'
 ii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
 iii.	'waste power unit' SubClassOf 'power generating unit'
-iv.	'fueled power unit' EquivalentTo 'power generating unit' (uses some fuel)
+iv.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
 
 17.	Is a biofuel power plant classified as fueled power plant?
 
@@ -187,7 +186,8 @@ vi.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
 i.	'gas powerplant' SubClassOf 'has part' some 'gas fired power unit'
 ii.	'gas fired power unit' SubClassOf 'power generating unit'
 iii.	'gas fired power unit' SubClassOf uses some (fuel and ('has normal state of matter' value gaseous))
-iv.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel) 'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+iv.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+v.'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
 
 
 20.	Is a hydrogen power plant classified as fueled power plant?
@@ -226,7 +226,8 @@ i.	'waste powerplant' SubClassOf 'has part' some 'waste power unit'
 ii.	'waste power unit' SubClassOf uses some 'waste fuel'
 iii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
 iv.	'waste power unit' SubClassOf 'power generating unit'
-v.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel) 'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+v.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+vi.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
 
 
 23.	Is ammonia an air pollutant?
@@ -249,7 +250,7 @@ iii.	biodiesel SubClassOf 'has role' some 'fuel role'
 iv.	biodiesel SubClassOf 'has normal state of matter' value liquid
 v.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
 vi.	biofuel EquivalentTo fuel and ('has origin' s me biogenic)
-vii.	'liquid biofuel' EquivalentTo biofuel ('has normal state of matter' value liquid)
+vii.	'liquid biofuel' EquivalentTo biofuel and ('has normal state of matter' value liquid)
 
 
 25.	Is bio gasoline classified as liquid biofuel?
@@ -262,7 +263,7 @@ iv.	biogasoline SubClassOf 'has role' some 'fuel role'
 v.	biogasoline SubClassOf 'has normal state of matter' value liquid
 vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
 vii.	biofuel EquivalentTo fuel and ('has origin' s me biogenic)
-viii.	'liquid biofuel' EquivalentTo biofuel ('has normal state of matter' value liquid)
+viii.	'liquid biofuel' EquivalentTo biofuel and ('has normal state of matter' value liquid)
 
 26.	Is carbon dioxide a greenhouse gas?
 
@@ -271,7 +272,7 @@ viii.	'liquid biofuel' EquivalentTo biofuel ('has normal state of matter' value 
 1) 'carbon dioxide' SubClassOf 'has normal state of matter' value gaseous
 2) 'has normal state of matter' Domain 'portion of matter'
 3) 'carbon dioxide' SubClassOf 'has disposition' some 'greenhouse effect disposition'
-4) 'greenhouse gas' EquivalentTo 'portion of matter' any ('has disposition' some 'greenhouse effect disposition')
+4) 'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
 
 
 27.	Is charcoal a solid biofuel?
@@ -341,7 +342,7 @@ i.	'renewable municipal waste fuel' SubClassOf 'municipal waste fuel'
 ii.	'municipal waste fuel' SubClassOf 'waste fuel'
 iii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
 iv.	'renewable municipal waste fuel' SubClassOf 'has origin' some biogenic
-v.	biofuel EquivalentTo fuel ('has origin' some biogenic)
+v.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
 
 
 
@@ -362,7 +363,7 @@ iv.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible
 i.	methane SubClassOf 'has normal state of matter' value gaseous
 ii.	'has normal state of matter' Domain 'portion of matter'
 iii.	methane SubClassOf 'has disposition' some 'greenhouse effect disposition'
-iv.	'greenhouse gas' EquivalentTo 'portion of matter' ('has disposition' some 'greenhouse effect disposition')
+iv.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
 
 36.	Is methane a combustion fuel?
 
@@ -404,7 +405,7 @@ iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some
 i.	'particulate matter' SubClassOf ('has normal state of matter' value liquid) and ('has normal state of matter' value solid)
 ii.	'has normal state of matter' Domain 'portion of matter'
 iii.	'particulate matter' SubClassOf 'participates in' some 'air pollution'
-iv.	'air pollutant' EquivalentTo 'portion of matter' ('participates in' some 'air pollution')
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
 
 
 
