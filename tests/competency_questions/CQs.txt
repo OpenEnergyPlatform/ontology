@@ -1,0 +1,429 @@
+Competency Questions and corresponding implementations:
+
+1.	Are biofuels renewable fuels?
+//biofuel SubClassOf 'renewable fuel'
+i.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+ii.	biofuel SubClassOf 'has origin' some renewable
+iii.	'renewable fuel' EquivalentTo fuel and ('has origin' some renewable)
+
+2.	Is carbon monoxide an air pollutant?
+//'carbon monoxide' SubClassOf 'air pollutant'
+
+i.	'carbon monoxide' SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.'carbon monoxide' SubClassOf 'participates in' some 'air pollution'
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
+
+3.	 Is nitrous oxide classified as a greenhouse gas?
+
+// 'nitrous oxide' SubClassOf 'greenhouse gas'
+
+i.	'nitrous oxide' SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	'nitrous oxide' SubClassOf 'has disposition' some 'greenhouse effect disposition'
+iv.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
+
+4.	Which are the types of fluorinated greenhouse gases?
+'fluorinated greenhouse gas' EquivalentTo 'nitrogen trifluoride' or 'sulphur hexafluoride' or hydrofluorocarbon or perfluorocarbon
+
+
+5.	Is methane gaseous under normal pressure (1 bar) and normal temperature (0°C)?
+
+// methane SubClassOf 'has normal state of matter' value gaseous
+
+i.	methane SubClassOf 'portion of matter'
+ii.	methane SubClassOf 'has disposition' some 'greenhouse effect disposition'
+iii.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
+iv.	'greenhouse gas' SubClassOf 'has normal state of matter' value gaseous
+
+6.	Is synthetic hydrogen a synthetic fuel?
+
+// OEO_00010016 SubClassOf OEO_00010017
+
+i.	OEO_00010016 SubClassOf hydrogen
+ii.	hydrogen SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+iii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iv.	hydrogen SubClassOf 'has role' some 'fuel role'
+v.	OEO_00010016 SubClassOf 'has origin' some synthetic
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	OEO_00010017 EquivalentTo fuel and ('has origin' some synthetic)
+
+
+7.	Is biodiesel a liquid biofuel?
+
+// biodiesel SubClassOf liquid biofuel'
+
+i.	biodiesel SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iii.	biodiesel SubClassOf 'has origin' some biogenic
+iv.	biodiesel SubClassOf 'has role' some 'fuel role'
+v.	biodiesel SubClassOf 'has normal state of matter' value liquid
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+viii.	'liquid biofuel' EquivalentTo biofuel and ('has normal state of matter' value liquid)
+
+
+8.	Is charcoal a solid biofuel?
+
+        // charcoal SubClassOf 'solid biofuel'
+i.	charcoal SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iii.	charcoal SubClassOf 'has origin' some biogenic
+iv.	charcoal SubClassOf 'has role' some 'fuel role'
+v.	charcoal SubClassOf 'has normal state of matter' value solid
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+viii.	'solid biofuel' EquivalentTo biofuel and ('has normal state of matter' value solid)
+
+
+9.	Is the power line an electricity grid component?
+
+// 'power line' SubClassOf 'electricity grid component'
+
+i.	'power line' SubClassOf 'grid component link'
+ii.	'grid component link' SubClassOf 'grid component'
+iii.	'power line' SubClassOf 'part of’ some 'electricity grid'
+iv.	'electricity grid component' EquivalentTo 'grid component' and ('part of’ some 'electricity grid')
+
+
+10.	Is a switchyard an electricity grid component?
+
+//switchyard SubClassOf 'electricity grid component'
+
+i.	switchyard SubClassOf 'grid component'
+ii.	switchyard SubClassOf 'part of’ some 'electricity grid'
+iii.	'electricity grid component' EquivalentTo 'grid component' and ('part of’ some 'electricity grid')
+
+11.	Is a transformer an electricity grid component?
+
+//transformer SubClassOf 'electricity grid component'
+
+i.	transformer SubClassOf 'grid component'
+ii.	transformer SubClassOf 'part of’ some 'electricity grid'
+iii.	'electricity grid component' EquivalentTo 'grid component' and ('part of’ some 'electricity grid')
+
+
+12.	Is a gas fired power unit a fuelled power unit?
+//'gas fired power unit' SubClassOf 'fueled power unit'
+
+i.	'gas fired power unit' SubClassOf 'power generating unit'
+ii.	'gas fired power unit' SubClassOf uses some (fuel ('has normal state of matter' value gaseous))
+iii.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+
+
+13.	Is a hydrogen power unit a fueled power unit?
+
+// 'hydrogen power unit' SubClassOf 'fueled power unit'
+
+i.	'hydrogen power unit' SubClassOf uses some hydrogen
+ii.	hydrogen SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+iii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iv.	hydrogen SubClassOf 'has role' some 'fuel role'
+v.	'hydrogen power unit' SubClassOf 'power generating unit'
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+
+
+14.	Is a nuclear power unit classified as fueled power unit?
+// 'nuclear power unit' SubClassOf 'fueled power unit'
+
+i.	'nuclear power unit' SubClassOf uses some 'nuclear fuel'
+ii.	'nuclear fuel' SubClassOf fuel
+iii.	'nuclear power unit' SubClassOf 'power generating unit'
+iv.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+
+
+15.	Is an oil power unit classified as fueled power unit?
+
+// 'oil power unit' SubClassOf 'fueled power unit'
+
+i.	'oil power unit' SubClassOf uses some 'oil and petroleum products'
+ii.	'oil and petroleum products' SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+iii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iv.	'oil and petroleum products' SubClassOf 'has role' some 'fuel role'
+v.	'oil power unit' SubClassOf 'power generating unit'
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+
+
+16.	Is a waste power unit classified as fueled power unit?
+
+//'waste power unit' SubClassOf 'fueled power unit'
+
+i.	'waste power unit' SubClassOf uses some 'waste fuel'
+ii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
+iii.	'waste power unit' SubClassOf 'power generating unit'
+iv.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+
+17.	Is a biofuel power plant classified as fueled power plant?
+
+// 'biofuel powerplant' SubClassOf 'fueled powerplant'
+
+i.	'biofuel powerplant' SubClassOf 'has part' some 'biofuel power unit'
+ii.	'biofuel power unit' SubClassOf uses some biofuel
+iii.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+iv.	'biofuel power unit' SubClassOf 'power generating unit'
+v.	'fueled power unit' EquivalentTo 'power generating unit' (uses some fuel)
+vi.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+
+
+
+18.	Is a coal power plant classified as fueled power plant?
+
+//'biofuel powerplant' SubClassOf 'fueled powerplant'
+
+i.	'biofuel powerplant' SubClassOf 'has part' some 'biofuel power unit'
+ii.	'biofuel power unit' SubClassOf uses some biofuel
+iii.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+iv.	'biofuel power unit' SubClassOf 'power generating unit'
+v.	'fueled power unit' EquivalentTo 'power generating unit' (uses some fuel)
+vi.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+
+19.	Is a gas power plant classified as fueled power plant?
+
+//'gas powerplant' SubClassOf 'fueled powerplant'
+
+i.	'gas powerplant' SubClassOf 'has part' some 'gas fired power unit'
+ii.	'gas fired power unit' SubClassOf 'power generating unit'
+iii.	'gas fired power unit' SubClassOf uses some (fuel and ('has normal state of matter' value gaseous))
+iv.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+v.'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+
+
+20.	Is a hydrogen power plant classified as fueled power plant?
+
+// 'hydrogen powerplant' SubClassOf 'fueled powerplant'
+
+i.	'hydrogen powerplant' SubClassOf 'has part' some 'hydrogen power unit'
+ii.	'hydrogen power unit' SubClassOf uses some hydrogen
+iii.	hydrogen SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+iv.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition' hydrogen SubClassOf 'has role' some 'fuel role'
+v.	'hydrogen power unit' SubClassOf 'power generating unit'
+vi.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+vii.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+viii.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+
+
+21.	Is an oil power plant classified as fueled power plant?
+
+// 'oil powerplant' SubClassOf 'fueled powerplant'
+
+i.	'oil powerplant' SubClassOf 'has part' some 'oil power unit'
+ii.	'oil power unit' SubClassOf uses some 'oil and petroleum products'
+iii.	'oil and petroleum products' SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+iv.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+v.	'oil and petroleum products' SubClassOf 'has role' some 'fuel role'
+vi.	'oil power unit' SubClassOf 'power generating unit'
+vii.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+viii.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+ix.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+
+22.	Is a waste power plant classified as fueled power plant?
+
+// 'waste powerplant' SubClassOf 'fueled powerplant'
+
+i.	'waste powerplant' SubClassOf 'has part' some 'waste power unit'
+ii.	'waste power unit' SubClassOf uses some 'waste fuel'
+iii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
+iv.	'waste power unit' SubClassOf 'power generating unit'
+v.	'fueled power unit' EquivalentTo 'power generating unit' and (uses some fuel)
+vi.	'fueled powerplant' EquivalentTo 'has part' some 'fueled power unit'
+
+
+23.	Is ammonia an air pollutant?
+
+//ammonia SubClassOf 'air pollutant'
+
+i.	ammonia SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	ammonia SubClassOf 'participates in' some 'air pollution'
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution’)
+
+
+24.	Is biodiesel classified as liquid biofuel?
+
+// biodiesel SubClassOf 'liquid biofuel'
+
+i.	biodiesel SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition' biodiesel SubClassOf 'has origin' some biogenic
+iii.	biodiesel SubClassOf 'has role' some 'fuel role'
+iv.	biodiesel SubClassOf 'has normal state of matter' value liquid
+v.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vi.	biofuel EquivalentTo fuel and ('has origin' s me biogenic)
+vii.	'liquid biofuel' EquivalentTo biofuel and ('has normal state of matter' value liquid)
+
+
+25.	Is bio gasoline classified as liquid biofuel?
+//biogasoline SubClassOf 'liquid biofuel'
+
+i.	biogasoline SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iii.	biogasoline SubClassOf 'has origin' some biogenic
+iv.	biogasoline SubClassOf 'has role' some 'fuel role'
+v.	biogasoline SubClassOf 'has normal state of matter' value liquid
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	biofuel EquivalentTo fuel and ('has origin' s me biogenic)
+viii.	'liquid biofuel' EquivalentTo biofuel and ('has normal state of matter' value liquid)
+
+26.	Is carbon dioxide a greenhouse gas?
+
+// 'carbon dioxide' SubClassOf 'greenhouse gas'
+
+1) 'carbon dioxide' SubClassOf 'has normal state of matter' value gaseous
+2) 'has normal state of matter' Domain 'portion of matter'
+3) 'carbon dioxide' SubClassOf 'has disposition' some 'greenhouse effect disposition'
+4) 'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
+
+
+27.	Is charcoal a solid biofuel?
+
+// charcoal SubClassOf 'solid biofuel'
+
+i.	charcoal SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iii.	charcoal SubClassOf 'has origin' some biogenic
+iv.	charcoal SubClassOf 'has role' some 'fuel role'
+v.	charcoal SubClassOf 'has normal state of matter' value solid
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+viii.	'solid biofuel' EquivalentTo biofuel and ('has normal state of matter' value solid)
+
+28.	Is coal a solid fossil fuel?
+
+// coal SubClassOf 'solid fossil fuel'
+
+i.	coal SubClassOf 'has origin' some fossil
+ii.	coal SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+iii.	coal SubClassOf 'has normal state of matter' value solid
+iv.	'solid fossil fuel' EquivalentTo ('has origin' some fossil) and ('has disposition' some 'combustible energy carrier disposition') and ('has normal state of matter' value solid)
+
+29.	Is a biofuel classified as renewable fuel?
+
+// biofuel SubClassOf 'renewable fuel'
+
+i.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+ii.	biofuel SubClassOf 'has origin' some renewable
+iii.	'renewable fuel' EquivalentTo fuel and ('has origin' some renewable)
+
+
+
+30.	Is a synthetic fuel classified as combustion fuel?
+
+//OEO_00010017 SubClassOf 'combustion fuel'
+
+i.	OEO_00010017 SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	OEO_00010017 EquivalentTo fuel and ('has origin' some synthetic)
+iii.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible energy carrier disposition')
+
+
+31.	Is a renewable fuel classified as combustion fuel?
+
+// 'renewable fuel' SubClassOf 'combustion fuel'
+
+i.	'renewable fuel' SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'renewable fuel' EquivalentTo fuel and ('has origin' some renewable)
+iii.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible energy carrier disposition')
+
+
+32.	Is a waste fuel classified as combustion fuel?
+
+//'waste fuel' SubClassOf 'combustion fuel'
+
+i.	'waste fuel' SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
+iii.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible energy carrier disposition')
+
+
+33.	Is renewable municipal waste fuel classified as biofuel?
+
+// 'renewable municipal waste fuel' SubClassOf biofuel
+
+i.	'renewable municipal waste fuel' SubClassOf 'municipal waste fuel'
+ii.	'municipal waste fuel' SubClassOf 'waste fuel'
+iii.	'waste fuel' EquivalentTo fuel and ('has role' some 'waste role')
+iv.	'renewable municipal waste fuel' SubClassOf 'has origin' some biogenic
+v.	biofuel EquivalentTo fuel and ('has origin' some biogenic)
+
+
+
+34.	Is hydrogen a combustion fuel?
+
+// hydrogen SubClassOf 'combustion fuel'
+
+i.	hydrogen SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition' hydrogen SubClassOf 'has role' some 'fuel role'
+iii.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+iv.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible energy carrier disposition')
+
+
+35.	Is methane a greenhouse gas?
+
+// methane SubClassOf 'greenhouse gas
+
+i.	methane SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	methane SubClassOf 'has disposition' some 'greenhouse effect disposition'
+iv.	'greenhouse gas' EquivalentTo 'portion of matter' and ('has disposition' some 'greenhouse effect disposition')
+
+36.	Is methane a combustion fuel?
+
+//methane SubClassOf 'combustion fuel'
+
+i.	methane SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition' methane SubClassOf 'has role' some 'fuel role'
+iii.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+iv.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible energy carrier disposition')
+
+
+37.	Is natural gas a fossil combustion fuel?
+
+// 'natural gas' SubClassOf 'fossil combustion fuel'
+
+i.	'natural gas' SubClassOf 'has disposition' some 'combustible energy carrier disposition'
+ii.	'combustible energy carrier disposition' SubClassOf 'energy carrier disposition'
+iii.	'natural gas' SubClassOf 'has origin' some fossil
+iv.	'natural gas' SubClassOf 'has role' some 'fuel role'
+v.	'combustion fuel' EquivalentTo fuel and ('has disposition' some 'combustible energy carrier disposition')
+vi.	fuel EquivalentTo ('has role' some 'fuel role') and ('has disposition' some 'energy carrier disposition')
+vii.	'fossil combustion fuel' EquivalentTo 'combustion fuel' and ('has origin' some fossil)
+
+
+38.	Is nitrogen oxide an air pollutant?
+
+// 'nitrogen oxides' SubClassOf 'air pollutant'
+
+i.	'nitrogen oxides' SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	'nitrogen oxides' SubClassOf 'participates in' some 'air pollution'
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
+
+
+39.	Is particulate matter an air pollutant?
+
+// 'particulate matter' SubClassOf 'air pollutant'
+
+i.	'particulate matter' SubClassOf ('has normal state of matter' value liquid) and ('has normal state of matter' value solid)
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	'particulate matter' SubClassOf 'participates in' some 'air pollution'
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
+
+
+
+40.	Is peat a solid fossil fuel?
+
+//peat SubClassOf 'solid fossil fuel'
+
+i.	peat SubClassOf 'has origin' some fossil
+ii.	peat SubClassOf 'has disposition' some 'combustible energy carrier disposition' peat SubClassOf 'has normal state of matter' value solid
+iii.	'solid fossil fuel' EquivalentTo ('has origin' some fossil) and ('has disposition' some 'combustible energy carrier disposition') and ('has normal state of matter' value solid)
+
+
+
+41.	Is Sulphur dioxide an air pollutant?
+
+//'sulphur dioxide' SubClassOf 'air pollutant'
+
+i.	'sulphur dioxide' SubClassOf 'has normal state of matter' value gaseous
+ii.	'has normal state of matter' Domain 'portion of matter'
+iii.	'sulphur dioxide' SubClassOf 'participates in' some 'air pollution'
+iv.	'air pollutant' EquivalentTo 'portion of matter' and ('participates in' some 'air pollution')
