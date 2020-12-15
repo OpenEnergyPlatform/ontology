@@ -40,6 +40,7 @@ Here is a template for new release sections
 - heat, renamed to thermal energy (#609)
 - replace iao-annotation-module and iao-minimal-module with OBO metadata ontology, restructure iao-module (#616)
 - defs of relations has contributer, has resolution and covers (#626)
+- energy carrier disposition (#627)
 
 ### Removed
 
