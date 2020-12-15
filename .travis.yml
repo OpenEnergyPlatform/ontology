@@ -3,18 +3,19 @@ language: java
 
 before_script:
   - mkdir $TRAVIS_BUILD_DIR/.logs
-  - mkdir lib
-  - wget https://github.com/ontodev/robot/releases/download/v1.6.0/robot.jar -O lib/robot.jar
-  - TRAVIS_BASE=`pwd`
- 
-script:
   - cd $TRAVIS_BUILD_DIR
   - make
   - VERSION=`cat VERSION`
   - MERGED=build/oeo/$VERSION/oeo-full.owl
-  - java -jar $TRAVIS_BASE/lib/robot.jar validate-profile --input $MERGED --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
-  - java -jar $TRAVIS_BASE/lib/robot.jar verify --input $MERGED --queries tests/verify/* > .logs/verify.log
 
+jobs:
+  include:
+  - name: validate-profile
+    script:
+    - java -jar build/robot.jar validate-profile --input $MERGED --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
+  - name: verify
+    script:
+    - java -jar build/robot.jar verify --input $MERGED --queries tests/verify/* > .logs/verify.log
 
 
 after_failure:
