@@ -41,6 +41,7 @@ Here is a template for new release sections
 - replace iao-annotation-module and iao-minimal-module with OBO metadata ontology, restructure iao-module (#616)
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
+- comment on waste fuel (#631)
 
 ### Removed
 
