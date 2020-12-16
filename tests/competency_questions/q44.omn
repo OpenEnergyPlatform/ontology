@@ -1,0 +1,16 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+
+Ontology: <http://openenergy-platform.org/ontology/cc/> <http://openenergy-platform.org/ontology/cc/>
+
+
+# Renewable fuel cannot come from solid fossil fuel
+
+ObjectProperty: OEO_00000532 # has physical input
+ObjectProperty: OEO_00000533 # has physical output
+Class: OEO_00000011 # Energy converting device
+ObjectProperty: RO_0000091
+Class: OEO_00000033 # Renewable fuel
+Class: OEO_00000391 # solid fossil fuel
+
+EquivalentClasses: ((OEO_00000533 some OEO_00000033) and (OEO_00000532 some OEO_00000391)), owl:Nothing

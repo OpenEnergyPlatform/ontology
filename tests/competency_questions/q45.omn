@@ -1,0 +1,30 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+
+Ontology: <http://openenergy-platform.org/ontology/cc/> <http://openenergy-platform.org/ontology/cc/>
+
+
+# # A scenario can be used in different model calculations
+
+ObjectProperty: RO_0000057 # has_participant
+Class: OEO_00000364 # scenario
+ObjectProperty: BFO_0000055 # realizes
+Class: OEO_00000419 # transformation
+Class: OEO_00000274 # model
+
+Individual: s
+  Types: OEO_00000364
+
+Individual: m1
+  Types: OEO_00000274
+
+Individual: m2
+  Types: OEO_00000274
+
+Individual: mc1 
+  Types: OEO_00000419 and (BFO_0000055 value s) and (RO_0000057 value m1)
+
+Individual: mc2
+  Types: OEO_00000419 and (BFO_0000055 value s)  and (RO_0000057 value m2)
+
+DifferentIndividuals: m1, m2, mc1, mc2
