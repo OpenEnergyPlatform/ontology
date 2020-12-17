@@ -33,7 +33,7 @@ Here is a template for new release sections
 - aggregation types (#610)
 - subclasses of consumption and energy amount value (#613)
 - areal energy / power density classes, solar-related subclasses and corresponding unit classes (#615)
-- add primary, secondary and final energy carrier (disposition) (#633)
+- primary, secondary and final energy carrier (disposition) (#633)
 
 ### Changed
 - powerplant (#594)
@@ -186,4 +186,3 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
