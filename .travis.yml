@@ -20,6 +20,7 @@ jobs:
     script:
     - wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
     - bash tests/competency_questions/run_questions.sh "java -jar $TRAVIS_BUILD_DIR/build/hermit.jar" $TRAVIS_BUILD_DIR/$MERGED true
+    - bash tests/competency_questions/run_questions.sh "java -jar $TRAVIS_BUILD_DIR/build/hermit.jar" $TRAVIS_BUILD_DIR/$MERGED false
 
 after_failure:
   - more .log/* | cat
