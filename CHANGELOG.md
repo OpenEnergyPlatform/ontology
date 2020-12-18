@@ -17,8 +17,7 @@ Here is a template for new release sections
 -
 ```
 
-
-## unreleased
+## [1.3.0] - 2020-12-18
 
 ### Added
 - industrial process (#589)
