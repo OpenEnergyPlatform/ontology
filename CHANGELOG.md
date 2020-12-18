@@ -17,8 +17,7 @@ Here is a template for new release sections
 -
 ```
 
-
-## unreleased
+## [1.3.0] - 2020-12-18
 
 ### Added
 - industrial process (#589)
@@ -43,11 +42,6 @@ Here is a template for new release sections
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
-
-### Removed
-
-
-
 
 ## [1.2.0] - 2020-10-30
 
