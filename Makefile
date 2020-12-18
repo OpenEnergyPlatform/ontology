@@ -36,7 +36,7 @@ endef
 
 all: base merge
 
-base: | directories build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
+base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
 
 merge: | $(VERSIONDIR)/oeo-full.owl
 
@@ -50,6 +50,11 @@ ${VERSIONDIR}/imports:
 
 ${VERSIONDIR}/modules:
 	${MKDIR_P} ${VERSIONDIR}/modules
+
+$(VERSIONDIR)/catalog-v001.xml: src/ontology/catalog-v001.xml
+	cp $< $@
+	$(call replace_devs,$@)
+	sed -i -E "s/edits\//modules\//m" $@
 
 build/robot.jar: | build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
@@ -74,7 +79,7 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 	$(call replace_devs,$@)
 
 $(VERSIONDIR)/oeo-full.omn : | base
-	$(ROBOT) merge $(foreach f,$(OMN_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f,$(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
 
 $(VERSIONDIR)/oeo-full.owl : $(VERSIONDIR)/oeo-full.omn
 	$(call translate_to_owl,$@,$<)
