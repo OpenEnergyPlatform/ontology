@@ -11,9 +11,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-model/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-model.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/imports/iao-module.owl>
+<http://openenergy-platform.org/ontology/oeo/dev/oeo-model.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/iao-module.owl>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation.",
@@ -122,14 +122,18 @@ ObjectProperty: OEO_00000513
 ObjectProperty: OEO_00000514
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a publication/model/model calculation and the resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study / publication / model/model calculation and the resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626",
         rdfs:label "has resolution"
     
     
 ObjectProperty: OEO_00000515
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the spacial resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a study / publication / model/model calculation and the spatial resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626",
         rdfs:label "has spatial resolution"
     
     SubPropertyOf: 
@@ -139,7 +143,9 @@ ObjectProperty: OEO_00000515
 ObjectProperty: OEO_00000516
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation thst holds between a publication/model/model calculation and the time resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study / publication / model/model calculation and the time resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626",
         rdfs:label "has temporal resolution"
     
     SubPropertyOf: 
@@ -258,17 +264,11 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000028>
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000088>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000100>
-
-    
-Class: <http://purl.obolibrary.org/obo/IAO_0000300>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000310>
@@ -1342,6 +1342,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
         OEO_00000119
     
     
+Class: OEO_00140068
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "aggregation of a data set with spatial references",
+        <http://purl.obolibrary.org/obo/IAO_0000112> "temporal aggregation of continuous measurements for a discrete time series",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An aggregation type is a data descriptor that contains information on the aggregation method applied on a data set.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
+        rdfs:label "aggregation type"@en
+    
+    SubClassOf: 
+        OEO_00000119
+    
+    
 Individual: OEO_00000049
 
     Annotations: 
@@ -1712,5 +1726,65 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
     
     Types: 
         OEO_00140044
+    
+    
+Individual: OEO_00140069
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "value measured at or modelled for exactly one 0-dim temporal region, referenced by a time stamp, e.g. to represent a time step in a time series",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
+        rdfs:label "instantaneous"@en
+    
+    Types: 
+        OEO_00140068
+    
+    
+Individual: OEO_00140070
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "sum or integral of values, e.g. within a time step or a spatial region",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
+        rdfs:label "integral"@en
+    
+    Types: 
+        OEO_00140068
+    
+    
+Individual: OEO_00140071
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "average value calculated by arithmetic mean over a set of data values, e.g. within a time step or spatial region",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
+        rdfs:label "arithmetic mean"@en
+    
+    Types: 
+        OEO_00140068
+    
+    
+Individual: OEO_00140072
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "minimum value within a set of data values, e.g. in a time step or spatial region",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
+        rdfs:label "minimum"@en
+    
+    Types: 
+        OEO_00140068
+    
+    
+Individual: OEO_00140073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "maximum value within a set of data values, e.g. in a time step or spatial region",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
+        rdfs:label "maximum"@en
+    
+    Types: 
+        OEO_00140068
     
     

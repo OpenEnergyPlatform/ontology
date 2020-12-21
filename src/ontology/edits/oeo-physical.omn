@@ -11,9 +11,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-physical/>
-<http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-physical.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/releases/v1.2.0/imports/iao-minimal-module.owl>
+<http://openenergy-platform.org/ontology/oeo/dev/oeo-physical.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Physical' module covers all those aspects of the world that are relevant for the energy systems domain, including physical entities such as generators, power lines, technologies, hardware, portions of matter; attributes of those, such as the energy they carry or release, whether they can be a pollutant, or their origins; representational transformations into maps and measures, such as coordinates, units, quantities; and the processes that modify the physical entities, such as energy production.",
@@ -39,6 +38,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
 AnnotationProperty: dc:contributor
@@ -68,6 +70,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 
     
@@ -93,6 +98,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
+
+    
+ObjectProperty: OEO_00000500
 
     
 ObjectProperty: OEO_00000501
@@ -341,6 +349,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000034>
 Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000040>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
@@ -357,6 +368,12 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000001>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000111>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
 Class: OEO_00000001
@@ -678,13 +695,18 @@ Class: OEO_00000030
 Class: OEO_00000031
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A powerplant is an aggregate of power generating units that feeds electric energy into an electric grid.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A powerplant is an artificial object consisting of power generating units and a grid component that feeds electric energy into an electric grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/588
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/594
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
         rdfs:label "powerplant"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020006
     
     
 Class: OEO_00000032
@@ -1253,9 +1275,15 @@ Class: OEO_00000139
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy is a form of energy derived from the potential or kinetic energy of charged particles."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "electricity",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Electrical_energy"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
-pull request:  https://github.com/OpenEnergyPlatform/ontology/pull/524",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition of electrical energy:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
+pull request:  https://github.com/OpenEnergyPlatform/ontology/pull/524
+
+alternative term electricity:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/381
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/621",
         rdfs:label "electrical energy"
     
     SubClassOf: 
@@ -1316,7 +1344,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "emission"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00000148
     
     
 Class: OEO_00000148
@@ -1329,6 +1358,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581",
     
     SubClassOf: 
         OEO_00030019,
+        OEO_00000502 some OEO_00000147,
         OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
@@ -1349,9 +1379,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364",
 Class: OEO_00000151
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier disposition is a disposition of an object or object aggregate that contains energy for conversion as usable energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier disposition is a disposition of an material entity that contains energy for conversion as usable energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627",
         rdfs:label "energy carrier disposition"
     
     SubClassOf: 
@@ -1423,7 +1455,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000175
     
     SubClassOf: 
-        OEO_00000031
+        OEO_00000031,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
     
     
 Class: OEO_00000175
@@ -1439,7 +1472,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306",
          and (OEO_00000503 some OEO_00000173)
     
     SubClassOf: 
-        OEO_00000334
+        OEO_00000334,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
     
     
 Class: OEO_00000181
@@ -1638,10 +1672,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
 Class: OEO_00000207
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In thermodynamics, heat is energy in transfer to or from a thermodynamic system, by mechanisms other than thermodynamic work or transfer of matter.
-       The mechanisms include conduction, through direct contact of immobile bodies, or through a wall or barrier that is impermeable to matter; or radiation between separated bodies; or isochoric mechanical work done by the surroundings on the system of interest; or Joule heating by an electric current driven through the system of interest by an external system; or a combination of these."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Heat&oldid=90563031157"@en,
-        rdfs:label "heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Thermal energy is the energy that a material entity contains in the undirected motion of its constituent parts (e.g. molecules and atoms)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/609"@en,
+        rdfs:label "thermal energy"@en
     
     SubClassOf: 
         OEO_00000150
@@ -2633,9 +2667,14 @@ Class: OEO_00000439
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A waste fuel is a fuel in which the material entity is waste."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/132
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/207",
-        rdfs:comment "The energy content of waste fuel is typically released by incineration or gasification.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "label and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/132
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/207
+
+comment:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/629
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/631",
+        rdfs:comment "The energy content of waste fuel is typically released by incineration or gasification. The energy content of nuclear waste is not considered as a waste fuel.",
         rdfs:label "waste fuel"
     
     EquivalentTo: 
@@ -2887,7 +2926,7 @@ Class: OEO_00010015
         <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil hydrogen is hydrogen with fossil origin. It is usually produced from fossil fuels applying the steam reforming process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "fossil hydrogen"@de
+        rdfs:label "fossil hydrogen"
     
     SubClassOf: 
         OEO_00000220,
@@ -2900,7 +2939,7 @@ Class: OEO_00010016
         <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic hydrogen is hydrogen with synthetic origin. It is usually produced from water applying the water electrolysis process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic hydrogen"@de
+        rdfs:label "synthetic hydrogen"
     
     SubClassOf: 
         OEO_00000220,
@@ -2915,7 +2954,7 @@ Class: OEO_00010017
         <http://purl.obolibrary.org/obo/IAO_0000118> "electric fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic fuel"@de
+        rdfs:label "synthetic fuel"
     
     EquivalentTo: 
         OEO_00000173
@@ -2931,7 +2970,7 @@ Class: OEO_00010018
         <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic methane is synthetic fuel produced in a power-to-gas system from water and carbon dioxide using electric energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic methane"@de
+        rdfs:label "synthetic methane"
     
     SubClassOf: 
         OEO_00000025,
@@ -2944,7 +2983,7 @@ Class: OEO_00010019
         <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic liquid fuel is synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electric energy applying.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic liquid fuel"@de
+        rdfs:label "synthetic liquid fuel"
     
     EquivalentTo: 
         OEO_00010017
@@ -3125,6 +3164,82 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
         OEO_00000011
     
     
+Class: OEO_00010072
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal power density unit is a unit which is a measure for the power per surface area.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
+        rdfs:label "areal power density unit"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00010073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal energy density unit is a unit which is a measure for the energy per surface area.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
+        rdfs:label "areal energy density unit"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00010074
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal power density is a quantity value that indicates a certain power per area.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
+        rdfs:label "areal power density"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some OEO_00010072
+    
+    
+Class: OEO_00010075
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal energy density is a quantity value that states a certain energy amount per area.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
+        rdfs:label "areal energy density"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some OEO_00010073
+    
+    
+Class: OEO_00010076
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal solar power density is an areal power density that indicates the arriving solar power per area. A synonym for areal solar power density is irradiance.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "irradiance",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
+        rdfs:label "areal solar power density"
+    
+    SubClassOf: 
+        OEO_00010074
+    
+    
+Class: OEO_00010077
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal solar energy density is an areal energy density that gives the arriving solar power per area. A synonym for areal solar power density is irradiation.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "irradiation",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
+        rdfs:label "areal solar energy density"
+    
+    SubClassOf: 
+        OEO_00010075
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -3239,6 +3354,47 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000420
     
     
+Class: OEO_00020037
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Radiation is the process of emitting or transmitting energy in the form of waves or particles through a spatial region or a material entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Adaptation of https://en.wikipedia.org/w/index.php?title=Radiation&oldid=986678480",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/362
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/600",
+        rdfs:label "radiation"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00020038
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation is radiation that is emitted by the sun.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/362
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/600",
+        rdfs:label "solar radiation"
+    
+    SubClassOf: 
+        OEO_00020037
+    
+    
+Class: OEO_00020039
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has the disposition energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627",
+        rdfs:label "energy carrier"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
 Class: OEO_00030000
 
     Annotations: 
@@ -3321,7 +3477,7 @@ Class: OEO_00030019
         <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
-        rdfs:label "process attribute"@de
+        rdfs:label "process attribute"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000003>
@@ -3385,6 +3541,198 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498",
     
     SubClassOf: 
         OEO_00030026
+    
+    
+Class: OEO_00050000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial process is a process that has output object or object aggregates that are economic goods. An industrial process consists of several subprocesses. Examples of subprocesses that can be involved in an industrial process are energy transformations, mechanical operations and chemical reactions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/534
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/589",
+        rdfs:label "industrial process"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0002234> some 
+            (<http://purl.obolibrary.org/obo/BFO_0000027> or <http://purl.obolibrary.org/obo/BFO_0000030>)
+    
+    
+Class: OEO_00050001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel-powered electricity generation is a transformation that contains at least two sub process: An energy transformation of chemical energy from fuel into electrical energy and an emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/582
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/592",
+        rdfs:label "fuel-powered electricity generation"@en
+    
+    SubClassOf: 
+        OEO_00000419,
+        OEO_00000500 some OEO_00000148,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000147,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175
+    
+    
+Class: OEO_00050002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 1,000 joules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "kJ",
+        rdfs:label "kilojoule"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 1,000,000 joules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "MJ",
+        rdfs:label "megajoule"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^9 joules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "GJ",
+        rdfs:label "gigajoule"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050005
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^12 joules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "TJ",
+        rdfs:label "terajoule"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050006
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^15 joules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "PJ",
+        rdfs:label "petajoule"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^18 joules.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "EJ",
+        rdfs:label "exajoule"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 1,000,000 watt-hours.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "MWh",
+        rdfs:label "megawatt-hour"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^12 watt-hours.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "TWh",
+        rdfs:label "terawatt-hour"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^15 watt-hours.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "PWh",
+        rdfs:label "petawatt-hour"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^9 watt-hours.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "GWh",
+        rdfs:label "gigawatt-hour"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00050016
+
+    SubClassOf: 
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00050017
+
+    SubClassOf: 
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00050018
+
+    SubClassOf: 
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00050019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
+        rdfs:label "energy amount value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
     
     
 Class: OEO_00140000
@@ -3486,6 +3834,294 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
         OEO_00140034
     
     
+Class: OEO_00140049
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion efficiency is a process attribute describing the ratio between the input of an energy transformation and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "energy conversion efficiency"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003,
+        OEO_00140002 some OEO_00140050
+    
+    
+Class: OEO_00140050
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "efficiency value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00140051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coefficient of performance value is a quantity value stating the ratio between the work input and the total output of an energy conversion process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "coefficient of performance value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00140052
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion performance is a process attribute describing the ratio between the non-heat input of an energy transformation and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
+        rdfs:label "energy conversion performance"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003,
+        OEO_00140002 some OEO_00140051
+    
+    
+Class: OEO_00140056
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow potential is a quantity value that describes the upper limit of an input or output of a process in a spatial region of reference per unit time.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "flow potential"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00140057
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A theoretical flow potential is a type of flow potential that identifies the physical upper limit of an input or output of a process in a spatial region of reference per unit time.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "theoretical flow potential"@en
+    
+    SubClassOf: 
+        OEO_00140056
+    
+    
+Class: OEO_00140058
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technological flow potential is a type of a flow potential derived from a theoretical flow potential, taking account of the annual efficiency of the respective conversion technology and the additional restrictions regarding the area that is realistically available for energy generation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "technological flow potential"@en
+    
+    SubClassOf: 
+        OEO_00140056
+    
+    
+Class: OEO_00140059
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic flow potential is a type of flow potential that identifies the proportion of the technological potential that can be utilized economically (based on economic boundary conditions).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "economic flow potential"@en
+    
+    SubClassOf: 
+        OEO_00140056
+    
+    
+Class: OEO_00140060
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A developable flow potential is a type of flow potential that describes the fraction of the economic potential that can be developed under realistic conditions (regulations, environmental and social restrictions).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "developable flow potential"@en
+    
+    SubClassOf: 
+        OEO_00140056
+    
+    
+Class: OEO_00140061
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sustainable flow potential is a type of flow potential that takes into account all aspects of sustainability, which usually requires careful consideration and evaluation of different ecological and socio-economic aspects. The differentiation of the sustainable potential is blurred, since ecological aspects may already have been considered for the technological or economic potential, depending on the author.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "sustainable flow potential"@en
+    
+    SubClassOf: 
+        OEO_00140056
+    
+    
+Class: OEO_00140062
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A stock potential is a quantity value that describes the upper limit of a stock of a source or sink in a spatial region of reference.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "stock potential"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00140063
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A theoretical stock potential is a type of stock potential that identifies the physical upper limit of a stock of a source or sink in a spatial region of reference.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "theoretical stock potential"@en
+    
+    SubClassOf: 
+        OEO_00140062
+    
+    
+Class: OEO_00140064
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technological stock potential is a type of a stock potential derived from a theoretical stock potential, taking account of the annual efficiency of the respective conversion technology and the additional restrictions regarding the area that is realistically available for energy generation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "technological stock potential"@en
+    
+    SubClassOf: 
+        OEO_00140062
+    
+    
+Class: OEO_00140065
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic stock potential is a type of stock potential that identifies the proportion of the technological potential that can be utilized economically (based on economic boundary conditions).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "economic stock potential"@en
+    
+    SubClassOf: 
+        OEO_00140062
+    
+    
+Class: OEO_00140066
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A developable stock potential is a type of stock potential that describes the fraction of the economic potential that can be developed under realistic conditions (regulations, environmental and social restrictions).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "developable stock potential"@en
+    
+    SubClassOf: 
+        OEO_00140062
+    
+    
+Class: OEO_00140067
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sustainable stock potential is a type of stock potential that takes into account all aspects of sustainability, which usually requires careful consideration and evaluation of different ecological and socio-economic aspects. The differentiation of the sustainable potential is blurred, since ecological aspects may already have been considered for the technological or economic potential, depending on the author.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+        rdfs:label "sustainable stock potential"@en
+    
+    SubClassOf: 
+        OEO_00140062
+    
+    
+Class: OEO_00140075
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "coals, cruide oil, natural gas, wood or moving air (wind) have the disposition of being primary energy carriers",
+ 
+   
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy carrier disposition is an energy carrier disposition of material entities that are extracted directly from natural resources or that are natural energy flows.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+        rdfs:label "primary energy carrier disposition"@en
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00140076
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "blast furnace gas, coke oven gas, cokes, motor gasoline or electricity have the disposition to be a secondary energy carrier",
+  
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy carrier disposition is an energy carrier disposition of material entities that are manufactured from primary energy carriers or from a different form of secondary energy carriers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+        rdfs:label "secondary energy carrier disposition"@en
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00140077
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "district heat or electricity have the disposition of being a final energy carrier",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Final energy carrier disposition is an energy carrier disposition of material entities that are delivered to energy consumers for their use.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+        rdfs:label "final energy carrier disposition"@en
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00140078
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary energy carrier is an energy carrier that has the disposition primary energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+        rdfs:label "primary energy carrier"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140075)
+    
+    SubClassOf: 
+        OEO_00020039
+    
+    
+Class: OEO_00140079
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the disposition primary energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+        rdfs:label "secondary energy carrier"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076)
+    
+    SubClassOf: 
+        OEO_00020039
+    
+    
+Class: OEO_00140080
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A final energy carrier is an energy carrier that has the disposition final energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+        rdfs:label "final energy carrier"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140077)
+    
+    SubClassOf: 
+        OEO_00020039
+    
+    
 Class: OEO_00230000
 
     Annotations: 
@@ -3532,6 +4168,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
     
     SubClassOf: 
         OEO_00000350
+    
+    
+Class: OEO_00230020
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy is the energy that a material entity possesses due to its motion. It is defined as the work needed to accelerate a body of a given mass from rest to a stated velocity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/609"@en,
+        rdfs:label "kinetic energy"@en
+    
+    SubClassOf: 
+        OEO_00000150
     
     
 Individual: OEO_00000182

@@ -17,6 +17,32 @@ Here is a template for new release sections
 -
 ```
 
+## [1.3.0] - 2020-12-18
+
+### Added
+- industrial process (#589)
+- energy conversion efficiency and energy conversion performance (#591)
+- fuel-powered electricity generation (#592)
+- further IPCC sector individuals (#595)
+- sector division and sector individuals of Bundes-Klimaschutzgesetz (#595)
+- radiation (#600)
+- subclasses of energy unit (#608)
+- flow / stock potential and subclasses (#607)
+- kinetic energy (#609)
+- aggregation types (#610)
+- subclasses of consumption and energy amount value (#613)
+- areal energy / power density classes, solar-related subclasses and corresponding unit classes (#615)
+- primary, secondary and final energy carrier (disposition) (#633)
+
+### Changed
+- powerplant (#594)
+- relations has part and part of (#599)
+- heat, renamed to thermal energy (#609)
+- replace iao-annotation-module and iao-minimal-module with OBO metadata ontology, restructure iao-module (#616)
+- defs of relations has contributer, has resolution and covers (#626)
+- energy carrier disposition (#627)
+- comment on waste fuel (#631)
+
 ## [1.2.0] - 2020-10-30
 
 ### Added
@@ -138,6 +164,7 @@ Here is a template for new release sections
 - change power definition (#79)
 - change quantity to quantity value (#386)
 - grid, link, node, grid component (#36, #231)
+- electricity as alternative term for electrical energy (#621)
 
 ### Removed
 - `ObjectProperty` `has_stateofmatter` (#39)
@@ -154,5 +181,3 @@ Here is a template for new release sections
 - unused object properties (#351)
 - remove energy production and subclasses (#77)
 - quantity subclasses (#368)
-
-
