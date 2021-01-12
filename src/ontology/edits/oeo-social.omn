@@ -64,6 +64,9 @@ AnnotationProperty: rdfs:isDefinedBy
 AnnotationProperty: rdfs:label
 
     
+AnnotationProperty: rdfs:seeAlso
+
+    
 Datatype: rdf:PlainLiteral
 
     
@@ -169,6 +172,9 @@ ObjectProperty: OEO_00000510
 ObjectProperty: OEO_00000522
 
     
+ObjectProperty: OEO_00040010
+
+    
 ObjectProperty: OEO_00140008
 
     Annotations: 
@@ -264,6 +270,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
     
 Class: OEO_00000045
@@ -641,6 +650,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
+    
+    
+Class: OEO_00040003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary price is a quantity value that describes the amount of money requested, expected, required or given in exchange for something else.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:MonetaryPrice",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/331",
+        rdfs:label "monetary price"@en
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some OEO_00040004
+    
+    
+Class: OEO_00040004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/331",
+        rdfs:label "currency"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
     
     
 Class: OEO_00140009
