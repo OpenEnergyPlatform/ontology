@@ -10,7 +10,12 @@ Here is a template for new release sections
 ## [_._._] - 20XX-MM-DD
 
 ### Added
--
+- monetary price and currency (#331)
+- market exchange (#341)
+- trader (#377)
+- price request and marginal cost (#376)
+- cost (#268)
+- commodity (#339)
 ### Changed
 -
 ### Removed
