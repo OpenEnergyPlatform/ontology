@@ -16,8 +16,10 @@ Here is a template for new release sections
 - price request and marginal cost (#376)
 - cost (#268)
 - commodity (#339)
+
 ### Changed
--
+- relations to energy transformation (#646)
+
 ### Removed
 -
 ```
