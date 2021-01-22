@@ -16,9 +16,11 @@ Here is a template for new release sections
 - price request and marginal cost (#376)
 - cost (#268)
 - commodity (#339)
+- emission value, greenhouse gas emission value, carbon dioxide equivalent quantity (#651)
 
 ### Changed
 - relations to energy transformation (#646)
+- has global warming potential (#651)
 
 ### Removed
 -
