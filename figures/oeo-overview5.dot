@@ -1,0 +1,37 @@
+digraph{
+  rankdir=BT;
+graph [ratio=0.5];
+node [fontsize=30];entity;
+edge [fontsize=30];
+continuant -> entity;
+object -> "material entity";
+"material entity" -> continuant;
+"power generating unit" -> object;
+generator -> object;
+powerplant -> "power generating unit";
+"solar powerplant" -> powerplant;
+"solar power unit" -> "power generating unit";
+"PV panel" -> "solar power unit";
+"power generating unit" -> generator [label="has_part", color="purple", fontcolor="purple"];
+"solar powerplant" -> "PV panel" [label="has_part", color="purple", fontcolor="purple"];
+"PV panel" -> "PV cell" [label="has_part", color="purple", fontcolor="purple"];
+"PV cell" -> generator;
+"coal power unit" -> "power generating unit";
+"coal power unit" -> coal [label="uses", color="orange", fontcolor="orange"];
+coal -> "portion of matter";
+coal -> fossil [label="has_origin", color="red", fontcolor="red"];
+coal -> "energy carrier disposition" [label="has_disposition", color="magenta", fontcolor="magenta"];
+"energy carrier disposition" -> disposition;
+disposition -> "realizable entity";
+"realizable entity" -> continuant;
+fossil -> origin;
+origin -> quality;
+"coal powerplant" -> "coal power unit" [label="has_part", color="purple", fontcolor="purple"];
+"portion of matter" -> "object aggregate";
+"object aggregate" -> "material entity";
+"coal powerplant" -> powerplant;
+generator -> "electrical energy" [label="has_physical_output", color="blue", fontcolor="blue"];
+quality -> continuant;
+energy -> quality;
+"electrical energy" -> energy;
+}
