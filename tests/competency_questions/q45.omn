@@ -1,5 +1,6 @@
 Prefix: : <http://openenergy-platform.org/ontology/oeo/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
 
 Ontology: <http://openenergy-platform.org/ontology/cc/> <http://openenergy-platform.org/ontology/cc/>
 
@@ -7,11 +8,11 @@ Ontology: <http://openenergy-platform.org/ontology/cc/> <http://openenergy-platf
 # A scenario can be used in different model calculations
 
 Class: OEO_00000364 # scenario
-ObjectProperty: BFO_0000055 # realizes
+ObjectProperty: obo:BFO_0000055 # realizes
 Class: OEO_00000275 # model calculation
 
 Class: OEO_00000364
-  SubClassOf: inverse BFO_0000055 max 1 OEO_00000275
+  SubClassOf: inverse obo:BFO_0000055 max 1 OEO_00000275
 
 # The conjecture expresses that scenario is realised by at most one model calculation. 
 # THIS SHOULD NOT BE INFERRABLE 
