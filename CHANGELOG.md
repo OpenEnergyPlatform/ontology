@@ -17,6 +17,7 @@ Here is a template for new release sections
 - cost (#268)
 - commodity (#339)
 - emission value, greenhouse gas emission value, carbon dioxide equivalent quantity (#651)
+- disjointness axiom for (has origin some natural gas) and (has origin some anthropogenic) (#658)
 
 ### Changed
 - relations to energy transformation (#646)
