@@ -21,6 +21,7 @@ Here is a template for new release sections
 ### Changed
 - relations to energy transformation (#646)
 - has global warming potential (#651)
+- energy (#656)
 
 ### Removed
 -
