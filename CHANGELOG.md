@@ -21,6 +21,7 @@ Here is a template for new release sections
 ### Changed
 - relations to energy transformation (#646)
 - has global warming potential (#651)
+- definition of battery electric vehicle and fuel cell electric vehicle (#655)
 
 ### Removed
 -
@@ -51,7 +52,6 @@ Here is a template for new release sections
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
-- definition of battery electric vehicle and fuel cell electric vehicle (#655)
 
 ## [1.2.0] - 2020-10-30
 
