@@ -22,6 +22,8 @@ Here is a template for new release sections
 ### Changed
 - relations to energy transformation (#646)
 - has global warming potential (#651)
+- definition of battery electric vehicle and fuel cell electric vehicle (#655)
+- energy (#656)
 
 ### Removed
 -
