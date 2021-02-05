@@ -19,7 +19,7 @@ Here is a template for new release sections
 - emission value, greenhouse gas emission value, carbon dioxide equivalent quantity (#651)
 - disjointness axiom for (has origin some natural gas) and (has origin some anthropogenic) (#658)
 - radiative energy (#665)
-- photon (#661)
+- photon (#674)
 
 ### Changed
 - relations to energy transformation (#646)
