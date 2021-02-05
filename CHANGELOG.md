@@ -26,6 +26,7 @@ Here is a template for new release sections
 - has global warming potential (#651)
 - definition of battery electric vehicle and fuel cell electric vehicle (#655)
 - energy (#656 and #665)
+- secondary energy carrier (#671)
 
 ### Removed
 -
