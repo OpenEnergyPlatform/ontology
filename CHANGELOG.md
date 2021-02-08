@@ -20,6 +20,7 @@ Here is a template for new release sections
 - disjointness axiom for (has origin some natural gas) and (has origin some anthropogenic) (#658)
 - radiative energy (#665)
 - potential energy (#670)
+- photon (#674)
 
 ### Changed
 - relations to energy transformation (#646)
