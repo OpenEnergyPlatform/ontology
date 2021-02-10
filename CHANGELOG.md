@@ -22,6 +22,7 @@ Here is a template for new release sections
 - solar energy transformation and subclasses (#672)
 - potential energy (#670)
 - photon (#674)
+- abbreviations GDP and GVA (#676)
 
 
 ### Changed
