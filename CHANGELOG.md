@@ -33,7 +33,7 @@ Here is a template for new release sections
 - restructure hydro energy classes in dev meeting (#682)
 
 ### Removed
--
+- delete hydroelectricity class (#682)
 ```
 
 ## [1.3.0] - 2020-12-18
