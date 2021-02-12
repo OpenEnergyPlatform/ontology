@@ -23,7 +23,7 @@ Here is a template for new release sections
 - potential energy (#670)
 - photon (#674)
 - abbreviations GDP and GVA (#676)
-
+- global warming potential (#683)
 
 ### Changed
 - relations to energy transformation (#646)
