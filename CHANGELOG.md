@@ -23,7 +23,7 @@ Here is a template for new release sections
 - potential energy (#670)
 - photon (#674)
 - abbreviations GDP and GVA (#676)
-
+- renewable energy carrier (equivalent class) (#684) 
 
 ### Changed
 - relations to energy transformation (#646)
@@ -32,6 +32,7 @@ Here is a template for new release sections
 - energy (#656 and #665)
 - solar energy (#672)
 - fix def of secondary energy carrier (#678)
+
 
 ### Removed
 -
