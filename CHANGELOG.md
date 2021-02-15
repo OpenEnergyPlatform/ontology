@@ -33,6 +33,7 @@ Here is a template for new release sections
 - solar energy (#672)
 - fix def of secondary energy carrier (#678)
 - restructure hydro energy classes in dev meeting (#682)
+- license from string to IRI format (#686)
 
 ### Removed
 - delete hydroelectricity class (#682)
