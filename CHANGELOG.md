@@ -22,6 +22,7 @@ Here is a template for new release sections
 - solar energy transformation and subclasses (#672)
 - potential energy (#670)
 - photon (#674)
+- abbreviations GDP and GVA (#676)
 
 
 ### Changed
@@ -30,10 +31,12 @@ Here is a template for new release sections
 - definition of battery electric vehicle and fuel cell electric vehicle (#655)
 - energy (#656 and #665)
 - solar energy (#672)
+- fix def of secondary energy carrier (#678)
+- restructure hydro energy classes in dev meeting (#682)
 - license from string to IRI format (#686)
 
 ### Removed
--
+- delete hydroelectricity class (#682)
 ```
 
 ## [1.3.0] - 2020-12-18
