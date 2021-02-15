@@ -24,18 +24,22 @@ Here is a template for new release sections
 - photon (#674)
 - abbreviations GDP and GVA (#676)
 - renewable energy carrier (equivalent class) (#684) 
+- global warming potential (#683)
+
 
 ### Changed
 - relations to energy transformation (#646)
-- has global warming potential (#651)
+- has global warming potential (#651, #683)
 - definition of battery electric vehicle and fuel cell electric vehicle (#655)
 - energy (#656 and #665)
 - solar energy (#672)
 - fix def of secondary energy carrier (#678)
+- restructure hydro energy classes in dev meeting (#682)
+- license from string to IRI format (#686)
 
 
 ### Removed
--
+- delete hydroelectricity class (#682)
 ```
 
 ## [1.3.0] - 2020-12-18

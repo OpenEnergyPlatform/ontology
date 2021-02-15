@@ -147,22 +147,23 @@ ObjectProperty: OEO_00000523
 ObjectProperty: OEO_00000524
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a portion of matter and the global warming potential it has. The global warming potential is a ratio that measures the time-integrated radiative forcing due to a pulse emission of a given component, relative to a pulse emission of an equal mass of CO2.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a greenhouse gas and the global warming potential it has.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/478
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683",
         rdfs:label "has global warming potential"
     
     SubPropertyOf: 
         owl:topObjectProperty
     
     Domain: 
-        OEO_00000198
+        OEO_00000020
     
     Range: 
-        OEO_00000350
-         and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>)
+        OEO_00010078
     
     
 ObjectProperty: OEO_00000525
@@ -377,6 +378,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000001>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000111>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000270>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
@@ -1742,28 +1746,16 @@ Class: OEO_00000212
         OEO_00000210
     
     
-Class: OEO_00000216
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Potential and kinetic energy of water converted into electricity in hydroelectric plants.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
-        rdfs:label "hydroelectricity"
-    
-    SubClassOf: 
-        OEO_00000218
-    
-    
 Class: OEO_00000218
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydropower or water power [...] is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydropower&oldid=906980683"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/211
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy is kinetic energy of moving liquid water which can result directly from its potential energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681",
         rdfs:label "hydro energy"
     
     SubClassOf: 
-        OEO_00000150
+        OEO_00230020
     
     
 Class: OEO_00000219
@@ -3281,6 +3273,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
         OEO_00010075
     
     
+Class: OEO_00010078
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Global warming potential (GWP) is a quantity value that measures the the time-integrated radiative forcing due to a pulse emission of a given component, relative to a pulse emission of an equal mass of carbon dioxide (CO2).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "GWP",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683",
+        rdfs:label "global warming potential"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -3868,6 +3874,110 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00110000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquid water is water that has a liquid state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "liquid water"@en
+    
+    SubClassOf: 
+        OEO_00000441,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000218,
+        OEO_00000531 value OEO_00000256
+    
+    
+Class: OEO_00110001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Steam is water that has a gaseous state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "steam"@en
+    
+    SubClassOf: 
+        OEO_00000441,
+        OEO_00000531 value OEO_00000182
+    
+    
+Class: OEO_00110002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water flow is a process of liquid water moving."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "water flow"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00110003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00110000
+    
+    
+Class: OEO_00110003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water flow rate is the process attribute of water flow that quantifies the water volume per time unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "water flow rate"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000270>
+    
+    
+Class: OEO_00110004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy transformation is an energy transformation that converts hydro energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "hydro energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000218
+    
+    
+Class: OEO_00110005
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric energy transformation is an hydro energy transformation that converts hydro energy to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "hydroelectric energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110004,
+        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
+    
+    
+Class: OEO_00110006
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Run-off-river energy transformation is an hydroelectric energy transformation that converts hydro energy of a river to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "run-off-river energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005
+    
+    
+Class: OEO_00110007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric dam energy transformation is an hydroelectric energy transformation that converts potential hydro energy of dammed water to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "hydroelectric dam energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005
     
     
 Class: OEO_00140000
