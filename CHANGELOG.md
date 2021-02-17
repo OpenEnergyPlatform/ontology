@@ -67,6 +67,7 @@ Here is a template for new release sections
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
+- energy transformation has input/output energy (#690) 
 
 ## [1.2.0] - 2020-10-30
 
