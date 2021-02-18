@@ -36,6 +36,7 @@ Here is a template for new release sections
 - fix def of secondary energy carrier (#678)
 - restructure hydro energy classes in dev meeting (#682)
 - license from string to IRI format (#686)
+- definition of water (#689)
 
 
 ### Removed
