@@ -25,6 +25,7 @@ Here is a template for new release sections
 - abbreviations GDP and GVA (#676)
 - renewable energy carrier (equivalent class) (#684) 
 - global warming potential (#683)
+- steam-electric process (#691)
 
 
 ### Changed
