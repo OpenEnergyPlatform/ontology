@@ -17,13 +17,30 @@ Here is a template for new release sections
 - cost (#268)
 - commodity (#339)
 - emission value, greenhouse gas emission value, carbon dioxide equivalent quantity (#651)
+- disjointness axiom for (has origin some natural gas) and (has origin some anthropogenic) (#658)
+- radiative energy (#665)
+- solar energy transformation and subclasses (#672)
+- potential energy (#670)
+- photon (#674)
+- abbreviations GDP and GVA (#676)
+- renewable energy carrier (equivalent class) (#684) 
+- global warming potential (#683)
+
 
 ### Changed
 - relations to energy transformation (#646)
-- has global warming potential (#651)
+- has global warming potential (#651, #683)
+- definition of battery electric vehicle and fuel cell electric vehicle (#655)
+- energy (#656 and #665)
+- solar energy (#672)
+- fix def of secondary energy carrier (#678)
+- restructure hydro energy classes in dev meeting (#682)
+- license from string to IRI format (#686)
+- definition of water (#689)
+
 
 ### Removed
--
+- delete hydroelectricity class (#682)
 ```
 
 ## [1.3.0] - 2020-12-18

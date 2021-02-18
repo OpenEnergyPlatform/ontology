@@ -147,22 +147,23 @@ ObjectProperty: OEO_00000523
 ObjectProperty: OEO_00000524
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a portion of matter and the global warming potential it has. The global warming potential is a ratio that measures the time-integrated radiative forcing due to a pulse emission of a given component, relative to a pulse emission of an equal mass of CO2.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a greenhouse gas and the global warming potential it has.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/478
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683",
         rdfs:label "has global warming potential"
     
     SubPropertyOf: 
         owl:topObjectProperty
     
     Domain: 
-        OEO_00000198
+        OEO_00000020
     
     Range: 
-        OEO_00000350
-         and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>)
+        OEO_00010078
     
     
 ObjectProperty: OEO_00000525
@@ -377,6 +378,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000001>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000111>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000270>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
@@ -860,7 +864,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
         rdfs:label "wind"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000054
     
     
 Class: OEO_00000044
@@ -897,11 +902,16 @@ Class: OEO_00000054
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Air is a portion of matter that consists of a composition of gases that forms the Earth's atmosphere."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Air_(disambiguation)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add origin
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684",
         rdfs:label "air"
     
     SubClassOf: 
         OEO_00000331,
         OEO_00000501 some OEO_00000399,
+        OEO_00000530 some OEO_00030004,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000446,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
         OEO_00000529 value OEO_00000182
     
@@ -1379,10 +1389,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581",
 Class: OEO_00000150
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of matter and radiation which is manifest as a capacity to perform work (such as causing motion or the interaction of molecules)",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of matter which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
         <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364
+fix grammar error:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/657
+update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/660
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/665",
         rdfs:comment "Energy is power integrated over time.",
         rdfs:label "energy"
     
@@ -1731,28 +1746,16 @@ Class: OEO_00000212
         OEO_00000210
     
     
-Class: OEO_00000216
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Potential and kinetic energy of water converted into electricity in hydroelectric plants.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
-        rdfs:label "hydroelectricity"
-    
-    SubClassOf: 
-        OEO_00000218
-    
-    
 Class: OEO_00000218
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydropower or water power [...] is power derived from the energy of falling water or fast running water, which may be harnessed for useful purposes."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Hydropower&oldid=906980683"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/211
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy is kinetic energy of moving liquid water which can result directly from its potential energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681",
         rdfs:label "hydro energy"
     
     SubClassOf: 
-        OEO_00000150
+        OEO_00230020
     
     
 Class: OEO_00000219
@@ -2485,14 +2488,16 @@ Class: OEO_00000377
 Class: OEO_00000384
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar radiation exploited for hot water production and electricity generation. This energy production is the heat available to the heat transfer medium, i.e. the incident solar energy less the optical and collectors' losses. Passive solar energy for the direct heating, cooling and lighting of dwellings or other buildings is not included."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar energy is radiative energy of the sun."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/211
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225
+restructure solar energy
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
         rdfs:label "solar energy"
     
     SubClassOf: 
-        OEO_00000150,
+        OEO_00020040,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000033
     
     
@@ -2718,12 +2723,18 @@ Class: OEO_00000440
 Class: OEO_00000441
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a portion of matter that is transparent, tasteless, odorless, and nearly colorless, which is the main constituent of Earth's hydrosphere, and the fluids of most living organisms. It is vital for all known forms of life, even though it provides no calories or organic nutrients. Its chemical formula is H2O, meaning that each of its molecules contains one oxygen and two hydrogen atoms, connected by covalent bonds. Water is the name of the liquid state of H2O at standard ambient temperature and pressure.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Water",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a portion of matter with the chemical formula H2O. It has a liquid normal state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/685
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/689
+add origin
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684",
         rdfs:label "water"
     
     SubClassOf: 
         OEO_00000331,
+        OEO_00000530 some OEO_00030004,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
         OEO_00000529 value OEO_00000256
     
@@ -2745,14 +2756,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
 Class: OEO_00000446
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Kinetic energy of wind exploited for electricity generation in wind turbines."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wind energy is the kinetic energy of moving air."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/211
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225
+reclassify and change def
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666",
         rdfs:label "wind energy"
     
     SubClassOf: 
-        OEO_00000150,
+        OEO_00230020,
         OEO_00000503 some OEO_00000043,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000033
     
@@ -2779,9 +2792,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
     
     SubClassOf: 
         OEO_00000425,
-        OEO_00000503 some OEO_00000446,
-        OEO_00000533 some OEO_00000333,
-        OEO_00000532 only OEO_00000446
+        OEO_00000533 some OEO_00000333
     
     
 Class: OEO_00000449
@@ -3064,10 +3075,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
 Class: OEO_00010024
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery electric vehicle (BEV) is an electric vehicle that stores energy in an on-board battery.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "BEV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
-        dc:description "A battery electric vehicle (BEV) is a vehicle that stores energy in an on-board battery.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/637
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/655",
         rdfs:label "battery electric vehicle"@en
     
     SubClassOf: 
@@ -3078,10 +3092,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
 Class: OEO_00010025
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel cell electric vehicle (FCEV) is an electric vehicle that uses electrical energy from a fuel cell.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "FCEV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
-        dc:description "A fuel cell electric vehicle (FCEV) is a vehicle that uses electrical energy from a fuel cell.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/637
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/655",
         rdfs:label "fuel cell electric vehicle"@en
     
     SubClassOf: 
@@ -3143,10 +3160,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
 Class: OEO_00010030
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both a traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PHEV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
-        dc:description "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both a traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
         rdfs:label "plug-in hybrid electric vehicle"@en
     
     SubClassOf: 
@@ -3161,7 +3178,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
 Class: OEO_00010031
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "A grid supplied electric vehicle is an electric vehicle that uses electrical energy via a conductor.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid supplied electric vehicle is an electric vehicle that uses electrical energy via a conductor.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
         rdfs:label "grid supplied electric vehicle"@en
@@ -3256,6 +3273,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
     
     SubClassOf: 
         OEO_00010075
+    
+    
+Class: OEO_00010078
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Global warming potential (GWP) is a quantity value that measures the the time-integrated radiative forcing due to a pulse emission of a given component, relative to a pulse emission of an equal mass of carbon dioxide (CO2).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "GWP",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683",
+        rdfs:label "global warming potential"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
     
     
 Class: OEO_00020001
@@ -3382,7 +3413,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/600",
         rdfs:label "radiation"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00230021
     
     
 Class: OEO_00020038
@@ -3411,6 +3443,99 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020040
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Radiative energy is energy that has been transmitted by a radiation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/660
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/665",
+        rdfs:label "radiative energy"
+    
+    SubClassOf: 
+        OEO_00000150
+    
+    
+Class: OEO_00020043
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wind energy transformation is an energy transformation that converts wind energy to electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666",
+        rdfs:label "wind energy transformation"
+    
+    SubClassOf: 
+        OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044,
+        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000446,
+        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
+    
+    
+Class: OEO_00020045
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/628
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/670",
+        rdfs:comment "Potential energy is the energy that a material entity contains due to its position relative to other material entities or to stresses within itself.",
+        rdfs:label "potential energy"
+    
+    SubClassOf: 
+        OEO_00000150
+    
+    
+Class: OEO_00020046
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar energy transformation is an energy transformation that converts solar energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
+        rdfs:label "solar energy transformation"
+    
+    SubClassOf: 
+        OEO_00020003
+    
+    
+Class: OEO_00020047
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar thermal energy transformation is a solar energy transformation that converts solar energy into thermal energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
+        rdfs:label "solar thermal energy transformation"
+    
+    SubClassOf: 
+        OEO_00020046,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000387
+    
+    
+Class: OEO_00020048
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Photovoltaic energy transformation is a solar energy transformation that converts solar energy into electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
+        rdfs:label "photovoltaic energy transformation"
+    
+    SubClassOf: 
+        OEO_00020046,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032
+    
+    
+Class: OEO_00020050
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy carrier is an energy carrier that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684",
+        rdfs:label "renewable energy carrier"
+    
+    EquivalentTo: 
+        (OEO_00000530 some OEO_00030004)
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151)
+    
+    SubClassOf: 
+        OEO_00020039
     
     
 Class: OEO_00030000
@@ -3751,6 +3876,110 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00110000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquid water is water that has a liquid state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "liquid water"@en
+    
+    SubClassOf: 
+        OEO_00000441,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000218,
+        OEO_00000531 value OEO_00000256
+    
+    
+Class: OEO_00110001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Steam is water that has a gaseous state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "steam"@en
+    
+    SubClassOf: 
+        OEO_00000441,
+        OEO_00000531 value OEO_00000182
+    
+    
+Class: OEO_00110002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water flow is a process of liquid water moving."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "water flow"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00110003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00110000
+    
+    
+Class: OEO_00110003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Water flow rate is the process attribute of water flow that quantifies the water volume per time unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "water flow rate"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000270>
+    
+    
+Class: OEO_00110004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy transformation is an energy transformation that converts hydro energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "hydro energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000218
+    
+    
+Class: OEO_00110005
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric energy transformation is an hydro energy transformation that converts hydro energy to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "hydroelectric energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110004,
+        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
+    
+    
+Class: OEO_00110006
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Run-off-river energy transformation is an hydroelectric energy transformation that converts hydro energy of a river to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "run-off-river energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005
+    
+    
+Class: OEO_00110007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric dam energy transformation is an hydroelectric energy transformation that converts potential hydro energy of dammed water to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+        rdfs:label "hydroelectric dam energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005
     
     
 Class: OEO_00140000
@@ -4108,9 +4337,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
 Class: OEO_00140079
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the disposition primary energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the disposition secondary energy carrier disposition.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
+fix error in definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/669
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/678",
         rdfs:label "secondary energy carrier"@en
     
     EquivalentTo: 
@@ -4234,6 +4466,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/609"@en,
     
     SubClassOf: 
         OEO_00000150
+    
+    
+Class: OEO_00230021
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photon is a portion of matter that is a light particle."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/661
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
+pull request: https://github.com/OpenEnergyPlatform/ontology/issues/674
+add origin
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684"@en,
+        rdfs:label "photon"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030004,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020040
     
     
 Individual: OEO_00000182
