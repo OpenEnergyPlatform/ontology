@@ -74,6 +74,10 @@ $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
 	cp -a $< $@
 	$(call replace_devs,$@)
 
+$(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.owl
+	cp -a $< $@
+	$(call replace_devs,$@)
+
 $(VERSIONDIR)/modules/%.omn: $(ONTOLOGY_SOURCE)/edits/%.omn
 	cp -a $< $@
 	$(call replace_devs,$@)
