@@ -25,6 +25,7 @@ Here is a template for new release sections
 - abbreviations GDP and GVA (#676)
 - renewable energy carrier (equivalent class) (#684) 
 - global warming potential (#683)
+- steam-electric process (#691)
 
 
 ### Changed
@@ -36,6 +37,7 @@ Here is a template for new release sections
 - fix def of secondary energy carrier (#678)
 - restructure hydro energy classes in dev meeting (#682)
 - license from string to IRI format (#686)
+- definition of water (#689)
 
 
 ### Removed
@@ -67,6 +69,7 @@ Here is a template for new release sections
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
+- energy transformation has input/output energy (#690) 
 
 ## [1.2.0] - 2020-10-30
 
