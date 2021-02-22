@@ -2,18 +2,24 @@ MKDIR_P = mkdir -p
 VERSION:= $(shell cat VERSION)
 VERSIONDIR := build/oeo/$(VERSION)
 ONTOLOGY_SOURCE := src/ontology
-OWL_FILES := $(shell find $(ONTOLOGY_SOURCE)/imports/* -type f -name "*.owl")
-OMN_FILES := $(shell find $(ONTOLOGY_SOURCE)/edits/* -type f -name "*.omn")
+
+subst_paths =	${subst $(ONTOLOGY_SOURCE),$(VERSIONDIR),${patsubst $(ONTOLOGY_SOURCE)/edits/%,$(ONTOLOGY_SOURCE)/modules/%,$(1)}}
+
+OWL_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl"))
+OMN_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.omn"))
 
 OEP_BASE := http:\/\/openenergy-platform\.org\/ontology\/oeo
 
-OWL_COPY := $(OWL_FILES:$(ONTOLOGY_SOURCE)/%.owl=$(VERSIONDIR)/%.owl)
-OMN_COPY :=	$(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.omn) $(VERSIONDIR)/oeo.omn
-OMN_TRANSLATE := $(OMN_FILES:$(ONTOLOGY_SOURCE)/edits/%.omn=$(VERSIONDIR)/modules/%.owl) $(VERSIONDIR)/oeo.owl
+OWL_COPY := $(OWL_FILES)
+
+OMN_COPY :=	$(OMN_FILES)
+
+OMN_TRANSLATE := ${patsubst %.omn,%.owl,$(OMN_FILES)}
 
 RM=/bin/rm
 ROBOT_PATH := build/robot.jar
 ROBOT := java -jar $(ROBOT_PATH)
+
 
 
 define replace_devs
@@ -31,8 +37,6 @@ define translate_to_owl
 endef
 
 .PHONY: all clean base merge directories
-
-.IGNORE: $(VERSIONDIR)/oeo-full.omn $(VERSIONDIR)/oeo-full.owl
 
 all: base merge
 
