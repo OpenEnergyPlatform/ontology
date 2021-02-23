@@ -26,7 +26,7 @@ Here is a template for new release sections
 - renewable energy carrier (equivalent class) (#684) 
 - global warming potential (#683)
 - steam-electric process (#691)
-- emission quantity value (#695)
+- emission quantity value (#697)
 
 ### Changed
 - relations to energy transformation (#646)
@@ -38,7 +38,7 @@ Here is a template for new release sections
 - restructure hydro energy classes in dev meeting (#682)
 - license from string to IRI format (#686)
 - definition of water (#689)
-- emission value (#695)
+- emission value (#697)
 
 ### Removed
 - delete hydroelectricity class (#682)
