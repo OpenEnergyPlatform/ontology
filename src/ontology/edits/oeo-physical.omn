@@ -377,6 +377,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
 Class: <http://purl.obolibrary.org/obo/UO_0000001>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000002>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000111>
 
     
@@ -3293,6 +3296,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
     
     
+Class: OEO_00010079
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity value is a quantity value that has a mass unit as unit. It is the quantity value of an emission value."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
+        rdfs:label "emission quantity value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -4429,13 +4445,18 @@ Class: OEO_00140081
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a process attribute that quantifies the output of an emission process. It can be calculated using the emission factor of that emission process.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+has quantity value axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
         rdfs:label "emission value"@en
     
     SubClassOf: 
         OEO_00030019,
-        OEO_00000502 some OEO_00000147
+        OEO_00000502 some OEO_00000147,
+        OEO_00140002 some OEO_00010079
     
     
 Class: OEO_00140082
