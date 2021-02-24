@@ -1,33 +1,64 @@
-@prefix OEO: <https://openenergy-platform.org/ontology/oeo/> .
-@prefix OEO_KG: <https://openenergy-platform.org/thing/> .
+@prefix OEO: <http://openenergy-platform.org/ontology/oeo/> .
+@prefix OEO_KG: <http://openenergy-platform.org/thing/> .
 @prefix SIO: <http://semanticscience.org/resource/> .
 @prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix npg: <http://ns.nature.com/terms/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://openenergy-platform.org/thing/Entwicklung_der_Gebäudewärme_und_Rückkopplung_mit_dem_Energiesystem_in__95%_THG_Klimazielszenarien> a OEO:OEO_00020012 ;
+OEO_KG:BDI_study_analysis_scope a owl:Thing ;
+    OEO:OEO_00000504 OEO_KG:Globaler_Klimaschutz_80_Klimapfad,
+        OEO_KG:Globales_Klimaschutz_95_Klimapfad,
+        OEO_KG:Nationale_Alleingaenge_80_Klimapfad,
+        OEO_KG:Nationale_Alleingaenge_95_Klimapfad,
+        OEO_KG:Referenzszenario ;
+    OEO:OEO_00000505 OEO:OEO_00000145,
+        OEO:OEO_00000213,
+        OEO:OEO_00010040,
+        OEO:OEO_00010041,
+        OEO:OEO_00010042,
+        OEO:OEO_00010047,
+        OEO:OEO_00010049,
+        OEO:OEO_00010052 ;
+    OEO:OEO_00000522 OEO_KG:BDI_study_interacting_region,
+        OEO_KG:BDI_study_study_region .
+
+OEO_KG:Entwicklung_der_Gebaeudewaerme_und_Rue a OEO:OEO_00020012 ;
     dbo:abstract "Transformation of the heat sector against the background of economic aspects of the sector coupling and achievement of the sector goal" ;
     dbo:subtitle "Teilbericht im Rahmen des Projektes: TRANSFORMATIONSPFADE IM WÄRMESEKTOR – Betriebs- und volkswirtschaftliche Betrachtung der Sektorkopplung mit dem Fokus Fernwärme mit hohen Anteilen konventioneller KWK-Erzeugung und Rückkopplung zum Gesamtenergieversorgungssystem" ;
     npg:publicationYear 2019 ;
-    obo:IAO_0000136 OEO_KG:TrafoFW_study ;
-    dc:title "Entwicklung der Gebäudewärme und Rückkopplung mit dem Energiesystem in -95% THG Klimazielszenarien" ;
     OEO:OEO_00000506 OEO_KG:Norman_Gerhardt,
         OEO_KG:_Elisabeth_Klara_Buchmann,
         OEO_KG:_Irina_Ganal,
         OEO_KG:_Juan_Rodriguez,
         OEO_KG:_Kilian_Stroh,
         OEO_KG:_Mareike_Jentsch ;
+    obo:IAO_0000136 OEO_KG:TrafoFW_study ;
+    dc:title "Entwicklung der Gebäudewärme und Rückkopplung mit dem Energiesystem in -95% THG Klimazielszenarien" ;
     schema:url "https://www.iee.fraunhofer.de/content/dam/iwes-neu/energiesystemtechnik/de/Dokumente/Veroeffentlichungen/2019/2019_Feb_Bericht_Fraunhofer_IEE_-_Transformation_Waerme_2030_2050.pdf" .
 
-OEO_KG:Klimapfade_für_Deutschland a OEO:OEO_00020012 ;
+OEO_KG:KSz_2050_analysis_scope a owl:Thing ;
+    OEO:OEO_00000504 OEO_KG:Aktuelle_Massnahmen_Szenario_2012,
+        OEO_KG:Klimaschutzszenario_80,
+        OEO_KG:Klimaschutzszenario_95 ;
+    OEO:OEO_00000505 OEO:OEO_00010040,
+        OEO:OEO_00010041,
+        OEO:OEO_00010042,
+        OEO:OEO_00010047,
+        OEO:OEO_00010048,
+        OEO:OEO_00010049,
+        OEO:OEO_00010052 ;
+    OEO:OEO_00000522 OEO_KG:KSz_2050_interacting_region,
+        OEO_KG:KSz_2050_study_region .
+
+OEO_KG:Klimapfade_fuer_Deutschland a OEO:OEO_00020012 ;
     dbo:abstract "Analysis of technical and economic potentials and measures to reduce GHG" ;
     npg:publicationYear 2018 ;
-    obo:IAO_0000136 OEO_KG:BDI_study ;
-    dc:title "Klimapfade für Deutschland" ;
     OEO:OEO_00000506 OEO_KG:Philipp_Gerbert,
         OEO_KG:_Almut_Kirchner,
         OEO_KG:_Andreas_Kemmler,
@@ -35,14 +66,14 @@ OEO_KG:Klimapfade_für_Deutschland a OEO:OEO_00020012 ;
         OEO_KG:_Jens_Burchardt,
         OEO_KG:_Marco_Wünsch,
         OEO_KG:_Patrick_Herhold,
-        OEO_KG:_Stefan_Schönberger .
+        OEO_KG:_Stefan_Schönberger ;
+    obo:IAO_0000136 OEO_KG:BDI_study ;
+    dc:title "Klimapfade für Deutschland" .
 
 OEO_KG:Klimaschutzszenario_2050 a OEO:OEO_00020012 ;
     dbo:abstract "Creation and analysation of scenarios for different political climate levels of ambition until 2050" ;
     dbo:subtitle "2. Endbericht" ;
     npg:publicationYear 2015 ;
-    obo:IAO_0000136 OEO_KG:KSz_2050 ;
-    dc:title "Klimaschutzszenario 2050" ;
     OEO:OEO_00000506 OEO_KG:Julia_Repenning,
         OEO_KG:_Barbara_Schlomann,
         OEO_KG:_Ben_Pfluger,
@@ -72,13 +103,13 @@ OEO_KG:Klimaschutzszenario_2050 a OEO:OEO_00020012 ;
         OEO_KG:_Wolfgang_Eichhammer,
         OEO_KG:_Wolfgang_Schade,
         OEO_KG:_Wolfram_Jörß ;
+    obo:IAO_0000136 OEO_KG:KSz_2050 ;
+    dc:title "Klimaschutzszenario 2050" ;
     schema:url "https://www.oeko.de/oekodoc/2451/2015-608-de.pdf" .
 
 OEO_KG:Politikszenarien_VIII a OEO:OEO_00020012 ;
     dbo:abstract "Generation of projections for German greenhouse gas emissions until 2035" ;
     npg:publicationYear 2018 ;
-    obo:IAO_0000136 OEO_KG:PszVtStudy ;
-    dc:title "Politikszenarien VIII" ;
     OEO:OEO_00000506 OEO_KG:Julia_Repenning,
         OEO_KG:_Barbara_Schlomann,
         OEO_KG:_Benjamin_Fries,
@@ -105,14 +136,65 @@ OEO_KG:Politikszenarien_VIII a OEO:OEO_00020012 ;
         OEO_KG:_Tobias_Fleiter,
         OEO_KG:_Veit_Bürger,
         OEO_KG:_Wolfgang_Eichhammer,
-        OEO_KG:_Wolfram_Jörß .
+        OEO_KG:_Wolfram_Jörß ;
+    obo:IAO_0000136 OEO_KG:PszVtStudy ;
+    dc:title "Politikszenarien VIII" .
+
+OEO_KG:PszVtStudy_analysis_scope a owl:Thing ;
+    OEO:OEO_00000504 OEO_KG:scenario_MEMS,
+        OEO_KG:scenario_MMS,
+        OEO_KG:scenario_MWMS ;
+    OEO:OEO_00000505 OEO:OEO_00000145,
+        OEO:OEO_00000213,
+        OEO:OEO_00010040,
+        OEO:OEO_00010041,
+        OEO:OEO_00010042,
+        OEO:OEO_00010047,
+        OEO:OEO_00010052 ;
+    OEO:OEO_00000522 OEO_KG:PszVtStudy_interacting_region,
+        OEO_KG:PszVtStudy_study_region .
+
+OEO_KG:TrafoFW_study_analysis_scope a owl:Thing ;
+    OEO:OEO_00000504 OEO_KG:scenario_1A,
+        OEO_KG:scenario_1B,
+        OEO_KG:scenario_2A,
+        OEO_KG:scenario_2B ;
+    OEO:OEO_00000505 OEO:OEO_00000145,
+        OEO:OEO_00000213,
+        OEO:OEO_00010040,
+        OEO:OEO_00010041,
+        OEO:OEO_00010042,
+        OEO:OEO_00010047,
+        OEO:OEO_00010049,
+        OEO:OEO_00010050,
+        OEO:OEO_00010052 ;
+    OEO:OEO_00000522 OEO_KG:TrafoFW_study_interacting_region,
+        OEO_KG:TrafoFW_study_study_region .
 
 OEO_KG:BDI_study a OEO:OEO_00020011 ;
-    OEO:OEO_00000509 OEO_KG:Bundesverband_der_Deutschen_Industrie .
+    OEO:OEO_00000509 OEO_KG:Bundesverband_der_Deutschen_Industrie ;
+    OEO:OEO_00000523 OEO:OEO_00000033,
+        OEO:OEO_00000132,
+        OEO:OEO_00000204,
+        OEO:OEO_00000218,
+        OEO:OEO_00000292,
+        OEO:OEO_00000302,
+        OEO:OEO_00000439 ;
+    obo:BFO_0000051 OEO_KG:Globaler_Klimaschutz_80_Klimapfad,
+        OEO_KG:Globales_Klimaschutz_95_Klimapfad,
+        OEO_KG:Nationale_Alleingaenge_80_Klimapfad,
+        OEO_KG:Nationale_Alleingaenge_95_Klimapfad,
+        OEO_KG:Referenzszenario .
+
+OEO_KG:BDI_study_interacting_region a OEO:OEO_00020036 ;
+    rdfs:comment "Partially;International maritime and aviation traffic only modelled for \"95%-Klimapfad\"" .
+
+OEO_KG:BDI_study_study_region a OEO:OEO_00020032 ;
+    rdfs:label "Germany" .
 
 OEO_KG:Bau_und_Reaktorsicherheit foaf:name "Bau und Reaktorsicherheit" .
 
-OEO_KG:Bundesministerium_für_Umwelt foaf:name "Bundesministerium für Umwelt" .
+OEO_KG:Bundesministerium_fuer_Umwelt foaf:name "Bundesministerium für Umwelt" .
 
 OEO_KG:Bundesverband_der_Deutschen_Industrie foaf:name "Bundesverband der Deutschen Industrie" .
 
@@ -120,8 +202,27 @@ OEO_KG:German_Federal_Ministry_for_Economic_Affairs_and_Energy foaf:name "German
 
 OEO_KG:KSz_2050 a OEO:OEO_00020011 ;
     OEO:OEO_00000509 OEO_KG:Bau_und_Reaktorsicherheit,
-        OEO_KG:Bundesministerium_für_Umwelt,
-        OEO_KG:Naturschutz .
+        OEO_KG:Bundesministerium_fuer_Umwelt,
+        OEO_KG:Naturschutz ;
+    OEO:OEO_00000523 OEO:OEO_00000033,
+        OEO:OEO_00000072,
+        OEO:OEO_00000132,
+        OEO:OEO_00000204,
+        OEO:OEO_00000218,
+        OEO:OEO_00000251,
+        OEO:OEO_00000292,
+        OEO:OEO_00000302,
+        OEO:OEO_00000439,
+        OEO:OEO_00000446 ;
+    obo:BFO_0000051 OEO_KG:Aktuelle_Massnahmen_Szenario_2012,
+        OEO_KG:Klimaschutzszenario_80,
+        OEO_KG:Klimaschutzszenario_95 .
+
+OEO_KG:KSz_2050_interacting_region a OEO:OEO_00020036 ;
+    rdfs:comment "Partially;International air & maritime transport, Europe for electricity, whole world for economic modelling" .
+
+OEO_KG:KSz_2050_study_region a OEO:OEO_00020032 ;
+    rdfs:label "Germany" .
 
 OEO_KG:Naturschutz foaf:name "Naturschutz" .
 
@@ -138,10 +239,41 @@ OEO_KG:Philipp_Gerbert a foaf:Person ;
     schema:affiliation OEO_KG:The_Boston_Consulting_Group .
 
 OEO_KG:PszVtStudy a OEO:OEO_00020011 ;
-    OEO:OEO_00000509 OEO_KG:Umweltbundesamt .
+    OEO:OEO_00000509 OEO_KG:Umweltbundesamt ;
+    OEO:OEO_00000523 OEO:OEO_00000033,
+        OEO:OEO_00000072,
+        OEO:OEO_00000088,
+        OEO:OEO_00000132,
+        OEO:OEO_00000251,
+        OEO:OEO_00000292,
+        OEO:OEO_00000302,
+        OEO:OEO_00000439,
+        OEO:OEO_00000441,
+        OEO:OEO_00000446 ;
+    obo:BFO_0000051 OEO_KG:scenario_MEMS,
+        OEO_KG:scenario_MMS,
+        OEO_KG:scenario_MWMS .
+
+OEO_KG:PszVtStudy_interacting_region a OEO:OEO_00020036 ;
+    rdfs:comment "No;International aviation and maritime transport for information only declared" .
+
+OEO_KG:PszVtStudy_study_region a OEO:OEO_00020032 ;
+    rdfs:label "Germany" .
 
 OEO_KG:TrafoFW_study a OEO:OEO_00020011 ;
-    OEO:OEO_00000509 OEO_KG:German_Federal_Ministry_for_Economic_Affairs_and_Energy .
+    OEO:OEO_00000509 OEO_KG:German_Federal_Ministry_for_Economic_Affairs_and_Energy ;
+    OEO:OEO_00000523 OEO:OEO_00000033,
+        OEO:OEO_00000302 ;
+    obo:BFO_0000051 OEO_KG:scenario_1A,
+        OEO_KG:scenario_1B,
+        OEO_KG:scenario_2A,
+        OEO_KG:scenario_2B .
+
+OEO_KG:TrafoFW_study_interacting_region a OEO:OEO_00020036 ;
+    rdfs:comment "Partially; PtL production in Morocco considered" .
+
+OEO_KG:TrafoFW_study_study_region a OEO:OEO_00020032 ;
+    rdfs:label "EWR(excluding Greece)" .
 
 OEO_KG:Umweltbundesamt foaf:name "Umweltbundesamt" .
 
@@ -352,11 +484,51 @@ OEO_KG:_Wolfgang_Schade a foaf:Person ;
     foaf:givenName "Wolfgang" ;
     schema:affiliation OEO_KG:Fraunhofer_ISI .
 
+OEO_KG:Aktuelle_Massnahmen_Szenario_2012 a OEO:OEO_00000364 ;
+    dbo:abbreviation "AMS (2012)" ;
+    dbo:abstract "All measures done until 2012, target: now situation of political energy and climate framework" ;
+    foaf:name "Aktuelle-Maßnahmen-Szenario (2012)" .
+
+OEO_KG:Globaler_Klimaschutz_80_Klimapfad a OEO:OEO_00000364 ;
+    dbo:abbreviation "G80" ;
+    dbo:abstract "Global community commits to 2-degree-goal, climate control instruments globally coordinated, acceleration of innovation" ;
+    foaf:name "Globaler Klimaschutz - 80% Klimapfad" .
+
+OEO_KG:Globales_Klimaschutz_95_Klimapfad a OEO:OEO_00000364 ;
+    dbo:abbreviation "G95" ;
+    dbo:abstract "Global community commits to 2-degree-goal, climate control instruments globally coordinated" ;
+    foaf:name "Globales Klimaschutz - 95% Klimapfad" .
+
 OEO_KG:Julia_Repenning a foaf:Person ;
     obo:RO_0000087 OEO:OEO_00000064 ;
     foaf:familyName "Repenning" ;
     foaf:givenName "Julia" ;
     schema:affiliation OEO_KG:Oeko_Institut_eV .
+
+OEO_KG:Klimaschutzszenario_80 a OEO:OEO_00000364 ;
+    dbo:abbreviation "KS 80" ;
+    dbo:abstract "Targets of governmental energy concept for greenhouse gas emissions, renewable energies and energy efficiency" ;
+    foaf:name "Klimaschutzszenario 80" .
+
+OEO_KG:Klimaschutzszenario_95 a OEO:OEO_00000364 ;
+    dbo:abbreviation "KS 95" ;
+    dbo:abstract "Reduction of greenhouse gas emissions 95% in 2050 towards 1990" ;
+    foaf:name "Klimaschutzszenario 95" .
+
+OEO_KG:Nationale_Alleingaenge_80_Klimapfad a OEO:OEO_00000364 ;
+    dbo:abbreviation "N80" ;
+    dbo:abstract "Only core Europe and few other countries pursue climate control, coexistance of seperate path, regression of innovation rate" ;
+    foaf:name "Nationale Alleingänge - 80% Klimapfad" .
+
+OEO_KG:Nationale_Alleingaenge_95_Klimapfad a OEO:OEO_00000364 ;
+    dbo:abbreviation "N95" ;
+    dbo:abstract "Only core Europe and few other countries pursue climate control, coexistance of seperate path, regression of innovation rate" ;
+    foaf:name "Nationale Alleingänge - 95% Klimapfad" .
+
+OEO_KG:Referenzszenario a OEO:OEO_00000364 ;
+    dbo:abbreviation "R" ;
+    dbo:abstract "Indicative scenario, target: evaluation of gap between development under current situation and goal of climate control of government" ;
+    foaf:name "Referenzszenario" .
 
 OEO_KG:_Barbara_Schlomann a foaf:Person ;
     obo:RO_0000087 OEO:OEO_00000064 ;
@@ -453,6 +625,41 @@ OEO_KG:_Wolfram_Jörß a foaf:Person ;
     foaf:familyName "Jörß" ;
     foaf:givenName "Wolfram" ;
     schema:affiliation OEO_KG:Oeko_Institut_eV .
+
+OEO_KG:scenario_1A a OEO:OEO_00000364 ;
+    dbo:abbreviation "1A" ;
+    dbo:abstract "Ambitious, energy efficient development" ;
+    foaf:name "Reference scenario with high heat demand reduction and exit form the use of biomass for heating purposes" .
+
+OEO_KG:scenario_1B a OEO:OEO_00000364 ;
+    dbo:abbreviation "1B" ;
+    dbo:abstract "Effects of the use of biomass for heating puposes against the background of achieving the GHG goal in the building sector" ;
+    foaf:name "Maintaining the use of biomass for heating purposes" .
+
+OEO_KG:scenario_2A a OEO:OEO_00000364 ;
+    dbo:abbreviation "2A" ;
+    dbo:abstract "Effects of less heat demand reduction against the background of achieving the GHG goal in the building sector" ;
+    foaf:name "Less ambitious building renovation" .
+
+OEO_KG:scenario_2B a OEO:OEO_00000364 ;
+    dbo:abbreviation "2B" ;
+    dbo:abstract "Effects of combined use of biomass for heating purposes and less heat demand reduction" ;
+    foaf:name "Combination of maintaining the use of biomass for heating purposes and less ambitious building renovation" .
+
+OEO_KG:scenario_MEMS a OEO:OEO_00000364 ;
+    dbo:abbreviation "MEMS" ;
+    dbo:abstract "Suggestion of measures in order to achieve sectoral goals of \"Klimaschutzplan 2050\"" ;
+    foaf:name "Mit-Erweiterten-Maßnahmen-Szenario" .
+
+OEO_KG:scenario_MMS a OEO:OEO_00000364 ;
+    dbo:abbreviation "MMS" ;
+    dbo:abstract "All measures implemented by July 2016, including implemented measures from \"Aktionsprogramm Klimaschutz 2020\"" ;
+    foaf:name "Mit-Maßnahmen-Szenario" .
+
+OEO_KG:scenario_MWMS a OEO:OEO_00000364 ;
+    dbo:abbreviation "MWMS" ;
+    dbo:abstract "Not yet implemented measures of \"Aktionsprogramm Klimaschutz 2020\" and \"Nationalen Aktionsplan Energieeffizienz\" included" ;
+    foaf:name "Mit-Weiteren-Maßnahmen-Szenario" .
 
 OEO_KG:Prognos foaf:name "Prognos" .
 
