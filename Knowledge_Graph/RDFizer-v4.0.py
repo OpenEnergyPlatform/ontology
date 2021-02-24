@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[21]:
-
-
 import logging
 import rdflib
 import time
@@ -19,14 +13,7 @@ def findConcept(ontologyPath, term):
         return row[0]
 
 
-# In[ ]:
-
-
-
-
-
-# In[22]:
-
+#----------------------------------------------------
 
 from rdflib import Graph, Literal, RDF, URIRef, RDFS, OWL
 from rdflib.namespace import *
@@ -282,10 +269,5 @@ for kg in outList:
     g3.parse(kg, format="turtle")
     graph = g2 + g3
     graph.serialize("KG.ttl", format="turtle")
-
-
-# In[ ]:
-
-
 
 
