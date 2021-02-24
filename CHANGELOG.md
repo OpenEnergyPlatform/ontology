@@ -28,6 +28,7 @@ Here is a template for new release sections
 - steam-electric process (#691)
 - emission quantity value (#697)
 - nuclear fission, nuclear energy transformation (#698)
+- solar-steam-electric process (#701)
 
 ### Changed
 - relations to energy transformation (#646)
