@@ -26,6 +26,7 @@ Here is a template for new release sections
 - renewable energy carrier (equivalent class) (#684) 
 - global warming potential (#683)
 - steam-electric process (#691)
+- volumetric flow rate value (#693)
 - emission quantity value (#697)
 - nuclear fission, nuclear energy transformation (#698)
 
