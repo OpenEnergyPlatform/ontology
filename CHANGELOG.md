@@ -27,6 +27,8 @@ Here is a template for new release sections
 - global warming potential (#683)
 - steam-electric process (#691)
 - volumetric flow rate value (#693)
+- emission quantity value (#697)
+- nuclear fission, nuclear energy transformation (#698)
 
 ### Changed
 - relations to energy transformation (#646)
@@ -38,7 +40,8 @@ Here is a template for new release sections
 - restructure hydro energy classes in dev meeting (#682)
 - license from string to IRI format (#686)
 - definition of water (#689)
-
+- emission value (#697)
+- nuclear (binding) energy (#698)
 
 ### Removed
 - delete hydroelectricity class (#682)
