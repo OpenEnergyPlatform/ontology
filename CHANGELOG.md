@@ -19,7 +19,7 @@ Here is a template for new release sections
 - emission value, greenhouse gas emission value, carbon dioxide equivalent quantity (#651)
 - disjointness axiom for (has origin some natural gas) and (has origin some anthropogenic) (#658)
 - radiative energy (#665)
-- solar energy transformation and subclasses (#672)
+- solar energy transformation and subclasses (#672, #701)
 - potential energy (#670)
 - photon (#674)
 - abbreviations GDP and GVA (#676)
