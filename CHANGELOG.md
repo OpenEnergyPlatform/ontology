@@ -42,7 +42,7 @@ Here is a template for new release sections
 - definition of water (#689)
 - emission value (#697)
 - nuclear (binding) energy (#698)
-- bioethanol (#702)
+- bioethanol (#704)
 
 ### Removed
 - delete hydroelectricity class (#682)
