@@ -93,6 +93,11 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/664
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
+        rdfs:comment "OEO adjustment: The range of this property has been changed from material entity to continuant. A subclass \"has physical input\" has been added for material entities and energies."
+    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
@@ -277,19 +282,20 @@ ObjectProperty: OEO_00000531
 ObjectProperty: OEO_00000532
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical input c iff: p has input c, and c is a material entity or energy"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/664
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         rdfs:label "has physical input"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0002233>
     
     Characteristics: 
-        Functional,
         Irreflexive,
         Asymmetric
     
     Range: 
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151
+        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 ObjectProperty: OEO_00000533
@@ -3352,12 +3358,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450
 
 add input and output relations:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/680
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/690",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/690
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         rdfs:label "energy transformation"@en
     
     SubClassOf: 
         OEO_00000419,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000150,
+        OEO_00000532 some OEO_00000150,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000150
     
     
@@ -3507,13 +3514,14 @@ Class: OEO_00020043
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Wind energy transformation is an energy transformation that converts wind energy to electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         rdfs:label "wind energy transformation"
     
     SubClassOf: 
         OEO_00020003,
+        OEO_00000532 some OEO_00000446,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000446,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
     
     
@@ -3606,12 +3614,13 @@ Class: OEO_00020054
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear energy transformation is an energy transformation that converts nuclear binding energy to thermal energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/692
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/698",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/698
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         rdfs:label "nuclear energy transformation"
     
     SubClassOf: 
         OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000300,
+        OEO_00000532 some OEO_00000300,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000207
     
     
@@ -3960,14 +3969,15 @@ Class: OEO_00050020
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A steam-electric process is an energy transformation that converts thermal energy to electrical energy. A steam turbine and an electro motive generator are participating in a steam-electric process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/659
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/691"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/691
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"@en,
         rdfs:label "steam-electric process"@en
     
     SubClassOf: 
         OEO_00020003,
+        OEO_00000532 some OEO_00000207,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000207,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
     
     
@@ -4043,12 +4053,13 @@ Class: OEO_00110004
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy transformation is an energy transformation that converts hydro energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"@en,
         rdfs:label "hydro energy transformation"@en
     
     SubClassOf: 
         OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00000218
+        OEO_00000532 some OEO_00000218
     
     
 Class: OEO_00110005
@@ -4639,3 +4650,4 @@ Individual: OEO_00000390
     
 DisjointClasses: 
     OEO_00000188,OEO_00000210,OEO_00000425
+
