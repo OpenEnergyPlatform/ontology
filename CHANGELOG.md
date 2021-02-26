@@ -43,6 +43,7 @@ Here is a template for new release sections
 - emission value (#697)
 - nuclear (binding) energy (#698)
 - bioethanol (#704)
+- has input / has physical input (#702)
 
 ### Removed
 - delete hydroelectricity class (#682)
