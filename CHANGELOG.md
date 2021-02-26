@@ -42,6 +42,7 @@ Here is a template for new release sections
 - definition of water (#689)
 - emission value (#697)
 - nuclear (binding) energy (#698)
+- bioethanol (#704)
 - has input / has physical input (#702)
 
 ### Removed
