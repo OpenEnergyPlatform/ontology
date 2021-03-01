@@ -1,87 +1,192 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="http://openenergy-platform.org/ontology/oeo/oeo-physical-axioms/"
      xml:base="http://openenergy-platform.org/ontology/oeo/oeo-physical-axioms/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://openenergy-platform.org/ontology/oeo/oeo-physical-axioms/"
-     versionIRI="http://openenergy-platform.org/ontology/oeo/dev/oeo-physical-axioms.owl">
-    <Prefix name="" IRI="http://openenergy-platform.org/ontology/oeo/"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="bfo" IRI="http://purl.obolibrary.org/obo/bfo.owl#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="obda" IRI="https://w3id.org/obda/vocabulary#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://openenergy-platform.org/ontology/oeo/oeo-physical-axioms/">
+        <owl:versionIRI rdf:resource="http://openenergy-platform.org/ontology/oeo/dev/oeo-physical-axioms.owl"/>
+        <dc:description>The Open Energy Ontology is an ontology for all aspects of the enrgy modelling domain. The &apos;Physical axioms&apos; module extends the &apos;Physical&apos; module by general class axioms which cannot be represented in OWL Manchester Syntax the &apos;Physical&apos; module uses.</dc:description>
+        <dc:license>http://creativecommons.org/publicdomain/zero/1.0/</dc:license>
+        <terms:title>Open Energy Ontology (Physical axioms module)</terms:title>
+    </owl:Ontology>
+    
 
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:description"/>
-        <Literal>The Open Energy Ontology is an ontology for all aspects of the enrgy modelling domain. The &apos;Physical axioms&apos; module extends the &apos;Physical&apos; module by general class axioms which cannot be represented in OWL Manchester Syntax the &apos;Physical&apos; module uses.</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="dc:license"/>
-        <Literal>http://creativecommons.org/publicdomain/zero/1.0/</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty IRI="http://purl.org/dc/terms/title"/>
-        <Literal>Open Energy Ontology (Physical axioms module)</Literal>
-    </Annotation>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-                <Class abbreviatedIRI=":OEO_00000007"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
-            <Class abbreviatedIRI=":OEO_00000151"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-                <Class abbreviatedIRI=":OEO_00000139"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
-            <Class abbreviatedIRI=":OEO_00000151"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-                <Class abbreviatedIRI=":OEO_00000207"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
-            <Class abbreviatedIRI=":OEO_00000151"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <ObjectIntersectionOf>
-            <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000053"/>
-                <Class abbreviatedIRI=":OEO_00230020"/>
-            </ObjectSomeValuesFrom>
-        </ObjectIntersectionOf>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000091"/>
-            <Class abbreviatedIRI=":OEO_00000151"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-</Ontology>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000053"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000091 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0000091"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00000007 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000007"/>
+    
+
+
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00000139 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000139"/>
+    
+
+
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00000151 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
+    
+
+
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00000207 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000207"/>
+    
+
+
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00230020 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00230020"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000007"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000139"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000207"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00230020"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+</rdf:RDF>
 
 
 
