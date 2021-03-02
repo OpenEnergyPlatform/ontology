@@ -1,0 +1,16 @@
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: obo: <http://purl.obolibrary.org/obo/>
+
+Ontology: <http://openenergy-platform.org/ontology/cc/> <http://openenergy-platform.org/ontology/cc/>
+
+
+# Energy that is produced by a coal powerplant is non-renewable
+
+ObjectProperty: obo:RO_0002353 # output of
+ObjectProperty: OEO_00000530 # has origin
+Class: OEO_00000028 # energy carrier disposition
+Class: OEO_00000008 # coal power unit
+Class: OEO_00030004 # renewable
+
+DisjointClasses: obo:RO_0002353 some OEO_00000008, not(OEO_00000530 max 0 OEO_00030004)

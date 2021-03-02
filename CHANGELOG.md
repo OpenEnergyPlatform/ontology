@@ -6,8 +6,20 @@ and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v
 
 Here is a template for new release sections
 
+
+
 ```
-## [_._._] - 20XX-MM-DD
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+### Changed
+### Removed
+
+```
+
+# Unreleased
+
+## [1.X.X] - 20XX-XX-XX
 
 ### Added
 -
@@ -15,7 +27,47 @@ Here is a template for new release sections
 -
 ### Removed
 -
-```
+
+## [1.4.0] - 2021-03-02
+
+### Added
+- monetary price and currency (#331)
+- market exchange (#341)
+- trader (#377)
+- price request and marginal cost (#376)
+- cost (#268)
+- commodity (#339)
+- emission value, greenhouse gas emission value, carbon dioxide equivalent quantity (#651)
+- disjointness axiom for (has origin some natural gas) and (has origin some anthropogenic) (#658)
+- radiative energy (#665)
+- solar energy transformation and subclasses (#672, #701)
+- potential energy (#670)
+- photon (#674)
+- abbreviations GDP and GVA (#676)
+- renewable energy carrier (equivalent class) (#684)
+- global warming potential (#683)
+- steam-electric process (#691)
+- volumetric flow rate value (#693)
+- emission quantity value (#697)
+- nuclear fission, nuclear energy transformation (#698)
+
+### Changed
+- relations to energy transformation (#646)
+- has global warming potential (#651, #683)
+- definition of battery electric vehicle and fuel cell electric vehicle (#655)
+- energy (#656 and #665)
+- solar energy (#672)
+- fix def of secondary energy carrier (#678)
+- restructure hydro energy classes in dev meeting (#682)
+- license from string to IRI format (#686)
+- definition of water (#689)
+- emission value (#697)
+- nuclear (binding) energy (#698)
+- bioethanol (#704)
+- has input / has physical input (#702)
+
+### Removed
+- delete hydroelectricity class (#682)
 
 ## [1.3.0] - 2020-12-18
 
@@ -42,6 +94,7 @@ Here is a template for new release sections
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
+- energy transformation has input/output energy (#690)
 
 ## [1.2.0] - 2020-10-30
 
