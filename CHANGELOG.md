@@ -28,7 +28,7 @@ Here is a template for new release sections
 ### Removed
 -
 
-## [1.4.0] - 2021-02-26
+## [1.4.0] - 2021-03-02
 
 ### Added
 - monetary price and currency (#331)
