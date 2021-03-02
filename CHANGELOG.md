@@ -6,8 +6,29 @@ and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v
 
 Here is a template for new release sections
 
+
+
 ```
-## [_._._] - 20XX-MM-DD
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+### Changed
+### Removed
+
+```
+
+# Unreleased
+
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+-
+### Changed
+-
+### Removed
+-
+
+## [1.4.0] - 2021-03-02
 
 ### Added
 - monetary price and currency (#331)
@@ -23,7 +44,7 @@ Here is a template for new release sections
 - potential energy (#670)
 - photon (#674)
 - abbreviations GDP and GVA (#676)
-- renewable energy carrier (equivalent class) (#684) 
+- renewable energy carrier (equivalent class) (#684)
 - global warming potential (#683)
 - steam-electric process (#691)
 - volumetric flow rate value (#693)
@@ -47,7 +68,6 @@ Here is a template for new release sections
 
 ### Removed
 - delete hydroelectricity class (#682)
-```
 
 ## [1.3.0] - 2020-12-18
 
@@ -74,7 +94,7 @@ Here is a template for new release sections
 - defs of relations has contributer, has resolution and covers (#626)
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
-- energy transformation has input/output energy (#690) 
+- energy transformation has input/output energy (#690)
 
 ## [1.2.0] - 2020-10-30
 
