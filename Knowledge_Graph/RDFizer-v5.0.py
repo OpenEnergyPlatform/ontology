@@ -1,3 +1,8 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[5]:
+
 
 import logging
 import rdflib
@@ -13,6 +18,14 @@ def findConcept(ontologyPath, term):
     for row in result:
         return row[0]
 
+
+# In[ ]:
+
+
+
+
+
+# In[9]:
 
 
 from rdflib import Graph, Literal, RDF, URIRef, RDFS, OWL
@@ -62,14 +75,14 @@ def formStudyReport(g,title, studyReportIns, subtitle,abstract,study_report_url,
 
 #---------------------------------------------------------------------------------------
 
-def formStudy(g , study_id, studyIns, studyReportIns, funding_institution, energy_carriers, sectors, study_region, interacting_region, scenario_IDs, scenario_names, scenario_abbreviations, scenario_abstracts ):
+def formStudy(g , study_id, studyIns, studyReportIns, funding_institution, energy_carriers, sectors, study_region, interacting_region, scenario_IDs, scenario_names, scenario_abbreviations, scenario_abstracts, MC_input_IDs, MC_output_IDs):
     studyIns = URIRef("http://openenergy-platform.org/thing/" + study_id)
     g.add((studyIns, RDF.type, OEO.OEO_00020011)) # study
     g.add((studyReportIns, obo.IAO_0000136, studyIns)) # is about
 
     for f in funding_institution:
         #print(f)
-        temp=f.lstrip().rstrip().replace(" ", "_").replace("-","_").replace("Ö","Oe").replace("ü","ue").replace("ä","ae").replace(".", "")
+        temp=f.lstrip().rstrip().replace(" ", "_").replace("-","_").replace("Ö","Oe").replace("ü","ue").replace("ä","ae").replace(".", "").replace(",","")
         fInst= URIRef("http://openenergy-platform.org/thing/" + temp.lstrip().rstrip())
         g.add((fInst, FOAF.name, Literal(f.lstrip().rstrip())))
         g.add((studyIns, OEO.OEO_00000509, fInst))#has funding source
@@ -119,6 +132,30 @@ def formStudy(g , study_id, studyIns, studyReportIns, funding_institution, energ
         g.add((studyIns, obo.RO_0000057, scenarioIns)) # study has participant (= RO_0000057) some scenario
         g.add((analysisScopeIns, OEO.OEO_00000504, scenarioIns)) # analysis scope is defined by scenario
     
+    
+    #form a model calculation and add it to the study
+    modelCalcIns = URIRef("http://openenergy-platform.org/thing/" + study_id+ "_model_calculation")
+    g.add((modelCalcIns, RDF.type, OEO.OEO_00000275)) # model calculation instance(OEO_00000275)
+    g.add((studyIns, obo.BFO_0000051 , modelCalcIns)) # study has part model calculation 
+    
+    if(MC_input_IDs!=None):
+        for mc_in in MC_input_IDs:
+            dataSetIns1 = URIRef("http://openenergy-platform.org/thing/" + mc_in) 
+            dataSetInsURL1 = "https://openenergy-platform.org/dataedit/view/scenario/" + mc_in
+            g.add((dataSetIns1, RDF.type, obo.IAO_0000100)) # data set = obo.IAO_0000100
+            g.add((modelCalcIns, obo.RO_0002233, dataSetIns1 )) # model calculation has input data set
+            g.add((dataSetIns1, schema.url, Literal(dataSetInsURL1 ))) # dataset url
+            
+    
+    if(MC_output_IDs!=None):
+        for mc_out in MC_output_IDs:
+            dataSetIns2 = URIRef("http://openenergy-platform.org/thing/" + mc_out) 
+            dataSetInsURL2 = "https://openenergy-platform.org/dataedit/view/scenario/" + mc_out
+            g.add((dataSetIns2, RDF.type, obo.IAO_0000100)) # data set = obo.IAO_0000100
+            g.add((modelCalcIns, obo.RO_0002234, dataSetIns2 )) # model calculation has output data set
+            g.add((dataSetIns2, schema.url, Literal(dataSetInsURL2) )) # dataset url
+   
+    
     return studyIns
 
 #---------------------------------------------------------------------------------------
@@ -166,6 +203,8 @@ for file in fileList:
 
     studyIns=None
     studyReportIns=None
+    MC_input_IDs=None
+    MC_output_IDs=None
 
 
     #f = open("inputPszV.txt", "r")
@@ -182,7 +221,7 @@ for file in fileList:
         elif(values[0]=='affiliantions'):
             affiliantions=values[1].lstrip().rstrip()
         elif(values[0]=='funding_institution'):
-            funding_institution=values[1].lstrip().rstrip().split(",")
+            funding_institution=values[1].lstrip().rstrip().split("###")
         elif(values[0]=='study_report_url'):
             study_report_url=values[1].lstrip().rstrip()
         elif(values[0]=='Year_of_publication'):
@@ -205,7 +244,13 @@ for file in fileList:
             scenario_abbreviations=values[1].lstrip().rstrip().split(",")
         elif(values[0]=='scenario_abstracts'):
             scenario_abstracts=values[1].lstrip().rstrip().split("###")
-            #print(scenario_abstracts)
+        elif(values[0]=='MC_input_IDs'):
+            MC_input_IDs=values[1].lstrip().rstrip().split("###")
+            #print(MC_input_IDs)
+        elif(values[0]=='MC_output_IDs'):
+            MC_output_IDs=values[1].lstrip().rstrip().split("###")
+            #print(MC_output_IDs)
+            
             
         
 
@@ -219,7 +264,7 @@ for file in fileList:
     #print(studyReportIns)
     #--------------- study --------------------
 
-    studyIns= formStudy(g , study_id, studyIns, studyReportIns, funding_institution, energy_carriers, sectors, study_region, interacting_region, scenario_IDs, scenario_names, scenario_abbreviations, scenario_abstracts)
+    studyIns= formStudy(g , study_id, studyIns, studyReportIns, funding_institution, energy_carriers, sectors, study_region, interacting_region, scenario_IDs, scenario_names, scenario_abbreviations, scenario_abstracts, MC_input_IDs, MC_output_IDs)
     #print(studyIns)
     #-------- institutions --------------------
 
@@ -273,6 +318,15 @@ for kg in outList:
     g3.parse(kg, format="turtle")
     graph = g2 + g3
     graph.serialize("KG.ttl", format="turtle")
+
+
+# In[ ]:
+
+
+
+
+
+# In[ ]:
 
 
 
