@@ -142,16 +142,46 @@ In case of conflicts between your branch and `dev` you must solve them either on
 
 ### Conventions for git and GitHub
 
-🔷 The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
+🔷 Naming convention for branches
 
-Examples of branch names : `feature/solving-duplicate-problems-#11` or `feature/add_ontology_new_class_#43`
+Follow the [best-practices for git branching naming convention](https://codingsight.com/git-branching-naming-convention-best-practices/).
+The convention is `type`-`issue-nr`-`short-description`
 
-If the branch purpose is to fix a problem `feature/` can be replaced by `fix/`
+**type**
 
-Try to follow [these conventions](https://chris.beams.io/posts/git-commit) for commit messages:
+* master / main / stable - includes the current stable version
+* dev - includes all current developments
+* feature - includes the feature that will be implemented
+* release - includes the current version to be released
+
+The majority of the ontology development will be done in `feature` branches.
+
+**issue-nr**
+
+Add the issue number where you describe, discuss and document your development.
+
+**short-description**
+
+Describe shortly what the branch is about. Avoid long and short descriptive names for branches, 2-4 words are optimal.
+
+Other hints:
+- Separate words with `-` (minus))
+- Do not put a name to the branch name
+- Avoid using numbers only 
+- Branch names should be precise and informative
+- Avoid using capital letters
+
+Examples of branch names : `feature-11-solving-duplicate-problems` or `feature-43-add-new-ontology-class`
+
+🔷 Commit messages
+
+Try to follow esxisting conventions for commit messages:
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
 - Do not end the commit message with a [period](https://chris.beams.io/posts/git-commit/#end) 
+
+🔷 Ammend
 
 You can use 
 ```bash
