@@ -165,13 +165,13 @@ Add the issue number where you describe, discuss and document your development.
 Describe shortly what the branch is about. Avoid long and short descriptive names for branches, 2-4 words are optimal.
 
 Other hints:
-- Separate words with `-` (minus))
-- Do not put a name to the branch name
+- Separate words with `-` (minus)
+- Do not put your name to the branch name, it's a collaborative project
 - Avoid using numbers only 
 - Branch names should be precise and informative
 - Avoid using capital letters
 
-Examples of branch names : `feature-11-solving-duplicate-problems` or `feature-43-add-new-ontology-class`
+Examples of branch names : `feature-43-add-new-ontology-class` or `feature-711-branch-naming-convention`
 
 🔷 Commit messages
 
@@ -181,11 +181,15 @@ Try to follow esxisting conventions for commit messages:
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
 - Do not end the commit message with a [period](https://chris.beams.io/posts/git-commit/#end) 
 
-🔷 Ammend
 
-You can use 
+You can use the command 
 ```bash
 git commit --amend
 ```
-to edit the commit message of your latest commit (provided it is not already pushed on the remote server).
+to edit the commit message of your latest commit (provided it is not already pushed on the remote server). <br>
 With `--amend` you can even add/modify changes to the commit.
+
+
+### Communicate
+
+Feel free to ask the community if you need help. We are happy to support you.
