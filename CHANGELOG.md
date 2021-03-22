@@ -23,11 +23,13 @@ Here is a template for new release sections
 
 ### Added
 - thorium and plutonium (#708)
+- has information input / output (#716)
 
 ### Changed
--
+- has physical output, has constraint (#716)
+
 ### Removed
--
+- has numerical input / output (#716)
 
 ## [1.4.0] - 2021-03-02
 
