@@ -27,6 +27,7 @@ Here is a template for new release sections
 
 ### Changed
 - has physical output, has constraint (#716)
+- gross inland energy consumption, primary energy consumption
 
 ### Removed
 - has numerical input / output (#716)
