@@ -25,11 +25,13 @@ Here is a template for new release sections
 - thorium and plutonium (#708)
 - has information input / output (#716)
 - has typical computation time / hardware (#723)
+- quality control flag (#724)
 
 ### Changed
 - has physical output, has constraint (#716)
 - gross inland energy consumption, primary energy consumption (#719)
 - covers energy carrier (#722)
+- data descriptor (#724)
 
 ### Removed
 - has numerical input / output (#716)
