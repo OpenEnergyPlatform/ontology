@@ -24,6 +24,7 @@ Here is a template for new release sections
 ### Added
 - thorium and plutonium (#708)
 - has information input / output (#716)
+- has typical computation time / hardware (#723)
 
 ### Changed
 - has physical output, has constraint (#716)
@@ -32,6 +33,7 @@ Here is a template for new release sections
 
 ### Removed
 - has numerical input / output (#716)
+- computation time (#723)
 
 ## [1.4.0] - 2021-03-02
 
