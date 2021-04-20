@@ -139,14 +139,17 @@ ObjectProperty: OEO_00000522
 ObjectProperty: OEO_00000523
 
     Annotations: 
-        rdfs:comment "A relation that holds between a publication/model calculation/model and the energycarrier it covers.",
-        rdfs:label "covers energycarrier"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change range
+issue: https://github.com/OpenEnergyPlatform/ontology/pull/721
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/722",
+        rdfs:comment "A relation that holds between a publication/model calculation/model and the energy carrier it covers.",
+        rdfs:label "covers energy carrier"
     
     SubPropertyOf: 
         OEO_00000522
     
     Range: 
-        OEO_00000151
+        OEO_00020039
     
     
 ObjectProperty: OEO_00000524
@@ -294,6 +297,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         Irreflexive,
         Asymmetric
     
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
     Range: 
         OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000040>
     
@@ -301,7 +307,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
 ObjectProperty: OEO_00000533
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical output c iff: p has output c, and c is a material entity or energy"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
         rdfs:label "has physical output"
     
     SubPropertyOf: 
@@ -3948,13 +3956,50 @@ Class: OEO_00050016
     
 Class: OEO_00050017
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross inland energy consumption is the total consumption of energy in a spatial region (e.g. a country)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Gross inland energy consumption represents the quantity of energy necessary to satisfy inland consumption of the spatial region (e.g. a country) under consideration.
+
+Gross inland energy consumption covers:
+  - consumption by the energy sector itself;
+  - distribution and transformation losses;
+  - final energy consumption by end users;
+  - 'statistical differences' (not already captured in the figures on primary energy consumption and final energy consumption).
+
+Gross inland energy consumption does not include energy (fuel oil) provided to international maritime bunkers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Gross inland consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption including non-energy use of energy carriers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
+https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Gross_inland_energy_consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
+        rdfs:label "gross inland energy consumption"@en
+    
     SubClassOf: 
+        OEO_00140039,
         OEO_00140002 some OEO_00050019
     
     
 Class: OEO_00050018
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy consumption is the total consumption of energy in a spatial region excluding the non-energetic use of fuels."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Primary energy consumption covers consumption of the energy sector itself, losses during transformation (for example, from oil or gas into electricity) and distribution of energy, and the final consumption by end users. It excludes energy carriers used for non-energy purposes (such as petroleum not used not for combustion but for producing plastics)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption excluding non-energy use of energy carriers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
+https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Primary_energy_consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
+        rdfs:label "primary energy consumption"@en
+    
     SubClassOf: 
+        OEO_00140039,
         OEO_00140002 some OEO_00050019
     
     
@@ -4204,6 +4249,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
     SubClassOf: 
         OEO_00140034
     
+    
+Class: OEO_00140039
+
     
 Class: OEO_00140049
 
