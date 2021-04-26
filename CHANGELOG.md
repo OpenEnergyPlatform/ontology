@@ -27,6 +27,7 @@ Here is a template for new release sections
 - has typical computation time / hardware (#723)
 - goal description (#729)
 - heat transfer (#733)
+- heat exchanger (#734)
 
 ### Changed
 - has physical output, has constraint (#716)
