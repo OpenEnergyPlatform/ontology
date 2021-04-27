@@ -61,6 +61,7 @@ Here is a template for new release sections
 - volumetric flow rate value (#693)
 - emission quantity value (#697)
 - nuclear fission, nuclear energy transformation (#698)
+- solar chemical energy transformation (#735)
 
 ### Changed
 - relations to energy transformation (#646)
