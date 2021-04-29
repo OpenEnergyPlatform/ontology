@@ -12,6 +12,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-shared/>
 <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/iao-module.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/ro-module.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/uo-module.owl>
 Import: <http://purl.obolibrary.org/obo/omo.owl>
@@ -83,6 +84,9 @@ Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
     InverseOf: 
         <http://purl.obolibrary.org/obo/BFO_0000050>
     
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
+
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
@@ -161,6 +165,21 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend f
         rdfs:label "covers"
     
     
+ObjectProperty: OEO_00020056
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that relates a quantity value to its entity in reality.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/700
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/710",
+        rdfs:label "quantity value of"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    InverseOf: 
+        OEO_00140002
+    
+    
 ObjectProperty: OEO_00040010
 
     Annotations: 
@@ -181,6 +200,9 @@ ObjectProperty: OEO_00140002
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
         rdfs:label "has quantity value"@en
+    
+    InverseOf: 
+        OEO_00020056
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
