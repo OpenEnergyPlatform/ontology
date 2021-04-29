@@ -26,12 +26,15 @@ Here is a template for new release sections
 - has information input / output (#716)
 - has typical computation time / hardware (#723)
 - quality control flag (#724)
+- goal description (#729)
+- heat transfer (#733)
+- heat exchanger (#734)
 
 ### Changed
 - has physical output, has constraint (#716)
 - gross inland energy consumption, primary energy consumption (#719)
 - covers energy carrier (#722)
-- data descriptor (#724)
+- photon, wind energy, solar energy (#732)
 
 ### Removed
 - has numerical input / output (#716)
@@ -59,6 +62,7 @@ Here is a template for new release sections
 - volumetric flow rate value (#693)
 - emission quantity value (#697)
 - nuclear fission, nuclear energy transformation (#698)
+- solar chemical energy transformation (#735)
 
 ### Changed
 - relations to energy transformation (#646)
