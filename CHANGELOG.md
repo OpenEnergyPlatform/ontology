@@ -29,6 +29,7 @@ Here is a template for new release sections
 - heat transfer (#733)
 - heat exchanger (#734)
 - geothermal heat transfer, rock (#739)
+- emission certificate (#740)
 
 ### Changed
 - has physical output, has constraint (#716)
