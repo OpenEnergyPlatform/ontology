@@ -28,6 +28,7 @@ Here is a template for new release sections
 - goal description (#729)
 - heat transfer (#733)
 - heat exchanger (#734)
+- emission certificate (#740)
 
 ### Changed
 - has physical output, has constraint (#716)
