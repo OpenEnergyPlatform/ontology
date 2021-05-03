@@ -31,6 +31,7 @@ Here is a template for new release sections
 - heat exchanger (#734)
 - geothermal heat transfer, rock (#739)
 - emission certificate (#740)
+- natural / artificial ambient thermal energy, ambient thermal energy transfer (#742)
 
 ### Changed
 - has physical output, has constraint (#716)
@@ -38,6 +39,8 @@ Here is a template for new release sections
 - covers energy carrier (#722)
 - photon, wind energy, solar energy (#732)
 - geothermal energy (#739)
+- ambient thermal energy (#742)
+- has origin, renewable, anthropogenic (#742)
 
 ### Removed
 - has numerical input / output (#716)
