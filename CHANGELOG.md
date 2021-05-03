@@ -25,6 +25,7 @@ Here is a template for new release sections
 - thorium and plutonium (#708)
 - has information input / output (#716)
 - has typical computation time / hardware (#723)
+- quality control flag (#724)
 - goal description (#729)
 - heat transfer (#733)
 - heat exchanger (#734)
