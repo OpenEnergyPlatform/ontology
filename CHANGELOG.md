@@ -19,7 +19,7 @@ Here is a template for new release sections
 
 # Unreleased
 
-## [1.X.X] - 20XX-XX-XX
+## [1.5.0] - 2021-05-03
 
 ### Added
 - thorium and plutonium (#708)
