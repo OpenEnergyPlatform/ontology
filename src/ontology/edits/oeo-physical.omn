@@ -953,9 +953,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410",
 Class: OEO_00000056
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient heat, understood as heat that is naturally around us in its diffuse and extended form, emanates from a diversity of heat sources, including earth, water, or air, and is increasingly attracting the attention of those concerned with energy and sustainability."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Urchueguia, J. F. (2016). Shallow geothermal and ambient heat technologies for renewable heating. In Renewable Heating and Cooling (pp. 89-118). Woodhead Publishing."@en,
-        rdfs:label "ambient heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient thermal energy is thermal energy that is stored in the ambient air, beneath the surface of solid earth or in surface water. It is captured by heat pumps."@en,
+        rdfs:label "ambient thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -3680,7 +3679,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
 Class: OEO_00030000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter or energies created by human activity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "anthropogenic"
@@ -3730,7 +3729,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
 Class: OEO_00030004
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of portions of matter that replenish on a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of portions of matter or energies that replenish on a human time scale.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/397
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/398
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
@@ -4679,6 +4678,40 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/734",
     SubClassOf: 
         OEO_00000011,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101
+    
+    
+Class: OEO_00140104
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural ambient thermal energy is ambient thermal energy that has a renewable origin.",
+        rdfs:label "natural ambient thermal energy"@en
+    
+    SubClassOf: 
+        OEO_00000056,
+        OEO_00000530 some OEO_00030004
+    
+    
+Class: OEO_00140105
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Artificial ambient thermal energy is ambient thermal energy that has an anthropogenic origin.",
+        rdfs:label "artificial ambient thermal energy"@en
+    
+    SubClassOf: 
+        OEO_00000056,
+        OEO_00000530 some OEO_00030000
+    
+    
+Class: OEO_00140106
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient thermal energy transfer is a heat transfer from the ambient air to a transportable material entity.",
+        rdfs:label "ambient thermal energy transfer"@en
+    
+    SubClassOf: 
+        OEO_00140101,
+        OEO_00000532 some OEO_00000056,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00230000
