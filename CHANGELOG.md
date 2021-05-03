@@ -28,6 +28,7 @@ Here is a template for new release sections
 - goal description (#729)
 - heat transfer (#733)
 - heat exchanger (#734)
+- geothermal heat transfer, rock (#739)
 - emission certificate (#740)
 
 ### Changed
@@ -35,6 +36,7 @@ Here is a template for new release sections
 - gross inland energy consumption, primary energy consumption (#719)
 - covers energy carrier (#722)
 - photon, wind energy, solar energy (#732)
+- geothermal energy (#739)
 
 ### Removed
 - has numerical input / output (#716)
