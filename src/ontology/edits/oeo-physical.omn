@@ -139,14 +139,17 @@ ObjectProperty: OEO_00000522
 ObjectProperty: OEO_00000523
 
     Annotations: 
-        rdfs:comment "A relation that holds between a publication/model calculation/model and the energycarrier it covers.",
-        rdfs:label "covers energycarrier"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change range
+issue: https://github.com/OpenEnergyPlatform/ontology/pull/721
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/722",
+        rdfs:comment "A relation that holds between a publication/model calculation/model and the energy carrier it covers.",
+        rdfs:label "covers energy carrier"
     
     SubPropertyOf: 
         OEO_00000522
     
     Range: 
-        OEO_00000151
+        OEO_00020039
     
     
 ObjectProperty: OEO_00000524
@@ -258,7 +261,11 @@ ObjectProperty: OEO_00000530
         <http://purl.obolibrary.org/obo/RO_0000086>
     
     Domain: 
-        OEO_00000331
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "add energy
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742"
+        OEO_00000150 or OEO_00000331
     
     Range: 
         OEO_00000316
@@ -294,6 +301,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         Irreflexive,
         Asymmetric
     
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
     Range: 
         OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000040>
     
@@ -301,12 +311,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
 ObjectProperty: OEO_00000533
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical output c iff: p has output c, and c is a material entity or energy"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
         rdfs:label "has physical output"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/RO_0002234>
     
+    
+ObjectProperty: OEO_00020056
+
     
 ObjectProperty: OEO_00040010
 
@@ -942,9 +957,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410",
 Class: OEO_00000056
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient heat, understood as heat that is naturally around us in its diffuse and extended form, emanates from a diversity of heat sources, including earth, water, or air, and is increasingly attracting the attention of those concerned with energy and sustainability."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Urchueguia, J. F. (2016). Shallow geothermal and ambient heat technologies for renewable heating. In Renewable Heating and Cooling (pp. 89-118). Woodhead Publishing."@en,
-        rdfs:label "ambient heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient thermal energy is thermal energy that is stored in the ambient air, beneath the surface of solid earth or in surface water. It is captured by heat pumps."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+        rdfs:label "ambient thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -1603,11 +1619,10 @@ Class: OEO_00000189
 Class: OEO_00000191
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy available as heat emitted from within the earth's crust, usually in the form of hot water or steam. This energy production is the difference between the enthalpy of the fluid produced in the production borehole and that of the fluid eventually disposed of. It is exploited at suitable sites:
-— for electricity generation using dry steam or high enthalpy brine after flashing,
-— directly as heat for district heating, agriculture etc"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "geothermal heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Geothermal energy is thermal energy that is released from within the earth's crust.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/727
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
+        rdfs:label "geothermal energy"
     
     SubClassOf: 
         OEO_00000207,
@@ -2506,12 +2521,14 @@ Class: OEO_00000384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225
 restructure solar energy
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
+remove disposition renewable fuel
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
         rdfs:label "solar energy"
     
     SubClassOf: 
-        OEO_00020040,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000033
+        OEO_00020040
     
     
 Class: OEO_00000386
@@ -2774,13 +2791,15 @@ Class: OEO_00000446
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225
 reclassify and change def
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
+remove disposition renewable fuel
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
         rdfs:label "wind energy"
     
     SubClassOf: 
         OEO_00230020,
-        OEO_00000503 some OEO_00000043,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000033
+        OEO_00000503 some OEO_00000043
     
     
 Class: OEO_00000447
@@ -3304,16 +3323,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683",
     
 Class: OEO_00010079
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity value is a quantity value that has a mass unit as unit. It is the quantity value of an emission value."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
-        rdfs:label "emission quantity value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
-    
     
 Class: OEO_00010080
 
@@ -3329,6 +3338,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
     
     SubClassOf: 
         OEO_00020046
+    
+    
+Class: OEO_00010081
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar chemical energy transformation is a solar energy transformation that converts solar energy into chemical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/673
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/735",
+        rdfs:label "solar chemical energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00020046,
+        OEO_00000533 some OEO_00000007
     
     
 Class: OEO_00020001
@@ -3631,10 +3653,42 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000207
     
     
+Class: OEO_00020058
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rock is a portion of matter that is a naturally occurring solid aggregate of minerals or mineraloid matter that is part of the earth's crust.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/727
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
+        rdfs:label "rock"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030003,
+        OEO_00000530 some OEO_00030004,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00020059
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Geothermal heat transfer is a heat transfer from the earth crust to a transportable material entity. E.g. a liquid or gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/727
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
+        rdfs:label "geothermal heat transfer"
+    
+    SubClassOf: 
+        OEO_00140101,
+        OEO_00000532 only OEO_00000191
+    
+    
 Class: OEO_00030000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter or energies created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "include \"or energies\"
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "anthropogenic"
@@ -3684,7 +3738,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
 Class: OEO_00030004
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of portions of matter that replenish on a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of portions of matter or energies that replenish on a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "include \"or energies\"
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/397
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/398
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
@@ -3948,13 +4005,50 @@ Class: OEO_00050016
     
 Class: OEO_00050017
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross inland energy consumption is the total consumption of energy in a spatial region (e.g. a country)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Gross inland energy consumption represents the quantity of energy necessary to satisfy inland consumption of the spatial region (e.g. a country) under consideration.
+
+Gross inland energy consumption covers:
+  - consumption by the energy sector itself;
+  - distribution and transformation losses;
+  - final energy consumption by end users;
+  - 'statistical differences' (not already captured in the figures on primary energy consumption and final energy consumption).
+
+Gross inland energy consumption does not include energy (fuel oil) provided to international maritime bunkers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Gross inland consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption including non-energy use of energy carriers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
+https://ec.europa.eu/eurostat/statistics-explained/index.php/Glossary:Gross_inland_energy_consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
+        rdfs:label "gross inland energy consumption"@en
+    
     SubClassOf: 
+        OEO_00140039,
         OEO_00140002 some OEO_00050019
     
     
 Class: OEO_00050018
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy consumption is the total consumption of energy in a spatial region excluding the non-energetic use of fuels."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Primary energy consumption covers consumption of the energy sector itself, losses during transformation (for example, from oil or gas into electricity) and distribution of energy, and the final consumption by end users. It excludes energy carriers used for non-energy purposes (such as petroleum not used not for combustion but for producing plastics)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption excluding non-energy use of energy carriers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
+https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Primary_energy_consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
+        rdfs:label "primary energy consumption"@en
+    
     SubClassOf: 
+        OEO_00140039,
         OEO_00140002 some OEO_00050019
     
     
@@ -4205,6 +4299,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568",
         OEO_00140034
     
     
+Class: OEO_00140039
+
+    
 Class: OEO_00140049
 
     Annotations: 
@@ -4242,6 +4339,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
     
     SubClassOf: 
         OEO_00000350,
+        OEO_00020056 some OEO_00140052,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
     
     
@@ -4537,6 +4635,103 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651",
         OEO_00140082
     
     
+Class: OEO_00140091
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Plutonium is a portion of matter with the chemical formula Pu. It has a solid normal state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/694
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/708",
+        rdfs:label "plutonium"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000028,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00140092
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Thorium is a portion of matter with the chemical formula Th. It has a solid normal state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/694
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/708",
+        rdfs:label "thorium"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000028,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00140101
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat transfer is an energy transformation with thermal energy as the only input and thermal energy as the only output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/730
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/733",
+        rdfs:label "heat transfer"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0002233> only OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0002234> only OEO_00000207
+    
+    
+Class: OEO_00140102
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat exchanger is an energy converting device that is used for a heat transfer process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/713
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/734",
+        rdfs:label "heat exchanger"@en
+    
+    SubClassOf: 
+        OEO_00000011,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101
+    
+    
+Class: OEO_00140104
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural ambient thermal energy is ambient thermal energy that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+        rdfs:label "natural ambient thermal energy"@en
+    
+    SubClassOf: 
+        OEO_00000056,
+        OEO_00000530 some OEO_00030004
+    
+    
+Class: OEO_00140105
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Artificial ambient thermal energy is ambient thermal energy that has an anthropogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+        rdfs:label "artificial ambient thermal energy"@en
+    
+    SubClassOf: 
+        OEO_00000056,
+        OEO_00000530 some OEO_00030000
+    
+    
+Class: OEO_00140106
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient thermal energy transfer is a heat transfer from the ambient air to a transportable material entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+        rdfs:label "ambient thermal energy transfer"@en
+    
+    SubClassOf: 
+        OEO_00140101,
+        OEO_00000532 some OEO_00000056,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
 Class: OEO_00230000
 
     Annotations: 
@@ -4546,7 +4741,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
         rdfs:label "storage capacity"
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00000350,
+        OEO_00020056 some OEO_00000159
     
     
 Class: OEO_00230001
@@ -4558,7 +4754,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
         rdfs:label "power rating"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00000350,
+        OEO_00020056 some OEO_00000011
     
     
 Class: OEO_00230002
@@ -4570,7 +4767,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
         rdfs:label "declared net capacity"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00000350,
+        OEO_00020056 some 
+            (OEO_00000031 or OEO_00000334)
     
     
 Class: OEO_00230003
@@ -4582,7 +4781,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
         rdfs:label "nameplate capacity"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00000350,
+        OEO_00020056 some 
+            (OEO_00000031 or OEO_00000334)
     
     
 Class: OEO_00230020
@@ -4612,7 +4813,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684"@en,
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030004,
-        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020040
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020040,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732"
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151
     
     
 Individual: OEO_00000182

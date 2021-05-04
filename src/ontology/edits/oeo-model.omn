@@ -13,7 +13,6 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-model/>
 <http://openenergy-platform.org/ontology/oeo/dev/oeo-model.omn>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/iao-module.owl>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation.",
@@ -156,51 +155,103 @@ ObjectProperty: OEO_00000517
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en,
-        rdfs:label "has_constraint"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
+        rdfs:label "has constraint"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    
-ObjectProperty: OEO_00000518
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its input."@en,
-        rdfs:label "has_numerical_input"
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
+        OEO_00140093
     
     Domain: 
         OEO_00000419
     
-    
-ObjectProperty: OEO_00000519
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and its output."@en,
-        rdfs:label "has_numerical_output"
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    Characteristics: 
-        Irreflexive,
-        Asymmetric
-    
-    Domain: 
-        OEO_00000419
+    Range: 
+        OEO_00000104
     
     
 ObjectProperty: OEO_00000522
 
     
+ObjectProperty: OEO_00020056
+
+    
 ObjectProperty: OEO_00040010
 
+    
+ObjectProperty: OEO_00140002
+
+    
+ObjectProperty: OEO_00140093
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has information input c iff: p has input c, and c is an information content entity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
+        rdfs:label "has information input"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+ObjectProperty: OEO_00140094
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has information output c iff: p has output c, and c is an information content entity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
+        rdfs:label "has information output"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+ObjectProperty: OEO_00140095
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an algorithm or a software and the typical duration of its execution.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/527
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/723",
+        rdfs:label "has typical computation time"@en
+    
+    SubPropertyOf: 
+        OEO_00140002
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000010> or <http://purl.obolibrary.org/obo/IAO_0000064>
+    
+    Range: 
+        OEO_00030035
+    
+    
+ObjectProperty: OEO_00140096
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an algorithm or a software and the typical hardware used for its execution.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/527
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/723",
+        rdfs:label "has typical computation hardware"@en
+    
+    SubPropertyOf: 
+        OEO_00000503
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000010> or <http://purl.obolibrary.org/obo/IAO_0000064>
+    
+    Range: 
+        OEO_00030035
+    
     
 ObjectProperty: owl:topObjectProperty
 
@@ -263,6 +314,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000028>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000064>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000088>
@@ -359,16 +413,6 @@ Class: OEO_00000091
         OEO_00000119
     
     
-Class: OEO_00000103
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "computation time is a software descriptor describing how long a Software or an Algorithm needs to compute."^^xsd:string,
-        rdfs:label "computation time"
-    
-    SubClassOf: 
-        OEO_00000378
-    
-    
 Class: OEO_00000104
 
     Annotations: 
@@ -397,6 +441,9 @@ Class: OEO_00000119
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A data descriptor is an information content entity that contains additional information about some data."^^xsd:string,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/612
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/724"
         rdfs:label "data descriptor"
     
     SubClassOf: 
@@ -963,17 +1010,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/536",
         OEO_00030030
     
     
-Class: OEO_00020015
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A licence is an information content entity that contains an official permission or permit to do, use or own something.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "license",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/31
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/561",
-        rdfs:label "licence"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: OEO_00020016
@@ -1266,8 +1303,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
     
     SubClassOf: 
         OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000038>
+        OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000038>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
     
     
 Class: OEO_00140024
@@ -1354,6 +1391,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
     
     SubClassOf: 
         OEO_00000119
+    
+    
+Class: OEO_00140098
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quality control flag is a data descriptor that describes the measurement quality of a data set, e.g. a time series.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/612
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/724",
+        rdfs:label "quality control flag"@en
+    
+    SubClassOf: 
+        OEO_00000119,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000100>
+
+
+Class: OEO_00140099
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A goal description is an information content entity that contains statements about a desired future state of a system that a person or organisation envisions or plans, or to which it commits.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/28
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/729",
+        rdfs:label "goal description"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Individual: OEO_00000049

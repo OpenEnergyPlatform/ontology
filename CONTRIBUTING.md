@@ -55,9 +55,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     ```bash
     git pull
     ```
-    Branch from `dev`
+    Branch from `dev` (see also section "naming conventions" below)
     ```bash
-    git checkout -b feature/myfeature-#issueNumber
+    git checkout -b feature-issueNumber-myfeature
     ```
     It is best to merge one's changes *as fast as possible* (i.e. do not wait for 2 weeks) to avoid merging conflicts
 3. 📙 or 📗 Open [Protégé](https://protege.stanford.edu/) or a text editor and work on the ontology. If you haven't already, make sure you change your protégé settings to use [numeric identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers). Please choose the right module of the oeo to do your changes, oeo.omn is in most cases not the right file to change. Refer to [this article](https://github.com/OpenEnergyPlatform/ontology/wiki/how-to-use-prot%C3%A9g%C3%A9-to-change-the-ontology) for detailed explanations on working with protégé.
@@ -142,20 +142,54 @@ In case of conflicts between your branch and `dev` you must solve them either on
 
 ### Conventions for git and GitHub
 
-🔷 The convention is to always have `feature/` in the branch name. The `myfeature` part should describe shortly what the feature is about (separate words with `_` or `-`). It is also nice to end the branch name with the issue number it is linked to:
+🔷 Naming convention for branches
 
-Examples of branch names : `feature/solving-duplicate-problems-#11` or `feature/add_ontology_new_class_#43`
+Follow the [best-practices for git branching naming convention](https://codingsight.com/git-branching-naming-convention-best-practices/).
+The convention is `type`-`issue-nr`-`short-description`
 
-If the branch purpose is to fix a problem `feature/` can be replaced by `fix/`
+**type**
 
-Try to follow [these conventions](https://chris.beams.io/posts/git-commit) for commit messages:
+* master / main / stable - includes the current stable version
+* dev - includes all current developments
+* feature - includes the feature that will be implemented
+* release - includes the current version to be released
+
+The majority of the ontology development will be done in `feature` branches.
+
+**issue-nr**
+
+Add the issue number where you describe, discuss and document your development.
+
+**short-description**
+
+Describe shortly what the branch is about. Avoid long and short descriptive names for branches, 2-4 words are optimal.
+
+Other hints:
+- Separate words with `-` (minus)
+- Do not put your name to the branch name, it's a collaborative project
+- Avoid using numbers only 
+- Branch names should be precise and informative
+- Avoid using capital letters
+
+Examples of branch names : `feature-43-add-new-ontology-class` or `feature-711-branch-naming-convention`
+
+🔷 Commit messages
+
+Try to follow esxisting conventions for commit messages:
+- [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
 - Do not end the commit message with a [period](https://chris.beams.io/posts/git-commit/#end) 
 
-You can use 
+
+You can use the command 
 ```bash
 git commit --amend
 ```
-to edit the commit message of your latest commit (provided it is not already pushed on the remote server).
+to edit the commit message of your latest commit (provided it is not already pushed on the remote server). <br>
 With `--amend` you can even add/modify changes to the commit.
+
+
+### Communicate
+
+Feel free to ask the community if you need help. We are happy to support you.
