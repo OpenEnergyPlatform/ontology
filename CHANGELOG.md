@@ -17,7 +17,13 @@ Here is a template for new release sections
 
 ```
 
-# Unreleased
+## Unreleased [1.X.X] - 20XX-XX-XX
+
+### Added
+- trade, market participant (#745)
+### Changed
+### Removed
+
 
 ## [1.5.0] - 2021-05-03
 
