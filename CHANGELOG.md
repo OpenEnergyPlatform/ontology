@@ -21,7 +21,10 @@ Here is a template for new release sections
 
 ### Added
 - trade, market participant (#745)
+
 ### Changed
+- trader (#745)
+
 ### Removed
 
 
