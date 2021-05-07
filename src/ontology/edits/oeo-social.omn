@@ -76,6 +76,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 
     
@@ -606,6 +609,32 @@ Class: OEO_00010079
         OEO_00020056 some OEO_00020063
     
     
+Class: OEO_00010082
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745",
+        rdfs:label "trade"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
+    
+    
+Class: OEO_00010083
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745",
+        rdfs:label "market participant"@en
+    
+    SubClassOf: 
+        OEO_00000051,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00040002
+    
+    
 Class: OEO_00020015
 
     
@@ -751,15 +780,20 @@ https://github.com/OpenEnergyPlatform/ontology/pull/640",
 Class: OEO_00040005
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An agent that engages in the transfer of financial assets in any financial market on behalf of a client or a financial services provider.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trader is a market participant that engages in the transfer of financial assets in any financial market on behalf of a client or a financial services provider.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-pas-fpas:Trader",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/377
-https://github.com/OpenEnergyPlatform/ontology/pull/641",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Implement in line with FIBO:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/377
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/641
+
+Make trader subclass of market participant:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
+https://github.com/OpenEnergyPlatform/ontology/pull/745",
         rdfs:label "trader"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/Trader"
     
     SubClassOf: 
-        OEO_00000051
+        OEO_00010083
     
     
 Class: OEO_00040006
