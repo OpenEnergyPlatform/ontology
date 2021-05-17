@@ -24,6 +24,7 @@ Here is a template for new release sections
 
 ### Changed
 - trader (#745)
+- powerplant and power generating unit subclasses (#752)
 
 ### Removed
 
