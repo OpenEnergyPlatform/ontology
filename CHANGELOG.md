@@ -24,6 +24,7 @@ Here is a template for new release sections
 
 ### Changed
 - trader (#745)
+- has typical computation time (#751)
 
 ### Removed
 
