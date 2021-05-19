@@ -52,6 +52,7 @@ Here is a template for new release sections
 - geothermal energy (#739)
 - ambient thermal energy (#742)
 - has origin, renewable, anthropogenic (#742)
+- wind energy converting unit uses wind rotor (#754)
 
 ### Removed
 - has numerical input / output (#716)
