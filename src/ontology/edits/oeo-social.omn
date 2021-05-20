@@ -194,6 +194,23 @@ ObjectProperty: OEO_00020070
     Range: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
     
+    InverseOf: 
+        OEO_00020071
+    
+    
+ObjectProperty: OEO_00020071
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between financial instruments, commodities, or other products, services, or goods and a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "trades"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        OEO_00020070
+    
     
 ObjectProperty: OEO_00040010
 
@@ -658,14 +675,15 @@ Class: OEO_00020015
 Class: OEO_00020060
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is a market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
         rdfs:label "fuel market exchange"
     
     SubClassOf: 
-        OEO_00020065
+        OEO_00020065,
+        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
     
     
 Class: OEO_00020063
@@ -702,12 +720,17 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
         rdfs:label "energy market exchange"
     
     SubClassOf: 
-        OEO_00040002
+        OEO_00020069
     
+    
+Class: OEO_00020066
+
     
 Class: OEO_00020069
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organization that has the market exchange role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
         rdfs:label "market exchange"
     
     EquivalentTo: 
