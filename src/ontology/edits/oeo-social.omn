@@ -1,4 +1,4 @@
-﻿Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: : <http://openenergy-platform.org/ontology/oeo/>
 Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: obda: <https://w3id.org/obda/vocabulary#>
@@ -177,6 +177,23 @@ ObjectProperty: OEO_00000522
     
 ObjectProperty: OEO_00020056
 
+    
+ObjectProperty: OEO_00020070
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a market exchange and the financial instruments, commodities, or other products, services, or goods which are traded there.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "is traded at"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
     
 ObjectProperty: OEO_00040010
 
@@ -688,6 +705,18 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
         OEO_00040002
     
     
+Class: OEO_00020069
+
+    Annotations: 
+        rdfs:label "market exchange"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    SubClassOf: 
+        OEO_00030022
+    
+    
 Class: OEO_00030016
 
     Annotations: 
@@ -751,10 +780,14 @@ Class: OEO_00040002
         <http://purl.obolibrary.org/obo/IAO_0000118> "market",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
-https://github.com/OpenEnergyPlatform/ontology/pull/639",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/677
-https://github.com/OpenEnergyPlatform/ontology/pull/740",
-        rdfs:label "market exchange"@en,
+https://github.com/OpenEnergyPlatform/ontology/pull/639
+
+https://github.com/OpenEnergyPlatform/ontology/issues/677
+https://github.com/OpenEnergyPlatform/ontology/pull/740
+
+change label to market exchange role
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "market exchange role"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
     
     SubClassOf: 
@@ -859,7 +892,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/643",
     SubClassOf: 
         OEO_00140012
     
-
+    
 Class: OEO_00040011
 
     
