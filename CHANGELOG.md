@@ -24,6 +24,8 @@ Here is a template for new release sections
 
 ### Changed
 - trader (#745)
+- has typical computation time (#751)
+- powerplant and power generating unit subclasses (#752)
 
 ### Removed
 
@@ -51,6 +53,7 @@ Here is a template for new release sections
 - geothermal energy (#739)
 - ambient thermal energy (#742)
 - has origin, renewable, anthropogenic (#742)
+- wind energy converting unit uses wind rotor (#754)
 
 ### Removed
 - has numerical input / output (#716)
