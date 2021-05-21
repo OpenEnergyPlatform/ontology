@@ -44,6 +44,7 @@ Here is a template for new release sections
 - geothermal heat transfer, rock (#739)
 - emission certificate (#740)
 - natural / artificial ambient thermal energy, ambient thermal energy transfer (#742)
+- energy market exchange (#748)
 
 ### Changed
 - has physical output, has constraint (#716)
