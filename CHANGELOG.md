@@ -27,6 +27,7 @@ Here is a template for new release sections
 - trader (#745)
 - has typical computation time (#751)
 - powerplant and power generating unit subclasses (#752)
+- objective function (#757)
 
 ### Removed
 
