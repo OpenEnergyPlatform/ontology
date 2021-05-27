@@ -21,12 +21,14 @@ Here is a template for new release sections
 
 ### Added
 - trade, market participant (#745)
+- reservoir (#755)
 - contract (#756)
 
 ### Changed
 - trader (#745)
 - has typical computation time (#751)
 - powerplant and power generating unit subclasses (#752)
+- dammed water -> dam; pumped water (#755)
 - objective function (#757)
 
 ### Removed

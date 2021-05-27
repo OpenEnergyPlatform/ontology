@@ -1271,12 +1271,13 @@ Class: OEO_00000115
 Class: OEO_00000117
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is a barrier that stops or restricts the flow of water or underground streams. Reservoirs created by dams not only suppress floods but also provide water for activities such as irrigation, human consumption, industrial use, aquaculture, and navigability. Hydropower is often used in conjunction with dams to generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en,
-        rdfs:label "dammed water"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is an artificial object that stops or restricts the flow of water or underground streams."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
+        rdfs:label "dam"
     
     SubClassOf: 
-        OEO_00000441,
+        OEO_00000061,
         OEO_00000501 some OEO_00000399
     
     
@@ -2448,11 +2449,13 @@ Class: OEO_00000343
 Class: OEO_00000345
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Pumped water is water which was pumped into an upper reservoir and thus contains potential energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Pumped water is liquid water which was pumped into an upper reservoir and thus contains potential energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
         rdfs:label "pumped water"
     
     SubClassOf: 
-        OEO_00000441,
+        OEO_00110000,
         OEO_00000501 some OEO_00000399
     
     
@@ -3377,6 +3380,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/735",
     SubClassOf: 
         OEO_00020046,
         OEO_00000533 some OEO_00000007
+    
+    
+Class: OEO_00010084
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir is an artificial object that stores liquid water and has a dam as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Reservoirs created by dams provide water for activities such as hydro energy transformation, irrigation, human consumption, industrial use, aquaculture, and navigability. They are also used to regulate floods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
+        rdfs:label "reservoir"@en
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00000503 some OEO_00110000,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117
     
     
 Class: OEO_00020001
@@ -4897,4 +4915,3 @@ Individual: OEO_00000390
     
 DisjointClasses: 
     OEO_00000188,OEO_00000210,OEO_00000425
-
