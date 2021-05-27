@@ -178,6 +178,40 @@ ObjectProperty: OEO_00000522
 ObjectProperty: OEO_00020056
 
     
+ObjectProperty: OEO_00020070
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a market exchange and the financial instruments, commodities, or other products, services, or goods which are traded there.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "is traded at"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    InverseOf: 
+        OEO_00020071
+    
+    
+ObjectProperty: OEO_00020071
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between financial instruments, commodities, or other products, services, or goods and a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "trades"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        OEO_00020070
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -276,6 +310,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000310>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
@@ -641,13 +678,15 @@ Class: OEO_00020015
 Class: OEO_00020060
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is a market exchange where fuels like oil, coal, nuclear, renewable energy, and natural gas are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
         rdfs:label "fuel market exchange"
     
     SubClassOf: 
-        OEO_00040002
+        OEO_00020065,
+        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
     
     
 Class: OEO_00020063
@@ -673,6 +712,47 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
     
     SubClassOf: 
         OEO_00020063
+    
+    
+Class: OEO_00020065
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "energy market exchange"
+    
+    SubClassOf: 
+        OEO_00020069
+    
+    
+Class: OEO_00020066
+
+    
+Class: OEO_00020067
+
+    SubClassOf: 
+        OEO_00020070 some OEO_00020069
+    
+    
+Class: OEO_00020068
+
+    SubClassOf: 
+        OEO_00020070 some OEO_00020060
+    
+    
+Class: OEO_00020069
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organization that has the market exchange role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "market exchange"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    SubClassOf: 
+        OEO_00030022
     
     
 Class: OEO_00030016
@@ -738,10 +818,14 @@ Class: OEO_00040002
         <http://purl.obolibrary.org/obo/IAO_0000118> "market",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
-https://github.com/OpenEnergyPlatform/ontology/pull/639",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/677
-https://github.com/OpenEnergyPlatform/ontology/pull/740",
-        rdfs:label "market exchange"@en,
+https://github.com/OpenEnergyPlatform/ontology/pull/639
+
+https://github.com/OpenEnergyPlatform/ontology/issues/677
+https://github.com/OpenEnergyPlatform/ontology/pull/740
+
+change label to market exchange role
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "market exchange role"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
     
     SubClassOf: 
@@ -849,17 +933,6 @@ https://github.com/OpenEnergyPlatform/ontology/pull/643",
     
 Class: OEO_00040011
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/339
-https://github.com/OpenEnergyPlatform/ontology/pull/644",
-        rdfs:label "commodity"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
-    
     
 Class: OEO_00140009
 
@@ -927,6 +1000,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>
+    
+    
+Class: OEO_00140109
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A contract is a document that contains an agreement between two or more competent agents to which those agents agree to be legally bound.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/756",
+        rdfs:label "contract"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
     
     
 Class: OEO_00230013

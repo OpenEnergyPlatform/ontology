@@ -22,12 +22,14 @@ Here is a template for new release sections
 ### Added
 - trade, market participant (#745)
 - reservoir (#755)
+- contract (#756)
 
 ### Changed
 - trader (#745)
 - has typical computation time (#751)
 - powerplant and power generating unit subclasses (#752)
 - dammed water -> dam; pumped water (#755)
+- objective function (#757)
 
 ### Removed
 
@@ -45,6 +47,7 @@ Here is a template for new release sections
 - geothermal heat transfer, rock (#739)
 - emission certificate (#740)
 - natural / artificial ambient thermal energy, ambient thermal energy transfer (#742)
+- energy market exchange (#748)
 
 ### Changed
 - has physical output, has constraint (#716)

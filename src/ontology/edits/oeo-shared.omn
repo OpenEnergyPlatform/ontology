@@ -29,6 +29,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
@@ -60,6 +63,9 @@ AnnotationProperty: rdfs:comment
 
     
 AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:seeAlso
 
     
 Datatype: rdf:PlainLiteral
@@ -94,6 +100,9 @@ Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
@@ -216,7 +225,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000040>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
@@ -336,6 +351,48 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
+Class: OEO_00020066
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel commodity role is the commodity role of fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/256
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "fuel commodity role"
+    
+    SubClassOf: 
+        OEO_00040011
+    
+    
+Class: OEO_00020067
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a material entity that bears the commodity role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "commodity"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020068
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel commodity is a commodity that is a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "fuel commodity"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066
+    
+    SubClassOf: 
+        OEO_00020067
+    
+    
 Class: OEO_00030031
 
     Annotations: 
@@ -358,6 +415,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000148>
+    
+    
+Class: OEO_00040011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/339
+https://github.com/OpenEnergyPlatform/ontology/pull/644
+moved to oeo-shared and renamed
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "commodity role"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
 Class: OEO_00050016
