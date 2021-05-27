@@ -22,6 +22,7 @@ Here is a template for new release sections
 ### Added
 - trade, market participant (#745)
 - contract (#756)
+- hydro power unit, hydro powerplant and subclasses (#758)
 
 ### Changed
 - trader (#745)
@@ -30,7 +31,7 @@ Here is a template for new release sections
 - objective function (#757)
 
 ### Removed
-
+- hydroelectric dam energy transformation and run-off-river energy transformation (#758)
 
 ## [1.5.0] - 2021-05-03
 
