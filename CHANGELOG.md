@@ -30,6 +30,7 @@ Here is a template for new release sections
 - powerplant and power generating unit subclasses (#752)
 - dammed water -> dam; pumped water (#755)
 - objective function (#757)
+- portion of matter (#759)
 
 ### Removed
 
