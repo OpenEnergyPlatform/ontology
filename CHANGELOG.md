@@ -23,7 +23,7 @@ Here is a template for new release sections
 - trade, market participant (#745)
 - reservoir (#755)
 - contract (#756)
-- hydro power unit, hydro powerplant and subclasses (#758)
+- hydro power unit, hydro powerplant and subclasses, pump (#758)
 
 ### Changed
 - trader (#745)
