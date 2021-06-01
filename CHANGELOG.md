@@ -31,6 +31,7 @@ Here is a template for new release sections
 - dammed water -> dam; pumped water (#755)
 - objective function (#757)
 - portion of matter (#759)
+- energy-related input and output relations (#766)
 
 ### Removed
 
