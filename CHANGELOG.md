@@ -23,6 +23,7 @@ Here is a template for new release sections
 - trade, market participant (#745)
 - reservoir (#755)
 - contract (#756)
+- river (#760)
 
 ### Changed
 - trader (#745)
