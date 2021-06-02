@@ -24,6 +24,7 @@ Here is a template for new release sections
 - reservoir (#755)
 - contract (#756)
 - analysis scope (#764)
+- river (#760)
 
 ### Changed
 - trader (#745)
@@ -32,6 +33,7 @@ Here is a template for new release sections
 - dammed water -> dam; pumped water (#755)
 - objective function (#757)
 - portion of matter (#759)
+- energy-related input and output relations (#766)
 
 ### Removed
 
