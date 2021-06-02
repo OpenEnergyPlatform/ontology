@@ -23,8 +23,9 @@ Here is a template for new release sections
 - trade, market participant (#745)
 - reservoir (#755)
 - contract (#756)
-- analysis scope (#764)
+- hydro power unit, hydro powerplant and subclasses, pump (#758)
 - river (#760)
+- analysis scope (#764)
 
 ### Changed
 - trader (#745)
@@ -32,11 +33,12 @@ Here is a template for new release sections
 - powerplant and power generating unit subclasses (#752)
 - dammed water -> dam; pumped water (#755)
 - objective function (#757)
+- water turbine (#758)
 - portion of matter (#759)
 - energy-related input and output relations (#766)
 
 ### Removed
-
+- hydroelectric dam energy transformation and run-off-river energy transformation (#758)
 
 ## [1.5.0] - 2021-05-03
 

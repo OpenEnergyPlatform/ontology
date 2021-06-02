@@ -2834,9 +2834,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684",
 Class: OEO_00000442
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a turbine converting kinetic energy and potential energy of water into rotational energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a turbine converting potential energy and kinetic energy of water into rotational energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
         rdfs:label "water turbine"
     
     SubClassOf: 
@@ -3439,6 +3441,118 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
         OEO_00000061,
         OEO_00000503 some OEO_00110000,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117
+    
+    
+Class: OEO_00010085
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro power unit is a power generating unit that uses hydro energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "hydro power unit"@en
+    
+    SubClassOf: 
+        OEO_00000334,
+        OEO_00000503 some OEO_00000441,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000442
+    
+    
+Class: OEO_00010086
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro powerplant is a powerplant having an aggregate of hydro power generating units as its power generating unit parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "hydro powerplant"@en
+    
+    SubClassOf: 
+        OEO_00000031,
+        OEO_00000503 some OEO_00000441,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010085,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005
+    
+    
+Class: OEO_00010087
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river powerplant is a hydro powerplant that uses the momentarily available hydro energy of a river. It has either no reservoir or just has a small one with a maximum of 24 hours of storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river powerplant and an hydro storage powerplant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "run of river powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        OEO_00000503 some OEO_00010093,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117
+    
+    
+Class: OEO_00010088
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro storage powerplant is a hydro powerplant that uses the available hydro energy of a stationary water storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river powerplant and an hydro storage powerplant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "storage powerplant",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010084),
+        OEO_00000503 some OEO_00110000
+    
+    
+Class: OEO_00010089
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped hydro storage powerplant is a hydro storage powerplant which has some pumps as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "pumped hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010088,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090
+    
+    
+Class: OEO_00010090
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pump is an energy converting device that converts energy into kinetic or potential energy of a fluid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "pump"@en
+    
+    SubClassOf: 
+        OEO_00000011
+    
+    
+Class: OEO_00010091
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An open-loop pumped hydro storage powerplant is a pumped hydro storage powerplant that has natural inflows.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "open-loop pumped hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010089,
+        OEO_00000503 some OEO_00000345
+    
+    
+Class: OEO_00010092
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A closed-loop pumped hydro storage powerplant is a pumped hydro storage powerplant that has no natural inflows.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "closed-loop pumped hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010089,
+        OEO_00000503 only OEO_00000345
     
     
 Class: OEO_00010093
@@ -4302,30 +4416,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
         OEO_00000533 some OEO_00000139
     
     
-Class: OEO_00110006
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Run-off-river energy transformation is an hydroelectric energy transformation that converts hydro energy of a river to electrical energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
-        rdfs:label "run-off-river energy transformation"@en
-    
-    SubClassOf: 
-        OEO_00110005
-    
-    
-Class: OEO_00110007
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric dam energy transformation is an hydroelectric energy transformation that converts potential hydro energy of dammed water to electrical energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
-        rdfs:label "hydroelectric dam energy transformation"@en
-    
-    SubClassOf: 
-        OEO_00110005
-    
-    
 Class: OEO_00140000
 
     Annotations: 
@@ -4994,4 +5084,3 @@ Individual: OEO_00000390
     
 DisjointClasses: 
     OEO_00000188,OEO_00000210,OEO_00000425
-
