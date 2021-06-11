@@ -26,6 +26,7 @@ Here is a template for new release sections
 - hydro power unit, hydro powerplant and subclasses, pump (#758, #768)
 - river (#760)
 - analysis scope (#764)
+- fluid (#769)
 
 ### Changed
 - trader (#745)
