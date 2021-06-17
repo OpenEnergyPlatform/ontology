@@ -37,6 +37,7 @@ Here is a template for new release sections
 - water turbine (#758)
 - portion of matter (#759)
 - energy-related input and output relations (#766)
+- usage of alternative term (#774)
 
 ### Removed
 - hydroelectric dam energy transformation and run-off-river energy transformation (#758)
