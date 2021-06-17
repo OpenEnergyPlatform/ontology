@@ -1332,12 +1332,14 @@ Class: OEO_00000131
 Class: OEO_00000132
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating (also known as heat networks or teleheating) is a system for distributing heat generated in a centralized location through a system of insulated pipes for residential and commercial heating requirements such as space heating and water heating. The heat is often obtained from a cogeneration plant burning fossil fuels or biomass, but heat-only boiler stations, geothermal heating, heat pumps and central solar heating are also used, as well as heat waste from nuclear power electricity generation. "@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=District_heating&oldid=906646999"@en,
-        rdfs:label "district heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating is a grid-bound heating transfer to residential or commercial buildings."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "district grid-bound heating",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "district heating"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00020073
     
     
 Class: OEO_00000139
@@ -3930,6 +3932,34 @@ Class: OEO_00020068
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001
+    
+    
+Class: OEO_00020073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid-bound heating is a heat transfer over a distance via a heating grid, using steam or (hot) water.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "distance heating",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "grid-bound heating"
+    
+    SubClassOf: 
+        OEO_00140101,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020005,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00110000 or OEO_00110001)
+    
+    
+Class: OEO_00020074
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating is a grid-bound heating transfer to industrial installations."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "industrial grid-bound heating"
+    
+    SubClassOf: 
+        OEO_00020073
     
     
 Class: OEO_00030000
