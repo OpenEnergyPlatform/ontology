@@ -1306,15 +1306,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
 Class: OEO_00000129
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Derived heat covers the total heat production in heating plants and in combined heat and power plants. It includes the heat used by the auxiliaries of the installation which use hot fluid (space heating, liquid fuel heating, etc.) And losses in the installation/network heat exchanges. For autoproducing entities (= entities generating electricity and/or heat wholly or partially for their own use as an activity which supports their primary activity) the heat used by the undertaking for its own processes is not included."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=DSP_GLOSSARY_NOM_DTL_VIEW&StrNom=CODED2&StrLanguageCode=EN&IntKey=16452285&RdoSearch=&TxtSearch=&CboTheme=&IntCurrentPage=1"@en,
-        rdfs:label "derived heat"
-    
-    EquivalentTo: 
-        OEO_00000132
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid transferred thermal energy is thermal energy that is transferred via the grid-bound heating process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "derived heat",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "grid transferred thermal energy"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020073
     
     
 Class: OEO_00000131
@@ -1333,15 +1333,14 @@ Class: OEO_00000131
 Class: OEO_00000132
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating (also known as heat networks or teleheating) is a system for distributing heat generated in a centralized location through a system of insulated pipes for residential and commercial heating requirements such as space heating and water heating. The heat is often obtained from a cogeneration plant burning fossil fuels or biomass, but heat-only boiler stations, geothermal heating, heat pumps and central solar heating are also used, as well as heat waste from nuclear power electricity generation. "@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=District_heating&oldid=906646999"@en,
-        rdfs:label "district heat"
-    
-    EquivalentTo: 
-        OEO_00000129
+        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating is a grid-bound heating transfer to residential or commercial buildings."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "district grid-bound heating",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "district heating"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00020073
     
     
 Class: OEO_00000139
@@ -2613,11 +2612,10 @@ Class: OEO_00000387
 Class: OEO_00000388
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
-(a) solar thermal-electric plants; or
-(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "solar thermal heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar thermal energy is thermal energy that is the physical output of a solar thermal energy transformation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "solar thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -3823,7 +3821,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000384
+        OEO_00000532 some OEO_00000384,
+        OEO_00000533 some OEO_00000388
     
     
 Class: OEO_00020047
@@ -3935,6 +3934,34 @@ Class: OEO_00020068
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001
+    
+    
+Class: OEO_00020073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid-bound heating is a heat transfer over a distance via a heating grid, using steam or (hot) water.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "distance heating",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "grid-bound heating"
+    
+    SubClassOf: 
+        OEO_00140101,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020005,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00110000 or OEO_00110001)
+    
+    
+Class: OEO_00020074
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industrial grid-bound heating is a grid-bound heating transfer to industrial installations."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "industrial grid-bound heating"
+    
+    SubClassOf: 
+        OEO_00020073
     
     
 Class: OEO_00030000

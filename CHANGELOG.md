@@ -27,6 +27,8 @@ Here is a template for new release sections
 - river (#760)
 - analysis scope (#764)
 - fluid (#769)
+- grid-bound heating (#770)
+
 
 ### Changed
 - trader (#745)
@@ -37,6 +39,7 @@ Here is a template for new release sections
 - water turbine (#758)
 - portion of matter (#759)
 - energy-related input and output relations (#766)
+- derived and district heat(ing), solar thermal energy (#770)
 
 ### Removed
 - hydroelectric dam energy transformation and run-off-river energy transformation (#758)
