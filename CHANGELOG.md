@@ -58,6 +58,8 @@ Here is a template for new release sections
 - emission certificate (#740)
 - natural / artificial ambient thermal energy, ambient thermal energy transfer (#742)
 - energy market exchange (#748)
+- public and private funders (#246)
+
 
 ### Changed
 - has physical output, has constraint (#716)
