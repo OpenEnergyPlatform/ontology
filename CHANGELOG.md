@@ -40,6 +40,7 @@ Here is a template for new release sections
 - portion of matter (#759)
 - energy-related input and output relations (#766)
 - derived and district heat(ing), solar thermal energy (#770)
+- usage of alternative term (#774)
 
 ### Removed
 - hydroelectric dam energy transformation and run-off-river energy transformation (#758)
