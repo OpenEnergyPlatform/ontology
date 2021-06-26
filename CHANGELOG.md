@@ -28,7 +28,7 @@ Here is a template for new release sections
 - analysis scope (#764)
 - fluid (#769)
 - grid-bound heating (#770)
-
+- planned / unplanned availability, fraction value, block size, delivery interval, power plant operator, conventional trader (#779)
 
 ### Changed
 - trader (#745)
