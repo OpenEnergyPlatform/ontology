@@ -28,7 +28,7 @@ Here is a template for new release sections
 - analysis scope (#764)
 - fluid (#769)
 - grid-bound heating (#770)
-
+- delivery time (point), sender, receiver, bid, award, provider, service (#778)
 
 ### Changed
 - trader (#745)
