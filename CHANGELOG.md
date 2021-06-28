@@ -29,6 +29,7 @@ Here is a template for new release sections
 - fluid (#769)
 - grid-bound heating (#770)
 - delivery time (point), sender, receiver, bid, award, provider, service (#778)
+- planned / unplanned availability, fraction value, block size, delivery interval, power plant operator, conventional trader (#779)
 
 ### Changed
 - trader (#745)
