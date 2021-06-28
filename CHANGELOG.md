@@ -28,6 +28,8 @@ Here is a template for new release sections
 - analysis scope (#764)
 - fluid (#769)
 - grid-bound heating (#770)
+- delivery time (point), sender, receiver, bid, award, provider, service (#778)
+- planned / unplanned availability, fraction value, block size, delivery interval, power plant operator, conventional trader (#779)
 - RE-share (#780)
 
 ### Changed
