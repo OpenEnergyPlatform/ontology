@@ -15,8 +15,8 @@ Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-physical/>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
 
 Annotations: 
-    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Physical' module covers all those aspects of the world that are relevant for the energy systems domain, including physical entities such as generators, power lines, technologies, hardware, portions of matter; attributes of those, such as the energy they carry or release, whether they can be a pollutant, or their origins; representational transformations into maps and measures, such as coordinates, units, quantities; and the processes that modify the physical entities, such as energy production.",
-    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Physical' module covers all those aspects of the world that are relevant for the energy systems domain, including physical entities such as generators, power lines, technologies, portions of matter; attributes of those, such as the energy they carry or release, whether they can be a pollutant, or their origins; representational transformations into maps and measures, such as coordinates, units, quantities; and the processes that modify the physical entities, such as energy production.",
+    <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Physical module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
@@ -37,6 +37,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
+AnnotationProperty: <http://purl.org/dc/terms/license>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
@@ -49,7 +52,7 @@ AnnotationProperty: dc:contributor
 AnnotationProperty: dc:description
 
     
-AnnotationProperty: dc:license
+AnnotationProperty: owl:equivalentClass
 
     
 AnnotationProperty: rdfs:comment
@@ -100,6 +103,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
@@ -436,11 +442,14 @@ Class: OEO_00000003
 Class: OEO_00000004
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas powerplant is a biofuel powerplant having an aggregate of biogas powerunits as its power generating units.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas powerplant is a biofuel powerplant that has biogas power units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "biogas powerplant"
     
     SubClassOf: 
-        OEO_00000073
+        OEO_00000073,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000005
     
     
 Class: OEO_00000005
@@ -483,21 +492,28 @@ Class: OEO_00000008
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A coal power unit is a power generating unit using coal as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "coal power unit"
     
     SubClassOf: 
         OEO_00000334,
-        OEO_00000503 some OEO_00000088
+        OEO_00000503 some OEO_00000088,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
 Class: OEO_00000009
 
     Annotations: 
-        rdfs:comment "An electric heat pump is a heat pump that uses electric energy as drive energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric heat pump is a heat pump that uses electrical energy as drive energy.",
         rdfs:label "electric heat pump"
     
     SubClassOf: 
-        OEO_00000212
+        OEO_00000212,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000139
     
     
 Class: OEO_00000010
@@ -507,7 +523,11 @@ Class: OEO_00000010
         rdfs:label "electro motive generator"
     
     SubClassOf: 
-        OEO_00000188
+        OEO_00000188,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00230020
     
     
 Class: OEO_00000011
@@ -576,7 +596,14 @@ Class: OEO_00000016
     
     SubClassOf: 
         OEO_00000188,
-        OEO_00000503 some OEO_00000220
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000173,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140034
     
     
 Class: OEO_00000017
@@ -596,10 +623,13 @@ Class: OEO_00000019
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal power unit is a power unit using geothermal heat.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "geothermal power unit"
     
     SubClassOf: 
-        OEO_00000334
+        OEO_00000334,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
 Class: OEO_00000020
@@ -634,11 +664,14 @@ Class: OEO_00000022
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen power unit is a power generating unit using hydrogen as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "hydrogen power unit"
     
     SubClassOf: 
         OEO_00000334,
-        OEO_00000503 some OEO_00000220
+        OEO_00000503 some OEO_00000220,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000222
     
     
 Class: OEO_00000024
@@ -647,11 +680,9 @@ Class: OEO_00000024
         <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite power unit is a coal power unit using lignite as fuel.",
         rdfs:label "lignite power unit"
     
-    EquivalentTo: 
-        OEO_00000503 some OEO_00000251
-    
     SubClassOf: 
-        OEO_00000008
+        OEO_00000008,
+        OEO_00000503 some OEO_00000251
     
     
 Class: OEO_00000025
@@ -712,11 +743,14 @@ Class: OEO_00000029
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear power unit is a power generating unit using nuclear fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "nuclear power unit"
     
     SubClassOf: 
         OEO_00000334,
-        OEO_00000503 some OEO_00000302
+        OEO_00000503 some OEO_00000302,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
 Class: OEO_00000030
@@ -727,7 +761,8 @@ Class: OEO_00000030
     
     SubClassOf: 
         OEO_00000334,
-        OEO_00000503 some OEO_00000309
+        OEO_00000503 some OEO_00000309,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
 Class: OEO_00000031
@@ -758,7 +793,15 @@ Class: OEO_00000032
         rdfs:label "PV cell"
     
     SubClassOf: 
-        OEO_00000188
+        OEO_00000188,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000384,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020048
     
     
 Class: OEO_00000033
@@ -782,7 +825,11 @@ Class: OEO_00000034
         rdfs:label "solar power unit"
     
     SubClassOf: 
-        OEO_00000334
+        OEO_00000334,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000384
     
     
 Class: OEO_00000035
@@ -793,17 +840,24 @@ Class: OEO_00000035
     
     SubClassOf: 
         OEO_00000034,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000387
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000387,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
     
     
 Class: OEO_00000036
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solid biomass powerplant is a biomass powerplant having an aggregate of solid biomass power units as its power generating units.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solid biomass powerplant is a biofuel powerplant that has solid biomass power units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "solid biomass powerplant"
     
     SubClassOf: 
-        OEO_00000073
+        OEO_00000073,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000037
     
     
 Class: OEO_00000037
@@ -822,6 +876,7 @@ Class: OEO_00000038
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur hexafluoride is a portion of matter with the chemical formula SF6. It has a gaseous normal state of matter. It can work as a potent greenhouse gas and has an anthropogenic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "SF6",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sulfur hexafluoride",
         rdfs:label "sulphur hexafluoride"
     
     SubClassOf: 
@@ -860,11 +915,14 @@ Class: OEO_00000041
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A waste power unit is a power generating unit using waste as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "waste power unit"
     
     SubClassOf: 
         OEO_00000334,
-        OEO_00000503 some OEO_00000439
+        OEO_00000503 some OEO_00000439,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
     
     
 Class: OEO_00000042
@@ -897,11 +955,17 @@ Class: OEO_00000044
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind energy converting unit is a power generating unit that uses wind energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "wind turbine",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Issue: https://github.com/OpenEnergyPlatform/ontology/issues/753
+Pull Request: https://github.com/OpenEnergyPlatform/ontology/pull/754",
         rdfs:label "wind energy converting unit"
     
     SubClassOf: 
         OEO_00000334,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000425,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000446,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000448,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00140000
     
     
@@ -980,16 +1044,6 @@ Class: OEO_00000058
     
 Class: OEO_00000061
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An artificial object is an object that was deliberately manufactured by humans to address a particular purpose.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/86
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition),
- https://github.com/OpenEnergyPlatform/ontology/pull/128 (subclasses)",
-        rdfs:label "artificial object"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
-    
     
 Class: OEO_00000062
 
@@ -1077,7 +1131,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400",
 Class: OEO_00000073
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel powerplant is a powerplant having an aggregate of biofuel power units as its power generating units.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel powerplant is a powerplant that has biofuel power units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "biofuel powerplant"
     
     SubClassOf: 
@@ -1147,7 +1203,7 @@ Class: OEO_00000084
 Class: OEO_00000088
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a portion of matter consisting of combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulfur, oxygen, and nitrogen.coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal is a portion of matter consisting of combustible black or brownish-black sedimentary rock, formed as rock strata called coal seams. Coal is mostly carbon with variable amounts of other elements; chiefly hydrogen, sulphur, oxygen, and nitrogen.coal is formed if dead plant matter decays into peat and over millions of years the heat and pressure of deep burial converts the peat into coal."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Coal&oldid=907331967",
         rdfs:label "coal"
     
@@ -1162,13 +1218,14 @@ Class: OEO_00000088
 Class: OEO_00000089
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal powerplant is a powerplant having an aggregate of coal power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal powerplant is a powerplant that has coal power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "coal powerplant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000008,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000008
     
     
 Class: OEO_00000093
@@ -1216,7 +1273,7 @@ Class: OEO_00000097
 Class: OEO_00000099
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible fuel is a fuel that realizes its fuel role in processes that release energy in the form of heat or work by chemical reaction with other substances.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible fuel is a fuel that realises its fuel role in processes that release energy in the form of heat or work by chemical reaction with other substances.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
         rdfs:label "combustion fuel"
@@ -1254,12 +1311,13 @@ Class: OEO_00000115
 Class: OEO_00000117
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is a barrier that stops or restricts the flow of water or underground streams. Reservoirs created by dams not only suppress floods but also provide water for activities such as irrigation, human consumption, industrial use, aquaculture, and navigability. Hydropower is often used in conjunction with dams to generate electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Dam&oldid=906014627"@en,
-        rdfs:label "dammed water"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A dam is an artificial object that stops or restricts the flow of water or underground streams."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
+        rdfs:label "dam"
     
     SubClassOf: 
-        OEO_00000441,
+        OEO_00000061,
         OEO_00000501 some OEO_00000399
     
     
@@ -1282,15 +1340,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
 Class: OEO_00000129
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Derived heat covers the total heat production in heating plants and in combined heat and power plants. It includes the heat used by the auxiliaries of the installation which use hot fluid (space heating, liquid fuel heating, etc.) And losses in the installation/network heat exchanges. For autoproducing entities (= entities generating electricity and/or heat wholly or partially for their own use as an activity which supports their primary activity) the heat used by the undertaking for its own processes is not included."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=DSP_GLOSSARY_NOM_DTL_VIEW&StrNom=CODED2&StrLanguageCode=EN&IntKey=16452285&RdoSearch=&TxtSearch=&CboTheme=&IntCurrentPage=1"@en,
-        rdfs:label "derived heat"
-    
-    EquivalentTo: 
-        OEO_00000132
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid transferred thermal energy is thermal energy that is transferred via the grid-bound heating process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "derived heat",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "grid transferred thermal energy"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020073
     
     
 Class: OEO_00000131
@@ -1309,15 +1367,14 @@ Class: OEO_00000131
 Class: OEO_00000132
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating (also known as heat networks or teleheating) is a system for distributing heat generated in a centralized location through a system of insulated pipes for residential and commercial heating requirements such as space heating and water heating. The heat is often obtained from a cogeneration plant burning fossil fuels or biomass, but heat-only boiler stations, geothermal heating, heat pumps and central solar heating are also used, as well as heat waste from nuclear power electricity generation. "@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=District_heating&oldid=906646999"@en,
-        rdfs:label "district heat"
-    
-    EquivalentTo: 
-        OEO_00000129
+        <http://purl.obolibrary.org/obo/IAO_0000115> "District heating is a grid-bound heating transfer to residential or commercial buildings."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "district grid-bound heating",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "district heating"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00020073
     
     
 Class: OEO_00000139
@@ -1486,7 +1543,9 @@ Class: OEO_00000173
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is a portion of matter that has the disposition to be an energy carrier and which has a fuel role that is realised in processes that release the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+add role fuel commodity
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
         rdfs:label "fuel"
     
     EquivalentTo: 
@@ -1558,7 +1617,9 @@ Class: OEO_00000183
 Class: OEO_00000184
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas powerplant is a powerplant having an aggregate of gas fired power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas powerplant is a powerplant that has gas fired power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "gas powerplant"
     
     SubClassOf: 
@@ -1577,8 +1638,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
     
     SubClassOf: 
         OEO_00000425,
-        OEO_00000533 some OEO_00000333,
-        OEO_00000532 only OEO_00000292
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000099,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
     
     
 Class: OEO_00000186
@@ -1604,7 +1675,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
     
     SubClassOf: 
         OEO_00000011,
-        OEO_00000533 some OEO_00000139
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
     
     
 Class: OEO_00000189
@@ -1632,13 +1706,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
 Class: OEO_00000192
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal powerplant is a powerplant having an aggregate of geothermal power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal powerplant is a powerplant that has geothermal power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "geothermal powerplant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000019,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000019
     
     
 Class: OEO_00000198
@@ -1702,24 +1777,14 @@ Class: OEO_00000204
 Class: OEO_00000205
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hard coal powerplant is a coal powerplant having an aggregate of hard coal power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hard coal powerplant is a coal powerplant that has hard coal power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "hard coal powerplant"
     
     SubClassOf: 
         OEO_00000089,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000021
-    
-    
-Class: OEO_00000206
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hardware is an artificial object that is part of an electronic system.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
-        rdfs:label "hardware"
-    
-    SubClassOf: 
-        OEO_00000061
     
     
 Class: OEO_00000207
@@ -1744,7 +1809,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
     
     SubClassOf: 
         OEO_00000011,
-        OEO_00000533 some OEO_00000207
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
     
     
 Class: OEO_00000211
@@ -1753,7 +1821,6 @@ Class: OEO_00000211
         <http://purl.obolibrary.org/obo/IAO_0000115> "Heating oil is gas diesel oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "OtherGasOil"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "heating oil",
         rdfs:label "heating oil"@en
     
     SubClassOf: 
@@ -1813,27 +1880,36 @@ Class: OEO_00000220
 Class: OEO_00000221
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen powerplant is a powerplant having an aggregate of hydrogen power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen powerplant is a powerplant that has hydrogen power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "hydrogen powerplant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000022,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000222
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000022
     
     
 Class: OEO_00000222
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen turbine is a gas turbine fueled with hydrogen."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen turbine is a natural gas turbine fueled with hydrogen."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
         rdfs:label "hydrogen turbine"
     
     SubClassOf: 
-        OEO_00000185,
-        OEO_00000533 some OEO_00000333,
-        OEO_00000532 only OEO_00000220
+        OEO_00140135,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000220,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
     
     
 Class: OEO_00000226
@@ -1922,7 +1998,9 @@ This includes the portion of the oil shale or tar sands consumed in the transfor
 Class: OEO_00000252
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite powerplant is a coal powerplant having an aggregate of lignite power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite powerplant is a coal powerplant that has lignite power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "lignite powerplant"
     
     SubClassOf: 
@@ -2174,7 +2252,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/698",
 Class: OEO_00000302
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear fuel is a fuel that realizes its fuel role in processes that release energy in the form of heat or work by undergoing nuclear fission.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear fuel is a fuel that realises its fuel role in processes that release energy in the form of heat or work by undergoing nuclear fission.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
         rdfs:label "nuclear fuel"
@@ -2191,13 +2269,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
 Class: OEO_00000303
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear powerplant is a powerplant having an aggregate of nuclear power units as its power generating units.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear powerplant is a powerplant that has nuclear power units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "nuclear powerplant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000029,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000029
     
     
 Class: OEO_00000308
@@ -2232,13 +2311,14 @@ It consists of hydrocarbons of various molecular weights and other organic compo
 Class: OEO_00000310
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An oil powerplant is a powerplant having an aggregate of oil power units as its power generating units.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A oil powerplant is a powerplant that has oil power units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "oil powerplant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000030,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000030
     
     
 Class: OEO_00000311
@@ -2313,7 +2393,9 @@ Class: OEO_00000322
 Class: OEO_00000324
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic powerplant is a powerplant having an aggregate of PV panels as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic powerplant is a solar powerplant that has PV panels as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "photovoltaic powerplant"
     
     SubClassOf: 
@@ -2336,9 +2418,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
 Class: OEO_00000331
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is a part of a material entity that has a state_of_matter property."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matters is an aggregate of material entities that have a state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+
+definition update and editor note:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/738
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759",
         rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         rdfs:label "portion of matter"
     
@@ -2390,6 +2477,10 @@ Class: OEO_00000334
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an artificial object that contains a generator, among other parts.",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
+        <http://purl.obolibrary.org/obo/IAO_0000118> "block",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 
@@ -2400,7 +2491,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646",
     SubClassOf: 
         OEO_00000061,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
     
     
 Class: OEO_00000335
@@ -2429,11 +2524,13 @@ Class: OEO_00000343
 Class: OEO_00000345
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Pumped water is water which was pumped into an upper reservoir and thus contains potential energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Pumped water is liquid water which was pumped into an upper reservoir and thus contains potential energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
         rdfs:label "pumped water"
     
     SubClassOf: 
-        OEO_00000441,
+        OEO_00110000,
         OEO_00000501 some OEO_00000399
     
     
@@ -2446,8 +2543,11 @@ Class: OEO_00000348
     
     SubClassOf: 
         OEO_00000034,
-        OEO_00000533 some OEO_00000333,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000032
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000032,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
     
     
 Class: OEO_00000350
@@ -2505,9 +2605,10 @@ Class: OEO_00000376
 Class: OEO_00000377
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sodium–sulfur battery is a type of molten-salt battery constructed from liquid sodium (Na) and sulfur (S).This type of battery has a high energy density, high efficiency of charge/discharge and long cycle life, and is fabricated from inexpensive materials. The operating temperatures of 300 to 350 °C and the highly corrosive nature of the sodium polysulfides, primarily make them suitable for stationary energy storage applications. The cell becomes more economical with increasing size."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sodium–sulphur battery is a type of molten-salt battery constructed from liquid sodium (Na) and sulphur (S).This type of battery has a high energy density, high efficiency of charge/discharge and long cycle life, and is fabricated from inexpensive materials. The operating temperatures of 300 to 350 °C and the highly corrosive nature of the sodium polysulphides, primarily make them suitable for stationary energy storage applications. The cell becomes more economical with increasing size."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sodium–sulfur battery",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Sodium%E2%80%93sulfur_battery&oldid=900392594"@en,
-        rdfs:label "sodium-sulfur battery"
+        rdfs:label "sodium-sulphur battery"
     
     SubClassOf: 
         OEO_00000283
@@ -2534,12 +2635,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
 Class: OEO_00000386
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar powerplant is a powerplant having an aggregate of solar power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar powerplant is a powerplant that has solar power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "solar power plant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000348
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000034
     
     
 Class: OEO_00000387
@@ -2551,17 +2654,27 @@ Class: OEO_00000387
     
     SubClassOf: 
         OEO_00000210,
-        OEO_00000532 only OEO_00000388
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000384,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020047,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000388
     
     
 Class: OEO_00000388
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat from solar radiation; can consist of:
-(a) solar thermal-electric plants; or
-(b) equipment for the production of domestic hot water or for the seasonal heating of swimming pools (e.g. flat plate collectors, mainly of the thermosyphon type)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "solar thermal heat"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar thermal energy is thermal energy that is the physical output of a solar thermal energy transformation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "solar thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -2570,7 +2683,9 @@ Class: OEO_00000388
 Class: OEO_00000389
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal powerplant is a powerplant consisting of solar thermal power units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal powerplant is a solar powerplant that has solar thermal power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "solar thermal powerplant"
     
     SubClassOf: 
@@ -2614,12 +2729,29 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/39",
 Class: OEO_00000396
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A steam turbine is a turbine that converts heat from pressurized steam into rotational energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A steam turbine is a turbine that converts heat from pressurised steam into rotational energy.",
         rdfs:label "steam turbine"
     
     SubClassOf: 
         OEO_00000425,
-        OEO_00000533 some OEO_00000333
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000207,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00110001,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050020,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
     
     
 Class: OEO_00000399
@@ -2680,7 +2812,15 @@ Class: OEO_00000425
         rdfs:label "turbine"
     
     SubClassOf: 
-        OEO_00000011
+        OEO_00000011,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/763
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/769"
+        OEO_00000503 some OEO_00140116,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
     
     
 Class: OEO_00000429
@@ -2741,13 +2881,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/631",
 Class: OEO_00000440
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste powerplant is a powerplant having an aggregate of waste power units as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste powerplant is a powerplant that has waste power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "waste powerplant"
     
     SubClassOf: 
         OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000041,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000041
     
     
 Class: OEO_00000441
@@ -2772,15 +2913,29 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684",
 Class: OEO_00000442
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a turbine converting kinetic energy and potential energy of water into rotational energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water turbine is a turbine converting potential energy and kinetic energy of water into rotational energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
         rdfs:label "water turbine"
     
     SubClassOf: 
         OEO_00000425,
-        OEO_00000533 some OEO_00000333,
-        OEO_00000532 only OEO_00000218
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000503 some OEO_00000218,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110004,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
     
     
 Class: OEO_00000446
@@ -2805,7 +2960,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
 Class: OEO_00000447
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm is a powerplant having an aggregate of wind energy converters as its power generating units."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind farm is a powerplant that has wind energy converting units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/750
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
         rdfs:label "wind farm"
     
     SubClassOf: 
@@ -2824,7 +2981,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
     
     SubClassOf: 
         OEO_00000425,
-        OEO_00000533 some OEO_00000333
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000446,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
     
     
 Class: OEO_00000449
@@ -2917,6 +3087,7 @@ Class: OEO_00010007
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Sulphur dioxide is a portion of matter with the chemical formula SO2. It has a gaseous normal state of matter and can act as an air pollutant.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "SO2",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sulfur dioxide",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
         rdfs:label "sulphur dioxide"@en
@@ -3077,7 +3248,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
         rdfs:label "water electrolyser"
     
     SubClassOf: 
-        OEO_00000011
+        OEO_00000011,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000139,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000441,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000007,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000220
     
     
 Class: OEO_00010022
@@ -3228,7 +3415,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
         rdfs:label "motor"
     
     SubClassOf: 
-        OEO_00000011
+        OEO_00000011,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
     
     
 Class: OEO_00010072
@@ -3353,6 +3544,173 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/735",
         OEO_00000533 some OEO_00000007
     
     
+Class: OEO_00010084
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir is an artificial object that stores liquid water and has a dam as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Reservoirs created by dams provide water for activities such as hydro energy transformation, irrigation, human consumption, industrial use, aquaculture, and navigability. They are also used to regulate floods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
+        rdfs:label "reservoir"@en
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00000503 some OEO_00110000,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117
+    
+    
+Class: OEO_00010085
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro power unit is a power generating unit that uses hydro energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "hydro power unit"@en
+    
+    SubClassOf: 
+        OEO_00000334,
+        OEO_00000503 some OEO_00000441,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000442,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005
+    
+    
+Class: OEO_00010086
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro powerplant is a powerplant having an aggregate of hydro power generating units as its power generating unit parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "hydro powerplant"@en
+    
+    SubClassOf: 
+        OEO_00000031,
+        OEO_00000503 some OEO_00000441,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010085,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005
+    
+    
+Class: OEO_00010087
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river powerplant is a hydro powerplant that uses the momentarily available hydro energy of a river. It has either no reservoir or just has a small one with a maximum of 24 hours of storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river powerplant and an hydro storage powerplant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "run of river powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        OEO_00000503 some OEO_00010093,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117
+    
+    
+Class: OEO_00010088
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro storage powerplant is a hydro powerplant that uses the available hydro energy of a stationary water storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river powerplant and an hydro storage powerplant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "storage powerplant",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000117)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010084),
+        OEO_00000503 some OEO_00110000
+    
+    
+Class: OEO_00010089
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped hydro storage powerplant is a hydro storage powerplant which has some pumps as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "pumped hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010088,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090
+    
+    
+Class: OEO_00010090
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pump is an energy converting device that converts energy into kinetic or potential energy of a fluid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "pump"@en
+    
+    SubClassOf: 
+        OEO_00000011,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/763
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/769"
+        OEO_00000503 some OEO_00140116,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some 
+            (OEO_00020045 or OEO_00230020)
+    
+    
+Class: OEO_00010091
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An open-loop pumped hydro storage powerplant is a pumped hydro storage powerplant that has natural inflows.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "open-loop pumped hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010089,
+        OEO_00000503 some OEO_00000345
+    
+    
+Class: OEO_00010092
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A closed-loop pumped hydro storage powerplant is a pumped hydro storage powerplant that has no natural inflows.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+        rdfs:label "closed-loop pumped hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010089,
+        OEO_00000503 only OEO_00000345
+    
+    
+Class: OEO_00010093
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A river is liquid water that moves through permanent or seasonal flow process from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/760
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/765",
+        rdfs:label "river"@en,
+        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_00000022"
+    
+    SubClassOf: 
+        OEO_00110000,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110002
+    
+    
+Class: OEO_00010094
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir hydro storage powerplant is a hydro storage powerplant that has no pump.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issue/767
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/768",
+        rdfs:label "reservoir hydro storage powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010088,
+        not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090)
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -3394,7 +3752,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
     SubClassOf: 
         OEO_00000419,
         OEO_00000532 some OEO_00000150,
-        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000150
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000533 some OEO_00000150
     
     
 Class: OEO_00020004
@@ -3550,8 +3911,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
     SubClassOf: 
         OEO_00020003,
         OEO_00000532 some OEO_00000446,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044,
-        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000533 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044
     
     
 Class: OEO_00020045
@@ -3580,7 +3944,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000384
+        OEO_00000532 some OEO_00000384,
+        OEO_00000533 some OEO_00000388
     
     
 Class: OEO_00020047
@@ -3650,7 +4015,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
     SubClassOf: 
         OEO_00020003,
         OEO_00000532 some OEO_00000300,
-        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000207
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000533 some OEO_00000207
     
     
 Class: OEO_00020058
@@ -3680,6 +4048,43 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
     SubClassOf: 
         OEO_00140101,
         OEO_00000532 only OEO_00000191
+    
+    
+Class: OEO_00020066
+
+    
+Class: OEO_00020068
+
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001
+    
+    
+Class: OEO_00020073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid-bound heating is a heat transfer over a distance via a heating grid, using steam or (hot) water.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "distance heating",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "grid-bound heating"
+    
+    SubClassOf: 
+        OEO_00140101,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020005,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00110000 or OEO_00110001)
+    
+    
+Class: OEO_00020074
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industrial grid-bound heating is a grid-bound heating transfer to industrial installations."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/393
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
+        rdfs:label "industrial grid-bound heating"
+    
+    SubClassOf: 
+        OEO_00020073
     
     
 Class: OEO_00030000
@@ -4077,9 +4482,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"@en,
     SubClassOf: 
         OEO_00020003,
         OEO_00000532 some OEO_00000207,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000533 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
-        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
     
 Class: OEO_00090000
@@ -4173,37 +4581,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
     
     SubClassOf: 
         OEO_00110004,
-        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00000139
-    
-    
-Class: OEO_00110006
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Run-off-river energy transformation is an hydroelectric energy transformation that converts hydro energy of a river to electrical energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
-        rdfs:label "run-off-river energy transformation"@en
-    
-    SubClassOf: 
-        OEO_00110005
-    
-    
-Class: OEO_00110007
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric dam energy transformation is an hydroelectric energy transformation that converts potential hydro energy of dammed water to electrical energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
-        rdfs:label "hydroelectric dam energy transformation"@en
-    
-    SubClassOf: 
-        OEO_00110005
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000533 some OEO_00000139
     
     
 Class: OEO_00140000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hub height is a quality of a wind energy converting unit that measures the distance between surface and center-line of the wind rotor.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hub height is a quality of a wind energy converting unit that measures the distance between surface and centre-line of the wind rotor.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
         rdfs:label "hub height"@en
@@ -4320,6 +4707,10 @@ Class: OEO_00140050
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
+        <http://purl.obolibrary.org/obo/IAO_0000118> "efficiency",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
         rdfs:label "efficiency value"@en
@@ -4396,7 +4787,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
 Class: OEO_00140059
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic flow potential is a type of flow potential that identifies the proportion of the technological potential that can be utilized economically (based on economic boundary conditions).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic flow potential is a type of flow potential that identifies the proportion of the technological potential that can be utilised economically (based on economic boundary conditions).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
         rdfs:label "economic flow potential"@en
@@ -4468,7 +4859,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
 Class: OEO_00140065
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic stock potential is a type of stock potential that identifies the proportion of the technological potential that can be utilized economically (based on economic boundary conditions).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic stock potential is a type of stock potential that identifies the proportion of the technological potential that can be utilised economically (based on economic boundary conditions).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
         rdfs:label "economic stock potential"@en
@@ -4675,8 +5066,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/733",
     
     SubClassOf: 
         OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0002233> only OEO_00000207,
-        <http://purl.obolibrary.org/obo/RO_0002234> only OEO_00000207
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000532 only OEO_00000207,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
+        OEO_00000533 only OEO_00000207
     
     
 Class: OEO_00140102
@@ -4689,7 +5086,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/734",
     
     SubClassOf: 
         OEO_00000011,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00000503 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
     
     
 Class: OEO_00140104
@@ -4732,6 +5137,114 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
         <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
+Class: OEO_00140116
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fluid is a material entity which is a liquid, gas or plasma.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/763
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/769",
+        rdfs:label "fluid"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and ((OEO_00000531 value OEO_00000182) or (OEO_00000531 value OEO_00000256) or (OEO_00000531 value OEO_00000326))
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00140126
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Planned availabilty is a quality that describes the amount of time a power plant is planned to be operational per year.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:label "planned availability"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00140002 some OEO_00140127
+    
+    
+Class: OEO_00140127
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fraction value is a quantity value that has a fraction as it's unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "share",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/187
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:label "fraction value"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00140128
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Block size is the declared net capacity of a power generating unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:label "block size"@en
+    
+    SubClassOf: 
+        OEO_00230002,
+        OEO_00020056 some OEO_00000334
+    
+    
+Class: OEO_00140129
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Unplanned availabilty is a quality that describes the amount of time a power plant is planned to be operational per year, but is not operation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:label "unplanned availability"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00140002 some OEO_00140127
+    
+    
+Class: OEO_00140133
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "RE-share is a process attribute that indicates the fraction of renewable energy related to the total energy of an energy generation or consumption process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewables share",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/187
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/780",
+        rdfs:label "RE-share"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00140002 some OEO_00140127
+    
+    
+Class: OEO_00140134
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen fuel cell is a fuel cell that uses hydrogen.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782",
+        rdfs:label "hydrogen fuel cell"@en
+    
+    SubClassOf: 
+        OEO_00000016,
+        OEO_00000503 some OEO_00000220
+    
+    
+Class: OEO_00140135
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A natural gas turbine is a gas turbine fueled with natural gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782",
+        rdfs:label "natural gas turbine"@en
+    
+    SubClassOf: 
+        OEO_00000185,
+        OEO_00000503 some OEO_00000292
+    
+    
 Class: OEO_00230000
 
     Annotations: 
@@ -4749,6 +5262,10 @@ Class: OEO_00230001
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is the quantity value stating the maximum power an energy converting device can convert.",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
+        <http://purl.obolibrary.org/obo/IAO_0000118> "installed power",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
         rdfs:label "power rating"@en

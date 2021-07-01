@@ -16,7 +16,7 @@ Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles.",
-    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (social module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
@@ -37,6 +37,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
+AnnotationProperty: <http://purl.org/dc/terms/license>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
@@ -50,9 +53,6 @@ AnnotationProperty: dc:description
 
     
 AnnotationProperty: dc:identifier
-
-    
-AnnotationProperty: dc:license
 
     
 AnnotationProperty: rdfs:comment
@@ -74,6 +74,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
@@ -175,6 +178,40 @@ ObjectProperty: OEO_00000522
 ObjectProperty: OEO_00020056
 
     
+ObjectProperty: OEO_00020070
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a market exchange and the financial instruments, commodities, or other products, services, or goods which are traded there.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "is traded at"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    InverseOf: 
+        OEO_00020071
+    
+    
+ObjectProperty: OEO_00020071
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between financial instruments, commodities, or other products, services, or goods and a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "trades"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    InverseOf: 
+        OEO_00020070
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -191,7 +228,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend de
 ObjectProperty: OEO_00140017
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a person and an organization where the person is a member of the organization.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a person and an organisation where the person is a member of the organisation.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/486
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562",
         rdfs:label "member of"@en
@@ -206,7 +243,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562",
 ObjectProperty: OEO_00140018
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an organization and a person where the person is a member of the organization.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an organisation and a person where the person is a member of the organisation.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/486
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562",
         rdfs:label "has member"@en
@@ -275,6 +312,12 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000038>
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000148>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000310>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
     
@@ -293,7 +336,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00000051
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organization that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
         rdfs:label "agent"
@@ -421,7 +464,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484",
 Class: OEO_00000238
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organization that serves a social purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organisation that serves a social purpose."@en,
         rdfs:label "institution"
     
     SubClassOf: 
@@ -431,10 +474,11 @@ Class: OEO_00000238
 Class: OEO_00000315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization role is a role of an aggregate of people that has a collective goal and a set of organization rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation role is a role of an aggregate of people that has a collective goal and a set of organisation rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organization role",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:label "organization role"
+        rdfs:label "organisation role"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -459,7 +503,7 @@ Class: OEO_00000323
 Class: OEO_00000329
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organization of a group of people with common views or goals that wants to have influence in politics."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A political party is a organisation of a group of people with common views or goals that wants to have influence in politics."@en,
         rdfs:label "political party"
     
     SubClassOf: 
@@ -481,15 +525,6 @@ Class: OEO_00000350
     
 Class: OEO_00000367
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is generically dependent continuant that is a subdivision of a system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/477",
-        rdfs:label "sector"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
     
 Class: OEO_00000368
 
@@ -606,25 +641,53 @@ Class: OEO_00010079
         OEO_00020056 some OEO_00020063
     
     
+Class: OEO_00010082
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745",
+        rdfs:label "trade"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
+    
+    
+Class: OEO_00010083
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745",
+        rdfs:label "market participant"@en
+    
+    SubClassOf: 
+        OEO_00000051,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00040002
+    
+    
 Class: OEO_00020015
 
     
 Class: OEO_00020060
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is a market exchange where fuels like oil, coal, nuclear, renewable energy, and natural gas are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
         rdfs:label "fuel market exchange"
     
     SubClassOf: 
-        OEO_00040002
+        OEO_00020065,
+        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
     
     
 Class: OEO_00020063
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a license that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a licence that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         rdfs:label "emission certificate"
@@ -636,7 +699,7 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
 Class: OEO_00020064
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU Allowance (EUA) is an emission certificate used in the European Union Emissions Trading System (EU ETS). It permits the emission of a CO2 equivalent quantity of 1 ton.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU Allowance (EUA) is an emission certificate used in the European Union Emissions Trading System (EU ETS). It permits the emission of a CO2 equivalent quantity of 1 tonne.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "EUA",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
@@ -646,14 +709,69 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         OEO_00020063
     
     
+Class: OEO_00020065
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "energy market exchange"
+    
+    SubClassOf: 
+        OEO_00020069
+    
+    
+Class: OEO_00020066
+
+    
+Class: OEO_00020067
+
+    SubClassOf: 
+        OEO_00020070 some OEO_00020069
+    
+    
+Class: OEO_00020068
+
+    SubClassOf: 
+        OEO_00020070 some OEO_00020060
+    
+    
+Class: OEO_00020069
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "market exchange"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    SubClassOf: 
+        OEO_00030022
+    
+    
+Class: OEO_00020075
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission market exchange is a market exchange where emission certificates are traded",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/781",
+        rdfs:label "emission market exchange"
+    
+    SubClassOf: 
+        OEO_00020069,
+        OEO_00020071 some OEO_00020063
+    
+    
 Class: OEO_00030016
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organizational energy producer is an organization that undertakes the generation of electricity and/or heat.\"",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisational energy producer is an organisation that undertakes the generation of electricity and/or heat.\"",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organisational energy producer",
         <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
-        rdfs:label "organizational energy producer"
+        rdfs:label "organisational energy producer"
     
     SubClassOf: 
         OEO_00030022,
@@ -663,7 +781,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00030017
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy autoproducer is an organizational energy producer who produces electrical energy and/or heat wholly or partly for their own use as an activity which supports their primary activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy autoproducer is an organisational energy producer who produces electrical energy and/or heat wholly or partly for their own use as an activity which supports their primary activity.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
@@ -677,7 +795,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00030018
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A main activity energy producer is an organizational energy producer whose primary activity is electrical energy and/or heat production.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A main activity energy producer is an organisational energy producer whose primary activity is electrical energy and/or heat production.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
@@ -691,28 +809,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00030022
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An organization is an immaterial entity that has the organization role and there exists some sort of legal framework that recognises the entity and its continued existence.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organisation",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
-        rdfs:label "organization"
+        rdfs:label "organisation"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
     
     
+Class: OEO_00030035
+
+    
 Class: OEO_00040002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organization, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
         <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
         <http://purl.obolibrary.org/obo/IAO_0000118> "market",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
-https://github.com/OpenEnergyPlatform/ontology/pull/639",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/677
-https://github.com/OpenEnergyPlatform/ontology/pull/740",
-        rdfs:label "market exchange"@en,
+https://github.com/OpenEnergyPlatform/ontology/pull/639
+
+https://github.com/OpenEnergyPlatform/ontology/issues/677
+https://github.com/OpenEnergyPlatform/ontology/pull/740
+
+change label to market exchange role
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "market exchange role"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
     
     SubClassOf: 
@@ -751,15 +877,20 @@ https://github.com/OpenEnergyPlatform/ontology/pull/640",
 Class: OEO_00040005
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An agent that engages in the transfer of financial assets in any financial market on behalf of a client or a financial services provider.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trader is a market participant that engages in the transfer of financial assets in any financial market on behalf of a client or a financial services provider.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-pas-fpas:Trader",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/377
-https://github.com/OpenEnergyPlatform/ontology/pull/641",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Implement in line with FIBO:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/377
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/641
+
+Make trader subclass of market participant:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
+https://github.com/OpenEnergyPlatform/ontology/pull/745",
         rdfs:label "trader"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/Trader"
     
     SubClassOf: 
-        OEO_00000051
+        OEO_00010083
     
     
 Class: OEO_00040006
@@ -815,22 +946,47 @@ https://github.com/OpenEnergyPlatform/ontology/pull/643",
     
 Class: OEO_00040011
 
+    
+Class: OEO_00090001
+
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/339
-https://github.com/OpenEnergyPlatform/ontology/pull/644",
-        rdfs:label "commodity"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A funder is a sponsor that supports by giving money.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
+        rdfs:label "funder"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        OEO_00140009
+    
+    
+Class: OEO_00090002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A public funder is a funder that gives public money.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
+        rdfs:label "public funder"@en
+    
+    SubClassOf: 
+        OEO_00090001
+    
+    
+Class: OEO_00090003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A private funder is a funder that gives private money.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
+        rdfs:label "private funder"@en
+    
+    SubClassOf: 
+        OEO_00090001
     
     
 Class: OEO_00140009
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organization, or project by giving money, allowance of kind, services or other help.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organisation, or project by giving money, allowance of kind, services or other help.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
         rdfs:label "sponsor"@en
@@ -886,13 +1042,162 @@ https://github.com/OpenEnergyPlatform/ontology/pull/676",
 Class: OEO_00140040
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterized by a person, organisation or object needing it for a specific purpose.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterised by a person, organisation or object needing it for a specific purpose.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
         rdfs:label "demand"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>
+    
+    
+Class: OEO_00140109
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A contract is a document that contains an agreement between two or more competent agents to which those agents agree to be legally bound.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/756",
+        rdfs:label "contract"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    
+Class: OEO_00140117
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery time is a one-dimensional temporal region expressing the amount of time that it takes for goods that have been bought to arrive at the place where they are wanted.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "delivery time"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000038>
+    
+    
+Class: OEO_00140118
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A delivery time point is a zero-dimensional temporal region expressing the point in time when goods that have been bought arrive at the place where they are wanted.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "delivery time point"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000148>
+    
+    
+Class: OEO_00140119
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sender is an agent who initiates a communication.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "sender"@en
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00140120
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A receiver is an agent who obtains information from a sender.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "receiver"@en
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00140121
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bid is a document describing an offer made by an agent to another agent in an effort to exchange commodities or services via terms relating to price and quantity which will be part of the resulting contract.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "bid"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    
+Class: OEO_00140122
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An award is a document that signifies that a supplier for a particular commodity or service specified in a bid has been accepted.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "award"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    
+Class: OEO_00140123
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A provider is an agent that transfers commodities or services to other agents.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/ServiceProvider (adapted)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:comment "The transfer is typically defined in a contract.",
+        rdfs:label "provider"@en
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00140124
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A service is a process that is an intangible actitvity performed by some agent for the benefit of another agent.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service (adapted)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
+        rdfs:label "service"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00140125
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A delivery interval is the duration between repeated deliveries of services or commodities.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:comment "This duration is often contractually fixed and regular.",
+        rdfs:label "delivery interval"@en
+    
+    SubClassOf: 
+        OEO_00030035
+    
+    
+Class: OEO_00140130
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power plant operator is an agent that operates an electric utility generation station.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:label "power plant operator"@en
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00140131
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trader that trades the power of fossil fuel power plants.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
+        rdfs:label "conventional trader"@en
+    
+    SubClassOf: 
+        OEO_00040005
     
     
 Class: OEO_00230013
@@ -946,6 +1251,7 @@ Class: OEO_00230016
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "The labour force is the population of people ages 15 and older who supply labour to the production of goods and services.  It includes people who are currently employed and people who are unemployed but seeking work as well as first-time job-seekers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "labor force",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://databank.worldbank.org/reports.aspx?source=2&type=metadata&series=SL.TLF.TOTL.IN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
 https://github.com/OpenEnergyPlatform/ontology/issues/301

@@ -17,7 +17,38 @@ Here is a template for new release sections
 
 ```
 
-# Unreleased
+## [1.6.0] - 2021-07-01
+
+### Added
+- trade, market participant (#745)
+- reservoir (#755)
+- contract (#756)
+- hydro power unit, hydro powerplant and subclasses, pump (#758, #768)
+- river (#760)
+- analysis scope (#764)
+- fluid (#769)
+- grid-bound heating (#770)
+- delivery time (point), sender, receiver, bid, award, provider, service (#778)
+- planned / unplanned availability, fraction value, block size, delivery interval, power plant operator, conventional trader (#779)
+- RE-share (#780)
+- emission market exchange (#781)
+- hydrogen fuel cell, natural gas turbine, energy related axioms (#782)
+
+### Changed
+- trader (#745)
+- has typical computation time (#751)
+- powerplant and power generating unit subclasses (#752)
+- dammed water -> dam; pumped water (#755)
+- objective function (#757)
+- water turbine (#758)
+- portion of matter (#759)
+- energy-related input and output relations (#766)
+- derived and district heat(ing), solar thermal energy (#770)
+- spelling convention: British labels with American synonyms (#772)
+- usage of alternative term (#774)
+
+### Removed
+- hydroelectric dam energy transformation and run-off-river energy transformation (#758)
 
 ## [1.5.0] - 2021-05-03
 
@@ -32,6 +63,9 @@ Here is a template for new release sections
 - geothermal heat transfer, rock (#739)
 - emission certificate (#740)
 - natural / artificial ambient thermal energy, ambient thermal energy transfer (#742)
+- energy market exchange (#748)
+- public and private funders (#246)
+
 
 ### Changed
 - has physical output, has constraint (#716)
@@ -41,6 +75,7 @@ Here is a template for new release sections
 - geothermal energy (#739)
 - ambient thermal energy (#742)
 - has origin, renewable, anthropogenic (#742)
+- wind energy converting unit uses wind rotor (#754)
 
 ### Removed
 - has numerical input / output (#716)

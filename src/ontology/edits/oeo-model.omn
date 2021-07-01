@@ -16,7 +16,7 @@ Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Model' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation.",
-    dc:license "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
@@ -37,6 +37,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
+AnnotationProperty: <http://purl.org/dc/terms/license>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
@@ -44,9 +47,6 @@ AnnotationProperty: dc:contributor
 
     
 AnnotationProperty: dc:description
-
-    
-AnnotationProperty: dc:license
 
     
 AnnotationProperty: rdfs:comment
@@ -250,7 +250,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/723",
         <http://purl.obolibrary.org/obo/IAO_0000010> or <http://purl.obolibrary.org/obo/IAO_0000064>
     
     Range: 
-        OEO_00030035
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/749
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/751"
+        OEO_00000206
     
     
 ObjectProperty: owl:topObjectProperty
@@ -535,8 +538,9 @@ Class: OEO_00000149
 Class: OEO_00000161
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An external optimizer is a software external to a model that computes an optimization."^^xsd:string,
-        rdfs:label "external optimizer"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An external optimiser is a software external to a model that computes an optimisation."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "external optimizer",
+        rdfs:label "external optimiser"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
@@ -582,6 +586,9 @@ Class: OEO_00000202
         OEO_00000059
     
     
+Class: OEO_00000206
+
+    
 Class: OEO_00000228
 
     Annotations: 
@@ -615,7 +622,7 @@ Class: OEO_00000264
 Class: OEO_00000274
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealized reproduction of a system and its behaviours."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealised reproduction of a system and its behaviours."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/180
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
 
@@ -676,10 +683,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
 Class: OEO_00000279
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A modeling software is a software used to create and maintain a (mathematical) model.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A modelling software is a software used to create and maintain a (mathematical) model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "modeling software",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/338
         pull request: https://github.com/OpenEnergyPlatform/ontology/pull/345",
-        rdfs:label "modeling software"
+        rdfs:label "modelling software"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000010>
@@ -698,7 +706,9 @@ Class: OEO_00000281
 Class: OEO_00000304
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An objective function is an information content entity stating the function that should be maximised or minimised to solve the problem."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An objective function is an information content entity stating the function that should be maximised or minimised to solve a problem."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/725
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/757",
         rdfs:label "objective function"
     
     SubClassOf: 
@@ -708,7 +718,7 @@ Class: OEO_00000304
 Class: OEO_00000312
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "open source is a software descriptor labeling software whose source code is available online for free and can be modified or redistributed."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "open source is a software descriptor labelling software whose source code is available online for free and can be modified or redistributed."^^xsd:string,
         rdfs:label "open source"
     
     SubClassOf: 
@@ -721,8 +731,9 @@ Class: OEO_00000312
 Class: OEO_00000313
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en,
-        rdfs:label "optimization"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimisation is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "optimization",
+        rdfs:label "optimisation"
     
     SubClassOf: 
         OEO_00000275
@@ -734,8 +745,9 @@ Class: OEO_00000313
 Class: OEO_00000314
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimization model is a model that optimizes a target function."@en,
-        rdfs:label "optimization model"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An optimisation model is a model that optimises a target function."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "optimization model",
+        rdfs:label "optimisation model"
     
     SubClassOf: 
         OEO_00000274
@@ -802,11 +814,14 @@ Class: OEO_00000364
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario is an information content entity that contains statements about a possible future development based on a coherent and internally consistent set of assumptions and their motivation."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
+add is about-relation
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764",
         rdfs:label "scenario"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020072
     
     
 Class: OEO_00000365
@@ -823,10 +838,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000364
     
     
+Class: OEO_00000367
+
+    
 Class: OEO_00000370
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behavior from the real world."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behaviour from the real world."@en,
         rdfs:label "simulation"
     
     SubClassOf: 
@@ -839,7 +857,7 @@ Class: OEO_00000370
 Class: OEO_00000371
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A simultaion model is a model that simulates the behaviour of a system without a target function."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation model is a model that simulates the behaviour of a system without a target function."@en,
         rdfs:label "simulation model"
     
     SubClassOf: 
@@ -905,7 +923,7 @@ Class: OEO_00000392
 Class: OEO_00000403
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealized model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealised model year."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is obtained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en,
         rdfs:label "synthetic dataset"
     
@@ -978,11 +996,14 @@ Class: OEO_00020011
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to investigate something."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
+add covers-relation 
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764"@en,
         rdfs:label "study"@en
     
     SubClassOf: 
-        OEO_00000340
+        OEO_00000340,
+        OEO_00000522 some OEO_00020072
     
     
 Class: OEO_00020012
@@ -1008,9 +1029,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/536",
     
     SubClassOf: 
         OEO_00030030
-    
-    
-
     
     
 Class: OEO_00020016
@@ -1055,6 +1073,7 @@ Class: OEO_00020019
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A primary modelling purpose is a model descriptor stating the main purpose of a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "primary modeling purpose",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
         rdfs:label "primary modelling purpose"@en
@@ -1165,6 +1184,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00020072
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An analysis scope is an information content entity that describes the boundaries of what a study or scenario covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/638
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764",
+        rdfs:label "analysis scope"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000367,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020032
     
     
 Class: OEO_00030007
@@ -1294,17 +1327,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
     
     
 Class: OEO_00030035
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A duration is a quantity value indicating the time span of a one-dimensional temporal region, measured in a time unit.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
-        rdfs:label "duration"
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000038>,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
     
     
 Class: OEO_00140024
@@ -1404,8 +1426,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/724",
     SubClassOf: 
         OEO_00000119,
         <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000100>
-
-
+    
+    
 Class: OEO_00140099
 
     Annotations: 
@@ -1768,6 +1790,7 @@ Individual: OEO_00140046
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A middle alignment is a time stamp alignment indicating that the time stamp marks the middle of the time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "center alignment",
         <http://purl.obolibrary.org/obo/IAO_0000118> "centre alignment",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",

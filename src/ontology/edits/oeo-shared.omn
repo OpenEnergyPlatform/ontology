@@ -19,15 +19,29 @@ Import: <http://purl.obolibrary.org/obo/omo.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
-    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The\"Shared\" module covers all entities that are relevant for all our other modules. This includes shared imports like the BFO, IAO-annotation and RO- module."
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The \"Shared\" module covers all entities that are relevant for all our other modules. This includes shared imports like the BFO, IAO- and RO- module.",
+    <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Shared module)"
 
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
+    Annotations: 
+        rdfs:comment "In the OEO, we don't follow the definition strictly. We use alternative term for synonyms and ambiguous terms as well. See https://github.com/OpenEnergyPlatform/ontology/wiki/Handling-ambiguous-terms"
+    
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/license>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
 AnnotationProperty: OEO_00010037
@@ -48,10 +62,16 @@ AnnotationProperty: dc:description
 AnnotationProperty: dc:identifier
 
     
+AnnotationProperty: owl:equivalentClass
+
+    
 AnnotationProperty: rdfs:comment
 
     
 AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:seeAlso
 
     
 Datatype: rdf:PlainLiteral
@@ -86,6 +106,9 @@ Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
@@ -208,7 +231,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000030>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000031>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000040>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000141>
@@ -225,7 +257,7 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
-        rdfs:comment "The original defnition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
+        rdfs:comment "The original definition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
@@ -234,10 +266,38 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
 Class: <http://purl.obolibrary.org/obo/UO_0000001>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000002>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>
+    
+    
+Class: OEO_00000061
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An artificial object is an object that was deliberately manufactured by humans to address a particular purpose.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/86
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition),
+ https://github.com/OpenEnergyPlatform/ontology/pull/128 (subclasses)",
+        rdfs:label "artificial object"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
+Class: OEO_00000206
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hardware is an artificial object that is part of an electronic system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
+        rdfs:label "hardware"
+    
+    SubClassOf: 
+        OEO_00000061
     
     
 Class: OEO_00000350
@@ -260,6 +320,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
+Class: OEO_00000367
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is generically dependent continuant that is a subdivision of a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/477
+moved to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764",
+        rdfs:label "sector"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
 Class: OEO_00000419
 
     Annotations: 
@@ -270,7 +344,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
-
+    
+    
 Class: OEO_00010079
 
     Annotations: 
@@ -281,7 +356,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
     
     SubClassOf: 
         OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>    
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
+    
     
 Class: OEO_00020015
 
@@ -296,6 +372,48 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00020066
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel commodity role is the commodity role of fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/256
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "fuel commodity role"
+    
+    SubClassOf: 
+        OEO_00040011
+    
+    
+Class: OEO_00020067
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a material entity that bears the commodity role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "commodity"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020068
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel commodity is a commodity that is a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "fuel commodity"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066
+    
+    SubClassOf: 
+        OEO_00020067
     
     
 Class: OEO_00030031
@@ -320,6 +438,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000148>
+    
+    
+Class: OEO_00030035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A duration is a quantity value indicating the time span of a one-dimensional temporal region, measured in a time unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
+        rdfs:label "duration"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000038>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
+    
+    
+Class: OEO_00040011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/339
+https://github.com/OpenEnergyPlatform/ontology/pull/644
+moved to oeo-shared and renamed
+https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        rdfs:label "commodity role"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
 Class: OEO_00050016
