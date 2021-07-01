@@ -32,6 +32,7 @@ Here is a template for new release sections
 - planned / unplanned availability, fraction value, block size, delivery interval, power plant operator, conventional trader (#779)
 - RE-share (#780)
 - emission market exchange (#781)
+- hydrogen fuel cell, natural gas turbine, energy related axioms (#782)
 
 ### Changed
 - trader (#745)
