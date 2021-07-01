@@ -17,7 +17,7 @@ Here is a template for new release sections
 
 ```
 
-## Unreleased [1.X.X] - 20XX-XX-XX
+## Unreleased [1.6.0] - 2021-07-01
 
 ### Added
 - trade, market participant (#745)
