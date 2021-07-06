@@ -1,0 +1,26 @@
+name: OEO CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      BUILD_DIR: `pwd`
+    steps:
+      - name: make
+        run: 
+          - mkdir $BUILD_DIR/.logs
+          - cd $BUILD_DIR
+          - make
+          - VERSION=`cat VERSION`
+          - MERGED=build/oeo/$VERSION/oeo-full.owl
+      - name: validate-profile
+        run:
+        - java -jar build/robot.jar validate-profile --input $MERGED --profile Full -vvv --output merged-validation.txt > .logs/validate.txt
+      - name: verify
+        run:
+        - java -jar build/robot.jar verify --input $MERGED --queries tests/verify/* > .logs/verify.log
+      - name: competency
+        run:
+        - wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
+        - bash tests/competency_questions/run_questions.sh "java -jar $BUILD_DIR/build/hermit.jar" $BUILD_DIR/$MERGED true
+        - bash tests/competency_questions/run_questions.sh "java -jar $BUILD_DIR/build/hermit.jar" $BUILD_DIR/$MERGED false
