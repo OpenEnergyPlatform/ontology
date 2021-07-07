@@ -17,6 +17,11 @@ Here is a template for new release sections
 
 ```
 
+## [1.6.1] - 2021-07-07
+
+### Changed
+- commodity (#789)
+
 ## [1.6.0] - 2021-07-01
 
 ### Added
