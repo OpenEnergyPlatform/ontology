@@ -20,6 +20,7 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- power plant portfolio, dispatch assignment (#792)
 - yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 
 ### Changed
