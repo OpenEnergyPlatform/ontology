@@ -21,6 +21,7 @@ Here is a template for new release sections
 
 ### Added
 - power plant portfolio, dispatch assignment (#792)
+- yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 
 ### Changed
 ### Removed
