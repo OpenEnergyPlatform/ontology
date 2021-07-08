@@ -17,6 +17,14 @@ Here is a template for new release sections
 
 ```
 
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+- power plant portfolio, dispatch assignment (#792)
+
+### Changed
+### Removed
+
 ## [1.6.1] - 2021-07-07
 
 ### Changed
