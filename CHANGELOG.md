@@ -17,6 +17,14 @@ Here is a template for new release sections
 
 ```
 
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+- yield profile, demand trader, direct marketer, merit order, full load hours (#793)
+
+### Changed
+### Removed
+
 ## [1.6.1] - 2021-07-07
 
 ### Changed
