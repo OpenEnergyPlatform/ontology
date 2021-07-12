@@ -23,6 +23,7 @@ Here is a template for new release sections
 - power plant portfolio, dispatch assignment (#792)
 - yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 - energy demand (#796)
+- policy, policy instrument, transformative measure (#797)
 
 ### Changed
 ### Removed
