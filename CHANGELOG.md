@@ -23,9 +23,11 @@ Here is a template for new release sections
 - power plant portfolio, dispatch assignment (#792)
 - yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 - energy demand (#796)
-- markup, markdown #800
+- markup, markdown (#800)
 
 ### Changed
+- geographic coordinate (#803)
+
 ### Removed
 
 ## [1.6.1] - 2021-07-07
