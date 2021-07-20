@@ -24,8 +24,11 @@ Here is a template for new release sections
 - yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 - energy demand (#796)
 - policy, policy instrument, transformative measure (#797)
+- markup, markdown (#800)
 
 ### Changed
+- geographic coordinate (#803)
+
 ### Removed
 
 ## [1.6.1] - 2021-07-07
