@@ -697,12 +697,12 @@ Class: OEO_00000024
 Class: OEO_00000025
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a portion of matter with the chemical formular CH4. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be used as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane is a hydrocarbon with the chemical formular CH4. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas. As it can be oxidised it can be used as a fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CH4",
         rdfs:label "methane"
     
     SubClassOf: 
-        OEO_00000331,
+        OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198,
@@ -2180,6 +2180,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         OEO_00000331,
         OEO_00000530 some OEO_00030002,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000182
@@ -2320,6 +2321,7 @@ It consists of hydrocarbons of various molecular weights and other organic compo
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030002,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
@@ -3298,7 +3300,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
         rdfs:label "steam reformer"
     
     SubClassOf: 
-        OEO_00000011
+        OEO_00000011,
+        OEO_00000503 some OEO_00140159,
+        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00140160
     
     
 Class: OEO_00010023
@@ -5280,6 +5284,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000032>
     
     
+Class: OEO_00140159
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrocarbon is a portion of matter which is member of class of organic chemical compounds composed only of the elements carbon (C) and hydrogen (H).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.britannica.com/science/hydrocarbon",
+        rdfs:label "hydrocarbon"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
+    
+    
+Class: OEO_00140160
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Syngas is a portion of matter which is a fuel gas mixture consisting primarily of hydrogen, carbon monoxide, and very often some carbon dioxide.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Syngas",
+        rdfs:label "syngas"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
+    
+    
 Class: OEO_00230000
 
     Annotations: 
@@ -5414,3 +5444,4 @@ Individual: OEO_00000390
     
 DisjointClasses: 
     OEO_00000188,OEO_00000210,OEO_00000425
+
