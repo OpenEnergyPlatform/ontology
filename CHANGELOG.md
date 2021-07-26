@@ -27,9 +27,11 @@ Here is a template for new release sections
 - markup, markdown (#800)
 
 ### Changed
+- battery and subclasses (#801)
 - geographic coordinate (#803)
 
 ### Removed
+- molten state battery (#801)
 
 ## [1.6.1] - 2021-07-07
 
