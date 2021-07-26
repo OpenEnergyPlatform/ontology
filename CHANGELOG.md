@@ -25,6 +25,7 @@ Here is a template for new release sections
 - energy demand (#796)
 - policy, policy instrument, transformative measure (#797)
 - markup, markdown (#800)
+- ocean/marine energy related classes (#806)
 
 ### Changed
 - battery and subclasses (#801)
