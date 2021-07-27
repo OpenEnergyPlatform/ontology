@@ -25,6 +25,7 @@ Here is a template for new release sections
 - energy demand (#796)
 - policy, policy instrument, transformative measure (#797)
 - markup, markdown (#800)
+- syngas, hydrocarbon (#805)
 
 ### Changed
 - battery and subclasses (#801)
