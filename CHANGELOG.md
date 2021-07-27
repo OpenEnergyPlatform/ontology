@@ -38,6 +38,7 @@ Here is a template for new release sections
 
 ### Changed
 - commodity (#789)
+- river (#806)
 
 ## [1.6.0] - 2021-07-01
 
