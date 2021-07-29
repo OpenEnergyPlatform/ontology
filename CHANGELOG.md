@@ -27,6 +27,7 @@ Here is a template for new release sections
 - markup, markdown (#800)
 - syngas, hydrocarbon (#805)
 - ocean/marine energy and water (flow) related classes including power generating units and powerplants (#806)
+- cooperative programming (#808)
 
 ### Changed
 - battery and subclasses (#801)
