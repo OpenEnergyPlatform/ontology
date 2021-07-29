@@ -1867,7 +1867,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681",
         rdfs:label "hydro energy"
     
     SubClassOf: 
-        OEO_00230020
+        OEO_00230020,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806"
+        OEO_00000503 some OEO_00110002
     
     
 Class: OEO_00000219
@@ -3724,14 +3728,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
 Class: OEO_00010093
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A river is liquid water that moves through permanent or seasonal flow process from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A river is a water body that moves through permanent or seasonal flow process from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/760
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/765",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/765
+
+Make river a subclass of water body:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
         rdfs:label "river"@en,
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_00000022"
     
     SubClassOf: 
-        OEO_00110000,
+        OEO_00010104,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110002
     
     
@@ -3746,6 +3754,259 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/768",
     SubClassOf: 
         OEO_00010088,
         not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090)
+    
+    
+Class: OEO_00010095
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine thermal energy is a kind of natural ambient thermal energy that is present in marine water bodies.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine thermal energy"@en
+    
+    SubClassOf: 
+        OEO_00140104
+    
+    
+Class: OEO_00010096
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine thermal energy transfer is a heat transfer from the marine water body to a transportable material entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine thermal energy transfer"@en
+    
+    SubClassOf: 
+        OEO_00140101,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105
+    
+    
+Class: OEO_00010097
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine current energy is the hydro energy of an ocean current.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine current energy"@en
+    
+    SubClassOf: 
+        OEO_00000218,
+        OEO_00000503 some OEO_00010107
+    
+    
+Class: OEO_00010098
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine current energy transformation is a hydroelectric energy transformation that converts marine current energy to electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine current energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005,
+        OEO_00000532 some OEO_00010097,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010107
+    
+    
+Class: OEO_00010099
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine tidal energy transformation is a hydroelectric energy transformation that converts kinetic energy from tidal flow to electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine tidal energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005,
+        OEO_00000532 some OEO_00010100,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010101
+    
+    
+Class: OEO_00010100
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine tidal energy is the hydro energy of a tidal flow.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine tidal energy"@en
+    
+    SubClassOf: 
+        OEO_00000218,
+        OEO_00000503 some OEO_00010101
+    
+    
+Class: OEO_00010101
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Tidal flow is a water flow during which movements of water masses caused by varying gravitational and rotational forces from sun and moon, combined with the rotation of the earth, cause waters to undergo periodic depth oscillations (tides).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "tidal flow"@en,
+        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01001342"
+    
+    SubClassOf: 
+        OEO_00110002
+    
+    
+Class: OEO_00010102
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine wave energy is the hydro energy of a wave.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine wave energy"@en
+    
+    SubClassOf: 
+        OEO_00000218,
+        OEO_00000503 some OEO_00010106
+    
+    
+Class: OEO_00010103
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marine wave energy transformation is a hydroelectric energy transformation that converts marine wave energy to electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine wave energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00110005,
+        OEO_00000532 some OEO_00010102,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010106
+    
+    
+Class: OEO_00010104
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water body is an accumulation of liquid water of varying size on the surface of the Earth.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "water body"@en
+    
+    SubClassOf: 
+        OEO_00110000
+    
+    
+Class: OEO_00010105
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The ocean is a water body that consists of salt water and is covering approximately 71% of Earth's surface.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "marine water body",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sea",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "ocean"@en
+    
+    SubClassOf: 
+        OEO_00010104
+    
+    
+Class: OEO_00010106
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wave is a water flow that is at the surface of a water body/marine water body/ocean and that is mainly vertically orientated.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "wave"@en
+    
+    SubClassOf: 
+        OEO_00110002
+    
+    
+Class: OEO_00010107
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An ocean current is a a water flow within a water body/marine water body/ocean that is mainly horizontally orientated.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "ocean current"@en
+    
+    SubClassOf: 
+        OEO_00110002
+    
+    
+Class: OEO_00010108
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine current energy converting unit is a hydro power unit that uses marine current energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine current energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00010085,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010098
+    
+    
+Class: OEO_00010109
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine tidal energy converting unit is a hydro power unit that uses marine tidal energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine tidal energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00010085,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099
+    
+    
+Class: OEO_00010110
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "A marine wave energy converting unit is a hydro power unit that uses marine wave energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine wave energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00010085,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010103
+    
+    
+Class: OEO_00010111
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine current energy powerplant is a powerplant that has marine current energy units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine current energy powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010108,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010098
+    
+    
+Class: OEO_00010112
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine tidal energy powerplant is a powerplant that has marine tidal energy units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine tidal energy powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010109,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099
+    
+    
+Class: OEO_00010113
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine wave energy powerplant is a powerplant that has marine wave energy units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+        rdfs:label "marine wave energy powerplant"@en
+    
+    SubClassOf: 
+        OEO_00010086,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010110,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010103
     
     
 Class: OEO_00020001

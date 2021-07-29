@@ -26,10 +26,12 @@ Here is a template for new release sections
 - policy, policy instrument, transformative measure (#797)
 - markup, markdown (#800)
 - syngas, hydrocarbon (#805)
+- ocean/marine energy and water (flow) related classes including power generating units and powerplants (#806)
 
 ### Changed
 - battery and subclasses (#801)
 - geographic coordinate (#803)
+- river (#806)
 
 ### Removed
 - molten state battery (#801)
