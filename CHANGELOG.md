@@ -30,6 +30,7 @@ Here is a template for new release sections
 - cooperative programming (#808)
 - mapping to ENVO (#810)
 - power plant with electromotive generator (#810)
+- waste thermal energy (#813)
 
 ### Changed
 - battery and subclasses (#801)
