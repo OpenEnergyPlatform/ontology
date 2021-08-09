@@ -37,6 +37,7 @@ Here is a template for new release sections
 - battery and subclasses (#801)
 - geographic coordinate (#803)
 - river (#806)
+- air pollutant (#816)
 - motor, electric motor, internal combustion engine (#817)
 
 ### Removed
