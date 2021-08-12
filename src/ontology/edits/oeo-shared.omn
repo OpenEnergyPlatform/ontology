@@ -77,6 +77,9 @@ AnnotationProperty: rdfs:seeAlso
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:string
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
     Annotations: 
@@ -180,11 +183,13 @@ https://github.com/OpenEnergyPlatform/ontology/pull/478 (add definition)",
 ObjectProperty: OEO_00000522
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study / model calculation / model and the thing it covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study and the thing it covers.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclasses)
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/584
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend for study)",
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend for study)
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821 (restrict to study)",
         rdfs:label "covers"
     
     
@@ -228,6 +233,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
         OEO_00020056
     
     
+ObjectProperty: OEO_00140164
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a model and the thing it reproduces.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
+        rdfs:label "models"@en
+    
+    Domain: 
+        OEO_00000274
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000004>
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000004>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
@@ -253,6 +276,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000148>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
@@ -306,6 +332,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
         OEO_00000061
     
     
+Class: OEO_00000264
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market model is a model that is about the energy market."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
+        rdfs:label "energy market model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000274
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealised reproduction of a system and its behaviours."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/180
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/208
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
+        rdfs:label "model"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
+        OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000004>
+    
+    
 Class: OEO_00000350
 
     Annotations: 
@@ -354,6 +411,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00000423
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity transshipment model is a model that applies the transshipment problem to the electricity grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "electricity transshipment model"
+    
+    SubClassOf: 
+        OEO_00000274
     
     
 Class: OEO_00010079
@@ -427,6 +496,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     SubClassOf: 
         OEO_00020067
+    
+    
+Class: OEO_00030015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "energy system model"@en
+    
+    SubClassOf: 
+        OEO_00000274
     
     
 Class: OEO_00030031
