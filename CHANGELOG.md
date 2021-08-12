@@ -33,6 +33,7 @@ Here is a template for new release sections
 - waste thermal energy (#813)
 - models (#821)
 - uncertainty approach, stochastic and deterministic (#824)
+- has documentation quality (#825)
 
 ### Changed
 - battery and subclasses (#801)
