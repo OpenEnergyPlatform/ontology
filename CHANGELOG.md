@@ -32,6 +32,9 @@ Here is a template for new release sections
 - power plant with electromotive generator (#810)
 - waste thermal energy (#813)
 - rotational energy (#817)
+- models (#821)
+- uncertainty approach, stochastic and deterministic (#824)
+- has documentation quality (#825)
 
 ### Changed
 - battery and subclasses (#801)
