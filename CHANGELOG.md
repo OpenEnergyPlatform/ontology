@@ -31,6 +31,7 @@ Here is a template for new release sections
 - mapping to ENVO (#810)
 - power plant with electromotive generator (#810)
 - waste thermal energy (#813)
+- rotational energy (#817)
 - models (#821)
 - uncertainty approach, stochastic and deterministic (#824)
 - has documentation quality (#825)
@@ -40,6 +41,7 @@ Here is a template for new release sections
 - geographic coordinate (#803)
 - river (#806)
 - air pollutant (#816)
+- motor, electric motor, internal combustion engine (#817)
 
 ### Removed
 - molten state battery (#801)
