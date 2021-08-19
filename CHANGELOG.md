@@ -36,6 +36,7 @@ Here is a template for new release sections
 - uncertainty approach, stochastic and deterministic (#824)
 - has documentation quality (#825)
 - email address (#827)
+- has gross output, has net output (#838)
 
 ### Changed
 - battery and subclasses (#801)
