@@ -37,6 +37,7 @@ Here is a template for new release sections
 - has documentation quality (#825)
 - email address (#827)
 - has gross output, has net output (#838)
+- has number (#840)
 
 ### Changed
 - battery and subclasses (#801)
