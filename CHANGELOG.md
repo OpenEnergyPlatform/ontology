@@ -36,6 +36,7 @@ Here is a template for new release sections
 - uncertainty approach, stochastic and deterministic (#824)
 - has documentation quality (#825)
 - email address (#827)
+- has number (#840)
 
 ### Changed
 - battery and subclasses (#801)
