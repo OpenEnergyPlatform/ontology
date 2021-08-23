@@ -38,6 +38,7 @@ Here is a template for new release sections
 - email address (#827)
 - has gross output, has net output (#838)
 - has number (#840)
+- economy, good, good role (#843)
 
 ### Changed
 - battery and subclasses (#801)
@@ -45,6 +46,7 @@ Here is a template for new release sections
 - river (#806)
 - air pollutant (#816)
 - motor, electric motor, internal combustion engine (#817)
+- commodity role (#843)
 
 ### Removed
 - molten state battery (#801)
