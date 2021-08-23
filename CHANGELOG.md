@@ -46,6 +46,7 @@ Here is a template for new release sections
 - river (#806)
 - air pollutant (#816)
 - motor, electric motor, internal combustion engine (#817)
+- is traded at (#842)
 - commodity, commodity role (#843)
 
 ### Removed
