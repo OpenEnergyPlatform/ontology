@@ -38,6 +38,7 @@ Here is a template for new release sections
 - email address (#827)
 - has gross output, has net output (#838)
 - has number (#840)
+- production (#845)
 
 ### Changed
 - battery and subclasses (#801)
@@ -46,6 +47,7 @@ Here is a template for new release sections
 - air pollutant (#816)
 - motor, electric motor, internal combustion engine (#817)
 - is traded at (#842)
+- producer, primary energy production and subclasses (#845)
 
 ### Removed
 - molten state battery (#801)
