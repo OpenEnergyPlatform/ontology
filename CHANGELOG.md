@@ -39,6 +39,7 @@ Here is a template for new release sections
 - has gross output, has net output (#838)
 - has number (#840)
 - economy, good, good role (#843)
+- production (#845)
 
 ### Changed
 - battery and subclasses (#801)
@@ -48,6 +49,7 @@ Here is a template for new release sections
 - motor, electric motor, internal combustion engine (#817)
 - is traded at (#842)
 - commodity, commodity role (#843)
+- producer, primary energy production and subclasses (#845)
 
 ### Removed
 - molten state battery (#801)
