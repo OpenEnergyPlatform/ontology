@@ -40,7 +40,7 @@ Here is a template for new release sections
 - has number (#840)
 - economy, good, good role (#843)
 - production (#845)
-- guides, bearer of (#853)
+- guides, has bearer (#853)
 
 ### Changed
 - battery and subclasses (#801)
