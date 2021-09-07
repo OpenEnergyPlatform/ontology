@@ -50,9 +50,11 @@ Here is a template for new release sections
 - is traded at (#842)
 - commodity, commodity role (#843)
 - producer, primary energy production and subclasses (#845)
+- model descriptor, model factsheet OEO:00000277 (#854)
 
 ### Removed
 - molten state battery (#801)
+- duplicate model factsheet OEO:00020031 (#854)
 
 ## [1.6.1] - 2021-07-07
 
