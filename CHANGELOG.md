@@ -51,6 +51,7 @@ Here is a template for new release sections
 - is traded at (#842)
 - commodity, commodity role (#843)
 - producer, primary energy production and subclasses (#845)
+- covers energy carrier, covers sector (#852)
 
 ### Removed
 - molten state battery (#801)
