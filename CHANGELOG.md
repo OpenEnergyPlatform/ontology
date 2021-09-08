@@ -40,6 +40,7 @@ Here is a template for new release sections
 - has number (#840)
 - economy, good, good role (#843)
 - production (#845)
+- European Union Emissions Trading System, effort sharing and subclasses, Annual Emission Allocation (#857)
 
 ### Changed
 - battery and subclasses (#801)
