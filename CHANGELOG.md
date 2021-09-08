@@ -50,6 +50,7 @@ Here is a template for new release sections
 - is traded at (#842)
 - commodity, commodity role (#843)
 - producer, primary energy production and subclasses (#845)
+- covers energy carrier, covers sector (#852)
 - model descriptor, model factsheet OEO:00000277 (#854)
 
 ### Removed
