@@ -41,6 +41,7 @@ Here is a template for new release sections
 - economy, good, good role (#843)
 - production (#845)
 - guides, has bearer (#853)
+- secondary energy production (#856)
 
 ### Changed
 - battery and subclasses (#801)
