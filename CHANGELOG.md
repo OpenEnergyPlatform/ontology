@@ -42,6 +42,7 @@ Here is a template for new release sections
 - production (#845)
 - guides, has bearer (#853)
 - secondary energy production (#856)
+- governs (#868)
 
 ### Changed
 - battery and subclasses (#801)
