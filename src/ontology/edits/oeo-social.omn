@@ -168,6 +168,39 @@ ObjectProperty: OEO_00000510
 ObjectProperty: OEO_00000522
 
     
+ObjectProperty: OEO_00010119
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a policy instrument and a transformative measure where a policy instrument guides a transformative measure.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853",
+        rdfs:label "guides"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000056>
+    
+    Domain: 
+        OEO_00140151
+    
+    Range: 
+        OEO_00140149
+    
+    
+ObjectProperty: OEO_00010121
+
+    
+ObjectProperty: OEO_00010128
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a policy or policy instrument and the thing it governs.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/855
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/868",
+        rdfs:label "governs"@en
+    
+    Domain: 
+        OEO_00140150 or OEO_00140151
+    
+    
 ObjectProperty: OEO_00020056
 
     
@@ -1440,13 +1473,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797",
 Class: OEO_00140150
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a specifically dependent continuant that is a deliberate system of principles, rules and guidelines, adopted by an organization to guide decision making with respect to particular situations and implemented to achieve stated goals.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a specifically dependent continuant that is a deliberate system of principles, rules and guidelines, adopted by an organisation to guide decision making with respect to particular situations and implemented to achieve stated goals.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
+
+relations:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853",
         rdfs:label "policy"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000020>
+        <http://purl.obolibrary.org/obo/BFO_0000020>,
+        OEO_00010121 some OEO_00030022,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140151
     
     
 Class: OEO_00140151
@@ -1458,7 +1497,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797",
         rdfs:label "policy instrument"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000020>
+        <http://purl.obolibrary.org/obo/BFO_0000020>,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853"
+        OEO_00010119 some OEO_00140149
     
     
 Class: OEO_00140171
