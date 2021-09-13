@@ -54,7 +54,7 @@ Here is a template for new release sections
 - producer, primary energy production and subclasses (#845, #860)
 - covers energy carrier, covers sector (#852)
 - model descriptor, model factsheet OEO:00000277 (#854)
-- good, project, study, energy carrier (disposition) (#860)
+- good, project, study, energy carrier (disposition) (#869)
 
 ### Removed
 - molten state battery (#801)
