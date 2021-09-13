@@ -42,7 +42,8 @@ Here is a template for new release sections
 - production (#845)
 - guides, has bearer (#853)
 - secondary energy production (#856)
-- European Union Emissions Trading System, effort sharing and subclasses, Annual Emission Allocation (#857)
+- EU climate policy, European Union Emissions Trading System, effort sharing and subclasses, Annual Emission Allocation (#857)
+- EU emission sector division and EU emission sector individuals (#857)
 - governs (#868)
 
 ### Changed
