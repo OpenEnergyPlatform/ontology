@@ -120,6 +120,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     Annotations: 
@@ -218,18 +221,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821 (restrict 
         rdfs:label "covers"
     
     
-ObjectProperty: OEO_00010121
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853",
-        rdfs:label "has bearer"@en
-    
-    InverseOf: 
-        <http://purl.obolibrary.org/obo/RO_0000053>
-
-
 ObjectProperty: OEO_00000523
 
     Annotations: 
@@ -251,6 +242,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
     
     Range: 
         OEO_00020039
+    
+    
+ObjectProperty: OEO_00010121
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853",
+        rdfs:label "has bearer"@en
+    
+    InverseOf: 
+        <http://purl.obolibrary.org/obo/RO_0000053>
     
     
 ObjectProperty: OEO_00020056
@@ -324,6 +327,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -402,6 +408,22 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artifici
         <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
+Class: OEO_00000151
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier disposition is a disposition of an material entity that contains energy for conversion as usable energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "energy carrier disposition"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
 Class: OEO_00000206
 
     Annotations: 
@@ -443,6 +465,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
         OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000004>
+    
+    
+Class: OEO_00000340
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A project is a process to achieve a specified goal that is unique in the sum of its conditions like its goal, time and cost budget and its organisation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/418
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/862
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "project"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00000350
@@ -522,6 +559,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
     
 Class: OEO_00010116
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A good is a material entity that has the good role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "good"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010117)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
     
 Class: OEO_00010117
 
@@ -538,6 +590,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
     
 Class: OEO_00020011
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to investigate something."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
+add covers-relation (oeo-model)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/862
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869"@en,
+        rdfs:label "study"@en
+    
+    SubClassOf: 
+        OEO_00000340
+    
     
 Class: OEO_00020015
 
@@ -556,6 +622,21 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
     
 Class: OEO_00020039
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has the disposition energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "energy carrier"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
     
 Class: OEO_00020066
 
@@ -578,11 +659,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
 add alternative term
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/800
 subclass of good
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+change axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
         rdfs:label "commodity"
     
     EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
+        OEO_00010116
          and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011)
     
     SubClassOf: 
