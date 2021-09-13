@@ -1643,17 +1643,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     
 Class: OEO_00000151
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier disposition is a disposition of an material entity that contains energy for conversion as usable energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627",
-        rdfs:label "energy carrier disposition"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000016>
     
     
 Class: OEO_00000159
@@ -4301,6 +4290,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813",
         OEO_00000207
     
     
+Class: OEO_00010127
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy production is the production of secondary energy carriers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/865",
+        rdfs:label "secondary energy production"@en
+    
+    SubClassOf: 
+        OEO_00240003,
+        OEO_00000533 some OEO_00140079,
+        OEO_00140002 some OEO_00050019
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -4478,19 +4481,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     
 Class: OEO_00020039
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has the disposition energy carrier disposition.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627",
-        rdfs:label "energy carrier"
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
-         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151)
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00020040
@@ -4836,11 +4826,16 @@ Class: OEO_00030026
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/77
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498
+
+add axioms:
+pull request: 'has quantity value' some 'energy amount value'",
         rdfs:label "primary energy production"
     
     SubClassOf: 
-        OEO_00240003
+        OEO_00240003,
+        OEO_00000533 some OEO_00140078,
+        OEO_00140002 some OEO_00050019
     
     
 Class: OEO_00030027

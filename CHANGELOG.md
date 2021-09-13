@@ -23,7 +23,7 @@ Here is a template for new release sections
 - power plant portfolio, dispatch assignment (#792)
 - yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 - energy demand (#796)
-- policy, policy instrument, transformative measure (#797)
+- policy, policy instrument, transformative measure (#797, #853)
 - markup, markdown (#800)
 - syngas, hydrocarbon (#805)
 - ocean/marine energy and water (flow) related classes including power generating units and powerplants (#806)
@@ -40,6 +40,9 @@ Here is a template for new release sections
 - has number (#840)
 - economy, good, good role (#843)
 - production (#845)
+- guides, has bearer (#853)
+- secondary energy production (#856)
+- governs (#868)
 
 ### Changed
 - battery and subclasses (#801)
@@ -49,9 +52,10 @@ Here is a template for new release sections
 - motor, electric motor, internal combustion engine (#817)
 - is traded at (#842)
 - commodity, commodity role (#843)
-- producer, primary energy production and subclasses (#845)
+- producer, primary energy production and subclasses (#845, #860)
 - covers energy carrier, covers sector (#852)
 - model descriptor, model factsheet OEO:00000277 (#854)
+- good, project, study, energy carrier (disposition) (#869)
 
 ### Removed
 - molten state battery (#801)
