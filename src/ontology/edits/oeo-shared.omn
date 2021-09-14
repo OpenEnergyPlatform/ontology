@@ -208,6 +208,74 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
         OEO_00000367
     
     
+ObjectProperty: OEO_00000506
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and its author."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)",
+        rdfs:label "has author"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064
+    
+    
+ObjectProperty: OEO_00000507
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and the client that requested its creation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)",
+        rdfs:label "has client"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000087
+    
+    
+ObjectProperty: OEO_00000508
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and the person to contact with issues about it."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)",
+        rdfs:label "has contact person"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000107
+    
+    
+ObjectProperty: OEO_00000510
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity and the institution in which it was created."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)",
+        rdfs:label "has institution"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000238
+    
+    
 ObjectProperty: OEO_00000522
 
     Annotations: 
@@ -296,6 +364,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
         OEO_00020056
     
     
+ObjectProperty: OEO_00140008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an information content entity / model and a continuant, in which the continuant is somehow involved in the creation of the information content entity / model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)",
+        rdfs:label "has contributor"@en
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    
 ObjectProperty: OEO_00140164
 
     Annotations: 
@@ -322,6 +406,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/840",
     Domain: 
         OEO_00000350
     
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
@@ -395,6 +482,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
         <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
+Class: OEO_00000051
+
+    
 Class: OEO_00000061
 
     Annotations: 
@@ -406,6 +496,36 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artifici
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
+Class: OEO_00000064
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
+        rdfs:label "author"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000087
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
+        rdfs:label "client"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000107
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
+        rdfs:label "contact person"
+    
+    SubClassOf: 
+        OEO_00000051
     
     
 Class: OEO_00000151
@@ -434,6 +554,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
     
     SubClassOf: 
         OEO_00000061
+    
+    
+Class: OEO_00000238
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organisation that serves a social purpose."@en,
+        rdfs:label "institution"
+    
+    SubClassOf: 
+        OEO_00030022
     
     
 Class: OEO_00000264
@@ -698,6 +828,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
     SubClassOf: 
         OEO_00000274
     
+    
+Class: OEO_00030022
+
     
 Class: OEO_00030031
 
