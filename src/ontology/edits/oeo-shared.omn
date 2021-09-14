@@ -123,6 +123,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     Annotations: 
@@ -279,6 +282,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain an
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000107
     
     
+ObjectProperty: OEO_00000509
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an entity and its source of funding."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556",
+        rdfs:label "has funding source"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Range: 
+        
+            Annotations: rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001
+    
+    
 ObjectProperty: OEO_00000510
 
     Annotations: 
@@ -423,6 +444,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
         <http://purl.obolibrary.org/obo/BFO_0000004>
     
     
+ObjectProperty: owl:topObjectProperty
+
+    
 DataProperty: OEO_00140178
 
     Annotations: 
@@ -484,6 +508,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/826"
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000088>
+
+    
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
@@ -515,6 +542,15 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
     
 Class: OEO_00000051
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
+        rdfs:label "agent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
     
 Class: OEO_00000061
 
@@ -628,6 +664,35 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
         OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000004>
     
     
+Class: OEO_00000315
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation role is a role of an aggregate of people that has a collective goal and a set of organisation rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organization role",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:label "organisation role"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    DisjointWith: 
+        OEO_00000323
+    
+
+Class: OEO_00000323    
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human being."@en,
+        rdfs:label "person"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    DisjointWith: 
+        OEO_00000315
+
+
 Class: OEO_00000340
 
     Annotations: 
@@ -763,7 +828,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869"@en,
         rdfs:label "study"@en
     
     SubClassOf: 
-        OEO_00000340
+        OEO_00000340,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557"
+        OEO_00000509 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00140009)
+    
+    
+Class: OEO_00020012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study report is a report that is the output from some study."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497"@en,
+        rdfs:label "study report"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+        OEO_00000506 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064),
+        <http://purl.obolibrary.org/obo/RO_0002353> some OEO_00020011
     
     
 Class: OEO_00020015
@@ -874,6 +963,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
     
 Class: OEO_00030022
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organization",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
+        rdfs:label "organisation"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
+    
     
 Class: OEO_00030031
 
@@ -943,6 +1043,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
         OEO_00140039
     
     
+Class: OEO_00090001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A funder is a sponsor that supports by giving money.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
+        rdfs:label "funder"@en
+    
+    SubClassOf: 
+        OEO_00140009
+    
+    
 Class: OEO_00140003
 
     Annotations: 
@@ -1005,6 +1117,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
     
     SubClassOf: 
         OEO_00140003
+    
+    
+Class: OEO_00140009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organisation, or project by giving money, allowance of kind, services or other help.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
+        rdfs:label "sponsor"@en
+    
+    SubClassOf: 
+        OEO_00000051
     
     
 Class: OEO_00140039

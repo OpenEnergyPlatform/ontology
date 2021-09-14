@@ -56,7 +56,8 @@ Here is a template for new release sections
 - covers energy carrier, covers sector (#852)
 - model descriptor, model factsheet OEO:00000277 (#854)
 - good, project, study, energy carrier (disposition) (#869)
-- domains and ranges for some object properties added; axioms of hydro energy (incl. subclasses) and wind energy (#871)
+- domains and ranges for some object properties added (#871)
+- axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
 
 ### Removed
 - molten state battery (#801)
