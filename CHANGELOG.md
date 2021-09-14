@@ -43,6 +43,7 @@ Here is a template for new release sections
 - guides, has bearer (#853)
 - secondary energy production (#856)
 - governs (#868)
+- renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
 
 ### Changed
 - battery and subclasses (#801)
@@ -56,6 +57,7 @@ Here is a template for new release sections
 - covers energy carrier, covers sector (#852)
 - model descriptor, model factsheet OEO:00000277 (#854)
 - good, project, study, energy carrier (disposition) (#869)
+- origin, renewable, some portion of matter classes, renewable energy carrier, renewable fuel (#861)
 
 ### Removed
 - molten state battery (#801)
