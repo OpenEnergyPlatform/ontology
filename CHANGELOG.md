@@ -44,6 +44,7 @@ Here is a template for new release sections
 - secondary energy production (#856)
 - EU climate policy, European Union Emissions Trading System, effort sharing and subclasses, Annual Emission Allocation (#857)
 - EU emission sector division and EU emission sector individuals (#857)
+- renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
 - governs (#868)
 
 ### Changed
@@ -60,6 +61,7 @@ Here is a template for new release sections
 - good, project, study, energy carrier (disposition) (#869)
 - domains and ranges for some object properties added (#871)
 - axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
+- origin, renewable, some portion of matter classes, renewable energy carrier, renewable fuel (#861)
 
 ### Removed
 - molten state battery (#801)
