@@ -46,6 +46,7 @@ Here is a template for new release sections
 - EU emission sector division and EU emission sector individuals (#857)
 - renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
 - governs (#868)
+- objective variable (#878)
 
 ### Changed
 - battery and subclasses (#801)
@@ -63,6 +64,7 @@ Here is a template for new release sections
 - domains and ranges for some object properties added (#871)
 - axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
 - hydrogen turbine (#877)
+- has objective (#878)
 
 ### Removed
 - molten state battery (#801)
