@@ -47,6 +47,7 @@ Here is a template for new release sections
 - renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
 - governs (#868)
 - distribution (#876)
+- metric ton (#879)
 
 ### Changed
 - battery and subclasses (#801)
