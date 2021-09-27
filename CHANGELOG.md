@@ -46,6 +46,7 @@ Here is a template for new release sections
 - EU emission sector division and EU emission sector individuals (#857)
 - renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
 - governs (#868)
+- distribution (#876)
 
 ### Changed
 - battery and subclasses (#801)
