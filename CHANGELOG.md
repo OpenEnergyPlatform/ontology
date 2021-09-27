@@ -47,6 +47,8 @@ Here is a template for new release sections
 - renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
 - governs (#868)
 - typical period and subclasses (#875)
+- distribution (#876)
+- metric ton (#879)
 
 ### Changed
 - battery and subclasses (#801)
@@ -63,6 +65,7 @@ Here is a template for new release sections
 - good, project, study, energy carrier (disposition) (#869)
 - domains and ranges for some object properties added (#871)
 - axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
+- hydrogen turbine (#877)
 
 ### Removed
 - molten state battery (#801)
