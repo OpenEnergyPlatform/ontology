@@ -48,6 +48,7 @@ Here is a template for new release sections
 - governs (#868)
 - typical period and subclasses (#875)
 - distribution (#876)
+- objective variable (#878)
 - metric ton (#879)
 
 ### Changed
@@ -66,6 +67,7 @@ Here is a template for new release sections
 - domains and ranges for some object properties added (#871)
 - axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
 - hydrogen turbine (#877)
+- has objective (#878)
 
 ### Removed
 - molten state battery (#801)

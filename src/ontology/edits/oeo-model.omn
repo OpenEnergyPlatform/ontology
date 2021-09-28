@@ -106,11 +106,17 @@ ObjectProperty: OEO_00000503
 ObjectProperty: OEO_00000511
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimization and its objective function or objective variable."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimisation and its objective function or objective variable."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "correct spelling optimisation and add range 'objective variable'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/848
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
         rdfs:label "has objective"
     
     Domain: 
         OEO_00000313
+    
+    Range: 
+        OEO_00000304 or OEO_00240004
     
     
 ObjectProperty: OEO_00000512
@@ -133,6 +139,9 @@ ObjectProperty: OEO_00000513
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an optimisation and its objective variable."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add range 'objective variable'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/848
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
         rdfs:label "has objective variable"
     
     SubPropertyOf: 
@@ -140,6 +149,9 @@ ObjectProperty: OEO_00000513
     
     Domain: 
         OEO_00000313
+    
+    Range: 
+        OEO_00240004
     
     
 ObjectProperty: OEO_00000514
@@ -414,6 +426,9 @@ Class: OEO_00000078
     
     SubClassOf: 
         OEO_00000435
+    
+    DisjointWith: 
+        OEO_00240004
     
     
 Class: OEO_00000085
@@ -1485,6 +1500,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/824",
     
     SubClassOf: 
         OEO_00020016
+    
+    
+Class: OEO_00240004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An objective variable is a variable that should be maximised or minimised to solve a problem."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/848
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
+        rdfs:label "objective variable"
+    
+    SubClassOf: 
+        OEO_00000435
+    
+    DisjointWith: 
+        OEO_00000078
     
     
 Individual: OEO_00000049
