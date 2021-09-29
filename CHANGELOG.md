@@ -50,6 +50,7 @@ Here is a template for new release sections
 - distribution (#876)
 - objective variable (#878)
 - metric ton (#879)
+- target description (#881)
 
 ### Changed
 - battery and subclasses (#801)
