@@ -76,6 +76,9 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:integer
+
+    
 Datatype: xsd:string
 
     
@@ -298,6 +301,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/751"
 ObjectProperty: owl:topObjectProperty
 
     
+DataProperty: OEO_00140178
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -374,6 +380,9 @@ Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000036>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
@@ -1242,7 +1251,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         rdfs:label "scenario year"
     
     SubClassOf: 
-        OEO_00030033
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
+             and (OEO_00140178 value 1))
     
     
 Class: OEO_00020098
@@ -1254,7 +1267,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         rdfs:label "scenario horizon"
     
     SubClassOf: 
-        OEO_00030033
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>))
     
     
 Class: OEO_00020099
@@ -1266,7 +1282,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         rdfs:label "meteorological year"
     
     SubClassOf: 
-        OEO_00030033
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
+             and (OEO_00140178 value 1))
     
     
 Class: OEO_00030007
