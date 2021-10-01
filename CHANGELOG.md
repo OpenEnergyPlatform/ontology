@@ -51,6 +51,7 @@ Here is a template for new release sections
 - objective variable (#878)
 - metric ton (#879)
 - target description (#881)
+- axioms of typical period and aggregation type (#883)
 
 ### Changed
 - battery and subclasses (#801)
