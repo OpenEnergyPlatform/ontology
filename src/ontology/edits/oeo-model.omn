@@ -76,6 +76,9 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:integer
+
+    
 Datatype: xsd:string
 
     
@@ -298,6 +301,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/751"
 ObjectProperty: owl:topObjectProperty
 
     
+DataProperty: OEO_00140178
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -374,6 +380,12 @@ Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000033>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000036>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
@@ -1201,11 +1213,17 @@ Class: OEO_00020090
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A typical year is a typical period with the duration of one year.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/830
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/875",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/875
+add axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         rdfs:label "typical year"
     
     SubClassOf: 
-        OEO_00020089
+        OEO_00020089,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
+             and (OEO_00140178 value 1))
     
     DisjointWith: 
         OEO_00020091
@@ -1216,11 +1234,17 @@ Class: OEO_00020091
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A typical day is a typical period with the duration of one day.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/830
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/875",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/875
+add axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         rdfs:label "typical day"
     
     SubClassOf: 
-        OEO_00020089
+        OEO_00020089,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000033>)
+             and (OEO_00140178 value 1))
     
     DisjointWith: 
         OEO_00020090
@@ -1236,6 +1260,82 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/881",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00020097
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario year is a time step that has a duration of one year and is part of a scenario horizon.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "scenario year"
+    
+    SubClassOf: 
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020098,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
+             and (OEO_00140178 value 1))
+    
+    
+Class: OEO_00020098
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario horizon is a time step that is under investigation and consists entirely of one or more scenario years.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "scenario horizon"
+    
+    SubClassOf: 
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020097,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>))
+    
+    
+Class: OEO_00020099
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A meteorological year is a time step in which meteorological data was collected and that has a duration of one year.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "meteorological year"
+    
+    SubClassOf: 
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
+             and (OEO_00140178 value 1))
+    
+    
+Class: OEO_00020100
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A weather time series is a time series that contains data about a specific meteorological year.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "meteorological time series",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "weather time series"
+    
+    SubClassOf: 
+        OEO_00030034,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020099
+    
+    
+Class: OEO_00020101
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario time series is a time series that contains data about a specific scenario year.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "scenario time series"
+    
+    SubClassOf: 
+        OEO_00030034,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020097
     
     
 Class: OEO_00030007
@@ -1322,8 +1422,7 @@ Class: OEO_00030033
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A time step is a one-dimensional temporal region that has a start time and an endtime and thus a finite duration.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
         rdfs:label "time step"
     
