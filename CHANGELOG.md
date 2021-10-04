@@ -70,7 +70,6 @@ Here is a template for new release sections
 - axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
 - hydrogen turbine (#877)
 - has objective (#878)
-- typical day / year (#882)
 
 ### Removed
 - molten state battery (#801)
