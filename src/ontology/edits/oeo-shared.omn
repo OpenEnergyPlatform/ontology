@@ -77,6 +77,9 @@ AnnotationProperty: rdfs:seeAlso
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:string
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
     Annotations: 
@@ -108,7 +111,19 @@ Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
+
+    InverseOf: 
+        OEO_00010121
+    
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
@@ -130,8 +145,18 @@ ObjectProperty: OEO_00000500
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+add domain and range; move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871",
         rdfs:label "has process attribute"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00030019
     
     InverseOf: 
         OEO_00000502
@@ -170,22 +195,175 @@ ObjectProperty: OEO_00000503
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclass)
 https://github.com/OpenEnergyPlatform/ontology/pull/472 (move to oeo-shared)
-https://github.com/OpenEnergyPlatform/ontology/pull/478 (add definition)",
+https://github.com/OpenEnergyPlatform/ontology/pull/478 (add definition)
+https://github.com/OpenEnergyPlatform/ontology/pull/871 (add domain and range)",
         rdfs:label "uses"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
     
     InverseOf: 
         OEO_00000501
     
     
+ObjectProperty: OEO_00000505
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study and the sector it covers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/846
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
+        rdfs:label "covers sector"
+    
+    SubPropertyOf: 
+        OEO_00000522
+    
+    Domain: 
+        OEO_00020011
+    
+    Range: 
+        OEO_00000367
+    
+    
+ObjectProperty: OEO_00000506
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and its author."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
+        rdfs:label "has author"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064
+    
+    
+ObjectProperty: OEO_00000507
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and the client that requested its creation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
+        rdfs:label "has client"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000087
+    
+    
+ObjectProperty: OEO_00000508
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and the person to contact with issues about it."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
+        rdfs:label "has contact person"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000107
+    
+    
+ObjectProperty: OEO_00000509
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an entity and its source of funding."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556",
+        rdfs:label "has funding source"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Range: 
+        
+            Annotations: rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001
+    
+    
+ObjectProperty: OEO_00000510
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity and the institution in which it was created."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
+        rdfs:label "has institution"
+    
+    SubPropertyOf: 
+        OEO_00140008
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000238
+    
+    
 ObjectProperty: OEO_00000522
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study / model calculation / model and the thing it covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study and the thing it covers.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclasses)
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/584
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend for study)",
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend for study)
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821 (restrict to study)",
         rdfs:label "covers"
+    
+    
+ObjectProperty: OEO_00000523
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a study and the energy carrier it covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change range
+issue: https://github.com/OpenEnergyPlatform/ontology/pull/721
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/722
+
+update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/846
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
+        rdfs:label "covers energy carrier"
+    
+    SubPropertyOf: 
+        OEO_00000522
+    
+    Domain: 
+        OEO_00020011
+    
+    Range: 
+        OEO_00020039
+    
+    
+ObjectProperty: OEO_00010121
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853",
+        rdfs:label "has bearer"@en
+    
+    InverseOf: 
+        <http://purl.obolibrary.org/obo/RO_0000053>
     
     
 ObjectProperty: OEO_00020056
@@ -224,11 +402,76 @@ ObjectProperty: OEO_00140002
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
         rdfs:label "has quantity value"@en
     
+    Range: 
+        
+            Annotations: rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+        OEO_00000350
+    
     InverseOf: 
         OEO_00020056
     
     
+ObjectProperty: OEO_00140008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an information content entity / model and a continuant, in which the continuant is somehow involved in the creation of the information content entity / model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/556
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
+        rdfs:label "has contributor"@en
+    
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    
+ObjectProperty: OEO_00140164
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a model and the thing it reproduces.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
+        rdfs:label "models"@en
+    
+    Domain: 
+        OEO_00000274
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000004>
+    
+    
+ObjectProperty: owl:topObjectProperty
+
+    
+DataProperty: OEO_00140178
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Has number is a data property that links a quantity value to a number that defines the quantity value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/840",
+        rdfs:label "has number"@en
+    
+    Domain: 
+        OEO_00000350
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000002>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000004>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -252,7 +495,23 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: <http://purl.obolibrary.org/obo/BFO_0000148>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000027>
+
+    Annotations: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/823
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/826"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "http://www.ontobee.org/ontology/IAO?iri=http://purl.obolibrary.org/obo/IAO_0000027"
+    
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000088>
+
+    
+Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
@@ -281,6 +540,18 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
         <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
+Class: OEO_00000051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
+        rdfs:label "agent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
 Class: OEO_00000061
 
     Annotations: 
@@ -294,6 +565,52 @@ pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artifici
         <http://purl.obolibrary.org/obo/BFO_0000030>
     
     
+Class: OEO_00000064
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
+        rdfs:label "author"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000087
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
+        rdfs:label "client"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000107
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
+        rdfs:label "contact person"
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
+Class: OEO_00000151
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier disposition is a disposition of an material entity that contains energy for conversion as usable energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "energy carrier disposition"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>
+    
+    
 Class: OEO_00000206
 
     Annotations: 
@@ -304,6 +621,91 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
     
     SubClassOf: 
         OEO_00000061
+    
+    
+Class: OEO_00000238
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organisation that serves a social purpose."@en,
+        rdfs:label "institution"
+    
+    SubClassOf: 
+        OEO_00030022
+    
+    
+Class: OEO_00000264
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market model is a model that is about the energy market."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
+        rdfs:label "energy market model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00000274
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealised reproduction of a system and its behaviours."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/180
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/208
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
+        rdfs:label "model"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
+        OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000004>
+    
+    
+Class: OEO_00000315
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation role is a role of an aggregate of people that has a collective goal and a set of organisation rules.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organization role",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
+        rdfs:label "organisation role"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    DisjointWith: 
+        OEO_00000323
+    
+    
+Class: OEO_00000323
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human being."@en,
+        rdfs:label "person"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    DisjointWith: 
+        OEO_00000315
+    
+    
+Class: OEO_00000340
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A project is a process to achieve a specified goal that is unique in the sum of its conditions like its goal, time and cost budget and its organisation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/418
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/862
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "project"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00000350
@@ -319,7 +721,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
-        rdfs:label "quantity value"
+        rdfs:label "quantity value",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/IAO_0000032"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
@@ -352,6 +758,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
+Class: OEO_00000423
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity transshipment model is a model that applies the transshipment problem to the electricity grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "electricity transshipment model"
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
 Class: OEO_00010079
 
     Annotations: 
@@ -363,6 +781,78 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
+    
+    
+Class: OEO_00010116
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A good is a material entity that has the good role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "good"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010117)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00010117
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a physical, produced item over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money or real estate.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
+        rdfs:label "good role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00020011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to investigate something."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
+add covers-relation (oeo-model)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/862
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869"@en,
+        rdfs:label "study"@en
+    
+    SubClassOf: 
+        OEO_00000340,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557"
+        OEO_00000509 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001)
+    
+    
+Class: OEO_00020012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study report is a report that is the output from some study."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497"@en,
+        rdfs:label "study report"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+        OEO_00000506 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064),
+        <http://purl.obolibrary.org/obo/RO_0002353> some OEO_00020011
     
     
 Class: OEO_00020015
@@ -380,6 +870,24 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
+Class: OEO_00020039
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has the disposition energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+        rdfs:label "energy carrier"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
 Class: OEO_00020066
 
     Annotations: 
@@ -395,17 +903,23 @@ https://github.com/OpenEnergyPlatform/ontology/pull/748",
 Class: OEO_00020067
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a material entity that bears the commodity role.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a good that bears the commodity role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
+add alternative term
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/800
+subclass of good
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+change axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
         rdfs:label "commodity"
     
     EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
+        OEO_00010116
          and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011)
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
+        OEO_00010116
     
     
 Class: OEO_00020068
@@ -421,6 +935,44 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     SubClassOf: 
         OEO_00020067
+    
+    
+Class: OEO_00030015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
+        rdfs:label "energy system model"@en
+    
+    SubClassOf: 
+        OEO_00000274
+    
+    
+Class: OEO_00030019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+        rdfs:label "process attribute"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000003>
+    
+    
+Class: OEO_00030022
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "organization",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/421",
+        rdfs:label "organisation"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
     
     
 Class: OEO_00030031
@@ -464,17 +1016,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
 Class: OEO_00040011
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a good role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/339
 https://github.com/OpenEnergyPlatform/ontology/pull/644
 moved to oeo-shared and renamed
-https://github.com/OpenEnergyPlatform/ontology/pull/748",
+https://github.com/OpenEnergyPlatform/ontology/pull/748
+made subclass of good role
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
         rdfs:label "commodity role"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        OEO_00010117
     
     
 Class: OEO_00050016
@@ -489,13 +1043,29 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
         OEO_00140039
     
     
+Class: OEO_00090001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A funder is a sponsor that supports by giving money.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
+        rdfs:label "funder"@en
+    
+    SubClassOf: 
+        OEO_00140009
+    
+    
 Class: OEO_00140003
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Transport is the process of moving people or goods from one place to another.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
-        rdfs:label "transport"@en
+        rdfs:label "transport"@en,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_02000125"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -549,6 +1119,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
         OEO_00140003
     
     
+Class: OEO_00140009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organisation, or project by giving money, allowance of kind, services or other help.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
+        rdfs:label "sponsor"@en
+    
+    SubClassOf: 
+        OEO_00000051
+    
+    
 Class: OEO_00140039
 
     Annotations: 
@@ -556,6 +1138,18 @@ Class: OEO_00140039
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
         rdfs:label "consumption"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00240003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Production is the process of combining various inputs in order to create an output that has value and can be used by other processes."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/835
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845",
+        rdfs:label "production"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>

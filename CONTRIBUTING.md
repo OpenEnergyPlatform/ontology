@@ -46,7 +46,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 
 **Implementation**
 
-2. 🔷 Once a solution has been agreed, create a branch from `dev` to work on your issue (see below, the "Branch naming convention" section)
+2. 🔷 Once a solution has been agreed, create a branch from `dev` to work on your issue (see below, the ["Conventions for git and GitHub"](#conventions-for-git-and-github) section)
 
     Checkout the latest stand of `dev`
     ```bash
@@ -55,7 +55,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     ```bash
     git pull
     ```
-    Branch from `dev` (see also section "naming conventions" below)
+    Branch from `dev` (see also section ["Conventions for git and GitHub"](#conventions-for-git-and-github) below)
     ```bash
     git checkout -b feature-issueNumber-myfeature
     ```

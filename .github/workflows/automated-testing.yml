@@ -1,0 +1,35 @@
+name: OEO CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: make
+        run: |
+          make
+      - name: consistency
+        run: |
+          wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
+          OUT=$(java -jar build/hermit.jar file://`pwd`/build/oeo/$(cat VERSION)/oeo-full.owl -U)
+          if [ "$(echo "$OUT" | tr -d '[:space:]')" = "Classesequivalentto'owl:Nothing':owl:Nothing" ];
+          then
+            exit 0
+          fi
+          echo "Ontology is inconsistent: $OUT"
+          exit 1
+      - name: validate-profile
+        run: | 
+          echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
+          java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt
+      - name: verify
+        run: |
+          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*
+      - name: competency
+        run: |
+          bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
+          bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false

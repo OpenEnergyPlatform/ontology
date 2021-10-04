@@ -17,6 +17,65 @@ Here is a template for new release sections
 
 ```
 
+## [1.7.0] - 2021-10-04
+
+### Added
+- power plant portfolio, dispatch assignment (#792)
+- yield profile, demand trader, direct marketer, merit order, full load hours (#793)
+- energy demand (#796)
+- policy, policy instrument, transformative measure (#797, #853)
+- markup, markdown (#800)
+- syngas, hydrocarbon (#805)
+- ocean/marine energy and water (flow) related classes including power generating units and powerplants (#806)
+- cooperative programming (#808)
+- mapping to ENVO (#810)
+- power plant with electromotive generator (#810)
+- waste thermal energy (#813)
+- rotational energy (#817)
+- models (#821)
+- uncertainty approach, stochastic and deterministic (#824)
+- has documentation quality (#825)
+- email address (#827)
+- has gross output, has net output (#838)
+- has number (#840)
+- economy, good, good role (#843)
+- production (#845)
+- guides, has bearer (#853)
+- secondary energy production (#856)
+- EU climate policy, European Union Emissions Trading System, effort sharing and subclasses, Annual Emission Allocation (#857)
+- EU emission sector division and EU emission sector individuals (#857)
+- renewable energy, renewable energy carrier disposition, natural / pumped hydro energy (#861)
+- governs (#868)
+- typical period and subclasses (#875)
+- distribution (#876)
+- objective variable (#878)
+- metric ton (#879)
+- target description (#881)
+- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882) 
+- axioms of typical period and aggregation type (#883)
+
+### Changed
+- battery and subclasses (#801)
+- geographic coordinate (#803)
+- river (#806)
+- air pollutant (#816)
+- motor, electric motor, internal combustion engine (#817)
+- is traded at (#842)
+- commodity, commodity role (#843)
+- producer, primary energy production and subclasses (#845, #860)
+- covers energy carrier, covers sector (#852)
+- model descriptor, model factsheet OEO:00000277 (#854)
+- origin, renewable, some portion of matter classes, renewable energy carrier, renewable fuel (#861)
+- good, project, study, energy carrier (disposition) (#869)
+- domains and ranges for some object properties added (#871)
+- axioms of hydro energy (incl. subclasses), wind energy, study, study report and model calculation (#871)
+- hydrogen turbine (#877)
+- has objective (#878)
+
+### Removed
+- molten state battery (#801)
+- duplicate model factsheet OEO:00020031 (#854)
+
 ## [1.6.1] - 2021-07-07
 
 ### Changed
