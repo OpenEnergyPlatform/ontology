@@ -6,8 +6,6 @@ and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v
 
 Here is a template for new release sections
 
-
-
 ```
 ## [1.X.X] - 20XX-XX-XX
 
@@ -16,6 +14,12 @@ Here is a template for new release sections
 ### Removed
 
 ```
+
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+### Changed
+### Removed
 
 ## [1.7.0] - 2021-10-04
 
