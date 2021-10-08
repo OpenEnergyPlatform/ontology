@@ -594,17 +594,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 Class: OEO_00000011
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting device is an artificial object that transforms or changes a certain type of energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting component is an artificial object that is usually a discrete part of an energy transformation unit, e.g. a power generating unit, with the function of transforming or changing a certain type of energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646",
-        rdfs:comment "formerly called energy transformer",
-        rdfs:label "energy converting device"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
+
+renaming to component
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+        rdfs:comment "formerly called energy transformer and formerly called energy converting device",
+        rdfs:label "energy converting component"
     
     SubClassOf: 
         OEO_00000061,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
     
@@ -864,19 +868,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000031
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power plant is an artificial object consisting of power generating units and a grid component that feeds electric energy into an electric grid.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/588
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/594
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power plant is an energy transformation unit consisting of power generating units and a grid component that feeds electric energy into an electric grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/588
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/594
+
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
+
+subclass of energy transformation unit
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:label "power plant"
     
     SubClassOf: 
-        OEO_00000061,
+        OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020006,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
@@ -1822,13 +1829,16 @@ The production of other coal gases (i.e. coke oven gas, blast furnace gas and ox
 Class: OEO_00000188
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is an energy converting device that converts other forms of energy into electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A generator is an energy converting component that converts other forms of energy into electrical energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
+axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:label "generator"
     
     SubClassOf: 
         OEO_00000011,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000334,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
@@ -2698,20 +2708,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369",
 Class: OEO_00000334
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an artificial object that contains a generator, among other parts.",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an energy transformation unit that contains a generator, among other parts.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "block",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
+
+subclass of energy transformation unit
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:label "power generating unit"
     
     SubClassOf: 
-        OEO_00000061,
+        OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
         
@@ -4390,7 +4400,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450
 add input and output relations:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/680
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/690
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
+
+add relation to energy transformation unit
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:label "energy transformation"@en
     
     SubClassOf: 
@@ -4399,7 +4412,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 some OEO_00000150
+        OEO_00000533 some OEO_00000150,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
 Class: OEO_00020004
@@ -4431,13 +4445,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/385",
 Class: OEO_00020006
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is an artificial object that is a discrete part of a supply grid serving a specific purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is an energy transformation unit that is a discrete part of a supply grid serving a specific purpose."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+subclass of energy transformation unit
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:label "grid component"@en
     
     SubClassOf: 
-        OEO_00000061,
+        OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000200
     
     
@@ -4784,6 +4800,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
     SubClassOf: 
         OEO_00000218,
         OEO_00000503 some OEO_00000345
+    
+    
+Class: OEO_00020102
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation unit is an artificial object that transforms, changes or transfers a certain type of energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/465
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+        rdfs:label "energy transformation unit"
+    
+    SubClassOf: 
+        OEO_00000061,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+    
+    
+Class: OEO_00020103
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy transfer is an energy transformation in form of a spatial transmission, that does not change the types of energies, apart from losses, e.g. waste heat.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "class added:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/465
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+        rdfs:label "energy transfer"
+    
+    SubClassOf: 
+        OEO_00020003
     
     
 Class: OEO_00030000
@@ -5783,13 +5825,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/708",
 Class: OEO_00140101
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat transfer is an energy transformation with thermal energy as the only input and thermal energy as the only output.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Heat transfer is an energy transfer with thermal energy as the only input and thermal energy as the only output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/730
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/733",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/733
+subclass of energy transfer
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:label "heat transfer"@en
     
     SubClassOf: 
-        OEO_00020003,
+        OEO_00020103,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
