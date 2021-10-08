@@ -15,10 +15,10 @@ Here is a template for new release sections
 
 ```
 
-## [1.8.0] - 20XX-XX-XX
+## [1.x.x] - 20XX-XX-XX
 
 ### Added
-- energy transformation unit (#895)
+- energy transformation unit, energy transfer (#895)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
