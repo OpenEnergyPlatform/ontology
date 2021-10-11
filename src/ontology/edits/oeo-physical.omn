@@ -4812,7 +4812,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
     
     SubClassOf: 
         OEO_00000061,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020104
     
     
 Class: OEO_00020103
@@ -4833,12 +4834,42 @@ Class: OEO_00020104
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An outage is a process during which an artificial object cannot perfom or operate.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/887
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/yyy",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897",
         rdfs:label "outage"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
+    
+    
+Class: OEO_00020105
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A forced outage is an outage of an artificial object caused by a failure.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/887
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897",
+        rdfs:label "forced outage"
+    
+    SubClassOf: 
+        OEO_00020104
+    
+    DisjointWith: 
+        OEO_00020106
+    
+    
+Class: OEO_00020106
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A planned outage is an outage during which an artificial object is being maintained.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/887
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897",
+        rdfs:label "planned outage"
+    
+    SubClassOf: 
+        OEO_00020104
+    
+    DisjointWith: 
+        OEO_00020105
     
     
 Class: OEO_00030000
