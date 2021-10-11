@@ -19,7 +19,7 @@ Here is a template for new release sections
 
 ### Added
 - energy transformation unit, energy transfer (#895)
-- outage and subclasses (#897)
+- outage and subclasses, curtailment (#897)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
