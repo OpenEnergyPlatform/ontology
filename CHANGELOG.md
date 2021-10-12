@@ -19,6 +19,7 @@ Here is a template for new release sections
 
 ### Added
 - energy transformation unit, energy transfer (#895)
+- levy, tax, feed in tariff, market and capacity premium (#909)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
