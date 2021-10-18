@@ -19,6 +19,7 @@ Here is a template for new release sections
 
 ### Added
 - energy transformation unit, energy transfer (#895)
+- outage and subclasses, curtailment (#897)
 - levy, tax, feed in tariff, market and capacity premium (#909)
 
 ### Changed
