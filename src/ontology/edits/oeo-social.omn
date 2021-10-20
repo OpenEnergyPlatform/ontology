@@ -40,6 +40,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 AnnotationProperty: <http://purl.org/dc/terms/license>
 
     
+AnnotationProperty: <http://purl.org/dc/terms/source>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
@@ -313,6 +316,12 @@ Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000190>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
 Class: OEO_00000045
@@ -861,6 +870,76 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909",
         OEO_00020110
     
     
+Class: OEO_00020113
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Inflation rate is an economic value reprensenting the ratio between the monetary price for a good at two different points in time that equalises differences in monetary price levels between these two points in time.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/335
+https://github.com/OpenEnergyPlatform/ontology/pull/910",
+        rdfs:label "inflation rate"
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00020114
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The exchange rate between USD and EUR on March 15, 2020 was X.X.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The exchange rate is an economic value representing the ratio at which one currency can be exchanged for another.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "market exchange rate",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/335
+https://github.com/OpenEnergyPlatform/ontology/pull/910",
+        rdfs:comment "The ratio at which one can exchange one currency for another can differ over time therefore it is necessary to specify a time point when referring to an exchange rate.",
+        rdfs:label "exchange rate"
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00020115
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Purchasing power parity is an economic value reprensenting the ratio between currencies that equalises differences in monetary price levels between countries for the same set of goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PPP",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/867
+https://github.com/OpenEnergyPlatform/ontology/pull/910",
+        <http://purl.org/dc/terms/source> "https://www.oecd.org/sdd/prices-ppp/purchasingpowerparities-frequentlyaskedquestionsfaqs.htm#FAQ1",
+        rdfs:label "purchasing power parity"
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
+Class: OEO_00020116
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "System cost are total costs of a system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/910",
+        rdfs:label "system cost"
+    
+    SubClassOf: 
+        OEO_00040009
+    
+    
+Class: OEO_00020117
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The electricity price is Y EUR per megawatt-hour.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity price is the monetary price per energy unit of electricity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/910",
+        rdfs:comment "has unit some \"currency per energy unit\"",
+        rdfs:label "electricity price"
+    
+    SubClassOf: 
+        OEO_00040003
+    
+    
 Class: OEO_00030016
 
     Annotations: 
@@ -961,10 +1040,14 @@ https://github.com/OpenEnergyPlatform/ontology/pull/640",
 Class: OEO_00040004
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The currency used in France in 2020 was Euro.",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/331
-https://github.com/OpenEnergyPlatform/ontology/pull/640",
+https://github.com/OpenEnergyPlatform/ontology/pull/640
+add comment and example
+https://github.com/OpenEnergyPlatform/ontology/pull/910",
+        rdfs:comment "Currency is the unit of monetary value as defined by each country.",
         rdfs:label "currency"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
     
