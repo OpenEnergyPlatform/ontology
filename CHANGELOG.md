@@ -24,6 +24,7 @@ Here is a template for new release sections
 - inflation rate, exchange rate, purchasing power parity, electricity price, system cost (#910)
 - carbon capture, carbon storage, carbon capture and storage, direct air capture (#911)
 - resolution and subclasses (#912)
+- fee, due, remuneration, LCOE (#913)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
