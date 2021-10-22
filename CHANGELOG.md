@@ -23,10 +23,12 @@ Here is a template for new release sections
 - levy, tax, feed in tariff, market and capacity premium (#909)
 - inflation rate, exchange rate, purchasing power parity, electricity price, system cost (#910)
 - carbon capture, carbon storage, carbon capture and storage, direct air capture (#911)
+- resolution and subclasses (#912)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
 - currency (#910)
+- has resolution and subclasses (#912)
 
 ### Removed
 

@@ -117,6 +117,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
         OEO_00010121
     
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
@@ -318,6 +321,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain an
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000238
     
     
+ObjectProperty: OEO_00000514
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a data set and the resolution it depicts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
+rework
+issue https://github.com/OpenEnergyPlatform/ontology/issues/849
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "has resolution"
+    
+    
+ObjectProperty: OEO_00000515
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a data set and the spatial resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
+def and axioms
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "has spatial resolution"
+    
+    SubPropertyOf: 
+        OEO_00000514
+    
+    
+ObjectProperty: OEO_00000516
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between data set and the time resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
+def and axioms
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "has temporal resolution"
+    
+    SubPropertyOf: 
+        OEO_00000514
+    
+    
 ObjectProperty: OEO_00000522
 
     Annotations: 
@@ -474,6 +517,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
 
     
@@ -510,6 +556,16 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000030>
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000088>
 
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000100>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912"
+    
+    SubClassOf: 
+        OEO_00000514 some OEO_00020121
+    
     
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
@@ -834,7 +890,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557"
-        OEO_00000509 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001)
+        OEO_00000509 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001),
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/IAO_0000100>
     
     
 Class: OEO_00020012
@@ -854,6 +911,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
         OEO_00000506 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064),
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000100>,
         <http://purl.obolibrary.org/obo/RO_0002353> some OEO_00020011
     
     
@@ -937,6 +995,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     SubClassOf: 
         OEO_00020067
+    
+    
+Class: OEO_00020121
+
+    Annotations: 
+        rdfs:label "resolution"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
+Class: OEO_00020122
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal resolution is the resolution of a time series that indicates time-dependent the level of detail.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "temporal resolution"
+    
+    SubClassOf: 
+        OEO_00020121
+    
+    DisjointWith: 
+        OEO_00020123
+    
+    
+Class: OEO_00020123
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Spatial resolution is the resolution of a georeferenced dataset that indicates the geographical level of detail.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "spatial resolution"
+    
+    SubClassOf: 
+        OEO_00020121
+    
+    DisjointWith: 
+        OEO_00020122
     
     
 Class: OEO_00030015
