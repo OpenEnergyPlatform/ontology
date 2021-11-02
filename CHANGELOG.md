@@ -25,6 +25,7 @@ Here is a template for new release sections
 - carbon capture, carbon storage, carbon capture and storage, direct air capture (#911)
 - resolution and subclasses (#912)
 - fee, due, remuneration, LCOE (#913)
+- combined heat and power generation (CHP), CHP plant, CHP generating unit (#923)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
