@@ -32,6 +32,7 @@ Here is a template for new release sections
 - currency (#910)
 - has resolution and subclasses (#912)
 - reclassify of marine hydro energy classes (#921)
+- list of contributors (#927)
 
 ### Removed
 
