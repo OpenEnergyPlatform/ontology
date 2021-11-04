@@ -27,7 +27,7 @@ Here is a template for new release sections
 - fee, due, remuneration, LCOE (#913)
 - combined heat and power generation (CHP), CHP plant, CHP generating unit (#923)
 - market revenue (#929)
-- solid, liquid and gaseous combustion fuels; liquid and gaseous fossil fuels; solid, liquid and gaseous renewable fuels (#931)
+- solid, liquid and gaseous combustion fuels; liquid and gaseous fossil fuels; solid, liquid and gaseous renewable fuels; gaseous biofuel; solid and gaseous synthetic fuel (#931)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
