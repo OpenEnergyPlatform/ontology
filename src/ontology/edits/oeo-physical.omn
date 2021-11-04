@@ -454,6 +454,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000047>
 Class: <http://purl.obolibrary.org/obo/UO_0000111>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000113>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000270>
 
     
@@ -4346,7 +4349,12 @@ Class: OEO_00010127
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy production is the production of secondary energy carriers.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
+        <http://purl.obolibrary.org/obo/IAO_0000118> "secondary production of energy",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
 pull: https://github.com/OpenEnergyPlatform/ontology/pull/865",
         rdfs:label "secondary energy production"@en
     
@@ -4428,6 +4436,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/911",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
         OEO_00000532 some OEO_00000006
+    
+    
+Class: OEO_00010157
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power value is a quantity value that has a power unit as unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
+        rdfs:label "power value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00020001
@@ -5133,7 +5154,12 @@ Class: OEO_00030026
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy production is a production that prepares raw material for its use as primary energy carrier."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add axioms:
+        <http://purl.obolibrary.org/obo/IAO_0000118> "primary production of energy",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add eurostat alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
+
+add axioms:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
 pull: https://github.com/OpenEnergyPlatform/ontology/pull/865
 
@@ -5332,7 +5358,12 @@ Class: OEO_00050011
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy unit which is equal to 10^9 watt-hours.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
+        <http://purl.obolibrary.org/obo/IAO_0000118> "gigawatt hours",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add eurostat alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/606
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
         <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "GWh",
         rdfs:label "gigawatt-hour"@en
@@ -6262,47 +6293,62 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
 Class: OEO_00230001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is the quantity value stating the maximum power an energy converting device can convert.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is a power value stating the maximum power an energy converting device can convert.",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
         <http://purl.obolibrary.org/obo/IAO_0000118> "installed power",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
+
+Make it subclass of power value and add unit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         rdfs:label "power rating"@en
     
     SubClassOf: 
-        OEO_00000350,
-        OEO_00020056 some OEO_00000011
+        OEO_00010157,
+        OEO_00020056 some OEO_00000011,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00230002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is the quantity value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is a power value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
+
+Make it subclass of power value and add unit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         rdfs:label "declared net capacity"@en
     
     SubClassOf: 
-        OEO_00000350,
+        OEO_00010157,
         OEO_00020056 some 
-            (OEO_00000031 or OEO_00000334)
+            (OEO_00000031 or OEO_00000334),
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00230003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the quantity value stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
+
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the power value stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
 extend to artificial objects
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933
+Make it subclass of power value and add unit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         rdfs:label "nameplate capacity"@en
     
     SubClassOf: 
-        OEO_00000350,
-        OEO_00020056 some OEO_00000061
+        OEO_00010157,
+        OEO_00020056 some OEO_00000061,
+        rdfs:label "nameplate capacity"@en
     
     
 Class: OEO_00230020
