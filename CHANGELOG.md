@@ -28,6 +28,7 @@ Here is a template for new release sections
 - combined heat and power generation (CHP), CHP plant, CHP generating unit (#923)
 - eurostat synonyms (#924)
 - market revenue (#929)
+- gross electricity generation, net electricity generation, electricity generation process (#932)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
