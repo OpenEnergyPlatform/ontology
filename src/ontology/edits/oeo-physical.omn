@@ -6247,46 +6247,61 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
 Class: OEO_00230001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is the quantity value stating the maximum power an energy converting device can convert.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is a power value stating the maximum power an energy converting device can convert.",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
         <http://purl.obolibrary.org/obo/IAO_0000118> "installed power",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
+
+Make it subclass of power value and add unit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         rdfs:label "power rating"@en
     
     SubClassOf: 
-        OEO_00000350,
-        OEO_00020056 some OEO_00000011
+        OEO_00010157,
+        OEO_00020056 some OEO_00000011,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00230002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is the quantity value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is a power value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
+
+Make it subclass of power value and add unit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         rdfs:label "declared net capacity"@en
     
     SubClassOf: 
-        OEO_00000350,
+        OEO_00010157,
         OEO_00020056 some 
-            (OEO_00000031 or OEO_00000334)
+            (OEO_00000031 or OEO_00000334),
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00230003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the quantity value stating the maximum power a power generating unit or a power plant can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is a power value stating the maximum power a power generating unit or a power plant can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
+
+Make it subclass of power value and add unit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         rdfs:label "nameplate capacity"@en
     
     SubClassOf: 
-        OEO_00000350,
+        OEO_00010157,
         OEO_00020056 some 
-            (OEO_00000031 or OEO_00000334)
+            (OEO_00000031 or OEO_00000334),
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00230020

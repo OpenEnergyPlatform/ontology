@@ -36,6 +36,7 @@ Here is a template for new release sections
 - has resolution and subclasses (#912)
 - reclassify of marine hydro energy classes (#921)
 - list of contributors (#927)
+- declared net capacity, nameplate capacity, power rating (#928)
 
 ### Removed
 
