@@ -28,7 +28,7 @@ Here is a template for new release sections
 - combined heat and power generation (CHP), CHP plant, CHP generating unit (#923)
 - eurostat synonyms (#924)
 - market revenue (#929)
-- (specific) space requirement, km2, area per power unit (#933)
+- (specific) space requirement, km2, area per power unit, area value (#933)
 - power value (#935)
 
 ### Changed
