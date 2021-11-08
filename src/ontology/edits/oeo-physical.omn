@@ -3862,8 +3862,11 @@ Class: OEO_00010079
 Class: OEO_00010080
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar-steam-electric process is a solar energy transformation that converts solar energy into electrical energy. It has two partical process: a solar thermal energy transformation and a steam power process.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/668
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar-steam-electric process is a solar energy transformation that converts solar energy into electrical energy. It has two partial processes: a solar thermal energy transformation and a steam power process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add 'has physical output' some 'electrical energy'
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/668
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
         rdfs:label "solar-steam-electric process"@en
     
@@ -3872,7 +3875,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00050020)
     
     SubClassOf: 
-        OEO_00020046
+        OEO_00020046,
+        OEO_00000533 some OEO_00000139
     
     
 Class: OEO_00010081
@@ -6452,6 +6456,53 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923",
     SubClassOf: 
         OEO_00000031,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010
+    
+    
+Class: OEO_00240012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross electricity generation is a process attribute that refers to the total amount of electrical energy produced in an electricity generation process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "gross electricity production",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/917
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932",
+        rdfs:label "gross electricity generation"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00240013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Net electricity generation is a process attribute that equals to gross electricity generation minus the consumption of power stations' auxiliary services."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "net electricity production",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/917
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932",
+        rdfs:label "net electricity generation"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00240014
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity generation process is an energy transformation that has electrical energy as physical output."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/917
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932",
+        rdfs:label "electricity generation process"
+    
+    EquivalentTo: 
+        OEO_00020003
+         and (OEO_00000533 some OEO_00000139)
+    
+    SubClassOf: 
+        OEO_00020003,
+        OEO_00000500 some OEO_00240012,
+        OEO_00000500 some OEO_00240013,
+        OEO_00000533 some OEO_00000139
     
     
 Individual: OEO_00000182
