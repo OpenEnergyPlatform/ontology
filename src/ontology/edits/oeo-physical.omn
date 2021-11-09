@@ -448,6 +448,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000002>
 Class: <http://purl.obolibrary.org/obo/UO_0000032>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000047>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000111>
 
     
@@ -5178,6 +5181,49 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897",
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000334
     
     
+Class: OEO_00020136
+
+    
+Class: OEO_00020137
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An operational space requirement is space requirement that covers the area needed by an artifical object in order to operate properly.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "operational space requirement"
+    
+    SubClassOf: 
+        OEO_00020136
+    
+    
+Class: OEO_00020139
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement for construction is space requirement of an artifical object that covers the area needed in order to contruct an artificial object.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "space requirement for construction"
+    
+    SubClassOf: 
+        OEO_00020136
+    
+    
+Class: OEO_00020140
+
+    
+Class: OEO_00020141
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A specific space requirement is a quantity value that indicates a certain space requirement per nameplate capacity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/899
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "specific space requirement"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some OEO_00020140
+    
+    
 Class: OEO_00030000
 
     Annotations: 
@@ -6496,10 +6542,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
 Class: OEO_00230003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is a power value stating the maximum power a power generating unit or a power plant can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
+
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the power value stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting devices of that power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
-
+extend to artificial objects:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933
 Make it subclass of power value and add unit axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
@@ -6507,9 +6555,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
     
     SubClassOf: 
         OEO_00010157,
-        OEO_00020056 some 
-            (OEO_00000031 or OEO_00000334),
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
+        OEO_00020056 some OEO_00000061
     
     
 Class: OEO_00230020

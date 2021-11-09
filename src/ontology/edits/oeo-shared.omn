@@ -129,6 +129,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002328>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
@@ -514,6 +517,12 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    SubClassOf: 
+        OEO_00140002 some OEO_00020143
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
@@ -601,6 +610,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
         <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
+Class: <http://purl.obolibrary.org/obo/UO_0000047>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000224>
 
     Annotations: 
@@ -629,12 +641,16 @@ Class: OEO_00000061
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An artificial object is an object that was deliberately manufactured by humans to address a particular purpose.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/86
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition),
- https://github.com/OpenEnergyPlatform/ontology/pull/128 (subclasses)",
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition)
+subclasses
+https://github.com/OpenEnergyPlatform/ontology/pull/128
+relation to space requirement
+https://github.com/OpenEnergyPlatform/ontology/pull/933",
         rdfs:label "artificial object"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/RO_0002328> some OEO_00020136
     
     
 Class: OEO_00000064
@@ -1048,6 +1064,58 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
     
     DisjointWith: 
         OEO_00020122
+    
+    
+Class: OEO_00020136
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement is a two-dimensional spatial region that covers the area needed by an artifical object.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "space requirement"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000009>
+    
+    
+Class: OEO_00020140
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An area per power unit is a unit which is a measure for an area per nameplate capacity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/930",
+        rdfs:label "area per power unit"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00020142
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An area unit which is equal to one million square meters or 10^[6] m^[2].",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "km^[2]",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "square km",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "square kilometer"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000047>
+    
+    
+Class: OEO_00020143
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An area value is a quantity value indicating the size of a two-dimensional spatial region.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "area value"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000009>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000047>
     
     
 Class: OEO_00030015

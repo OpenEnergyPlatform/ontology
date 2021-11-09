@@ -29,6 +29,7 @@ Here is a template for new release sections
 - eurostat synonyms (#924)
 - market revenue (#929)
 - solid, liquid and gaseous combustion fuels; liquid and gaseous fossil fuels; solid, liquid and gaseous renewable fuels; gaseous biofuel; solid, liquid and gaseous synthetic fuel (#931)
+- (specific) space requirement, km2, area per power unit, area value (#933)
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
 
@@ -38,6 +39,7 @@ Here is a template for new release sections
 - has resolution and subclasses (#912)
 - reclassify of marine hydro energy classes (#921)
 - list of contributors (#927)
+- artificial object, nameplate capacity (#933)
 - declared net capacity, nameplate capacity, power rating (#928)
 - combustion fuel, solid fossil fuel, syngas (#931)
 
