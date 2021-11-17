@@ -32,6 +32,7 @@ Here is a template for new release sections
 - (specific) space requirement, km2, area per power unit, area value (#933)
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
+- MMR sector division and further CRF (2006) sector individuals (#941)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -42,6 +43,7 @@ Here is a template for new release sections
 - artificial object, nameplate capacity (#933)
 - declared net capacity, nameplate capacity, power rating (#928)
 - combustion fuel, solid fossil fuel, syngas (#931)
+- CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
 
 ### Removed
 
