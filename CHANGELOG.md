@@ -33,6 +33,7 @@ Here is a template for new release sections
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
 - MMR sector division and further CRF (2006) sector individuals (#941)
+- liquid air production (#945)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -44,6 +45,7 @@ Here is a template for new release sections
 - declared net capacity, nameplate capacity, power rating (#928)
 - combustion fuel, solid fossil fuel, syngas (#931)
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
+- liquid air (#945)
 
 ### Removed
 
