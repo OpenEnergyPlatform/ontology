@@ -33,6 +33,7 @@ Here is a template for new release sections
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
 - MMR sector division and further CRF (2006) sector individuals (#941)
+- net capacity factor (#946)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
