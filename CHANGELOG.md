@@ -45,6 +45,7 @@ Here is a template for new release sections
 - declared net capacity, nameplate capacity, power rating (#928)
 - combustion fuel, solid fossil fuel, syngas (#931)
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
+- European Union Emissions Trading System (#944)
 
 ### Removed
 
