@@ -32,7 +32,7 @@ Here is a template for new release sections
 - (specific) space requirement, km2, area per power unit, area value (#933)
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
-- MMR sector division and further CRF (2006) sector individuals (#941)
+- GovReg sector division, MMR sector division and further CRF (2006) sector individuals (#941, #944)
 - total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
 
 ### Changed
