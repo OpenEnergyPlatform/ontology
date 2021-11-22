@@ -32,7 +32,8 @@ Here is a template for new release sections
 - (specific) space requirement, km2, area per power unit, area value (#933)
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
-- MMR sector division and further CRF (2006) sector individuals (#941)
+- GovReg sector division, MMR sector division and further CRF (2006) sector individuals (#941, #944)
+- total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
 - liquid air production (#945)
 
 ### Changed
@@ -45,6 +46,7 @@ Here is a template for new release sections
 - declared net capacity, nameplate capacity, power rating (#928)
 - combustion fuel, solid fossil fuel, syngas (#931)
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
+- European Union Emissions Trading System (#944)
 - liquid air (#945)
 
 ### Removed
