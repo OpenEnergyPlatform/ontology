@@ -1255,18 +1255,21 @@ Class: OEO_00000071
 Class: OEO_00000072
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a fuel that is produced through contemporary biological processes, such as agriculture and anaerobic digestion, rather than a fuel produced by geological processes such as those involved in the formation of fossil fuels, such as coal and petroleum, from prehistoric biological matter.
-
-Biofuels can be derived directly from plants (i.e. energy crops), or indirectly from agricultural, commercial, domestic, and/or industrial wastes.[1] Renewable biofuels generally involve contemporary carbon fixation, such as those that occur in plants or microalgae through the process of photosynthesis. Other renewable biofuels are made through the use or conversion of biomass (referring to recently living organisms, most often referring to plants or plant-derived materials). This biomass can be converted to convenient energy-containing substances in three different ways: thermal conversion, chemical conversion, and biochemical conversion. This biomass conversion can result in fuel in solid, liquid, or gas form. This new biomass can also be used directly for biofuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is biomass that has a fuel role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/396
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400
+
 remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+redefine:",
         rdfs:label "biofuel"
     
     EquivalentTo: 
         OEO_00000173
-         and (OEO_00000530 some OEO_00030001)
+         and (OEO_00000530 some OEO_00030001),
+        OEO_00010214
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001)
     
     SubClassOf: 
         OEO_00000173,
@@ -4679,6 +4682,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030001
+    
+    
+Class: OEO_00010215
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomethane is a biomass produced from biogas by removing carbon dioxide. It is a gas mixture consisting mainly of methane. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "biomethane"@en
+    
+    SubClassOf: 
+        OEO_00010214,
+        OEO_00000530 some OEO_00030001,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000182
     
     
 Class: OEO_00020001
