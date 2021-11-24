@@ -37,6 +37,7 @@ Here is a template for new release sections
 - liquid air production (#945)
 - rotor diameter (#949)
 - energy use, non-energy use (#950)
+- power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -50,6 +51,7 @@ Here is a template for new release sections
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
 - European Union Emissions Trading System (#944)
 - liquid air (#945)
+- synthetic methane (#954)
 
 ### Removed
 
