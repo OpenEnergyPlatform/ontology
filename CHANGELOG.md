@@ -53,6 +53,7 @@ Here is a template for new release sections
 - European Union Emissions Trading System (#944)
 - liquid air (#945)
 - renewable energy (#955)
+- PtL fuel (formerly: synthetic liquid fuel) (#957)
 
 ### Removed
 
