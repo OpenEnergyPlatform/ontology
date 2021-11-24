@@ -36,6 +36,7 @@ Here is a template for new release sections
 - total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
 - liquid air production (#945)
 - rotor diameter (#949)
+- variable (production) cost (#953)
 - energy use, non-energy use (#950)
 
 ### Changed
