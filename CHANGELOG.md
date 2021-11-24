@@ -37,6 +37,7 @@ Here is a template for new release sections
 - liquid air production (#945)
 - rotor diameter (#949)
 - variable (production) cost (#953)
+- energy use, non-energy use (#950)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
