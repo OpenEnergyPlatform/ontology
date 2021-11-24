@@ -2471,7 +2471,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000025"
     
     SubClassOf: 
-        OEO_00000150
+        OEO_00000150,
+        OEO_00000530 some OEO_00020147
     
     
 Class: OEO_00000302
@@ -2942,7 +2943,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
         rdfs:label "solar thermal energy"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00000207,
+        OEO_00000530 some OEO_00030004
     
     
 Class: OEO_00000389
@@ -5096,6 +5098,10 @@ Class: OEO_00020085
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
         rdfs:label "renewable energy"
     
+    EquivalentTo: 
+        OEO_00000150
+         and (OEO_00000530 some OEO_00030004)
+    
     SubClassOf: 
         OEO_00000150
     
@@ -5136,7 +5142,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
     
     SubClassOf: 
         OEO_00000218,
-        OEO_00000503 some OEO_00000345
+        OEO_00000503 some OEO_00000345,
+        OEO_00000530 some OEO_00020147
     
     
 Class: OEO_00020102
@@ -5277,6 +5284,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/949",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
         OEO_00140002 some OEO_00140001
+    
+    
+Class: OEO_00020147
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Conventional is an origin of energies that don't replenish when transformed / consumed.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "non-renewable",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "conventional"
+    
+    SubClassOf: 
+        OEO_00000316
+    
+    
+Class: OEO_00020148
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A conventional energy carrier disposition is an energy carrier disposition of an material entity that contains non-renewable energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "conventional energy carrier disposition"
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00020149
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "fossil energy"
+    
+    EquivalentTo: 
+        OEO_00000007
+         and (OEO_00000530 some OEO_00020147)
+         and (OEO_00000530 some OEO_00030002)
+    
+    SubClassOf: 
+        OEO_00000007
     
     
 Class: OEO_00030000
@@ -6359,6 +6408,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
     
     SubClassOf: 
         OEO_00000056,
+        OEO_00000530 some OEO_00020147,
         OEO_00000530 some OEO_00030000
     
     
