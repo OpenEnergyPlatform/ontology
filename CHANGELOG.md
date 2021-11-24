@@ -35,6 +35,7 @@ Here is a template for new release sections
 - GovReg sector division, MMR sector division and further CRF (2006) sector individuals (#941, #944)
 - total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
 - liquid air production (#945)
+- decarbonisation pathway, emission constraint (#951)
 - rotor diameter (#949)
 - variable (production) cost (#953)
 - energy use, non-energy use (#950)
