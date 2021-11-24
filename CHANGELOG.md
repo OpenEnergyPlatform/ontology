@@ -51,7 +51,7 @@ Here is a template for new release sections
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
 - European Union Emissions Trading System (#944)
 - liquid air (#945)
-- synthetic methane (#954)
+- power-to-gas system, synthetic methane (#954)
 
 ### Removed
 
