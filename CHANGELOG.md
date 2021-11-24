@@ -37,7 +37,9 @@ Here is a template for new release sections
 - liquid air production (#945)
 - rotor diameter (#949)
 - energy use, non-energy use (#950)
+- variable (production) cost (#953)
 - power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
+- conventional (energy carrier disposition), fossil energy (#955) 
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -52,6 +54,7 @@ Here is a template for new release sections
 - European Union Emissions Trading System (#944)
 - liquid air (#945)
 - power-to-gas system, synthetic methane, synthetic hydrogen, fossil hydrogen (#954)
+- renewable energy (#955)
 
 ### Removed
 
