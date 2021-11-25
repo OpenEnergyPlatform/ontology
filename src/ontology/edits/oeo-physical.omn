@@ -3325,10 +3325,16 @@ Class: OEO_00000449
 Class: OEO_00010000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Ammonia is a portion of matter with the chemical formula NH3. It has a gaseous normal state of matter and can act as an air pollutant. Synonyms are trihydridonitrogen and nitrogen trihydride.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ammonia is a portion of matter with the chemical formula NH3. It has a gaseous normal state of matter and can act as an air pollutant. As it can be oxidised it can be used as a fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "NH3",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "nitrogen trihydride",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "trihydridonitrogen",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356
+
+Adapt definiton and axioms, add alternative  terms:
+https://github.com/OpenEnergyPlatform/ontology/issues/939
+https://github.com/OpenEnergyPlatform/ontology/pull/958",
         rdfs:label "ammonia"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -3338,6 +3344,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     SubClassOf: 
         OEO_00000331,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000182
     
     
@@ -4702,6 +4710,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
     
     DisjointWith: 
         OEO_00010210
+    
+    
+Class: OEO_00010221
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Synthetic ammonia is ammonia that has a synthetic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/939
+https://github.com/OpenEnergyPlatform/ontology/pull/958",
+        rdfs:label "synthetic ammonia"@en
+    
+    EquivalentTo: 
+        OEO_00010000
+         and (OEO_00000530 some OEO_00030005)
+    
+    SubClassOf: 
+        OEO_00010000
     
     
 Class: OEO_00020001
