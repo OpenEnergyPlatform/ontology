@@ -111,6 +111,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003001>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     
@@ -1097,6 +1100,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000010,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000448,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00140000
     
     
@@ -2476,7 +2480,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000025"
     
     SubClassOf: 
-        OEO_00000150
+        OEO_00000150,
+        OEO_00000530 some OEO_00020147
     
     
 Class: OEO_00000302
@@ -2947,7 +2952,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
         rdfs:label "solar thermal energy"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00000207,
+        OEO_00000530 some OEO_00030004
     
     
 Class: OEO_00000389
@@ -3299,6 +3305,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
@@ -3549,17 +3556,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
 Class: OEO_00010019
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic liquid fuel is synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electric energy applying.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PtL fuel is a liquid synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2L fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "liquid synthetic fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "synthetic liquid fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic liquid fuel"
-    
-    EquivalentTo: 
-        OEO_00010017
-         and (OEO_00000529 value OEO_00000256)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+new label and axioms:
+https://github.com/OpenEnergyPlatform/ontology/issues/934
+pull request: https://github.com/OpenEnergyPlatform/ontology/pulls/957",
+        rdfs:label "PtL fuel"
     
     SubClassOf: 
-        OEO_00010017
+        OEO_00010156,
+        <http://purl.obolibrary.org/obo/RO_0003001> some OEO_00010020,
+        OEO_00000529 value OEO_00000256
     
     
 Class: OEO_00010020
@@ -4669,6 +4681,35 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
+Class: OEO_00010210
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy use is the consumption of an energy carrier making use of the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+        rdfs:label "energy use"@en
+    
+    SubClassOf: 
+        OEO_00140039,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
+    
+    DisjointWith: 
+        OEO_00010211
+    
+    
+Class: OEO_00010211
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+        rdfs:label "non-energy use"@en
+    
+    SubClassOf: 
+        OEO_00140039
+    
+    DisjointWith: 
+        OEO_00010210
 Class: OEO_00010214
 
     Annotations: 
@@ -5101,6 +5142,10 @@ Class: OEO_00020085
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
         rdfs:label "renewable energy"
     
+    EquivalentTo: 
+        OEO_00000150
+         and (OEO_00000530 some OEO_00030004)
+    
     SubClassOf: 
         OEO_00000150
     
@@ -5141,7 +5186,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
     
     SubClassOf: 
         OEO_00000218,
-        OEO_00000503 some OEO_00000345
+        OEO_00000503 some OEO_00000345,
+        OEO_00000530 some OEO_00020147
     
     
 Class: OEO_00020102
@@ -5268,6 +5314,62 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some OEO_00020140
+    
+    
+Class: OEO_00020144
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Rotor diameter is a quality of a wind energy converting unit that measures the diameter of the wind rotor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/892
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/949",
+        rdfs:label "rotor diameter"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00140002 some OEO_00140001
+    
+    
+Class: OEO_00020147
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Conventional is an origin of energies that don't replenish when transformed / consumed.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "non-renewable",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "conventional"
+    
+    SubClassOf: 
+        OEO_00000316
+    
+    
+Class: OEO_00020148
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A conventional energy carrier disposition is an energy carrier disposition of an material entity that contains non-renewable energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "conventional energy carrier disposition"
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00020149
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "fossil energy"
+    
+    EquivalentTo: 
+        OEO_00000007
+         and (OEO_00000530 some OEO_00020147)
+         and (OEO_00000530 some OEO_00030002)
+    
+    SubClassOf: 
+        OEO_00000007
     
     
 Class: OEO_00030000
@@ -5652,6 +5754,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
     
     SubClassOf: 
         OEO_00140039,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211),
         OEO_00140002 some OEO_00050019
     
     
@@ -5672,6 +5779,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
     
     SubClassOf: 
         OEO_00140039,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
+        (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210),
         OEO_00140002 some OEO_00050019
     
     
@@ -6340,6 +6452,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
     
     SubClassOf: 
         OEO_00000056,
+        OEO_00000530 some OEO_00020147,
         OEO_00000530 some OEO_00030000
     
     
