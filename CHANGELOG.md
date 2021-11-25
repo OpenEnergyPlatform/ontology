@@ -37,8 +37,9 @@ Here is a template for new release sections
 - liquid air production (#945)
 - decarbonisation pathway, emission constraint (#951)
 - rotor diameter (#949)
-- variable (production) cost (#953)
 - energy use, non-energy use (#950)
+- biomass, biomethane (#952)
+- variable (production) cost (#953)
 - conventional (energy carrier disposition), fossil energy (#955) 
 
 ### Changed
@@ -53,6 +54,7 @@ Here is a template for new release sections
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
 - European Union Emissions Trading System (#944)
 - liquid air (#945)
+- biofuel, biogas, charcoal, wood (#952)
 - renewable energy (#955)
 - PtL fuel (formerly: synthetic liquid fuel) (#957)
 
