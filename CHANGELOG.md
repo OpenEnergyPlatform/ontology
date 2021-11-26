@@ -40,7 +40,7 @@ Here is a template for new release sections
 - variable (production) cost (#953)
 - energy use, non-energy use (#950)
 - conventional (energy carrier disposition), fossil energy (#955) 
-- synthetic ammonia (#958)
+- synthetic ammonia (#959)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -56,7 +56,7 @@ Here is a template for new release sections
 - liquid air (#945)
 - renewable energy (#955)
 - PtL fuel (formerly: synthetic liquid fuel) (#957)
-- ammonia (#958)
+- ammonia (#959)
 
 ### Removed
 
