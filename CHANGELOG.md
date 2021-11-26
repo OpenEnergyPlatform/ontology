@@ -44,7 +44,7 @@ Here is a template for new release sections
 - variable (production) cost (#953)
 - conventional (energy carrier disposition), fossil energy (#955) 
 - carbon tax, social cost of carbon, carbon price (#956)
-- synthetic ammonia (#959)
+- synthetic ammonia, power-to-ammonia process (#959)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
