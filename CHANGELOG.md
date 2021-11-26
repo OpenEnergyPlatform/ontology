@@ -39,6 +39,7 @@ Here is a template for new release sections
 - variable (production) cost (#953)
 - energy use, non-energy use (#950)
 - conventional (energy carrier disposition), fossil energy (#955) 
+- carbon tax, social cost of carbon, carbon price (#956)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
