@@ -111,6 +111,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003001>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     
@@ -1256,18 +1259,18 @@ Class: OEO_00000071
 Class: OEO_00000072
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a fuel that is produced through contemporary biological processes, such as agriculture and anaerobic digestion, rather than a fuel produced by geological processes such as those involved in the formation of fossil fuels, such as coal and petroleum, from prehistoric biological matter.
-
-Biofuels can be derived directly from plants (i.e. energy crops), or indirectly from agricultural, commercial, domestic, and/or industrial wastes.[1] Renewable biofuels generally involve contemporary carbon fixation, such as those that occur in plants or microalgae through the process of photosynthesis. Other renewable biofuels are made through the use or conversion of biomass (referring to recently living organisms, most often referring to plants or plant-derived materials). This biomass can be converted to convenient energy-containing substances in three different ways: thermal conversion, chemical conversion, and biochemical conversion. This biomass conversion can result in fuel in solid, liquid, or gas form. This new biomass can also be used directly for biofuels.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a combustion fuel that has a biogenic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/396
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400
+
 remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+redefine:",
         rdfs:label "biofuel"
     
     EquivalentTo: 
-        OEO_00000173
+        OEO_00000099
          and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
@@ -1293,7 +1296,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
 Class: OEO_00000074
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas is a biofuel which has a gaseous state and is composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass. It is used as a biofuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogas is a portion of matter produced by anaerobic digestion. It is a gas mixture consisting mainly of methane and carbon dioxide. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
         rdfs:label "biogas",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1301,8 +1306,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000556"
     
     SubClassOf: 
-        OEO_00000072,
+        OEO_00000331,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000006)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025),
         OEO_00000530 some OEO_00030001,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000182
     
@@ -1341,8 +1349,9 @@ Class: OEO_00000077
 Class: OEO_00000084
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Charcoal is a portion of matter consisting of the solid residue of the destructive distillation and pyrolysis of wood and other vegetal material.It is used as a fuel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Charcoal is a portion of matter produced from wood via pyrolysis. It has a solid state of matter an can be used as fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
         rdfs:label "charcoal",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -3313,13 +3322,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 Class: OEO_00000449
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Wood and other is solid biomass of purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "wood and other"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wood is a biomass from trees. It has a solid state of matter an can be used as fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "wood"
     
     SubClassOf: 
-        OEO_00000332,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001
+        OEO_00010214,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        OEO_00000529 value OEO_00000390
     
     
 Class: OEO_00010000
@@ -3570,17 +3581,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
 Class: OEO_00010019
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic liquid fuel is synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electric energy applying.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PtL fuel is a liquid synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2L fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "liquid synthetic fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "synthetic liquid fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic liquid fuel"
-    
-    EquivalentTo: 
-        OEO_00010017
-         and (OEO_00000529 value OEO_00000256)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+new label and axioms:
+https://github.com/OpenEnergyPlatform/ontology/issues/934
+pull request: https://github.com/OpenEnergyPlatform/ontology/pulls/957",
+        rdfs:label "PtL fuel"
     
     SubClassOf: 
-        OEO_00010017
+        OEO_00010156,
+        <http://purl.obolibrary.org/obo/RO_0003001> some OEO_00010020,
+        OEO_00000529 value OEO_00000256
     
     
 Class: OEO_00010020
@@ -4719,6 +4735,34 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
     
     DisjointWith: 
         OEO_00010210
+Class: OEO_00010214
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomass is a portion of matter from plants or animals and has thus has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "biomass"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030001
+    
+    
+Class: OEO_00010215
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomethane is a portion of matter produced from biogas by removing carbon dioxide. It is a gas mixture consisting mainly of methane. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "biomethane"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030001,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000182
     
     
 Class: OEO_00010216

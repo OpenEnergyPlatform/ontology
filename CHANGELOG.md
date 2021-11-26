@@ -35,10 +35,13 @@ Here is a template for new release sections
 - GovReg sector division, MMR sector division and further CRF (2006) sector individuals (#941, #944)
 - total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
 - liquid air production (#945)
+- decarbonisation pathway, emission constraint (#951)
 - rotor diameter (#949)
 - energy use, non-energy use (#950)
 - variable (production) cost (#953)
 - power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
+- biomass, biomethane (#952)
+- variable (production) cost (#953)
 - conventional (energy carrier disposition), fossil energy (#955) 
 
 ### Changed
@@ -54,7 +57,9 @@ Here is a template for new release sections
 - European Union Emissions Trading System (#944)
 - liquid air (#945)
 - power-to-gas system, synthetic methane, synthetic hydrogen, fossil hydrogen (#954)
+- biofuel, biogas, charcoal, wood (#952)
 - renewable energy (#955)
+- PtL fuel (formerly: synthetic liquid fuel) (#957)
 
 ### Removed
 
