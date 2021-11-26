@@ -43,6 +43,7 @@ Here is a template for new release sections
 - biomass, biomethane (#952)
 - variable (production) cost (#953)
 - conventional (energy carrier disposition), fossil energy (#955) 
+- carbon tax, social cost of carbon, carbon price (#956)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)

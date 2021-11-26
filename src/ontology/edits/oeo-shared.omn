@@ -23,6 +23,9 @@ Annotations:
     <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Shared module)"
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
     
@@ -683,6 +686,37 @@ Class: OEO_00000107
         OEO_00000051
     
     
+Class: OEO_00000147
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "emission is a process releasing byproducts from human activity (e.g. production, distribution or consumption) into the environment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00000148
+    
+    
+Class: OEO_00000148
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that quantifies the emissions or removals of a gas per unit activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/243
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission factor"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00000147,
+        OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
 Class: OEO_00000151
 
     Annotations: 
@@ -978,6 +1012,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
         <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
+Class: OEO_00020063
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a licence that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
+moved to oeo-shared
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission certificate"
+    
+    SubClassOf: 
+        OEO_00020015
+    
+    
 Class: OEO_00020066
 
     Annotations: 
@@ -1118,6 +1166,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000047>
     
     
+Class: OEO_00020154
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission certificate price"
+    
+    SubClassOf: 
+        OEO_00040003
+    
+    
+Class: OEO_00020155
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon is the cost the society bears for an emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "social cost of CO2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "social cost of carbon"
+    
+    SubClassOf: 
+        OEO_00040009,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
+    
+    
 Class: OEO_00030015
 
     Annotations: 
@@ -1192,6 +1267,59 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
         OEO_00000350,
         OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000038>,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
+    
+    
+Class: OEO_00040003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary price is an economic value that describes the amount of money requested, expected, required or given in exchange for something else.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:MonetaryPrice",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/331
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/640
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "monetary price"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice"
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some OEO_00040004
+    
+    
+Class: OEO_00040004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The currency used in France in 2020 was Euro.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/331
+https://github.com/OpenEnergyPlatform/ontology/pull/640
+add comment and example
+https://github.com/OpenEnergyPlatform/ontology/pull/910
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:comment "Currency is the unit of monetary value as defined by each country.",
+        rdfs:label "currency"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00040009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Cost is an economic value that describes the amount of money needed to buy, make, or do a thing.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://dictionary.cambridge.org/dictionary/english/cost",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/268
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/643
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "cost"@en
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some OEO_00040004
     
     
 Class: OEO_00040011
@@ -1312,6 +1440,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
         OEO_00000051
     
     
+Class: OEO_00140012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic value is a quantity value that is economically relevant.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "economic value"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
 Class: OEO_00140039
 
     Annotations: 
@@ -1322,6 +1464,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00140081
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a process attribute that quantifies the output of an emission process. It can be calculated using the emission factor of that emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+has quantity value axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission value"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00000147,
+        OEO_00140002 some OEO_00010079
     
     
 Class: OEO_00240003
