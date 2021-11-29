@@ -44,6 +44,7 @@ Here is a template for new release sections
 - variable (production) cost (#953)
 - conventional (energy carrier disposition), fossil energy (#955) 
 - carbon tax, social cost of carbon, carbon price (#956)
+- synthetic ammonia, power-to-ammonia process (#959)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -61,6 +62,7 @@ Here is a template for new release sections
 - biofuel, biogas, charcoal, wood (#952)
 - renewable energy (#955)
 - PtL fuel (formerly: synthetic liquid fuel) (#957)
+- ammonia (#959)
 
 ### Removed
 
@@ -348,7 +350,6 @@ Here is a template for new release sections
 - energy transformation (#77)
 - synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
-
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
