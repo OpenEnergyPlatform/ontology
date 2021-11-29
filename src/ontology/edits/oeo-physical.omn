@@ -2108,8 +2108,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 Class: OEO_00000226
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Industrial waste fuel is waste fuel of industrial non-renewable origin (solids or liquids) combusted directly for the production of electricity and/or heat. The quantity of fuel used should be reported on a net calorific value basis. Renewable industrial waste should be reported in the solid biomass, biogas and/or liquid biofuels categories."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial waste fuel is waste fuel produced by industry."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
         rdfs:label "industrial waste fuel"
     
     SubClassOf: 
@@ -2345,8 +2346,7 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
 Class: OEO_00000290
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Municipal waste fuel is waste fuel of waste produced by households, hospitals and the tertiary sector incinerated at specific installations, on a net calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A municipal waste fuel is waste fuel produced by households or non-industrial commercial activities."@en,
         rdfs:label "municipal waste fuel"
     
     SubClassOf: 
@@ -2433,13 +2433,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
 Class: OEO_00000299
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Non renewable municipal waste fuel is municipal waste fuel of non-biological origin."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "non renewable municipal waste fuel"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil municipal waste fuel is an municipal waste fuel that has a fossil origin."@en,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000116> "Old class name kept as alternative term"
+        <http://purl.obolibrary.org/obo/IAO_0000118> "non renewable municipal waste fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
+        rdfs:label "fossil municipal waste fuel"
+    
+    EquivalentTo: 
+        OEO_00000290
+         and (OEO_00000530 some OEO_00030002)
     
     SubClassOf: 
-        OEO_00000290,
-        OEO_00000530 some OEO_00030002
+        OEO_00000290
     
     
 Class: OEO_00000300
@@ -2802,11 +2809,18 @@ Class: OEO_00000350
 Class: OEO_00000356
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable municipal waste fuel is municipal waste fuel of biological origin."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable municipal waste fuel is an municipal waste fuel that has a renewable origin."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+new definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
         rdfs:label "renewable municipal waste fuel"
+    
+    EquivalentTo: 
+        OEO_00000290
+         and (OEO_00000530 some OEO_00030004)
     
     SubClassOf: 
         OEO_00000290,
@@ -4872,6 +4886,70 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
     SubClassOf: 
         OEO_00010216,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00010000
+    
+    
+Class: OEO_00010223
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable waste fuel is a waste fuel that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
+        rdfs:label "renewable waste fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000439
+         and (OEO_00000530 some OEO_00030004)
+    
+    SubClassOf: 
+        OEO_00000439
+    
+    
+Class: OEO_00010224
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil waste fuel is a waste fuel that has a fossil origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
+        rdfs:label "fossil waste fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000439
+         and (OEO_00000530 some OEO_00030002)
+    
+    SubClassOf: 
+        OEO_00000439
+    
+    
+Class: OEO_00010225
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable industrial waste fuel is an industrial waste fuel that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
+        rdfs:label "renewable industrial waste fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000226
+         and (OEO_00000530 some OEO_00030004)
+    
+    SubClassOf: 
+        OEO_00000226
+    
+    
+Class: OEO_00010226
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil industrial waste fuel is an industrial waste fuel that has a renewable fossil.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
+        rdfs:label "fossil industrial waste fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000226
+         and (OEO_00000530 some OEO_00030002)
+    
+    SubClassOf: 
+        OEO_00000226
     
     
 Class: OEO_00020001

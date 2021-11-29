@@ -45,6 +45,7 @@ Here is a template for new release sections
 - conventional (energy carrier disposition), fossil energy (#955) 
 - carbon tax, social cost of carbon, carbon price (#956)
 - synthetic ammonia, power-to-ammonia process (#959)
+- renewable waste fuel, fossil waste fuel, renewable industrial waste fuel, fossil industrial waste fuel (#961)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -63,6 +64,7 @@ Here is a template for new release sections
 - renewable energy (#955)
 - PtL fuel (formerly: synthetic liquid fuel) (#957)
 - ammonia (#959)
+- industrial waste fuel, municipal waste fuel, renewable municipal waste fuel, fossil municipal waste fuel (previously: non renewable municipal waste fuel) (#961)
 
 ### Removed
 
