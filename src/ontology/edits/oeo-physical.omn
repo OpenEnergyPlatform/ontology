@@ -111,6 +111,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003001>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
 
     
@@ -1097,6 +1100,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000010,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000448,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00140000
     
     
@@ -1255,18 +1259,18 @@ Class: OEO_00000071
 Class: OEO_00000072
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a fuel that is produced through contemporary biological processes, such as agriculture and anaerobic digestion, rather than a fuel produced by geological processes such as those involved in the formation of fossil fuels, such as coal and petroleum, from prehistoric biological matter.
-
-Biofuels can be derived directly from plants (i.e. energy crops), or indirectly from agricultural, commercial, domestic, and/or industrial wastes.[1] Renewable biofuels generally involve contemporary carbon fixation, such as those that occur in plants or microalgae through the process of photosynthesis. Other renewable biofuels are made through the use or conversion of biomass (referring to recently living organisms, most often referring to plants or plant-derived materials). This biomass can be converted to convenient energy-containing substances in three different ways: thermal conversion, chemical conversion, and biochemical conversion. This biomass conversion can result in fuel in solid, liquid, or gas form. This new biomass can also be used directly for biofuels.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Biofuel&oldid=866432109",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a combustion fuel that has a biogenic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/396
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400
+
 remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+redefine:",
         rdfs:label "biofuel"
     
     EquivalentTo: 
-        OEO_00000173
+        OEO_00000099
          and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
@@ -1292,7 +1296,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
 Class: OEO_00000074
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogas is a biofuel which has a gaseous state and is composed principally of methane and carbon dioxide produced by anaerobic digestion of biomass. It is used as a biofuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogas is a portion of matter produced by anaerobic digestion. It is a gas mixture consisting mainly of methane and carbon dioxide. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
         rdfs:label "biogas",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1300,8 +1306,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000556"
     
     SubClassOf: 
-        OEO_00000072,
+        OEO_00000331,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000006)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025),
         OEO_00000530 some OEO_00030001,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000182
     
@@ -1340,8 +1349,9 @@ Class: OEO_00000077
 Class: OEO_00000084
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Charcoal is a portion of matter consisting of the solid residue of the destructive distillation and pyrolysis of wood and other vegetal material.It is used as a fuel."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Charcoal is a portion of matter produced from wood via pyrolysis. It has a solid state of matter an can be used as fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
         rdfs:label "charcoal",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1615,30 +1625,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
     
 Class: OEO_00000147
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "emission is a process releasing byproducts from human activity (e.g. production, distribution or consumption) into the environment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
-        rdfs:label "emission"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        OEO_00000500 some OEO_00000148
-    
     
 Class: OEO_00000148
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that quantifies the emissions or removals of a gas per unit activity.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/243
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581",
-        rdfs:label "emission factor"
-    
-    SubClassOf: 
-        OEO_00030019,
-        OEO_00000502 some OEO_00000147,
-        OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
-    
     
 Class: OEO_00000150
 
@@ -2470,7 +2459,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000025"
     
     SubClassOf: 
-        OEO_00000150
+        OEO_00000150,
+        OEO_00000530 some OEO_00020147
     
     
 Class: OEO_00000302
@@ -2752,15 +2742,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 Class: OEO_00000335
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "a power-to-gas (often abbreviated P2G) system is an energy storage object that converts electrical power to a gas fuel. When using surplus power from wind generation, the concept is sometimes called windgas. There are currently three methods in use; all use electricity to split water into hydrogen and oxygen by means of electrolysis."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is an energy transformation unit that implements a power-to-gas process. A water electrolyser is participating in the power-to-gas process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Power-to-gas&oldid=907220452"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power-to-gas",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
         rdfs:label "power-to-gas system"
     
     SubClassOf: 
-        OEO_00000159,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
     
     
 Class: OEO_00000343
@@ -2941,7 +2935,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
         rdfs:label "solar thermal energy"
     
     SubClassOf: 
-        OEO_00000207
+        OEO_00000207,
+        OEO_00000530 some OEO_00030004
     
     
 Class: OEO_00000389
@@ -3293,6 +3288,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
@@ -3306,22 +3302,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 Class: OEO_00000449
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Wood and other is solid biomass of purpose-grown energy crops (poplar, willow etc.), a multitude of woody materials generated by an industrial process (wood/paper industry in particular) or provided directly by forestry and agriculture (firewood, wood chips, wood pellets, bark, sawdust, shavings, chips, black liquor etc.) as well as wastes such as straw, rice husks, nut shells, poultry litter, crushed grape dregs etc. Combustion is the preferred technology for these solid wastes. The quantity of fuel used should be reported on a net calorific value basis."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "wood and other"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wood is a biomass from trees. It has a solid state of matter an can be used as fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "wood"
     
     SubClassOf: 
-        OEO_00000332,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001
+        OEO_00010214,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        OEO_00000529 value OEO_00000390
     
     
 Class: OEO_00010000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Ammonia is a portion of matter with the chemical formula NH3. It has a gaseous normal state of matter and can act as an air pollutant. Synonyms are trihydridonitrogen and nitrogen trihydride.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ammonia is a portion of matter with the chemical formula NH3. It has a gaseous normal state of matter and can act as an air pollutant. As it can be oxidised it can be used as a fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "NH3",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "nitrogen trihydride",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "trihydridonitrogen",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/263
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/356
+
+Adapt definiton and axioms, add alternative  terms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/939
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
         rdfs:label "ammonia"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -3331,6 +3335,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     SubClassOf: 
         OEO_00000331,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000182
     
     
@@ -3489,9 +3495,15 @@ Class: OEO_00010015
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
         rdfs:label "fossil hydrogen"
     
+    EquivalentTo: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954"
+        OEO_00000220
+         and (OEO_00000530 some OEO_00030002)
+    
     SubClassOf: 
-        OEO_00000220,
-        OEO_00000530 some OEO_00030002
+        OEO_00000220
     
     
 Class: OEO_00010016
@@ -3502,9 +3514,15 @@ Class: OEO_00010016
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
         rdfs:label "synthetic hydrogen"
     
+    EquivalentTo: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954"
+        OEO_00000220
+         and (OEO_00000530 some OEO_00030005)
+    
     SubClassOf: 
-        OEO_00000220,
-        OEO_00000530 some OEO_00030005
+        OEO_00000220
     
     
 Class: OEO_00010017
@@ -3528,30 +3546,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
 Class: OEO_00010018
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic methane is synthetic fuel produced in a power-to-gas system from water and carbon dioxide using electric energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic methane is methane that has a synthetic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power-to-gas",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+Re-definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
         rdfs:label "synthetic methane"
     
+    EquivalentTo: 
+        OEO_00000025
+         and (OEO_00000530 some OEO_00030005)
+    
     SubClassOf: 
-        OEO_00000025,
-        OEO_00000530 some OEO_00030005
+        OEO_00000025
     
     
 Class: OEO_00010019
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic liquid fuel is synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electric energy applying.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PtL fuel is a liquid synthetic fuel produced in a power-to-liquid system from water and carbon dioxide using electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2L fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "liquid synthetic fuel",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "synthetic liquid fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
-        rdfs:label "synthetic liquid fuel"
-    
-    EquivalentTo: 
-        OEO_00010017
-         and (OEO_00000529 value OEO_00000256)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+new label and axioms:
+https://github.com/OpenEnergyPlatform/ontology/issues/934
+pull request: https://github.com/OpenEnergyPlatform/ontology/pulls/957",
+        rdfs:label "PtL fuel"
     
     SubClassOf: 
-        OEO_00010017
+        OEO_00010156,
+        <http://purl.obolibrary.org/obo/RO_0003001> some OEO_00010020,
+        OEO_00000529 value OEO_00000256
     
     
 Class: OEO_00010020
@@ -3571,7 +3605,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
 Class: OEO_00010021
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electrolyser is an energy converting device that uses an electric current to decompose water into hydrogen and oxygen gas. Electric energy is converted into chemical energy (and waste heat).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electrolyser is an energy converting device that uses an electric current to decompose water into hydrogen and oxygen gas. Electrical energy is converted into chemical energy (and waste heat).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
         rdfs:label "water electrolyser"
@@ -4661,6 +4695,185 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
+Class: OEO_00010210
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy use is the consumption of an energy carrier making use of the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+        rdfs:label "energy use"@en
+    
+    SubClassOf: 
+        OEO_00140039,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
+    
+    DisjointWith: 
+        OEO_00010211
+    
+    
+Class: OEO_00010211
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+        rdfs:label "non-energy use"@en
+    
+    SubClassOf: 
+        OEO_00140039
+    
+    DisjointWith: 
+        OEO_00010210
+    
+    
+Class: OEO_00010214
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomass is a portion of matter from plants or animals and has thus has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "biomass"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030001
+    
+    
+Class: OEO_00010215
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomethane is a portion of matter produced from biogas by removing carbon dioxide. It is a gas mixture consisting mainly of methane. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+        rdfs:label "biomethane"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030001,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000182
+    
+    
+Class: OEO_00010216
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas process is an energy transformation that converts electrical energy to chemical energy by synthesising portions of matter into a gaseous synthetic fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power-to-gas",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+        rdfs:label "power-to-gas process"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        (OEO_00000532 some OEO_00000139)
+         and (OEO_00000532 some OEO_00000331),
+        (OEO_00000533 some OEO_00000007)
+         and (OEO_00000533 some OEO_00010155)
+    
+    
+Class: OEO_00010217
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane process is a power-to-gas process that has electrical energy, water and carbon dioxide as physical input and synthetic methane carrying chemical energy as physical output. It consists of two sub processes: an electrolysis process and a methanation.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power to methane",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+        rdfs:label "power-to-methane process"@en
+    
+    SubClassOf: 
+        OEO_00010216,
+        (OEO_00000532 some OEO_00000006)
+         and (OEO_00000532 some OEO_00000139)
+         and (OEO_00000532 some OEO_00000441),
+        (OEO_00000533 some OEO_00000007)
+         and (OEO_00000533 some OEO_00010018),
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010219,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010220
+    
+    
+Class: OEO_00010218
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Oxygen is a portion of matter with the chemical formula O2. It has a gaseous normal state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "O2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+        rdfs:label "oxygen"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000529 value OEO_00000182
+    
+    
+Class: OEO_00010219
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A water electrolysis process is an energy transformation that uses an electric current to decompose water into hydrogen and oxygen gas. Electrical energy is converted into chemical energy (and waste heat).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+        rdfs:label "water electrolysis process"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        (OEO_00000532 some OEO_00000139)
+         and (OEO_00000532 some OEO_00000441),
+        (OEO_00000533 some OEO_00000007)
+         and (OEO_00000533 some OEO_00000220)
+         and (OEO_00000533 some OEO_00010218),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010021
+    
+    
+Class: OEO_00010220
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation is a redox reaction that converts carbon dioxide and hydrogen to synthetic methane and water.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+        rdfs:label "methanation"@en
+    
+    SubClassOf: 
+        OEO_00140034,
+        (OEO_00000532 some OEO_00000006)
+         and (OEO_00000532 some OEO_00000220),
+        (OEO_00000533 some OEO_00000006)
+         and (OEO_00000533 some OEO_00000441)
+    
+    
+Class: OEO_00010221
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic ammonia is ammonia that has a synthetic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/939
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
+        rdfs:label "synthetic ammonia"@en
+    
+    EquivalentTo: 
+        OEO_00010000
+         and (OEO_00000530 some OEO_00030005)
+    
+    SubClassOf: 
+        OEO_00010000
+    
+    
+Class: OEO_00010222
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-ammonia process is a power-to-gas process that has ammonia as output.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power to ammonia",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/939
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
+        rdfs:label "power-to-ammonia process"@en
+    
+    SubClassOf: 
+        OEO_00010216,
+        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00010000
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -5063,6 +5276,10 @@ Class: OEO_00020085
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
         rdfs:label "renewable energy"
     
+    EquivalentTo: 
+        OEO_00000150
+         and (OEO_00000530 some OEO_00030004)
+    
     SubClassOf: 
         OEO_00000150
     
@@ -5103,7 +5320,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
     
     SubClassOf: 
         OEO_00000218,
-        OEO_00000503 some OEO_00000345
+        OEO_00000503 some OEO_00000345,
+        OEO_00000530 some OEO_00020147
     
     
 Class: OEO_00020102
@@ -5230,6 +5448,62 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some OEO_00020140
+    
+    
+Class: OEO_00020144
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Rotor diameter is a quality of a wind energy converting unit that measures the diameter of the wind rotor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/892
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/949",
+        rdfs:label "rotor diameter"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00140002 some OEO_00140001
+    
+    
+Class: OEO_00020147
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Conventional is an origin of energies that don't replenish when transformed / consumed.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "non-renewable",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "conventional"
+    
+    SubClassOf: 
+        OEO_00000316
+    
+    
+Class: OEO_00020148
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A conventional energy carrier disposition is an energy carrier disposition of an material entity that contains non-renewable energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "conventional energy carrier disposition"
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00020149
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+        rdfs:label "fossil energy"
+    
+    EquivalentTo: 
+        OEO_00000007
+         and (OEO_00000530 some OEO_00020147)
+         and (OEO_00000530 some OEO_00030002)
+    
+    SubClassOf: 
+        OEO_00000007
     
     
 Class: OEO_00030000
@@ -5614,6 +5888,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
     
     SubClassOf: 
         OEO_00140039,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211),
         OEO_00140002 some OEO_00050019
     
     
@@ -5634,6 +5913,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
     
     SubClassOf: 
         OEO_00140039,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
+        (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210),
         OEO_00140002 some OEO_00050019
     
     
@@ -6164,21 +6448,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
     
 Class: OEO_00140081
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a process attribute that quantifies the output of an emission process. It can be calculated using the emission factor of that emission process.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "class:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
-has quantity value axiom:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
-        rdfs:label "emission value"@en
-    
-    SubClassOf: 
-        OEO_00030019,
-        OEO_00000502 some OEO_00000147,
-        OEO_00140002 some OEO_00010079
-    
     
 Class: OEO_00140082
 
@@ -6302,6 +6571,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
     
     SubClassOf: 
         OEO_00000056,
+        OEO_00000530 some OEO_00020147,
         OEO_00000530 some OEO_00030000
     
     

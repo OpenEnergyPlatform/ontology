@@ -32,9 +32,20 @@ Here is a template for new release sections
 - (specific) space requirement, km2, area per power unit, area value (#933)
 - gross electricity generation, net electricity generation, electricity generation process (#932)
 - power value (#935)
-- MMR sector division and further CRF (2006) sector individuals (#941)
+- GovReg sector division, MMR sector division and further CRF (2006) sector individuals (#941, #944)
+- total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
 - liquid air production (#945)
 - net capacity factor (#946)
+- decarbonisation pathway, emission constraint (#951)
+- rotor diameter (#949)
+- energy use, non-energy use (#950)
+- variable (production) cost (#953)
+- power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
+- biomass, biomethane (#952)
+- variable (production) cost (#953)
+- conventional (energy carrier disposition), fossil energy (#955) 
+- carbon tax, social cost of carbon, carbon price (#956)
+- synthetic ammonia, power-to-ammonia process (#959)
 
 ### Changed
 - energy converting device / component, unit of measurement (#895)
@@ -46,7 +57,13 @@ Here is a template for new release sections
 - declared net capacity, nameplate capacity, power rating (#928)
 - combustion fuel, solid fossil fuel, syngas (#931)
 - CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
+- European Union Emissions Trading System (#944)
 - liquid air (#945)
+- power-to-gas system, synthetic methane, synthetic hydrogen, fossil hydrogen (#954)
+- biofuel, biogas, charcoal, wood (#952)
+- renewable energy (#955)
+- PtL fuel (formerly: synthetic liquid fuel) (#957)
+- ammonia (#959)
 
 ### Removed
 
@@ -334,7 +351,6 @@ Here is a template for new release sections
 - energy transformation (#77)
 - synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
-
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
