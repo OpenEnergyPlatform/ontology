@@ -23,6 +23,9 @@ Annotations:
     <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Shared module)"
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
     
@@ -42,6 +45,9 @@ AnnotationProperty: <http://purl.org/dc/terms/license>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
 AnnotationProperty: OEO_00010037
@@ -117,10 +123,16 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
         OEO_00010121
     
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002328>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
@@ -318,6 +330,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain an
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000238
     
     
+ObjectProperty: OEO_00000514
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a data set and the resolution it depicts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
+rework
+issue https://github.com/OpenEnergyPlatform/ontology/issues/849
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "has resolution"
+    
+    
+ObjectProperty: OEO_00000515
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a data set and the spatial resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
+def and axioms
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "has spatial resolution"
+    
+    SubPropertyOf: 
+        OEO_00000514
+    
+    
+ObjectProperty: OEO_00000516
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between data set and the time resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
+def and axioms
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "has temporal resolution"
+    
+    SubPropertyOf: 
+        OEO_00000514
+    
+    
 ObjectProperty: OEO_00000522
 
     Annotations: 
@@ -468,10 +520,19 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000009>
+
+    SubClassOf: 
+        OEO_00140002 some OEO_00020143
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000016>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -511,6 +572,16 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 Class: <http://purl.obolibrary.org/obo/IAO_0000088>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000100>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add axiom
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912"
+    
+    SubClassOf: 
+        OEO_00000514 some OEO_00020121
+    
+    
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
@@ -518,7 +589,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537
+renaming
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         rdfs:comment "The original definition from UO is \"A unit of measurement is a standardized quantity of a physical quality.\". It was adjusted for OEO purposes such that currencies can also be defined as units."
     
     SubClassOf: 
@@ -540,6 +613,20 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
         <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
+Class: <http://purl.obolibrary.org/obo/UO_0000047>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000224>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "kilowatt hours",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add eurostat alternative term and has_exact_synonym:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/924",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "kWh",
+        rdfs:comment "The original term from UO had neither an alternative term nor has_exact_synonym. It was added for OEO purposes to include the Eurostat spellings."@en
+    
+    
 Class: OEO_00000051
 
     Annotations: 
@@ -557,12 +644,16 @@ Class: OEO_00000061
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An artificial object is an object that was deliberately manufactured by humans to address a particular purpose.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/86
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition),
- https://github.com/OpenEnergyPlatform/ontology/pull/128 (subclasses)",
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition)
+subclasses
+https://github.com/OpenEnergyPlatform/ontology/pull/128
+relation to space requirement
+https://github.com/OpenEnergyPlatform/ontology/pull/933",
         rdfs:label "artificial object"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000030>
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/RO_0002328> some OEO_00020136
     
     
 Class: OEO_00000064
@@ -593,6 +684,37 @@ Class: OEO_00000107
     
     SubClassOf: 
         OEO_00000051
+    
+    
+Class: OEO_00000147
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "emission is a process releasing byproducts from human activity (e.g. production, distribution or consumption) into the environment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00000500 some OEO_00000148
+    
+    
+Class: OEO_00000148
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that quantifies the emissions or removals of a gas per unit activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/243
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission factor"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00000147,
+        OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00000151
@@ -832,7 +954,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557"
-        OEO_00000509 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001)
+        OEO_00000509 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00090001),
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/IAO_0000100>
     
     
 Class: OEO_00020012
@@ -852,6 +975,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
         OEO_00000506 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064),
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000100>,
         <http://purl.obolibrary.org/obo/RO_0002353> some OEO_00020011
     
     
@@ -886,6 +1010,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020063
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a licence that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
+moved to oeo-shared
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission certificate"
+    
+    SubClassOf: 
+        OEO_00020015
     
     
 Class: OEO_00020066
@@ -935,6 +1073,124 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     SubClassOf: 
         OEO_00020067
+    
+    
+Class: OEO_00020121
+
+    Annotations: 
+        rdfs:label "resolution"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
+Class: OEO_00020122
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal resolution is the resolution of a time series that indicates time-dependent the level of detail.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "temporal resolution"
+    
+    SubClassOf: 
+        OEO_00020121
+    
+    DisjointWith: 
+        OEO_00020123
+    
+    
+Class: OEO_00020123
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Spatial resolution is the resolution of a georeferenced dataset that indicates the geographical level of detail.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
+        rdfs:label "spatial resolution"
+    
+    SubClassOf: 
+        OEO_00020121
+    
+    DisjointWith: 
+        OEO_00020122
+    
+    
+Class: OEO_00020136
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement is a two-dimensional spatial region that covers the area needed by an artifical object.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "space requirement"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000009>
+    
+    
+Class: OEO_00020140
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An area per power unit is a unit which is a measure for an area per nameplate capacity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/930",
+        rdfs:label "area per power unit"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00020142
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An area unit which is equal to one million square meters or 10^[6] m^[2].",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "km^[2]",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "square km",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "square kilometer"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000047>
+    
+    
+Class: OEO_00020143
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An area value is a quantity value indicating the size of a two-dimensional spatial region.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+        rdfs:label "area value"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000009>,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000047>
+    
+    
+Class: OEO_00020154
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission certificate price"
+    
+    SubClassOf: 
+        OEO_00040003
+    
+    
+Class: OEO_00020155
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon is the cost the society bears for an emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "social cost of CO2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "social cost of carbon"
+    
+    SubClassOf: 
+        OEO_00040009,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
     
     
 Class: OEO_00030015
@@ -1011,6 +1267,59 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
         OEO_00000350,
         OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000038>,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
+    
+    
+Class: OEO_00040003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary price is an economic value that describes the amount of money requested, expected, required or given in exchange for something else.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:MonetaryPrice",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/331
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/640
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "monetary price"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice"
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some OEO_00040004
+    
+    
+Class: OEO_00040004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The currency used in France in 2020 was Euro.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/331
+https://github.com/OpenEnergyPlatform/ontology/pull/640
+add comment and example
+https://github.com/OpenEnergyPlatform/ontology/pull/910
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:comment "Currency is the unit of monetary value as defined by each country.",
+        rdfs:label "currency"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00040009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Cost is an economic value that describes the amount of money needed to buy, make, or do a thing.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://dictionary.cambridge.org/dictionary/english/cost",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/268
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/643
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "cost"@en
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some OEO_00040004
     
     
 Class: OEO_00040011
@@ -1131,6 +1440,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
         OEO_00000051
     
     
+Class: OEO_00140012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic value is a quantity value that is economically relevant.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559
+move to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "economic value"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
 Class: OEO_00140039
 
     Annotations: 
@@ -1141,6 +1464,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00140081
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a process attribute that quantifies the output of an emission process. It can be calculated using the emission factor of that emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+has quantity value axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697
+moved to oeo-shared
+https://github.com/OpenEnergyPlatform/ontology/pull/956",
+        rdfs:label "emission value"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00000147,
+        OEO_00140002 some OEO_00010079
     
     
 Class: OEO_00240003
