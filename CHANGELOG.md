@@ -15,7 +15,18 @@ Here is a template for new release sections
 
 ```
 
-## [1.x.x] - 20XX-XX-XX
+```
+## [1.X.X] - 20XX-XX-XX - Unreleased
+
+### Added
+
+### Changed
+
+### Removed
+
+```
+
+## [1.8.0] - 2021-12-01
 
 ### Added
 - energy transformation unit, energy transfer (#895)
