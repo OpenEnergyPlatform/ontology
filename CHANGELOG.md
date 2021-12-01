@@ -6,8 +6,6 @@ and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v
 
 Here is a template for new release sections
 
-
-
 ```
 ## [1.X.X] - 20XX-XX-XX
 
@@ -16,6 +14,71 @@ Here is a template for new release sections
 ### Removed
 
 ```
+
+```
+## [1.X.X] - 20XX-XX-XX - Unreleased
+
+### Added
+
+### Changed
+
+### Removed
+
+```
+
+## [1.8.0] - 2021-12-01
+
+### Added
+- energy transformation unit, energy transfer (#895)
+- outage and subclasses, curtailment (#897)
+- levy, tax, feed in tariff, market and capacity premium (#909)
+- inflation rate, exchange rate, purchasing power parity, electricity price, system cost (#910)
+- carbon capture, carbon storage, carbon capture and storage, direct air capture (#911)
+- resolution and subclasses (#912)
+- fee, due, remuneration, LCOE (#913)
+- combined heat and power generation (CHP), CHP plant, CHP generating unit (#923)
+- eurostat synonyms (#924)
+- market revenue (#929)
+- solid, liquid and gaseous combustion fuels; liquid and gaseous fossil fuels; solid, liquid and gaseous renewable fuels; gaseous biofuel; solid, liquid and gaseous synthetic fuel (#931)
+- (specific) space requirement, km2, area per power unit, area value (#933)
+- gross electricity generation, net electricity generation, electricity generation process (#932)
+- power value (#935)
+- GovReg sector division, MMR sector division and further CRF (2006) sector individuals (#941, #944)
+- total emissions including/exluding LULUCF, international aviation, maritime navigation, multilateral operations and related sector individuals (#944)
+- liquid air production (#945)
+- net capacity factor (#946)
+- decarbonisation pathway, emission constraint (#951)
+- rotor diameter (#949)
+- energy use, non-energy use (#950)
+- variable (production) cost (#953)
+- power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
+- biomass, biomethane (#952)
+- variable (production) cost (#953)
+- conventional (energy carrier disposition), fossil energy (#955) 
+- carbon tax, social cost of carbon, carbon price (#956)
+- synthetic ammonia, power-to-ammonia process (#959)
+- renewable waste fuel, fossil waste fuel, renewable industrial waste fuel, fossil industrial waste fuel (#961)
+
+### Changed
+- energy converting device / component, unit of measurement (#895)
+- currency (#910)
+- has resolution and subclasses (#912)
+- reclassify of marine hydro energy classes (#921)
+- list of contributors (#927)
+- artificial object, nameplate capacity (#933)
+- declared net capacity, nameplate capacity, power rating (#928)
+- combustion fuel, solid fossil fuel, syngas (#931)
+- CRF sector individuals: energy industry; fugitive emissions; industrial processes and product use; agriculture; LULUCF; waste (#941)
+- European Union Emissions Trading System (#944)
+- liquid air (#945)
+- power-to-gas system, synthetic methane, synthetic hydrogen, fossil hydrogen (#954)
+- biofuel, biogas, charcoal, wood (#952)
+- renewable energy (#955)
+- PtL fuel (formerly: synthetic liquid fuel) (#957)
+- ammonia (#959)
+- industrial waste fuel, municipal waste fuel, renewable municipal waste fuel, fossil municipal waste fuel (previously: non renewable municipal waste fuel) (#961)
+
+### Removed
 
 ## [1.7.0] - 2021-10-04
 
@@ -301,7 +364,6 @@ Here is a template for new release sections
 - energy transformation (#77)
 - synthetic fuels and respective energy converting devices (#411)
 - process attribute (#386)
-
 
 ### Changed
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
