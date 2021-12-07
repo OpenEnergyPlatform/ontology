@@ -15,16 +15,14 @@ Here is a template for new release sections
 
 ```
 
-```
 ## [1.X.X] - 20XX-XX-XX - Unreleased
 
 ### Added
 
 ### Changed
+- biofuel (#965)
 
 ### Removed
-
-```
 
 ## [1.8.0] - 2021-12-01
 
