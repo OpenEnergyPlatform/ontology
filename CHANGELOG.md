@@ -18,10 +18,11 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX - Unreleased
 
 ### Added
-- quality memo item and CRF (2006) sector individuals with that quality (#966)
+- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
 
 ### Changed
 - biofuel (#965)
+- has quantity value, has global warming potential (#966)
 
 ### Removed
 
