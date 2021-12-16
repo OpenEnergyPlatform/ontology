@@ -19,10 +19,12 @@ Here is a template for new release sections
 
 ### Added
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
+- annual, monthly, weekly, daily, hourly (#972)
 
 ### Changed
 - biofuel (#965)
 - has quantity value, has global warming potential (#966)
+- resolution, has resolution and subclasses (#972)
 
 ### Removed
 
