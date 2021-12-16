@@ -28,6 +28,7 @@ Here is a template for new release sections
 - origin (#976)
 
 ### Removed
+- cost in oeo-social (#977)
 
 ## [1.8.0] - 2021-12-01
 
