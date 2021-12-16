@@ -25,6 +25,7 @@ Here is a template for new release sections
 - biofuel (#965)
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
+- origin (#976)
 
 ### Removed
 
