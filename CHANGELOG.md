@@ -26,6 +26,7 @@ Here is a template for new release sections
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
+- has bearer (#985)
 
 ### Removed
 - cost in oeo-social (#977)
