@@ -30,6 +30,7 @@ Here is a template for new release sections
 
 ### Removed
 - cost in oeo-social (#977)
+- organisation in oeo-social (#992)
 
 ## [1.8.0] - 2021-12-01
 
