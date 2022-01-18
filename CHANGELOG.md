@@ -21,12 +21,14 @@ Here is a template for new release sections
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
+- energy consumption value, gross national electricity consumption (#997)
 
 ### Changed
 - biofuel (#965)
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
+- duration, gross inland energy consumption (#997)
 
 ### Removed
 - cost in oeo-social (#977)
