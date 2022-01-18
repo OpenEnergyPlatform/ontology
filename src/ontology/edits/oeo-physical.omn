@@ -5961,7 +5961,7 @@ Class: OEO_00050016
 Class: OEO_00050017
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross inland energy consumption is the total consumption of energy in a spatial region (e.g. a country)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross inland energy consumption is a quantity value measuring the total consumption of energy in a spatial region (e.g. a country)."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "Gross inland energy consumption represents the quantity of energy necessary to satisfy inland consumption of the spatial region (e.g. a country) under consideration.
 
 Gross inland energy consumption covers:
@@ -5983,7 +5983,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
         rdfs:label "gross inland energy consumption"@en
     
     SubClassOf: 
-        OEO_00140039,
+        OEO_00000350,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
@@ -7105,6 +7105,28 @@ Class: OEO_00240016
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/890
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/946",
         rdfs:label "net capacity factor"
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00240018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross national electricity consumption is a quantity value measuring the consumption of electrical energy in a spatial region (e.g. a country), including gross electricity generation plus electricity imports, minus electricity exports. It is part of the gross inland energy consumption."@en,
+        rdfs:label "gross national electricity consumption"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00020056 some OEO_00240019,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00050017
+    
+    
+Class: OEO_00240019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption value is an energy quantity value that measures the energy consumption over a time duration."@en,
+        rdfs:label "energy consumption value"
     
     SubClassOf: 
         OEO_00000350
