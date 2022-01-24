@@ -27,6 +27,7 @@ Here is a template for new release sections
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
+- heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 
 ### Removed
 - cost in oeo-social (#977)
