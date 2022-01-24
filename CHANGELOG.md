@@ -29,6 +29,7 @@ Here is a template for new release sections
 - origin (#976)
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
+- peat (#1003)
 
 ### Removed
 - cost in oeo-social (#977)
