@@ -28,7 +28,7 @@ Here is a template for new release sections
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
-- duration, gross inland energy consumption (#997)
+- gross inland energy consumption (#997)
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
 
