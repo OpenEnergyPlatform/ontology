@@ -20,6 +20,7 @@ Here is a template for new release sections
 ### Added
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
 - annual, monthly, weekly, daily, hourly (#972)
+- mathematical expression (annotation property) (#990)
 
 ### Changed
 - biofuel (#965)
@@ -27,9 +28,11 @@ Here is a template for new release sections
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
 - has bearer (#985)
+- heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 
 ### Removed
 - cost in oeo-social (#977)
+- organisation in oeo-social (#992)
 
 ## [1.8.0] - 2021-12-01
 
