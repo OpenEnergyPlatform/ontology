@@ -32,7 +32,7 @@ Here is a template for new release sections
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
-- produces, has gross output, has net output (#1006)
+- produces, has gross output, has net output, axioms of various artificial objects (#1006)
 
 ### Removed
 - cost in oeo-social (#977)
