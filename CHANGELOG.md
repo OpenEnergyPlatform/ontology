@@ -32,7 +32,7 @@ Here is a template for new release sections
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
-- biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
+- air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
 
 ### Removed
 - cost in oeo-social (#977)
