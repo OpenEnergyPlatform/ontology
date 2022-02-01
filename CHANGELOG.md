@@ -23,6 +23,7 @@ Here is a template for new release sections
 - mathematical expression (annotation property) (#990)
 - forecast error (#1002)
 - gas mixture (#1009)
+- methodology (#1011)
 
 ### Changed
 - biofuel (#965)
@@ -33,6 +34,7 @@ Here is a template for new release sections
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
 - air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
+- study, methodical focus (#1011)
 
 ### Removed
 - cost in oeo-social (#977)
