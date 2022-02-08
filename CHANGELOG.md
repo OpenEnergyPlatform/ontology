@@ -22,6 +22,7 @@ Here is a template for new release sections
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
 - forecast error (#1002)
+- alternative term specific power to areal power density (#893)
 
 ### Changed
 - biofuel (#965)
