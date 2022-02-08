@@ -22,6 +22,8 @@ Here is a template for new release sections
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
 - forecast error (#1002)
+- gas mixture (#1009)
+- methodology (#1011)
 
 ### Changed
 - biofuel (#965)
@@ -32,6 +34,9 @@ Here is a template for new release sections
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
 - energy transformation and subclasses, energy transformation unit (#1010)
+- air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
+- study, methodical focus (#1011)
+- energy demand sector (#1015)
 
 ### Removed
 - cost in oeo-social (#977)
