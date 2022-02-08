@@ -24,6 +24,7 @@ Here is a template for new release sections
 - forecast error (#1002)
 - gas mixture (#1009)
 - methodology (#1011)
+- liquified natural gas (#1016)
 
 ### Changed
 - biofuel (#965)
