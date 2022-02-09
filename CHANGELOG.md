@@ -25,6 +25,7 @@ Here is a template for new release sections
 - gas mixture (#1009)
 - methodology (#1011)
 - liquified natural gas (#1016)
+- alternative term specific power to areal power density (#893)
 
 ### Changed
 - biofuel (#965)
