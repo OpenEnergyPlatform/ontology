@@ -25,6 +25,7 @@ Here is a template for new release sections
 - has energy participant, has energy input, has energy output (#1006)
 - gas mixture (#1009)
 - methodology (#1011)
+- liquified natural gas (#1016)
 
 ### Changed
 - biofuel (#965)
