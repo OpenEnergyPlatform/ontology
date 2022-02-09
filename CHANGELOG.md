@@ -37,6 +37,7 @@ Here is a template for new release sections
 - air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
+- duration / time span (#1017)
 
 ### Removed
 - cost in oeo-social (#977)
