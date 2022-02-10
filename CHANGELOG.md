@@ -26,6 +26,7 @@ Here is a template for new release sections
 - gas mixture (#1009)
 - methodology (#1011)
 - liquified natural gas (#1016)
+- alternative term specific power to areal power density (#893)
 
 ### Changed
 - biofuel (#965)
@@ -39,6 +40,7 @@ Here is a template for new release sections
 - air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
+- duration / time span (#1017)
 
 ### Removed
 - cost in oeo-social (#977)
