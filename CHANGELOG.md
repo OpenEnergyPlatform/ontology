@@ -18,6 +18,7 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX - Unreleased
 
 ### Added
+- alternative term specific power to areal power density (#893)
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
