@@ -26,7 +26,7 @@ Here is a template for new release sections
 - methodology (#1011)
 - liquified natural gas (#1016)
 - alternative term specific power to areal power density (#893)
-- gasoline fuel, diesel fuel, gasoline fuel role, diesel fuel role, gasoline engine, diesel engine (#1027)
+- gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
 
 ### Changed
 - biofuel (#965)
