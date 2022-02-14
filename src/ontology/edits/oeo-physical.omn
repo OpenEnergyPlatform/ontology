@@ -415,6 +415,88 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1016",
         OEO_00000292
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline fuel role is a fuel role that expresses that portion of matter can be used in a gasoline engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline fuel role"@en
+    
+    SubClassOf: 
+        OEO_00000001
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel fuel role is a fuel role that expresses that portion of matter can be used in a diesel engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel fuel role"@en
+    
+    SubClassOf: 
+        OEO_00000001
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline fuel is a combustion fuel that has a gasoline fuel role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000099
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>)
+    
+    SubClassOf: 
+        OEO_00000099
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel fuel is a combustion fuel that has a diesel fuel role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000099
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>)
+    
+    SubClassOf: 
+        OEO_00000099
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline engine is an internal combustion engine that uses a gasoline fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline engine"@en
+    
+    SubClassOf: 
+        OEO_00010029,
+        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel engine is an internal combustion engine that uses a diesel fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel engine"@en
+    
+    SubClassOf: 
+        OEO_00010029,
+        OEO_00000503 some OEO_00000131
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -1290,12 +1372,15 @@ Class: OEO_00000071
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Biodiesel is a portion of matter that has a liquid state of matter and can that has a diesel fuel role. It is produced from plants or animals and thus has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "redefine and change axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
         rdfs:label "biodiesel"
     
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030001,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000256
     
@@ -1373,7 +1458,11 @@ Class: OEO_00000075
         <http://purl.obolibrary.org/obo/IAO_0000115> "Biogasoline is a portion of matter that has a liquid state of matter and has a gasoline fuel role. It consists of bioethanol, biomethanol and products of these two substances. It is made from vegetable or animal material and thus has a biogenic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "bioethanol"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/439
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445
+
+redefine and change axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
         rdfs:comment "biopetrol",
         rdfs:label "biogasoline"@en
     
@@ -1381,7 +1470,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445",
         OEO_00000331,
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020001,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000256
     
