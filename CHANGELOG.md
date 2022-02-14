@@ -26,6 +26,7 @@ Here is a template for new release sections
 - methodology (#1011)
 - liquified natural gas (#1016)
 - alternative term specific power to areal power density (#893)
+- (operational) life time, construction time, decommissioning time (#1026)
 
 ### Changed
 - biofuel (#965)
