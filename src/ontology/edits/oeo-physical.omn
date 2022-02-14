@@ -388,6 +388,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838",
 ObjectProperty: owl:topObjectProperty
 
     
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas mixture is a portion of matter that is a composition of different kinds of portions of matter and that has a gaseous normal state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+        rdfs:label "gas mixture"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000529 value OEO_00000182
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010237>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquified natural gas (LNG) is natural gas that has a liquid state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "LNG",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1005
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1016",
+        rdfs:label "liquified natural gas"@en
+    
+    EquivalentTo: 
+        OEO_00000292
+         and (OEO_00000531 value OEO_00000256)
+    
+    SubClassOf: 
+        OEO_00000292
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -615,7 +645,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
 Class: OEO_00000011
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting component is an artificial object that is usually a discrete part of an energy transformation unit, e.g. a power generating unit, with the function of transforming or changing a certain type of energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting component is an artificial object that is usually a discrete part of an energy transformation unit with the function of transforming, transferring or changing a certain type of energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 
@@ -623,7 +653,10 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
 
 renaming to component
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+redefine
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010",
         rdfs:comment "formerly called energy transformer and formerly called energy converting device",
         rdfs:label "energy converting component"
     
@@ -1135,13 +1168,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
 Class: OEO_00000054
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is a portion of matter that consists of a composition of gases that forms the Earth's atmosphere."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Air is a gas mixture that forms the Earth's atmosphere."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Air_(disambiguation)",
         <http://purl.obolibrary.org/obo/IAO_0000233> "add origin
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684
 remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+make subclass of gas mixture and improve definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         rdfs:label "air",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1149,7 +1185,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_00002005"
     
     SubClassOf: 
-        OEO_00000331,
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
         OEO_00000501 some OEO_00000399,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000446,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
@@ -1313,9 +1349,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752",
 Class: OEO_00000074
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogas is a portion of matter produced by anaerobic digestion. It is a gas mixture consisting mainly of methane and carbon dioxide. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogas is a gas mixture produced by anaerobic digestion. It consists mainly of methane and carbon dioxide and can be used as fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
+improve definition and make subclass of gas mixture:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         rdfs:label "biogas",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1323,7 +1362,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000556"
     
     SubClassOf: 
-        OEO_00000331,
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
         (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000006)
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025),
         OEO_00000530 some OEO_00030001,
@@ -2312,11 +2351,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801",
 Class: OEO_00000263
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufactured coal based gas is a portion of matter that is gaseous and manufactured from coal. It is used as fossil fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufactured coal based gas is a gas mixture that is manufactured from coal. It is used as fossil fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "improve definition and make subclass of gas mixture:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         rdfs:label "manufactured coal based gas"
     
     SubClassOf: 
-        OEO_00000331,
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
         OEO_00000530 some OEO_00030002,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
@@ -2378,10 +2420,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
 Class: OEO_00000292
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas is a portion of matter which comprises gases occurring in underground deposits, whether liquefied or gaseous, consisting mainly of methane."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Natural gas is a gas mixture occurring in underground deposits, whether liquefied or gaseous, and consisting mainly of methane."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/430
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
+
+improve definition and make subclass of gas mixture and add disjoints:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         rdfs:comment "It includes both ‘non-associated’ gas originating from fields producing hydrocarbons only in gaseous form, and ‘associated’ gas produced in association with crude oil as well as methane recovered from coal mines (colliery gas) or from coal seams (coal seam gas).
 
 It does not include gases created by anaerobic digestion of biomass (e.g. municipal or sewage gas) nor gasworks gas.",
@@ -2392,7 +2438,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000552"
     
     SubClassOf: 
-        OEO_00000331,
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
         OEO_00000530 some OEO_00030002,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
@@ -3898,6 +3944,7 @@ Class: OEO_00010074
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An areal power density is a quantity value that indicates a certain power per area.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "specific power",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
         rdfs:label "areal power density"
@@ -3966,8 +4013,13 @@ Class: OEO_00010079
 Class: OEO_00010080
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar-steam-electric process is a solar energy transformation that converts solar energy into electrical energy. It has two partial processes: a solar thermal energy transformation and a steam power process.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add 'has physical output' some 'electrical energy'
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar-steam-electric process is a solar energy transformation that converts solar energy into electrical energy. It has two partial processes: a solar thermal energy transformation and a steam-electric process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add two has participant and redefine
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/938
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010
+
+add 'has physical output' some 'electrical energy'
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/668
@@ -3980,7 +4032,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
     
     SubClassOf: 
         OEO_00020046,
-        OEO_00000533 some OEO_00000139
+        OEO_00000533 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
     
 Class: OEO_00010081
@@ -4801,13 +4855,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
 Class: OEO_00010215
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomethane is a portion of matter produced from biogas by removing carbon dioxide. It is a gas mixture consisting mainly of methane. It has a gaseous state of matter an can be used as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biomethane is a gas mixture produced from biogas by removing carbon dioxide. It consists mainly of methane and can be used as fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
+
+improve definition and make subclass of gas mixture:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         rdfs:label "biomethane"@en
     
     SubClassOf: 
-        OEO_00000331,
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000025,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
@@ -5053,6 +5111,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
         OEO_00000533 some OEO_00000150,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000011,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
@@ -5242,13 +5304,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
 has input relation:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/668
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701
+delete has physical output relation:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010",
         rdfs:label "solar energy transformation"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000384,
-        OEO_00000533 some OEO_00000388
+        OEO_00000532 some OEO_00000384
     
     
 Class: OEO_00020047
@@ -5261,6 +5325,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
     
     SubClassOf: 
         OEO_00020046,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
+        OEO_00000533 some OEO_00000388,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000387
     
     
@@ -5274,6 +5342,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
     
     SubClassOf: 
         OEO_00020046,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
+        OEO_00000533 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032
     
     
@@ -5457,6 +5529,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
     
     SubClassOf: 
         OEO_00000061,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000011,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020104
     
@@ -6860,8 +6936,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/805",
 Class: OEO_00140160
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Syngas is a portion of matter which is a fuel gas mixture consisting primarily of hydrogen, carbon monoxide, and very often some carbon dioxide.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Syngas is a gas mixture consisting primarily of hydrogen, carbon monoxide, and very often carbon dioxide, that can be used as fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Syngas",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "improve definition and make subclass of gas mixture:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/786
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/805
 
@@ -6870,7 +6949,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931",
         rdfs:label "syngas"@en
     
     SubClassOf: 
-        OEO_00000331,
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000220,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
@@ -7219,6 +7298,9 @@ Individual: OEO_00000390
         OEO_00000395
     
     
+DisjointClasses: 
+    OEO_00000074,OEO_00000263,OEO_00000292,OEO_00010215,OEO_00140160
+
 DisjointClasses: 
     OEO_00000188,OEO_00000210,OEO_00000425
 

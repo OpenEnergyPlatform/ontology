@@ -23,6 +23,10 @@ Here is a template for new release sections
 - mathematical expression (annotation property) (#990)
 - energy consumption value, gross national electricity consumption (#997)
 - forecast error (#1002)
+- gas mixture (#1009)
+- methodology (#1011)
+- liquified natural gas (#1016)
+- alternative term specific power to areal power density (#893)
 
 ### Changed
 - biofuel (#965)
@@ -33,6 +37,11 @@ Here is a template for new release sections
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
+- energy transformation and subclasses, energy transformation unit (#1010)
+- air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
+- study, methodical focus (#1011)
+- energy demand sector (#1015)
+- duration / time span (#1017)
 
 
 ### Removed
