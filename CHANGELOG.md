@@ -40,7 +40,7 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
-- crude oil, gas diesel oil, gasoline, kerosene (#1024)
+- crude oil, gas diesel oil, gasoline, kerosene, oil power unit (#1024)
 
 ### Removed
 - cost in oeo-social (#977)
