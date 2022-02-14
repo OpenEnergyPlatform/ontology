@@ -37,6 +37,7 @@ Here is a template for new release sections
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
 - produces, has gross output, has net output, axioms of various artificial objects (#1006)
+- energy transformation and subclasses, energy transformation unit (#1010)
 - air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
