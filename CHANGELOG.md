@@ -42,6 +42,7 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
+- study, study report (#1025)
 
 
 ### Removed
