@@ -27,6 +27,8 @@ Here is a template for new release sections
 - methodology (#1011)
 - liquified natural gas (#1016)
 - alternative term specific power to areal power density (#893)
+- cost subclasses (#1022)
+- (operational) life time, construction time, decommissioning time (#1026)
 - gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
 
 ### Changed
