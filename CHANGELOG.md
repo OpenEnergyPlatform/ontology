@@ -21,6 +21,7 @@ Here is a template for new release sections
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
+- energy consumption value, gross national electricity consumption (#997)
 - forecast error (#1002)
 - gas mixture (#1009)
 - methodology (#1011)
@@ -32,6 +33,7 @@ Here is a template for new release sections
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
+- gross inland energy consumption (#997)
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
@@ -40,6 +42,7 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
+
 
 ### Removed
 - cost in oeo-social (#977)
