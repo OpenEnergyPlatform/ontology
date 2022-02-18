@@ -418,6 +418,122 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1016",
         OEO_00000292
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline fuel role is a fuel role that expresses that a portion of matter can be used in a gasoline engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline fuel role"@en
+    
+    SubClassOf: 
+        OEO_00000001
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel fuel role is a fuel role that expresses that a portion of matter can be used in a diesel engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel fuel role"@en
+    
+    SubClassOf: 
+        OEO_00000001
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline fuel is a combustion fuel that has a gasoline fuel role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000099
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>)
+    
+    SubClassOf: 
+        OEO_00000099
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel fuel is a combustion fuel that has a diesel fuel role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel fuel"@en
+    
+    EquivalentTo: 
+        OEO_00000099
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>)
+    
+    SubClassOf: 
+        OEO_00000099
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline engine is an internal combustion engine that uses a gasoline fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "gasoline motor",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline engine"@en
+    
+    SubClassOf: 
+        OEO_00010029,
+        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel engine is an internal combustion engine that uses a diesel fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "diesel motor",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel engine"@en
+    
+    SubClassOf: 
+        OEO_00010029,
+        OEO_00000503 some OEO_00000131
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010245>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline vehicle is an internal combustion vehicle that has only a gasoline engine as motor for propulsion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "gasoline vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000240,
+        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243> or (not (OEO_00010032)))
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010246>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel vehicle is an internal combustion vehicle that has only a diesel engine as motor for propulsion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "diesel vehicle"@en
+    
+    SubClassOf: 
+        OEO_00000240,
+        OEO_00000503 some OEO_00000131,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244> or (not (OEO_00010032)))
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -1292,14 +1408,16 @@ Class: OEO_00000070
 Class: OEO_00000071
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Biodiesel is a portion of matter that includes bio-diesel (a methyl-ester produced from vegetable or animal oil, of diesel quality), biodimethylether (dimethylether produced from biomass), Fischer-Tropsch (Fischer-Tropsch produced from biomass), cold extracted bio-oil (oil produced from oil seed through mechanical processing only) and all other liquid biofuels which are added to, blended with or used straight as transport diesel.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biodiesel is a portion of matter that has a liquid state of matter and has a diesel fuel role. It is produced from plants or animals and thus has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "redefine and change axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
         rdfs:label "biodiesel"
     
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030001,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000256
     
@@ -1374,19 +1492,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000075
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogasoline is a portion of matter that includes bioethanol (ethanol produced from biomass and/or the biodegradable fraction of waste), biomethanol (methanol produced from biomass and/or the biodegradable fraction of waste), bioETBE (ethyl-tertio-butyl-ether produced on the basis of bioethanol; the percentage by volume of bioETBE that is calculated as biofuel is 47 %) and bioMTBE (methyl-tertio-butyl-ether produced on the basis of biomethanol: the percentage by volume of bioMTBE that is calculated as biofuel is 36 %)",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Bioethanol"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogasoline is a portion of matter that has a liquid state of matter and has a gasoline fuel role. It consists of bioethanol, biomethanol and products of these two substances. It is made from vegetable or animal material and thus has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "bioethanol"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/439
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445",
-        rdfs:label "biogasoline",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/445
+
+redefine and change axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:comment "biopetrol",
         rdfs:label "biogasoline"@en
     
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020001,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         OEO_00000529 value OEO_00000256
     
@@ -1599,11 +1720,14 @@ Class: OEO_00000131
         <http://purl.obolibrary.org/obo/IAO_0000115> "Diesel fuel is gas diesel oil used on-road for diesel compression ignition (cars, trucks, etc.), usually of low sulphur content."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "TransportDiesel"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "diesel fuel",
-        rdfs:label "diesel fuel"@en
+        <http://purl.obolibrary.org/obo/IAO_0000233> "relabel and add axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+        rdfs:label "fossil diesel fuel"@en
     
     SubClassOf: 
-        OEO_00000181
+        OEO_00000181,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>
     
     
 Class: OEO_00000132
@@ -1833,10 +1957,14 @@ Class: OEO_00000183
         <http://purl.obolibrary.org/obo/IAO_0000115> "Gasoline (American English) or petrol (British English) is an oil and petroleum product in the form of a transparent petroleum-derived liquid that is used primarily as a fuel in spark-ignited internal combustion engines. It consists mostly of organic compounds obtained by the fractional distillation of petroleum, enhanced with a variety of additives.",
         <http://purl.obolibrary.org/obo/IAO_0000115> "https://en.wikipedia.org/w/index.php?title=Gasoline&oldid=867948640",
         <http://purl.obolibrary.org/obo/IAO_0000118> "petrol",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "relabel and add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
         rdfs:label "gasoline"
     
     SubClassOf: 
         OEO_00000309,
+        <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>,
         OEO_00000529 value OEO_00000256
     
     
