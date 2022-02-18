@@ -21,18 +21,23 @@ Here is a template for new release sections
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
+- energy consumption value, gross national electricity consumption (#997)
 - forecast error (#1002)
 - has energy participant, has energy input, has energy output (#1006)
 - gas mixture (#1009)
 - methodology (#1011)
 - liquified natural gas (#1016)
 - alternative term specific power to areal power density (#893)
+- cost subclasses (#1022)
+- (operational) life time, construction time, decommissioning time (#1026)
+- gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
 
 ### Changed
 - biofuel (#965)
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
+- gross inland energy consumption (#997)
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
 - peat (#1003)
@@ -42,10 +47,15 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
+- crude oil, gas diesel oil, gasoline, kerosene, oil power unit (#1024)
+- study, study report (#1025)
+- biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
+- natural gas, coal, crude oil, peat, wood (#1033)
 
 ### Removed
 - cost in oeo-social (#977)
 - organisation in oeo-social (#992)
+- oil and petroleum products (#1024)
 
 ## [1.8.0] - 2021-12-01
 
