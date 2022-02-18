@@ -1020,11 +1020,14 @@ Class: OEO_00010117
         <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a physical, produced item over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money or real estate.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+add relation to monetary price
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "good role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00020180 some OEO_00040003
     
     
 Class: OEO_00020011
@@ -1121,12 +1124,13 @@ Class: OEO_00020063
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
 moved to oeo-shared
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/956
-add axiom to emission quantity value
+add axiom to emission quantity value and emission certificate price
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "emission certificate"
     
     SubClassOf: 
         OEO_00020015,
+        OEO_00020180 some OEO_00020154,
         OEO_00140002 some OEO_00010079
     
     
@@ -1281,11 +1285,14 @@ Class: OEO_00020154
         <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
+add relation to emission certificate
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "emission certificate price"
     
     SubClassOf: 
-        OEO_00040003
+        OEO_00040003,
+        OEO_00020179 some OEO_00020063
     
     
 Class: OEO_00020155
@@ -1448,12 +1455,15 @@ Class: OEO_00040003
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/331
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/640
 move to oeo-shared
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
+add relation to good
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "monetary price"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice"
     
     SubClassOf: 
         OEO_00140012,
+        OEO_00020179 some OEO_00010117,
         OEO_00040010 some OEO_00040004
     
     
