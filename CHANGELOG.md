@@ -45,6 +45,7 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
+- crude oil, gas diesel oil, gasoline, kerosene, oil power unit (#1024)
 - study, study report (#1025)
 - biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
 - natural gas, coal, crude oil, peat, wood (#1033)
@@ -52,6 +53,7 @@ Here is a template for new release sections
 ### Removed
 - cost in oeo-social (#977)
 - organisation in oeo-social (#992)
+- oil and petroleum products (#1024)
 
 ## [1.8.0] - 2021-12-01
 
