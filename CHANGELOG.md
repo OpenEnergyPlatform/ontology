@@ -47,6 +47,7 @@ Here is a template for new release sections
 - duration / time span (#1017)
 - study, study report (#1025)
 - biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
+- natural gas, coal, crude oil, peat, wood (#1033)
 
 ### Removed
 - cost in oeo-social (#977)
