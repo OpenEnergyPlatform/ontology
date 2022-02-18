@@ -29,7 +29,7 @@ Here is a template for new release sections
 - alternative term specific power to areal power density (#893)
 - cost subclasses (#1022)
 - (operational) life time, construction time, decommissioning time (#1026)
-
+- gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
 
 ### Changed
 - biofuel (#965)
@@ -46,7 +46,7 @@ Here is a template for new release sections
 - energy demand sector (#1015)
 - duration / time span (#1017)
 - study, study report (#1025)
-
+- biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
 
 ### Removed
 - cost in oeo-social (#977)
