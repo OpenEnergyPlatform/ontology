@@ -46,7 +46,7 @@ Here is a template for new release sections
 - energy demand sector (#1015)
 - duration / time span (#1017)
 - study, study report (#1025)
-
+- natural gas, coal, crude oil, peat (#1033)
 
 ### Removed
 - cost in oeo-social (#977)
