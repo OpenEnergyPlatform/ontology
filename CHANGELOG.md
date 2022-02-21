@@ -47,6 +47,7 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
+- market participant, market exchange (#1019)
 - crude oil, gas diesel oil, gasoline, kerosene, oil power unit (#1024)
 - study, study report (#1025)
 - biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
