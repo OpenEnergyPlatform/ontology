@@ -29,6 +29,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     Annotations: 
@@ -328,6 +331,7 @@ ObjectProperty: OEO_00000506
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity / model and its author."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The construct 'has auther' some ('has role' some author) is necessary, because has author has the range has role some author (PR https://github.com/OpenEnergyPlatform/ontology/pull/871). That is an idependent continuant, i.e. a person, that takes over writing a text and as such the role of an author.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
         rdfs:label "has author"
@@ -1081,6 +1085,7 @@ Class: OEO_00020011
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to investigate something."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The construct 'has funding source' some ('has role' some funder) is necessary, because has funding source has the range has role some funder. This range comes from issue https://github.com/OpenEnergyPlatform/ontology/issues/850 : funding source is some kind of independent continuant, i.e. a organisation or person, that does something special (giving money). So it is anything that has role some funder.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
 add covers-relation (oeo-model)
@@ -1090,7 +1095,9 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/862
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869
 add axiom (study report)
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/971
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011
+add etitor note
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1025"@en,
         rdfs:label "study"@en
     
     SubClassOf: 
@@ -1108,7 +1115,9 @@ Class: OEO_00020012
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study report is a report that is the output from some study."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
+add etitor note
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1025"@en,
         rdfs:label "study report"@en
     
     SubClassOf: 
@@ -1341,6 +1350,57 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
     SubClassOf: 
         OEO_00040009,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
+    
+    
+Class: OEO_00020175
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A life time is a time span of an artificial object that measures the time during which the artificial object exists.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
+        rdfs:label "life time"
+    
+    SubClassOf: 
+        OEO_00030035,
+        OEO_00020056 some OEO_00000061
+    
+    
+Class: OEO_00020176
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A construction time is a time span that measures the time that is needed to construct an artificial object.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
+        rdfs:label "construction time"
+    
+    SubClassOf: 
+        OEO_00030035,
+        OEO_00020056 some OEO_00000061
+    
+    
+Class: OEO_00020177
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A decommissioning time is a time span that measures the time that is needed to decommission an artificial object.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
+        rdfs:label "decommissioning time"
+    
+    SubClassOf: 
+        OEO_00030035,
+        OEO_00020056 some OEO_00000061
+    
+    
+Class: OEO_00020178
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An operational life time is the lifetime of an artificial object. It is measured from the end of construction time to the start of decommissioning time.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
+        rdfs:label "operational life time"
+    
+    SubClassOf: 
+        OEO_00020175
     
     
 Class: OEO_00030015
