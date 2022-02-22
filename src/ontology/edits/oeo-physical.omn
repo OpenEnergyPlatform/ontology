@@ -70,6 +70,21 @@ AnnotationProperty: rdfs:label
 Datatype: rdf:PlainLiteral
 
     
+ObjectProperty: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010238>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is used in the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+        rdfs:label "has energy participant"@en
+    
+    Domain: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
     
@@ -343,6 +358,42 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
+ObjectProperty: OEO_00010234
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an input of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+        rdfs:label "has energy input"@en
+    
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010238>
+    
+    Domain: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
+ObjectProperty: OEO_00010235
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an ouput of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+        rdfs:label "has energy output"@en
+    
+    SubPropertyOf: 
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010238>
+    
+    Domain: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
 ObjectProperty: OEO_00020056
 
     
@@ -358,13 +409,20 @@ ObjectProperty: OEO_00140164
 ObjectProperty: OEO_00140175
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "p has gross output c iff: p has physical output c, and c is the total amount of energy generated during the process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has gross output c iff: p has energy output c, and c is the total amount of energy generated during the process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838
+
+make subproperty of 'has energy output' and add domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "has gross output"@en
     
     SubPropertyOf: 
-        OEO_00000533
+        OEO_00010235
+    
+    Domain: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
     
     Range: 
         OEO_00000150
@@ -373,13 +431,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838",
 ObjectProperty: OEO_00140176
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "p has net output c iff: p has physical output c, and c is the amount of energy delivered to the consumer or fed into a supply grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has net output c iff: p has energy output c, and c is the amount of energy delivered to the consumer or fed into a supply grid.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838
+
+make subproperty of 'has energy output' and add domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "has net output"@en
     
     SubPropertyOf: 
-        OEO_00000533
+        OEO_00010235
+    
+    Domain: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
     
     Range: 
         OEO_00000150
@@ -740,8 +805,12 @@ Class: OEO_00000009
         OEO_00000212,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000139
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782
+
+change uses energy axiom to 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+        OEO_00010235 some OEO_00000139
     
     
 Class: OEO_00000010
@@ -755,7 +824,7 @@ Class: OEO_00000010
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00230020
+        OEO_00010234 some OEO_00230020
     
     
 Class: OEO_00000011
@@ -1067,6 +1136,9 @@ Class: OEO_00000032
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A PV cell is a generator that converts light into electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change produces axiom to 'has energy output'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "PV cell"
     
     SubClassOf: 
@@ -1074,7 +1146,7 @@ Class: OEO_00000032
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000384,
+        OEO_00010235 some OEO_00000384,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
@@ -1107,23 +1179,30 @@ Class: OEO_00000034
         OEO_00000334,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782
+
+change uses energy axiom to 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+        OEO_00010234 some OEO_00000384
     
     
 Class: OEO_00000035
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal power unit is a solar power unit that has solar thermal collectors as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "solar thermal power unit"
     
     SubClassOf: 
         OEO_00000034,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000387,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
+        OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000387
     
     
 Class: OEO_00000036
@@ -1251,7 +1330,11 @@ Class: OEO_00000044
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind energy converting unit is a power generating unit that uses wind energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "wind turbine",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Issue: https://github.com/OpenEnergyPlatform/ontology/issues/753
-Pull Request: https://github.com/OpenEnergyPlatform/ontology/pull/754",
+Pull Request: https://github.com/OpenEnergyPlatform/ontology/pull/754
+
+change uses energy axiom to 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "wind energy converting unit"
     
     SubClassOf: 
@@ -1259,7 +1342,7 @@ Pull Request: https://github.com/OpenEnergyPlatform/ontology/pull/754",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000446,
+        OEO_00010234 some OEO_00000446,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -1818,12 +1901,16 @@ Class: OEO_00000146
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electric vehicle (abbreviated as EV) is a vehicle that uses one or more electric motors for propulsion."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "EV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
+
+change uses energy axiom to 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "electric vehicle"
     
     SubClassOf: 
         OEO_00010023,
-        OEO_00000503 some OEO_00000139,
+        OEO_00010234 some OEO_00000139,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028
     
     
@@ -2010,9 +2097,13 @@ Class: OEO_00000185
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine is a turbine that converts chemical energy into rotational energy using a continous internal combustion process. Hence it is also called combustion turbine."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Combustion turbine",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "combustion turbine",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "gas turbine"
     
     SubClassOf: 
@@ -2030,7 +2121,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00240000
+        OEO_00010235 some OEO_00240000
     
     
 Class: OEO_00000186
@@ -2053,16 +2144,20 @@ Class: OEO_00000188
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 axiom
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "generator"
     
     SubClassOf: 
         OEO_00000011,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000334,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000334
     
     
 Class: OEO_00000189
@@ -2211,7 +2306,11 @@ Class: OEO_00000210
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "heater"
     
     SubClassOf: 
@@ -2219,7 +2318,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/993",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
+        OEO_00010235 some OEO_00000207
     
     
 Class: OEO_00000211
@@ -2966,18 +3065,22 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
 
 subclass of energy transformation unit
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "power generating unit"
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107
     
     
 Class: OEO_00000335
@@ -3025,16 +3128,19 @@ Class: OEO_00000348
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A PV panel (photovoltaic panel) is a solar power unit absorbing sunlight as a source of energy to generate electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:comment "A photovoltaic (PV) module is a packaged, connected assembly of typically 6x10 photovoltaic solar cells. Photovoltaic modules constitute the photovoltaic array of a photovoltaic system that generates and supplies solar electricity in commercial and residential applications.",
         rdfs:label "PV panel"
     
     SubClassOf: 
         OEO_00000034,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000032,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000032
     
     
 Class: OEO_00000350
@@ -3156,6 +3262,9 @@ Class: OEO_00000387
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal collector is a heater that absorbs solar radiation to convert it into heat."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "solar thermal collector"
     
     SubClassOf: 
@@ -3163,15 +3272,15 @@ Class: OEO_00000387
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000384,
+        OEO_00010234 some OEO_00000384,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020047,
+        OEO_00010235 some OEO_00000388,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000388
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020047
     
     
 Class: OEO_00000388
@@ -3239,6 +3348,9 @@ Class: OEO_00000396
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A steam turbine is a turbine that converts heat from pressurised steam into rotational energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "change produces energy and uses energy axioms to 'has energy output' and ' has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "steam turbine"
     
     SubClassOf: 
@@ -3246,15 +3358,11 @@ Class: OEO_00000396
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000207,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
         OEO_00000503 some OEO_00110001,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050020,
+        OEO_00010234 some OEO_00000207,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
@@ -3262,7 +3370,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00240000
+        OEO_00010235 some OEO_00240000,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050020
     
     
 Class: OEO_00000399
@@ -3334,7 +3446,11 @@ Class: OEO_00000425
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A turbine is an energy converting component that converts energy from a moving fluid flow into rotational energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "turbine"
     
     SubClassOf: 
@@ -3349,7 +3465,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00240000
+        OEO_00010235 some OEO_00240000
     
     
 Class: OEO_00000429
@@ -3459,7 +3575,11 @@ Class: OEO_00000442
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758
+
+change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "water turbine"
     
     SubClassOf: 
@@ -3467,11 +3587,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000503 some OEO_00000218,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110004,
+        OEO_00010234 some OEO_00000218,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
@@ -3479,7 +3595,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00240000
+        OEO_00010235 some OEO_00240000,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110004
     
     
 Class: OEO_00000446
@@ -3525,7 +3645,11 @@ Class: OEO_00000448
         <http://purl.obolibrary.org/obo/IAO_0000115> "A wind rotor (or wind turbine) is a turbine that converts the wind's kinetic energy into rotational energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "wind turbine",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
+
+change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "wind rotor"
     
     SubClassOf: 
@@ -3533,12 +3657,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000446,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043,
-        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144,
+        OEO_00010234 some OEO_00000446,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
@@ -3546,7 +3665,12 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00240000
+        OEO_00010235 some OEO_00240000,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043,
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144
     
     
 Class: OEO_00000449
@@ -3866,7 +3990,11 @@ Class: OEO_00010021
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "water electrolyser"
     
     SubClassOf: 
@@ -3874,15 +4002,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/993",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000139,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
         OEO_00000503 some OEO_00000441,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000007,
+        OEO_00010234 some OEO_00000139,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
+        OEO_00010235 some OEO_00000007,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
@@ -3915,7 +4043,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/805"
 Class: OEO_00010023
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artifical object that is used for transporting people or goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artificial object that is used for transporting people or goods.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
         rdfs:label "vehicle"@en,
@@ -3983,12 +4111,16 @@ Class: OEO_00010027
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+change uses energy axiom to 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "electric motor"@en
     
     SubClassOf: 
         OEO_00010032,
-        OEO_00000503 some OEO_00000139
+        OEO_00010234 some OEO_00000139
     
     
 Class: OEO_00010028
@@ -4064,7 +4196,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "motor",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -4076,7 +4212,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00230020
+        OEO_00010235 some OEO_00230020
     
     
 Class: OEO_00010072
@@ -4265,7 +4401,7 @@ Class: OEO_00010087
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river power plant is a hydro power plant that uses the momentarily available hydro energy of a river. It has either no reservoir or just has a small one with a maximum of 24 hours of storage.",
-        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river power plant and an hydro storage power plant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river power plant and a hydro storage power plant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
         rdfs:label "run of river power plant"@en
@@ -4280,7 +4416,7 @@ Class: OEO_00010088
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro storage power plant is a hydro power plant that uses the available hydro energy of a stationary water storage.",
-        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river power plant and an hydro storage power plant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "The distinction between a run of river power plant and a hydro storage power plant is important for modelling, but in reality not so easy. The chosen distinction follows the document: European Network of Transmission System Operators for Electricity (ENTSO-E): Hydropower modelling – New database complementing PECD, V.1.0, 12 December 2019, https://www.entsoe.eu/Documents/SDC%20documents/MAF/2019/Hydropower_Modelling_New_database_and_methodology.pdf",
         <http://purl.obolibrary.org/obo/IAO_0000118> "storage power plant",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
@@ -4314,7 +4450,11 @@ Class: OEO_00010090
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+change produces energy axiom to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "pump"@en
     
     SubClassOf: 
@@ -4326,7 +4466,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/769"
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some 
+        OEO_00010235 some 
             (OEO_00020045 or OEO_00230020)
     
     
@@ -5775,7 +5915,7 @@ Class: OEO_00020136
 Class: OEO_00020137
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An operational space requirement is space requirement that covers the area needed by an artifical object in order to operate properly.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An operational space requirement is space requirement that covers the area needed by an artificial object in order to operate properly.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
         rdfs:label "operational space requirement"
@@ -5787,7 +5927,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
 Class: OEO_00020139
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement for construction is space requirement of an artifical object that covers the area needed in order to contruct an artificial object.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement for construction is space requirement of an artificial object that covers the area needed in order to contruct an artificial object.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
         rdfs:label "space requirement for construction"
@@ -5951,7 +6091,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
 Class: OEO_00030005
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "synthetic is an origin of portions of matter created artifically by a chemical process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "synthetic is an origin of portions of matter created artificially by a chemical process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
         rdfs:label "synthetic"
@@ -6409,7 +6549,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"@en,
 Class: OEO_00110005
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric energy transformation is an hydro energy transformation that converts hydro energy to electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric energy transformation is a hydro energy transformation that converts hydro energy to electrical energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
         rdfs:label "hydroelectric energy transformation"@en
@@ -6906,7 +7046,11 @@ Class: OEO_00140102
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/734
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "heat exchanger"@en
     
     SubClassOf: 
@@ -6914,12 +7058,12 @@ https://github.com/OpenEnergyPlatform/ontology/pull/993",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000207,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101,
+        OEO_00010234 some OEO_00000207,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
+        OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101
     
     
 Class: OEO_00140104
@@ -7298,14 +7442,18 @@ Class: OEO_00240010
         <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is a power generating unit that produces electrical energy and thermal energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "co-generating power unit"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
+
+change produces energy axioms to 'has energy output':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "combined heat and power generating unit"
     
     SubClassOf: 
         OEO_00000334,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009,
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000139,
-        <http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000207
+        OEO_00010235 some OEO_00000139,
+        OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
     
     
 Class: OEO_00240011
