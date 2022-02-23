@@ -55,6 +55,7 @@ Here is a template for new release sections
 - biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
 - natural gas, coal, crude oil, peat, wood (#1033)
 - editor note on gasoline-related classed (#1037)
+- has institution (#1042)
 
 ### Removed
 - cost in oeo-social (#977)
