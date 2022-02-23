@@ -27,6 +27,8 @@ Here is a template for new release sections
 - gas mixture (#1009)
 - methodology (#1011)
 - liquified natural gas (#1016)
+- alternative term specific power to areal power density (#1018)
+- domains and range for axioms from Relation Ontology (#1019)
 - alternative term specific power to areal power density (#893)
 - cost subclasses (#1022)
 - (operational) life time, construction time, decommissioning time (#1026)
@@ -48,10 +50,13 @@ Here is a template for new release sections
 - study, methodical focus (#1011)
 - energy demand sector (#1015)
 - duration / time span (#1017)
+- market participant, market exchange (#1019)
 - crude oil, gas diesel oil, gasoline, kerosene, oil power unit (#1024)
 - study, study report (#1025)
 - biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
 - natural gas, coal, crude oil, peat, wood (#1033)
+- editor note on gasoline-related classed (#1037)
+- has institution (#1042)
 
 ### Removed
 - cost in oeo-social (#977)
