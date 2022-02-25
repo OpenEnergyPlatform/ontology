@@ -412,9 +412,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
 ObjectProperty: OEO_00000510
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity and the institution in which it was created."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity or model and the institution in which it was created."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)
+
+improve definition:
+https://github.com/OpenEnergyPlatform/ontology/issues/1038
+https://github.com/OpenEnergyPlatform/ontology/pull/1042",
         rdfs:label "has institution"
     
     SubPropertyOf: 
@@ -571,6 +575,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/710",
     
     InverseOf: 
         OEO_00140002
+    
+    
+ObjectProperty: OEO_00020179
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that relates an economic value to a related entity in reality.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/958
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
+        rdfs:label "economic value of"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    
+ObjectProperty: OEO_00020180
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an entity and an economic value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/958
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
+        rdfs:label "has economic value"
+    
+    SubPropertyOf: 
+        OEO_00010231
     
     
 ObjectProperty: OEO_00040010
@@ -1083,11 +1111,14 @@ Class: OEO_00010117
         <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a physical, produced item over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money or real estate.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+add relation to monetary price
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "good role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00020180 some OEO_00040003
     
     
 Class: OEO_00020011
@@ -1154,7 +1185,8 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         rdfs:label "licence"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        OEO_00140002 some OEO_00010079
     
     
 Class: OEO_00020039
@@ -1182,11 +1214,15 @@ Class: OEO_00020063
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
 moved to oeo-shared
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/956",
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/956
+add axiom to emission quantity value and emission certificate price
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "emission certificate"
     
     SubClassOf: 
-        OEO_00020015
+        OEO_00020015,
+        OEO_00020180 some OEO_00020154,
+        OEO_00140002 some OEO_00010079
     
     
 Class: OEO_00020066
@@ -1340,24 +1376,30 @@ Class: OEO_00020154
         <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
+add relation to emission certificate
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "emission certificate price"
     
     SubClassOf: 
-        OEO_00040003
+        OEO_00040003,
+        OEO_00020179 some OEO_00020063
     
     
 Class: OEO_00020155
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon is the cost the society bears for an emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon emission is the cost the society bears for a greenhouse gas emission value.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "social cost of CO2",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
-        rdfs:label "social cost of carbon"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
+add axiom to emission value, add new parent class and relable
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
+        rdfs:label "social cost of carbon emission"
     
     SubClassOf: 
-        OEO_00040009,
+        OEO_00020181,
+        OEO_00020179 some OEO_00140081,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
     
     
@@ -1410,6 +1452,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
     
     SubClassOf: 
         OEO_00020175
+    
+    
+Class: OEO_00020181
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of emission is the cost the society bears for an emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/958
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
+        rdfs:label "social cost of emission"
+    
+    SubClassOf: 
+        OEO_00040009,
+        OEO_00020179 some OEO_00140081,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
     
     
 Class: OEO_00030015
@@ -1504,12 +1560,15 @@ Class: OEO_00040003
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/331
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/640
 move to oeo-shared
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
+add relation to good
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "monetary price"@en,
         rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice"
     
     SubClassOf: 
         OEO_00140012,
+        OEO_00020179 some OEO_00010117,
         OEO_00040010 some OEO_00040004
     
     
@@ -1707,12 +1766,15 @@ has quantity value axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697
 moved to oeo-shared
-https://github.com/OpenEnergyPlatform/ontology/pull/956",
+https://github.com/OpenEnergyPlatform/ontology/pull/956
+add axiom to social cost of carbon
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "emission value"@en
     
     SubClassOf: 
         OEO_00030019,
         OEO_00000502 some OEO_00000147,
+        OEO_00020180 some OEO_00020181,
         OEO_00140002 some OEO_00010079
     
     

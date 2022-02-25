@@ -33,6 +33,7 @@ Here is a template for new release sections
 - cost subclasses (#1022)
 - (operational) life time, construction time, decommissioning time (#1026)
 - gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
+- has economic value / economic value of, social cost of emission (#1034)
 
 ### Changed
 - biofuel (#965)
@@ -56,6 +57,7 @@ Here is a template for new release sections
 - natural gas, coal, crude oil, peat, wood (#1033)
 - editor note on gasoline-related classed (#1037)
 - use has energy input / output for energy transformation and subclasses (#1041)
+- has institution (#1042)
 
 ### Removed
 - cost in oeo-social (#977)
