@@ -58,6 +58,7 @@ Here is a template for new release sections
 - editor note on gasoline-related classed (#1037)
 - use has energy input / output for energy transformation and subclasses (#1041)
 - has institution (#1042)
+- marine current energy transformation (#1023)
 
 ### Removed
 - cost in oeo-social (#977)
