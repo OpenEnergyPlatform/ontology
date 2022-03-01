@@ -15,7 +15,7 @@ Here is a template for new release sections
 
 ```
 
-## [1.X.X] - 20XX-XX-XX - Unreleased
+## [1.9.0] - 2022-03-01 
 
 ### Added
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
