@@ -15,16 +15,55 @@ Here is a template for new release sections
 
 ```
 
-```
-## [1.X.X] - 20XX-XX-XX - Unreleased
+## [1.9.0] - 2022-03-01 
 
 ### Added
+- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
+- annual, monthly, weekly, daily, hourly (#972)
+- mathematical expression (annotation property) (#990)
+- energy consumption value, gross national electricity consumption (#997)
+- forecast error (#1002)
+- has energy participant, has energy input, has energy output (#1006)
+- gas mixture (#1009)
+- methodology (#1011)
+- liquified natural gas (#1016)
+- alternative term specific power to areal power density (#1018)
+- domains and range for axioms from Relation Ontology (#1019)
+- alternative term specific power to areal power density (#893)
+- cost subclasses (#1022)
+- (operational) life time, construction time, decommissioning time (#1026)
+- gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
+- has economic value / economic value of, social cost of emission (#1034)
 
 ### Changed
+- biofuel (#965)
+- has quantity value, has global warming potential (#966)
+- resolution, has resolution and subclasses (#972)
+- origin (#976)
+- gross inland energy consumption (#997)
+- heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
+- has state of matter, has normal state of matter (#1001)
+- peat (#1003)
+- produces, has gross output, has net output, axioms of various artificial objects (#1006)
+- energy transformation and subclasses, energy transformation unit (#1010)
+- air, biogas, biomethane, manufactured coal based gas, natural gas, syngas (#1009)
+- study, methodical focus (#1011)
+- energy demand sector (#1015)
+- duration / time span (#1017)
+- market participant, market exchange (#1019)
+- crude oil, gas diesel oil, gasoline, kerosene, oil power unit (#1024)
+- study, study report (#1025)
+- biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
+- natural gas, coal, crude oil, peat, wood (#1033)
+- editor note on gasoline-related classed (#1037)
+- use has energy input / output for energy transformation and subclasses (#1041)
+- has institution (#1042)
+- axiom in marine current energy transformation (#1044)
 
 ### Removed
-
-```
+- cost in oeo-social (#977)
+- organisation in oeo-social (#992)
+- oil and petroleum products (#1024)
 
 ## [1.8.0] - 2021-12-01
 
