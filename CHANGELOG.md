@@ -11,6 +11,8 @@ Here is a template for new release sections
 
 ### Added
 ### Changed
+- renewable waste fuel (and subclasses) -> biogenic waste fuel (and subclasses) (#1048)
+
 ### Removed
 
 ```
