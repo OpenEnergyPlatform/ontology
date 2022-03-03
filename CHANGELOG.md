@@ -11,8 +11,7 @@ Here is a template for new release sections
 
 ### Added
 ### Changed
-- renewable waste fuel (and subclasses) -> biogenic waste fuel (and subclasses); biofuel (#1048)
-- synthetic, geogenic; renewable disjoint with conventional; fossil disjoint with biogenic (#1048)
+- biofuel and biogenic waste fuel (subclasses); origins (#1048)
 
 ### Removed
 
