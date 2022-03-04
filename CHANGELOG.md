@@ -19,6 +19,8 @@ Here is a template for new release sections
 
 ### Added
 ### Changed
+- biofuel and biogenic waste fuel (subclasses); origins (#1048)
+
 ### Removed
 
 ## [1.9.0] - 2022-03-01 
