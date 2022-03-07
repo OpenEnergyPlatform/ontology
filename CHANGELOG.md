@@ -21,6 +21,7 @@ Here is a template for new release sections
 ### Changed
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
+- is energy participant of and subrelations (#1057)
 
 ### Removed
 
