@@ -10,17 +10,17 @@ To execute the annotator easily:
     - os
     - shutil
 
-2. Download the robot.jar from http://robot.obolibrary.org/
+3. Download the robot.jar from http://robot.obolibrary.org/
    
-2. Save the robot.jar in the ontology-project in the path: ontology/src/scripts/btma
+4. Save the robot.jar in the ontology-project in the path: ontology/src/scripts/btma
    
-2. Make sure that jars are executable on your system
+5. Make sure that jars are executable on your system
    
-3. Open the Terminal/Console
+6. Open the Terminal/Console
 
 7. Navigate to the path: ontology/src/scripts/btma
 
-4. Use the following command lines 
+8. Use the following command lines 
    in the console:
 
    python3 annotator.py
