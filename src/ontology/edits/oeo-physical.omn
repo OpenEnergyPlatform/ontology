@@ -405,6 +405,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 ObjectProperty: OEO_00020056
 
     
+ObjectProperty: OEO_00020182
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is used in the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy participant of"
+    
+    Domain: 
+        OEO_00000150
+    
+    Range: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+ObjectProperty: OEO_00020183
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an input of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy input to"
+    
+    SubPropertyOf: 
+        OEO_00020182
+    
+    
+ObjectProperty: OEO_00020184
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an ouput of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy output of"
+    
+    SubPropertyOf: 
+        OEO_00020182
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -2394,7 +2433,9 @@ Class: OEO_00000218
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy is kinetic energy of moving liquid water which can result directly from its potential energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "hydro energy"
     
     SubClassOf: 
@@ -2406,7 +2447,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110002
+        OEO_00020182 some OEO_00110002
     
     
 Class: OEO_00000219
@@ -3668,7 +3709,9 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
 remove disposition renewable fuel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732
+add and change axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "wind energy"
     
     SubClassOf: 
@@ -3678,7 +3721,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000043
+        OEO_00020182 some OEO_00000043,
+        OEO_00020183 some OEO_00020043
     
     
 Class: OEO_00000447
@@ -4624,7 +4668,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+add and change axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine current energy"@en
     
     SubClassOf: 
@@ -4633,7 +4680,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010107
+        OEO_00020182 some OEO_00010107,
+        OEO_00020183 some OEO_00010098
     
     
 Class: OEO_00010098
@@ -4684,12 +4732,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine tidal energy"@en
     
     SubClassOf: 
         OEO_00020087,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010101
+        OEO_00020182 some OEO_00010101
     
     
 Class: OEO_00010101
@@ -4714,7 +4765,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine wave energy"@en
     
     SubClassOf: 
@@ -4723,7 +4777,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010106
+        OEO_00020182 some OEO_00010106
     
     
 Class: OEO_00010103
