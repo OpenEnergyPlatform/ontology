@@ -30,12 +30,14 @@ src_path = path.Path(__file__).parent.parent.parent.absolute()
 script_path = path.Path(__file__).parent.parent.absolute()
 
 omn_path = src_path / 'ontology' / 'edits'              
-csv_path = src_path / 'ontology' / 'exports'          
+csv_path = script_path / 'btma' / 'data'          
+db_path = script_path / 'btma' / 'database'
+exp_path = script_path / 'btma' / 'exports'
 owl_path = src_path / 'ontology' / 'imports'
 robot_path = script_path / 'btma' / 'robot.jar'
 
-def extract_IDs(module : list) -> list:
-    file = open(csv_path / (module + '.csv'))
+def extract_IDs(path) -> list:
+    file = open(path)
     CSVreader = csv.reader(file)
     ids = []
     for row in CSVreader:
@@ -63,81 +65,101 @@ def main():
         mod = omn_path / "{m}.omn".format(m=module)
         exp = csv_path / "{m}.csv".format(m=module)
         sp.call('java -jar {jar} export --input {m} \
-                                    --header "{c}" \
-                                    --export {e}'.format(jar=robot_path,
-                                                           m=mod, 
-                                                           c=col, 
-                                                           e=exp))
-        tmp = extract_IDs(module)
+                                        --header "{c}" \
+                                        --export {e}'.format(jar=robot_path,
+                                                             m=mod, 
+                                                             c=col, 
+                                                             e=exp))
+        tmp = extract_IDs(csv_path / (module + '.csv'))
         ids = ids.union(set(tmp))
         ids_per_module[i] = tmp
 
     ids = list(ids)
 
-    # Create overview about IRIs and there belonging
+    # Compare new data with database
 
-    print('Finding belongings...')
-
-    belonging = ids.copy()
-
-    for (i,id) in enumerate(ids):
-        for (j,module_ids) in enumerate(ids_per_module):
-            if id in module_ids:
-                belonging[i] = modules[j]
-                break
-
-    # Create the CSV template with the help of the overview
-
-    print('Creating template...')
+    old_ids_per_module = [_,_,_,_]
+    try:
+        for i, module in enumerate(modules):
+            old_ids_per_module[i] = extract_IDs(db_path / (module + '.csv'))
+    except:
+        pass
         
-    belongs_to_module = list(zip(ids, belonging))
+    if old_ids_per_module != ids_per_module:
 
-    csv_table = [["ID","belongs to module"],
-                 ["ID","AI OEO:belongs_to_module"]]
+        # Create overview about IRIs and there belonging
 
-    csv_table_per_module = (csv_table, csv_table, csv_table, csv_table)
+        print('Finding belongings...')
 
-    for (ids, belonging) in belongs_to_module:
-        if belonging == module[0]:
-            csv_table_per_module[0].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-        elif belonging == module[1]:
-            csv_table_per_module[1].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-        elif belonging == module[2]:
-            csv_table_per_module[2].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-        else:
-            csv_table_per_module[3].append(['OEO:' + ids, ontology_iri + '/' + belonging])
+        belonging = ids.copy()
+
+        for (i,id) in enumerate(ids):
+            for (j,module_ids) in enumerate(ids_per_module):
+                if id in module_ids:
+                    belonging[i] = modules[j]
+                    break
+
+        # Create the CSV template with the help of the overview
+
+        print('Creating template...')
         
-    print('Creating ontologies...')
+        belongs_to_module = list(zip(ids, belonging))
 
-    for (i, csv_table) in enumerate(csv_table_per_module):
-        f = open(script_path / 'btma' / "template.csv", 'w', newline='')
+        csv_table = [["ID","belongs to module"],
+                     ["ID","AI OEO:belongs_to_module"]]
 
-        writer = csv.writer(f)
+        csv_table_per_module = (csv_table, csv_table, csv_table, csv_table)
 
-        writer.writerows(csv_table)
+        for (ids, belonging) in belongs_to_module:
+            if belonging == module[0]:
+                csv_table_per_module[0].append(['OEO:' + ids, ontology_iri + '/' + belonging])
+            elif belonging == module[1]:
+                csv_table_per_module[1].append(['OEO:' + ids, ontology_iri + '/' + belonging])
+            elif belonging == module[2]:
+                csv_table_per_module[2].append(['OEO:' + ids, ontology_iri + '/' + belonging])
+            else:
+                csv_table_per_module[3].append(['OEO:' + ids, ontology_iri + '/' + belonging])
+        
+        print('Creating ontologies...')
 
-        f.close()
+        for (i, csv_table) in enumerate(csv_table_per_module):
+            f = open(script_path / 'btma' / "template.csv", 'w', newline='')
 
-        # Create OWL/XML with help of the CSV template
+            writer = csv.writer(f)
+
+            writer.writerows(csv_table)
+
+            f.close()
+
+            # Create OWL/XML with help of the CSV template
     
-        sp.call('java -jar {jar} template --template {template} \
-                                          --prefix "OEO: {iri}_" \
-                                          --output {out}'.format(jar=robot_path,
-                                                                 template=script_path / 'btma' / 'template.csv',
-                                                                 iri=ontology_iri,
-                                                                 out=csv_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
+            sp.call('java -jar {jar} template --template {template} \
+                                              --prefix "OEO: {iri}_" \
+                                              --output {out}'.format(jar=robot_path,
+                                                                     template=script_path / 'btma' / 'template.csv',
+                                                                     iri=ontology_iri,
+                                                                     out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
     
-        os.remove(script_path / 'btma' / "template.csv")
+            os.remove(script_path / 'btma' / "template.csv")
 
-        sp.call('java -jar {jar} merge --input {out} \
-                                       --input {inp} \
-                                       --output {out}'.format(jar=robot_path,
-                                                              out=omn_path / (modules[i] + '.omn'),
-                                                              inp=csv_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
+            sp.call('java -jar {jar} merge --input {out} \
+                                           --input {inp} \
+                                           --output {out}'.format(jar=robot_path,
+                                                                  out=omn_path / (modules[i] + '.omn'),
+                                                                  inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
     
-    # MERGE .OMN with oeo-modules
+        # MERGE .OMN with oeo-modules
+        try:
+            sh.rmtree(db_path)
+        except:
+            pass
 
-    sh.rmtree(csv_path)
+        os.rename(csv_path, script_path / 'btma' / 'database')
+        
+        sh.rmtree(exp_path)
+
+    else:
+        print('Annotations are up to date.')
 
     print('Finished!')
     
