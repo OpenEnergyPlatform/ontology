@@ -154,12 +154,14 @@ def main():
         except:
             pass
 
-        os.rename(csv_path, script_path / 'btma' / 'database')
+        os.rename(csv_path, db_path)
         
         sh.rmtree(exp_path)
 
     else:
         print('Annotations are up to date.')
+        
+        sh.rmtree(csv_path)
 
     print('Finished!')
     
