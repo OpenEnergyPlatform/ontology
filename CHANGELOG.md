@@ -18,10 +18,13 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX  - unreleased
 
 ### Added
+- abbreviation (#1075)
+
 ### Changed
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
+- acronym (#1075)
 
 ### Removed
 
