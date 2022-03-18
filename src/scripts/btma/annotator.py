@@ -18,7 +18,7 @@ import shutil as sh
 
 # Load 'static' values
 
-ontology_iri = 'http://openenergy-platform.org/ontology/oeo/OEO'
+ontology_iri = 'http://openenergy-platform.org/ontology/oeo'
 
 modules = ['oeo-shared',
            'oeo-physical',
@@ -27,7 +27,7 @@ modules = ['oeo-shared',
 
 
 src_path = path.Path(__file__).parent.parent.parent.absolute()
-script_path = path.Path(__file__).parent.parent.absolute()
+script_path = src_path / 'scripts'
 
 omn_path = src_path / 'ontology' / 'edits'              
 csv_path = script_path / 'btma' / 'data'          
@@ -35,6 +35,10 @@ db_path = script_path / 'btma' / 'database'
 exp_path = script_path / 'btma' / 'exports'
 owl_path = src_path / 'ontology' / 'imports'
 robot_path = script_path / 'btma' / 'robot.jar'
+pre_path = script_path / 'btma' / 'prefixes'
+
+def export_prefixes():
+    pass
 
 def extract_IDs(path) -> list:
     file = open(path)
@@ -42,7 +46,7 @@ def extract_IDs(path) -> list:
     ids = []
     for row in CSVreader:
         t = row[0].split('_')
-        if t[0] == ontology_iri: 
+        if t[0] == ontology_iri + '/OEO': 
             ids.append(t[1])
     return ids
 
@@ -56,20 +60,34 @@ def main():
     _ = None
     ids_per_module = [_,_,_,_]
 
+    prefixes = []
+    
+    oeo = open(src_path / 'ontology' / 'oeo.omn')
+
+    lines = oeo.readlines()
+    
+    for line in lines:
+        if line.startswith('Prefix:'):
+            prefixes.append(line[8:-1])
+        else:
+            break
+        
+
     # Load necessary IRIs of the different ontology-modules
 
     print('Loading ontologies...')
     ids : set = set([])
     for (i,module) in enumerate(modules):
-        mod = ""
         mod = omn_path / "{m}.omn".format(m=module)
         exp = csv_path / "{m}.csv".format(m=module)
+        
         sp.call('java -jar {jar} export --input {m} \
                                         --header "{c}" \
                                         --export {e}'.format(jar=robot_path,
                                                              m=mod, 
                                                              c=col, 
                                                              e=exp))
+        
         tmp = extract_IDs(csv_path / (module + '.csv'))
         ids = ids.union(set(tmp))
         ids_per_module[i] = tmp
@@ -111,16 +129,26 @@ def main():
         csv_table_per_module = (csv_table, csv_table, csv_table, csv_table)
 
         for (ids, belonging) in belongs_to_module:
-            if belonging == module[0]:
+            if belonging == modules[0]:
                 csv_table_per_module[0].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-            elif belonging == module[1]:
+            elif belonging == modules[1]:
                 csv_table_per_module[1].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-            elif belonging == module[2]:
+            elif belonging == modules[2]:
                 csv_table_per_module[2].append(['OEO:' + ids, ontology_iri + '/' + belonging])
             else:
                 csv_table_per_module[3].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-        
+                
         print('Creating ontologies...')
+
+        prefix_adder = ""
+
+        #! Error occurs if you include OEO Prefix as empty Prefix -> "Could not load prefix '' for <ontology_iri<"
+        for prefix in prefixes[1:]:
+            prefix_ = ""
+            for c in prefix:
+                if c != '<' and c != '>':
+                    prefix_ += c
+            prefix_adder += '--add-prefix \"{p}\" '.format(p=prefix_)
 
         for (i, csv_table) in enumerate(csv_table_per_module):
             f = open(script_path / 'btma' / "template.csv", 'w', newline='')
@@ -132,22 +160,33 @@ def main():
             f.close()
 
             # Create OWL/XML with help of the CSV template
-    
+            
             sp.call('java -jar {jar} template --template {template} \
-                                              --prefix "OEO: {iri}_" \
+                                              --add-prefix \"OEO: {iri}OEO_\" \
+                                              {pre} \
                                               --output {out}'.format(jar=robot_path,
                                                                      template=script_path / 'btma' / 'template.csv',
-                                                                     iri=ontology_iri,
+                                                                     iri=ontology_iri + '/',
+                                                                     pre=prefix_adder[-1],
                                                                      out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
-    
-            os.remove(script_path / 'btma' / "template.csv")
 
+            os.remove(script_path / 'btma' / "template.csv")
+            
+            #! ontology Prefix as 'oeo:' instead of ':'
             sp.call('java -jar {jar} merge --input {out} \
                                            --input {inp} \
-                                           --output {out}'.format(jar=robot_path,
-                                                                  out=omn_path / (modules[i] + '.omn'),
-                                                                  inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
-    
+                                           --add-prefix \"oeo: {iri}\" \
+                                           {pre} \
+                                           --output {out_} \
+                                           --include-annotations true'.format(jar=robot_path,
+                                                                              out=omn_path / (modules[i] + '.omn'),
+                                                                              out_=omn_path / (modules[i] + '-new.omn'),
+                                                                              inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i]),
+                                                                              pre=prefix_adder[:-1],
+                                                                              iri=ontology_iri + '/'))
+            
+            # sp.call
+            
         # MERGE .OMN with oeo-modules
         try:
             sh.rmtree(db_path)
