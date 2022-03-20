@@ -170,12 +170,11 @@ def main():
                                                                      pre=prefix_adder[-1],
                                                                      out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
 
-            os.remove(script_path / 'btma' / "template.csv")
             
             #! ontology Prefix as 'oeo:' instead of ':'
             sp.call('java -jar {jar} merge --input {out} \
                                            --input {inp} \
-                                           --add-prefix \"oeo: {iri}\" \
+                                           --add-prefix \"OEO: {iri}OEO_\" \
                                            {pre} \
                                            --output {out_} \
                                            --include-annotations true'.format(jar=robot_path,
@@ -186,7 +185,8 @@ def main():
                                                                               iri=ontology_iri + '/'))
             
             # sp.call
-            
+        os.remove(script_path / 'btma' / "template.csv")
+    
         # MERGE .OMN with oeo-modules
         try:
             sh.rmtree(db_path)
