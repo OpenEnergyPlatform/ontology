@@ -19,6 +19,7 @@ Here is a template for new release sections
 
 ### Added
 - discount rate (#1077)
+- protected area (#1078)
 
 ### Changed
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
