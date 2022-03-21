@@ -18,6 +18,8 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX  - unreleased
 
 ### Added
+- discount rate
+
 ### Changed
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
