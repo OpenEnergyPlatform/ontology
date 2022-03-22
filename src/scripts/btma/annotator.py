@@ -168,6 +168,7 @@ def main():
                                                                      iri=ontology_iri + '/',
                                                                      pre=prefix_adder[-1],
                                                                      out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
+        for i in range(len(csv_table_per_module)):
             # Valid Call
             """
             sp.call('java -jar {jar} merge --input {out} \
