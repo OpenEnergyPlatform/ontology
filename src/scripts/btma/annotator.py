@@ -142,7 +142,6 @@ def main():
 
         prefix_adder = ""
 
-        #! Error occurs if you include OEO Prefix as empty Prefix -> "Could not load prefix '' for <ontology_iri<"
         for prefix in prefixes[1:]:
             prefix_ = ""
             for c in prefix:
@@ -169,9 +168,20 @@ def main():
                                                                      iri=ontology_iri + '/',
                                                                      pre=prefix_adder[-1],
                                                                      out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
-
-            
-            #! ontology Prefix as 'oeo:' instead of ':'
+            # Valid Call
+            """
+            sp.call('java -jar {jar} merge --input {out} \
+                                           --input {inp} \
+                                           --add-prefix \"OEO: {iri}OEO_\" \
+                                           {pre} \
+                                           --output {out} \
+                                           --include-annotations true'.format(jar=robot_path,
+                                                                              out=omn_path / (modules[i] + '.omn'),
+                                                                              inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i]),
+                                                                              pre=prefix_adder[:-1],
+                                                                              iri=ontology_iri + '/'))
+            """
+            # Test Call
             sp.call('java -jar {jar} merge --input {out} \
                                            --input {inp} \
                                            --add-prefix \"OEO: {iri}OEO_\" \
