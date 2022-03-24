@@ -22,6 +22,7 @@ Here is a template for new release sections
 - protected area (#1078)
 
 ### Changed
+- has bearer (#985)
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
@@ -53,7 +54,6 @@ Here is a template for new release sections
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
 - origin (#976)
-- has bearer (#985)
 - gross inland energy consumption (#997)
 - heat exchanger, heater, turbine, water electrolyser, steam reformer, motor, pump, power rating, nameplate capacity (#993)
 - has state of matter, has normal state of matter (#1001)
