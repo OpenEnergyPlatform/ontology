@@ -315,9 +315,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1001",
 ObjectProperty: OEO_00000532
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical input c iff: p has input c, and c is a material entity or energy"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical input c iff: p has input c, and c is a material entity"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/664
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
+
+restrict range to 'material entity':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "has physical input"
     
     SubPropertyOf: 
@@ -331,15 +335,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     Range: 
-        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000040>
+        <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 ObjectProperty: OEO_00000533
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical output c iff: p has output c, and c is a material entity or energy"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has physical output c iff: p has output c, and c is a material entity"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
-pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
+pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716
+
+restrict range to 'material entity':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "has physical output"
     
     SubPropertyOf: 
@@ -355,7 +363,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
-        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000040>
+        <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 ObjectProperty: OEO_00010234
@@ -396,6 +404,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
     
 ObjectProperty: OEO_00020056
 
+    
+ObjectProperty: OEO_00020182
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is used in the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy participant of"
+    
+    Domain: 
+        OEO_00000150
+    
+    Range: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+ObjectProperty: OEO_00020183
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an input of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy input to"
+    
+    SubPropertyOf: 
+        OEO_00020182
+    
+    
+ObjectProperty: OEO_00020184
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an ouput of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy output of"
+    
+    SubPropertyOf: 
+        OEO_00020182
+    
     
 ObjectProperty: OEO_00040010
 
@@ -906,6 +953,9 @@ Class: OEO_00000014
     
     SubClassOf: 
         OEO_00000530 some OEO_00030003
+    
+    DisjointWith: 
+        OEO_00000072
     
     
 Class: OEO_00000016
@@ -1533,6 +1583,7 @@ Class: OEO_00000072
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a combustion fuel that has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "biogenic combustion fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/396
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400
 
@@ -1544,7 +1595,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
 
 fix subclassof:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965
+
+alternative term and disjoint:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "biofuel"
     
     EquivalentTo: 
@@ -1556,6 +1611,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020086
+    
+    DisjointWith: 
+        OEO_00000014
     
     
 Class: OEO_00000073
@@ -2375,7 +2433,9 @@ Class: OEO_00000218
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy is kinetic energy of moving liquid water which can result directly from its potential energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "hydro energy"
     
     SubClassOf: 
@@ -2387,7 +2447,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110002
+        OEO_00020182 some OEO_00110002
     
     
 Class: OEO_00000219
@@ -3180,18 +3240,23 @@ Class: OEO_00000350
 Class: OEO_00000356
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable municipal waste fuel is an municipal waste fuel that has a renewable origin."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogenic municipal waste fuel is a municipal waste fuel that has a biogenic origin."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable municipal waste fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "remove origin 
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
 
 new definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
-        rdfs:label "renewable municipal waste fuel"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961
+
+rename class and change axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+        rdfs:label "biogenic municipal waste fuel"
     
     EquivalentTo: 
         OEO_00000290
-         and (OEO_00000530 some OEO_00030004)
+         and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
         OEO_00000290,
@@ -3644,7 +3709,9 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
 remove disposition renewable fuel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732
+add and change axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "wind energy"
     
     SubClassOf: 
@@ -3654,7 +3721,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000043
+        OEO_00020182 some OEO_00000043,
+        OEO_00020183 some OEO_00020043
     
     
 Class: OEO_00000447
@@ -4353,7 +4421,11 @@ add 'has physical output' some 'electrical energy'
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/668
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "solar-steam-electric process"@en
     
     EquivalentTo: 
@@ -4362,7 +4434,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701",
     
     SubClassOf: 
         OEO_00020046,
-        OEO_00000533 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
@@ -4372,12 +4444,16 @@ Class: OEO_00010081
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar chemical energy transformation is a solar energy transformation that converts solar energy into chemical energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/673
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/735",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/735
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "solar chemical energy transformation"@en
     
     SubClassOf: 
         OEO_00020046,
-        OEO_00000533 some OEO_00000007
+        OEO_00010235 some OEO_00000007
     
     
 Class: OEO_00010084
@@ -4592,7 +4668,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+add and change axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine current energy"@en
     
     SubClassOf: 
@@ -4601,7 +4680,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010107
+        OEO_00020182 some OEO_00010107,
+        OEO_00020183 some OEO_00010098
     
     
 Class: OEO_00010098
@@ -4609,13 +4689,18 @@ Class: OEO_00010098
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Marine current energy transformation is a hydroelectric energy transformation that converts marine current energy to electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+remove wrong axiom 
+https://github.com/OpenEnergyPlatform/ontology/pull/1044",
         rdfs:label "marine current energy transformation"@en
     
     SubClassOf: 
         OEO_00110005,
-        OEO_00000532 some OEO_00010097,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        OEO_00010234 some OEO_00010097,
         <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010107
     
     
@@ -4624,12 +4709,16 @@ Class: OEO_00010099
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Marine tidal energy transformation is a hydroelectric energy transformation that converts kinetic energy from tidal flow to electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "marine tidal energy transformation"@en
     
     SubClassOf: 
         OEO_00110005,
-        OEO_00000532 some OEO_00010100,
+        OEO_00010234 some OEO_00010100,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
         <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010101
     
@@ -4643,12 +4732,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine tidal energy"@en
     
     SubClassOf: 
         OEO_00020087,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010101
+        OEO_00020182 some OEO_00010101
     
     
 Class: OEO_00010101
@@ -4673,7 +4765,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine wave energy"@en
     
     SubClassOf: 
@@ -4682,7 +4777,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010106
+        OEO_00020182 some OEO_00010106
     
     
 Class: OEO_00010103
@@ -4690,12 +4785,16 @@ Class: OEO_00010103
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Marine wave energy transformation is a hydroelectric energy transformation that converts marine wave energy to electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "marine wave energy transformation"@en
     
     SubClassOf: 
         OEO_00110005,
-        OEO_00000532 some OEO_00010102,
+        OEO_00010234 some OEO_00010102,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
         <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010106
     
@@ -5216,33 +5315,41 @@ Class: OEO_00010216
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power-to-gas",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "power-to-gas process"@en
     
     SubClassOf: 
         OEO_00020003,
-        (OEO_00000532 some OEO_00000139)
-         and (OEO_00000532 some OEO_00000331),
-        (OEO_00000533 some OEO_00000007)
-         and (OEO_00000533 some OEO_00010155)
+        (OEO_00000532 some OEO_00000331)
+         and (OEO_00010234 some OEO_00000139),
+        (OEO_00000533 some OEO_00010155)
+         and (OEO_00010235 some OEO_00000007)
     
     
 Class: OEO_00010217
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane process is a power-to-gas process that has electrical energy, water and carbon dioxide as physical input and synthetic methane carrying chemical energy as physical output. It consists of two sub processes: an electrolysis process and a methanation.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane process is a power-to-gas process that has electrical energy as energy input, water and carbon dioxide as physical input and synthetic methane carrying chemical energy as physical output. It consists of two sub processes: an electrolysis process and a methanation.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to methane",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "power-to-methane process"@en
     
     SubClassOf: 
         OEO_00010216,
         (OEO_00000532 some OEO_00000006)
-         and (OEO_00000532 some OEO_00000139)
-         and (OEO_00000532 some OEO_00000441),
-        (OEO_00000533 some OEO_00000007)
-         and (OEO_00000533 some OEO_00010018),
+         and (OEO_00000532 some OEO_00000441)
+         and (OEO_00010234 some OEO_00000139),
+        (OEO_00000533 some OEO_00010018)
+         and (OEO_00010235 some OEO_00000007),
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010219,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010220
     
@@ -5266,16 +5373,20 @@ Class: OEO_00010219
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A water electrolysis process is an energy transformation that uses an electric current to decompose water into hydrogen and oxygen gas. Electrical energy is converted into chemical energy (and waste heat).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "water electrolysis process"@en
     
     SubClassOf: 
         OEO_00020003,
-        (OEO_00000532 some OEO_00000139)
-         and (OEO_00000532 some OEO_00000441),
-        (OEO_00000533 some OEO_00000007)
-         and (OEO_00000533 some OEO_00000220)
-         and (OEO_00000533 some OEO_00010218),
+        (OEO_00000532 some OEO_00000441)
+         and (OEO_00010234 some OEO_00000139),
+        (OEO_00000533 some OEO_00000220)
+         and (OEO_00000533 some OEO_00010218)
+         and (OEO_00010235 some OEO_00000007),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010021
     
     
@@ -5328,14 +5439,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
 Class: OEO_00010223
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable waste fuel is a waste fuel that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogenic waste fuel is a waste fuel that has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable waste fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
-        rdfs:label "renewable waste fuel"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961
+
+rename class and change axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+        rdfs:label "biogenic waste fuel"@en
     
     EquivalentTo: 
         OEO_00000439
-         and (OEO_00000530 some OEO_00030004)
+         and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
         OEO_00000439
@@ -5360,14 +5476,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
 Class: OEO_00010225
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable industrial waste fuel is an industrial waste fuel that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogenic industrial waste fuel is an industrial waste fuel that has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable industrial waste fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
-        rdfs:label "renewable industrial waste fuel"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961
+
+rename class and change axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+        rdfs:label "biogenic industrial waste fuel"@en
     
     EquivalentTo: 
         OEO_00000226
-         and (OEO_00000530 some OEO_00030004)
+         and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
         OEO_00000226
@@ -5435,16 +5556,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/690
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
 
 add relation to energy transformation unit
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "energy transformation"@en
     
     SubClassOf: 
         OEO_00000419,
-        OEO_00000532 some OEO_00000150,
+        OEO_00010234 some OEO_00000150,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 some OEO_00000150,
+        OEO_00010235 some OEO_00000150,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
@@ -5605,11 +5730,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000446,
+        OEO_00010234 some OEO_00000446,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044
     
     
@@ -5641,12 +5766,16 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/668
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701
 delete has physical output relation:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "solar energy transformation"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000384
+        OEO_00010234 some OEO_00000384
     
     
 Class: OEO_00020047
@@ -5654,7 +5783,11 @@ Class: OEO_00020047
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar thermal energy transformation is a solar energy transformation that converts solar energy into thermal energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "solar thermal energy transformation"
     
     SubClassOf: 
@@ -5662,7 +5795,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
-        OEO_00000533 some OEO_00000388,
+        OEO_00010235 some OEO_00000388,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000387
     
     
@@ -5671,7 +5804,11 @@ Class: OEO_00020048
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Photovoltaic energy transformation is a solar energy transformation that converts solar energy into electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "photovoltaic energy transformation"
     
     SubClassOf: 
@@ -5679,7 +5816,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
-        OEO_00000533 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032
     
     
@@ -5720,16 +5857,20 @@ Class: OEO_00020054
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear energy transformation is an energy transformation that converts nuclear binding energy to thermal energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/692
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/698
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "nuclear energy transformation"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000300,
+        OEO_00010234 some OEO_00000300,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 some OEO_00000207
+        OEO_00010235 some OEO_00000207
     
     
 Class: OEO_00020058
@@ -5752,12 +5893,16 @@ Class: OEO_00020059
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Geothermal heat transfer is a heat transfer from the earth crust to a transportable material entity. E.g. a liquid or gas.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/727
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/739
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "geothermal heat transfer"
     
     SubClassOf: 
         OEO_00140101,
-        OEO_00000532 only OEO_00000191
+        OEO_00010234 only OEO_00000191
     
     
 Class: OEO_00020066
@@ -6009,6 +6154,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
     SubClassOf: 
         OEO_00000316
     
+    DisjointWith: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048"
+        OEO_00030004
+    
     
 Class: OEO_00020148
 
@@ -6065,30 +6216,41 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
     SubClassOf: 
         OEO_00000316
     
+    DisjointWith: 
+        OEO_00030002
+    
     
 Class: OEO_00030002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "fossil is an origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is an geogenic origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.
 
 In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Update definition and add disjoint:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "fossil"
     
     SubClassOf: 
         OEO_00030003
     
     DisjointWith: 
-        OEO_00030004
+        OEO_00030001
     
     
 Class: OEO_00030003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter or energies that are the result of geological processes.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
+
+Update definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "geogenic"
     
     SubClassOf: 
@@ -6116,19 +6278,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
         OEO_00000316
     
     DisjointWith: 
-        OEO_00030002
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048"
+        OEO_00020147
     
     
 Class: OEO_00030005
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "synthetic is an origin of portions of matter created artificially by a chemical process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic is an anthropogenic origin of portions of matter created artificially by a chemical process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Make subclass of anthropogenic:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "synthetic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00030000
     
     
 Class: OEO_00030015
@@ -6482,16 +6651,20 @@ Class: OEO_00050020
         <http://purl.obolibrary.org/obo/IAO_0000115> "A steam-electric process is an energy transformation that converts thermal energy to electrical energy. A steam turbine and an electro motive generator are participating in a steam-electric process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/659
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/691
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041"@en,
         rdfs:label "steam-electric process"@en
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000207,
+        OEO_00010234 some OEO_00000207,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
@@ -6569,12 +6742,16 @@ Class: OEO_00110004
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy transformation is an energy transformation that converts hydro energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041"@en,
         rdfs:label "hydro energy transformation"@en
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000218
+        OEO_00010234 some OEO_00000218
     
     
 Class: OEO_00110005
@@ -6582,7 +6759,11 @@ Class: OEO_00110005
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydroelectric energy transformation is a hydro energy transformation that converts hydro energy to electrical energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041"@en,
         rdfs:label "hydroelectric energy transformation"@en
     
     SubClassOf: 
@@ -6590,7 +6771,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 some OEO_00000139
+        OEO_00010235 some OEO_00000139
     
     
 Class: OEO_00140000
@@ -7053,8 +7234,13 @@ Class: OEO_00140101
         <http://purl.obolibrary.org/obo/IAO_0000115> "Heat transfer is an energy transfer with thermal energy as the only input and thermal energy as the only output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/730
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/733
+
 subclass of energy transfer
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "heat transfer"@en
     
     SubClassOf: 
@@ -7062,11 +7248,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000532 only OEO_00000207,
+        OEO_00010234 only OEO_00000207,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00000533 only OEO_00000207
+        OEO_00010235 only OEO_00000207
     
     
 Class: OEO_00140102
@@ -7129,12 +7315,16 @@ Class: OEO_00140106
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Ambient thermal energy transfer is a heat transfer from the ambient air to a transportable material entity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "ambient thermal energy transfer"@en
     
     SubClassOf: 
         OEO_00140101,
-        OEO_00000532 some OEO_00000056,
+        OEO_00010234 some OEO_00000056,
         <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
@@ -7458,13 +7648,17 @@ Class: OEO_00240009
         <http://purl.obolibrary.org/obo/IAO_0000118> "CHP"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "co-generation"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "combined heat and power generation"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000533 some OEO_00000139,
-        OEO_00000533 some OEO_00000207
+        OEO_00010235 some OEO_00000139,
+        OEO_00010235 some OEO_00000207
     
     
 Class: OEO_00240010
@@ -7534,18 +7728,22 @@ Class: OEO_00240014
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity generation process is an energy transformation that has electrical energy as physical output."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932
+
+change 'has physical input / output' axioms to 'has energy input / output':
+https://github.com/OpenEnergyPlatform/ontology/issues/994
+https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "electricity generation process"
     
     EquivalentTo: 
         OEO_00020003
-         and (OEO_00000533 some OEO_00000139)
+         and (OEO_00010235 some OEO_00000139)
     
     SubClassOf: 
         OEO_00020003,
         OEO_00000500 some OEO_00240012,
         OEO_00000500 some OEO_00240013,
-        OEO_00000533 some OEO_00000139
+        OEO_00010235 some OEO_00000139
     
     
 Class: OEO_00240015

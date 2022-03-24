@@ -15,7 +15,20 @@ Here is a template for new release sections
 
 ```
 
-## [1.X.X] - 20XX-XX-XX - Unreleased
+## [1.X.X] - 20XX-XX-XX  - unreleased
+
+### Added
+- discount rate (#1077)
+- protected area (#1078)
+
+### Changed
+- biofuel and biogenic waste fuel (subclasses); origins (#1048)
+- license (#1063)
+- is energy participant of and subrelations (#1057)
+
+### Removed
+
+## [1.9.0] - 2022-03-01 
 
 ### Added
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
@@ -33,6 +46,7 @@ Here is a template for new release sections
 - cost subclasses (#1022)
 - (operational) life time, construction time, decommissioning time (#1026)
 - gasoline/diesel fuel, gasoline/diesel fuel role, gasoline/diesel engine, gasoline/diesel vehicle (#1027)
+- has economic value / economic value of, social cost of emission (#1034)
 
 ### Changed
 - biofuel (#965)
@@ -56,7 +70,9 @@ Here is a template for new release sections
 - biogasoline, biodiesel, (fossil) gasoline/diesel fuel (#1027)
 - natural gas, coal, crude oil, peat, wood (#1033)
 - editor note on gasoline-related classed (#1037)
+- use has energy input / output for energy transformation and subclasses (#1041)
 - has institution (#1042)
+- axiom in marine current energy transformation (#1044)
 
 ### Removed
 - cost in oeo-social (#977)
