@@ -20,7 +20,7 @@ Here is a template for new release sections
 ### Added
 - discount rate (#1077)
 - protected area (#1078)
-- industrial material, chemical substance, paper, cement, mineral, non-metallic mineral, metal, non-ferrous metal, steel (#1053)
+- industrial material, chemical substance, paper, cement, mineral, non-metallic mineral, metal, non-ferrous metal, steel, physical output of (#1053)
 
 ### Changed
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
