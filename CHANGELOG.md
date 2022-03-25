@@ -25,6 +25,7 @@ Here is a template for new release sections
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
+- has output, output of, starts, starts with, location in, location of, has part, part of, ends, ends with (#1086)
 
 ### Removed
 
