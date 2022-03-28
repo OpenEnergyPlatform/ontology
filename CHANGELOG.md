@@ -18,6 +18,7 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX  - unreleased
 
 ### Added
+- abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
 
@@ -25,6 +26,7 @@ Here is a template for new release sections
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
+- acronym (#1075)
 
 ### Removed
 
