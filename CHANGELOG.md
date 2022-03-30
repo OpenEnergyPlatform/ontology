@@ -22,7 +22,7 @@ Here is a template for new release sections
 - protected area (#1078)
 
 ### Changed
-- has bearer, bearer of, is defined by (#985)
+- has bearer, bearer of, is defined by, process attribute of (#985)
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
