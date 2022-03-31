@@ -25,6 +25,7 @@ Here is a template for new release sections
 - data / copyright / software license, has copyright license (#1090)
 
 ### Changed
+- has bearer, bearer of, is defined by, process attribute of (#985)
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
