@@ -22,6 +22,7 @@ Here is a template for new release sections
 - discount rate (#1077)
 - protected area (#1078)
 - personal living space (#1084)
+- data / copyright / software license, has copyright license (#1090)
 
 ### Changed
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
