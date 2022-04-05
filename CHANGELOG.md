@@ -21,6 +21,7 @@ Here is a template for new release sections
 - abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
+- import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
 
