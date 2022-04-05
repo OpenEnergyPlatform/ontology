@@ -32,6 +32,7 @@ Here is a template for new release sections
 - is energy participant of and subrelations (#1057)
 - acronym (#1075)
 - space requirement (#1084)
+- greenhouse gas emission (#1100)
 
 ### Removed
 
