@@ -24,6 +24,7 @@ Here is a template for new release sections
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
+- potential (#1102)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -32,6 +33,7 @@ Here is a template for new release sections
 - is energy participant of and subrelations (#1057)
 - acronym (#1075)
 - space requirement (#1084)
+- flow potential, stock potential (#1102)
 
 ### Removed
 
