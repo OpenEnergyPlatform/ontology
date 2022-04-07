@@ -34,6 +34,8 @@ Here is a template for new release sections
 - acronym (#1075)
 - space requirement (#1084)
 - flow potential, stock potential (#1102)
+- greenhouse gas emission (#1100)
+- water (#1099)
 
 ### Removed
 
