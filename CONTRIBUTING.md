@@ -8,15 +8,12 @@
 ### Contribution of OEO content
 Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
 
-programs used
-
- 🔶 - git: used for synchronising the code on your PC and online
-
- 🐙 - github: used for discussion and review
-
- 📙 - protege: used to change the ontology
-
- 📝 - text editor: used to change the ontology and other files
+| Emoji ...                | ... symbolizes tool ... | ...which is used for ...                                   |
+|:------------------------:|:-----------------------:| ---------------------------------------------------------- |
+| 🔶 <br/>*orange diamond* | git                     | keeping code in sync between your PC and online-repository |
+| 🐙 <br/>*octopus*        | github                  | discussions and reviews                                    |
+| 📙 <br/>*orange book*    | protégé                 | changing the ontology                                      |
+| 📝 <br/>*memo*           | text editor             | changing the ontology as well as other files               |
 
 
 ### Workflow
