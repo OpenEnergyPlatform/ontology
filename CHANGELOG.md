@@ -33,6 +33,8 @@ Here is a template for new release sections
 - acronym (#1075)
 - space requirement (#1084)
 - energy, has role (#1101)
+- greenhouse gas emission (#1100)
+- water (#1099)
 
 ### Removed
 
