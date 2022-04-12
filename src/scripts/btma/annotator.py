@@ -10,7 +10,6 @@ to which module this class belongs
 
 # Imports
 
-import timeit as tt
 import pathlib as path
 import csv
 import subprocess as sp
@@ -150,8 +149,6 @@ def main():
         
         print('Loading prefixes...')
         
-        start = tt.timeit()
-
         prefix_adder = ""
 
         for prefix in prefixes[1:]:
@@ -160,12 +157,8 @@ def main():
                 if c != '<' and c != '>':
                     prefix_ += c
             prefix_adder += '--add-prefix \"{p}\" '.format(p=prefix_)
-
-        end = tt.timeit()
         
-        #!
-        print(end - start)
-        
+                
         print('Creating ontologies...')
         
         for (i, csv_table) in enumerate(csv_table_per_module):
