@@ -18,14 +18,25 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX  - unreleased
 
 ### Added
+- abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
+- import price, export price (#1083)
+- personal living space (#1084)
+- data / copyright / software license, has copyright license (#1090)
 
 ### Changed
+- has bearer, bearer of, is defined by, process attribute of (#985)
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
 - has output, output of, starts, starts with, location in, location of, ends, ends with (#1086)
+- acronym (#1075)
+- space requirement (#1084)
+- energy, has role (#1101)
+- greenhouse gas emission (#1100)
+- water (#1099)
+
 
 ### Removed
 
