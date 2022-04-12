@@ -10,11 +10,14 @@ to which module this class belongs
 
 # Imports
 
+import timeit as tt
 import pathlib as path
 import csv
 import subprocess as sp
 import os
 import shutil as sh
+#import panda as pn
+#import numpy as np
 
 # Load 'static' values
 
@@ -29,13 +32,15 @@ modules = ['oeo-shared',
 src_path = path.Path(__file__).parent.parent.parent.absolute()
 script_path = src_path / 'scripts'
 
-omn_path = src_path / 'ontology' / 'edits'              
-csv_path = script_path / 'btma' / 'data'          
-db_path = script_path / 'btma' / 'database'
-exp_path = script_path / 'btma' / 'exports'
-owl_path = src_path / 'ontology' / 'imports'
-robot_path = script_path / 'btma' / 'robot.jar'
-pre_path = script_path / 'btma' / 'prefixes'
+omn_path = src_path / 'ontology' / 'edits'
+btma_path = script_path / 'btma'
+csv_path = btma_path / 'data'
+db_path = btma_path / 'database'
+exp_path = btma_path / 'exports'
+onto_path = src_path / 'ontology'
+owl_path = onto_path / 'imports'
+robot_path = btma_path / 'robot.jar'
+pre_path = btma_path / 'prefixes'
 
 def export_prefixes():
     pass
@@ -109,13 +114,13 @@ def main():
 
         print('Finding belongings...')
 
-        belonging = ids.copy()
+        belonging = []
 
         for (i,id) in enumerate(ids):
+            belonging.append([])
             for (j,module_ids) in enumerate(ids_per_module):
                 if id in module_ids:
-                    belonging[i] = modules[j]
-                    break
+                    belonging[i].append(modules[j])
 
         # Create the CSV template with the help of the overview
 
@@ -128,17 +133,24 @@ def main():
 
         csv_table_per_module = (csv_table, csv_table, csv_table, csv_table)
 
+        # Add only one belonging to an entity
+        # regarding to following rule:
+        # IF in shared THEN annotate as shared ELSE annotate as the first in the list
+        #TODO: May use Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>]   
+        #?DOMAIN EXPERTS: is another needed then priority
         for (ids, belonging) in belongs_to_module:
-            if belonging == modules[0]:
-                csv_table_per_module[0].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-            elif belonging == modules[1]:
-                csv_table_per_module[1].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-            elif belonging == modules[2]:
-                csv_table_per_module[2].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-            else:
-                csv_table_per_module[3].append(['OEO:' + ids, ontology_iri + '/' + belonging])
-                
-        print('Creating ontologies...')
+            if 'oeo-shared' in belonging:
+                csv_table_per_module[0].append(['OEO:' + ids, ontology_iri + '/oeo-shared'])
+            elif 'oeo-physical' in belonging:
+                csv_table_per_module[1].append(['OEO:' + ids, ontology_iri + '/oeo-physical'])
+            elif 'oeo-social' in belonging:
+                csv_table_per_module[2].append(['OEO:' + ids, ontology_iri + '/oeo-social'])
+            elif 'oeo-model' in belonging:
+                csv_table_per_module[3].append(['OEO:' + ids, ontology_iri + '/oeo-model'])
+        
+        print('Loading prefixes...')
+        
+        start = tt.timeit()
 
         prefix_adder = ""
 
@@ -149,6 +161,13 @@ def main():
                     prefix_ += c
             prefix_adder += '--add-prefix \"{p}\" '.format(p=prefix_)
 
+        end = tt.timeit()
+        
+        #!
+        print(end - start)
+        
+        print('Creating ontologies...')
+        
         for (i, csv_table) in enumerate(csv_table_per_module):
             f = open(script_path / 'btma' / "template.csv", 'w', newline='')
 
@@ -162,12 +181,13 @@ def main():
             
             sp.call('java -jar {jar} template --template {template} \
                                               --add-prefix \"OEO: {iri}OEO_\" \
-                                              {pre} \
                                               --output {out}'.format(jar=robot_path,
                                                                      template=script_path / 'btma' / 'template.csv',
                                                                      iri=ontology_iri + '/',
                                                                      pre=prefix_adder[-1],
                                                                      out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
+        # MERGE OMN files with the oeo modules
+        
         for i in range(len(csv_table_per_module)):
             # Valid Call
             """
@@ -195,10 +215,8 @@ def main():
                                                                               pre=prefix_adder[:-1],
                                                                               iri=ontology_iri + '/'))
             
-            # sp.call
         os.remove(script_path / 'btma' / "template.csv")
     
-        # MERGE .OMN with oeo-modules
         try:
             sh.rmtree(db_path)
         except:
