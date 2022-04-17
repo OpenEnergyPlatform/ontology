@@ -24,3 +24,6 @@ To execute the annotator easily:
    in the console:
 
    python3 annotator.py
+
+To ensure consistency, nothing should be moved in btma's file system.
+Especially not when the script is currently running.

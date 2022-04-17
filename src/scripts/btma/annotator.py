@@ -28,7 +28,7 @@ modules = ['oeo-shared',
            'oeo-model']
 
 
-src_path = path.Path(__file__).parent.parent.parent.absolute()
+src_path = path.Path('src').absolute()
 script_path = src_path / 'scripts'
 
 omn_path = src_path / 'ontology' / 'edits'
@@ -45,13 +45,12 @@ def export_prefixes():
     pass
 
 def extract_IDs(path) -> list:
-    file = open(path)
-    CSVreader = csv.reader(file)
     ids = []
-    for row in CSVreader:
-        t = row[0].split('_')
-        if t[0] == ontology_iri + '/OEO': 
-            ids.append(t[1])
+    with open(path) as file:
+        CSVreader = csv.reader(file)
+        for row in CSVreader:
+            if row[0].startswith('OEO'): 
+                ids.append(row[0])
     return ids
 
 def main():
@@ -86,11 +85,12 @@ def main():
         exp = csv_path / "{m}.csv".format(m=module)
         
         sp.call('java -jar {jar} export --input {m} \
+                                        --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
                                         --header "{c}" \
                                         --export {e}'.format(jar=robot_path,
                                                              m=mod, 
                                                              c=col, 
-                                                             e=exp))
+                                                             e=exp), shell=True)
         
         tmp = extract_IDs(csv_path / (module + '.csv'))
         ids = ids.union(set(tmp))
@@ -112,7 +112,23 @@ def main():
         # Create overview about IRIs and there belonging
 
         print('Finding belongings...')
-
+        
+        """
+        #! Check if duplicates exists in ids
+        for i, x in enumerate(ids):
+            for j, y in enumerate(ids):
+                if i != j and x == y:
+                    print("1:" + str(x))
+        
+        #! Check if duplicates exists in the seperate lists in ids_per_module
+        for li in ids_per_module:
+            for i, x in enumerate(li):
+                for j, y in enumerate(li):
+                    if i != j and x == y:
+                        print("2:" + str(x))                                           
+        
+        """
+        
         belonging = []
 
         for (i,id) in enumerate(ids):
@@ -130,22 +146,25 @@ def main():
         csv_table = [["ID","belongs to module"],
                      ["ID","AI OEO:belongs_to_module"]]
 
-        csv_table_per_module = (csv_table, csv_table, csv_table, csv_table)
+        csv_table_per_module = (csv_table, 
+                                [a for a in csv_table], 
+                                [a for a in csv_table], 
+                                [a for a in csv_table])
 
         # Add only one belonging to an entity
         # regarding to following rule:
         # IF in shared THEN annotate as shared ELSE annotate as the first in the list
         #TODO: May use Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>]   
-        #?DOMAIN EXPERTS: is another needed then priority
+        #?DOMAIN EXPERTS: is another rule needed then priority
         for (ids, belonging) in belongs_to_module:
             if 'oeo-shared' in belonging:
-                csv_table_per_module[0].append(['OEO:' + ids, ontology_iri + '/oeo-shared'])
+                csv_table_per_module[0].append([ids, ontology_iri + '/oeo-shared'])
             elif 'oeo-physical' in belonging:
-                csv_table_per_module[1].append(['OEO:' + ids, ontology_iri + '/oeo-physical'])
+                csv_table_per_module[1].append([ids, ontology_iri + '/oeo-physical'])
             elif 'oeo-social' in belonging:
-                csv_table_per_module[2].append(['OEO:' + ids, ontology_iri + '/oeo-social'])
+                csv_table_per_module[2].append([ids, ontology_iri + '/oeo-social'])
             elif 'oeo-model' in belonging:
-                csv_table_per_module[3].append(['OEO:' + ids, ontology_iri + '/oeo-model'])
+                csv_table_per_module[3].append([ids, ontology_iri + '/oeo-model'])
         
         print('Loading prefixes...')
         
@@ -178,7 +197,7 @@ def main():
                                                                      template=script_path / 'btma' / 'template.csv',
                                                                      iri=ontology_iri + '/',
                                                                      pre=prefix_adder[-1],
-                                                                     out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])))
+                                                                     out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])), shell=True)
         # MERGE OMN files with the oeo modules
         
         for i in range(len(csv_table_per_module)):
@@ -193,7 +212,7 @@ def main():
                                                                               out=omn_path / (modules[i] + '.omn'),
                                                                               inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i]),
                                                                               pre=prefix_adder[:-1],
-                                                                              iri=ontology_iri + '/'))
+                                                                              iri=ontology_iri + '/'), shell=True)
             """
             # Test Call
             sp.call('java -jar {jar} merge --input {out} \
@@ -206,7 +225,7 @@ def main():
                                                                               out_=omn_path / (modules[i] + '-new.omn'),
                                                                               inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i]),
                                                                               pre=prefix_adder[:-1],
-                                                                              iri=ontology_iri + '/'))
+                                                                              iri=ontology_iri + '/'), shell=True)
             
         os.remove(script_path / 'btma' / "template.csv")
     
