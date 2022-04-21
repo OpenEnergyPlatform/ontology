@@ -24,6 +24,7 @@ Here is a template for new release sections
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
+- information input/output of (#1113)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -35,6 +36,7 @@ Here is a template for new release sections
 - energy, has role (#1101)
 - greenhouse gas emission (#1100)
 - water (#1099)
+- endogenous/exogenous data, model, model calculation, has information input/output (#1113)
 
 ### Removed
 
