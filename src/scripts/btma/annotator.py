@@ -199,6 +199,7 @@ def main():
             
             sp.call('java -jar {jar} template --template {template} \
                                               --add-prefix \"OEO: {iri}OEO_\" \
+                                              --add-prefix \"owl: http://www.w3.org/2002/07/owl#\" \
                                               --output {out}'.format(jar=robot_path,
                                                                      template=script_path / 'btma' / 'template.csv',
                                                                      iri=ontology_iri + '/',
