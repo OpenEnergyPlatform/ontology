@@ -44,13 +44,13 @@ pre_path = btma_path / 'prefixes'
 def export_prefixes():
     pass
 
-def extract_IDs(path) -> list:
+def extract_IDs_Types(path) -> list:
     ids = []
     with open(path) as file:
         CSVreader = csv.reader(file)
         for row in CSVreader:
             if row[0].startswith('OEO'): 
-                ids.append(row[0])
+                ids.append((row[0], row[1]))
     return ids
 
 def main():
@@ -59,7 +59,7 @@ def main():
     except:
         pass
 
-    col = 'ID'                           
+    col = 'ID|Type'                           
     _ = None
     ids_per_module = [_,_,_,_]
 
@@ -71,7 +71,7 @@ def main():
     
     for line in lines:
         if line.startswith('Prefix:'):
-            prefixes.append(line[8:-1])
+            prefixes.append(line[8:-1])             #* Abhängig vom Prefix
         else:
             break
         
@@ -92,7 +92,7 @@ def main():
                                                              c=col, 
                                                              e=exp), shell=True)
         
-        tmp = extract_IDs(csv_path / (module + '.csv'))
+        tmp = extract_IDs_Types(csv_path / (module + '.csv'))
         ids = ids.union(set(tmp))
         ids_per_module[i] = tmp
 
@@ -103,7 +103,7 @@ def main():
     old_ids_per_module = [_,_,_,_]
     try:
         for i, module in enumerate(modules):
-            old_ids_per_module[i] = extract_IDs(db_path / (module + '.csv'))
+            old_ids_per_module[i] = extract_IDs_Types(db_path / (module + '.csv'))
     except:
         pass
         
@@ -141,10 +141,17 @@ def main():
 
         print('Creating template...')
         
-        belongs_to_module = list(zip(ids, belonging))
-
-        csv_table = [["ID","belongs to module"],
-                     ["ID","AI OEO:belongs_to_module"]]
+        types = []
+        
+        for i, elem in enumerate(ids):
+            types.append(elem[1])
+            ids[i] = elem[0]
+        
+        belongs_to_module = list(zip(ids, types, belonging))
+        
+        csv_table = [["ID", "Entity Type", "OEO:00260001"],
+                     ["ID", "TYPE", "AI OEO:00260001"],
+                     ["OEO:12345678", "class", "http://openenergy-platform.org/ontology/oeo/oeo-shared"]]
 
         csv_table_per_module = (csv_table, 
                                 [a for a in csv_table], 
@@ -156,15 +163,15 @@ def main():
         # IF in shared THEN annotate as shared ELSE annotate as the first in the list
         #TODO: May use Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>]   
         #?DOMAIN EXPERTS: is another rule needed then priority
-        for (ids, belonging) in belongs_to_module:
+        for ids, type_, belonging in belongs_to_module:
             if 'oeo-shared' in belonging:
-                csv_table_per_module[0].append([ids, ontology_iri + '/oeo-shared'])
+                csv_table_per_module[0].append([ids, 'owl:' + type_, ontology_iri + '/oeo-shared'])
             elif 'oeo-physical' in belonging:
-                csv_table_per_module[1].append([ids, ontology_iri + '/oeo-physical'])
+                csv_table_per_module[1].append([ids, 'owl:' + type_, ontology_iri + '/oeo-physical'])
             elif 'oeo-social' in belonging:
-                csv_table_per_module[2].append([ids, ontology_iri + '/oeo-social'])
+                csv_table_per_module[2].append([ids, 'owl:' + type_, ontology_iri + '/oeo-social'])
             elif 'oeo-model' in belonging:
-                csv_table_per_module[3].append([ids, ontology_iri + '/oeo-model'])
+                csv_table_per_module[3].append([ids, 'owl:' + type_, ontology_iri + '/oeo-model'])
         
         print('Loading prefixes...')
         
@@ -189,7 +196,7 @@ def main():
 
             f.close()
 
-            # Create OWL/XML with help of the CSV template
+            # Create OMN with help of the CSV template
             
             sp.call('java -jar {jar} template --template {template} \
                                               --add-prefix \"OEO: {iri}OEO_\" \
@@ -198,6 +205,7 @@ def main():
                                                                      iri=ontology_iri + '/',
                                                                      pre=prefix_adder[-1],
                                                                      out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])), shell=True)
+        
         # MERGE OMN files with the oeo modules
         
         for i in range(len(csv_table_per_module)):
