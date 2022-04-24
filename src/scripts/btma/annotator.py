@@ -150,8 +150,7 @@ def main():
         belongs_to_module = list(zip(ids, types, belonging))
         
         csv_table = [["ID", "Entity Type", "OEO:00260001"],
-                     ["ID", "TYPE", "AI OEO:00260001"],
-                     ["OEO:12345678", "class", "http://openenergy-platform.org/ontology/oeo/oeo-shared"]]
+                     ["ID", "TYPE", "AI OEO:00260001"]]
 
         csv_table_per_module = (csv_table, 
                                 [a for a in csv_table], 
@@ -161,7 +160,7 @@ def main():
         # Add only one belonging to an entity
         # regarding to following rule:
         # IF in shared THEN annotate as shared ELSE annotate as the first in the list
-        #TODO: May use Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>]   
+        #TODO: Rather use Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>]   
         #?DOMAIN EXPERTS: is another rule needed then priority
         for ids, type_, belonging in belongs_to_module:
             if 'oeo-shared' in belonging:
