@@ -137,6 +137,12 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000118> "has characteristic"
     
+    Domain: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985"
+        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
+    
     Range: 
         <http://purl.obolibrary.org/obo/BFO_0000020>
     
@@ -176,8 +182,14 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000086>
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000116> "In contrast to the original RO class, the domain was extended to independent continuant or energy. This is due to the special role that energy plays for the OEO and the difficulty of classifying it properly.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "extend domain / definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1030
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101"
+    
     Domain: 
-        <http://purl.obolibrary.org/obo/BFO_0000002>
+        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
     
     Range: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -289,8 +301,18 @@ ObjectProperty: OEO_00000502
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+add domains and ranges:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+issue: https://github.com/OpenEnergyPlatform/ontology/pull/1085",
         rdfs:label "process attribute of"
+    
+    Domain: 
+        OEO_00030019
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     InverseOf: 
         OEO_00000500
@@ -534,13 +556,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
 ObjectProperty: OEO_00010121
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant or energy (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853",
+pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853
+
+add domains and ranges:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
+
+extend range to energy:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985",
         rdfs:label "has bearer"@en
     
     Domain: 
         <http://purl.obolibrary.org/obo/BFO_0000020>
+    
+    Range: 
+        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
     
     InverseOf: 
         <http://purl.obolibrary.org/obo/RO_0000053>
@@ -596,6 +629,18 @@ ObjectProperty: OEO_00020180
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/958
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         rdfs:label "has economic value"
+    
+    SubPropertyOf: 
+        OEO_00010231
+    
+    
+ObjectProperty: OEO_00020188
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity and a copyright licence.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
+        rdfs:label "has copyright license"
     
     SubPropertyOf: 
         OEO_00010231
@@ -748,6 +793,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/826"
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add axiom has copyright license
+issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090"
+    
+    SubClassOf: 
+        OEO_00020188 some OEO_00020185
+    
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000088>
 
@@ -895,6 +948,32 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956",
         OEO_00030019,
         OEO_00000502 some OEO_00000147,
         OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00000150
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of matter which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364
+fix grammar error:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/657
+update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/660
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/665
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1030
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101",
+        rdfs:comment "Energy is power integrated over time.",
+        rdfs:label "energy",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000015"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Class: OEO_00000151
@@ -1320,9 +1399,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
 Class: OEO_00020136
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement is a two-dimensional spatial region that covers the area needed by an artificial object.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement is a two-dimensional spatial region that covers the area needed by an object or object aggregate.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "land use",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933
+
+extend definition and add alternative term
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1051
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1084",
         rdfs:label "space requirement"
     
     SubClassOf: 
@@ -1465,6 +1549,43 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         OEO_00040009,
         OEO_00020179 some OEO_00140081,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
+    
+    
+Class: OEO_00020185
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A copyright license is a license that states the ownership and contractually sets the rights and obligations to use, copy, and distribute a creative work.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add relation has copyright license",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
+        rdfs:label "copyright license"
+    
+    SubClassOf: 
+        OEO_00020015
+    
+    
+Class: OEO_00020186
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A data license is a license that determines ownership, database protection, and permissions for data.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
+        rdfs:label "data license"
+    
+    SubClassOf: 
+        OEO_00020015
+    
+    
+Class: OEO_00020187
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A software license is a copyright license that determines ownership and permissions for software, code, or models.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
+        rdfs:label "software license"
+    
+    SubClassOf: 
+        OEO_00020015
     
     
 Class: OEO_00030015
@@ -1799,6 +1920,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078"@en,
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000009>
+    
+    
+Class: OEO_00240038
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A personal living space is a space requirement that one person uses for living."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1056
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1084",
+        rdfs:label "personal living space"
+    
+    SubClassOf: 
+        OEO_00020136
     
     
 Individual: OEO_00020161
