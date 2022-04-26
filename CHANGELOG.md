@@ -21,6 +21,7 @@ Here is a template for new release sections
 - abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
+- industrial material, chemical substance, paper, cement, mineral, non-metallic mineral, metal, non-ferrous metal, steel, physical output of (#1082)
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
@@ -31,11 +32,14 @@ Here is a template for new release sections
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
 - is energy participant of and subrelations (#1057)
+- starts, starts with, located in, location of, ends, ends with, part of, has part (#1086)
 - acronym (#1075)
 - space requirement (#1084)
 - flow potential, stock potential (#1102)
+- energy, has role (#1101)
 - greenhouse gas emission (#1100)
 - water (#1099)
+
 
 ### Removed
 
