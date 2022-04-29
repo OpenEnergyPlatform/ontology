@@ -37,7 +37,7 @@ Here is a template for new release sections
 - energy, has role (#1101)
 - greenhouse gas emission (#1100)
 - water (#1099)
-
+- CRF sector (IPCC 2006): pipeline transport (#1122)
 
 ### Removed
 
