@@ -25,6 +25,7 @@ Here is a template for new release sections
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
+- information input/output of (#1113)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
