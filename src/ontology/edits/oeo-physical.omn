@@ -129,6 +129,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     
@@ -368,6 +371,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         <http://purl.obolibrary.org/obo/BFO_0000040>
     
+    InverseOf: 
+        OEO_00240025
+    
     
 ObjectProperty: OEO_00010234
 
@@ -498,6 +504,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
     
     Range: 
         OEO_00000150
+    
+    
+ObjectProperty: OEO_00240025
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "c is physical output of p iff: c output of p, and c is a material entity"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "physical output of"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002353>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    InverseOf: 
+        OEO_00000533
     
     
 ObjectProperty: owl:topObjectProperty
@@ -6032,7 +6059,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897",
         rdfs:label "outage"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
@@ -6040,7 +6067,6 @@ Class: OEO_00020105
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A forced outage is an outage of an artificial object caused by a failure.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Ramping is a process attribute that describes the change in power of an energy transformation unit or an energy converting component.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/887
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897",
         rdfs:label "forced outage"
@@ -7796,12 +7822,139 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/997"@en,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030035
     
     
+Class: OEO_00240026
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial material is a portion of matter that is the physical output of an industrial process and that has a good role."@en,
+        rdfs:label "industrial material"
+    
+    EquivalentTo: 
+        (OEO_00240025 some OEO_00050000)
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011)
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00240027
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical substance is a portion of matter of constant composition and that is neither a metal or mineral. It is composed of molecular entities of the same type or of different types that is used in or produced by a chemical reaction involving changes to atoms or molecules. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "chemical substance"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00240025 some OEO_00050000,
+        OEO_00240025 some OEO_00140033,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00240028
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Paper is a portion of matter that is made from cellulose fibres and other plant materials. It is used for paper-based products. It has a solid normal state of matter. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "paper"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00240029
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Cement is a portion of matter that is made from limestone and clay; other elements may be present. It is used as a building material to set as a solid mass or is used as an ingredient in making mortar or concrete. It has a solid normal state of matter. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "cement"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00240030
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral is a portion of matter that is normally crystalline formed."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "mineral"
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00240031
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A non-metallic mineral is a mineral that does not contain any metallic content within themselves. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Some examples for non-metallic minerals are ceramic, glass, clay or gypsum."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "non-metallic mineral"
+    
+    SubClassOf: 
+        OEO_00240030,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00240032
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A metal is a portion of matter consisting of an atom of an element that exhibits typical metallic properties, being typically shiny, with high electrical and thermal conductivity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "metal"
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00240034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Steel is a metal that consists mainly of iron and up to 2.14 % of carbon; other elements may be present. It has a solid normal state of matter. It has a solid normal state of matter. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "steel"
+    
+    SubClassOf: 
+        OEO_00240032,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00240035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A non-ferrous metal is a metal that does not contain a significant amount of iron in its chemical composition. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "non-ferrous metal"
+    
+    SubClassOf: 
+        OEO_00240032,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
 Class: OEO_00260001
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Ramping is a process attribute that describes the change in power of an energy transformation unit or an energy converting component per time step.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
-pull request: n/a",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
         rdfs:label "ramping"@de
     
     SubClassOf: 
@@ -7813,7 +7966,7 @@ Class: OEO_00260002
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Start-up speed is ramping during a cold start.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
-pull request: n/a",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
         rdfs:label "start-up speed"@de
     
     SubClassOf: 
@@ -7826,7 +7979,7 @@ Class: OEO_00260003
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A cold start is a process in which an energy transformation unit is started-up after a period of inactivity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
-pull request: n/a",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
         rdfs:label "cold start"@de
     
     SubClassOf: 
