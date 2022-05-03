@@ -25,6 +25,7 @@ Here is a template for new release sections
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
+- slope, surface azimuth angle (#1112)
 - potential (#1102)
 - information input/output of (#1113)
 
