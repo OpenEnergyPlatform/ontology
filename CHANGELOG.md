@@ -39,6 +39,7 @@ Here is a template for new release sections
 - greenhouse gas emission (#1100)
 - water (#1099)
 - CRF sector (IPCC 2006): pipeline transport (#1122)
+- energy system (#1123)
 
 ### Removed
 
