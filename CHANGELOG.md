@@ -26,6 +26,7 @@ Here is a template for new release sections
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
 - potential (#1102)
+- information input/output of (#1113)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -39,7 +40,8 @@ Here is a template for new release sections
 - energy, has role (#1101)
 - greenhouse gas emission (#1100)
 - water (#1099)
-
+- CRF sector (IPCC 2006): pipeline transport (#1122)
+- energy system (#1123)
 
 ### Removed
 
