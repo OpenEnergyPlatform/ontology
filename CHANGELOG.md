@@ -25,6 +25,7 @@ Here is a template for new release sections
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
+- potential (#1102)
 - information input/output of (#1113)
 
 ### Changed
@@ -35,6 +36,7 @@ Here is a template for new release sections
 - starts, starts with, located in, location of, ends, ends with, part of, has part (#1086)
 - acronym (#1075)
 - space requirement (#1084)
+- flow potential, stock potential (#1102)
 - energy, has role (#1101)
 - greenhouse gas emission (#1100)
 - water (#1099)
