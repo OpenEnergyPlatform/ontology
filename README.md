@@ -12,10 +12,18 @@ The Open Energy Ontology (OEO) is a domain ontology of the energy-system modelli
 
 This **domain** ontology is a joint effort to represent the energy-system modelling context based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability & transferability within the energy system modelling context. This ontology makes use of the Basic Formal Ontology ([BFO](https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes)) and its principles. It re-uses several other ontologies as described in the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/use-of-external-ontologies).
 
-## License / Copyright
+## License / Copyright / Citation
 
-This repository is licensed under CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+This repository is licensed under `CC0 1.0 Universal (CC0 1.0) Public Domain Dedication`: 
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/) <br>
+For a scientific citation please see the [CITATION.cff](CITATION.cff). <br>
+To cite a specific class of the ontology and its definition please use the following convention:
+
+> 'class label' (FUll-URI) from [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
+
+Example:
+> 'energy system' (https://openenergy-platform.org/ontology/oeo/OEO_00030024) from [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
+
 
 ## Installation
 
