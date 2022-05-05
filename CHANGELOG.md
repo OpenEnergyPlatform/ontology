@@ -29,6 +29,7 @@ Here is a template for new release sections
 - potential (#1102)
 - information input/output of (#1113)
 - heat generation, combustion thermal energy transformation (#1130)
+- propulsion, traction motor (#1135)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -44,6 +45,7 @@ Here is a template for new release sections
 - water (#1099)
 - CRF sector (IPCC 2006): pipeline transport (#1122)
 - energy system (#1123)
+- traction motor -> electric traction motor (#1135)
 
 ### Removed
 
