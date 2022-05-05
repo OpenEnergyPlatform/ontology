@@ -721,6 +721,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is a process of pushing or pulling to drive an object.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "traction process",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "propulsion"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010254>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traction motor is a motor that is used for propulsion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "traction motor"@en
+    
+    EquivalentTo: 
+        OEO_00010032
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)
+    
+    SubClassOf: 
+        OEO_00010032
+    
+    
 Class: <http://opennergy-plattform.org/ontology/oeo/OEO_00290002>
 
     Annotations: 
@@ -4295,13 +4325,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 Class: OEO_00010028
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traction motor is an electric motor used for propulsion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric traction motor is an electric motor used for propulsion."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
-        rdfs:label "traction motor"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+relabel and add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "electric traction motor"@en
     
     SubClassOf: 
-        OEO_00010027
+        OEO_00010027,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
     
     
 Class: OEO_00010029
