@@ -29,6 +29,7 @@ Here is a template for new release sections
 - potential (#1102)
 - information input/output of (#1113)
 - heat generation, combustion thermal energy transformation (#1130)
+- add CITATION.cff (#1134)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
