@@ -28,7 +28,7 @@ Here is a template for new release sections
 - slope, surface azimuth angle (#1112)
 - potential (#1102)
 - information input/output of (#1113)
-- study factsheet, OEP study factsheet (#1131)
+- study factsheet, OEP study factsheet, scenario study (#1131)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
