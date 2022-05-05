@@ -21,6 +21,7 @@ For a scientific citation please see the [CITATION.cff](CITATION.cff). <br>
 
 To cite a specific class of the ontology and its definition please use the following convention:
 > 'class label' (FUll-URI) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
+
 Example:
 > 'energy system' (https://openenergy-platform.org/ontology/oeo/OEO_00030024) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
 
