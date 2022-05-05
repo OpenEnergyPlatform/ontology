@@ -1,5 +1,7 @@
 ﻿<a href="https://openenergy-platform.org/"><img align="right" width="200" height="200" src="https://avatars2.githubusercontent.com/u/37101913?s=400&u=9b593cfdb6048a05ea6e72d333169a65e7c922be&v=4" alt="OpenEnergyPlatform"></a>
 
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+
 # Open Energy Family - Open Energy Ontology (OEO)
 
 Developing a common ontology for energy system analysis and scenarios.
@@ -14,15 +16,13 @@ This **domain** ontology is a joint effort to represent the energy-system modell
 
 ## License / Copyright / Citation
 
-This repository is licensed under `CC0 1.0 Universal (CC0 1.0) Public Domain Dedication`: 
-[![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/) <br>
+This repository is licensed under `CC0 1.0 Universal (CC0 1.0) Public Domain Dedication`. <br>
 For a scientific citation please see the [CITATION.cff](CITATION.cff). <br>
+
 To cite a specific class of the ontology and its definition please use the following convention:
-
-> 'class label' (FUll-URI) from [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
-
+> 'class label' (FUll-URI) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
 Example:
-> 'energy system' (https://openenergy-platform.org/ontology/oeo/OEO_00030024) from [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
+> 'energy system' (https://openenergy-platform.org/ontology/oeo/OEO_00030024) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
 
 
 ## Installation
