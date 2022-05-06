@@ -48,6 +48,7 @@ Here is a template for new release sections
 - CRF sector (IPCC 2006): pipeline transport (#1122)
 - energy system (#1123)
 - traction motor -> electric traction motor (#1135)
+- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 
 ### Removed
 
