@@ -49,6 +49,7 @@ Here is a template for new release sections
 - energy system (#1123)
 - traction motor -> electric traction motor (#1135)
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- has input, input of, has output, output of, participates in, has participant (#1138)
 
 ### Removed
 
