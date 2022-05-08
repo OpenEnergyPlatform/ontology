@@ -70,6 +70,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     git add [file_name]
     ```
 
+    **🔎 Quick Tip:** 
+    Changes in `catalog.xml`-files do NOT have to be staged, UNLESS something in the file structure has changed (e.g. adding/rearranging files, [see 🔗](https://github.com/OpenEnergyPlatform/ontology/pull/1102#issuecomment-1090003565))
+
     commit your changes
     ```bash
     git commit [-m " <commit_message> "]

@@ -108,22 +108,20 @@ Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
     Characteristics: 
         Transitive
     
-    InverseOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000051>
-    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/596
 Pull request https://github.com/OpenEnergyPlatform/ontology/pull/599
-Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603
+
+fix duplicate implementation of `Inverse Of`
+issue https://github.com/OpenEnergyPlatform/ontology/issues/979
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086"
     
     Characteristics: 
         Transitive
-    
-    InverseOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000050>
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
@@ -232,6 +230,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002328>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002352>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
@@ -646,6 +647,42 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
         OEO_00010231
     
     
+ObjectProperty: OEO_00020189
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "c is an information input of p iff: c is an input of p, and c is an information content entity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1091
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+        rdfs:label "information input of"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002352>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+ObjectProperty: OEO_00020190
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "c is an information ouput of p iff: c is an output of p, and c is an information content entity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1091
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+        rdfs:label "information output of"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002353>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
 ObjectProperty: OEO_00040010
 
     Annotations: 
@@ -698,6 +735,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain an
     
     Range: 
         <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    
+ObjectProperty: OEO_00140093
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has information input c iff: p has input c, and c is an information content entity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/716
+moved to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+        rdfs:label "has information input"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002233>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+ObjectProperty: OEO_00140094
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has information output c iff: p has output c, and c is an information content entity",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/716
+moved to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+        rdfs:label "has information output"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002234>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 ObjectProperty: OEO_00140164
@@ -1036,7 +1113,10 @@ Class: OEO_00000274
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/208
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287
+
+add axiom to model calculation
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
         rdfs:label "model"
     
     SubClassOf: 
@@ -1044,7 +1124,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/287",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
-        OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000004>
+        OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000004>,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000275
+    
+    
+Class: OEO_00000275
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a process of solving mathematical equations of a model."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/73
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/504
+moved to oeo-shared
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113"@en,
+        rdfs:label "model calculation"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00140093 some OEO_00030029,
+        OEO_00140094 some OEO_00030030,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000274
     
     
 Class: OEO_00000315
@@ -1631,6 +1732,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/992",
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
     
     
+Class: OEO_00030029
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Exogenous data is a data item whose quantity value is determined outside of a model and is imposed on a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "input data",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
+
+make equivalent class
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+        rdfs:label "exogenous data"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+         and (OEO_00020189 some OEO_00000275)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+    
+    
+Class: OEO_00030030
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Endogenous data is a data item whose quantity value is determined by a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
+
+make equivalent class
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+        rdfs:label "endogenous data"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+         and (OEO_00020190 some OEO_00000275)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+    
+    
 Class: OEO_00030031
 
     Annotations: 
@@ -1875,6 +2015,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
+Class: OEO_00140040
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterised by a person, organisation or object needing it for a specific purpose.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
+        rdfs:label "demand"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000017>
+
+
 Class: OEO_00140081
 
     Annotations: 
@@ -1920,6 +2072,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078"@en,
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000009>
+    
+    
+Class: OEO_00240024
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy service demand is a demand of an agent to use energy as a means to obtain or facilitate desired end services or states."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "An example is the transport demand for goods or persons (e.g. in person/tonne-kilometres). An other example is the demand for room heating or cooling."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1054
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1080",
+        rdfs:label "energy service demand"
+    
+    SubClassOf: 
+        OEO_00140040,
+        OEO_00010121 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000051)
     
     
 Class: OEO_00240038
