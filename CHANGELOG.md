@@ -31,6 +31,7 @@ Here is a template for new release sections
 - information input/output of (#1113)
 - heat generation, combustion thermal energy transformation (#1130)
 - propulsion, traction motor (#1135)
+- ramping, start-up speed, cold start (#1126)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
