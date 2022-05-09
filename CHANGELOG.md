@@ -21,6 +21,7 @@ Here is a template for new release sections
 - abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
+- energy service demand (#1080)
 - industrial material, chemical substance, paper, cement, mineral, non-metallic mineral, metal, non-ferrous metal, steel, physical output of (#1082)
 - import price, export price (#1083)
 - personal living space (#1084)
@@ -29,7 +30,9 @@ Here is a template for new release sections
 - potential (#1102)
 - information input/output of (#1113)
 - heat generation, combustion thermal energy transformation (#1130)
-- add CITATION.cff (#1134)
+- CITATION.cff (#1134)
+- propulsion, traction motor (#1135)
+- ramping, start-up speed, cold start (#1126)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -45,6 +48,7 @@ Here is a template for new release sections
 - water (#1099)
 - CRF sector (IPCC 2006): pipeline transport (#1122)
 - energy system (#1123)
+- traction motor -> electric traction motor (#1135)
 
 ### Removed
 
