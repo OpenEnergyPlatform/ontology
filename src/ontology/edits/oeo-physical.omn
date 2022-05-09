@@ -115,6 +115,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002092>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 
     Annotations: 
@@ -719,6 +722,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
         OEO_00010234 some OEO_00000007,
         OEO_00010235 some OEO_00000207,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is a process of pushing or pulling to drive an object.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "traction process",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "propulsion"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010254>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traction motor is a motor that is used for propulsion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "traction motor"@en
+    
+    EquivalentTo: 
+        OEO_00010032
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)
+    
+    SubClassOf: 
+        OEO_00010032
     
     
 Class: <http://opennergy-plattform.org/ontology/oeo/OEO_00290002>
@@ -4295,13 +4328,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 Class: OEO_00010028
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traction motor is an electric motor used for propulsion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric traction motor is an electric motor used for propulsion."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
-        rdfs:label "traction motor"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+relabel and add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "electric traction motor"@en
     
     SubClassOf: 
-        OEO_00010027
+        OEO_00010027,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
     
     
 Class: OEO_00010029
@@ -8009,6 +8047,44 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
         OEO_00240032,
         OEO_00240025 some OEO_00050000,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00260001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ramping is a process attribute that describes the change in power of an energy transformation unit or an energy converting component per time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "ramping"@en
+    
+    SubClassOf: 
+        OEO_00030019
+    
+    
+Class: OEO_00260002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Start-up speed is ramping during a cold start.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "start-up speed"@en
+    
+    SubClassOf: 
+        OEO_00260001
+         and (OEO_00000502 some OEO_00260003)
+    
+    
+Class: OEO_00260003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A cold start is a process in which an energy transformation unit is started-up after a period of inactivity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "cold start"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+         and (OEO_00000500 some OEO_00260002)
     
     
 Class: OEO_00290000
