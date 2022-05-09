@@ -30,6 +30,7 @@ Here is a template for new release sections
 - potential (#1102)
 - information input/output of (#1113)
 - heat generation, combustion thermal energy transformation (#1130)
+- CITATION.cff (#1134)
 - propulsion, traction motor (#1135)
 - ramping, start-up speed, cold start (#1126)
 
