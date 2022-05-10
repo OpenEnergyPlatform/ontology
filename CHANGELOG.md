@@ -28,11 +28,12 @@ Here is a template for new release sections
 - slope, surface azimuth angle (#1112)
 - potential (#1102)
 - information input/output of (#1113)
+- ramping, start-up speed, cold start (#1126)
 - heat generation, combustion thermal energy transformation (#1130)
-- causally downstream of or within, causally upstream of or within (#1136)
+- study factsheet, OEP study factsheet, scenario study (#1131)
 - CITATION.cff (#1134)
 - propulsion, traction motor (#1135)
-- ramping, start-up speed, cold start (#1126)
+- causally downstream of or within, causally upstream of or within (#1136)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
