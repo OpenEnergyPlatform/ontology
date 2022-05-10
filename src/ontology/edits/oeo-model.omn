@@ -201,39 +201,9 @@ ObjectProperty: OEO_00140002
     
 ObjectProperty: OEO_00140093
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "p has information input c iff: p has input c, and c is an information content entity",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
-pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
-        rdfs:label "has information input"@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002233>
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 ObjectProperty: OEO_00140094
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "p has information output c iff: p has output c, and c is an information content entity",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
-pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
-        rdfs:label "has information output"@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/RO_0002234>
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 ObjectProperty: OEO_00140095
 
@@ -355,6 +325,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000100>
 Class: <http://purl.obolibrary.org/obo/IAO_0000104>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000300>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000310>
 
     
@@ -380,10 +353,13 @@ Class: OEO_00000048
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An acronym is an abbreviation of the title by using the first letters of each part of the title."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "make subclass of abbreviation:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1039
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1075",
         rdfs:label "acronym"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000028>
+        OEO_00010247
     
     
 Class: OEO_00000059
@@ -653,21 +629,6 @@ Class: OEO_00000274
     
 Class: OEO_00000275
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a process of solving mathematical equations of a model."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/73
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/504"@en,
-        rdfs:label "model calculation"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000274,
-        <http://purl.obolibrary.org/obo/RO_0002233> some <http://purl.obolibrary.org/obo/IAO_0000100>,
-        <http://purl.obolibrary.org/obo/RO_0002234> some <http://purl.obolibrary.org/obo/IAO_0000100>
-    
     
 Class: OEO_00000276
 
@@ -1024,6 +985,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1002",
         OEO_00000350
     
     
+Class: OEO_00010247
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An abbreviation is a symbol of a textual entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1039
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1075",
+        rdfs:label "abbreviation"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000028>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000300>
+    
+    
 Class: OEO_00020011
 
     SubClassOf: 
@@ -1037,8 +1011,12 @@ Class: OEO_00020013
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Output data is endogenous data that is determined by a model calculation and presented as a result.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "modelling results",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/520
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/536",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/536
+
+add alternative term
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
         rdfs:label "output data"
     
     SubClassOf: 
@@ -1415,28 +1393,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
     
 Class: OEO_00030029
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Exogenous data is a data item whose quantity value is determined outside of a model and is imposed on a model.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "input data",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500",
-        rdfs:label "exogenous data"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000027>
-    
     
 Class: OEO_00030030
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Endogenous data is a data item whose quantity value is determined by a model.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500",
-        rdfs:label "endogenous data"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000027>
-    
     
 Class: OEO_00030031
 

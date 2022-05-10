@@ -115,6 +115,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002092>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 
     Annotations: 
@@ -124,6 +127,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702",
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
@@ -365,6 +371,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         <http://purl.obolibrary.org/obo/BFO_0000040>
     
+    InverseOf: 
+        OEO_00240025
+    
     
 ObjectProperty: OEO_00010234
 
@@ -404,6 +413,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
     
 ObjectProperty: OEO_00020056
 
+    
+ObjectProperty: OEO_00020182
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is used in the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy participant of"
+    
+    Domain: 
+        OEO_00000150
+    
+    Range: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+ObjectProperty: OEO_00020183
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an input of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy input to"
+    
+    SubPropertyOf: 
+        OEO_00020182
+    
+    
+ObjectProperty: OEO_00020184
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an ouput of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+        rdfs:label "is energy output of"
+    
+    SubPropertyOf: 
+        OEO_00020182
+    
     
 ObjectProperty: OEO_00040010
 
@@ -456,6 +504,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
     
     Range: 
         OEO_00000150
+    
+    
+ObjectProperty: OEO_00240025
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "c is physical output of p iff: c output of p, and c is a material entity"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "physical output of"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0002353>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    InverseOf: 
+        OEO_00000533
     
     
 ObjectProperty: owl:topObjectProperty
@@ -623,6 +692,82 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
             (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244> or (not (OEO_00010032)))
     
     
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generation process is an energy transformation that has thermal energy as energy output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
+        rdfs:label "heat generation process"@en
+    
+    EquivalentTo: 
+        OEO_00020003
+         and (OEO_00010235 some OEO_00000207)
+    
+    SubClassOf: 
+        OEO_00020003
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010249>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion thermal energy transformation is an energy transformation that converts chemical energy of a combustion fuel into thermal energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
+        rdfs:label "combustion thermal energy transformation"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        OEO_00000532 some OEO_00000099,
+        OEO_00010234 some OEO_00000007,
+        OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is a process of pushing or pulling to drive an object.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "traction process",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "propulsion"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010254>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A traction motor is a motor that is used for propulsion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "traction motor"@en
+    
+    EquivalentTo: 
+        OEO_00010032
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)
+    
+    SubClassOf: 
+        OEO_00010032
+    
+    
+Class: <http://opennergy-plattform.org/ontology/oeo/OEO_00290002>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A surface azimuth angle is a quantity value with a plane angle unit that measures the deviation of the projection on a horizontal plane of the normal to the plane from the local meridian, with zero due south, east negative, and west positive."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add azimuth surface angle
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1087
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1112",
+        rdfs:label "surface azimuth angle"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000122>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -705,6 +850,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000111>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000113>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000122>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000270>
@@ -914,6 +1062,9 @@ Class: OEO_00000014
     
     SubClassOf: 
         OEO_00000530 some OEO_00030003
+    
+    DisjointWith: 
+        OEO_00000072
     
     
 Class: OEO_00000016
@@ -1541,6 +1692,7 @@ Class: OEO_00000072
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A biofuel is a combustion fuel that has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "biogenic combustion fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/396
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/400
 
@@ -1552,7 +1704,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
 
 fix subclassof:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965
+
+alternative term and disjoint:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "biofuel"
     
     EquivalentTo: 
@@ -1564,6 +1720,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020086
+    
+    DisjointWith: 
+        OEO_00000014
     
     
 Class: OEO_00000073
@@ -1953,26 +2112,6 @@ Class: OEO_00000148
     
 Class: OEO_00000150
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of matter which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364
-fix grammar error:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/657
-update definition
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/660
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/665",
-        rdfs:comment "Energy is power integrated over time.",
-        rdfs:label "energy",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000015"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
-    
     
 Class: OEO_00000151
 
@@ -2265,12 +2404,19 @@ Class: OEO_00000199
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+
+make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1012
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1100",
         rdfs:label "greenhouse gas emission"
     
+    EquivalentTo: 
+        OEO_00000147
+         and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000020)
+    
     SubClassOf: 
-        OEO_00000147,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000020
+        OEO_00000147
     
     
 Class: OEO_00000200
@@ -2383,7 +2529,9 @@ Class: OEO_00000218
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hydro energy is kinetic energy of moving liquid water which can result directly from its potential energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "hydro energy"
     
     SubClassOf: 
@@ -2395,7 +2543,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110002
+        OEO_00020182 some OEO_00110002
     
     
 Class: OEO_00000219
@@ -3184,22 +3332,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
     
 Class: OEO_00000350
 
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000006>
+    
     
 Class: OEO_00000356
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable municipal waste fuel is an municipal waste fuel that has a renewable origin."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogenic municipal waste fuel is a municipal waste fuel that has a biogenic origin."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable municipal waste fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "remove origin 
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
 
 new definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
-        rdfs:label "renewable municipal waste fuel"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961
+
+rename class and change axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+        rdfs:label "biogenic municipal waste fuel"
     
     EquivalentTo: 
         OEO_00000290
-         and (OEO_00000530 some OEO_00030004)
+         and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
         OEO_00000290,
@@ -3584,6 +3740,10 @@ Class: OEO_00000441
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Water is a portion of matter with the chemical formula H2O. It has a liquid normal state of matter.",
         
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1081
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1099"
+        <http://purl.obolibrary.org/obo/IAO_0000116> "We are aware that water is defined as pure H2O in the OEO and that naturally occuring water usually also contains impurities of other portions of matter (e.g. minerals). We purposely neglect this inconsistency for usability reasons.",
+        
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         <http://purl.obolibrary.org/obo/IAO_0000118> "H2O",
@@ -3652,7 +3812,9 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
 remove disposition renewable fuel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732
+add and change axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "wind energy"
     
     SubClassOf: 
@@ -3662,7 +3824,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000043
+        OEO_00020182 some OEO_00000043,
+        OEO_00020183 some OEO_00020043
     
     
 Class: OEO_00000447
@@ -4165,13 +4328,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 Class: OEO_00010028
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A traction motor is an electric motor used for propulsion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric traction motor is an electric motor used for propulsion."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
-        rdfs:label "traction motor"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+relabel and add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
+        rdfs:label "electric traction motor"@en
     
     SubClassOf: 
-        OEO_00010027
+        OEO_00010027,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
     
     
 Class: OEO_00010029
@@ -4608,7 +4776,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+add and change axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine current energy"@en
     
     SubClassOf: 
@@ -4617,7 +4788,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010107
+        OEO_00020182 some OEO_00010107,
+        OEO_00020183 some OEO_00010098
     
     
 Class: OEO_00010098
@@ -4668,12 +4840,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine tidal energy"@en
     
     SubClassOf: 
         OEO_00020087,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010101
+        OEO_00020182 some OEO_00010101
     
     
 Class: OEO_00010101
@@ -4698,7 +4873,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
+
+change axiom from participates in to is energy participant of
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         rdfs:label "marine wave energy"@en
     
     SubClassOf: 
@@ -4707,7 +4885,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921",
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010106
+        OEO_00020182 some OEO_00010106
     
     
 Class: OEO_00010103
@@ -5369,14 +5547,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
 Class: OEO_00010223
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable waste fuel is a waste fuel that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogenic waste fuel is a waste fuel that has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable waste fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
-        rdfs:label "renewable waste fuel"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961
+
+rename class and change axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+        rdfs:label "biogenic waste fuel"@en
     
     EquivalentTo: 
         OEO_00000439
-         and (OEO_00000530 some OEO_00030004)
+         and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
         OEO_00000439
@@ -5401,14 +5584,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
 Class: OEO_00010225
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable industrial waste fuel is an industrial waste fuel that has a renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biogenic industrial waste fuel is an industrial waste fuel that has a biogenic origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable industrial waste fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/925
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
-        rdfs:label "renewable industrial waste fuel"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961
+
+rename class and change axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+        rdfs:label "biogenic industrial waste fuel"@en
     
     EquivalentTo: 
         OEO_00000226
-         and (OEO_00000530 some OEO_00030004)
+         and (OEO_00000530 some OEO_00030001)
     
     SubClassOf: 
         OEO_00000226
@@ -6074,6 +6262,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
     SubClassOf: 
         OEO_00000316
     
+    DisjointWith: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048"
+        OEO_00030004
+    
     
 Class: OEO_00020148
 
@@ -6130,30 +6324,41 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
     SubClassOf: 
         OEO_00000316
     
+    DisjointWith: 
+        OEO_00030002
+    
     
 Class: OEO_00030002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "fossil is an origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is an geogenic origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.
 
 In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Update definition and add disjoint:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "fossil"
     
     SubClassOf: 
         OEO_00030003
     
     DisjointWith: 
-        OEO_00030004
+        OEO_00030001
     
     
 Class: OEO_00030003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter or energies that are the result of geological processes.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
+
+Update definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "geogenic"
     
     SubClassOf: 
@@ -6181,19 +6386,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
         OEO_00000316
     
     DisjointWith: 
-        OEO_00030002
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048"
+        OEO_00020147
     
     
 Class: OEO_00030005
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "synthetic is an origin of portions of matter created artificially by a chemical process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic is an anthropogenic origin of portions of matter created artificially by a chemical process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Make subclass of anthropogenic:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048",
         rdfs:label "synthetic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00030000
     
     
 Class: OEO_00030015
@@ -6211,13 +6423,18 @@ Class: OEO_00030019
 Class: OEO_00030024
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system is a system of spatially extended linked energy sources and sinks.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system is a supply system of spatially extended linked energy sources and sinks.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy supply system",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/432
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/493",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/493
+
+make subclass of supply system:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1071
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1123",
         rdfs:label "energy system"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/RO_0002577>
+        OEO_00030025
     
     
 Class: OEO_00030025
@@ -6834,13 +7051,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
 Class: OEO_00140056
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow potential is a quantity value that describes the upper limit of an input or output of a process in a spatial region of reference per unit time.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow potential is a potential of an input or output of a process, per time unit.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607
+
+change: adjust definition to be based on parent class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1093
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102",
         rdfs:label "flow potential"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00290000
     
     
 Class: OEO_00140057
@@ -6906,13 +7127,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
 Class: OEO_00140062
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A stock potential is a quantity value that describes the upper limit of a stock of a source or sink in a spatial region of reference.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A stock potential is a potential of the stock of a source or sink.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/481
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/607
+
+change: adjust definition to be based on parent class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1093
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102",
         rdfs:label "stock potential"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00290000
     
     
 Class: OEO_00140063
@@ -7695,6 +7920,197 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/997"@en,
     SubClassOf: 
         OEO_00050019,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030035
+    
+    
+Class: OEO_00240026
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial material is a portion of matter that is the physical output of an industrial process and that has a good role."@en,
+        rdfs:label "industrial material"
+    
+    EquivalentTo: 
+        (OEO_00240025 some OEO_00050000)
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011)
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00240027
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical substance is a portion of matter of constant composition and that is neither a metal or mineral. It is composed of molecular entities of the same type or of different types that is used in or produced by a chemical reaction involving changes to atoms or molecules. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "chemical substance"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00240025 some OEO_00050000,
+        OEO_00240025 some OEO_00140033,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00240028
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Paper is a portion of matter that is made from cellulose fibres and other plant materials. It is used for paper-based products. It has a solid normal state of matter. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "paper"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00240029
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Cement is a portion of matter that is made from limestone and clay; other elements may be present. It is used as a building material to set as a solid mass or is used as an ingredient in making mortar or concrete. It has a solid normal state of matter. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "cement"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00240030
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral is a portion of matter that is normally crystalline formed."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "mineral"
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00240031
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A non-metallic mineral is a mineral that does not contain any metallic content within themselves. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Some examples for non-metallic minerals are ceramic, glass, clay or gypsum."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "non-metallic mineral"
+    
+    SubClassOf: 
+        OEO_00240030,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00240032
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A metal is a portion of matter consisting of an atom of an element that exhibits typical metallic properties, being typically shiny, with high electrical and thermal conductivity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "metal"
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
+Class: OEO_00240034
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Steel is a metal that consists mainly of iron and up to 2.14 % of carbon; other elements may be present. It has a solid normal state of matter. It has a solid normal state of matter. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "steel"
+    
+    SubClassOf: 
+        OEO_00240032,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011,
+        OEO_00000529 value OEO_00000390
+    
+    
+Class: OEO_00240035
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A non-ferrous metal is a metal that does not contain a significant amount of iron in its chemical composition. It is the physical output of an industrial process and has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
+        rdfs:label "non-ferrous metal"
+    
+    SubClassOf: 
+        OEO_00240032,
+        OEO_00240025 some OEO_00050000,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00260001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ramping is a process attribute that describes the change in power of an energy transformation unit or an energy converting component per time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "ramping"@en
+    
+    SubClassOf: 
+        OEO_00030019
+    
+    
+Class: OEO_00260002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Start-up speed is ramping during a cold start.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "start-up speed"@en
+    
+    SubClassOf: 
+        OEO_00260001
+         and (OEO_00000502 some OEO_00260003)
+    
+    
+Class: OEO_00260003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A cold start is a process in which an energy transformation unit is started-up after a period of inactivity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "cold start"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+         and (OEO_00000500 some OEO_00260002)
+    
+    
+Class: OEO_00290000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential is a quantity value that describes some upper limit in a spatial region of reference.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1093
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102",
+        rdfs:label "potential"@en
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00290001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A slope is a quantity value with a plane angle unit that measures the angle between the plane of a surface and the horizontal plane."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add slope
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1087
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1112",
+        rdfs:label "slope"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000122>
     
     
 Individual: OEO_00000182

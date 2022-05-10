@@ -100,15 +100,20 @@ ObjectProperty: OEO_00000503
 ObjectProperty: OEO_00000504
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a continuant (A) and a continuant or occurant (B) in which (A) determines the semantic of (B)",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a continuant (A) and a continuant or occurent (B) in which (A) determines the semantic of (B)",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/460
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/480/",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/480/
+
+domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871
+
+adapt domains and ranges:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+issue: https://github.com/OpenEnergyPlatform/ontology/pull/1085",
         rdfs:label "is defined by"
     
-    Domain: 
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
+    Range: 
         <http://purl.obolibrary.org/obo/BFO_0000002>
     
     
@@ -196,13 +201,22 @@ ObjectProperty: OEO_00020070
         <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a market exchange and the financial instruments, commodities, or other products, services, or goods which are traded there.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
 
-change domain: 
+change range: 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/791
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/842",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/842
+
+add domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
         rdfs:label "is traded at"
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Domain: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000116> "Extension of domain to financial instrument and other products planned"
+        OEO_00010116 or OEO_00020067 or OEO_00140124
     
     Range: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
@@ -215,11 +229,23 @@ ObjectProperty: OEO_00020071
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between financial instruments, commodities, or other products, services, or goods and a market exchange.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+add domain and range:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
         rdfs:label "trades"
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    Range: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000116> "Extension of range to financial instrument and other products planned"
+        OEO_00010116 or OEO_00020067 or OEO_00140124
     
     InverseOf: 
         OEO_00020070
@@ -343,6 +369,9 @@ Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000000>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000187>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000190>
@@ -1420,15 +1449,6 @@ https://github.com/OpenEnergyPlatform/ontology/pull/676",
     
     
 Class: OEO_00140040
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterised by a person, organisation or object needing it for a specific purpose.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
-        rdfs:label "demand"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000017>
     
     
 Class: OEO_00140109
@@ -1787,6 +1807,43 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
     
 Class: OEO_00240003
 
+    
+Class: OEO_00240021
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A discount rate is an economic value with the unit percent that refers to the interest rate used in discounted cash flow (DCF) analysis to determine the present value of future cash flows."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1049
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1077"@en,
+        rdfs:label "discount rate"
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000187>
+    
+    
+Class: OEO_00240036
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An import price is the monetary price for the import of a material entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1050
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1083",
+        rdfs:label "import price"
+    
+    SubClassOf: 
+        OEO_00040003
+    
+    
+Class: OEO_00240037
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An export price is the monetary price for the export of a material entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1050
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1083",
+        rdfs:label "export price"
+    
+    SubClassOf: 
+        OEO_00040003
+    
     
 Individual: OEO_00000160
 
@@ -2389,12 +2446,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595",
 Individual: OEO_00010064
 
     Annotations: 
-        OEO_00010037 "CRF 1.A.3.e",
+        OEO_00010037 "CRF 1.A.3.e.i",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'pipeline transport' is a transport sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
 Combustion related emissions from the operation of pump stations and maintenance of pipelines. Transport via pipelines includes transport of gases  liquids, slurry and other commodities via pipelines. Distribution of natural or manufactured gas, water or steam from the distributor to final users is excluded and should be reported in 1 A 1 c ii or 1 A 4 a.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/580
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
+
+fix unique individual identfier
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1121
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1122",
         rdfs:label "CRF sector (IPCC 2006): pipeline transport"
     
     Types: 
