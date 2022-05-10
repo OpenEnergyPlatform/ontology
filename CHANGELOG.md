@@ -14,6 +14,13 @@ Here is a template for new release sections
 ### Removed
 
 ```
+
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+### Changed
+### Removed
+
 ## [1.10.0] - 2022-05-09
 
 ### Added
