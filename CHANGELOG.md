@@ -59,6 +59,7 @@ Here is a template for new release sections
 - energy system (#1123)
 - trades / is traded at, good, good role (#1127)
 - traction motor -> electric traction motor (#1135)
+- capacity factor (#1144)
 
 ### Removed
 
