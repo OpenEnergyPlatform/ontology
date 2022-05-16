@@ -41,6 +41,7 @@ Here is a template for new release sections
 - CITATION.cff (#1134)
 - propulsion, traction motor (#1135)
 - causally downstream of or within, causally upstream of or within (#1136)
+- nationally determined contribution (#1151)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
