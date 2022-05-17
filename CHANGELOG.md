@@ -21,6 +21,7 @@ Here is a template for new release sections
 - programming language (#1156)
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- has input, input of, has output, output of, participates in, has participant (#1138)
 ### Removed
 
 ## [1.10.0] - 2022-05-09
