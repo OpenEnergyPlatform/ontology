@@ -19,6 +19,7 @@ Here is a template for new release sections
 
 ### Added
 ### Changed
+- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 ### Removed
 
 ## [1.10.0] - 2022-05-09
@@ -41,6 +42,7 @@ Here is a template for new release sections
 - CITATION.cff (#1134)
 - propulsion, traction motor (#1135)
 - causally downstream of or within, causally upstream of or within (#1136)
+- nationally determined contribution (#1151)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -58,7 +60,7 @@ Here is a template for new release sections
 - energy system (#1123)
 - trades / is traded at, good, good role (#1127)
 - traction motor -> electric traction motor (#1135)
-- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- capacity factor (#1144)
 
 ### Removed
 
