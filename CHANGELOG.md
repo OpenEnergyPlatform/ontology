@@ -19,6 +19,7 @@ Here is a template for new release sections
 
 ### Added
 ### Changed
+- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 ### Removed
 
 ## [1.10.0] - 2022-05-09
