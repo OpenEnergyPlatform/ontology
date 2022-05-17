@@ -22,6 +22,7 @@ Here is a template for new release sections
 - maximum value, power capacity (#1155)
 
 ### Changed
+- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 - capacity factor (#1144)
 - power value, declared net capacity, nameplate capacity, power rating (#1155)
 
