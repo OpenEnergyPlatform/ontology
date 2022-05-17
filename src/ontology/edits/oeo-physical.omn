@@ -115,6 +115,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002092>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002233>
 
     Annotations: 
@@ -4809,6 +4812,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1044",
     SubClassOf: 
         OEO_00110005,
         OEO_00010234 some OEO_00010097,
+                
+            Annotations: rdfs:comment "reintroduce axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
@@ -7896,15 +7904,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/945",
 Class: OEO_00240016
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A net capacity factor is a fraction that is calculated by dividing the net electricity generation over a given time step by the declared net capacity times the length of this time step."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A net capacity factor is a fraction value that is calculated by dividing the net electricity generation over a given time step by the declared net capacity times the length of this time step."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "A net capacity factor is typically calculated for a year but other time steps (e.g. month or day) are possible."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "capacity factor",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/890
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/946",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/946
+
+make subclass of 'fraction value':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1144
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1146",
         rdfs:label "net capacity factor"
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00140127
     
     
 Class: OEO_00240018
@@ -8059,6 +8071,44 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082",
         OEO_00240032,
         OEO_00240025 some OEO_00050000,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00260001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ramping is a process attribute that describes the change in power of an energy transformation unit or an energy converting component per time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "ramping"@en
+    
+    SubClassOf: 
+        OEO_00030019
+    
+    
+Class: OEO_00260002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Start-up speed is ramping during a cold start.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "start-up speed"@en
+    
+    SubClassOf: 
+        OEO_00260001
+         and (OEO_00000502 some OEO_00260003)
+    
+    
+Class: OEO_00260003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A cold start is a process in which an energy transformation unit is started-up after a period of inactivity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+        rdfs:label "cold start"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+         and (OEO_00000500 some OEO_00260002)
     
     
 Class: OEO_00290000
