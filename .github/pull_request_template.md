@@ -1,18 +1,50 @@
-<!-- you can erase these warnings once you took good notice of them -->
+---
+name: "New Pull Request (PR)"
+about: For including new features into the ontology
+title: Your title should make sense if said after "This PR is solving <your issue>"
+labels: "Pull Request Template"
+assignees: ''
 
-**IMPORTANT: Please do not create a Pull Request without [creating an issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose) first.**
+---
 
-**IMPORTANT: Be aware of the **latest** version of the [workflow](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTE.md)**
+## Summary of the discussion in the issue
+
+Here describe the findings of the discussion in the issue.
+
+## Type of change
+
+### Added
+
+### Updated
+
+### Removed
 
 
-*Change of the ontology needs to be discussed before proceeding. Failure to do so may result in the rejection of the pull request.*
+## Workflow checklist
+
+### Assignee
+
+- [ ] An agreement has been reached
+- [ ] 🐙 Create a draft pull request
+- [ ] 🐙 Add yourself as Assignee
+- [ ] 📙 Add PR to term tracker item
+- [ ] 📝 Update the changelog.md
+- [ ] 🐙 Add someone or a group as Reviewer
+- [ ] 🐙 All unit tests pass
+- [ ] 🐙 Publish pull request
+
+### Reviewer
+
+- [ ] ToDo: Add checklist for reviewer
+
+### Assignee
+
+- [ ] 🐙 Merge pull request
+- [ ] 🐙 Delete branch
+- [ ] 🐙 Close issue
 
 
-**Automatically closing issue**
+**Automation**
 
-Put `closes #XXXX` in this Pull Request's description to auto-close the issue that your PR fixes (if such). You can also use one of these key words
-
-## Issue description
-
-Please copy paste the issue description in place of this text
+Closes #X
 
