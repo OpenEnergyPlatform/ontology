@@ -31,7 +31,7 @@ Here describe the findings of the discussion in the issue or meeting.
 - [ ] 🐙 Create a draft pull request
 - [ ] 🐙 Add yourself as Assignee
 - [ ] 📙 Add PR to term tracker item
-- [ ] 📝 Update the changelog.md
+- [ ] 📝 Update the [CHANGELOG.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CHANGELOG.md)
 - [ ] 🐙 Add someone or a group as Reviewer
 - [ ] 🐙 All unit tests pass
 - [ ] 🐙 Publish pull request
