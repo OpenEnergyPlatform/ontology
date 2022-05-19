@@ -61,7 +61,7 @@ $(VERSIONDIR)/catalog-v001.xml: src/ontology/catalog-v001.xml
 	sed -i -E "s/edits\//modules\//m" $@
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/latest/download/robot.jar
 
 build/hermit.jar: | build
 	curl -L -o /tmp/hermit.zip http://www.hermit-reasoner.com/download/current/HermiT.zip
