@@ -28,11 +28,11 @@ Here describe the findings of the discussion in the issue or meeting.
 
 ### Assignee
 - [ ] An agreement has been reached
-- [ ] 🐙 Create a draft pull request
 - [ ] 🐙 Add yourself as Assignee
-- [ ] 📙 Add PR to term tracker item
+- [ ] 🐙 Add someone or a group (oeo-dev) as Reviewer
+- [ ] 🐙 Create a draft pull request
 - [ ] 📝 Update the [CHANGELOG.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CHANGELOG.md)
-- [ ] 🐙 Add someone or a group as Reviewer
+- [ ] 📙 Add # to term tracker item
 - [ ] 🐙 All unit tests pass
 - [ ] 🐙 Publish pull request
 
