@@ -33,6 +33,7 @@ Here describe the findings of the discussion in the issue or meeting.
 - [ ] 🐙 Create a draft pull request
 - [ ] 📝 Update the [CHANGELOG.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CHANGELOG.md)
 - [ ] 📙 Add # to term tracker item
+- [ ] 🐙 All unit tests pass
 - [ ] 🐙 Publish pull request
 
 ### Reviewer
