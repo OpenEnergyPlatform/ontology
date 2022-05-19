@@ -88,7 +88,7 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 
 $(VERSIONDIR)/oeo-full.omn : | base
 	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.omn $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $(UNION_FILE)
-	$(ROBOT) reason --catalog $(VERSIONDIR)/catalog-v001.xml --input $(UNION_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $(INFERED_FILE)
+	$(ROBOT) reason --reasoner hermit --catalog $(VERSIONDIR)/catalog-v001.xml --input $(UNION_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $(INFERED_FILE)
 	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input $(UNION_FILE) --input $(INFERED_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
 
 $(VERSIONDIR)/oeo-full.owl : $(VERSIONDIR)/oeo-full.omn
