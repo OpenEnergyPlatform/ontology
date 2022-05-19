@@ -7,23 +7,26 @@ assignees: ''
 
 ---
 
-## Summary of the discussion in the issue
 
-Here describe the findings of the discussion in the issue.
+## Summary of the discussion
+
+Here describe the findings of the discussion in the issue or meeting.
 
 ## Type of change
 
 ### Added
+- Added a new class [#](https://github.com/OpenEnergyPlatform/ontology/issues/)
 
 ### Updated
+- Updated a definition [#](https://github.com/OpenEnergyPlatform/ontology/issues/)
 
 ### Removed
+- Removed a broken link [#](https://github.com/OpenEnergyPlatform/ontology/issues/)
 
 
 ## Workflow checklist
 
 ### Assignee
-
 - [ ] An agreement has been reached
 - [ ] 🐙 Create a draft pull request
 - [ ] 🐙 Add yourself as Assignee
@@ -34,17 +37,14 @@ Here describe the findings of the discussion in the issue.
 - [ ] 🐙 Publish pull request
 
 ### Reviewer
-
 - [ ] ToDo: Add checklist for reviewer
 
 ### Assignee
-
 - [ ] 🐙 Merge pull request
 - [ ] 🐙 Delete branch
 - [ ] 🐙 Close issue
 
 
 **Automation**
-
 Closes #X
 
