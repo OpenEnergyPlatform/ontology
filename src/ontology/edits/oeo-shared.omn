@@ -238,6 +238,40 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002352>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002410>
+
+    Domain: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "add domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136"
+        <http://purl.obolibrary.org/obo/BFO_0000015> or <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    Range: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "add domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136"
+        <http://purl.obolibrary.org/obo/BFO_0000015> or <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002501>
+
+    Domain: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "add domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136"
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "add domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136"
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     Annotations: 
@@ -1270,30 +1304,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
 Class: OEO_00010116
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A good is a material entity that has the good role.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A good is a continuant that has the good role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
 move to oeo-shared
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869
+
+make good a continuant:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
         rdfs:label "good"@en
     
     EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
+        <http://purl.obolibrary.org/obo/BFO_0000002>
          and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010117)
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
+        <http://purl.obolibrary.org/obo/BFO_0000002>
     
     
 Class: OEO_00010117
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a physical, produced item over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money or real estate.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a continuant over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
 add relation to monetary price
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034
+
+update definition:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
         rdfs:label "good role"@en
     
     SubClassOf: 
@@ -2015,6 +2055,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
+Class: OEO_00140040
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterised by a person, organisation or object needing it for a specific purpose.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
+        rdfs:label "demand"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000017>
+
+
 Class: OEO_00140081
 
     Annotations: 
@@ -2060,6 +2112,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078"@en,
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000009>
+    
+    
+Class: OEO_00240024
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy service demand is a demand of an agent to use energy as a means to obtain or facilitate desired end services or states."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "An example is the transport demand for goods or persons (e.g. in person/tonne-kilometres). An other example is the demand for room heating or cooling."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1054
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1080",
+        rdfs:label "energy service demand"
+    
+    SubClassOf: 
+        OEO_00140040,
+        OEO_00010121 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000051)
     
     
 Class: OEO_00240038

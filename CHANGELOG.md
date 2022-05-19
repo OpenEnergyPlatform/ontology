@@ -15,17 +15,36 @@ Here is a template for new release sections
 
 ```
 
-## [1.X.X] - 20XX-XX-XX  - unreleased
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+- programming language (#1156)
+### Changed
+- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- has input, input of, has output, output of, participates in, has participant (#1138)
+### Removed
+
+## [1.10.0] - 2022-05-09
 
 ### Added
 - abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
+- energy service demand (#1080)
 - industrial material, chemical substance, paper, cement, mineral, non-metallic mineral, metal, non-ferrous metal, steel, physical output of (#1082)
 - import price, export price (#1083)
 - personal living space (#1084)
 - data / copyright / software license, has copyright license (#1090)
+- slope, surface azimuth angle (#1112)
+- potential (#1102)
 - information input/output of (#1113)
+- ramping, start-up speed, cold start (#1126)
+- heat generation, combustion thermal energy transformation (#1130)
+- study factsheet, OEP study factsheet, scenario study (#1131)
+- CITATION.cff (#1134)
+- propulsion, traction motor (#1135)
+- causally downstream of or within, causally upstream of or within (#1136)
+- nationally determined contribution (#1151)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)
@@ -35,10 +54,15 @@ Here is a template for new release sections
 - starts, starts with, located in, location of, ends, ends with, part of, has part (#1086)
 - acronym (#1075)
 - space requirement (#1084)
+- flow potential, stock potential (#1102)
 - energy, has role (#1101)
 - greenhouse gas emission (#1100)
 - water (#1099)
 - CRF sector (IPCC 2006): pipeline transport (#1122)
+- energy system (#1123)
+- trades / is traded at, good, good role (#1127)
+- traction motor -> electric traction motor (#1135)
+- capacity factor (#1144)
 
 ### Removed
 
