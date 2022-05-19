@@ -19,6 +19,7 @@ Here is a template for new release sections
 
 ### Added
 - programming language (#1156)
+- github: template for pull requests (#1162)
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 - has input, input of, has output, output of, participates in, has participant (#1138)
