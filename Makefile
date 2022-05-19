@@ -21,6 +21,7 @@ ROBOT_PATH := build/robot.jar
 ROBOT := java -jar $(ROBOT_PATH)
 
 UNION_FILE := $(shell mktemp).omn
+INFERED_FILE := $(shell mktemp).omn
 
 define replace_devs
 	sed -i -E "s/$(OEP_BASE)\/dev\/([a-zA-Z/\.\-]+)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
@@ -87,7 +88,8 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 
 $(VERSIONDIR)/oeo-full.omn : | base
 	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.omn $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $(UNION_FILE)
-	$(ROBOT) reason --create-new-ontology true --catalog $(VERSIONDIR)/catalog-v001.xml --input $(UNION_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(ROBOT) reason --catalog $(VERSIONDIR)/catalog-v001.xml --input $(UNION_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $(INFERED_FILE)
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input $(UNION_FILE) --input $(INFERED_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
 
 $(VERSIONDIR)/oeo-full.owl : $(VERSIONDIR)/oeo-full.omn
 	$(call translate_to_owl,$@,$<)
