@@ -19,8 +19,13 @@ OMN_TRANSLATE := ${patsubst %.omn,%.owl,$(OMN_FILES)}
 RM=/bin/rm
 ROBOT_PATH := build/robot.jar
 ROBOT := java -jar $(ROBOT_PATH)
-HERMIT_PATH := build/hermit.jar
-HERMIT := java -jar $(HERMIT_PATH)
+
+KONCLUDE := build/konclude
+
+T_KONCLUDE := $(shell mktemp)
+T_KONCLUDE_DIR := $(shell mktemp -d)
+BARE_FILE := $(shell mktemp).owx
+SUB_FILE := $(shell mktemp).omx
 
 define replace_devs
 	sed -i -E "s/$(OEP_BASE)\/dev\/([a-zA-Z/\.\-]+)/$(OEP_BASE)\/releases\/$(VERSION)\/\1/m" $1
@@ -40,7 +45,7 @@ endef
 
 all: base merge
 
-base: | directories $(VERSIONDIR)/catalog-v001.xml build/hermit.jar build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
+base: | directories $(VERSIONDIR)/catalog-v001.xml build/konclude build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
 
 merge: | $(VERSIONDIR)/oeo-full.owl
 
@@ -63,10 +68,11 @@ $(VERSIONDIR)/catalog-v001.xml: src/ontology/catalog-v001.xml
 build/robot.jar: | build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/latest/download/robot.jar
 
-build/hermit.jar: | build
-	curl -L -o /tmp/hermit.zip http://www.hermit-reasoner.com/download/current/HermiT.zip
-	unzip /tmp/hermit.zip -d /tmp/
-	cp /tmp/HermiT.jar $@
+build/konclude: | build
+	curl -L -o $(T_KONCLUDE) https://github.com/konclude/Konclude/releases/download/v0.7.0-1138/Konclude-v0.7.0-1138-Linux-x64-GCC-Static-Qt5.12.10.zip
+	unzip $(T_KONCLUDE) -d $(T_KONCLUDE_DIR)
+	cp $(T_KONCLUDE_DIR)/Konclude*/Binaries/Konclude $@
+	
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
 	$(call translate_to_owl,$@,$<)
@@ -91,10 +97,9 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 	$(call replace_devs,$@)
 
 $(VERSIONDIR)/oeo-full.omn : | base
-	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.omn $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output /tmp/oeo-full-bare.omn
-	$(HERMIT) -cO -v2 -o/tmp/subs.ofn file:///tmp/oeo-full-bare.omn
-	$(ROBOT) convert --input /tmp/subs.ofn --output /tmp/subs.omn --format omn
-	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input /tmp/oeo-full-bare.omn --input /tmp/subs.omn annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.omn $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $(BARE_FILE)
+	$(KONCLUDE) classification -o $(SUB_FILE) -i $(BARE_FILE)
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input $(SUB_FILE) --input $(BARE_FILE) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
 
 $(VERSIONDIR)/oeo-full.owl : $(VERSIONDIR)/oeo-full.omn
 	$(call translate_to_owl,$@,$<)
