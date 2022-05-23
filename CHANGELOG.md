@@ -25,6 +25,8 @@ Here is a template for new release sections
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 - capacity factor (#1144)
 - power value, declared net capacity, nameplate capacity, power rating (#1155)
+- has input, input of, has output, output of, participates in, has participant (#1138)
+- software license (#1163)
 
 ### Removed
 
