@@ -5361,12 +5361,19 @@ Class: OEO_00010157
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power value is a quantity value that has a power unit as unit.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
+
+Make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "power value"@en
     
+    EquivalentTo: 
+        OEO_00000350
+         and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>)
+    
     SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
+        OEO_00000350
     
     
 Class: OEO_00010210
@@ -5636,6 +5643,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
     
     SubClassOf: 
         OEO_00000226
+    
+    
+Class: OEO_00010256
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A maximum value is a quantity value that represents the upper limit of an artificial object or process to contain or transform another entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
+        rdfs:label "maximum value"@de
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00010257
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power capacity is a maximum value of a generator or power generating unit to generate power.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
+        rdfs:label "power capacity"@de
+    
+    SubClassOf: 
+        OEO_00010256,
+        OEO_00000334 or (OEO_00020056 some OEO_00000188),
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
 Class: OEO_00020001
@@ -7662,7 +7695,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
 Class: OEO_00230001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is a power value stating the maximum power an energy converting component can convert.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is a power capacity stating the maximum power an energy converting component can convert.",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
@@ -7675,11 +7708,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+Make subclass of 'power capacity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "power rating"@en
     
     SubClassOf: 
-        OEO_00010157,
+        OEO_00010257,
         OEO_00020056 some OEO_00000011,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
@@ -7687,17 +7724,21 @@ https://github.com/OpenEnergyPlatform/ontology/pull/993",
 Class: OEO_00230002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is a power value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is a power capacity stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
 
 Make it subclass of power value and add unit axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
+
+Make subclass of 'power capacity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "declared net capacity"@en
     
     SubClassOf: 
-        OEO_00010157,
+        OEO_00010257,
         OEO_00020056 some 
             (OEO_00000031 or OEO_00000334),
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
@@ -7706,7 +7747,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
 Class: OEO_00230003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the power value stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting component of that power plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the power capacity stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting component of that power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
 extend to artificial objects:
@@ -7716,11 +7757,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+Make subclass of 'power capacity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "nameplate capacity"@en
     
     SubClassOf: 
-        OEO_00010157,
+        OEO_00010257,
         OEO_00020056 some OEO_00000061
     
     
@@ -8114,13 +8159,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
 Class: OEO_00290000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential is a quantity value that describes some upper limit in a spatial region of reference.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential is a maximum value that describes some upper limit in a spatial region of reference.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1093
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102
+
+make subclass of 'maximum value':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "potential"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00010256
     
     
 Class: OEO_00290001
