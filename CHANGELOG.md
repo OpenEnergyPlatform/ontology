@@ -29,6 +29,7 @@ Here is a template for new release sections
 - software license (#1163)
 - photon, energy (#1165)
 - energy carrier (#1173)
+- fossil (#1181)
 
 ### Removed
 
