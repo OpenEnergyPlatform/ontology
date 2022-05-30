@@ -378,6 +378,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         OEO_00240025
     
     
+ObjectProperty: OEO_00010121
+
+    
 ObjectProperty: OEO_00010234
 
     Annotations: 
@@ -869,7 +872,11 @@ Class: OEO_00000001
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel role is a role of a portion of matter that has the disposition to be an energy carrier and is used in a process that releases the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+
+add has bearer axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         rdfs:label "fuel role",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -877,7 +884,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_33292"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00010121 some OEO_00000331
     
     
 Class: OEO_00000003
@@ -5721,7 +5729,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041",
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+add axiom relating to energy carrier
+input and output axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         rdfs:label "energy transformation"@en
     
     SubClassOf: 
@@ -5735,6 +5748,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000011,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
@@ -6354,12 +6368,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
 Class: OEO_00030000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter or energies created by human activity.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "include \"or energies\"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Anthropogenic is an origin of portions of matter or energies created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+
+include \"or energies\"
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
         rdfs:label "anthropogenic"
     
     SubClassOf: 
@@ -6369,7 +6384,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
 Class: OEO_00030001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "biogenic is an origin of portions of matter made by or produced from life forms.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogenic is an origin of portions of matter made by or produced from life forms.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
         rdfs:label "biogenic"
@@ -6384,15 +6399,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
 Class: OEO_00030002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is a geogenic origin of portions of matter created from organic material by geological processes lasting thousands or millions of years.
-
-In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is an geogenic origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
 
 Update definition and add disjoint:
 https://github.com/OpenEnergyPlatform/ontology/issues/872
-https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Shift part of the definition into an editor note:
+Issue: https://github.com/OpenEnergyPlatform/ontology/issues/1180
+Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1181",
         rdfs:label "fossil"
     
     SubClassOf: 
@@ -6405,7 +6423,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1048",
 Class: OEO_00030003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter or energies that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Geogenic is an origin of portions of matter or energies that are the result of geological processes.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
 
@@ -6422,7 +6440,6 @@ Class: OEO_00030004
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of energies that replenish on a human time scale.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/397
