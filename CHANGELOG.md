@@ -28,6 +28,9 @@ Here is a template for new release sections
 - has input, input of, has output, output of, participates in, has participant (#1138)
 - software license (#1163)
 - photon, energy (#1165)
+- energy carrier (#1173)
+- transformation, energy transformation, energy carrier disposition, fuel role (#1178)
+- fossil (#1181)
 
 ### Removed
 
