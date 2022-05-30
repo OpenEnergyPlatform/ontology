@@ -30,6 +30,7 @@ Here is a template for new release sections
 - photon, energy (#1165)
 - energy carrier (#1173)
 - transformation, energy transformation, energy carrier disposition, fuel role (#1178)
+- fossil (#1181)
 
 ### Removed
 
