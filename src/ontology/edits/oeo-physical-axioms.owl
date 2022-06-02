@@ -3,6 +3,7 @@
      xml:base="http://openenergy-platform.org/ontology/oeo/oeo-physical-axioms/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:bfo="http://purl.obolibrary.org/obo/bfo.owl#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -27,6 +28,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000233 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000233"/>
     
 
 
@@ -162,21 +169,34 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    <owl:Class>
-        <owl:intersectionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
-                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
-            </owl:Restriction>
-        </owl:intersectionOf>
-        <rdfs:subClassOf>
+    <owl:Axiom>
+        <owl:annotatedSource>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000053"/>
+                        <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+                <rdfs:subClassOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
+                        <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
+                    </owl:Restriction>
+                </rdfs:subClassOf>
+            </owl:Class>
+        </owl:annotatedSource>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000091"/>
                 <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000151"/>
             </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+        </owl:annotatedTarget>
+        <obo:IAO_0000233>issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/issues/1167</obo:IAO_0000233>
+    </owl:Axiom>
     <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000040"/>
