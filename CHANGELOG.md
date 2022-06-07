@@ -20,6 +20,7 @@ Here is a template for new release sections
 ### Added
 - nationally determined contribution (#1151)
 - maximum value, power capacity (#1155)
+- bioenergy (#1188)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
