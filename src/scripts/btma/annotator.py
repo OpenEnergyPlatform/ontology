@@ -15,6 +15,7 @@ import csv
 import subprocess as sp
 import os
 import shutil as sh
+import sys, time, threading
 #import panda as pn
 #import numpy as np
 
@@ -27,8 +28,21 @@ modules = ['oeo-shared',
            'oeo-social',
            'oeo-model']
 
+def find_root_dir(dirname : str):
+    return find_root_dir_(path.Path('.').absolute(), dirname)
 
-src_path = path.Path('src').absolute()
+def find_root_dir_(cur_path : path.Path, dirname : str):
+    if cur_path.name == dirname:
+        return cur_path
+    else:
+        return find_root_dir_(cur_path.parent, dirname)
+    
+src_path = find_root_dir('src')
+
+changes_exists = False
+running = True
+
+# src_path = path.Path('src').absolute()            <- use in IDE
 script_path = src_path / 'scripts'
 
 omn_path = src_path / 'ontology' / 'edits'
@@ -54,6 +68,8 @@ def extract_IDs_Types(path) -> list:
     return ids
 
 def main():
+    global running
+    global changes_exists
     try:
         os.mkdir(csv_path)
     except:
@@ -78,7 +94,6 @@ def main():
 
     # Load necessary IRIs of the different ontology-modules
 
-    print('Loading ontologies...')
     ids : set = set([])
     for (i,module) in enumerate(modules):
         mod = omn_path / "{m}.omn".format(m=module)
@@ -106,12 +121,11 @@ def main():
             old_ids_per_module[i] = extract_IDs_Types(db_path / (module + '.csv'))
     except:
         pass
-        
-    if old_ids_per_module != ids_per_module:
+    
+    changes_exists = old_ids_per_module != ids_per_module
+    if changes_exists:
 
         # Create overview about IRIs and there belonging
-
-        print('Finding belongings...')
         
         """
         #! Check if duplicates exists in ids
@@ -138,8 +152,6 @@ def main():
                     belonging[i].append(modules[j])
 
         # Create the CSV template with the help of the overview
-
-        print('Creating template...')
         
         types = []
         
@@ -152,28 +164,26 @@ def main():
         csv_table = [["ID", "Entity Type", "OEO:00260001"],
                      ["ID", "TYPE", "AI OEO:00260001"]]
 
-        csv_table_per_module = (csv_table, 
-                                [a for a in csv_table], 
-                                [a for a in csv_table], 
-                                [a for a in csv_table])
+        csv_table_per_module = {'oeo-shared' : csv_table, 
+                                'oeo-physical' : [a for a in csv_table], 
+                                'oeo-social' : [a for a in csv_table], 
+                                'oeo-model' : [a for a in csv_table]}
 
         # Add only one belonging to an entity
         # regarding to following rule:
         # IF in shared THEN annotate as shared ELSE annotate as the first in the list
-        #TODO: Rather use Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>]   
+        # Using Dictionaries instead of lists <dict>[<string>] instead of <list>[<int>] for better maintenance 
         #?DOMAIN EXPERTS: is another rule needed then priority
         for ids, type_, belonging in belongs_to_module:
             if 'oeo-shared' in belonging:
-                csv_table_per_module[0].append([ids, 'owl:' + type_, ontology_iri + '/oeo-shared'])
+                csv_table_per_module['oeo-shared'].append([ids, 'owl:' + type_, ontology_iri + '/oeo-shared'])
             elif 'oeo-physical' in belonging:
-                csv_table_per_module[1].append([ids, 'owl:' + type_, ontology_iri + '/oeo-physical'])
+                csv_table_per_module['oeo-physical'].append([ids, 'owl:' + type_, ontology_iri + '/oeo-physical'])
             elif 'oeo-social' in belonging:
-                csv_table_per_module[2].append([ids, 'owl:' + type_, ontology_iri + '/oeo-social'])
+                csv_table_per_module['oeo-social'].append([ids, 'owl:' + type_, ontology_iri + '/oeo-social'])
             elif 'oeo-model' in belonging:
-                csv_table_per_module[3].append([ids, 'owl:' + type_, ontology_iri + '/oeo-model'])
-        
-        print('Loading prefixes...')
-        
+                csv_table_per_module['oeo-model'].append([ids, 'owl:' + type_, ontology_iri + '/oeo-model'])
+                
         prefix_adder = ""
 
         for prefix in prefixes[1:]:
@@ -182,16 +192,13 @@ def main():
                 if c != '<' and c != '>':
                     prefix_ += c
             prefix_adder += '--add-prefix \"{p}\" '.format(p=prefix_)
-        
                 
-        print('Creating ontologies...')
-        
-        for (i, csv_table) in enumerate(csv_table_per_module):
+        for module in csv_table_per_module:
             f = open(script_path / 'btma' / "template.csv", 'w', newline='')
 
             writer = csv.writer(f)
 
-            writer.writerows(csv_table)
+            writer.writerows(csv_table_per_module[module])
 
             f.close()
 
@@ -204,11 +211,11 @@ def main():
                                                                      template=script_path / 'btma' / 'template.csv',
                                                                      iri=ontology_iri + '/',
                                                                      pre=prefix_adder[-1],
-                                                                     out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i])), shell=True)
+                                                                     out=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=module)), shell=True)
         
         # MERGE OMN files with the oeo modules
         
-        for i in range(len(csv_table_per_module)):
+        for module in csv_table_per_module:
             # Valid Call
             """
             sp.call('java -jar {jar} merge --input {out} \
@@ -217,8 +224,8 @@ def main():
                                            {pre} \
                                            --output {out} \
                                            --include-annotations true'.format(jar=robot_path,
-                                                                              out=omn_path / (modules[i] + '.omn'),
-                                                                              inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i]),
+                                                                              out=omn_path / (module + '.omn'),
+                                                                              inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=module),
                                                                               pre=prefix_adder[:-1],
                                                                               iri=ontology_iri + '/'), shell=True)
             """
@@ -229,9 +236,9 @@ def main():
                                            {pre} \
                                            --output {out_} \
                                            --include-annotations true'.format(jar=robot_path,
-                                                                              out=omn_path / (modules[i] + '.omn'),
-                                                                              out_=omn_path / (modules[i] + '-new.omn'),
-                                                                              inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=modules[i]),
+                                                                              out=omn_path / (module + '.omn'),
+                                                                              out_=omn_path / (module + '-new.omn'),
+                                                                              inp=exp_path / 'belongs-to-{m}-annotation.omn'.format(m=module),
                                                                               pre=prefix_adder[:-1],
                                                                               iri=ontology_iri + '/'), shell=True)
             
@@ -247,11 +254,26 @@ def main():
         sh.rmtree(exp_path)
 
     else:
-        print('Annotations are up to date.')
-        
         sh.rmtree(csv_path)
+        
+    running = False    
 
-    print('Finished!')
-    
+def loadingAnimation(process):
+    #global running
+    while running:
+        chars = '/—\|' 
+        for char in chars:
+            sys.stdout.write('\r'+'Running annotator... '+char)
+            time.sleep(.1)
+            sys.stdout.flush()
+    #sys.stdout.flush()
+    if not changes_exists:
+        sys.stdout.write('\r'+'Annotations are already up to date.\n')
+    sys.stdout.write('\r'+'Finished!                    ')
+            
 if __name__ == '__main__':
-    main()
+    loading_process = threading.Thread(target=main)
+    loading_process.start()
+
+    loadingAnimation(loading_process)
+    loading_process.join()

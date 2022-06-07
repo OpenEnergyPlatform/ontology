@@ -607,13 +607,16 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000117>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000111> "alternative term"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000111> "alternative label"@en,
         <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125>,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An alternative name for a class or property which means the same thing as the preferred name (semantically equivalent)"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A label for a class or property that can be used to refer to the class or property instead of the preferred rdfs:label. Alternative labels should be used to indicate community- or context-specific labels, abbreviations, shorthand forms and the like."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000117> "OBO Operations committee",
         <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON:Daniel Schober"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "GROUP:OBI:<http://purl.obolibrary.org/obo/obi>"@en,
+        rdfs:comment "Consider re-defing to: An alternative name for a class or property which can mean the same thing as the preferred name (semantically equivalent, narrow, broad or related).",
         rdfs:comment "In the OEO, we don't follow the definition strictly. We use alternative term for synonyms and ambiguous terms as well. See https://github.com/OpenEnergyPlatform/ontology/wiki/Handling-ambiguous-terms",
         rdfs:isDefinedBy <http://purl.obolibrary.org/obo/iao.owl>,
+        rdfs:label "alternative label"@en,
         rdfs:label "alternative term"@en
     
     
@@ -741,6 +744,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000427>
         <http://purl.obolibrary.org/obo/IAO_0000115> "Use boolean value xsd:true to indicate that the property is an antisymmetric property"@en,
         <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en,
         rdfs:label "antisymmetric property"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/OMO_0001001>
     
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000589>
@@ -916,6 +922,43 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0100001>
         <http://purl.obolibrary.org/obo/IAO_0000119> "Person:Alan Ruttenberg"@en,
         rdfs:comment "Add as annotation triples in the granting ontology"@en,
         rdfs:label "term replaced by"@en
+    
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/OMO_0001001>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "This is an annotation used on an object property to indicate a logical characterstic beyond what is possible in OWL.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "OBO Operations call",
+        <http://www.geneontology.org/formats/oboInOwl#created_by> <http://orcid.org/0000-0001-5208-3432>,
+        rdfs:label "logical characteristic of object property"
+    
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/OMO_0002000>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "'part disjoint with' 'defined by construct' \"\"\"
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX : <http://example.org/
+    CONSTRUCT {
+      [
+        a owl:Restriction ;
+        owl:onProperty :part_of ;
+        owl:someValuesFrom ?a ;
+        owl:disjointWith [
+          a owl:Restriction ;
+          owl:onProperty :part_of ;
+          owl:someValuesFrom ?b
+        ]
+      ]
+    }
+    WHERE {
+      ?a :part_disjoint_with ?b .
+    }",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Links an annotation property to a SPARQL CONSTRUCT query which is meant to provide semantics for a shortcut relation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> <https://github.com/ontodev/robot/issues/963>,
+        dc:contributor <https://orcid.org/0000-0002-7356-1779>,
+        dc:contributor <https://orcid.org/0000-0002-8688-6599>,
+        rdfs:label "defined by construct"
     
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/RO_0001900>
@@ -1103,6 +1146,19 @@ AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasAlternative
         rdfs:label "has_alternative_id"^^xsd:string
     
     
+AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An alternative label for a class or property which has a more general meaning than the preferred name/primary label.",
+        <http://purl.obolibrary.org/obo/IAO_0000117> <http://orcid.org/0000-0001-5208-3432>,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/ontology-metadata/issues/18",
+        rdfs:label "has broad synonym"@en,
+        rdfs:seeAlso "https://github.com/information-artifact-ontology/ontology-metadata/issues/18"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000118>
+    
+    
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasDbXref>
 
     Annotations: 
@@ -1112,13 +1168,29 @@ AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasDbXref>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     Annotations: 
-        rdfs:label "has_exact_synonym"^^xsd:string
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An alternative label for a class or property which has the exact same meaning than the preferred name/primary label.",
+        <http://purl.obolibrary.org/obo/IAO_0000117> <http://orcid.org/0000-0001-5208-3432>,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/ontology-metadata/issues/20",
+        rdfs:label "has exact synonym"@en,
+        rdfs:label "has_exact_synonym"^^xsd:string,
+        rdfs:seeAlso "https://github.com/information-artifact-ontology/ontology-metadata/issues/20"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000118>
     
     
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym>
 
     Annotations: 
-        rdfs:label "has_narrow_synonym"^^xsd:string
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An alternative label for a class or property which has a more specific meaning than the preferred name/primary label.",
+        <http://purl.obolibrary.org/obo/IAO_0000117> <http://orcid.org/0000-0001-5208-3432>,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/ontology-metadata/issues/19",
+        rdfs:label "has narrow synonym"@en,
+        rdfs:label "has_narrow_synonym"^^xsd:string,
+        rdfs:seeAlso "https://github.com/information-artifact-ontology/ontology-metadata/issues/19"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000118>
     
     
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>
@@ -1136,7 +1208,15 @@ AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasOBONamespac
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym>
 
     Annotations: 
-        rdfs:label "has_related_synonym"^^xsd:string
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An alternative label for a class or property that has been used synonymously with the primary term name, but the usage is not strictly correct.",
+        <http://purl.obolibrary.org/obo/IAO_0000117> <http://orcid.org/0000-0001-5208-3432>,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/ontology-metadata/issues/21",
+        rdfs:label "has related synonym"@en,
+        rdfs:label "has_related_synonym"^^xsd:string,
+        rdfs:seeAlso "https://github.com/information-artifact-ontology/ontology-metadata/issues/21"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000118>
     
     
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#id>
@@ -12104,7 +12184,7 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000225>
         rdfs:label "obsolescence reason specification"@en
     
     EquivalentTo: 
-        {<http://purl.obolibrary.org/obo/IAO_0000103> , <http://purl.obolibrary.org/obo/IAO_0000226> , <http://purl.obolibrary.org/obo/IAO_0000227> , <http://purl.obolibrary.org/obo/IAO_0000228> , <http://purl.obolibrary.org/obo/IAO_0000229>}
+        {<http://purl.obolibrary.org/obo/IAO_0000103> , <http://purl.obolibrary.org/obo/IAO_0000226> , <http://purl.obolibrary.org/obo/IAO_0000227> , <http://purl.obolibrary.org/obo/IAO_0000228> , <http://purl.obolibrary.org/obo/IAO_0000229> , <http://purl.obolibrary.org/obo/OMO_0001000>}
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000102>
@@ -19247,6 +19327,20 @@ Individual: <http://purl.obolibrary.org/obo/IAO_0000428>
     
     Types: 
         <http://purl.obolibrary.org/obo/IAO_0000078>
+    
+    
+Individual: <http://purl.obolibrary.org/obo/OMO_0001000>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The term was added to the ontology on the assumption it was in scope, but it turned out later that it was not."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "This obsolesence reason should be used conservatively. Typical valid examples are: un-necessary grouping classes in disease ontologies, a phenotype term added on the assumption it was a disease."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000117> <http://orcid.org/0000-0001-5208-3432>,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/information-artifact-ontology/ontology-metadata/issues/77",
+        <http://purl.obolibrary.org/obo/IAO_0000234> "https://orcid.org/0000-0001-5208-3432",
+        rdfs:label "out of scope"
+    
+    Types: 
+        <http://purl.obolibrary.org/obo/IAO_0000225>
     
     
 DisjointClasses: 
