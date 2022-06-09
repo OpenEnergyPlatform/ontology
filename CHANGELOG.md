@@ -35,6 +35,7 @@ Here is a template for new release sections
 - transformation, energy transformation, energy carrier disposition, fuel role (#1178)
 - fossil (#1181)
 - energy transformation (#1182)
+- fuel (#1184)
 - fossil energy (#1185)
 
 ### Removed
