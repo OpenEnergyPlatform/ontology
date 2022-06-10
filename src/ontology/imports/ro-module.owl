@@ -115,6 +115,23 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589">
+        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
+        <rdfs:label xml:lang="en">OBO foundry unique label</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000600 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000600">
+        <rdfs:label xml:lang="en">elucidation</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/RO_0001900 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0001900">
@@ -188,6 +205,20 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#isDefinedBy -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#isDefinedBy">
+        <obo:IAO_0000589>is defined by</obo:IAO_0000589>
+    </owl:AnnotationProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.w3.org/2000/01/rdf-schema#isDefinedBy"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000589"/>
+        <owl:annotatedTarget>is defined by</owl:annotatedTarget>
+        <rdfs:comment>This is an experimental annotation</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -273,6 +304,24 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000054 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000054">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <obo:IAO_0000111 xml:lang="en">realized in</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">this disease is realized in this disease course</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this fragility is realized in this shattering</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">this investigator role is realized in this investigation</obo:IAO_0000112>
+        <obo:IAO_0000118 xml:lang="en">is realized by</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">realized_in</obo:IAO_0000118>
+        <obo:IAO_0000600 xml:lang="en">[copied from inverse property &apos;realizes&apos;] to say that b realizes c at t is to assert that there is some material entity d &amp; b is a process which has participant d at t &amp; c is a disposition or role of which d is bearer_of at t&amp; the type instantiated by b is correlated with the type instantiated by c. (axiom label in BFO2 Reference: [059-003])</obo:IAO_0000600>
+        <rdfs:comment>Paraphrase of elucidation: a relation between a realizable entity and a process, where there is some material entity that is bearer of the realizable entity and participates in the process, and the realizable entity comes to be realized in the course of the process</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://purl.obolibrary.org/obo/bfo.owl"/>
+        <rdfs:label xml:lang="en">realized in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000062 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000062">
@@ -330,14 +379,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">participates_in</obo:IAO_0000118>
         <rdfs:label xml:lang="en">participates in</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#inverseOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <obo:IAO_0000233>add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
-    </owl:Axiom>
     
 
 
@@ -355,14 +396,6 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:has_participant</dc:source>
         <rdfs:label xml:lang="en">has participant</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#inverseOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
-        <obo:IAO_0000233>add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
-    </owl:Axiom>
     
 
 
@@ -639,14 +672,6 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has input</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#inverseOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002352"/>
-        <obo:IAO_0000233>add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
-    </owl:Axiom>
     
 
 
@@ -662,14 +687,6 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has output</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#inverseOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
-        <obo:IAO_0000233>add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
-    </owl:Axiom>
     
 
 
@@ -696,14 +713,6 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">input of</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#inverseOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002352"/>
-        <obo:IAO_0000233>add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
-    </owl:Axiom>
     
 
 
@@ -718,14 +727,6 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">output of</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2002/07/owl#inverseOf"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
-        <obo:IAO_0000233>add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
-    </owl:Axiom>
     
 
 
@@ -808,6 +809,14 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label>has intermediate</rdfs:label>
     </owl:ObjectProperty>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002505"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <obo:IAO_0000233>add axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1114
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1138</obo:IAO_0000233>
+    </owl:Axiom>
     
 
 
@@ -980,5 +989,5 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
