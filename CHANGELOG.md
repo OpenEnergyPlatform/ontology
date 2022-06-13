@@ -22,7 +22,7 @@ Here is a template for new release sections
 - maximum value, power capacity (#1155)
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
-- fissible meterial entity (#1190)
+- fissile material entity (#1190, #1196)
 - realized in (#1197)
 
 ### Changed
