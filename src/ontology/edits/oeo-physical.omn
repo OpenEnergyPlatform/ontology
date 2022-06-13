@@ -28,6 +28,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000117>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     
@@ -2170,11 +2173,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801",
 Class: OEO_00000173
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is a portion of matter that has the disposition to be an energy carrier and which has a fuel role that is realised in processes that release the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is a portion of matter that has the disposition to be an energy carrier and that has a fuel role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
 add role fuel commodity
-https://github.com/OpenEnergyPlatform/ontology/pull/748",
+https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+shorten definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1184
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1187",
         rdfs:label "fuel"
     
     EquivalentTo: 
@@ -5679,6 +5686,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
+Class: OEO_00010258
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Bioenergy is chemical energy that is stored in biofuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000117> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1168
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1188",
+        rdfs:label "bioenergy"@de
+    
+    EquivalentTo: 
+        OEO_00000007
+         and (OEO_00000530 some OEO_00030001)
+    
+    SubClassOf: 
+        OEO_00000007
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -6354,18 +6377,38 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
 Class: OEO_00020149
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels and thus has a conventional origin.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955
+
+Update definition and axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1172
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1185",
         rdfs:label "fossil energy"
     
     EquivalentTo: 
         OEO_00000007
          and (OEO_00000530 some OEO_00020147)
-         and (OEO_00000530 some OEO_00030002)
+         and (OEO_00010121 some OEO_00000014)
     
     SubClassOf: 
         OEO_00000007
+    
+    
+Class: OEO_00020196
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fissible material entity is a material entity that has the disposition to carry nuclear (binding) energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1190",
+        rdfs:label "fissible material entity"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000028)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00030000

@@ -20,6 +20,9 @@ Here is a template for new release sections
 ### Added
 - nationally determined contribution (#1151)
 - maximum value, power capacity (#1155)
+- bioenergy (#1188)
+- general class axiom for energy (#1186)
+- fissible meterial entity (#1190)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
@@ -32,6 +35,8 @@ Here is a template for new release sections
 - transformation, energy transformation, energy carrier disposition, fuel role (#1178)
 - fossil (#1181)
 - energy transformation (#1182)
+- fuel (#1184)
+- fossil energy (#1185)
 
 ### Removed
 
