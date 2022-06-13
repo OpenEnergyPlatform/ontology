@@ -37,6 +37,7 @@ Here is a template for new release sections
 - energy transformation (#1182)
 - fuel (#1184)
 - fossil energy (#1185)
+- origin and subclasses, energy, portion of matter (#1192)
 - KSG sector buildings (#1198)
 
 ### Removed
