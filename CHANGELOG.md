@@ -23,6 +23,7 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissible meterial entity (#1190)
+- realized in (#1197)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
