@@ -22,7 +22,7 @@ Here is a template for new release sections
 - maximum value, power capacity (#1155)
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
-- fissile meterial entity (#1190, #1194)
+- fissile meterial entity (#1190, #1196)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
