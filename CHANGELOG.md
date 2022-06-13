@@ -22,7 +22,7 @@ Here is a template for new release sections
 - maximum value, power capacity (#1155)
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
-- fissible meterial entity (#1190)
+- fissile material entity (#1190, #1196)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
@@ -38,6 +38,7 @@ Here is a template for new release sections
 - fuel (#1184)
 - fossil energy (#1185)
 - has institution (#1200)
+- origin and subclasses, energy, portion of matter (#1192)
 
 ### Removed
 
