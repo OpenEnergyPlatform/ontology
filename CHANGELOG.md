@@ -37,10 +37,10 @@ Here is a template for new release sections
 - energy transformation (#1182)
 - fuel (#1184)
 - fossil energy (#1185)
-- waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 - origin and subclasses, energy, portion of matter (#1192)
 - general class axiom "combustible things" (#1195)
 - has institution (#1200)
+- waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 
 ### Removed
 
