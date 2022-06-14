@@ -28,6 +28,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000117>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 
     
@@ -130,6 +133,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002427>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
@@ -375,6 +381,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         OEO_00240025
     
     
+ObjectProperty: OEO_00010121
+
+    
 ObjectProperty: OEO_00010234
 
     Annotations: 
@@ -396,7 +405,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 ObjectProperty: OEO_00010235
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an ouput of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an output of the artificial object or process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "has energy output"@en
@@ -866,7 +875,11 @@ Class: OEO_00000001
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel role is a role of a portion of matter that has the disposition to be an energy carrier and is used in a process that releases the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+
+add has bearer axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         rdfs:label "fuel role",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -874,7 +887,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_33292"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00010121 some OEO_00000331
     
     
 Class: OEO_00000003
@@ -1061,6 +1075,11 @@ Class: OEO_00000014
          and (OEO_00000530 some OEO_00030002)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `fossil combustion fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000099,
         OEO_00000530 some OEO_00030003
     
     DisjointWith: 
@@ -1341,6 +1360,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
          and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020086)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `renevable fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000173,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
@@ -2159,11 +2183,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801",
 Class: OEO_00000173
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is a portion of matter that has the disposition to be an energy carrier and which has a fuel role that is realised in processes that release the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is a portion of matter that has the disposition to be an energy carrier and that has a fuel role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
 add role fuel commodity
-https://github.com/OpenEnergyPlatform/ontology/pull/748",
+https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+shorten definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1184
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1187",
         rdfs:label "fuel"
     
     EquivalentTo: 
@@ -2785,6 +2813,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931",
          and (OEO_00000529 value OEO_00000256)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `liquid biofuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000072,
         OEO_00000530 some OEO_00030001,
         OEO_00000529 value OEO_00000256
     
@@ -3087,14 +3120,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
 
 change definition and add comment with examples:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/974
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:comment "* Biomass has a biogenic origin and if it is converted to biogas, the biogas inherits the the biogenic origin.
 * Hard coal has a fossil origin and if it is used in a coal power plant to generate electrical energy, the electrical energy inherits the fossil origin.
 * Wind energy has renewable origin and if it is converted to electrical energy using a wind turbine, the electrical energy inherits the renewable origin",
         rdfs:label "origin"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
     
     
 Class: OEO_00000318
@@ -3186,19 +3225,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000331
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matters is an aggregate of material entities that have a state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is an aggregate of material entities that have a state of matter."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
 
 definition update and editor note:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/738
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         rdfs:label "portion of matter"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        OEO_00000530 some OEO_00000316
     
     
 Class: OEO_00000332
@@ -3215,6 +3259,11 @@ Class: OEO_00000332
          and (OEO_00000529 value OEO_00000390)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `solid biofuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000072,
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
@@ -3695,6 +3744,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         OEO_00000025 or OEO_00000298
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `volatile organic compound`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000331,
         OEO_00000331
          and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00010011),
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
@@ -3719,6 +3773,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/631",
          and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000042)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `waste fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000173,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
@@ -4122,6 +4181,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
          and (OEO_00000530 some OEO_00030005)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `synthetic fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000173,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
@@ -4809,7 +4873,16 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1044",
     SubClassOf: 
         OEO_00110005,
         OEO_00010234 some OEO_00010097,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010107
+        
+            Annotations: rdfs:comment "reintroduce axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "replace 'has input' with 'causally downstream of or within'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010107
     
     
 Class: OEO_00010099
@@ -4828,7 +4901,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         OEO_00110005,
         OEO_00010234 some OEO_00010100,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010101
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "replace 'has input' with 'causally downstream of or within'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010101
     
     
 Class: OEO_00010100
@@ -4904,7 +4981,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         OEO_00110005,
         OEO_00010234 some OEO_00010102,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
-        <http://purl.obolibrary.org/obo/RO_0002233> some OEO_00010106
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "replace 'has input' with 'causally downstream of or within'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010106
     
     
 Class: OEO_00010104
@@ -5341,12 +5422,19 @@ Class: OEO_00010157
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power value is a quantity value that has a power unit as unit.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
+
+Make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "power value"@en
     
+    EquivalentTo: 
+        OEO_00000350
+         and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>)
+    
     SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
+        OEO_00000350
     
     
 Class: OEO_00010210
@@ -5618,6 +5706,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
         OEO_00000226
     
     
+Class: OEO_00010256
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A maximum value is a quantity value that represents the upper limit of an artificial object or process to contain or transform another entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
+        rdfs:label "maximum value"@de
+    
+    SubClassOf: 
+        OEO_00000350
+    
+    
+Class: OEO_00010257
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power capacity is a maximum value of a generator or power generating unit to generate power.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
+        rdfs:label "power capacity"@de
+    
+    SubClassOf: 
+        OEO_00010256,
+        OEO_00000334 or (OEO_00020056 some OEO_00000188),
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
+    
+    
+Class: OEO_00010258
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Bioenergy is chemical energy that is stored in biofuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000117> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1168
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1188",
+        rdfs:label "bioenergy"@de
+    
+    EquivalentTo: 
+        OEO_00000007
+         and (OEO_00000530 some OEO_00030001)
+    
+    SubClassOf: 
+        OEO_00000007
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -5649,7 +5779,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00020003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy transformation is a process in which one ore more certain types of energy as input result in certain types of energy as output.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy transformation is a transformation in which one or more certain types of energy as input result in certain types of energy as output."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "class added:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/77
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/371
@@ -5663,12 +5793,20 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/680
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/690
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
 
-add relation to energy transformation unit
+add relation to energy transformation unit:
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041",
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+add axiom relating to energy carrier / input and output axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178
+
+update definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1175
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1182"@en,
         rdfs:label "energy transformation"@en
     
     SubClassOf: 
@@ -5682,6 +5820,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000011,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
@@ -6256,11 +6395,16 @@ Class: OEO_00020147
         <http://purl.obolibrary.org/obo/IAO_0000115> "Conventional is an origin of energies that don't replenish when transformed / consumed.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "non-renewable",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "conventional"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some OEO_00000150
     
     DisjointWith: 
         
@@ -6284,45 +6428,80 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
 Class: OEO_00020149
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil energy is chemical energy that is stored in fossil combustion fuels and thus has a conventional origin.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955
+
+Update definition and axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1172
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1185",
         rdfs:label "fossil energy"
     
     EquivalentTo: 
         OEO_00000007
          and (OEO_00000530 some OEO_00020147)
-         and (OEO_00000530 some OEO_00030002)
+         and (OEO_00010121 some OEO_00000014)
     
     SubClassOf: 
         OEO_00000007
     
     
+Class: OEO_00020196
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fissile material entity is a material entity that has the disposition to carry nuclear (binding) energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1190
+
+Fix spelling of label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1196",
+        rdfs:label "fissile material entity"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000028)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
 Class: OEO_00030000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter or energies created by human activity.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "include \"or energies\"
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Anthropogenic is an origin of portions of matter or energies created by human activity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+
+include \"or energies\"
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "anthropogenic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
     
     
 Class: OEO_00030001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "biogenic is an origin of portions of matter made by or produced from life forms.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogenic is an origin of portions of matter made by or produced from life forms.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "biogenic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some OEO_00000331
     
     DisjointWith: 
         OEO_00030002
@@ -6331,19 +6510,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
 Class: OEO_00030002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is an geogenic origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.
-
-In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is a geogenic origin of portions of matter created from organic material by geological processes lasting thousands or millions of years.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
 
 Update definition and add disjoint:
 https://github.com/OpenEnergyPlatform/ontology/issues/872
-https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Shift part of the definition into an editor note:
+Issue: https://github.com/OpenEnergyPlatform/ontology/issues/1180
+Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1181
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "fossil"
     
     SubClassOf: 
-        OEO_00030003
+        OEO_00030003,
+        OEO_00010121 some OEO_00000331
     
     DisjointWith: 
         OEO_00030001
@@ -6352,24 +6539,29 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1048",
 Class: OEO_00030003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter or energies that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Geogenic is an origin of portions of matter or energies that are the result of geological processes.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
 
 Update definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "geogenic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
     
     
 Class: OEO_00030004
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of energies that replenish on a human time scale.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/397
@@ -6379,11 +6571,16 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
 change def
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "renewable"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some OEO_00000150
     
     DisjointWith: 
         
@@ -6401,11 +6598,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
 
 Make subclass of anthropogenic:
 https://github.com/OpenEnergyPlatform/ontology/issues/872
-https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "synthetic"
     
     SubClassOf: 
-        OEO_00030000
+        OEO_00030000,
+        OEO_00010121 some OEO_00000331
     
     
 Class: OEO_00030015
@@ -7642,7 +7844,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
 Class: OEO_00230001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is a power value stating the maximum power an energy converting component can convert.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power rating is a power capacity stating the maximum power an energy converting component can convert.",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
@@ -7655,11 +7857,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+Make subclass of 'power capacity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "power rating"@en
     
     SubClassOf: 
-        OEO_00010157,
+        OEO_00010257,
         OEO_00020056 some OEO_00000011,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
@@ -7667,17 +7873,21 @@ https://github.com/OpenEnergyPlatform/ontology/pull/993",
 Class: OEO_00230002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is a power value stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Declared net capacity is a power capacity stating the maximum power a power generating unit or a power plant can deliver to the electrical grid. It equals the sum of the rated powers of all plant generators minus all power used internally within the plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
 
 Make it subclass of power value and add unit axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
+
+Make subclass of 'power capacity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "declared net capacity"@en
     
     SubClassOf: 
-        OEO_00010157,
+        OEO_00010257,
         OEO_00020056 some 
             (OEO_00000031 or OEO_00000334),
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
@@ -7686,7 +7896,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935",
 Class: OEO_00230003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the power value stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting component of that power plant.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nameplate capacity is the power capacity stating the maximum power an artificial object, e.g. a power generating unit or a power plant, can generate, and the sum of the power ratings of all energy converting component of that power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
 extend to artificial objects:
@@ -7696,11 +7906,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/918
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/935
 
 use energy converting component in definition:
-https://github.com/OpenEnergyPlatform/ontology/pull/993",
+https://github.com/OpenEnergyPlatform/ontology/pull/993
+
+Make subclass of 'power capacity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "nameplate capacity"@en
     
     SubClassOf: 
-        OEO_00010157,
+        OEO_00010257,
         OEO_00020056 some OEO_00000061
     
     
@@ -7723,7 +7937,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00230021
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A photon is a portion of matter that is a light particle."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photon is a material entity that is a light particle."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/661
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
 pull request: https://github.com/OpenEnergyPlatform/ontology/issues/674
@@ -7731,7 +7945,9 @@ add origin
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684
 remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+classify as material entity
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165"@en,
         rdfs:label "photon"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -7739,7 +7955,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_30212"
     
     SubClassOf: 
-        OEO_00000331,
+        <http://purl.obolibrary.org/obo/BFO_0000040>,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020040,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
@@ -7884,15 +8100,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/945",
 Class: OEO_00240016
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A net capacity factor is a fraction that is calculated by dividing the net electricity generation over a given time step by the declared net capacity times the length of this time step."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A net capacity factor is a fraction value that is calculated by dividing the net electricity generation over a given time step by the declared net capacity times the length of this time step."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "A net capacity factor is typically calculated for a year but other time steps (e.g. month or day) are possible."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "capacity factor",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/890
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/946",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/946
+
+make subclass of 'fraction value':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1144
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1146",
         rdfs:label "net capacity factor"
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00140127
     
     
 Class: OEO_00240018
@@ -8090,13 +8310,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
 Class: OEO_00290000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential is a quantity value that describes some upper limit in a spatial region of reference.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential is a maximum value that describes some upper limit in a spatial region of reference.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1093
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1102
+
+make subclass of 'maximum value':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
         rdfs:label "potential"@en
     
     SubClassOf: 
-        OEO_00000350
+        OEO_00010256
     
     
 Class: OEO_00290001

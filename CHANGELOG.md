@@ -14,6 +14,36 @@ Here is a template for new release sections
 ### Removed
 
 ```
+
+## [1.10.1] - 2022-06-14
+
+### Added
+- nationally determined contribution (#1151)
+- maximum value, power capacity (#1155)
+- bioenergy (#1188)
+- general class axiom for energy (#1186)
+- fissile material entity (#1190, #1196)
+
+### Changed
+- marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- has input, input of, has output, output of, participates in, has participant (#1138)
+- capacity factor (#1144)
+- power value, declared net capacity, nameplate capacity, power rating (#1155)
+- software license (#1163)
+- photon, energy (#1165)
+- energy carrier (#1173)
+- transformation, energy transformation, energy carrier disposition, fuel role (#1178)
+- fossil (#1181)
+- energy transformation (#1182)
+- fuel (#1184)
+- fossil energy (#1185)
+- origin and subclasses, energy, portion of matter (#1192)
+- general class axiom "combustible things" (#1195)
+- has institution (#1200)
+- waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
+
+### Removed
+
 ## [1.10.0] - 2022-05-09
 
 ### Added
@@ -28,11 +58,12 @@ Here is a template for new release sections
 - slope, surface azimuth angle (#1112)
 - potential (#1102)
 - information input/output of (#1113)
+- ramping, start-up speed, cold start (#1126)
 - heat generation, combustion thermal energy transformation (#1130)
-- causally downstream of or within, causally upstream of or within (#1136)
+- study factsheet, OEP study factsheet, scenario study (#1131)
 - CITATION.cff (#1134)
 - propulsion, traction motor (#1135)
-- ramping, start-up speed, cold start (#1126)
+- causally downstream of or within, causally upstream of or within (#1136)
 
 ### Changed
 - has bearer, bearer of, is defined by, process attribute of (#985)

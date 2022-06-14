@@ -485,7 +485,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1042",
         OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
     
     Range: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000238
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Replace `institution` as range by `organisation role`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1161
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1200"
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
     
     
 ObjectProperty: OEO_00000514
@@ -587,6 +591,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
     Range: 
         OEO_00020039
     
+    
+ObjectProperty: OEO_00000530
+
     
 ObjectProperty: OEO_00010121
 
@@ -862,6 +869,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
 Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000017>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000019>
 
     
@@ -1064,7 +1074,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956",
 Class: OEO_00000150
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of matter which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
         <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/364
@@ -1075,7 +1085,13 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/660
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/665
 move to oeo-shared
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1030
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101
+adjust definition
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:comment "Energy is power integrated over time.",
         rdfs:label "energy",
         
@@ -1084,7 +1100,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000015"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00000530 some OEO_00000316
     
     
 Class: OEO_00000151
@@ -1096,11 +1113,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
 move to oeo-shared
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869
+
+add has bearer axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         rdfs:label "energy carrier disposition"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000016>
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000206
@@ -1198,6 +1220,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         OEO_00000323
     
     
+Class: OEO_00000316
+
+    
 Class: OEO_00000323
 
     Annotations: 
@@ -1269,11 +1294,17 @@ Class: OEO_00000419
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A transformation is a process that transforms one or more inputs into at least one output."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/435
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450
+
+input and output axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         rdfs:label "transformation"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0002233> some <http://purl.obolibrary.org/obo/BFO_0000002>,
+        <http://purl.obolibrary.org/obo/RO_0002234> some <http://purl.obolibrary.org/obo/BFO_0000002>
     
     
 Class: OEO_00000423
@@ -1411,11 +1442,14 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
 Class: OEO_00020039
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has the disposition energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has an energy carrier disposition.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
 move to oeo-shared
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869
+improve definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1169
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1173",
         rdfs:label "energy carrier"
     
     EquivalentTo: 
@@ -1726,7 +1760,11 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
         rdfs:label "software license"
     
     SubClassOf: 
-        OEO_00020015
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "fix wrong classification
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1153
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1163"
+        OEO_00020185
     
     
 Class: OEO_00030015
@@ -2065,8 +2103,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>
-
-
+    
+    
 Class: OEO_00140081
 
     Annotations: 
