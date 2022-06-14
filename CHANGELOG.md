@@ -15,7 +15,7 @@ Here is a template for new release sections
 
 ```
 
-## [1.X.X] - 20XX-XX-XX
+## [1.10.1] - 2022-06-14
 
 ### Added
 - nationally determined contribution (#1151)
@@ -25,12 +25,11 @@ Here is a template for new release sections
 - fissile material entity (#1190, #1196)
 - frequency control and subclasses primary control, secondary control, tertiary control (#1202)
 
-
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- has input, input of, has output, output of, participates in, has participant (#1138)
 - capacity factor (#1144)
 - power value, declared net capacity, nameplate capacity, power rating (#1155)
-- has input, input of, has output, output of, participates in, has participant (#1138)
 - software license (#1163)
 - photon, energy (#1165)
 - energy carrier (#1173)
