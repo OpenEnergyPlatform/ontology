@@ -23,6 +23,8 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissile material entity (#1190, #1196)
+- frequency control and subclasses primary control, secondary control, tertiary control (#1202)
+
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
@@ -37,8 +39,10 @@ Here is a template for new release sections
 - energy transformation (#1182)
 - fuel (#1184)
 - fossil energy (#1185)
-- waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 - origin and subclasses, energy, portion of matter (#1192)
+- general class axiom "combustible things" (#1195)
+- has institution (#1200)
+- waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 
 ### Removed
 
