@@ -15,7 +15,7 @@ Here is a template for new release sections
 
 ```
 
-## [1.X.X] - 20XX-XX-XX
+## [1.10.1] - 2022-06-14
 
 ### Added
 - nationally determined contribution (#1151)
