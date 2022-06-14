@@ -37,6 +37,7 @@ Here is a template for new release sections
 - energy transformation (#1182)
 - fuel (#1184)
 - fossil energy (#1185)
+- general class axiom "combustible things" (#1195)
 - has institution (#1200)
 - origin and subclasses, energy, portion of matter (#1192)
 
