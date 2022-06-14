@@ -23,6 +23,8 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissile material entity (#1190, #1196)
+- frequency control and subclasses primary control, secondary control, tertiary control (#1202)
+
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
