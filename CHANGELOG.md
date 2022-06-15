@@ -39,6 +39,7 @@ Here is a template for new release sections
 - fuel (#1184)
 - fossil energy (#1185)
 - origin and subclasses, energy, portion of matter (#1192)
+- KSG sector buildings (#1198)
 - general class axiom "combustible things" (#1195)
 - has institution (#1200)
 - waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
