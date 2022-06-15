@@ -405,7 +405,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 ObjectProperty: OEO_00010235
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an ouput of the artificial object or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an output of the artificial object or process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
         rdfs:label "has energy output"@en
@@ -1075,6 +1075,11 @@ Class: OEO_00000014
          and (OEO_00000530 some OEO_00030002)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `fossil combustion fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000099,
         OEO_00000530 some OEO_00030003
     
     DisjointWith: 
@@ -1355,6 +1360,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
          and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020086)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `renevable fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000173,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
@@ -2803,6 +2813,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931",
          and (OEO_00000529 value OEO_00000256)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `liquid biofuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000072,
         OEO_00000530 some OEO_00030001,
         OEO_00000529 value OEO_00000256
     
@@ -3105,14 +3120,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
 
 change definition and add comment with examples:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/974
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:comment "* Biomass has a biogenic origin and if it is converted to biogas, the biogas inherits the the biogenic origin.
 * Hard coal has a fossil origin and if it is used in a coal power plant to generate electrical energy, the electrical energy inherits the fossil origin.
 * Wind energy has renewable origin and if it is converted to electrical energy using a wind turbine, the electrical energy inherits the renewable origin",
         rdfs:label "origin"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
     
     
 Class: OEO_00000318
@@ -3204,19 +3225,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000331
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matters is an aggregate of material entities that have a state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is an aggregate of material entities that have a state of matter."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
 
 definition update and editor note:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/738
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         rdfs:label "portion of matter"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        OEO_00000530 some OEO_00000316
     
     
 Class: OEO_00000332
@@ -3233,6 +3259,11 @@ Class: OEO_00000332
          and (OEO_00000529 value OEO_00000390)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `solid biofuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000072,
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
@@ -3713,6 +3744,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         OEO_00000025 or OEO_00000298
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `volatile organic compound`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000331,
         OEO_00000331
          and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00010011),
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00000055
@@ -3737,6 +3773,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/631",
          and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000042)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `waste fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000173,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
@@ -4140,6 +4181,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
          and (OEO_00000530 some OEO_00030005)
     
     SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `synthetic fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000173,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
     
     
@@ -6349,11 +6395,16 @@ Class: OEO_00020147
         <http://purl.obolibrary.org/obo/IAO_0000115> "Conventional is an origin of energies that don't replenish when transformed / consumed.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "non-renewable",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/833
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/955
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "conventional"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some OEO_00000150
     
     DisjointWith: 
         
@@ -6417,29 +6468,40 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1196",
 Class: OEO_00030000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "anthropogenic is an origin of portions of matter or energies created by human activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Anthropogenic is an origin of portions of matter or energies created by human activity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
 
 include \"or energies\"
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "anthropogenic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
     
     
 Class: OEO_00030001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "biogenic is an origin of portions of matter made by or produced from life forms.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Biogenic is an origin of portions of matter made by or produced from life forms.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "biogenic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some OEO_00000331
     
     DisjointWith: 
         OEO_00030002
@@ -6448,7 +6510,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130",
 Class: OEO_00030002
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is an geogenic origin of portions of matter created from organic material by geolocial processes lasting thousands or millions of years.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is a geogenic origin of portions of matter created from organic material by geological processes lasting thousands or millions of years.",
         <http://purl.obolibrary.org/obo/IAO_0000116> "In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
@@ -6459,11 +6521,16 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1048
 
 Shift part of the definition into an editor note:
 Issue: https://github.com/OpenEnergyPlatform/ontology/issues/1180
-Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1181",
+Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1181
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "fossil"
     
     SubClassOf: 
-        OEO_00030003
+        OEO_00030003,
+        OEO_00010121 some OEO_00000331
     
     DisjointWith: 
         OEO_00030001
@@ -6472,17 +6539,23 @@ Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1181",
 Class: OEO_00030003
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "geogenic is an origin of portions of matter or energies that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Geogenic is an origin of portions of matter or energies that are the result of geological processes.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
 
 Update definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "geogenic"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
     
     
 Class: OEO_00030004
@@ -6498,11 +6571,16 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
 change def
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "renewable"
     
     SubClassOf: 
-        OEO_00000316
+        OEO_00000316,
+        OEO_00010121 some OEO_00000150
     
     DisjointWith: 
         
@@ -6520,11 +6598,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
 
 Make subclass of anthropogenic:
 https://github.com/OpenEnergyPlatform/ontology/issues/872
-https://github.com/OpenEnergyPlatform/ontology/pull/1048",
+https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:label "synthetic"
     
     SubClassOf: 
-        OEO_00030000
+        OEO_00030000,
+        OEO_00010121 some OEO_00000331
     
     
 Class: OEO_00030015
@@ -7743,6 +7826,54 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810",
     
     SubClassOf: 
         OEO_00000031
+    
+    
+Class: OEO_00160001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Frequency control is a process that regulates the electricity output of an artificial object to maintain the equilibrium between electricity supply and demand.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "frequency control"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00160002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary control is a frequency control that is decentralised and automated. It reacts within seconds to frequency deviations caused by electricity supply and demand imbalances.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "primary control"@en
+    
+    SubClassOf: 
+        OEO_00160001
+    
+    
+Class: OEO_00160003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary control is a frequency control that is centralised and automated. It refers to the control area of one transmission system operator. Secondary control succeeds primary control and operates for several minutes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "secondary control"@en
+    
+    SubClassOf: 
+        OEO_00160001
+    
+    
+Class: OEO_00160004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tertiary control is a frequency control that is either automated or manual. It takes over from secondary control to equalise electricity supply and demand imbalances that last for more than 15 minutes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "tertiary control"@en
+    
+    SubClassOf: 
+        OEO_00160001
     
     
 Class: OEO_00230000

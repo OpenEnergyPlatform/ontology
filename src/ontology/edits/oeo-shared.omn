@@ -485,7 +485,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1042",
         OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
     
     Range: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000238
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Replace `institution` as range by `organisation role`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1161
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1200"
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
     
     
 ObjectProperty: OEO_00000514
@@ -587,6 +591,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
     Range: 
         OEO_00020039
     
+    
+ObjectProperty: OEO_00000530
+
     
 ObjectProperty: OEO_00010121
 
@@ -1080,7 +1087,11 @@ move to oeo-shared
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1030
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101
 adjust definition
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         rdfs:comment "Energy is power integrated over time.",
         rdfs:label "energy",
         
@@ -1089,7 +1100,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000015"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00000530 some OEO_00000316
     
     
 Class: OEO_00000151
@@ -1207,6 +1219,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
     DisjointWith: 
         OEO_00000323
     
+    
+Class: OEO_00000316
+
     
 Class: OEO_00000323
 
