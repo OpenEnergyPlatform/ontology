@@ -63,5 +63,5 @@ and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/
 - [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
 - [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
 - [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
-- [@oeo-general-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-steering-committee)
 - [@oeo-release-team](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-release-team)
+- [@oeo-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-steering-committee)
