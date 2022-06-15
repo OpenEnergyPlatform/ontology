@@ -15,7 +15,7 @@ Here is a template for new release sections
 
 ```
 
-## [1.X.X] - 20XX-XX-XX
+## [1.10.1] - 2022-06-14
 
 ### Added
 - nationally determined contribution (#1151)
@@ -23,12 +23,13 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissile material entity (#1190, #1196)
+- frequency control and subclasses primary control, secondary control, tertiary control (#1202)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
+- has input, input of, has output, output of, participates in, has participant (#1138)
 - capacity factor (#1144)
 - power value, declared net capacity, nameplate capacity, power rating (#1155)
-- has input, input of, has output, output of, participates in, has participant (#1138)
 - software license (#1163)
 - photon, energy (#1165)
 - energy carrier (#1173)
@@ -39,6 +40,9 @@ Here is a template for new release sections
 - fossil energy (#1185)
 - origin and subclasses, energy, portion of matter (#1192)
 - KSG sector buildings (#1198)
+- general class axiom "combustible things" (#1195)
+- has institution (#1200)
+- waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 
 ### Removed
 
