@@ -11,6 +11,7 @@ Here is a template for new release sections
 
 ### Added
 - combustion thermal energy transformation (#1210)
+- paramterisation, model calibration (#1216)
 
 ### Changed
 ### Removed
