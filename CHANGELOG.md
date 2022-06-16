@@ -23,6 +23,7 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissile material entity (#1190, #1196)
+- realized in (#1197)
 - frequency control and subclasses primary control, secondary control, tertiary control (#1202)
 
 ### Changed
