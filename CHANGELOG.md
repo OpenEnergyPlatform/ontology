@@ -10,6 +10,8 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- combustion thermal energy transformation (#1210)
+
 ### Changed
 ### Removed
 
