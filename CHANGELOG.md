@@ -14,6 +14,8 @@ Here is a template for new release sections
 - paramterisation, model calibration (#1216)
 
 ### Changed
+- endogenous data, exogenous data (#1216)
+
 ### Removed
 
 ```
