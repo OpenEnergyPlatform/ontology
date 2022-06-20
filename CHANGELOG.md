@@ -11,9 +11,12 @@ Here is a template for new release sections
 
 ### Added
 - combustion thermal energy transformation (#1210)
+- parameterisation, model calibration (#1216)
 - scenario projection (#1217)
 
 ### Changed
+- endogenous data, exogenous data (#1216)
+
 ### Removed
 
 ```
