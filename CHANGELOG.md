@@ -17,6 +17,7 @@ Here is a template for new release sections
 
 ### Changed
 - endogenous data, exogenous data (#1216)
+- pv cell -> photovoltaic cell (#1220)
 
 ### Removed
 
