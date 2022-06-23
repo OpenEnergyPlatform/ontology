@@ -33,6 +33,7 @@ Here is a template for new release sections
 - fissile material entity (#1190, #1196)
 - realized in (#1197)
 - frequency control and subclasses primary control, secondary control, tertiary control (#1202)
+- tangential proper part, (solar radiation receiving) surface (#1209)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
@@ -52,6 +53,7 @@ Here is a template for new release sections
 - general class axiom "combustible things" (#1195)
 - has institution (#1200)
 - waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
+- pv cell, solar thermal collector (#1209)
 
 ### Removed
 
