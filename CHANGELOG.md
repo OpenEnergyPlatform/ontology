@@ -10,7 +10,15 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- combustion thermal energy transformation (#1210)
+- measurement device (#1215)
+- parameterisation, model calibration (#1216)
+- scenario projection (#1217)
+
 ### Changed
+- endogenous data, exogenous data (#1216)
+- pv cell -> photovoltaic cell (#1220)
+
 ### Removed
 
 ```
@@ -23,6 +31,7 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissile material entity (#1190, #1196)
+- realized in (#1197)
 - frequency control and subclasses primary control, secondary control, tertiary control (#1202)
 
 ### Changed
@@ -39,6 +48,7 @@ Here is a template for new release sections
 - fuel (#1184)
 - fossil energy (#1185)
 - origin and subclasses, energy, portion of matter (#1192)
+- KSG sector buildings (#1198)
 - general class axiom "combustible things" (#1195)
 - has institution (#1200)
 - waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
