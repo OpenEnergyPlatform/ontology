@@ -14,6 +14,7 @@ Here is a template for new release sections
 - measurement device (#1215)
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
+- tangential proper part, surface, solar radiation receiving surface (#1209)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
@@ -34,7 +35,6 @@ Here is a template for new release sections
 - fissile material entity (#1190, #1196)
 - realized in (#1197)
 - frequency control and subclasses primary control, secondary control, tertiary control (#1202)
-- tangential proper part, surface, solar radiation receiving surface (#1209)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
