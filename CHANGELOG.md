@@ -14,6 +14,7 @@ Here is a template for new release sections
 - measurement device (#1215)
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
+- has institution -> has organisation (#1226)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
