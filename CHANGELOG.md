@@ -14,10 +14,12 @@ Here is a template for new release sections
 - measurement device (#1215)
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
+- (electricity) import/export (value) (#1221)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
 - pv cell -> photovoltaic cell (#1220)
+- is energy participant of (#1221)
 
 ### Removed
 
