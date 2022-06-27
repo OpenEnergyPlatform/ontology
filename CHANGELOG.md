@@ -15,9 +15,11 @@ Here is a template for new release sections
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
 - (electricity) import/export (value) (#1221)
+- has institution -> has organisation (#1226)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
+- origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
 - is energy participant of (#1221)
 
