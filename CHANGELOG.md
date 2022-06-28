@@ -15,12 +15,14 @@ Here is a template for new release sections
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
 - has institution -> has organisation (#1226)
+- passenger, passenger transport, nergy service demand for passenger/ton-kilometre (#1234)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
 - has participant (#1225)
+- public transport, private transport (#1234)
 
 ### Removed
 
