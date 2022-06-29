@@ -21,7 +21,7 @@ Here is a template for new release sections
 - endogenous data, exogenous data (#1216)
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
-- is energy participant of (#1221)
+- is energy participant of, has energy participant (#1221)
 - has participant (#1225)
 
 ### Removed
