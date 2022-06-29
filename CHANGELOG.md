@@ -16,6 +16,7 @@ Here is a template for new release sections
 - scenario projection (#1217)
 - tangential proper part, surface, solar radiation receiving surface (#1209)
 - solar receiving object (#1228)
+- has institution -> has organisation (#1226)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
