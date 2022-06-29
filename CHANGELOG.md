@@ -15,12 +15,14 @@ Here is a template for new release sections
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
 - tangential proper part, surface, solar radiation receiving surface (#1209)
+- solar receiving object (#1228)
 - has institution -> has organisation (#1226)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
+- photovoltaic cell, solar thermal collector (#1228)
 - has participant (#1225)
 
 ### Removed
