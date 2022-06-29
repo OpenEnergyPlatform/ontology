@@ -26,6 +26,7 @@ Here is a template for new release sections
 - is energy participant of, has energy participant (#1221)
 - has participant (#1225)
 - photovoltaic cell, solar thermal collector (#1228)
+- power capacity (#1235)
 
 ### Removed
 
