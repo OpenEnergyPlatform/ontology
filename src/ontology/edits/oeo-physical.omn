@@ -87,6 +87,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
     Range: 
         OEO_00000150
     
+    InverseOf: 
+        OEO_00020182
+    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
@@ -439,6 +442,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
     
     Range: 
         OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    InverseOf: 
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010238>
     
     
 ObjectProperty: OEO_00020183
@@ -2086,7 +2092,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/621
 
 add commodity role:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
+
+add axiom to electricity im/exports:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
         rdfs:label "electrical energy",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -2095,6 +2105,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         OEO_00000150,
+        OEO_00020182 some OEO_00020207,
+        OEO_00020182 some OEO_00020208,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
     
     
@@ -3127,7 +3139,7 @@ Class: OEO_00000311
     
     
 Class: OEO_00000316
-    
+
     
 Class: OEO_00000318
 
@@ -3216,7 +3228,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     
 Class: OEO_00000331
-    
+
     
 Class: OEO_00000332
 
@@ -6510,6 +6522,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
     
     SubClassOf: 
         OEO_00000061
+        
+
+Class: OEO_00020201
+
+    
+Class: OEO_00020202
+
+    
+Class: OEO_00020207
+
+    
+Class: OEO_00020208
+
+    
+Class: OEO_00020210
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sirup is a portion of matter that consists mainly of water and sugar. It has a liquid state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sirop",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "syrup",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "sirup"
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000441,
+        OEO_00000531 value OEO_00000256
     
     
 Class: OEO_00030000
@@ -6996,16 +7035,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
     
 Class: OEO_00050019
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
-        rdfs:label "energy amount value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
-    
     
 Class: OEO_00050020
 
