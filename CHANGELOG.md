@@ -23,6 +23,7 @@ Here is a template for new release sections
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
 - photovoltaic cell, solar thermal collector (#1228)
+- has participant (#1225)
 
 ### Removed
 
