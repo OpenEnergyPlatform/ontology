@@ -30,6 +30,7 @@ Here is a template for new release sections
 - public transport, private transport, vehicle (#1234)
 - power capacity (#1235)
 - jet fuel (#1237)
+- fuel-powered electricity generation (#1240)
 
 ### Removed
 
