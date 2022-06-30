@@ -30,7 +30,7 @@ Here is a template for new release sections
 - public transport, private transport, vehicle (#1234)
 - power capacity (#1235)
 - jet fuel (#1237)
-- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, staem, compressed air (#1243)
+- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, staem, compressed air, pumped water (#1243)
 
 ### Removed
 
