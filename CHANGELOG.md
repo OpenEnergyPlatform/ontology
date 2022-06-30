@@ -22,7 +22,7 @@ Here is a template for new release sections
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
 - has participant (#1225)
-- public transport, private transport (#1234)
+- public transport, private transport, vehicle (#1234)
 
 ### Removed
 
