@@ -18,6 +18,7 @@ Here is a template for new release sections
 - import, export, electricity import, electricity export, electrical energy amount value, electricity import value, electricity export value, sirup (#1221)
 - has institution -> has organisation (#1226)
 - solar receiving object (#1228)
+- passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
@@ -26,6 +27,7 @@ Here is a template for new release sections
 - is energy participant of, has energy participant (#1221)
 - has participant (#1225)
 - photovoltaic cell, solar thermal collector (#1228)
+- public transport, private transport, vehicle (#1234)
 - power capacity (#1235)
 - jet fuel (#1237)
 

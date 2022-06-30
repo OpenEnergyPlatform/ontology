@@ -124,6 +124,9 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086"
         Transitive
     
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     InverseOf: 
@@ -1386,6 +1389,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
         OEO_00000274
     
     
+Class: OEO_00010023
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artificial object that is used for transporting people or goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+        rdfs:label "vehicle",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000604"
+    
+    SubClassOf: 
+        OEO_00000061
+    
+    
 Class: OEO_00010079
 
     Annotations: 
@@ -1437,6 +1456,61 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
         OEO_00020180 some OEO_00040003
+    
+    
+Class: OEO_00010263
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger transport is a transport process in which people are moved in a vehicle from one place to another.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "passenger transport"
+    
+    SubClassOf: 
+        OEO_00140003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010023,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00000323
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010264))
+    
+    
+Class: OEO_00010264
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger is an agent who travels in a vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "passenger"
+    
+    SubClassOf: 
+        OEO_00000051,
+        OEO_00010121 some OEO_00000323
+    
+    
+Class: OEO_00010265
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy service demand for passenger-kilometre is the energy service demand that is consumed to transport one person over a distance of one kilometre.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "energy service demand for passenger-kilometre"
+    
+    SubClassOf: 
+        OEO_00240024,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00010263
+    
+    
+Class: OEO_00010266
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy service demand for ton-kilometre is the energy service demand that is consumed to transport one metric ton over a distance of one kilometre.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "energy service demand for ton-kilometre"
+    
+    SubClassOf: 
+        OEO_00240024,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140005
     
     
 Class: OEO_00020011
@@ -2218,25 +2292,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
 Class: OEO_00140006
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Private transport is a transport process in which people use their own vehicle for movement e.g. bicycle, motorcycle and cars, or walking.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A private transport is a passenger transport in which people use their own vehicle for movement e.g. bicycle, motorcycle and cars.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
-        rdfs:label "private transport"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
+
+Make subclass of 'passenger transport'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "private transport"
     
     SubClassOf: 
-        OEO_00140003
+        OEO_00010263
     
     
 Class: OEO_00140007
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Public transport is a transport process in which a number of passengers share a common public transport facility.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A public transport is a passenger transport in which a number of passengers share a common vehicle.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
-        rdfs:label "public transport"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
+
+Make subclass of 'passenger transport'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "public transport"
     
     SubClassOf: 
-        OEO_00140003
+        OEO_00010263
     
     
 Class: OEO_00140009
