@@ -27,6 +27,7 @@ Here is a template for new release sections
 - has participant (#1225)
 - photovoltaic cell, solar thermal collector (#1228)
 - power capacity (#1235)
+- jet fuel (#1237)
 
 ### Removed
 
