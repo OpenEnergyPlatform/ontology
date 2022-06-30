@@ -26,26 +26,12 @@ Here describe the findings of the discussion in the issue or meeting.
 
 ## Workflow checklist
 
-### Assignee
-- [ ] An agreement has been reached
-- [ ] 🐙 Add yourself as Assignee
-- [ ] 🐙 Add someone or a group (oeo-dev) as Reviewer
-- [ ] 🐙 Create a draft pull request
-- [ ] 📝 Update the [CHANGELOG.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CHANGELOG.md)
-- [ ] 📙 Add # to term tracker item
-- [ ] 🐙 All unit tests pass
-- [ ] 🐙 Publish pull request
+### Automation
+Closes #
+
+### PR-Assignee
+- [ ] I followed the [Pull Request Workflow](https://github.com/OpenEnergyPlatform/ontology/wiki/Pull-request-workflow)
 
 ### Reviewer
-- [ ] ToDo: Add checklist for reviewer
-- [ ] 🐙 All unit tests pass
-
-### Assignee
-- [ ] 🐙 Merge pull request
-- [ ] 🐙 Delete branch
-- [ ] 🐙 Close issue
-
-
-**Automation**
-Closes #X
+- [ ] I followed the [Reviewer Guide](https://github.com/OpenEnergyPlatform/ontology/wiki/Pull-request-workflow#reviewer-guide-check-changes-introduced-by-a-pull-request)
 
