@@ -10,19 +10,26 @@ Here is a template for new release sections
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- tangential proper part, surface, solar radiation receiving surface (#1209)
 - combustion thermal energy transformation (#1210)
 - measurement device (#1215)
 - parameterisation, model calibration (#1216)
 - scenario projection (#1217)
+- import, export, electricity import, electricity export, electrical energy amount value, electricity import value, electricity export value, sirup (#1221)
 - has institution -> has organisation (#1226)
+- solar receiving object (#1228)
 - passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
+- is energy participant of, has energy participant (#1221)
 - has participant (#1225)
+- photovoltaic cell, solar thermal collector (#1228)
 - public transport, private transport, vehicle (#1234)
+- power capacity (#1235)
+- jet fuel (#1237)
 
 ### Removed
 
