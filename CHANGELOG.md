@@ -6,8 +6,8 @@ and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v
 
 Here is a template for new release sections
 
-```
-## [1.X.X] - 20XX-XX-XX
+
+## [1.11.0] - 2022-07-04
 
 ### Added
 - tangential proper part, surface, solar radiation receiving surface (#1209)
@@ -33,9 +33,7 @@ Here is a template for new release sections
 - fuel-powered electricity generation (#1240)
 - charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, staem, compressed air, pumped water (#1243)
 
-### Removed
 
-```
 
 ## [1.10.1] - 2022-06-14
 
