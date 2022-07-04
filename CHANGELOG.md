@@ -30,7 +30,7 @@ and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v
 - power capacity (#1235)
 - jet fuel (#1237)
 - fuel-powered electricity generation (#1240)
-- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, staem, compressed air, pumped water (#1243)
+- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, steam, compressed air, pumped water (#1243)
 
 
 
