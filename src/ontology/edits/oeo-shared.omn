@@ -124,6 +124,9 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086"
         Transitive
     
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     InverseOf: 
@@ -469,14 +472,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
 ObjectProperty: OEO_00000510
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity or model and the institution in which it was created."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between an information content entity or model and the organisation in which it was created."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/626 (extend def for information content entity)
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871 (domain and range; move to oeo-shared)
 
 improve definition:
 https://github.com/OpenEnergyPlatform/ontology/issues/1038
-https://github.com/OpenEnergyPlatform/ontology/pull/1042",
-        rdfs:label "has institution"
+https://github.com/OpenEnergyPlatform/ontology/pull/1042
+
+Relabel to `has organisation`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1161
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1226",
+        rdfs:label "has organisation"
     
     SubPropertyOf: 
         OEO_00140008
@@ -881,6 +888,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000020>
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000027>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000030>
 
     
@@ -968,6 +978,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
     
     
 Class: <http://purl.obolibrary.org/obo/UO_0000047>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000111>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000224>
@@ -1222,6 +1235,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
     
 Class: OEO_00000316
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Origin is a quality of a portion of matter or energy based on where it comes from. It is inherited from its primary sources.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+change def
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+change definition and add comment with examples:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/974
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1218
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
+        rdfs:comment "* Biomass has a biogenic origin and if it is converted to biogas, the biogas inherits the the biogenic origin.
+* Hard coal has a fossil origin and if it is used in a coal power plant to generate electrical energy, the electrical energy inherits the fossil origin.
+* Wind energy has renewable origin and if it is converted to electrical energy using a wind turbine, the electrical energy inherits the renewable origin",
+        rdfs:label "origin"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
+    
     
 Class: OEO_00000323
 
@@ -1234,6 +1277,33 @@ Class: OEO_00000323
     
     DisjointWith: 
         OEO_00000315
+    
+    
+Class: OEO_00000331
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is an aggregate of material entities that have a state of matter."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+
+definition update and editor note:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/738
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1218
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
+        rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
+        rdfs:label "portion of matter"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        OEO_00000530 some OEO_00000316
     
     
 Class: OEO_00000340
@@ -1319,6 +1389,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
         OEO_00000274
     
     
+Class: OEO_00010023
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artificial object that is used for transporting people or goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+        rdfs:label "vehicle",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000604"
+    
+    SubClassOf: 
+        OEO_00000061
+    
+    
 Class: OEO_00010079
 
     Annotations: 
@@ -1370,6 +1456,61 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
         OEO_00020180 some OEO_00040003
+    
+    
+Class: OEO_00010263
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger transport is a transport process in which people are moved in a vehicle from one place to another.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "passenger transport"
+    
+    SubClassOf: 
+        OEO_00140003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010023,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00000323
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010264))
+    
+    
+Class: OEO_00010264
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger is an agent who travels in a vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "passenger"
+    
+    SubClassOf: 
+        OEO_00000051,
+        OEO_00010121 some OEO_00000323
+    
+    
+Class: OEO_00010265
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy service demand for passenger-kilometre is the energy service demand that is consumed to transport one person over a distance of one kilometre.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "energy service demand for passenger-kilometre"
+    
+    SubClassOf: 
+        OEO_00240024,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00010263
+    
+    
+Class: OEO_00010266
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy service demand for ton-kilometre is the energy service demand that is consumed to transport one metric ton over a distance of one kilometre.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "energy service demand for ton-kilometre"
+    
+    SubClassOf: 
+        OEO_00240024,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140005
     
     
 Class: OEO_00020011
@@ -1767,6 +1908,98 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1163"
         OEO_00020185
     
     
+Class: OEO_00020201
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Import is the process of purchasing goods or services abroad and their delivery to the domestic market.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "import"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00020202
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Export is the process of selling goods or services abroad and their delivery to a foreign market.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "export"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00020204
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy amount value is an energy amount value that measures a quantity of electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "electrical energy amount value"
+    
+    SubClassOf: 
+        OEO_00050019
+    
+    
+Class: OEO_00020205
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export value is an electrical energy amount value that measures the export of electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "electricity import value"
+    
+    SubClassOf: 
+        OEO_00020204,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020207
+    
+    
+Class: OEO_00020206
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity import value is an electrical energy amount value that measures the import of electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "electricity export value"
+    
+    SubClassOf: 
+        OEO_00020204,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020208
+    
+    
+Class: OEO_00020207
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity import is the import of electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "electricity import"
+    
+    SubClassOf: 
+        OEO_00020201,
+        OEO_00140002 some OEO_00020205
+    
+    
+Class: OEO_00020208
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity export is the export of electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "electricity export"
+    
+    SubClassOf: 
+        OEO_00020202,
+        OEO_00140002 some OEO_00020206
+    
+    
 Class: OEO_00030015
 
     Annotations: 
@@ -1819,7 +2052,10 @@ Class: OEO_00030029
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
 
 make equivalent class
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113
+
+add relation to quantity value:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1216",
         rdfs:label "exogenous data"
     
     EquivalentTo: 
@@ -1827,7 +2063,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
          and (OEO_00020189 some OEO_00000275)
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000027>
+        <http://purl.obolibrary.org/obo/IAO_0000027>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000350
     
     
 Class: OEO_00030030
@@ -1838,7 +2075,10 @@ Class: OEO_00030030
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
 
 make equivalent class
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113
+
+add relation to quantity value:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1216",
         rdfs:label "endogenous data"
     
     EquivalentTo: 
@@ -1846,7 +2086,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
          and (OEO_00020190 some OEO_00000275)
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000027>
+        <http://purl.obolibrary.org/obo/IAO_0000027>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000350
     
     
 Class: OEO_00030031
@@ -1979,6 +2220,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
         OEO_00140039
     
     
+Class: OEO_00050019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy quantity value",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
+moved to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "energy amount value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
 Class: OEO_00090001
 
     Annotations: 
@@ -2034,25 +2292,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
 Class: OEO_00140006
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Private transport is a transport process in which people use their own vehicle for movement e.g. bicycle, motorcycle and cars, or walking.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A private transport is a passenger transport in which people use their own vehicle for movement e.g. bicycle, motorcycle and cars.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
-        rdfs:label "private transport"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
+
+Make subclass of 'passenger transport'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "private transport"
     
     SubClassOf: 
-        OEO_00140003
+        OEO_00010263
     
     
 Class: OEO_00140007
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Public transport is a transport process in which a number of passengers share a common public transport facility.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A public transport is a passenger transport in which a number of passengers share a common vehicle.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
-        rdfs:label "public transport"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
+
+Make subclass of 'passenger transport'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
+        rdfs:label "public transport"
     
     SubClassOf: 
-        OEO_00140003
+        OEO_00010263
     
     
 Class: OEO_00140009

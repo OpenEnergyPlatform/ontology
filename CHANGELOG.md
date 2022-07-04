@@ -2,18 +2,37 @@
 All notable changes to this project will be documented in this file.
 
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-Here is a template for new release sections
 
-```
-## [1.X.X] - 20XX-XX-XX
+
+## [1.11.0] - 2022-07-04
 
 ### Added
-### Changed
-### Removed
+- tangential proper part, surface, solar radiation receiving surface (#1209)
+- combustion thermal energy transformation (#1210)
+- measurement device (#1215)
+- parameterisation, model calibration (#1216)
+- scenario projection (#1217)
+- import, export, electricity import, electricity export, electrical energy amount value, electricity import value, electricity export value, sirup (#1221)
+- has institution -> has organisation (#1226)
+- solar receiving object (#1228)
+- passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
 
-```
+### Changed
+- endogenous data, exogenous data (#1216)
+- origin, portion of matter (#1218)
+- pv cell -> photovoltaic cell (#1220)
+- is energy participant of, has energy participant (#1221)
+- has participant (#1225)
+- photovoltaic cell, solar thermal collector (#1228)
+- public transport, private transport, vehicle (#1234)
+- power capacity (#1235)
+- jet fuel (#1237)
+- fuel-powered electricity generation (#1240)
+- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, steam, compressed air, pumped water (#1243)
+
+
 
 ## [1.10.1] - 2022-06-14
 
@@ -23,6 +42,8 @@ Here is a template for new release sections
 - bioenergy (#1188)
 - general class axiom for energy (#1186)
 - fissile material entity (#1190, #1196)
+- realized in (#1197)
+- frequency control and subclasses primary control, secondary control, tertiary control (#1202)
 
 ### Changed
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
@@ -38,6 +59,7 @@ Here is a template for new release sections
 - fuel (#1184)
 - fossil energy (#1185)
 - origin and subclasses, energy, portion of matter (#1192)
+- KSG sector buildings (#1198)
 - general class axiom "combustible things" (#1195)
 - has institution (#1200)
 - waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)

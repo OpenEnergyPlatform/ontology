@@ -87,6 +87,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
     Range: 
         OEO_00000150
     
+    InverseOf: 
+        OEO_00020182
+    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
@@ -133,6 +136,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002418>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002427>
@@ -437,6 +443,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
     Range: 
         OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
     
+    InverseOf: 
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010238>
+    
     
 ObjectProperty: OEO_00020183
 
@@ -722,7 +731,11 @@ Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010249>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion thermal energy transformation is an energy transformation that converts chemical energy of a combustion fuel into thermal energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130
+
+Add relation to emission
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1210",
         rdfs:label "combustion thermal energy transformation"@en
     
     SubClassOf: 
@@ -730,7 +743,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
         OEO_00000532 some OEO_00000099,
         OEO_00010234 some OEO_00000007,
         OEO_00010235 some OEO_00000207,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038,
+        <http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
@@ -1329,18 +1343,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
 Class: OEO_00000032
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A PV cell is a generator that converts light into electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic cell (PV cell) is a generator that converts solar energy into electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PV cell",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "solar cell",
         <http://purl.obolibrary.org/obo/IAO_0000233> "change produces axiom to 'has energy output'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
-        rdfs:label "PV cell"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+Add axiom to 'has part some solar radiation receiving surface'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228
+
+Update definition, label and axioms, add alternative terms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1152
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1220",
+        rdfs:label "photovoltaic cell"
     
     SubClassOf: 
         OEO_00000188,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00010235 some OEO_00000384,
+        OEO_00010234 some OEO_00000384,
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
@@ -1829,7 +1855,10 @@ Class: OEO_00000084
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Charcoal is a portion of matter produced from wood via pyrolysis. It has a solid state of matter an can be used as fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "charcoal",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1841,6 +1870,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         OEO_00000530 some OEO_00030001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000529 value OEO_00000390
     
     
@@ -1950,10 +1980,14 @@ Class: OEO_00000102
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Compressed air is air that has been compressed to store energy. To discharge energy, the air is expanded."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "compressed air"
     
     SubClassOf: 
-        OEO_00000054
+        OEO_00000054,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
     
     
 Class: OEO_00000115
@@ -2067,7 +2101,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/621
 
 add commodity role:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
+
+add axiom to electricity im/exports:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
         rdfs:label "electrical energy",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -2076,6 +2114,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         OEO_00000150,
+        OEO_00020182 some OEO_00020207,
+        OEO_00020182 some OEO_00020208,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
     
     
@@ -2242,7 +2282,11 @@ Class: OEO_00000181
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "make direct subclass of 'portion of matter' and preserve axioms from old class 'oil and petroleum products'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/811
-https://github.com/OpenEnergyPlatform/ontology/pull/1024",
+https://github.com/OpenEnergyPlatform/ontology/pull/1024
+
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "gas diesel oil"
     
     SubClassOf: 
@@ -2251,6 +2295,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1024",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000529 value OEO_00000256
     
     
@@ -2270,7 +2315,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1024
 
 relabel and add axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027
+
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "gasoline"
     
     SubClassOf: 
@@ -2279,6 +2328,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000529 value OEO_00000256
     
     
@@ -2669,9 +2719,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
 Class: OEO_00000245
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Jet fuel is kerosene used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International air Transport Association (IATA)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Jet fuel is kerosene used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International air Transport Association (IATA).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "kerosene type jet fuel",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
-        rdfs:label "KeroseneTypeJetFuel"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "convert second label to alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1230
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1237",
         rdfs:label "jet fuel"
     
     SubClassOf: 
@@ -2688,7 +2741,11 @@ Kerosene is widely used to power jet engines of aircraft (jet fuel) and some roc
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484",
         <http://purl.obolibrary.org/obo/IAO_0000233> "make direct subclass of 'portion of matter' and preserve axioms from old class 'oil and petroleum products'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/811
-https://github.com/OpenEnergyPlatform/ontology/pull/1024",
+https://github.com/OpenEnergyPlatform/ontology/pull/1024
+
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "kerosene"
     
     SubClassOf: 
@@ -2697,6 +2754,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1024",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000529 value OEO_00000256
     
     
@@ -2842,7 +2900,10 @@ Class: OEO_00000263
         <http://purl.obolibrary.org/obo/IAO_0000115> "A manufactured coal based gas is a gas mixture that is manufactured from coal. It is used as fossil fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "improve definition and make subclass of gas mixture:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "manufactured coal based gas"
     
     SubClassOf: 
@@ -2850,6 +2911,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         OEO_00000530 some OEO_00030002,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000529 value OEO_00000182
     
     
@@ -3109,32 +3171,6 @@ Class: OEO_00000311
     
 Class: OEO_00000316
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Origin is a quality of a portion of matter or energy based on where it comes from. It is inherited from its primary sources.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
-
-change def
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
-
-change definition and add comment with examples:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/974
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976
-
-Axiomatise relations between origin, energy and portion of matter:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
-        rdfs:comment "* Biomass has a biogenic origin and if it is converted to biogas, the biogas inherits the the biogenic origin.
-* Hard coal has a fossil origin and if it is used in a coal power plant to generate electrical energy, the electrical energy inherits the fossil origin.
-* Wind energy has renewable origin and if it is converted to electrical energy using a wind turbine, the electrical energy inherits the renewable origin",
-        rdfs:label "origin"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00010121 some 
-            (OEO_00000150 or OEO_00000331)
-    
     
 Class: OEO_00000318
 
@@ -3224,26 +3260,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
 Class: OEO_00000331
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is an aggregate of material entities that have a state of matter."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
-
-definition update and editor note:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/738
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759
-
-Axiomatise relations between origin, energy and portion of matter:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
-        rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
-        rdfs:label "portion of matter"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>,
-        OEO_00000530 some OEO_00000316
-    
     
 Class: OEO_00000332
 
@@ -3352,12 +3368,17 @@ Class: OEO_00000345
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Pumped water is liquid water which was pumped into an upper reservoir and thus contains potential energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/681
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755
+
+add secondary energy carrier disposition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "pumped water"
     
     SubClassOf: 
         OEO_00110000,
-        OEO_00000501 some OEO_00000399
+        OEO_00000501 some OEO_00000399,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
     
     
 Class: OEO_00000348
@@ -3508,7 +3529,10 @@ Class: OEO_00000387
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Solar_thermal_collector&oldid=903948846"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+add axiom to 'has part some solar radiation receiving surface'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
         rdfs:label "solar thermal collector"
     
     SubClassOf: 
@@ -3521,6 +3545,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
         OEO_00010235 some OEO_00000388,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
@@ -4173,7 +4198,11 @@ Class: OEO_00010017
         <http://purl.obolibrary.org/obo/IAO_0000118> "e-fuel",
         <http://purl.obolibrary.org/obo/IAO_0000118> "electric fuel",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "synthetic fuel"
     
     EquivalentTo: 
@@ -4186,7 +4215,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
         OEO_00000173,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
     
     
 Class: OEO_00010018
@@ -4308,19 +4338,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/805"
     
 Class: OEO_00010023
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artificial object that is used for transporting people or goods.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
-        rdfs:label "vehicle"@en,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000604"
-    
-    SubClassOf: 
-        OEO_00000061
-    
     
 Class: OEO_00010024
 
@@ -5712,7 +5729,7 @@ Class: OEO_00010256
         <http://purl.obolibrary.org/obo/IAO_0000115> "A maximum value is a quantity value that represents the upper limit of an artificial object or process to contain or transform another entity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
-        rdfs:label "maximum value"@de
+        rdfs:label "maximum value"
     
     SubClassOf: 
         OEO_00000350
@@ -5723,12 +5740,17 @@ Class: OEO_00010257
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power capacity is a maximum value of a generator or power generating unit to generate power.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
-        rdfs:label "power capacity"@de
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155
+
+Fix 'quantity value of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1223
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1235",
+        rdfs:label "power capacity"
     
     SubClassOf: 
         OEO_00010256,
-        OEO_00000334 or (OEO_00020056 some OEO_00000188),
+        OEO_00020056 some 
+            (OEO_00000188 or OEO_00000334),
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000113>
     
     
@@ -5738,7 +5760,7 @@ Class: OEO_00010258
         <http://purl.obolibrary.org/obo/IAO_0000115> "Bioenergy is chemical energy that is stored in biofuels.",
         <http://purl.obolibrary.org/obo/IAO_0000117> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1168
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1188",
-        rdfs:label "bioenergy"@de
+        rdfs:label "bioenergy"
     
     EquivalentTo: 
         OEO_00000007
@@ -5746,6 +5768,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1188",
     
     SubClassOf: 
         OEO_00000007
+    
+    
+Class: OEO_00010259
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A measurement device is an artificial object that is used in some measurement process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1214
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1215",
+        rdfs:label "measurement device"
+    
+    SubClassOf: 
+        OEO_00000061
     
     
 Class: OEO_00020001
@@ -6465,6 +6499,91 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1196",
         <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
+Class: OEO_00020197
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tangential proper part is a fiat object part of an entity which shares a boundary with that entity.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Region_connection_calculus",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1209",
+        rdfs:label "tangential proper part"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000024>
+    
+    
+Class: OEO_00020198
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A surface is a tangential proper part of an object that extends in two dimensions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1209",
+        rdfs:label "surface"
+    
+    SubClassOf: 
+        OEO_00020197,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://purl.obolibrary.org/obo/BFO_0000030>
+    
+    
+Class: OEO_00020199
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar radiation receiving surface is a surface that is receiving solar energy via solar radiation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1209",
+        rdfs:label "solar radiation receiving surface"
+    
+    EquivalentTo: 
+        OEO_00020198
+         and (OEO_00010234 some OEO_00000384)
+    
+    SubClassOf: 
+        OEO_00020198
+    
+    
+Class: OEO_00020200
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar receiving object is an artificial object that has a solar radiation receiving surface as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
+        rdfs:label "solar receiving object"
+    
+    EquivalentTo: 
+        OEO_00000061
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199)
+    
+    SubClassOf: 
+        OEO_00000061
+    
+    
+Class: OEO_00020201
+
+    
+Class: OEO_00020202
+
+    
+Class: OEO_00020207
+
+    
+Class: OEO_00020208
+
+    
+Class: OEO_00020210
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sirup is a portion of matter that consists mainly of water and sugar. It has a liquid state of matter.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sirop",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "syrup",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
+        rdfs:label "sirup"
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000441,
+        OEO_00000531 value OEO_00000256
+    
+    
 Class: OEO_00030000
 
     Annotations: 
@@ -6730,18 +6849,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/589",
 Class: OEO_00050001
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel-powered electricity generation is a transformation that contains at least two sub process: An energy transformation of chemical energy from fuel into electrical energy and an emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel-powered electricity generation is an electricity generation process that converts chemical energy from a combustion fuel to electrical energy. It causes some emission.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/582
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/592",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/592
+
+Update definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/936
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1240",
         rdfs:label "fuel-powered electricity generation"@en
     
+    EquivalentTo: 
+        OEO_00240014
+         and (OEO_00000532 some OEO_00000099)
+    
     SubClassOf: 
-        OEO_00000419,
+        OEO_00240014,
         OEO_00000500 some OEO_00000148,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000147,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003,
+        OEO_00000533 some OEO_00000331,
+        OEO_00010234 some OEO_00000007,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175,
+        <http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147
     
     
 Class: OEO_00050002
@@ -6949,16 +7077,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
     
 Class: OEO_00050019
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
-        rdfs:label "energy amount value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
-    
     
 Class: OEO_00050020
 
@@ -7016,11 +7134,16 @@ Class: OEO_00110001
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Steam is water that has a gaseous state of matter."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682
+
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243"@en,
         rdfs:label "steam"@en
     
     SubClassOf: 
         OEO_00000441,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000531 value OEO_00000182
     
     
@@ -7792,14 +7915,19 @@ Class: OEO_00140160
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Syngas is a gas mixture consisting primarily of hydrogen, carbon monoxide, and very often carbon dioxide, that can be used as fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Syngas",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "improve definition and make subclass of gas mixture:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/786
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/805
 
 add axioms:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931
+
+improve definition and make subclass of gas mixture:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007
+
+add axiom to secondary energy carrier disposition
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
         rdfs:label "syngas"@en
     
     SubClassOf: 
@@ -7808,6 +7936,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010001,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076,
         OEO_00000529 value OEO_00000182
     
     
@@ -7826,6 +7955,54 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810",
     
     SubClassOf: 
         OEO_00000031
+    
+    
+Class: OEO_00160001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Frequency control is a process that regulates the electricity output of an artificial object to maintain the equilibrium between electricity supply and demand.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "frequency control"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00160002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary control is a frequency control that is decentralised and automated. It reacts within seconds to frequency deviations caused by electricity supply and demand imbalances.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "primary control"@en
+    
+    SubClassOf: 
+        OEO_00160001
+    
+    
+Class: OEO_00160003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary control is a frequency control that is centralised and automated. It refers to the control area of one transmission system operator. Secondary control succeeds primary control and operates for several minutes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "secondary control"@en
+    
+    SubClassOf: 
+        OEO_00160001
+    
+    
+Class: OEO_00160004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tertiary control is a frequency control that is either automated or manual. It takes over from secondary control to equalise electricity supply and demand imbalances that last for more than 15 minutes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+        rdfs:label "tertiary control"@en
+    
+    SubClassOf: 
+        OEO_00160001
     
     
 Class: OEO_00230000
