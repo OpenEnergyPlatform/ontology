@@ -2,12 +2,11 @@
 All notable changes to this project will be documented in this file.
 
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and the versioning aim to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-Here is a template for new release sections
 
-```
-## [1.X.X] - 20XX-XX-XX
+
+## [1.11.0] - 2022-07-04
 
 ### Added
 - tangential proper part, surface, solar radiation receiving surface (#1209)
@@ -31,11 +30,9 @@ Here is a template for new release sections
 - power capacity (#1235)
 - jet fuel (#1237)
 - fuel-powered electricity generation (#1240)
-- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, staem, compressed air, pumped water (#1243)
+- charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, steam, compressed air, pumped water (#1243)
 
-### Removed
 
-```
 
 ## [1.10.1] - 2022-06-14
 
