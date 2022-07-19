@@ -7,7 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 
 ### Changed
-- added annotations for which modules classes and individuals belong to (#870)
+- added annotations for which modules classes and individuals belong to (#1252)
 
 ## [1.11.0] - 2022-07-04
 
