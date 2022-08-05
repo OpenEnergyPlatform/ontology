@@ -8,6 +8,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - steam reforming process (#1251)
+- fuel cost (#1260)
 
 ### Changed
 - energy transformation (#1251)
