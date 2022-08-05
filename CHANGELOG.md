@@ -11,11 +11,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - energy transformation (#1251)
+- added annotations for which modules classes and individuals belong to (#1252)
+- power generating unit (#1259)
 
 ### Removed
-
-### Changed
-- added annotations for which modules classes and individuals belong to (#1252)
 
 ## [1.11.0] - 2022-07-04
 
