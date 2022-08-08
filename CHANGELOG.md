@@ -7,7 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
-- emission price, CO2 price, carbon tax value (#1253)
+- emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
 
 ### Changed
 - steam reforming process (#1251)
