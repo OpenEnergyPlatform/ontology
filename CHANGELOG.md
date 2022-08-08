@@ -10,7 +10,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - emission price, CO2 price, carbon tax value (#1253)
 
 ### Changed
+- steam reforming process (#1251)
 - emission certificate price (#1253)
+
+### Changed
+- energy transformation (#1251)
+- added annotations for which modules classes and individuals belong to (#1252)
+- power generating unit (#1259)
 
 ### Removed
 
