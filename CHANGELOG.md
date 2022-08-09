@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - steam reforming process (#1251)
 - emission certificate price (#1253)
+- heat exchanger (#1263)
 
 ### Changed
 - energy transformation (#1251)
