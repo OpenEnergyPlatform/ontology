@@ -14,7 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy transformation (#1251)
 - added annotations for which modules classes and individuals belong to (#1252)
 - power generating unit (#1259)
-- definition reformulation to singular of: equipment cost, variable cost, property cost, delivery cost, fixed cost (#1260)
+- equipment cost, variable cost, property cost, delivery cost, fixed cost (#1260)
 
 ### Removed
 
