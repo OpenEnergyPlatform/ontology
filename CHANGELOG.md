@@ -7,16 +7,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
-- emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
-
-### Changed
 - steam reforming process (#1251)
-- emission certificate price (#1253)
+- emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
 
 ### Changed
 - energy transformation (#1251)
 - added annotations for which modules classes and individuals belong to (#1252)
+- emission certificate price (#1253)
 - power generating unit (#1259)
+- heat exchanger (#1263)
 
 ### Removed
 
