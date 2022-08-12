@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
+- oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
 
 ### Changed
 - energy transformation (#1251)
@@ -16,6 +17,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - emission certificate price (#1253)
 - power generating unit (#1259)
 - heat exchanger (#1263)
+- bearer of -> has characteristic (#1268)
+- ro-module -> ro-extracted (#1268)
 
 ### Removed
 
