@@ -9,12 +9,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
+- fuel cost (#1260)
 
 ### Changed
 - energy transformation (#1251)
 - added annotations for which modules classes and individuals belong to (#1252)
 - emission certificate price (#1253)
 - power generating unit (#1259)
+- equipment cost, variable cost, property cost, delivery cost, fixed cost (#1260)
 - heat exchanger (#1263)
 
 ### Removed
