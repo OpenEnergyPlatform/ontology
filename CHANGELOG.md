@@ -18,6 +18,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - power generating unit (#1259)
 - equipment cost, variable cost, property cost, delivery cost, fixed cost (#1260)
 - heat exchanger (#1263)
+- program parameter (#1274)
 
 ### Removed
 
