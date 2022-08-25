@@ -41,7 +41,7 @@ This is an interdisciplinary, open source project, help is always appreciated!
 
 The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by (online) developer meetings to review the progress and discuss more complicated topics. 
 
-If you're new to GitHub or ontologies check out our [how-to-help](https://github.com/OpenEnergyPlatform/ontology/wiki/How-to-help) article for some first advice and helpful links.
+If you're new to GitHub or ontologies check out our ["How to participate"](https://github.com/OpenEnergyPlatform/ontology/wiki/Welcome!-How-to-participate) article for some first advice and helpful links.
 
 Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
  
@@ -63,5 +63,5 @@ and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/
 - [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
 - [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
 - [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
-- [@oeo-general-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-steering-committee)
 - [@oeo-release-team](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-release-team)
+- [@oeo-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-steering-committee)
