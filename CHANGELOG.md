@@ -20,6 +20,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - equipment cost, variable cost, property cost, delivery cost, fixed cost (#1260)
 - heat exchanger (#1263)
 - program parameter (#1274)
+- electrical heat pump (#1282)
 
 ### Removed
 
