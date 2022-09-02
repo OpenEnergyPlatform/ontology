@@ -1,0 +1,1 @@
+This script generates a glossary for existing terms and definitions formatted in a table in a markdown file.
