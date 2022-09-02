@@ -12,8 +12,6 @@ robot merge --input "$ONTO_PATH""edits/oeo-model.omn" \
             --export "$ETD_PATH""etd.csv"
 LINE1="|ID|Name|Definition|"
 LINE2="|:-|:---|:-------|"
-echo "half terminated"
-echo "nearly terminated"
 echo $LINE1 >> ETD.md
 echo $LINE2 >> ETD.md
 while IFS=, read -r rec1 rec2 rec3
