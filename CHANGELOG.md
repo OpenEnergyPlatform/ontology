@@ -21,6 +21,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - heat exchanger (#1263)
 - program parameter (#1274)
 - electrical heat pump (#1282)
+- internal combustion engine (#1285)
 
 ### Removed
 
