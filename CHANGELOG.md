@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
 - fuel cost (#1260)
+- gas vehicles, gas engines, more gas fuels, compressed gas fuel role (#1290)
 
 ### Changed
 - energy transformation (#1251)
