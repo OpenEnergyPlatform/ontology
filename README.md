@@ -74,8 +74,7 @@ The OEO is organised in a general team and several [subteams](https://github.com
     Knowledge related to energy system modelling and simulation
 - [@oeo-domain-expert-economy](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-economy)
     Knowledge related to economic system, costs, monetary issues
-- [@oeo-domain-expert-linked-open-data]
-(https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
+- [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
     Knowledge related to linked open data
 - [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
     Knowledge related to meteorology and weather
