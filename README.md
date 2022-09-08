@@ -33,23 +33,23 @@ All released versions can be downloaded directly from the [GitGub Releases](http
 The currently developed version is available on the default [dev Branch](https://github.com/OpenEnergyPlatform/ontology/).
 
 The source code of the ontology is found in the folder `src/ontology/` <br>
-The main file is `src/ontology/oeo.omn`. <br>
-The own modules are collected in the folder `src/ontology/edits/` <br>
-The imported modules are under `src/ontology/imports/`. <br>
+The main file is `src/ontology/oeo.omn` <br>
+
+All own modules are collected in the folder `src/ontology/edits/` <br>
+The imported modules are under `src/ontology/imports/` <br>
 We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology.
 
 
-## Contributing and developing
-This is an interdisciplinary, open source project, help is always appreciated! 
+## Collaboration
+This is an interdisciplinary open source project, help is always welcome!
+Everyone is invited to develop this repository with good intentions.
 
-The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by (online) developer meetings to review the progress and discuss more complicated topics. 
+The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by regular (online) developer meetings to review the progress and discuss more complicated topics. 
 
 If you're new to GitHub or ontologies check out our ["How to participate"](https://github.com/OpenEnergyPlatform/ontology/wiki/Welcome!-How-to-participate) article for some first advice and helpful links.
-
-Please read the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for information about the ontology, its standards, its best practice principles and on BFO classification.
+The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [GitHub Issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
+Please read the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for more information about the ontology, its standards, its best practice principles and the BFO classification.
  
-The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [GitHub issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
-
 ## Teams
 Experts in ontology engineering, economy and energy-system modelling work together collaboratively.
 We combine domain knowledge with knowledge about how an ontology should be designed.
