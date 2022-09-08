@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - fuel cost (#1260)
 - transport performance value, transport performance unit, passenger-kilometre, ton-kilometre (#1289)
 - gas vehicles, gas engines, more gas fuels, compressed gas fuel role (#1290)
+- motorised vehicle, aircraft and subclasses, land vehicle and subclasses, watercraft and subclasses (#1293)
 
 ### Changed
 - energy transformation (#1251)
@@ -25,6 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electrical heat pump (#1282)
 - internal combustion engine (#1285)
 - diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288)
+- internal combustion vehicle (#1293)
 
 ### Removed
 

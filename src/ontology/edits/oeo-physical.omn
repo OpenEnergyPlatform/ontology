@@ -2851,13 +2851,19 @@ Class: OEO_00000240
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is a vehicle powered by an internal combustion engine.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
+
+extend internal combustion engine axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
         rdfs:label "internal combustion vehicle"
     
     SubClassOf: 
         OEO_00010023,
         OEO_00000503 some OEO_00000099,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010029
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00010029
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>))
     
     
 Class: OEO_00000245
@@ -6107,6 +6113,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1215",
         OEO_00000061
     
     
+Class: OEO_00010263
+
+    
 Class: OEO_00010267
 
     Annotations: 
@@ -6124,6 +6133,289 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1251",
         OEO_00010234 some OEO_00000007,
         OEO_00010235 some OEO_00000007,
         OEO_00010235 some OEO_00010114
+    
+    
+Class: OEO_00010273
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A land vehicle is a vehicle that is moved by applying forces against the ground.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "land vehicle"@en
+    
+    SubClassOf: 
+        OEO_00010023
+    
+    
+Class: OEO_00010274
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A road vehicle is a vehicle that uses roads.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "road vehicle"@en
+    
+    SubClassOf: 
+        OEO_00010273
+    
+    
+Class: OEO_00010275
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A motorised road vehicle is a road vehicle that has a traction motor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "motorised road vehicle"@en
+    
+    SubClassOf: 
+        OEO_00010274,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010254>
+    
+    
+Class: OEO_00010276
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A car is a motorised road vehicle that is used for passenger transport and has a maximum of eight seats.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "automobile",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "car"@en
+    
+    SubClassOf: 
+        OEO_00010275,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010263
+    
+    
+Class: OEO_00010277
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bus is a motorised road vehicle that is used for passenger transport and has more than eight seats.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "autobus",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "bus"@en
+    
+    SubClassOf: 
+        OEO_00010275,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010263
+    
+    
+Class: OEO_00010278
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A truck is a motorised road vehicle that is used for freight transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "lorry",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "truck"@en
+    
+    SubClassOf: 
+        OEO_00010275,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140005
+    
+    
+Class: OEO_00010279
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bicycle is a road vehicle that has two wheels and is propelled by a person.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "bicycle"@en
+    
+    SubClassOf: 
+        OEO_00010274,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010263
+    
+    
+Class: OEO_00010280
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A train is a vehicle that uses railway tracks.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "train"@en
+    
+    SubClassOf: 
+        OEO_00010273
+    
+    
+Class: OEO_00010281
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A freight train is a train that is used for freight transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "freight train"@en
+    
+    SubClassOf: 
+        OEO_00010280,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140005
+    
+    
+Class: OEO_00010282
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger train is a train that is used for passenger transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "passenger train"@en
+    
+    SubClassOf: 
+        OEO_00010280,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010263
+    
+    
+Class: OEO_00010283
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An e-bike is a bicycle that is propelled by a person and an electric traction motor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "e-bike"@en
+    
+    SubClassOf: 
+        OEO_00010279,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028
+    
+    
+Class: OEO_00010284
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A motorcycle is a motorised road vehicle that has two wheels.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "motorbike",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "motorcycle"@en
+    
+    SubClassOf: 
+        OEO_00010275,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010263
+    
+    
+Class: OEO_00010285
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A watercraft is a vehicle that is driving through water.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "watercraft"@en
+    
+    SubClassOf: 
+        OEO_00010023
+    
+    
+Class: OEO_00010286
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ship is a watercraft of significant size that is driving on the water surface.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "ship"@en
+    
+    SubClassOf: 
+        OEO_00010285
+    
+    
+Class: OEO_00010287
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger ship is a ship that is used for passenger transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "passenger ship"@en
+    
+    SubClassOf: 
+        OEO_00010286,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010263
+    
+    
+Class: OEO_00010288
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A cargo ship is a ship that is used for freight transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "cargo ship"@en
+    
+    SubClassOf: 
+        OEO_00010286,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140005
+    
+    
+Class: OEO_00010289
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A container ship is a cargo ship used for the transport of containers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "container ship"@en
+    
+    SubClassOf: 
+        OEO_00010288
+    
+    
+Class: OEO_00010290
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A tank ship is a cargo ship used for the transport of liquid goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "tank ship"@en
+    
+    SubClassOf: 
+        OEO_00010288
+    
+    
+Class: OEO_00010291
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A motorised vehicle is a vehicle that has a traction motor.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "motorised vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00010023
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010254>)
+    
+    SubClassOf: 
+        OEO_00010023
+    
+    
+Class: OEO_00010292
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An aircraft is a vehicle that is flying in the air.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "aircraft"@en
+    
+    SubClassOf: 
+        OEO_00010023
+    
+    
+Class: OEO_00010293
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An airplane is an aircraft that has fixed wings.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "airplane"@en
+    
+    SubClassOf: 
+        OEO_00010292
+    
+    
+Class: OEO_00010294
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A helicopter is an aircraft that has rotating wings.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+        rdfs:label "helicopter"@en
+    
+    SubClassOf: 
+        OEO_00010292
     
     
 Class: OEO_00020001
@@ -7666,6 +7958,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/509",
         OEO_00000350,
         <http://purl.obolibrary.org/obo/BFO_0000051> some <http://purl.obolibrary.org/obo/UO_0000001>
     
+    
+Class: OEO_00140005
+
     
 Class: OEO_00140033
 
