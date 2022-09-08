@@ -37,7 +37,7 @@ The main file is `src/ontology/oeo.omn` <br>
 
 All own modules are collected in the folder `src/ontology/edits/` <br>
 The imported modules are under `src/ontology/imports/` <br>
-We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology.
+We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology. Additionally, an ontology viewer is available on the [Open Energy Platform](https://openenergy-platform.org/viewer/oeo/).
 
 
 ## Collaboration
