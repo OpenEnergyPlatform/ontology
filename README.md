@@ -12,7 +12,7 @@ The **Open Energy Ontology (OEO)** is a domain ontology of the energy system ana
 
 ## Scope of this ontology
 
-This domain ontology is a collaborative effort to represent the context of **energy system analysis** based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability and transferability of energy system modelling and scenario analaysis. This ontology makes use of the Basic Formal Ontology ([BFO](https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes)) and its principles. It re-uses several other ontologies as described in the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/use-of-external-ontologies).
+This domain ontology is a collaborative effort to represent the context of **energy system analysis** based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability and transferability of energy system modelling and scenario analysis. This ontology makes use of the Basic Formal Ontology ([BFO](https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes)) and its principles. It re-uses several other ontologies as described in the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/use-of-external-ontologies).
 
 ## License / Copyright / Citation
 
