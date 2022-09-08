@@ -56,32 +56,31 @@ If you have a specific question about ontology design, energy system modelling o
 The OEO is organised in a general team and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/teams):
  
 - [@oeo-dev](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev)
+    - The developers of the OEO
 
 ### Organisation
 
 - [@oeo-community-manager](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-community-manager)
-    The community manager is the contact point for community related issues
+    - Contact point for personal and team related concerns
 - [@oeo-concept-owner](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-concept-owner)
-    Coordinates and delegates developers and testers while also doing development
+    - Strategic and long-term development and coordination of developers
 - [@oeo-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-steering-committee)
-    Members of the [OEO Steering Committee (OEO-SC)](https://openenergy-platform.org/ontology/oeo-steering-committee/)
+    - Members of the [Steering Committee (OEO-SC)](https://openenergy-platform.org/ontology/oeo-steering-committee/)
 - [@oeo-release-team](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-release-team)
-    Coordinates the periodic releases of the OEO
+    - Coordinates the periodic releases
 
 ### Domain Experts
 
 - [@oeo-domain-expert-energy-modelling](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-energy-modelling)
-    Knowledge related to energy system modelling and simulation
+    - Knowledge related to energy system modelling and simulation
 - [@oeo-domain-expert-economy](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-economy)
-    Knowledge related to economic system, costs, monetary issues
+    - Knowledge related to economic system, costs, monetary issues
 - [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
-    Knowledge related to linked open data
+    - Knowledge related to linked open data
 - [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
-    Knowledge related to meteorology and weather
+    - Knowledge related to meteorology and weather
 
 ### Ontology experts
 
 - [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
-    Knowledge related to formal ontology expertise and BFO
-
-
+    - Knowledge related to formal ontology expertise and BFO
