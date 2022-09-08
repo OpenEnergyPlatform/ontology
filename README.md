@@ -4,15 +4,15 @@
 
 # Open Energy Family - Open Energy Ontology (OEO)
 
-Developing a common ontology for energy system analysis and scenarios.
+Developing a common ontology for the domain of energy system analysis.
 
 ## Introduction
 
-The Open Energy Ontology (OEO) is a domain ontology of the energy-system modelling context. It is developed as part of the [Open Energy Family](https://github.com/OpenEnergyPlatform). The OEO is published on github as open source software. The language used is the Manchester OWL Syntax, which was chosen because it is user-friendly for editing and viewing diffs of edited files. The OEO is constantly being extended. The first version of the Open Energy Ontology (OEO) has been released on June 11th 2020. A steering committee was created to accompany the development, increase awareness of the ontology and include it in current projects.
+The **Open Energy Ontology (OEO)** is a domain ontology of the energy system analysis context. It is developed as part of the [Open Energy Family](https://github.com/OpenEnergyPlatform). The OEO is published on GitHub under an open source license. The language used is the Manchester OWL Syntax, which was chosen because it is user-friendly for editing and viewing differences of edited files. The OEO is constantly being extended. The first version of the OEO has been released on June 11th 2020. A Steering Committee (OEO-SC) was created to accompany the development, increase awareness of the ontology and include it in current projects.
 
 ## Scope of this ontology
 
-This **domain** ontology is a joint effort to represent the energy-system modelling context based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability & transferability within the energy system modelling context. This ontology makes use of the Basic Formal Ontology ([BFO](https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes)) and its principles. It re-uses several other ontologies as described in the [wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/use-of-external-ontologies).
+This domain ontology is a collaborative effort to represent the context of **energy system analysis** based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability and transferability of energy system modelling and scenario analaysis. This ontology makes use of the Basic Formal Ontology ([BFO](https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes)) and its principles. It re-uses several other ontologies as described in the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/use-of-external-ontologies).
 
 ## License / Copyright / Citation
 
@@ -41,7 +41,7 @@ We recommend to use the software [Protégé](https://protege.stanford.edu/) to o
 
 
 ## Collaboration
-This is an interdisciplinary open source project, help is always welcome!
+This is an interdisciplinary open source project, help is always welcome. <br>
 Everyone is invited to develop this repository with good intentions.
 
 The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by regular (online) developer meetings to review the progress and discuss more complicated topics. 
@@ -51,7 +51,7 @@ The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergy
 Please read the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for more information about the ontology, its standards, its best practice principles and the BFO classification.
  
 ## Teams
-Experts in ontology engineering, economy and energy-system modelling work together collaboratively.
+Experts in ontology engineering, economy and energy-system modelling work together collaboratively.<br>
 We combine domain knowledge with knowledge about how an ontology should be designed.
 
 If you have a specific question about ontology design, energy system modelling or economy (in context of this ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these teams (or persons) to notify its members that you need their feedback or help.
