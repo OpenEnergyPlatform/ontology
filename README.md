@@ -53,15 +53,36 @@ We combine domain knowledge with knowledge about how an ontology should be desig
 
 If you have a specific question about ontology design, energy system modelling or economy (in context of this ontology), you can [tag](https://github.com/OmahaGirlsWhoCode/OmahaGirlsWhoCode/wiki/How-to-tag-someone-in-a-pull-request) one of these teams (or persons) to notify its members that you need their feedback or help.
 
-The OEO is organised in an general team: 
+The OEO is organised in a general team and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/teams):
+ 
 - [@oeo-dev](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev)
 
-and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/teams):
+### Organisation
+
+- [@oeo-community-manager](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-community-manager)
+    The community manager is the contact point for community related issues
 - [@oeo-concept-owner](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-concept-owner)
-- [@oeo-domain-expert-economy](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-economy)
-- [@oeo-domain-expert-energy-modelling](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-energy-modelling)
-- [@oeo-domain-expert-linked-open-data](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
-- [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
-- [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
-- [@oeo-release-team](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-release-team)
+    Coordinates and delegates developers and testers while also doing development
 - [@oeo-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-steering-committee)
+    Members of the [OEO Steering Committee (OEO-SC)](https://openenergy-platform.org/ontology/oeo-steering-committee/)
+- [@oeo-release-team](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-release-team)
+    Coordinates the periodic releases of the OEO
+
+### Domain Experts
+
+- [@oeo-domain-expert-energy-modelling](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-energy-modelling)
+    Knowledge related to energy system modelling and simulation
+- [@oeo-domain-expert-economy](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-economy)
+    Knowledge related to economic system, costs, monetary issues
+- [@oeo-domain-expert-linked-open-data]
+(https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-linked-open-data)
+    Knowledge related to linked open data
+- [@oeo-domain-expert-meteorology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-domain-expert-meteorology)
+    Knowledge related to meteorology and weather
+
+### Ontology experts
+
+- [@oeo-general-expert-formal-ontology](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology)
+    Knowledge related to formal ontology expertise and BFO
+
+
