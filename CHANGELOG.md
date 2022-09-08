@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - motorised vehicle, aircraft and subclasses, land vehicle and subclasses, watercraft and subclasses (#1293)
 
 ### Changed
+- github: update the description of the readme file (#1292)
 - energy transformation (#1251)
 - added annotations for which modules classes and individuals belong to (#1252)
 - emission certificate price (#1253)
