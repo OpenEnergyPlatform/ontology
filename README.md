@@ -47,7 +47,7 @@ Everyone is invited to develop this repository with good intentions.
 The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by regular (online) developer meetings to review the progress and discuss more complicated topics. 
 
 If you're new to GitHub or ontologies check out our ["How to participate"](https://github.com/OpenEnergyPlatform/ontology/wiki/Welcome!-How-to-participate) article for some first advice and helpful links.
-The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out **before** you start working on this project. Points that are not clear in the file can be discussed in a [GitHub Issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
+The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out before you start working on this project. Points that are not clear in the file can be discussed in a [GitHub Issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
 Please read the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for more information about the ontology, its standards, its best practice principles and the BFO classification.
  
 ## Teams
@@ -59,7 +59,7 @@ If you have a specific question about ontology design, energy system modelling o
 The OEO is organised in a general team and several [subteams](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev/teams):
  
 - [@oeo-dev](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-dev)
-    - The developers of the OEO
+    - All developers of the OEO
 
 ### Organisation
 
