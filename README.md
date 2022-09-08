@@ -26,15 +26,18 @@ Example:
 > 'energy system' (https://openenergy-platform.org/ontology/oeo/OEO_00030024) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
 
 
-## Installation
+## Releases and installation
 
-The released version of the ontology can be downloaded from  https://openenergy-platform.org/ontology/oeo or directly from [github](https://github.com/OpenEnergyPlatform/ontology/releases/).
+The latest version of the OEO can be accessed on the [Open Energy Platform](https://openenergy-platform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
+All released versions can be downloaded directly from the [GitGub Releases](https://github.com/OpenEnergyPlatform/ontology/releases/). <br>
+The currently developed version is available on the default [dev Branch](https://github.com/OpenEnergyPlatform/ontology/).
 
-The currently developed version is available on GitHub: https://github.com/OpenEnergyPlatform/ontology
+The source code of the ontology is found in the folder `src/ontology/` <br>
+The main file is `src/ontology/oeo.omn`. <br>
+The own modules are collected in the folder `src/ontology/edits/` <br>
+The imported modules are under `src/ontology/imports/`. <br>
+We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology.
 
-To open the ontology the program [Protégé](https://protege.stanford.edu/) is recommended.
-
-The complete ontology is found under src/ontology/oeo.omn. The OEO-owned modules can be seen in the src/ontology/edits folder, and imported modules are under src/ontology/imports.
 
 ## Contributing and developing
 This is an interdisciplinary, open source project, help is always appreciated! 
