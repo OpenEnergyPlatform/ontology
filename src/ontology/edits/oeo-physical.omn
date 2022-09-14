@@ -433,6 +433,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
 ObjectProperty: OEO_00020056
 
     
+ObjectProperty: OEO_00020180
+
+    
 ObjectProperty: OEO_00020182
 
     Annotations: 
@@ -7548,6 +7551,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498",
 Class: OEO_00030035
 
     
+Class: OEO_00040009
+
+    
 Class: OEO_00040011
 
     
@@ -9521,7 +9527,9 @@ Class: OEO_00320016
         rdfs:label "transport network"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        OEO_00140002 some OEO_00140001,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320021
     
     
 Class: OEO_00320017
@@ -9532,7 +9540,8 @@ Class: OEO_00320017
         rdfs:label "road network"@en
     
     SubClassOf: 
-        OEO_00320016
+        OEO_00320016,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320022
     
     
 Class: OEO_00320018
@@ -9543,7 +9552,9 @@ Class: OEO_00320018
         rdfs:label "rail network"@en
     
     SubClassOf: 
-        OEO_00320016
+        OEO_00320016,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320025,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320028
     
     
 Class: OEO_00320019
@@ -9554,7 +9565,8 @@ Class: OEO_00320019
         rdfs:label "waterway network"@en
     
     SubClassOf: 
-        OEO_00320016
+        OEO_00320016,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320032
     
     
 Class: OEO_00320020
@@ -9565,7 +9577,8 @@ Class: OEO_00320020
         rdfs:label "aviation network"@en
     
     SubClassOf: 
-        OEO_00320016
+        OEO_00320016,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320035
     
     
 Class: OEO_00320021
@@ -9575,8 +9588,13 @@ Class: OEO_00320021
         <http://purl.obolibrary.org/obo/IAO_0000115> "A transport network component is an artificial object that is part of a transport network."@en,
         rdfs:label "transport network component"@en
     
-    SubClassOf: 
+    EquivalentTo: 
         OEO_00000061
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00320016)
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00020180 some OEO_00040009
     
     
 Class: OEO_00320022
