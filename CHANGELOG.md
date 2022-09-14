@@ -15,6 +15,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - gas vehicles, gas engines, more gas fuels, compressed gas fuel role (#1290)
 - motorised vehicle, aircraft and subclasses, land vehicle and subclasses, watercraft and subclasses (#1293)
 - conventional energy (#1295)
+- transport network, transport network component, transport hubs, and subclasses (#1297)
 
 ### Changed
 - github: update the description of the readme file (#1292)
