@@ -30,6 +30,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion engine (#1285)
 - diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288)
 - internal combustion vehicle (#1293)
+- scenario (#1296)
 
 ### Removed
 
