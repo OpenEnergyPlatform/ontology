@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - motorised vehicle, aircraft and subclasses, land vehicle and subclasses, watercraft and subclasses (#1293)
 - conventional energy (#1295)
 - transport network, transport network component, transport hubs, and subclasses (#1297)
+- subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -31,6 +32,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288)
 - internal combustion vehicle (#1293)
 - scenario (#1296)
+- heat transfer (#1299)
 
 ### Removed
 
