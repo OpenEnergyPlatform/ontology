@@ -33,6 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion vehicle (#1293)
 - scenario (#1296)
 - heat transfer (#1299)
+- bottom up, hybrid, top down (#1302)
 
 ### Removed
 
