@@ -34,6 +34,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - scenario (#1296)
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
+- transport (#1309)
 
 ### Removed
 
