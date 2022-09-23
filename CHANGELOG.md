@@ -17,6 +17,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - conventional energy (#1295)
 - transport network, transport network component, transport hubs, and subclasses (#1297)
 - subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
+- vehicle operational mode (#1314)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -35,6 +36,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
 - transport (#1309)
+- vehicle (#1314)
 
 ### Removed
 
