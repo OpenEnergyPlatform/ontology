@@ -50,6 +50,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has institution -> has organisation (#1226)
 - solar receiving object (#1228)
 - passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
+- vehicle charging station (#1312)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
