@@ -18,6 +18,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - transport network, transport network component, transport hubs, and subclasses (#1297)
 - subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
 - primary energy consumption calculation method and subclasses (#1306)
+- vehicle operational mode (#1314)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -34,7 +35,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion vehicle (#1293)
 - scenario (#1296)
 - heat transfer (#1299)
+- bottom up, hybrid, top down (#1302)
 - primary energy consumption, gross inland energy consumption (#1306)
+- transport (#1309)
+- vehicle (#1314)
 
 ### Removed
 
@@ -50,6 +54,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has institution -> has organisation (#1226)
 - solar receiving object (#1228)
 - passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
+- vehicle charging station (#1312)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
