@@ -30,6 +30,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - program parameter (#1274)
 - electrical heat pump (#1282)
 - internal combustion engine (#1285)
+- analysis scope (#1286)
 - diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288)
 - internal combustion vehicle (#1293)
 - scenario (#1296)
