@@ -37,6 +37,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
 - transport (#1309)
+- has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
 
 ### Removed
