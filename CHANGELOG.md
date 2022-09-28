@@ -12,12 +12,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
 - fuel cost (#1260)
 - transport performance value, transport performance unit, passenger-kilometre, ton-kilometre (#1289)
-- gas vehicles, gas engines, more gas fuels, compressed gas fuel role (#1290)
+- gas vehicles, gas engines, more gas fuels, compressed gas fuel role (#1290, #1305)
 - motorised vehicle, aircraft and subclasses, land vehicle and subclasses, watercraft and subclasses (#1293)
 - conventional energy (#1295)
 - transport network, transport network component, transport hubs, and subclasses (#1297)
 - subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
 - vehicle operational mode (#1314)
+- gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -31,14 +32,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electrical heat pump (#1282)
 - internal combustion engine (#1285)
 - analysis scope (#1286)
-- diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288)
-- internal combustion vehicle (#1293)
+- diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288, #1305)
+- internal combustion vehicle (#1293, #1305)
 - scenario (#1296)
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
 - transport (#1309)
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
+- electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
 
 ### Removed
 
