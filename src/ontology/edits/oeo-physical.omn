@@ -718,15 +718,22 @@ Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010245>
 https://github.com/OpenEnergyPlatform/ontology/pull/1037"
         <http://purl.obolibrary.org/obo/IAO_0000116> "The term gasoline was chosen as this term is more often used in energy modelling and energy statistics. This is a deliberate deviation from the convention of British English spelling in the OEO.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "gasoline vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00000240
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243>)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243> or (not (OEO_00010032))))
     
     SubClassOf: 
         OEO_00000240,
-        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> only 
-            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243> or (not (OEO_00010032)))
+        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010241>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010246>
@@ -738,15 +745,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027
 
 update axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1286
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1288",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1288
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "diesel vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00000240
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244> or (not (OEO_00010032))))
     
     SubClassOf: 
         OEO_00000240,
-        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> only 
-            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244> or (not (OEO_00010032)))
+        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010242>
     
     
 Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
@@ -2273,20 +2287,27 @@ Class: OEO_00000146
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric vehicle (abbreviated as EV) is a vehicle that uses one or more electric motors for propulsion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric vehicle (abbreviated as EV) is a vehicle that uses one or more electric traction motors."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "EV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
 
 change uses energy axiom to 'has energy input':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+Adapt definition and convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "electric vehicle"
+    
+    EquivalentTo: 
+        OEO_00010023
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
     
     SubClassOf: 
         OEO_00010023,
-        OEO_00010234 some OEO_00000139,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028
+        OEO_00010234 some OEO_00000139
     
     
 Class: OEO_00000147
@@ -2869,21 +2890,28 @@ Class: OEO_00000240
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is a vehicle powered by an internal combustion engine.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An internal combustion vehicle is a vehicle that uses an internal combustion engine for propulsion.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
 
 extend internal combustion engine axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293
+
+Adapt definition and convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "internal combustion vehicle"
+    
+    EquivalentTo: 
+        OEO_00010023
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00010029
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)))
     
     SubClassOf: 
         OEO_00010023,
-        OEO_00000503 some OEO_00000099,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some 
-            (OEO_00010029
-             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>))
+        OEO_00000503 some OEO_00000099
     
     
 Class: OEO_00000245
@@ -4612,18 +4640,25 @@ Class: OEO_00010024
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery electric vehicle (BEV) is an electric vehicle that stores energy in an on-board battery.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery electric vehicle (BEV) is an electric vehicle that stores energy in a traction battery.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "BEV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/637
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/655",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/655
+
+Adapt definition and convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "battery electric vehicle"@en
     
+    EquivalentTo: 
+        OEO_00000146
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026)
+    
     SubClassOf: 
-        OEO_00000146,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026
+        OEO_00000146
     
     
 Class: OEO_00010025
@@ -4636,13 +4671,20 @@ Class: OEO_00010025
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/637
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/655",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/655
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "fuel cell electric vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00000146
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000016)
     
     SubClassOf: 
         OEO_00000146,
-        OEO_00000503 some OEO_00000220,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000016
+        OEO_00000503 some OEO_00000220
     
     
 Class: OEO_00010026
@@ -4730,26 +4772,43 @@ Class: OEO_00010030
         <http://purl.obolibrary.org/obo/IAO_0000115> "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both a traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PHEV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "plug-in hybrid electric vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00010023
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00010029
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)))
     
     SubClassOf: 
         OEO_00010023,
         OEO_00000503 some OEO_00000099,
         OEO_00000503 some OEO_00000139,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010029
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026
     
     
 Class: OEO_00010031
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid supplied electric vehicle is an electric vehicle that uses electrical energy via a conductor.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid supplied electric vehicle is an electric vehicle that has a current collector to use electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
+
+Adapt definition and convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "grid supplied electric vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00000146
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010300)
     
     SubClassOf: 
         OEO_00000146
@@ -6303,11 +6362,16 @@ Class: OEO_00010283
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An e-bike is a bicycle that is propelled by a person and an electric traction motor.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1277
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1293
+
+Add 'traction battery' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         rdfs:label "e-bike"@en
     
     SubClassOf: 
         OEO_00010279,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028
     
     
@@ -6470,53 +6534,70 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1295",
         OEO_00020085
     
     
-Class: OEO_00010296
+Class: OEO_00010300
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary energy consumption calculation method is a methodology to calculate primary energy consumption.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306",
-        rdfs:label "primary energy consumption calculation method"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A current collector is an energy converting component that transfers electrical energy between a stationary conductor and a grid supplied electric vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
+        rdfs:label "current collector"@en
     
     SubClassOf: 
-        OEO_00020166,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00050018
+        OEO_00000011,
+        OEO_00010234 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00010031
     
     
-Class: OEO_00010297
+Class: OEO_00010301
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A substitution method is a primary energy consumption calculation method that treats renewable energy carriers as if they have similar conversion losses as a specified fossil reference energy carrier.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306",
-        rdfs:label "substitution method"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine vehicle is a vehicle that uses a gas turbine for propulsion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
+        rdfs:label "gas turbine vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00010023
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000185
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)))
     
     SubClassOf: 
-        OEO_00010296
+        OEO_00010023
     
     
-Class: OEO_00010298
+Class: OEO_00010302
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A direct equivalent method is a primary energy consumption calculation method that quantifies renewable and nuclear energies using its secondary energy content assuming no conversion losses.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306",
-        rdfs:label "direct equivalent method"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A jet fuel vehicle is a gas turbine vehicle that uses a jet fuel turbine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
+        rdfs:label "jet fuel vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00010301
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00010303
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)))
     
     SubClassOf: 
-        OEO_00010296
+        OEO_00010301
     
     
-Class: OEO_00010299
+Class: OEO_00010303
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A physical method is a method to calculate primary energy consumption that quantifies renewable and nuclear energies by attributing an efficiency value each.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306",
-        rdfs:label "physical method"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A jet fuel turbine is a turbine fueled with jet fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "aviation turbine",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "jet turbine",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
+        rdfs:label "jet fuel turbine"@en
     
     SubClassOf: 
-        OEO_00010296
+        OEO_00000185,
+        OEO_00000503 some OEO_00000245
     
     
 Class: OEO_00020001
@@ -7270,9 +7351,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1185",
         OEO_00000007
     
     
-Class: OEO_00020166
-
-    
 Class: OEO_00020196
 
     Annotations: 
@@ -7842,7 +7920,7 @@ Class: OEO_00050017
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross inland energy consumption is an energy consumption value accounting for the total consumption of energy in a spatial region (e.g. a country)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross inland energy consumption is an energy consumption value measuring the total consumption of energy in a spatial region (e.g. a country)."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "Gross inland energy consumption represents the quantity of energy necessary to satisfy inland consumption of the spatial region (e.g. a country) under consideration.
 
 Gross inland energy consumption covers:
@@ -7864,10 +7942,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
-
-improve definition: issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
         rdfs:label "gross inland energy consumption"@en
     
     SubClassOf: 
@@ -7883,7 +7958,7 @@ Class: OEO_00050018
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy consumption is an energy consumption value accounting for the total consumption of energy in a spatial region excluding the non-energetic use of fuels."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy consumption is the total consumption of energy in a spatial region excluding the non-energetic use of fuels."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "Primary energy consumption covers consumption of the energy sector itself, losses during transformation (for example, from oil or gas into electricity) and distribution of energy, and the final consumption by end users. It excludes energy carriers used for non-energy purposes (such as petroleum not used not for combustion but for producing plastics)."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption excluding non-energy use of energy carriers."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
@@ -7892,20 +7967,17 @@ https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Prim
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
-
-make energy consumption value:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613"@en,
         rdfs:label "primary energy consumption"@en
     
     SubClassOf: 
-        OEO_00240019,
+        OEO_00140039,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
         (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211))
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210),
+        OEO_00140002 some OEO_00050019
     
     
 Class: OEO_00050019
@@ -9472,15 +9544,22 @@ Class: OEO_00320004
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas vehicle is an internal combustion vehicle that has only a gas engine as a motor for propulsion."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1279
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315"@en,
         rdfs:label "gas vehicle"@en
+    
+    EquivalentTo: 
+        OEO_00000240
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320008)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (OEO_00320008 or (not (OEO_00010032))))
     
     SubClassOf: 
         OEO_00000240,
-        OEO_00000503 some OEO_00010146,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320008,
-        <http://purl.obolibrary.org/obo/BFO_0000051> only 
-            (OEO_00320008 or (not (OEO_00010032)))
+        OEO_00000503 some OEO_00010146
     
     
 Class: OEO_00320005
@@ -9488,12 +9567,19 @@ Class: OEO_00320005
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A liquefied petroleum gas vehicle is a gas vehicle that uses liquefied petroleum gas as fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1279
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315"@en,
         rdfs:label "liquefied petroleum gas vehicle"@en
     
+    EquivalentTo: 
+        OEO_00320004
+         and (OEO_00000503 some OEO_00320011)
+    
     SubClassOf: 
-        OEO_00320004,
-        OEO_00000503 some OEO_00320011
+        OEO_00320004
     
     
 Class: OEO_00320006
@@ -9501,12 +9587,19 @@ Class: OEO_00320006
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A compressed gas vehicle is a gas vehicle that uses a compressed gas fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1279
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315"@en,
         rdfs:label "compressed gas vehicle"@en
     
+    EquivalentTo: 
+        OEO_00320004
+         and (OEO_00000503 some OEO_00320015)
+    
     SubClassOf: 
-        OEO_00320004,
-        OEO_00000503 some OEO_00320015
+        OEO_00320004
     
     
 Class: OEO_00320007
@@ -9514,12 +9607,19 @@ Class: OEO_00320007
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A liquefied natural gas vehicle is a gas vehicle that uses liquefied natural gas as fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1279
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1290
+
+Convert to equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1311
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315"@en,
         rdfs:label "liquefied natural gas vehicle"@en
     
+    EquivalentTo: 
+        OEO_00320004
+         and (OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010237>)
+    
     SubClassOf: 
-        OEO_00320004,
-        OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010237>
+        OEO_00320004
     
     
 Class: OEO_00320008
