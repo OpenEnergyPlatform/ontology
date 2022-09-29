@@ -17,6 +17,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - conventional energy (#1295)
 - transport network, transport network component, transport hubs, and subclasses (#1297)
 - subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
+- primary energy consumption calculation method and subclasses (#1306)
 - vehicle operational mode (#1314)
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 
@@ -37,6 +38,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - scenario (#1296)
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
+- primary energy consumption, gross inland energy consumption (#1306)
 - transport (#1309)
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
