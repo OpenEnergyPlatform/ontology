@@ -20,6 +20,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - primary energy consumption calculation method and subclasses (#1306)
 - vehicle operational mode (#1314)
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
+- NC/BR sector division; NC/BR sector individuals (#1317)
 
 ### Changed
 - github: update the description of the readme file (#1292)
