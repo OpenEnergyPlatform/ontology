@@ -18,8 +18,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - transport network, transport network component, transport hubs, and subclasses (#1297)
 - subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
 - primary energy consumption calculation method and subclasses (#1306)
+- vehicle charging station (#1312)
 - vehicle operational mode (#1314)
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
+- fuel supply system (#1316)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -58,7 +60,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has institution -> has organisation (#1226)
 - solar receiving object (#1228)
 - passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
-- vehicle charging station (#1312)
 
 ### Changed
 - endogenous data, exogenous data (#1216)
