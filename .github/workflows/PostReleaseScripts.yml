@@ -1,0 +1,44 @@
+name: Post Release Scripts
+on: [push]
+# First we test the setup, to see if the files are building correctly once that is checked we introduce the wiki upload each release.
+# on:
+#  push:
+#    tags:
+#      - "v*"
+jobs:
+  exportTermsDefinitions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+          architecture: x64
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: install python dependencies
+        run: pip install src/scripts/requirements.txt
+      - name: setup robot
+      - run: |
+          wget https://github.com/ontodev/robot/releases/download/v1.9.0/robot.jar -O src/robot.jar
+          curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > src/robot
+      - name: Build ETD
+        run: |
+          robot merge --input "src/ontology/oeo.omn" \
+            --input "src/ontology/edits/oeo-model.omn" \
+            --input "src/ontology/edits/oeo-physical.omn" \
+            --input "src/ontology/edits/oeo-shared.omn" \
+            --input "src/ontology/edits/oeo-social.omn" \
+            --include-annotations true \
+          export  --header "ID|LABEL|definition" \
+                  --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
+                  --sort "LABEL" \
+                  --export "src/scripts/etd/etd.xlsx"
+          python src/scripts/etd/etd.py
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ETD
+          path: src/scripts/etd/ETD.md
