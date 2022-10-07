@@ -26,10 +26,10 @@ jobs:
       - name: install python dependencies
         run: pip install src/scripts/requirements.txt
       - name: setup robot
-      - run: |
+        run: |
           wget https://github.com/ontodev/robot/releases/download/v1.9.0/robot.jar -O src/robot.jar
           curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > src/robot
-      - name: Build ETD
+      - name: Build ETD xlsx
         run: |
           src/robot merge --input "src/ontology/oeo.omn" \
             --input "src/ontology/edits/oeo-model.omn" \
@@ -41,6 +41,8 @@ jobs:
                   --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
                   --sort "LABEL" \
                   --export "src/scripts/etd/etd.xlsx"
+      - name: Build ETD md
+        run: |
           python src/scripts/etd/etd.py
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
