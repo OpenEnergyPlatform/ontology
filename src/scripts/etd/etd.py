@@ -20,13 +20,13 @@ if __name__ == '__main__':
     df = df.sort_values("LABEL", key=lambda col: col.str.strip().str.lower())
     # Create one table per letter:
 
-    pathlib.Path("/src/scripts/etd/glossary/").mkdir(parents=True, exist_ok=True) 
+    pathlib.Path(cwd + "/src/scripts/etd/glossary/").mkdir(parents=True, exist_ok=True) 
 
     header = GLOSSARY_HEADER + " ".join([f"[{letter}]({BASE_LINK_WIKI}{letter})" for letter in string.ascii_uppercase]) + "\n"
 
     with open(cwd + "/src/scripts/etd/glossary/glossary.md", "w") as fil:
         fil.write(header)
-        
+
     for letter in string.ascii_lowercase:
         current_df = df[df["LABEL"].str.lower().str.startswith(letter)]
         if current_df.empty:
