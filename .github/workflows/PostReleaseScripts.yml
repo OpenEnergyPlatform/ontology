@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ETD
-          path: src/scripts/etd/ETD.md
+          path: src/scripts/etd/glossary
       - name: Checkout wiki
         uses: actions/checkout@v2
         with:
@@ -58,5 +58,5 @@ jobs:
           cp -a ../src/scripts/etd/glossary/. .
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add ETD.md
+          git add .
           git diff-index --quiet HEAD || git commit -m "Add changes" && git push
