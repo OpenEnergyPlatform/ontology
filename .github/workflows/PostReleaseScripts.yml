@@ -31,7 +31,7 @@ jobs:
           curl https://raw.githubusercontent.com/ontodev/robot/master/bin/robot > src/robot
       - name: Build ETD xlsx
         run: |
-          src/robot merge --input "src/ontology/oeo.omn" \
+          java -jar src/robot merge --input "src/ontology/oeo.omn" \
             --input "src/ontology/edits/oeo-model.omn" \
             --input "src/ontology/edits/oeo-physical.omn" \
             --input "src/ontology/edits/oeo-shared.omn" \
