@@ -48,3 +48,16 @@ jobs:
         with:
           name: ETD
           path: src/scripts/etd/ETD.md
+      - name: Checkout wiki
+        uses: actions/checkout@v2
+        with:
+          repository: ${{github.repository}}.wiki
+          path: wiki
+      - name: Push list to wiki
+        run: |
+          cp src/scripts/etd/ETD.md wiki/ETD.md
+          cd wiki
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add wiki/ETD.md
+          git diff-index --quiet HEAD || git commit -m "Add changes" && git push
