@@ -8,4 +8,4 @@ if __name__ == '__main__':
     cwd = os.getcwd()
     df = pd.read_excel('src/scripts/etd/etd.xlsx')
     df = df.replace('\n', '<br>', regex=True)
-    df.to_markdown(buf=cwd + "src/scripts/etd/ETD.md", index=False)
+    df.to_markdown(buf=cwd + "/src/scripts/etd/ETD.md", index=False)
