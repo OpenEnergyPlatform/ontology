@@ -23,12 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 - fuel supply system (#1316)
 - NC/BR sector division; NC/BR sector individuals (#1317)
-- data file format: A file format is a data format that describes how data is stuctured in a file.
-- text file format: A text file format is a file format that is structured as a sequence of lines of electronic text.
-- delimiter separated file format: A delimiter separated file format is a text file format that uses delimiter-separated values (also DSV) to store two-dimensional arrays of data by separating the values in each row with specific delimiter characters.
-- comma seperated file format: A comma separated file format is a delimiter separated file format that uses comma (,) as delimiter.
-- binary file format: A binary file format is a file format that is not a text format. 
-- source code file format: A source code file format is a text file format that source code in a programming language.
+- data file format, and subclasses (#1326)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -52,7 +47,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
 - electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
-- data format: A data format is a data descriptor that specifies the structure in which the data item is encoded.
+- data format (#1326)
 
 ### Removed
 
