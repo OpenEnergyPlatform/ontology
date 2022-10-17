@@ -46,6 +46,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
 - electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
+- energy use (#1321)
 
 ### Removed
 
