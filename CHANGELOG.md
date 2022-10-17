@@ -25,6 +25,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - NC/BR sector division; NC/BR sector individuals (#1317)
 - is sector of, sectoral energy consumption, sectoral emission (#1321)
 - data file format, and subclasses (#1326)
+- mineral oil, mineral oil product, mineral oil refinery, mineral oil refining (#1331)
 
 ### Changed
 - github: update the description of the readme file (#1292)
