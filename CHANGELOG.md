@@ -51,6 +51,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
 - energy use (#1321)
 - data format (#1326)
+- crude oil, gas diesel oil, gasoline, kerosene, and subclasses (#1331)
 
 ### Removed
 
