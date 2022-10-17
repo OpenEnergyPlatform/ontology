@@ -23,6 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 - fuel supply system (#1316)
 - NC/BR sector division; NC/BR sector individuals (#1317)
+- is sector of, sectoral energy consumption, sectoral emission (#1321)
 - data file format, and subclasses (#1326)
 
 ### Changed
@@ -47,6 +48,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
 - electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
+- energy use (#1321)
 - data format (#1326)
 
 ### Removed
