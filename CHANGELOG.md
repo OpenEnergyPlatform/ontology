@@ -26,6 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is sector of, sectoral energy consumption, sectoral emission (#1321)
 - data file format, and subclasses (#1326)
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
+- international transport sector (#1334)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -52,6 +53,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy use (#1321)
 - data format (#1326)
 - crude oil; gas diesel oil, gasoline, kerosene, and subclasses; CRF sector (IPCC 2006): petroleum refining (#1331)
+- CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
 
 ### Removed
 
