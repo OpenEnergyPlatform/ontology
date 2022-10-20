@@ -53,6 +53,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - data format (#1326)
 - crude oil; gas diesel oil, gasoline, kerosene, and subclasses; CRF sector (IPCC 2006): petroleum refining (#1331)
 - final energy consumption (#1340)
+- fuel cell (#1341)
 
 ### Removed
 
