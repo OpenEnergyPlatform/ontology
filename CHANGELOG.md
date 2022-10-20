@@ -54,6 +54,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - data format (#1326)
 - crude oil; gas diesel oil, gasoline, kerosene, and subclasses; CRF sector (IPCC 2006): petroleum refining (#1331)
 - CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
+- final energy consumption (#1340)
 
 ### Removed
 
