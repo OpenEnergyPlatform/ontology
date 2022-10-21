@@ -58,7 +58,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
 - final energy consumption (#1340)
 - fuel cell (#1341)
-- energy storage -> energy storage function; thermal energy storage function; methanation gas storage -> power-to-methane system (#1348)
+- energy storage -> energy storage function; thermal energy storage function; methanation gas storage -> power-to-methane system; power-to-liquid system (#1348)
 
 ### Removed
 
