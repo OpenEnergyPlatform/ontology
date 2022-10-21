@@ -28,7 +28,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
-- chemical/electrical/kinetic/potential energy storage function (#1348)
+- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 
 ### Changed
 - github: update the description of the readme file (#1292)
