@@ -62,6 +62,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - methanation gas storage -> power-to-methane system; power-to-liquid system (#1348)
 
 ### Removed
+- battery storage (#1348)
 
 ## [1.11.0] - 2022-07-04
 
