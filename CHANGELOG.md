@@ -28,6 +28,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
 - international transport sector (#1334)
 - has study region, has study subregio, has considered region, has interacting region, has scenario year (#1347)
+- equivalence subclasses for car and truck (#1345)
+
 
 ### Changed
 - github: update the description of the readme file (#1292)
