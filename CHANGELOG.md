@@ -59,7 +59,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - final energy consumption (#1340)
 - fuel cell (#1341)
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
-- methanation gas storage -> power-to-methane system; power-to-liquid system (#1348)
+- methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
 
 ### Removed
 - battery storage (#1348)
