@@ -28,6 +28,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
+- filling station, hydrogen station, hydrogen transport (#1357)
 
 ### Changed
 - github: update the description of the readme file (#1292)
