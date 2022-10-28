@@ -43,7 +43,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion engine (#1285)
 - analysis scope (#1286)
 - diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288, #1315)
-- internal combustion vehicle (#1293, #1315)
+- internal combustion vehicle (#1293, #1315,#1356)
 - scenario (#1296)
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
@@ -58,7 +58,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
 - final energy consumption (#1340)
 - fuel cell (#1341)
-- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+- plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 
 ### Removed
 
