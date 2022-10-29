@@ -29,7 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
-- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, combustion-based heater, electrical heater, geothermal heat unit (#1254)
+- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, solar heat unit, solar heat plant, tube collector, flat-plate collector (#1254)
 
 ### Changed
 - github: update the description of the readme file (#1292)
