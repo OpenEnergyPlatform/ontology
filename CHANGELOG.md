@@ -29,7 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
-- heat recovery steam generator (#1256)
+- heat recovery steam generator, gas turbine process, combined cycle electricity generation, steam power unit, combined cycle power plant, gas power unit, heat recovery steam unit (#1256)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -60,6 +60,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - final energy consumption (#1340)
 - fuel cell (#1341)
 - energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
+- gas turbine (#1256)
 
 ### Removed
 
