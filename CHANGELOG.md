@@ -29,6 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
+- heat recovery steam generator (#1256)
 
 ### Changed
 - github: update the description of the readme file (#1292)
