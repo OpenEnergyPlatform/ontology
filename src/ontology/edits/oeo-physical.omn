@@ -1417,14 +1417,16 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
 
 subclass of energy transformation unit
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+more precise axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "power plant"
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020006,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334
     
     
 Class: OEO_00000032
@@ -9388,20 +9390,28 @@ Class: OEO_00240010
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is a power generating unit that produces electrical energy and thermal energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is an energy transformation unit that produces electrical energy and thermal energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "co-generating power unit"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
 
 change produces energy axioms to 'has energy output':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+change to a subclass of energy transformation unit
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "combined heat and power generating unit"
     
     SubClassOf: 
-        OEO_00000334,
+        OEO_00020102,
         OEO_00010235 some OEO_00000139,
         OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000210 or OEO_00140102),
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
     
     
@@ -9409,15 +9419,23 @@ Class: OEO_00240011
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power plant (CHPP) is a power plant that has combined heat and power generating units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power plant (CHPP) is an energy transformation unit consisting of combined heat and power generating units, a grid component that feeds electric energy into an electric grid, and a grid component that feeds thermal energy into a heating grid."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "CHPP"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
+
+change to a subclass of energy transformation unit and more precise defintion
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "combined heat and power plant"
     
     SubClassOf: 
-        OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310008,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
     
     
 Class: OEO_00240012
@@ -9744,6 +9762,124 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1112",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000122>
+    
+    
+Class: OEO_00310008
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generating unit is an energy transformation unit that contains a heat exchanger or heater."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "heat generating unit"
+    
+    SubClassOf: 
+        OEO_00020102,
+        OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000210 or OEO_00140102),
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
+    
+    
+Class: OEO_00310009
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A rotary heat exchanger is a heat exchanger that uses a wheel for a heat transfer process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "rotary heat exchanger"
+    
+    SubClassOf: 
+        OEO_00140102
+    
+    
+Class: OEO_00310010
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A plate heat exchanger is a heat exchanger that uses a plate for a heat transfer process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "plate heat exchanger"
+    
+    SubClassOf: 
+        OEO_00140102
+    
+    
+Class: OEO_00310011
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat plant is an energy transformation unit consisting of heat generating units and a grid component that feeds thermal energy into a heating grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "heat plant"
+    
+    SubClassOf: 
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310008,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
+    
+    
+Class: OEO_00310012
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat transfer unit is a heat generating unit that can contain a heater or a heat exchanger."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "heat transfer unit"
+    
+    SubClassOf: 
+        OEO_00310008,
+        (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000210))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140102)
+    
+    
+Class: OEO_00310013
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boiler is a heater that increases the thermal energy of fluids."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "boiler"
+    
+    SubClassOf: 
+        OEO_00000210,
+        (OEO_00000503 some OEO_00000331)
+         and (OEO_00000531 value OEO_00000256)
+    
+    
+Class: OEO_00310014
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion-based heater is a heater that increases the thermal energy using combustion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "combustion-based heater"
+    
+    SubClassOf: 
+        OEO_00000210,
+        OEO_00010234 some OEO_00000007,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010249>
+    
+    
+Class: OEO_00310015
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical heater is a heater that increases the thermal energy using electric energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "electrical heater"
+    
+    SubClassOf: 
+        OEO_00000210,
+        OEO_00010234 some OEO_00000139
     
     
 Class: OEO_00320004
