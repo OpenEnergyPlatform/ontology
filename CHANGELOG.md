@@ -63,6 +63,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - power plant, combined heat and power plant, combined heat and power generating unit (#1254)
 
 ### Removed
+- solar thermal power plant, solar thermal power unit (#1254)
 
 ## [1.11.0] - 2022-07-04
 
