@@ -60,10 +60,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - final energy consumption (#1340)
 - fuel cell (#1341)
 - energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
-- power plant, combined heat and power plant, combined heat and power generating unit (#1254)
+- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal power plant, solar thermal power unit (#1254)
 
 ### Removed
-- solar thermal power plant, solar thermal power unit (#1254)
 
 ## [1.11.0] - 2022-07-04
 
