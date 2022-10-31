@@ -29,6 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -60,6 +61,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - fuel cell (#1341)
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
 
 ### Removed
 - battery storage (#1348)

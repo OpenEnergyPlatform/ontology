@@ -1107,12 +1107,16 @@ renaming to component
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
 
 redefine
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:comment "formerly called energy transformer and formerly called energy converting device",
         rdfs:label "energy converting component"
     
     SubClassOf: 
         OEO_00000061,
+        OEO_00010235 some OEO_00010114,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
@@ -2347,6 +2351,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
 Make equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "energy storage object"
     
     EquivalentTo: 
@@ -2354,7 +2360,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
          and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00000165
@@ -5586,11 +5593,14 @@ Class: OEO_00010114
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "waste heat",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/775
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813",
-        rdfs:label "waste thermal energy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813
+
+change label and definition language
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "waste thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -7410,6 +7420,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
     
     SubClassOf: 
         OEO_00000061,
+        OEO_00010235 some OEO_00010114,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
@@ -7693,7 +7704,10 @@ Class: OEO_00020200
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar receiving object is an artificial object that has a solar radiation receiving surface as part.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "solar receiving object"
     
     EquivalentTo: 
@@ -7701,7 +7715,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199)
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00020201
@@ -9826,6 +9841,75 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1112",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000122>
+    
+    
+Class: OEO_00310000
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A datacenter is an artificial object that houses computer systems and associated components."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "data center"
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
+    
+    
+Class: OEO_00310001
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sewage plant is an artificial object that removes contaminants from wastewater to produce an effluent that is suitable for discharge to the surrounding environment or an intended reuse application."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "sewage plant"
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00000503 some OEO_00000441,
+        OEO_00010235 some OEO_00010114
+    
+    
+Class: OEO_00310004
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industrial waste thermal energy is waste thermal energy that is energy output of some industrial process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "industrial waste thermal energy"
+    
+    SubClassOf: 
+        OEO_00010114,
+        OEO_00020184 some OEO_00050000
+    
+    
+Class: OEO_00310005
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Recovered heat is a thermal energy that is physical output of an energy transformation process and that is recovered and would otherwise be emitted in the environment as waste thermal energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "recovered heat"
+    
+    SubClassOf: 
+        OEO_00000207
+    
+    
+Class: OEO_00310006
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Aerothermal energy is a natural ambient thermal energy that is stored in the air of a natural environment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "aerothermal energy"
+    
+    SubClassOf: 
+        OEO_00140104
     
     
 Class: OEO_00320004
