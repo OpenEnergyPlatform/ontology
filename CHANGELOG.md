@@ -28,8 +28,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
-- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
-- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1254)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
+- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -59,8 +59,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
 - final energy consumption (#1340)
 - fuel cell (#1341)
-- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
-- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal power plant, solar thermal power unit (#1254)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
+- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal power plant, solar thermal power unit (#1360)
 
 ### Removed
 
