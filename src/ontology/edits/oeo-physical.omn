@@ -1125,14 +1125,18 @@ Class: OEO_00000012
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy storage is a function of an artificial object that has been engineered to contain energy for conversion as usable energy later.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage function is the function of an artificial object that has been engineered to contain energy for later usage whereby input energy and usable output energy are of the same type.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276",
-        rdfs:label "energy storage"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
+
+Improve definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1170
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "energy storage function"
     
     SubClassOf: 
         OEO_00000151,
-        <http://purl.obolibrary.org/obo/BFO_0000034>
+        OEO_00010121 some OEO_00000061
     
     
 Class: OEO_00000013
@@ -1570,8 +1574,11 @@ Class: OEO_00000039
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A thermal energy storage is an energy storage that stores thermal energy for later use.",
-        rdfs:label "thermal energy storage"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A thermal energy storage function is an energy storage function with thermal energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Improve definition and label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "thermal energy storage function"
     
     SubClassOf: 
         OEO_00000012
@@ -1826,21 +1833,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801",
     
     SubClassOf: 
         OEO_00000159,
-        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000070
-    
-    
-Class: OEO_00000070
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en,
-        rdfs:label "battery storage"
-    
-    SubClassOf: 
-        OEO_00000012
-    
-    DisjointWith: 
-        OEO_00000269
+        OEO_00010234 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140037,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
     
     
 Class: OEO_00000071
@@ -2352,9 +2348,16 @@ Class: OEO_00000159
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
 
+Make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "energy storage object"
+    
+    EquivalentTo: 
+        OEO_00000061
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
     
     SubClassOf: 
         OEO_00000061,
@@ -3176,14 +3179,16 @@ Class: OEO_00000269
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en,
-        rdfs:label "methanation gas storage"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane system is a power-to-gas system that implements the power-to-methane process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "methanation gas storage",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Improve definition and classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "power-to-methane system"
     
     SubClassOf: 
-        OEO_00000012
-    
-    DisjointWith: 
-        OEO_00000070
+        OEO_00000335,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010217
     
     
 Class: OEO_00000282
@@ -3643,17 +3648,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
     
     
-Class: OEO_00000343
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) is an energy storage that uses water from a higher reservoir to generate energy."@en,
-        rdfs:label "pumped storage"
-    
-    SubClassOf: 
-        OEO_00000012
-    
-    
 Class: OEO_00000345
 
     Annotations: 
@@ -3664,12 +3658,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755
 
 add secondary energy carrier disposition
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1222
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243
+
+add potential energy axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1174
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "pumped water"
     
     SubClassOf: 
         OEO_00110000,
         OEO_00000501 some OEO_00000399,
+        <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020045,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
     
     
@@ -3962,7 +3961,14 @@ Class: OEO_00000399
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1338
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "storage unit"
+    
+    EquivalentTo: 
+        OEO_00020006
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
     
     SubClassOf: 
         OEO_00020006,
@@ -4057,14 +4063,18 @@ Class: OEO_00000429
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground hydrogen storage is an energy storage object that stores hydrogen underground. Examples are underground caverns, salt domes and depleted oil/gas fields."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground hydrogen storage is an underground fuel storage object that stores hydrogen. Examples are underground caverns, salt domes and depleted oil/gas fields.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Issue:https://github.com/OpenEnergyPlatform/ontology/issues/448
-Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/462",
-        rdfs:label "underground hydrogen storage"
+Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/462
+
+Improve definition and classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "underground hydrogen storage object"
     
     SubClassOf: 
-        OEO_00000159,
+        OEO_00010325,
         OEO_00000503 some OEO_00000220
     
     
@@ -4614,15 +4624,20 @@ Class: OEO_00010020
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid (often abbreviated P2L or PtL) system is an energy storage object that converts electrical power to a liquid fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid system is an energy transformation unit that implements a power-to-liquid process. A water electrolyser is participating in the power-to-liquid process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2L",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtL",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+Align with 'power-to-gas system':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "power-to-liquid system"
     
     SubClassOf: 
-        OEO_00000159
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
     
     
 Class: OEO_00010021
@@ -5139,12 +5154,17 @@ Class: OEO_00010089
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped hydro storage power plant is a hydro storage power plant which has some pumps as parts.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758
+
+Add energy storage function axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1174
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "pumped hydro storage power plant"@en
     
     SubClassOf: 
         OEO_00010088,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
     
     
 Class: OEO_00010090
@@ -6795,6 +6815,67 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         OEO_00020102,
         OEO_00000503 some OEO_00000115,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010315
+    
+    
+Class: OEO_00010321
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical energy storage function is an energy storage function with chemical energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "chemical energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010322
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy storage function is an energy storage function with electrical energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "electrical energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010323
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A kinetic energy storage function is an energy storage function with kinetic energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "kinetic energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010324
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential energy storage function is an energy storage function with potential energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "potential energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010325
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground fuel storage object is an energy storage object that stores chemical energy in form of fuels underground.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "underground fuel storage object"
+    
+    SubClassOf: 
+        OEO_00000159,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010321
     
     
 Class: OEO_00020001
