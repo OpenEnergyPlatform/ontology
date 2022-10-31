@@ -30,7 +30,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - equivalence subclasses for car and truck (#1345)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
-- thermo-chemical heat storage
+- thermo-chemical heat storage, chemical heat storage, sorption heat storage, adsorption, desorption, sensible heat storage, sensible solid heat storage, sensible fluid heat storage, phase transitions, evaporating, melting, latent heat storage, latent fluid-gaseous heat storage, latent solid-fluid heat storage  (#1363)
 
 ### Changed
 - github: update the description of the readme file (#1292)
