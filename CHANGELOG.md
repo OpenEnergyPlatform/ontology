@@ -67,6 +67,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Removed
 - battery storage (#1348)
+- csv and txt (#1371)
 
 ## [1.11.0] - 2022-07-04
 
