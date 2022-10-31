@@ -1107,12 +1107,16 @@ renaming to component
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
 
 redefine
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:comment "formerly called energy transformer and formerly called energy converting device",
         rdfs:label "energy converting component"
     
     SubClassOf: 
         OEO_00000061,
+        OEO_00010235 some OEO_00010114,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
@@ -2344,17 +2348,21 @@ Class: OEO_00000159
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
 
-Make equivalent class:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "energy storage object"
-    
-    EquivalentTo: 
+
+    Make equivalent class:
+    issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+    pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348"
+
+    EquivalentTo:
         OEO_00000061
          and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
-    
-    SubClassOf: 
-        OEO_00000061
+
+    SubClassOf:
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00000165
@@ -3640,7 +3648,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
     
-    
+
 Class: OEO_00000345
 
     Annotations: 
@@ -3959,11 +3967,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1338
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "storage unit"
     
-    EquivalentTo: 
+    EquivalentTo:
         OEO_00020006
          and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00020006,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000200
     
@@ -5586,11 +5594,14 @@ Class: OEO_00010114
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "waste heat",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/775
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813",
-        rdfs:label "waste thermal energy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813
+
+change label and definition language
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "waste thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -6809,65 +6820,65 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
     
 Class: OEO_00010321
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical energy storage function is an energy storage function with chemical energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "chemical energy storage function"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00000012
-    
-    
+
+
 Class: OEO_00010322
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy storage function is an energy storage function with electrical energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "electrical energy storage function"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00000012
-    
-    
+
+
 Class: OEO_00010323
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A kinetic energy storage function is an energy storage function with kinetic energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "kinetic energy storage function"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00000012
-    
-    
+
+
 Class: OEO_00010324
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "A potential energy storage function is an energy storage function with potential energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "potential energy storage function"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00000012
-    
-    
+
+
 Class: OEO_00010325
 
-    Annotations: 
+    Annotations:
         <http://purl.obolibrary.org/obo/IAO_0000115> "An underground fuel storage object is an energy storage object that stores chemical energy in form of fuels underground.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "underground fuel storage object"@en
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00000159,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010321
-    
-    
+
+
 Class: OEO_00020001
 
     Annotations: 
@@ -7410,7 +7421,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
     
     SubClassOf: 
         OEO_00000061,
-        
+        OEO_00010235 some OEO_00010114,
+
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000011,
@@ -7693,7 +7705,10 @@ Class: OEO_00020200
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar receiving object is an artificial object that has a solar radiation receiving surface as part.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "solar receiving object"
     
     EquivalentTo: 
@@ -7701,7 +7716,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199)
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00020201
@@ -9830,21 +9846,90 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1112",
     
 Class: OEO_00310032
 
-    Annotations: 
+    Annotations:
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A thermo-chemical heat storage (TCS) is a thermal energy storage object that stores thermal energy through reversible exotherm/endotherm chemical reaction with thermo-chemical materials (TCM)."@en,
         rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1261
 pull request:",
         rdfs:label "thermo-chemical heat storage"
-    
-    SubClassOf: 
+
+    SubClassOf:
         OEO_00000159,
         OEO_00010234 some OEO_00000207,
         OEO_00010235 some OEO_00000207,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140033,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000039
-    
-    
+
+
+Class: OEO_00310000
+
+    Annotations:
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A datacenter is an artificial object that houses computer systems and associated components."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "data center"
+
+    SubClassOf:
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
+
+
+Class: OEO_00310001
+
+    Annotations:
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sewage plant is an artificial object that removes contaminants from wastewater to produce an effluent that is suitable for discharge to the surrounding environment or an intended reuse application."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "sewage plant"
+
+    SubClassOf:
+        OEO_00000061,
+        OEO_00000503 some OEO_00000441,
+        OEO_00010235 some OEO_00010114
+
+
+Class: OEO_00310004
+
+    Annotations:
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industrial waste thermal energy is waste thermal energy that is energy output of some industrial process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "industrial waste thermal energy"
+
+    SubClassOf:
+        OEO_00010114,
+        OEO_00020184 some OEO_00050000
+
+
+Class: OEO_00310005
+
+    Annotations:
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Recovered heat is a thermal energy that is physical output of an energy transformation process and that is recovered and would otherwise be emitted in the environment as waste thermal energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "recovered heat"
+
+    SubClassOf:
+        OEO_00000207
+
+
+Class: OEO_00310006
+
+    Annotations:
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Aerothermal energy is a natural ambient thermal energy that is stored in the air of a natural environment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "aerothermal energy"
+
+    SubClassOf:
+        OEO_00140104
+
+
 Class: OEO_00320004
 
     Annotations: 
