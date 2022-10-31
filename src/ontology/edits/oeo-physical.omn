@@ -101,6 +101,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     
@@ -1125,7 +1128,7 @@ Class: OEO_00000012
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage function is a function of an artificial object that has been engineered to contain energy for later usage whereby input energy and usable output energy are of the same type.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage function is the function of an artificial object that has been engineered to contain energy for later usage whereby input energy and usable output energy are of the same type.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
 
@@ -2082,10 +2085,14 @@ Class: OEO_00000097
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible energy carrier is an energy carrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'realized in' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353",
         rdfs:label "combustible energy carrier disposition"
     
     SubClassOf: 
-        OEO_00000151
+        OEO_00000151,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140033
     
     
 Class: OEO_00000099
@@ -2353,7 +2360,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359
 
 Make equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "energy storage object"
     
     EquivalentTo: 
@@ -2671,7 +2680,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+Add 'realized in' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353",
         rdfs:label "greenhouse effect disposition",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -2682,7 +2695,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         <http://purl.obolibrary.org/obo/BFO_0000016>,
         OEO_00010121 some 
             (OEO_00000331
-             and (OEO_00000531 value OEO_00000182))
+             and (OEO_00000531 value OEO_00000182)),
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00000199
     
     
 Class: OEO_00000199
@@ -3180,7 +3194,7 @@ Class: OEO_00000269
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane system is a power-to-gas system that implements the power-to-methane process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane system is a power-to-gas system that implements the power-to-methane process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "methanation gas storage",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Improve definition and classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
@@ -4064,7 +4078,7 @@ Class: OEO_00000429
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground hydrogen storage is an underground fuel storage object that stores hydrogen. Examples are underground caverns, salt domes and depleted oil/gas fields."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground hydrogen storage is an underground fuel storage object that stores hydrogen. Examples are underground caverns, salt domes and depleted oil/gas fields.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Issue:https://github.com/OpenEnergyPlatform/ontology/issues/448
 Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/462
@@ -6824,7 +6838,7 @@ Class: OEO_00010321
         <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical energy storage function is an energy storage function with chemical energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
-        rdfs:label "chemical energy storage function"@en
+        rdfs:label "chemical energy storage function"
     
     SubClassOf: 
         OEO_00000012
@@ -6836,7 +6850,7 @@ Class: OEO_00010322
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy storage function is an energy storage function with electrical energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
-        rdfs:label "electrical energy storage function"@en
+        rdfs:label "electrical energy storage function"
     
     SubClassOf: 
         OEO_00000012
@@ -6848,7 +6862,7 @@ Class: OEO_00010323
         <http://purl.obolibrary.org/obo/IAO_0000115> "A kinetic energy storage function is an energy storage function with kinetic energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
-        rdfs:label "kinetic energy storage function"@en
+        rdfs:label "kinetic energy storage function"
     
     SubClassOf: 
         OEO_00000012
@@ -6860,7 +6874,7 @@ Class: OEO_00010324
         <http://purl.obolibrary.org/obo/IAO_0000115> "A potential energy storage function is an energy storage function with potential energy as input and output.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
-        rdfs:label "potential energy storage function"@en
+        rdfs:label "potential energy storage function"
     
     SubClassOf: 
         OEO_00000012
@@ -6872,11 +6886,50 @@ Class: OEO_00010325
         <http://purl.obolibrary.org/obo/IAO_0000115> "An underground fuel storage object is an energy storage object that stores chemical energy in form of fuels underground.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
-        rdfs:label "underground fuel storage object"@en
+        rdfs:label "underground fuel storage object"
     
     SubClassOf: 
         OEO_00000159,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010321
+        
+        
+Class: OEO_00010326
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Refinery gas is a gas mixture that is produced as a by product of a mineral oil refining process. It mainly consists of hydrogen, methane, ethane and olefins and can be used as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1332
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1351",
+        rdfs:label "refinery gas"
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
+        OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000025
+             and OEO_00000220),
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000182
+    
+    
+Class: OEO_00010327
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum coke is a portion of matter with a solid state of matter that is produced in a mineral oil refining process. It consists mainly of carbon and can be uses as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "coke",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "pet coke",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1332
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1351",
+        rdfs:label "petroleum coke"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000390
     
     
 Class: OEO_00020001
