@@ -11,7 +11,7 @@ robot merge --input "$ONTO_PATH""oeo.omn" \
             --input "$ONTO_PATH""edits/oeo-shared.omn" \
             --input "$ONTO_PATH""edits/oeo-social.omn" \
             --include-annotations true \
-    export  --header "ID|LABEL|definition" \
+    export  --header "LABEL|ID|definition" \
             --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
             --sort "LABEL" \
             --export "$ETD_PATH""etd.xlsx"

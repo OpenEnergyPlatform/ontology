@@ -22,11 +22,11 @@ if __name__ == '__main__':
 
     pathlib.Path(cwd + "/src/scripts/etd/glossary/").mkdir(parents=True, exist_ok=True) 
 
-    header = GLOSSARY_HEADER + " ".join([f"[{letter}]({BASE_LINK_WIKI}{letter})" for letter in string.ascii_uppercase]) + "\n"
+    # header = GLOSSARY_HEADER + " ".join([f"[{letter}]({BASE_LINK_WIKI}{letter})" for letter in string.ascii_uppercase]) + "\n"
 
-    with open(cwd + "/src/scripts/etd/glossary/glossary.md", "w") as fil:
-        fil.write(header)
-
+    # with open(cwd + "/src/scripts/etd/glossary/glossary.md", "w") as fil:
+    #     fil.write(header)
+    output = GLOSSARY_HEADER + "\n"
     for letter in string.ascii_lowercase:
         current_df = df[df["LABEL"].str.lower().str.startswith(letter)]
         if current_df.empty:
@@ -36,8 +36,10 @@ if __name__ == '__main__':
         # There is a weird typo in surface azimuth angle ?
         buffer = re.sub(r"(?s)(http:\/\/opennergy-plattform.org\/ontology\/oeo\/?)\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
         # Remove the thing above when the typo is fixed 
-        output =re.sub(r"(?s)(\w+?)(?=:):(\d+?)(?=\s)", r"[\1:\2]({}".format(BASE_IRI)+ r"\1_\2)", buffer)
+        buffer =re.sub(r"(?s)(\w+?)(?=:):(\d+?)(?=\s)", r"[\1:\2]({}".format(BASE_IRI)+ r"\1_\2)", buffer)
+        title = f"## {letter.capitalize()}\n\n"
+        table = title + buffer + "\n\n"
         #df.to_markdown(buf=cwd + "/src/scripts/etd/ETD.md", index=False)
-        output = header + output
-        with open(cwd + f"/src/scripts/etd/glossary/{letter.capitalize()}.md", "w") as fil:
-            fil.write(output)
+        output += table
+    with open(cwd + f"/src/scripts/etd/glossary/glossary.md", "w") as fil:
+        fil.write(output)

@@ -47,16 +47,16 @@ jobs:
         with:
           name: ETD
           path: src/scripts/etd/glossary
-      - name: Checkout wiki
-        uses: actions/checkout@v2
-        with:
-          repository: ${{github.repository}}.wiki
-          path: wiki
-      - name: Push list to wiki
-        run: |
-          cd wiki
-          cp -a ../src/scripts/etd/glossary/. .
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git diff-index --quiet HEAD || git commit -m "Add changes" && git push
+      # - name: Checkout wiki
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: ${{github.repository}}.wiki
+      #     path: wiki
+      # - name: Push list to wiki
+      #   run: |
+      #     cd wiki
+      #     cp -a ../src/scripts/etd/glossary/. .
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git add .
+      #     git diff-index --quiet HEAD || git commit -m "Add changes" && git push
