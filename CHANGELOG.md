@@ -32,8 +32,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - thermo-chemical heat storage, chemical heat storage, sorption heat storage, adsorption, desorption, sensible heat storage, sensible solid heat storage, sensible fluid heat storage, phase transitions, evaporating, melting, latent heat storage, latent fluid-gaseous heat storage, latent solid-fluid heat storage  (#1363)
 - refinery gas, petroleum coke (#1351)
-- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
-- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -67,7 +65,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
-- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
 
 ### Removed
 - battery storage (#1348)
