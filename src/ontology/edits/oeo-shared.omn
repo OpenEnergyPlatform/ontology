@@ -648,6 +648,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965
         <http://purl.obolibrary.org/obo/IAO_0000136>
     
     
+ObjectProperty: OEO_00010235
+
+    
+ObjectProperty: OEO_00010312
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a sector and the processes or material entities it covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/864
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1321",
+        rdfs:label "is sector of"@en
+    
+    Domain: 
+        OEO_00000367
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015> or <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
 ObjectProperty: OEO_00020056
 
     Annotations: 
@@ -950,6 +968,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912"
         OEO_00000514 some OEO_00020121
     
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000104>
+
+    
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
@@ -1154,7 +1175,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003
     
     
 Class: OEO_00000206
@@ -1163,11 +1185,15 @@ Class: OEO_00000206
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hardware is an artificial object that is part of an electronic system.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "hardware"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00000238
@@ -1432,7 +1458,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
 
 Add vehicle operational mode axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1304
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "vehicle",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1441,6 +1470,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         OEO_00000061,
+        OEO_00010235 some OEO_00010114,
         <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00320041
     
     
@@ -1457,6 +1487,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
     
+    
+Class: OEO_00010114
+
     
 Class: OEO_00010116
 
@@ -1613,6 +1646,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
     SubClassOf: 
         OEO_00020154
     
+    
+Class: OEO_00020003
+
     
 Class: OEO_00020011
 
@@ -2388,19 +2424,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
         OEO_00010117
     
     
-Class: OEO_00050016
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Final energy consumption is the consumption of energy delivered to and consumed by end users."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
-        rdfs:label "final energy consumption"@en
-    
-    SubClassOf: 
-        OEO_00140039
-    
-    
 Class: OEO_00050019
 
     Annotations: 
@@ -2782,21 +2805,3 @@ Individual: OEO_00020165
         OEO_00020122
     
     
-Class: OEO_00020166
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A methodology is a plan specification that describes processes that are part of a study.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/971
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306"@en,
-        rdfs:label "methodology"
-
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000104>,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020011
-
-

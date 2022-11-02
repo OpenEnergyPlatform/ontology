@@ -101,6 +101,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     
@@ -1107,12 +1110,16 @@ renaming to component
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
 
 redefine
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:comment "formerly called energy transformer and formerly called energy converting device",
         rdfs:label "energy converting component"
     
     SubClassOf: 
         OEO_00000061,
+        OEO_00010235 some OEO_00010114,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
@@ -1121,14 +1128,18 @@ Class: OEO_00000012
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy storage is a function of an artificial object that has been engineered to contain energy for conversion as usable energy later.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage function is the function of an artificial object that has been engineered to contain energy for later usage whereby input energy and usable output energy are of the same type.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276",
-        rdfs:label "energy storage"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
+
+Improve definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1170
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "energy storage function"
     
     SubClassOf: 
         OEO_00000151,
-        <http://purl.obolibrary.org/obo/BFO_0000034>
+        OEO_00010121 some OEO_00000061
     
     
 Class: OEO_00000013
@@ -1174,6 +1185,9 @@ Class: OEO_00000016
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel cell is a generator that converts chemical energy into electricity using redox reactions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Improve axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1337
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1340",
         rdfs:label "fuel cell"
     
     SubClassOf: 
@@ -1181,7 +1195,8 @@ Class: OEO_00000016
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00000503 some OEO_00000173,
+        OEO_00000503 some OEO_00000099,
+        OEO_00010234 some OEO_00000007,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
@@ -1562,8 +1577,11 @@ Class: OEO_00000039
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A thermal energy storage is an energy storage that stores thermal energy for later use.",
-        rdfs:label "thermal energy storage"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A thermal energy storage function is an energy storage function with thermal energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Improve definition and label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "thermal energy storage function"
     
     SubClassOf: 
         OEO_00000012
@@ -1797,10 +1815,14 @@ Class: OEO_00000066
 https://github.com/OpenEnergyPlatform/ontology/pull/1037"
         <http://purl.obolibrary.org/obo/IAO_0000116> "The term gasoline was chosen as this term is more often used in energy modelling and energy statistics. This is a deliberate deviation from the convention of British English spelling in the OEO.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         rdfs:label "aviation gasoline"
     
     SubClassOf: 
-        OEO_00000183
+        OEO_00000183,
+        OEO_00240025 some OEO_00010315
     
     
 Class: OEO_00000068
@@ -1814,21 +1836,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801",
     
     SubClassOf: 
         OEO_00000159,
-        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000070
-    
-    
-Class: OEO_00000070
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery storage is a energy storage that uses batteries to store energy."@en,
-        rdfs:label "battery storage"
-    
-    SubClassOf: 
-        OEO_00000012
-    
-    DisjointWith: 
-        OEO_00000269
+        OEO_00010234 some OEO_00000139,
+        OEO_00010235 some OEO_00000139,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140037,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
     
     
 Class: OEO_00000071
@@ -2074,10 +2085,14 @@ Class: OEO_00000097
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible energy carrier is an energy carrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'realized in' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353",
         rdfs:label "combustible energy carrier disposition"
     
     SubClassOf: 
-        OEO_00000151
+        OEO_00000151,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140033
     
     
 Class: OEO_00000099
@@ -2120,10 +2135,15 @@ Class: OEO_00000115
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Crude oil is a portion of mater of fossil origin comprising a mixture of hydrocarbons and associated impurities, such as sulphur. It exists in the liquid phase under normal surface temperature and pressure and its physical characteristics (density, viscosity, etc.) are highly variable. This category includes field or lease condensate recovered from associated and non-associated gas where it is commingled with the commercial crude oil stream."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "petroleum",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "make direct subclass of 'portion of matter' and preserve axioms from old class 'oil and petroleum products'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/811
-https://github.com/OpenEnergyPlatform/ontology/pull/1024",
+https://github.com/OpenEnergyPlatform/ontology/pull/1024
+
+Add petroleum as alternative label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         rdfs:label "crude oil"
     
     SubClassOf: 
@@ -2194,11 +2214,16 @@ Class: OEO_00000131
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "relabel and add axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/960
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027",
-        rdfs:label "fossil diesel fuel"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027
+
+Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "fossil diesel fuel"
     
     SubClassOf: 
         OEO_00000181,
+        OEO_00240025 some OEO_00010315,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010240>
     
     
@@ -2328,11 +2353,22 @@ Class: OEO_00000159
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage object is an artificial object that has the function energy storage.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
+
+Make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "energy storage object"
     
-    SubClassOf: 
+    EquivalentTo: 
         OEO_00000061
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00000165
@@ -2440,12 +2476,17 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1024
 
 add axiom to secondary energy carrier disposition
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243
+
+Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         rdfs:label "gas diesel oil"
     
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
@@ -2474,12 +2515,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1027
 
 add axiom to secondary energy carrier disposition
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243
+
+Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         rdfs:label "gasoline"
     
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010239>,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
@@ -2631,7 +2677,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+Add 'realized in' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353",
         rdfs:label "greenhouse effect disposition",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -2642,7 +2692,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         <http://purl.obolibrary.org/obo/BFO_0000016>,
         OEO_00010121 some 
             (OEO_00000331
-             and (OEO_00000531 value OEO_00000182))
+             and (OEO_00000531 value OEO_00000182)),
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00000199
     
     
 Class: OEO_00000199
@@ -2763,10 +2814,14 @@ Class: OEO_00000211
         <http://purl.obolibrary.org/obo/IAO_0000115> "Heating oil is gas diesel oil for industrial and commercial uses, marine diesel and diesel used in rail traffic, other gas oil, including heavy gas oils which distil between 380 °C and 540 °C and which are used as petrochemical feedstocks."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "OtherGasOil"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         rdfs:label "heating oil"@en
     
     SubClassOf: 
-        OEO_00000181
+        OEO_00000181,
+        OEO_00240025 some OEO_00010315
     
     
 Class: OEO_00000212
@@ -2921,13 +2976,17 @@ Class: OEO_00000245
         <http://purl.obolibrary.org/obo/IAO_0000115> "Jet fuel is kerosene used for aviation turbine power units. It has the same distillation characteristics between 150 °C and 300 °C (generally not above 250 °C) and flash point as kerosene. In addition, it has particular specifications (such as freezing point) which are established by the International air Transport Association (IATA).",
         <http://purl.obolibrary.org/obo/IAO_0000118> "kerosene type jet fuel",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         <http://purl.obolibrary.org/obo/IAO_0000233> "convert second label to alternative term:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1230
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1237",
         rdfs:label "jet fuel"
     
     SubClassOf: 
-        OEO_00000246
+        OEO_00000246,
+        OEO_00240025 some OEO_00010315
     
     
 Class: OEO_00000246
@@ -2939,6 +2998,9 @@ Class: OEO_00000246
 
 Kerosene is widely used to power jet engines of aircraft (jet fuel) and some rocket engines and is also commonly used as a cooking and lighting fuel and for fire toys such as poi. In parts of Asia, kerosene is sometimes used as fuel for small outboard motors or even motorcycles.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Kerosene&oldid=867958484",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         <http://purl.obolibrary.org/obo/IAO_0000233> "make direct subclass of 'portion of matter' and preserve axioms from old class 'oil and petroleum products'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/811
 https://github.com/OpenEnergyPlatform/ontology/pull/1024
@@ -2951,6 +3013,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
     SubClassOf: 
         OEO_00000331,
         OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140159,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
@@ -3128,14 +3191,16 @@ Class: OEO_00000269
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A methanation gas storage is a energy storage that uses carbon dioxide and hydrogen from electrolysis to produce methan and store this. The methan can then be used to produce electricity or heat in a gas generator."@en,
-        rdfs:label "methanation gas storage"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane system is a power-to-gas system that implements the power-to-methane process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "methanation gas storage",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Improve definition and classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "power-to-methane system"
     
     SubClassOf: 
-        OEO_00000012
-    
-    DisjointWith: 
-        OEO_00000070
+        OEO_00000335,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010217
     
     
 Class: OEO_00000282
@@ -3165,10 +3230,14 @@ Includes motor gasoline blending components (excluding additives/oxygenates), e.
 https://github.com/OpenEnergyPlatform/ontology/pull/1037"
         <http://purl.obolibrary.org/obo/IAO_0000116> "The term gasoline was chosen as this term is more often used in energy modelling and energy statistics. This is a deliberate deviation from the convention of British English spelling in the OEO.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'physical output of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
         rdfs:label "motor gasoline"
     
     SubClassOf: 
-        OEO_00000183
+        OEO_00000183,
+        OEO_00240025 some OEO_00010315
     
     
 Class: OEO_00000290
@@ -3591,17 +3660,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
     
     
-Class: OEO_00000343
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped storage (pumped-storage hdyroelectricity) is an energy storage that uses water from a higher reservoir to generate energy."@en,
-        rdfs:label "pumped storage"
-    
-    SubClassOf: 
-        OEO_00000012
-    
-    
 Class: OEO_00000345
 
     Annotations: 
@@ -3612,12 +3670,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/755
 
 add secondary energy carrier disposition
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1222
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243
+
+add potential energy axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1174
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "pumped water"
     
     SubClassOf: 
         OEO_00110000,
         OEO_00000501 some OEO_00000399,
+        <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020045,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
     
     
@@ -3910,7 +3973,14 @@ Class: OEO_00000399
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1338
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "storage unit"
+    
+    EquivalentTo: 
+        OEO_00020006
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
     
     SubClassOf: 
         OEO_00020006,
@@ -4005,14 +4075,18 @@ Class: OEO_00000429
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground hydrogen storage is an energy storage object that stores hydrogen underground. Examples are underground caverns, salt domes and depleted oil/gas fields."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground hydrogen storage is an underground fuel storage object that stores hydrogen. Examples are underground caverns, salt domes and depleted oil/gas fields.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Underground_hydrogen_storage&oldid=895350780",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Issue:https://github.com/OpenEnergyPlatform/ontology/issues/448
-Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/462",
-        rdfs:label "underground hydrogen storage"
+Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/462
+
+Improve definition and classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "underground hydrogen storage object"
     
     SubClassOf: 
-        OEO_00000159,
+        OEO_00010325,
         OEO_00000503 some OEO_00000220
     
     
@@ -4562,15 +4636,20 @@ Class: OEO_00010020
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid (often abbreviated P2L or PtL) system is an energy storage object that converts electrical power to a liquid fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid system is an energy transformation unit that implements a power-to-liquid process. A water electrolyser is participating in the power-to-liquid process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2L",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtL",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
+
+Align with 'power-to-gas system':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "power-to-liquid system"
     
     SubClassOf: 
-        OEO_00000159
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
     
     
 Class: OEO_00010021
@@ -4769,7 +4848,7 @@ Class: OEO_00010030
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both a traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A plug-in hybrid electric vehicle (PHEV) is a vehicle that contains both an electric traction motor and an internal combustion engine and can switch between their usage for propulsion. It contains a traction battery that can be charged with electrical energy from an external supply.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PHEV",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/453
@@ -5087,12 +5166,17 @@ Class: OEO_00010089
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped hydro storage power plant is a hydro storage power plant which has some pumps as parts.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758
+
+Add energy storage function axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1174
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "pumped hydro storage power plant"@en
     
     SubClassOf: 
         OEO_00010088,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010090,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
     
     
 Class: OEO_00010090
@@ -5521,11 +5605,14 @@ Class: OEO_00010114
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "waste heat",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/775
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813",
-        rdfs:label "waste thermal energy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813
+
+change label and definition language
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "waste thermal energy"
     
     SubClassOf: 
         OEO_00000207
@@ -5863,8 +5950,12 @@ Class: OEO_00010210
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy use is the consumption of an energy carrier making use of the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy consumption",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
+
+Add alternative label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1321",
         rdfs:label "energy use"@en
     
     SubClassOf: 
@@ -6649,6 +6740,195 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315",
         OEO_00000503 some OEO_00000245
     
     
+Class: OEO_00010313
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sectoral energy consumption is the energy use of a sector.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "sectoral energy use",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/864
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1321",
+        rdfs:label "sectoral energy consumption"@en
+    
+    SubClassOf: 
+        OEO_00010210,
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00010314
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sectoral emission is an emission caused by a certain sector.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/864
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1321",
+        rdfs:label "sectoral emission"@en
+    
+    SubClassOf: 
+        OEO_00000147,
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00010315
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refining process is an energy transformation that converts crude oil by cracking and destillation into various mineral oil products.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "mineral oil refining process"
+    
+    SubClassOf: 
+        OEO_00020003,
+        OEO_00000532 some OEO_00000115,
+        OEO_00000533 some OEO_00010316,
+        OEO_00010234 some OEO_00000007,
+        OEO_00010235 some OEO_00000007
+    
+    
+Class: OEO_00010316
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil product is a fossil combustion fuel produced in a mineral oil refining process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "mineral oil product"
+    
+    EquivalentTo: 
+        OEO_00000014
+         and (OEO_00240025 some OEO_00010315)
+    
+    SubClassOf: 
+        OEO_00000014
+    
+    
+Class: OEO_00010317
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil is a fossil combustion fuel that is either crude oil or a mineral oil product.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "mineral oil"
+    
+    EquivalentTo: 
+        OEO_00000014
+         and (OEO_00000115 or OEO_00010316)
+    
+    SubClassOf: 
+        OEO_00000014
+    
+    
+Class: OEO_00010318
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refinery is an energy transformation unit that applies a mineral oil refining process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "mineral oil refinery"
+    
+    SubClassOf: 
+        OEO_00020102,
+        OEO_00000503 some OEO_00000115,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010315
+    
+    
+Class: OEO_00010321
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical energy storage function is an energy storage function with chemical energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "chemical energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010322
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy storage function is an energy storage function with electrical energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "electrical energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010323
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A kinetic energy storage function is an energy storage function with kinetic energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "kinetic energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010324
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential energy storage function is an energy storage function with potential energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "potential energy storage function"
+    
+    SubClassOf: 
+        OEO_00000012
+    
+    
+Class: OEO_00010325
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground fuel storage object is an energy storage object that stores chemical energy in form of fuels underground.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+        rdfs:label "underground fuel storage object"
+    
+    SubClassOf: 
+        OEO_00000159,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010321
+        
+        
+Class: OEO_00010326
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Refinery gas is a gas mixture that is produced as a by product of a mineral oil refining process. It mainly consists of hydrogen, methane, ethane and olefins and can be used as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1332
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1351",
+        rdfs:label "refinery gas"
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
+        OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000025
+             and OEO_00000220),
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000182
+    
+    
+Class: OEO_00010327
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Petroleum coke is a portion of matter with a solid state of matter that is produced in a mineral oil refining process. It consists mainly of carbon and can be uses as a fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "coke",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "pet coke",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1332
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1351",
+        rdfs:label "petroleum coke"
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000530 some OEO_00030002,
+        OEO_00240025 some OEO_00010315,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        OEO_00000529 value OEO_00000390
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -7191,6 +7471,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
     
     SubClassOf: 
         OEO_00000061,
+        OEO_00010235 some OEO_00010114,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
@@ -7474,7 +7755,10 @@ Class: OEO_00020200
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar receiving object is an artificial object that has a solar radiation receiving surface as part.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "solar receiving object"
     
     EquivalentTo: 
@@ -7482,7 +7766,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228",
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199)
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00020201
@@ -7964,8 +8249,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/608",
     
 Class: OEO_00050016
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Final energy consumption is an energy consumption value accounting for the energy delivered to and consumed by end users."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
+
+Make 'energy consumption value'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1322
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1340",
+        rdfs:label "final energy consumption"@en
+    
     SubClassOf: 
-        OEO_00140002 some OEO_00050019
+        OEO_00240019
     
     
 Class: OEO_00050017
@@ -9598,6 +9894,75 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1112",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000122>
     
     
+Class: OEO_00310000
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A datacenter is an artificial object that houses computer systems and associated components."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "data center"
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
+    
+    
+Class: OEO_00310001
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sewage plant is an artificial object that removes contaminants from wastewater to produce an effluent that is suitable for discharge to the surrounding environment or an intended reuse application."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "sewage plant"
+    
+    SubClassOf: 
+        OEO_00000061,
+        OEO_00000503 some OEO_00000441,
+        OEO_00010235 some OEO_00010114
+    
+    
+Class: OEO_00310004
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Industrial waste thermal energy is waste thermal energy that is energy output of some industrial process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "industrial waste thermal energy"
+    
+    SubClassOf: 
+        OEO_00010114,
+        OEO_00020184 some OEO_00050000
+    
+    
+Class: OEO_00310005
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Recovered heat is a thermal energy that is physical output of an energy transformation process and that is recovered and would otherwise be emitted in the environment as waste thermal energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "recovered heat"
+    
+    SubClassOf: 
+        OEO_00000207
+    
+    
+Class: OEO_00310006
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Aerothermal energy is a natural ambient thermal energy that is stored in the air of a natural environment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
+        rdfs:label "aerothermal energy"
+    
+    SubClassOf: 
+        OEO_00140104
+    
+    
 Class: OEO_00320004
 
     Annotations: 
@@ -10161,6 +10526,223 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1316",
     
     SubClassOf: 
         OEO_00030024
+    
+    
+Class: OEO_00320043
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel car is a car that has only a diesel engine as motor for propulsion and thus is also a diesel vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "diesel car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244> or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320044
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A diesel truck is a truck that has only a diesel engine as motor for propulsion and thus is also a diesel vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "diesel truck"@en
+    
+    EquivalentTo: 
+        OEO_00010278
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244>)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010244> or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010278
+    
+    
+Class: OEO_00320045
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gasoline car is a car that has only a gasoline engine as motor for propulsion and thus is also a gasoline vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "gasoline car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243>)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (<http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010243> or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320046
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery electric car is a car that has an electric traction motor and a traction battery and thus is also a battery electric vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "battery electric car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320047
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel cell electric car is a car that has an eletric traction motor and uses electrical energy from a fuel cell and thus is also a fuel cell electric vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "fuel cell electric car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000016)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320048
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A compressed gas car is a car that uses compressed gas in a gas engine for propulsion and thus is also a compressed gas vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "compressed gas car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (OEO_00000503 some OEO_00320015)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320008)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (OEO_00320008 or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320049
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquefied petroleum gas car is a car that uses liquefied petroleum gas in a gas engine for propulsion and thus is also a liquefied petroleum gas vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "liquefied petroleum gas car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (OEO_00000503 some OEO_00320011)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320008)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (OEO_00320008 or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320050
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A plug-in hybrid electric car is a car that can switch between an electric traction motor and an internal combustion engine for propulsion and thus is also a plug-in hybrid electric vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "plug-in hybrid electric car"@en
+    
+    EquivalentTo: 
+        OEO_00010276
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00010029
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>)))
+    
+    SubClassOf: 
+        OEO_00010276
+    
+    
+Class: OEO_00320051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A battery electric truck is a truck that has an electric traction motor and a traction battery and thus is also a battery electric vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "battery electric truck"@en
+    
+    EquivalentTo: 
+        OEO_00010278
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010026)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
+    
+    SubClassOf: 
+        OEO_00010278
+    
+    
+Class: OEO_00320052
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel cell electric truck is a truck that has an electric traction motor and uses electrical energy from a fuel cell and thus is also a fuel cell electric vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "fuel cell electric truck"@en
+    
+    EquivalentTo: 
+        OEO_00010278
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000016)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010028)
+    
+    SubClassOf: 
+        OEO_00010278
+    
+    
+Class: OEO_00320053
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A compressed gas truck is a truck that uses compressed gas in a gas engine for propulsion and thus is also a compressed gas vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "compressed gas truck"@en
+    
+    EquivalentTo: 
+        OEO_00010278
+         and (OEO_00000503 some OEO_00320015)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320008)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (OEO_00320008 or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010278
+    
+    
+Class: OEO_00320054
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A liquefied natural gas truck is a truck that uses liquefied natural gas in a gas engine for propulsion and thus is also a liquefied natural gas vehicle.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1298
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1345",
+        rdfs:label "liquefied natural gas truck"@en
+    
+    EquivalentTo: 
+        OEO_00010278
+         and (OEO_00000503 some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010237>)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320008)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (OEO_00320008 or (not (OEO_00010032))))
+    
+    SubClassOf: 
+        OEO_00010278
     
     
 Individual: OEO_00000182

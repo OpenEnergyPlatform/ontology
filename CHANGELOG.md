@@ -23,6 +23,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 - fuel supply system (#1316)
 - NC/BR sector division; NC/BR sector individuals (#1317)
+- is sector of, sectoral energy consumption, sectoral emission (#1321)
+- data file format, and subclasses (#1326)
+- mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
+- international transport sector (#1334)
+- equivalence subclasses for car and truck (#1345)
+- refinery gas, petroleum coke (#1351)
+- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -46,8 +54,20 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
 - electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
+- energy use (#1321)
+- data format (#1326)
+- crude oil; gas diesel oil, gasoline, kerosene, and subclasses; CRF sector (IPCC 2006): petroleum refining (#1331)
+- CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
+- final energy consumption (#1340)
+- fuel cell (#1341)
+- realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
+- energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
+- methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
 
 ### Removed
+- battery storage (#1348)
+- csv and txt (#1371)
 
 ## [1.11.0] - 2022-07-04
 
