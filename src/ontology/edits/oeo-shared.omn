@@ -1,7 +1,5 @@
 Prefix: : <http://openenergy-platform.org/ontology/oeo/>
-Prefix: bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
-Prefix: obda: <https://w3id.org/obda/vocabulary#>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -63,6 +61,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
     
     SubPropertyOf: 
         dc:identifier
+    
+    
+AnnotationProperty: OEO_00040001
+
+    Annotations: 
+        rdfs:label "belongs to module"
     
     
 AnnotationProperty: OEO_00110012
@@ -644,6 +648,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965
         <http://purl.obolibrary.org/obo/IAO_0000136>
     
     
+ObjectProperty: OEO_00010235
+
+    
+ObjectProperty: OEO_00010312
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a sector and the processes or material entities it covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/864
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1321",
+        rdfs:label "is sector of"@en
+    
+    Domain: 
+        OEO_00000367
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000015> or <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
 ObjectProperty: OEO_00020056
 
     Annotations: 
@@ -946,6 +968,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912"
         OEO_00000514 some OEO_00020121
     
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000104>
+
+    
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
 
     
@@ -997,18 +1022,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/924",
 Class: OEO_00000051
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
         rdfs:label "agent"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00010121 some 
+            (OEO_00000323 or OEO_00030022)
     
     
 Class: OEO_00000061
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An artificial object is an object that was deliberately manufactured by humans to address a particular purpose.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/86
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/121 (artificial object definition)
@@ -1026,6 +1059,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/933",
 Class: OEO_00000064
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
         rdfs:label "author"
     
@@ -1036,6 +1070,7 @@ Class: OEO_00000064
 Class: OEO_00000087
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
         rdfs:label "client"
     
@@ -1046,6 +1081,7 @@ Class: OEO_00000087
 Class: OEO_00000107
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
         rdfs:label "contact person"
     
@@ -1056,6 +1092,7 @@ Class: OEO_00000107
 Class: OEO_00000147
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "emission is a process releasing byproducts from human activity (e.g. production, distribution or consumption) into the environment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
@@ -1071,6 +1108,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956",
 Class: OEO_00000148
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that quantifies the emissions or removals of a gas per unit activity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/243
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581
@@ -1087,6 +1125,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956",
 Class: OEO_00000150
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
         <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
@@ -1120,6 +1159,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000151
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier disposition is a disposition of an material entity that contains energy for conversion as usable energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
@@ -1135,24 +1175,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003
     
     
 Class: OEO_00000206
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hardware is an artificial object that is part of an electronic system.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "hardware"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114
     
     
 Class: OEO_00000238
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organisation that serves a social purpose."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "moved term to oeo-shared:
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871",
@@ -1165,6 +1212,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871",
 Class: OEO_00000264
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market model is a model that is about the energy market."^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
@@ -1177,6 +1225,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821",
 Class: OEO_00000274
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealised reproduction of a system and its behaviours."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/180
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
@@ -1200,6 +1249,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
 Class: OEO_00000275
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model calculation is a process of solving mathematical equations of a model."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/73
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/504
@@ -1220,6 +1270,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
 Class: OEO_00000315
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation role is a role of an aggregate of people that has a collective goal and a set of organisation rules.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "organization role",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
@@ -1236,6 +1287,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00000316
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Origin is a quality of a portion of matter or energy based on where it comes from. It is inherited from its primary sources.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
@@ -1269,6 +1321,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
 Class: OEO_00000323
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A person is a human being."@en,
         rdfs:label "person"
     
@@ -1282,6 +1335,7 @@ Class: OEO_00000323
 Class: OEO_00000331
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is an aggregate of material entities that have a state of matter."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
@@ -1309,6 +1363,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
 Class: OEO_00000340
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A project is a process to achieve a specified goal that is unique in the sum of its conditions like its goal, time and cost budget and its organisation.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/418
@@ -1324,6 +1379,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
 Class: OEO_00000350
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity value is an information content entity defined by a numeral together with a unit of measurement to quantify an entity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
@@ -1348,6 +1404,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000367
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector is generically dependent continuant that is a subdivision of a system."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/477
@@ -1362,6 +1419,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764",
 Class: OEO_00000419
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A transformation is a process that transforms one or more inputs into at least one output."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/435
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450
@@ -1380,6 +1438,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
 Class: OEO_00000423
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity transshipment model is a model that applies the transshipment problem to the electricity grid.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
@@ -1392,9 +1451,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
 Class: OEO_00010023
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artificial object that is used for transporting people or goods.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
+
+Add vehicle operational mode axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1304
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         rdfs:label "vehicle",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -1402,12 +1469,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000604"
     
     SubClassOf: 
-        OEO_00000061
+        OEO_00000061,
+        OEO_00010235 some OEO_00010114,
+        <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00320041
     
     
 Class: OEO_00010079
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity value is a quantity value that has a mass unit as unit. It is the quantity value of an emission value."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
@@ -1418,9 +1488,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
     
     
+Class: OEO_00010114
+
+    
 Class: OEO_00010116
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A good is a continuant that has the good role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
@@ -1442,6 +1516,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
 Class: OEO_00010117
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a continuant over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
@@ -1450,17 +1525,23 @@ add relation to monetary price
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034
 
 update definition:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
         rdfs:label "good role"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000002>,
         OEO_00020180 some OEO_00040003
     
     
 Class: OEO_00010263
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger transport is a transport process in which people are moved in a vehicle from one place to another.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
@@ -1477,6 +1558,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
 Class: OEO_00010264
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A passenger is an agent who travels in a vehicle.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
@@ -1490,6 +1572,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
 Class: OEO_00010265
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy service demand for passenger-kilometre is the energy service demand that is consumed to transport one person over a distance of one kilometre.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
@@ -1503,6 +1586,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
 Class: OEO_00010266
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy service demand for ton-kilometre is the energy service demand that is consumed to transport one metric ton over a distance of one kilometre.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
@@ -1513,9 +1597,63 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
         <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140005
     
     
+Class: OEO_00010268
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission price is a monetary price of emitting a certain emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
+        rdfs:label "emission price"
+    
+    SubClassOf: 
+        OEO_00040003,
+        OEO_00020179 some OEO_00140081
+    
+    
+Class: OEO_00010269
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 price is an emission price of emitting a certain CO2 emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "carbon price",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
+        rdfs:label "CO2 price"
+    
+    SubClassOf: 
+        OEO_00010268
+    
+    
+Class: OEO_00010270
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon tax value is a CO2 price that is set by a carbon tax.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
+        rdfs:label "carbon tax value"
+    
+    SubClassOf: 
+        OEO_00010269
+    
+    
+Class: OEO_00010271
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission certificate price is an emission price of an CO2 emission certificate that allows the emission of certain CO2 emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
+        rdfs:label "CO2 emission certificate price"
+    
+    SubClassOf: 
+        OEO_00020154
+    
+    
+Class: OEO_00020003
+
+    
 Class: OEO_00020011
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to investigate something."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "The construct 'has funding source' some ('has role' some funder) is necessary, because has funding source has the range has role some funder. This range comes from issue https://github.com/OpenEnergyPlatform/ontology/issues/850 : funding source is some kind of independent continuant, i.e. a organisation or person, that does something special (giving money). So it is anything that has role some funder.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
@@ -1545,6 +1683,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557"
 Class: OEO_00020012
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study report is a report that is the output from some study."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
@@ -1568,6 +1707,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
 Class: OEO_00020015
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A licence is an information content entity that contains an official permission or permit to do, use or own something.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "license",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/31
@@ -1583,6 +1723,7 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
 Class: OEO_00020039
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy carrier is a material entity that has an energy carrier disposition.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/407
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/627
@@ -1604,6 +1745,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1173",
 Class: OEO_00020063
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a licence that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
@@ -1622,6 +1764,7 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1034",
 Class: OEO_00020066
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel commodity role is the commodity role of fuels.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/256
 https://github.com/OpenEnergyPlatform/ontology/pull/748",
@@ -1634,6 +1777,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/748",
 Class: OEO_00020067
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a good that bears the commodity role.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
@@ -1656,6 +1800,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
 Class: OEO_00020068
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel commodity is a commodity that is a fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
@@ -1671,27 +1816,39 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
 Class: OEO_00020121
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Resolution is a quality of a dataset that indicates the level of detail of the data.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
         rdfs:label "resolution"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/IAO_0000100>
     
     
 Class: OEO_00020122
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal resolution is the resolution of a time series that indicates time-dependent the level of detail.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912
 add individuals
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
         rdfs:label "temporal resolution"
     
     SubClassOf: 
-        OEO_00020121
+        OEO_00020121,
+        OEO_00010121 some OEO_00030034
     
     DisjointWith: 
         OEO_00020123
@@ -1700,6 +1857,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972",
 Class: OEO_00020123
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Spatial resolution is the resolution of a georeferenced dataset that indicates the geographical level of detail.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
@@ -1715,6 +1873,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912",
 Class: OEO_00020136
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A space requirement is a two-dimensional spatial region that covers the area needed by an object or object aggregate.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "land use",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
@@ -1732,6 +1891,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1084",
 Class: OEO_00020140
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An area per power unit is a unit which is a measure for an area per nameplate capacity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/930",
@@ -1744,6 +1904,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/930",
 Class: OEO_00020142
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An area unit which is equal to one million square meters or 10^[6] m^[2].",
         <http://purl.obolibrary.org/obo/IAO_0000118> "km^[2]",
         <http://purl.obolibrary.org/obo/IAO_0000118> "square km",
@@ -1758,6 +1919,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
 Class: OEO_00020143
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An area value is a quantity value indicating the size of a two-dimensional spatial region.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/889
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
@@ -1772,22 +1934,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/933",
 Class: OEO_00020154
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
 add relation to emission certificate
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034
+
+make subclass of 'emission price':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
         rdfs:label "emission certificate price"
     
     SubClassOf: 
-        OEO_00040003,
+        OEO_00010268,
         OEO_00020179 some OEO_00020063
     
     
 Class: OEO_00020155
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon emission is the cost the society bears for a greenhouse gas emission value.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "social cost of CO2",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
@@ -1802,9 +1970,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00140081
     
     
+Class: OEO_00020166
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A methodology is a plan specification that describes processes that are part of a study.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/971
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306"@en,
+        rdfs:label "methodology"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020011
+    
+    
 Class: OEO_00020175
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A life time is a time span of an artificial object that measures the time during which the artificial object exists.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
@@ -1818,6 +2005,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
 Class: OEO_00020176
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A construction time is a time span that measures the time that is needed to construct an artificial object.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
@@ -1831,6 +2019,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
 Class: OEO_00020177
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A decommissioning time is a time span that measures the time that is needed to decommission an artificial object.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
@@ -1844,6 +2033,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
 Class: OEO_00020178
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An operational life time is the lifetime of an artificial object. It is measured from the end of construction time to the start of decommissioning time.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/894
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
@@ -1856,6 +2046,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1026",
 Class: OEO_00020181
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of emission is the cost the society bears for an emission value.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/958
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
@@ -1870,6 +2061,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
 Class: OEO_00020185
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A copyright license is a license that states the ownership and contractually sets the rights and obligations to use, copy, and distribute a creative work.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "add relation has copyright license",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
@@ -1883,6 +2075,7 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
 Class: OEO_00020186
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A data license is a license that determines ownership, database protection, and permissions for data.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
@@ -1895,6 +2088,7 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
 Class: OEO_00020187
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A software license is a copyright license that determines ownership and permissions for software, code, or models.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090",
@@ -1911,6 +2105,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1163"
 Class: OEO_00020201
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Import is the process of purchasing goods or services abroad and their delivery to the domestic market.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "add class
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
@@ -1924,6 +2119,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00020202
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Export is the process of selling goods or services abroad and their delivery to a foreign market.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "add class
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
@@ -1937,6 +2133,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00020204
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy amount value is an energy amount value that measures a quantity of electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
@@ -1949,6 +2146,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00020205
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity export value is an electrical energy amount value that measures the export of electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
@@ -1962,6 +2160,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00020206
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity import value is an electrical energy amount value that measures the import of electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
@@ -1975,6 +2174,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00020207
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity import is the import of electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "add class
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
@@ -1989,6 +2189,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00020208
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity export is the export of electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "add class
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
@@ -2003,6 +2204,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00030015
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
@@ -2015,6 +2217,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358",
 Class: OEO_00030019
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
@@ -2027,6 +2230,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
 Class: OEO_00030022
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organisation is an immaterial entity that has the organisation role and there exists some sort of legal framework that recognises the entity and its continued existence.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "organization",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/416
@@ -2046,6 +2250,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/992",
 Class: OEO_00030029
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Exogenous data is a data item whose quantity value is determined outside of a model and is imposed on a model.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "input data",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
@@ -2070,6 +2275,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1216",
 Class: OEO_00030030
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Endogenous data is a data item whose quantity value is determined by a model.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
@@ -2093,6 +2299,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1216",
 Class: OEO_00030031
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A start time is a zero-dimensional temporal region that indicates the beginning of a one-dimensional temporal region.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
@@ -2105,6 +2312,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
 Class: OEO_00030032
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An ending time is a zero-dimensional temporal region that indicates the end of a one-dimensional temporal region.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
@@ -2114,9 +2322,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
         <http://purl.obolibrary.org/obo/BFO_0000148>
     
     
+Class: OEO_00030034
+
+    
 Class: OEO_00030035
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A time span is a quantity value indicating the duration of a one-dimensional temporal region, measured in a time unit.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "duration",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
@@ -2134,6 +2346,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1017",
 Class: OEO_00040003
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary price is an economic value that describes the amount of money requested, expected, required or given in exchange for something else.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:MonetaryPrice",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/331
@@ -2154,6 +2367,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
 Class: OEO_00040004
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000112> "The currency used in France in 2020 was Euro.",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
@@ -2174,6 +2388,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956",
 Class: OEO_00040009
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Cost is an economic value that describes the amount of money needed to buy, make, or do a thing.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://dictionary.cambridge.org/dictionary/english/cost",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/268
@@ -2193,6 +2408,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/977",
 Class: OEO_00040011
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a good role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
         <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/339
@@ -2208,21 +2424,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
         OEO_00010117
     
     
-Class: OEO_00050016
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Final energy consumption is the consumption of energy delivered to and consumed by end users."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613",
-        rdfs:label "final energy consumption"@en
-    
-    SubClassOf: 
-        OEO_00140039
-    
-    
 Class: OEO_00050019
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "energy quantity value",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
@@ -2240,6 +2445,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
 Class: OEO_00090001
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A funder is a sponsor that supports by giving money.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
@@ -2252,9 +2458,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
 Class: OEO_00140003
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Transport is the process of moving people or goods from one place to another.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
+
+add performance axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1272
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1271
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1309",
         rdfs:label "transport"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
@@ -2262,12 +2477,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
         owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_02000125"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00140002 some OEO_00320000,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00000323 or OEO_00010116)
     
     
 Class: OEO_00140004
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "International transport is a transport process between different countries or within the same country via another country.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
@@ -2280,18 +2499,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
 Class: OEO_00140005
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Freight transport is a transport process which moves goods from one place to another.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
+
+Add axiom for goods as participant:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1269
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299",
         rdfs:label "freight transport"@en
     
     SubClassOf: 
-        OEO_00140003
+        OEO_00140003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116
     
     
 Class: OEO_00140006
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A private transport is a passenger transport in which people use their own vehicle for movement e.g. bicycle, motorcycle and cars.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
@@ -2308,6 +2534,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
 Class: OEO_00140007
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A public transport is a passenger transport in which a number of passengers share a common vehicle.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
@@ -2324,6 +2551,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
 Class: OEO_00140009
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organisation, or project by giving money, allowance of kind, services or other help.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
@@ -2336,6 +2564,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557",
 Class: OEO_00140012
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An economic value is a quantity value that is economically relevant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559
@@ -2350,6 +2579,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
 Class: OEO_00140039
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption is the process of using something and thereby reducing its amount.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
@@ -2362,18 +2592,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
 Class: OEO_00140040
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterised by a person, organisation or object needing it for a specific purpose.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
         rdfs:label "demand"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000017>
+        <http://purl.obolibrary.org/obo/BFO_0000017>,
+        OEO_00010121 some 
+            (OEO_00000323 or OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
     
     
 Class: OEO_00140081
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a process attribute that quantifies the output of an emission process. It can be calculated using the emission factor of that emission process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
@@ -2397,6 +2635,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
 Class: OEO_00240003
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Production is the process of combining various inputs in order to create an output that has value and can be used by other processes."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/835
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845",
@@ -2409,6 +2648,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845",
 Class: OEO_00240022
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A protected area is a two-dimensional spatial region recognised, dedicated and managed, through legal or other effective means, to achieve the long term conservation of nature with associated ecosystem services and cultural values."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1052
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078"@en,
@@ -2421,6 +2661,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078"@en,
 Class: OEO_00240024
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy service demand is a demand of an agent to use energy as a means to obtain or facilitate desired end services or states."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "An example is the transport demand for goods or persons (e.g. in person/tonne-kilometres). An other example is the demand for room heating or cooling."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1054
@@ -2435,6 +2676,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1080",
 Class: OEO_00240038
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A personal living space is a space requirement that one person uses for living."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1056
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1084",
@@ -2444,9 +2686,74 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1084",
         OEO_00020136
     
     
+Class: OEO_00320000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transport performance value is a quantity value that indicates the performance of a transport process in terms of its mileage and amount of transported people and/or goods."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1272
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289"@en,
+        rdfs:label "transport performance value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some OEO_00320001
+    
+    
+Class: OEO_00320001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transport performance unit is a unit of measurement for the accumulated transport distance of a number of people and/or amount of goods."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1272
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289"@en,
+        rdfs:label "transport performance unit"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00320002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Passenger-kilometre is a transport performance unit for the accumulated transport distance of people where one passenger-kilometre equals the transport distance of 1 km for one person."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1272
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289"@en,
+        rdfs:label "passenger-kilometre"@en
+    
+    SubClassOf: 
+        OEO_00320001
+    
+    
+Class: OEO_00320003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ton-kilometre is a transport performance unit for the accumulated transport distance of goods where one ton-kilometre equals the transport distance of 1 km for one ton of goods."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1272
+pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289"@en,
+        rdfs:label "ton-kilometre"@en
+    
+    SubClassOf: 
+        OEO_00320001
+    
+    
+Class: OEO_00320041
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle operational mode is a realizable entity that determines how a vehicle is operating."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1304
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314",
+        rdfs:comment "Examples are 'manual', 'partially automated', 'autonomous' or 'tele-operated'."@en,
+        rdfs:label "vehicle operational mode"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000020>,
+        OEO_00010121 some OEO_00010023
+    
+    
 Individual: OEO_00020161
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per year",
         rdfs:label "annual"
     
@@ -2457,6 +2764,7 @@ Individual: OEO_00020161
 Individual: OEO_00020162
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per week",
         rdfs:label "weekly"
     
@@ -2467,6 +2775,7 @@ Individual: OEO_00020162
 Individual: OEO_00020163
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per day",
         rdfs:label "daily"
     
@@ -2477,6 +2786,7 @@ Individual: OEO_00020163
 Individual: OEO_00020164
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per hour",
         rdfs:label "hourly"
     
@@ -2487,6 +2797,7 @@ Individual: OEO_00020164
 Individual: OEO_00020165
 
     Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per month",
         rdfs:label "monthly"
     
