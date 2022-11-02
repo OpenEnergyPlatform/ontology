@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+### Changed
+### Removed
+
+
 ## [1.12.0] - 2022-11-02
 
 ### Added
