@@ -7,6 +7,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+### Changed
+### Removed
+
+
+## [1.12.0] - 2022-11-02
+
+### Added
 - github: template for pull requests (#1162)
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
@@ -28,6 +35,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
 - international transport sector (#1334)
 - equivalence subclasses for car and truck (#1345)
+- refinery gas, petroleum coke (#1351)
+- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
 - heat recovery steam generator, gas turbine process, combined cycle electricity generation, steam power unit, combined cycle power plant, gas power unit, heat recovery steam unit (#1256)
 
@@ -59,10 +68,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
 - final energy consumption (#1340)
 - fuel cell (#1341)
+- realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
+- energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
+- methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
 - energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
 - gas turbine (#1256)
 
 ### Removed
+- battery storage (#1348)
+- csv and txt (#1371)
 
 ## [1.11.0] - 2022-07-04
 
