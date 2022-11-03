@@ -7,6 +7,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+### Changed
+### Removed
+
+
+## [1.12.0] - 2022-11-02
+
+### Added
 - github: template for pull requests (#1162)
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
