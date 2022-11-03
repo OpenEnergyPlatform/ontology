@@ -4,7 +4,6 @@ about: For including new terms into the ontology
 title: Your title should make sense if said after "The issue is <your issue title>"
 labels: "[A] new term, To do"
 assignees: ''
-
 ---
 
 ## Description of the issue

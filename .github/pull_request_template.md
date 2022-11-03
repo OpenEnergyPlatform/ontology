@@ -4,7 +4,6 @@ about: For including new features into the ontology
 title: Your title should make sense if said after "This PR is solving <your issue>"
 labels: "Pull Request Template"
 assignees: ''
-
 ---
 
 
