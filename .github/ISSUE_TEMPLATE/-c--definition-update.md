@@ -4,6 +4,7 @@ about: For restructuring existing parts of the ontology
 title: Your title should make sense if said after "The issue is <your issue title>"
 labels: "[C] definition update, To do"
 assignees: ''
+
 ---
 
 ## Description of the issue

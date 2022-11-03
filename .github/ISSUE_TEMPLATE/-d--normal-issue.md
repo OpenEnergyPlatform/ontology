@@ -4,6 +4,7 @@ about: For issues not directly related to the ontology oeo.omn file
 title: Your title should make sense if said after "The issue is <your issue title>"
 labels: "To do"
 assignees: ''
+
 ---
 
 ## Description of the issue
