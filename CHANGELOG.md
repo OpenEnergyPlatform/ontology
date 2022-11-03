@@ -7,7 +7,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- heat recovery steam generator, gas turbine process, combined cycle electricity generation, steam power unit, combined cycle power plant, gas power unit, heat recovery steam unit (#1362)
+
 ### Changed
+- gas turbine (#1362)
+
 ### Removed
 
 
@@ -37,8 +41,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - equivalence subclasses for car and truck (#1345)
 - refinery gas, petroleum coke (#1351)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
-- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
-- heat recovery steam generator, gas turbine process, combined cycle electricity generation, steam power unit, combined cycle power plant, gas power unit, heat recovery steam unit (#1256)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -71,8 +74,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
-- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
-- gas turbine (#1256)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
 
 ### Removed
 - battery storage (#1348)
