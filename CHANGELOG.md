@@ -7,7 +7,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler (#1360)
+- combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
+
 ### Changed
+- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal power plant, solar thermal power unit (#1360)
+
 ### Removed
 
 
@@ -38,7 +43,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - refinery gas, petroleum coke (#1351)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
-- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -72,7 +76,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
 - energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
-- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal power plant, solar thermal power unit (#1360)
 
 ### Removed
 - battery storage (#1348)
