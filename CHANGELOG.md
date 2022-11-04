@@ -11,7 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
 
 ### Changed
-- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal power plant, solar thermal power unit (#1360)
+- power plant, combined heat and power plant, combined heat and power generating unit (#1360)
 
 ### Removed
 
