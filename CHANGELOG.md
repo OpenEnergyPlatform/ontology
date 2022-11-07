@@ -8,9 +8,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - tank, fuel tank, volume (#1356)
-- thermo-chemical heat storage, chemical heat storage, sorption heat storage, adsorption, desorption (#1363)
-- sensible heat storage, sensible solid heat storage, sensible fluid heat storage (#1363)
-- phase transitions, evaporating, melting, latent heat storage, latent fluid-gaseous heat storage, latent solid-fluid heat storage  (#1363)
+- thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
+- sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
+- phase transitions, evaporating, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
