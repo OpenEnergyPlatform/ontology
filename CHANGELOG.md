@@ -7,7 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
-- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler (#1360)
+- heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, solar heat plant, solar heat unit (#1360)
 - combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
 
 ### Changed
