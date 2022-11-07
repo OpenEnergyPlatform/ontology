@@ -7,10 +7,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- tank, fuel tank, volume (#1356)
 - heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, solar heat plant, solar heat unit (#1360)
 - combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
 
 ### Changed
+- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - power plant, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
 
 ### Removed
