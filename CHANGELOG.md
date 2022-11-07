@@ -7,7 +7,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- tank, fuel tank, volume (#1356)
+
 ### Changed
+- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+
 ### Removed
 
 
