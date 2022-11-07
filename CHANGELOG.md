@@ -7,7 +7,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- tank, fuel tank, volume (#1356)
+
 ### Changed
+- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+
 ### Removed
 
 
@@ -38,7 +42,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - refinery gas, petroleum coke (#1351)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
-- tank, fuel tank, volume (#1356)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -53,7 +56,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion engine (#1285)
 - analysis scope (#1286)
 - diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288, #1315)
-- internal combustion vehicle (#1293, #1315,#1356)
+- internal combustion vehicle (#1293, #1315)
 - scenario (#1296)
 - heat transfer (#1299)
 - bottom up, hybrid, top down (#1302)
@@ -72,7 +75,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
 - energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
-- plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 
 ### Removed
 - battery storage (#1348)
