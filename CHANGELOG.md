@@ -7,11 +7,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- tank, fuel tank, volume (#1356)
 - thermo-chemical heat storage, chemical heat storage, sorption heat storage, adsorption, desorption (#1363)
 - sensible heat storage, sensible solid heat storage, sensible fluid heat storage (#1363)
 - phase transitions, evaporating, melting, latent heat storage, latent fluid-gaseous heat storage, latent solid-fluid heat storage  (#1363)
 
 ### Changed
+- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 
 ### Removed
 
@@ -39,10 +41,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - data file format, and subclasses (#1326)
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
 - international transport sector (#1334)
+- has study region, has study subregio, has considered region, has interacting region, has scenario year (#1347)
 - equivalence subclasses for car and truck (#1345)
-- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
-- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - refinery gas, petroleum coke (#1351)
+- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -72,10 +75,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
 - final energy consumption (#1340)
 - fuel cell (#1341)
-- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
 - realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
 
 ### Removed
 - battery storage (#1348)
