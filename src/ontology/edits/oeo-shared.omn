@@ -625,8 +625,49 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/852",
         OEO_00020039
     
     
+ObjectProperty: OEO_00000529
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "x has normal state of matter y if and only if a portion of x occurs in state y under normal pressure (1 bar) and normal temperature (0°C)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "make subproperty of 'has state of matter'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/989
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1001
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "has normal state of matter"
+    
+    SubPropertyOf: 
+        OEO_00000531
+    
+    Domain: 
+        OEO_00000331
+    
+    Range: 
+        OEO_00000395
+    
+    
 ObjectProperty: OEO_00000530
 
+    
+ObjectProperty: OEO_00000531
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a portion of matter (x) and a state of matter (y) that indicates the state y of matter x under certain given conditions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/989
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1001",
+        rdfs:label "has state of matter"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000086>
+    
+    Domain: 
+        OEO_00000331
+    
+    Range: 
+        OEO_00000395
+    
     
 ObjectProperty: OEO_00010121
 
@@ -1118,6 +1159,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
     
+Class: OEO_00000020
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas is a portion of matter that has the disposition to contribute to the greenhouse effect.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "greenhouse gas"
+    
+    EquivalentTo: 
+        OEO_00000331
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198)
+    
+    SubClassOf: 
+        OEO_00000331,
+        OEO_00000529 value OEO_00000182
+    
+    
 Class: OEO_00000051
 
     Annotations: 
@@ -1293,6 +1356,66 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         <http://purl.obolibrary.org/obo/BFO_0000016>,
         OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>,
         <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003
+    
+    
+Class: OEO_00000198
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The greenhouse effect disposition is the disposition of a gas to contribute to the greenhouse effect, when it is emitted into the atmosphere.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+Add 'realized in' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "greenhouse effect disposition",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_76413"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        OEO_00010121 some 
+            (OEO_00000331
+             and (OEO_00000531 value OEO_00000182)),
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00000199
+    
+    
+Class: OEO_00000199
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission is an emission that releases a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
+
+make equivalent class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1012
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1100
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "greenhouse gas emission"
+    
+    EquivalentTo: 
+        OEO_00000147
+         and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000020)
+    
+    SubClassOf: 
+        OEO_00000147
     
     
 Class: OEO_00000206
@@ -1551,6 +1674,29 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: OEO_00000395
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/38
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/39
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "state of matter"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00010121 some OEO_00000331
     
     
 Class: OEO_00000419
@@ -3078,6 +3224,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000020>,
         OEO_00010121 some OEO_00010023
+    
+    
+Individual: OEO_00000182
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a gas. A portion of matter is in gaseous state if and only if it has has no definite shape and no definite volume and is not electrically conductive.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "gaseous"
+    
+    Types: 
+        OEO_00000395
     
     
 Individual: OEO_00020161
