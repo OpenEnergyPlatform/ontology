@@ -9,9 +9,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - tank, fuel tank, volume (#1356)
 - sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
+- vehicle-kilometre (#1388)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+- passenger-kilometre, ton-kilometre (#1388)
 
 ### Removed
 
