@@ -1214,6 +1214,29 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/924",
     
 Class: OEO_00000001
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel role is a role of a portion of matter that has the disposition to be an energy carrier and is used in a process that releases the carried energy by transforming the portion of matter into a different kind of portion of matter in a way that releases heat or does work.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+
+add has bearer axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "fuel role",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_33292"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00010121 some OEO_00000331
+    
     
 Class: OEO_00000007
 
@@ -1266,6 +1289,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
         OEO_00010235 some OEO_00010114,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+    
+    
+Class: OEO_00000014
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fossil combustion fuel is a combustion fuel with the origin fossil.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:comment "This class is used to implement the subset relationship between origins fossil and geogenic: Every object with the origin fossil also has the origin geogenic.",
+        rdfs:label "fossil combustion fuel"
+    
+    EquivalentTo: 
+        OEO_00000099
+         and (OEO_00000530 some OEO_00030002)
+    
+    SubClassOf: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "Add `SubClass Of` axiom for `fossil combustion fuel`
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1191
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1201"
+        OEO_00000099,
+        OEO_00000530 some OEO_00030003
     
     
 Class: OEO_00000020
@@ -1351,6 +1398,46 @@ Class: OEO_00000087
     
 Class: OEO_00000097
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustible energy carrier is an energy carrier that releases energy from a material entity in form of heat or work, by chemical reaction with other substances.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'realized in' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1320
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "combustible energy carrier disposition"
+    
+    SubClassOf: 
+        OEO_00000151,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140033
+    
+    
+Class: OEO_00000099
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion fuel is a fuel that realises its fuel role in processes that release energy in the form of heat or work by chemical reaction with other substances.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
+
+Update definition:
+https://github.com/OpenEnergyPlatform/ontology/pull/931
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "combustion fuel"
+    
+    EquivalentTo: 
+        OEO_00000173
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097)
+    
+    SubClassOf: 
+        OEO_00000173
+    
     
 Class: OEO_00000107
 
@@ -1497,6 +1584,38 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
         <http://purl.obolibrary.org/obo/BFO_0000016>,
         OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>,
         <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003
+    
+    
+Class: OEO_00000173
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel is a portion of matter that has the disposition to be an energy carrier and that has a fuel role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
+add role fuel commodity
+https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+shorten definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1184
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1187
+
+Add good role:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1269
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "fuel"
+    
+    EquivalentTo: 
+        (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001)
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151)
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010117
     
     
 Class: OEO_00000198
@@ -2111,6 +2230,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
 Class: OEO_00010316
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil product is a fossil combustion fuel produced in a mineral oil refining process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "mineral oil product"
+    
+    EquivalentTo: 
+        OEO_00000014
+         and (OEO_00240025 some OEO_00010315)
+    
+    SubClassOf: 
+        OEO_00000014
+    
     
 Class: OEO_00020003
 
@@ -2764,6 +2900,61 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
     
 Class: OEO_00030002
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil is a geogenic origin of portions of matter created from organic material by geological processes lasting thousands or millions of years.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "In real world, fossils are from biogenic origin some thousands or millions of years ago. However, this is irrelevant in the energy modelling domain.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+
+Update definition and add disjoint:
+https://github.com/OpenEnergyPlatform/ontology/issues/872
+https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Shift part of the definition into an editor note:
+Issue: https://github.com/OpenEnergyPlatform/ontology/issues/1180
+Pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1181
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "fossil"
+    
+    SubClassOf: 
+        OEO_00030003,
+        OEO_00010121 some OEO_00000331
+    
+    
+Class: OEO_00030003
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Geogenic is an origin of portions of matter or energies that are the result of geological processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
+
+Update definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "geogenic"
+    
+    SubClassOf: 
+        OEO_00000316,
+        OEO_00010121 some 
+            (OEO_00000150 or OEO_00000331)
+    
     
 Class: OEO_00030015
 
@@ -3185,6 +3376,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
         OEO_00000350
     
     
+Class: OEO_00140033
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical reaction is a transformation that involves the interconversion of chemical species.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "chemical reaction"@en
+    
+    SubClassOf: 
+        OEO_00000419
+    
+    
 Class: OEO_00140039
 
     Annotations: 
@@ -3253,6 +3461,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
 Class: OEO_00140075
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "coals, cruide oil, natural gas, wood or moving air (wind) have the disposition of being primary energy carriers",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy carrier disposition is an energy carrier disposition of material entities that are extracted directly from natural resources or that are natural energy flows.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "primary energy carrier disposition"@en
+    
+    SubClassOf: 
+        OEO_00000151
+    
     
 Class: OEO_00140081
 
@@ -3280,6 +3503,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
     
 Class: OEO_00140159
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Hydrocarbon is a portion of matter which is member of class of organic chemical compounds composed only of the elements carbon (C) and hydrogen (H).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.britannica.com/science/hydrocarbon",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/786
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/805
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+        rdfs:label "hydrocarbon"@en
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000001,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097
+    
     
 Class: OEO_00240003
 
@@ -3415,6 +3655,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
 Individual: OEO_00000256
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being liquid. A portion of matter is liquid has has no definite shape but a definite volume (at a given temperature and pressure).",
+        rdfs:label "liquid"
+    
+    Types: 
+        OEO_00000395
+    
     
 Individual: OEO_00020161
 
