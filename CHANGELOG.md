@@ -12,6 +12,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
 - vehicle-kilometre (#1388)
 - electricity demand, fuel demand (#1389)
+- thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
+- sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
+- phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
@@ -48,7 +51,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - equivalence subclasses for car and truck (#1345)
 - refinery gas, petroleum coke (#1351)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
-- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1265)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -81,7 +84,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
 - energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
 - methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
-- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1265)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
 
 ### Removed
 - battery storage (#1348)
