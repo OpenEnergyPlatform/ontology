@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
 - vehicle-kilometre (#1388)
 - electricity demand, fuel demand (#1389)
+- based on (#1391)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
