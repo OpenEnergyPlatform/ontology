@@ -15,6 +15,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
 - sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
 - phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
+- bidirectional vehicle charging station (#1393)
 - charging (#1394)
 
 ### Changed
