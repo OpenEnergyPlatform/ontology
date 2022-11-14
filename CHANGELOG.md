@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - tank, fuel tank, volume (#1356)
 - filling station, hydrogen station, hydrogen transport (#1357)
+- OEP user, qualitist, quantitist, apinist (#1383)
 - sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
 - vehicle-kilometre (#1388)
 - electricity demand, fuel demand (#1389)
