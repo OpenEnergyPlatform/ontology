@@ -19,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
 - bidirectional vehicle charging station (#1393)
 - charging (#1394)
+- ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
