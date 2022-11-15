@@ -24,6 +24,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
+- SMES -> superconducting magnetic energy storage (#1396)
 
 ### Removed
 
