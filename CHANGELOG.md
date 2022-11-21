@@ -20,11 +20,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - bidirectional vehicle charging station (#1393)
 - charging (#1394)
 - non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
+- ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
+- SMES -> superconducting magnetic energy storage (#1396)
 
 ### Removed
 
