@@ -7,6 +7,33 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- tank, fuel tank, volume (#1356)
+- filling station, hydrogen station, hydrogen transport (#1357)
+- OEP user, qualitist, quantitist, apinist (#1383)
+- sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
+- vehicle-kilometre (#1388)
+- electricity demand, fuel demand (#1389)
+- based on (#1391)
+- thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
+- sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
+- phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
+- bidirectional vehicle charging station (#1393)
+- charging (#1394)
+- non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
+- ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
+
+### Changed
+- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+- model descriptor (#1387)
+- passenger-kilometre, ton-kilometre (#1388)
+- SMES -> superconducting magnetic energy storage (#1396)
+
+### Removed
+
+
+## [1.12.0] - 2022-11-02
+
+### Added
 - github: template for pull requests (#1162)
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
@@ -22,6 +49,16 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - vehicle operational mode (#1314)
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 - fuel supply system (#1316)
+- NC/BR sector division; NC/BR sector individuals (#1317)
+- is sector of, sectoral energy consumption, sectoral emission (#1321)
+- data file format, and subclasses (#1326)
+- mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
+- international transport sector (#1334)
+- has study region, has study subregio, has considered region, has interacting region, has scenario year (#1347)
+- equivalence subclasses for car and truck (#1345)
+- refinery gas, petroleum coke (#1351)
+- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
 
 ### Changed
 - github: update the description of the readme file (#1292)
@@ -45,8 +82,20 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has bearer axioms to OEO-defined realizable entities (#1310)
 - vehicle (#1314)
 - electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
+- energy use (#1321)
+- data format (#1326)
+- crude oil; gas diesel oil, gasoline, kerosene, and subclasses; CRF sector (IPCC 2006): petroleum refining (#1331)
+- CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
+- final energy consumption (#1340)
+- fuel cell (#1341)
+- realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
+- energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
+- methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
 
 ### Removed
+- battery storage (#1348)
+- csv and txt (#1371)
 
 ## [1.11.0] - 2022-07-04
 

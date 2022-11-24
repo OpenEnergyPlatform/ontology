@@ -98,6 +98,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000086>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002410>
+
+    
 ObjectProperty: OEO_00000503
 
     
@@ -195,6 +198,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
     Range: 
         OEO_00010227
     
+    
+ObjectProperty: OEO_00010312
+
     
 ObjectProperty: OEO_00020056
 
@@ -780,11 +786,16 @@ Class: OEO_00010136
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Distribution is the process of delivering goods and services to agents",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/836
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/876",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/876
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "distribution"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116) or (<http://purl.obolibrary.org/obo/RO_0002410> some OEO_00140124)
     
     
 Class: OEO_00010212
@@ -812,6 +823,83 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000367
+    
+    
+Class: OEO_00010315
+
+    
+Class: OEO_00010319
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refining sector is an energy transformation sector that covers mineral oil refining.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "mineral oil refining sector"
+    
+    SubClassOf: 
+        OEO_00000158,
+        OEO_00010312 some OEO_00010315
+    
+    
+Class: OEO_00010320
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An international transport sector is a transport sector of international transport processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/969
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334",
+        rdfs:label "international transport sector"@en
+    
+    SubClassOf: 
+        OEO_00000422,
+        OEO_00010312 some OEO_00140004
+    
+    
+Class: OEO_00010328
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An OEP user is a user who interacts with the Open Energy Platform.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
+        rdfs:label "OEP user"
+    
+    SubClassOf: 
+        OEO_00000431
+    
+    
+Class: OEO_00010329
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A qualitist is an OEP user who mainly interacts with qualitative information.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
+        rdfs:label "qualitist"
+    
+    SubClassOf: 
+        OEO_00010328
+    
+    
+Class: OEO_00010330
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitist is an OEP user who mainly interacts with quantitative information.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
+        rdfs:label "quantitist"
+    
+    SubClassOf: 
+        OEO_00010328
+    
+    
+Class: OEO_00010331
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An apinist is an OEP user who mainly interacts via an API.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
+        rdfs:label "apinist"
+    
+    SubClassOf: 
+        OEO_00010328
     
     
 Class: OEO_00020015
@@ -1449,12 +1537,17 @@ Class: OEO_00040006
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A request is a process whereby an agent asks another agent for something or to do something.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Communications/Request",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/376
-https://github.com/OpenEnergyPlatform/ontology/pull/642",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/642
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "request"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> min 2 OEO_00000051
     
     
 Class: OEO_00040007
@@ -1518,6 +1611,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
     SubClassOf: 
         OEO_00090001
     
+    
+Class: OEO_00140004
+
     
 Class: OEO_00140009
 
@@ -1674,17 +1770,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
     
 Class: OEO_00140124
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A service is a process that is an intangible actitvity performed by some agent for the benefit of another agent.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service (adapted)",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
-        rdfs:label "service"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
     
 Class: OEO_00140125
 
@@ -2031,6 +2116,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253/"@en,
         OEO_00140081
     
     
+Class: OEO_00320062
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity demand is the energy demand for electricity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1366
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1389",
+        rdfs:label "electricity demand"
+    
+    SubClassOf: 
+        OEO_00140146
+    
+    
+Class: OEO_00320063
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel demand is the energy demand for fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1366
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1389",
+        rdfs:label "fuel demand"
+    
+    SubClassOf: 
+        OEO_00140146
+    
+    
 Individual: OEO_00000160
 
     Annotations: 
@@ -2249,6 +2358,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
      OEO_00000504  OEO_00000242,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010039
     
+    SameAs: 
+        OEO_00010306
+    
     
 Individual: OEO_00010043
 
@@ -2354,6 +2466,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941",
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010187,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010188
     
+    SameAs: 
+        OEO_00010308
+    
     
 Individual: OEO_00010048
 
@@ -2385,7 +2500,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941",
     
     SameAs: 
         OEO_00010071,
-        OEO_00010135
+        OEO_00010135,
+        OEO_00010309
     
     
 Individual: OEO_00010049
@@ -2416,6 +2532,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941",
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010177,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010178
     
+    SameAs: 
+        OEO_00010310
+    
     
 Individual: OEO_00010050
 
@@ -2432,6 +2551,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/578",
     
     Facts:  
      OEO_00000504  OEO_00000242
+    
+    SameAs: 
+        OEO_00010311
     
     
 Individual: OEO_00010052
@@ -3051,11 +3173,15 @@ Individual: OEO_00010159
 All combustion activities supporting the refining of petroleum products including on-site combustion for the generation of electricity and heat for own use.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 2, Chapter 2.2, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/858
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941",
-        rdfs:label "CRF sector (IPCC 2006): petroleum refining"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
+
+Make individual of 'mineral oil refining sector':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331",
+        rdfs:label "CRF sector (IPCC 2006): petroleum refining"
     
     Types: 
-        OEO_00000158
+        OEO_00010319
     
     Facts:  
      OEO_00000504  OEO_00000242,
@@ -3868,11 +3994,15 @@ Individual: OEO_00010200
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'international bunkers' is a transport sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. It encompasses international aviation and maritime navigation.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/928
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
+
+Make instance of 'international transport sector':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/969
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334",
         rdfs:label "CRF sector (IPCC 2006): international bunkers"@en
     
     Types: 
-        OEO_00000422,
+        OEO_00010320,
         OEO_00010232 some OEO_00010227,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/858
@@ -3893,11 +4023,15 @@ Individual: OEO_00010201
         <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'international aviation' is a transport sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. It encompasses emissions from flights that depart in one country and arrive in a different country.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/928
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
+
+Make instance of 'international transport sector':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/969
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334",
         rdfs:label "CRF sector (IPCC 2006): international aviation"@en
     
     Types: 
-        OEO_00000422,
+        OEO_00010320,
         OEO_00010232 some OEO_00010227,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/858
@@ -3920,11 +4054,15 @@ Individual: OEO_00010202
         <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'maritime navigation' is a transport sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories. Emissions from fuels used by vessels of all flags that are engaged in international water-borne navigation. The international navigation may take place at sea, on inland lakes and waterways and in coastal waters. It includes emissions from journeys that depart in one country and arrive in a different country. It excludes consumption by fishing vessels.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/928
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
+
+Make instance of 'international transport sector':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/969
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334",
         rdfs:label "CRF sector (IPCC 2006): maritime navigation"@en
     
     Types: 
-        OEO_00000422,
+        OEO_00010320,
         OEO_00010232 some OEO_00010227,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/858
@@ -3987,11 +4125,15 @@ Individual: OEO_00010205
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The MMR sector 'M.International aviation in the EU ETS' is a transport sector that encompasses that part of the international aviation that is regulated by the European Union Emissions Trading System.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/928
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
+
+Make instance of 'international transport sector':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/969
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334",
         rdfs:label "MMR sector: M.International aviation in the EU ETS"@en
     
     Types: 
-        OEO_00000422,
+        OEO_00010320,
         OEO_00010232 some OEO_00010227,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/858
@@ -4143,6 +4285,153 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
      OEO_00000504  OEO_00000242
     
     
+Individual: OEO_00010304
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector division is a sector division defined by the UNFCCC reporting guidelines on national communications for Parties included in Annex I to the Convention.
+(https://unfccc.int/sites/default/files/resource/cp2019_13a01_adv.pdf, 6/CP.25, VI, Table 2)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector division"@en
+    
+    Types: 
+        OEO_00000368
+    
+    
+Individual: OEO_00010305
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"energy\" is a sector defined by the NC/BR sector division that includes all energy use that is not related to transport or industry. The sector includes:
+- CRF sector (IPCC 2006): energy industry
+- CRF sector (IPCC 2006): fuel combustion - other sectors
+- CRF sector (IPCC 2006): fuel combustion - other
+- CRF sector (IPCC 2006): fugitive emissions from fuels
+- CRF sector (IPCC 2006): CO2 transport and storage",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: energy"@en
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00010304,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010040,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010043,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010044,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010057,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010058
+    
+    
+Individual: OEO_00010306
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"transport\" is a transport sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: transport"@en
+    
+    Types: 
+        OEO_00000422
+    
+    Facts:  
+     OEO_00000504  OEO_00010304
+    
+    SameAs: 
+        OEO_00010042
+    
+    
+Individual: OEO_00010307
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"industry/industrial processes and product use\" is an industry sector defined by the NC/BR sector division. The sector includes:
+- CRF sector (IPCC 2006): manufacture of solid fuels and other energy industries
+- CRF sector (IPCC 2006): industrial processes and product use",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: industry/industrial processes and product use"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00010304,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010046,
+     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010160
+    
+    
+Individual: OEO_00010308
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"agriculture\" is an agriculture, forestry and land use sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): agriculture.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: agriculture"@en
+    
+    Types: 
+        OEO_00010035
+    
+    SameAs: 
+        OEO_00010047
+    
+    
+Individual: OEO_00010309
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"forestry/LULUCF\" is an agriculture, forestry and land use sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): land use, land-use change and forestry.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: forestry/LULUCF"@en
+    
+    Types: 
+        OEO_00010035
+    
+    Facts:  
+     OEO_00000504  OEO_00010304
+    
+    SameAs: 
+        OEO_00010048
+    
+    
+Individual: OEO_00010310
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"waste management/waste\" is a waste and wastewater sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): waste.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: waste management/waste"@en
+    
+    Types: 
+        OEO_00010036
+    
+    Facts:  
+     OEO_00000504  OEO_00010304
+    
+    SameAs: 
+        OEO_00010049
+    
+    
+Individual: OEO_00010311
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"other\" is a sector defined by the NC/BR sector division that includes everything that is not included in the other NC/BR sectors. It aligns to the CRF sector (IPCC 2006): other.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+        rdfs:label "NC/BR sector: other"@en
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00010304
+    
+    SameAs: 
+        OEO_00010050
+    
+    
 DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
+
+DifferentIndividuals: 
+    OEO_00010305,OEO_00010306,OEO_00010307,OEO_00010308,OEO_00010309,OEO_00010310,OEO_00010311
 
