@@ -43,3 +43,10 @@ if __name__ == '__main__':
         output += table
     with open(cwd + f"/src/scripts/etd/glossary/glossary.md", "w") as fil:
         fil.write(output)
+
+    # create csv output
+    df_csv = df.copy()
+    df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-physical/", "")
+    df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-model/", "")
+    df_csv["ID"] = df_csv["ID"].str.replace(":", "_")
+    df_csv.to_csv(cwd + f"/src/scripts/etd/glossary/glossary.csv", index=False)
