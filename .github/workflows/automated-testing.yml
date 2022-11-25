@@ -9,6 +9,12 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '11'
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+          architecture: x64
+      - name: install python dependencies
+        run: pip install -r src/scripts/requirements.txt
       - name: make
         run: |
           make
@@ -22,6 +28,17 @@ jobs:
           fi
           echo "Ontology is inconsistent: $OUT"
           exit 1
+      - name: Build ETD xlsx
+        run: |
+          java -jar build/robot.jar merge --input $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl \
+            --include-annotations true \
+          export  --header "ID|LABEL|definition" \
+                  --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
+                  --sort "LABEL" \
+                  --export $(pwd)/build/oeo/etd/etd.xlsx
+      - name: Build ETD csv
+        run: |
+          python $(pwd)/src/scripts/etd/etd.py $(pwd)/build
       - name: validate-profile
         run: | 
           echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
@@ -31,5 +48,11 @@ jobs:
           java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*
       - name: competency
         run: |
-          bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
-          bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
+          pytest -s -v
+          # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
+          # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: build/report.json
