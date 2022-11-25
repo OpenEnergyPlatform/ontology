@@ -39,10 +39,10 @@ jobs:
           export  --header "ID|LABEL|definition" \
                   --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
                   --sort "LABEL" \
-                  --export $(pwd)/build/oeo/etd/etd.xlsx
+                  --export $(pwd)/build/oeo/$(cat VERSION)/etd.xlsx
       - name: Build ETD csv
         run: |
-          python $(pwd)/src/scripts/etd/etd.py $(pwd)/build
+          python $(pwd)/src/scripts/etd/etd.py $(pwd)/build/oeo/$(cat VERSION)
       - name: validate-profile
         run: | 
           echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
