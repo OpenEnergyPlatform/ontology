@@ -30,11 +30,7 @@ jobs:
           exit 1
       - name: Build ETD xlsx
         run: |
-          java -jar build/robot.jar merge --input $(pwd)/src/ontology/oeo.omn \
-            --input $(pwd)ontology/edits/oeo-model.omn \
-            --input $(pwd)/ontology/edits/oeo-physical.omn \
-            --input $(pwd)/ontology/edits/oeo-shared.omn \
-            --input $(pwd)/ontology/edits/oeo-social.omn \
+          java -jar build/robot.jar merge --input build/oeo/$(cat VERSION)/oeo-full.omn \
             --include-annotations true \
           export  --header "ID|LABEL|definition" \
                   --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
