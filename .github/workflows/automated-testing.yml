@@ -28,9 +28,12 @@ jobs:
           fi
           echo "Ontology is inconsistent: $OUT"
           exit 1
+      - name: setup robot 1.9.0
+        run: |
+          wget https://github.com/ontodev/robot/releases/download/v1.9.0/robot.jar -O build/robot19.jar
       - name: Build ETD xlsx
         run: |
-          java -jar build/robot.jar merge --input build/oeo/$(cat VERSION)/oeo-full.omn \
+          java -jar build/robot19.jar merge --input build/oeo/$(cat VERSION)/oeo-full.omn \
             --include-annotations true \
           export  --header "ID|LABEL|definition" \
                   --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
