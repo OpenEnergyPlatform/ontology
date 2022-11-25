@@ -22,8 +22,8 @@ ONTOLOGY_PATH = (
     .joinpath("oeo-full.owl")
     .as_posix()
 )
-EXISTING_TERMS_AND_DEFINITONS = Path(CWD).joinpath(
-    "build/glossary.csv"
+EXISTING_TERMS_AND_DEFINITONS = (
+    Path(CWD).joinpath("build/oeo").joinpath(f"{__version__}").joinpath("glossary.csv")
 )
 COMPETENCY_QUESTION_DIRECTORY = Path(CWD).joinpath("tests/competency_questions")
 
@@ -40,7 +40,9 @@ def existing_terms_and_definitons():
 
 def pytest_generate_tests(metafunc):
     if "competency_question_path" in metafunc.fixturenames:
-        competency_question_list = [p for p in glob(COMPETENCY_QUESTION_DIRECTORY.as_posix() + "*/**.omn")]
+        competency_question_list = [
+            p for p in glob(COMPETENCY_QUESTION_DIRECTORY.as_posix() + "*/**.omn")
+        ]
         selected_filer = metafunc.config.getoption("--selected")
         competency_question_list = [
             cq for cq in competency_question_list if selected_filer in cq
@@ -102,8 +104,7 @@ def search_term_in_question_file(question, pattern=r"\w+_\d{8}"):
 def test_competency_question(
     competency_question_path, existing_terms_and_definitons, results_bag
 ):
-    """Metatest to produce competency question tests.
-    """
+    """Metatest to produce competency question tests."""
     results_bag.questions = {}
     results_bag.terms = {}
     name = Path(competency_question_path).stem
@@ -159,5 +160,5 @@ def test_synthesis(fixture_store, existing_terms_and_definitons):
         [term for term in existing_terms_and_definitons if "OEO_" in term]
     )
     report["coverage"] = "{:.0%}".format(coverage)
-    with open( Path(CWD).joinpath("build/report.json"), "w") as f:
+    with open(Path(CWD).joinpath("build/report.json"), "w") as f:
         json.dump(report, f, indent=4)
