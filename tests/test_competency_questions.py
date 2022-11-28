@@ -108,13 +108,18 @@ def test_competency_question(
     results_bag.questions = {}
     results_bag.terms = {}
     name = Path(competency_question_path).stem
+    is_soundness = True if "soundness" in competency_question_path else False
     failure = ""
+    query_result = False
     if not name in results_bag.questions:
         results_bag.questions[name] = {"passed": False, "covers": []}
     try:
-        results_bag.questions[name]["passed"] = check_competency_question(
+        query_result = check_competency_question(
             competency_question_path, ONTOLOGY_PATH
         )
+        if is_soundness:
+            query_result = not query_result
+        results_bag.questions[name]["passed"] = query_result
     except RuntimeError as e:
         results_bag.questions[name]["passed"] = False
         results_bag.questions[name]["error"] = str(e)
@@ -133,6 +138,8 @@ def test_competency_question(
             results_bag.terms[term]["by"].append(name)
     if len(failure) > 0:
         raise RuntimeError(failure)
+
+    assert query_result, f"{name} failed"
 
 
 def test_synthesis(fixture_store, existing_terms_and_definitons):
