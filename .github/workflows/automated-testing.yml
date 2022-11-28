@@ -55,6 +55,7 @@ jobs:
           # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
           # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
       - name: Upload Artifacts
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: test-report
