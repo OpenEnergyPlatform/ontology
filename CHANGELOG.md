@@ -9,12 +9,18 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - tank, fuel tank, volume (#1356)
 - filling station, hydrogen station, hydrogen transport (#1357)
+- OEP user, qualitist, quantitist, apinist (#1383)
 - sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
 - vehicle-kilometre (#1388)
 - electricity demand, fuel demand (#1389)
+- based on (#1391)
 - thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
 - sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
 - phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
+- bidirectional vehicle charging station (#1393)
+- charging (#1394)
+- non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
+- ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
 - heat generating unit, plate heat exchanger, rotary heat exchanger, heat plant, heat transfer unit, boiler, solar heat plant, solar heat unit (#1360)
 - combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant, tube collector, flat-plate collector (#1360)
 
@@ -22,6 +28,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
+- SMES -> superconducting magnetic energy storage (#1396)
 - power plant, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
 
 ### Removed

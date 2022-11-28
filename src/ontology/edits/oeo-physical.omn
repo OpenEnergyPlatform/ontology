@@ -1938,38 +1938,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/770",
     
 Class: OEO_00000139
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy is a form of energy derived from the potential or kinetic energy of charged particles."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "electricity",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Electrical_energy"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "definition of electrical energy:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/224
-pull request:  https://github.com/OpenEnergyPlatform/ontology/pull/524
-
-alternative term electricity:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/381
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/621
-
-add commodity role:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
-
-add axiom to electricity im/exports:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
-        rdfs:label "electrical energy",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000020"
-    
-    SubClassOf: 
-        OEO_00000150,
-        OEO_00020182 some OEO_00020207,
-        OEO_00020182 some OEO_00020208,
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
-    
     
 Class: OEO_00000143
 
@@ -3370,10 +3338,12 @@ Class: OEO_00000374
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Superconducting magnetic energy storage (SMES) systems store energy in the magnetic field created by the flow of direct current in a superconducting coil which has been cryogenically cooled to a temperature below its superconducting critical temperature.
-          A typical smes system includes three parts: superconducting coil, power conditioning system and cryogenically cooled refrigerator. Once the superconducting coil is charged, the current will not decay and the magnetic energy can be stored indefinitely."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Superconducting_magnetic_energy_storage&oldid=902190687",
-        rdfs:label "SMES"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A superconducting magnetic energy storage (SMES) is an energy storage object that stores electrical energy in the magnetic field of a superconducting magnet.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SMES",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Shorten definition and new label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1349
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1396",
+        rdfs:label "superconducting magnetic energy storage"
     
     SubClassOf: 
         OEO_00000159
@@ -5572,11 +5542,16 @@ Class: OEO_00010211
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "non-energy use"@en
     
     SubClassOf: 
-        OEO_00140039
+        OEO_00140039,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
     
     DisjointWith: 
         OEO_00010210
@@ -8791,11 +8766,18 @@ Class: OEO_00160001
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Frequency control is a process that regulates the electricity output of an artificial object to maintain the equilibrium between electricity supply and demand.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "frequency control"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00000061
+             and (OEO_00010235 some OEO_00000139))
     
     
 Class: OEO_00160002
@@ -9350,12 +9332,17 @@ Class: OEO_00260003
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A cold start is a process in which an energy transformation unit is started-up after a period of inactivity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "cold start"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
-         and (OEO_00000500 some OEO_00260002)
+         and (OEO_00000500 some OEO_00260002),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
 Class: OEO_00290000
@@ -10711,8 +10698,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1356",
         OEO_00000350,
         OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000028>,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000095>
-
-
+    
+    
 Class: OEO_00320058
 
     Annotations: 
@@ -10755,6 +10742,111 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357",
     SubClassOf: 
         OEO_00320039,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000220
+    
+    
+Class: OEO_00320064
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Charging is an electrical energy transfer where the transferred energy is stored in a battery.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1368
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1394",
+        rdfs:label "charging"
+    
+    SubClassOf: 
+        OEO_00320036,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000068
+    
+    
+Class: OEO_00320065
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A bidirectional vehicle charging station is a vehicle charging station that can also feed electrical energy from the traction battery back into the electricity grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1369
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1393",
+        rdfs:label "bidirectional vehicle charging station"
+    
+    SubClassOf: 
+        OEO_00320040
+    
+    
+Class: OEO_00320066
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ton of oil equivalent is an energy unit which is equal to the amount of energy released by burning one metric ton of crude oil with a certain net calorific value. That is defined as 41.868 gigajoules or 11.63 megawatt-hours.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1367
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1398",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "toe",
+        rdfs:label "ton of oil equivalent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00320067
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A kilo ton of oil equivalent is an energy unit which is equal to 1,000 tons of oil equivalent.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1367
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1398",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "ktoe",
+        rdfs:label "kilo ton of oil equivalent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00320068
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A million ton of oil equivalent is an energy unit which is equal to 1,000,000 tons of oil equivalent.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "megaton of oil equivalent",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1367
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1398",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "Mtoe",
+        rdfs:label "million ton of oil equivalent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00320069
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A ton of coal equivalent is an energy unit which is equal to the amount of energy released by burning one metric ton of coal with a certain net calorific value. That is defined as 0.7 tons of oil equivalent (toe) and thus equals 29.3076 gigajoules or 8.141 megawatt-hours.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1382
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1398",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "tce",
+        rdfs:label "ton of coal equivalent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00320070
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A kilo ton of coal equivalent is an energy unit which is equal to 1,000 tons of coal equivalent.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1382
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1398",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "ktce",
+        rdfs:label "kilo ton of coal equivalent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
+    
+    
+Class: OEO_00320071
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A million ton of coal equivalent is an energy unit which is equal to 1,000,000 tons of coal equivalent.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "megaton of coal equivalent",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1382
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1398",
+        <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "Mtoe",
+        rdfs:label "million ton of coal equivalent"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/UO_0000111>
     
     
 Individual: OEO_00000182

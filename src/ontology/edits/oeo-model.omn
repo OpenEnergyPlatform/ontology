@@ -284,6 +284,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347",
         OEO_00020097
     
     
+ObjectProperty: OEO_00020226
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario study or projection and a scenario, that indicates the scenario that provides the assumptions on which the respective scenatio study or projection is based on.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
+        rdfs:label "is based on"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    Domain: 
+        OEO_00010262 or <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
+    
+    Range: 
+        OEO_00000364
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -372,12 +390,15 @@ Class: <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario study is a study that investigates one or more scenarios.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1058
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131",
-        rdfs:label "scenario study"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131
+add based on axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
+        rdfs:label "scenario study"
     
     SubClassOf: 
         OEO_00020011,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000364
+        OEO_00020226 some OEO_00000364
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -894,6 +915,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000304
     
     
+Class: OEO_00000323
+
+    
 Class: OEO_00000327
 
     Annotations: 
@@ -1239,13 +1263,16 @@ Class: OEO_00010262
         <http://purl.obolibrary.org/obo/IAO_0000116> "A scenario projection is an intentional process (with human participation): A scenario is either created or selected, its assumptions are translated into data sets. These datasets are quantified and serve as inputs to a model calculation which is applied to quantitatively project one or more a variables of interest into the future.
 (Intentional: a research question is basis for the projection to be done)",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/970
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1217",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1217
+add based on axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
         rdfs:label "scenario projection"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00020226 some OEO_00000364,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000275,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000364,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00020013
     
     
@@ -1869,12 +1896,17 @@ Class: OEO_00140161
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Cooperative programming is the process of two or more people working on program code together at the same time (according to a specified routine).",
         <http://purl.obolibrary.org/obo/IAO_0000118> "collaborative programming",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/254
-https://github.com/OpenEnergyPlatform/ontology/pull/808",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/808
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "cooperative programming"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> min 2 OEO_00000323
     
     
 Class: OEO_00140167
