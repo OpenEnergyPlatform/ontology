@@ -61,7 +61,7 @@ jobs:
           path: build/report.json
       - name: Get Coverage for badge 
         run : |
-          echo "COVERAGE=$(head report.json | grep -o '"coverage": "[^"]*"' | grep -o '[^"]*\%')" >> $GITHUB_ENV  
+          echo "COVERAGE=$(head build/report.json | grep -o '"coverage": "[^"]*"' | grep -o '[^"]*\%')" >> $GITHUB_ENV  
           REF=${{ github.ref }}     
           IFS='/' read -ra PATHS <<< "$REF"
           BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
