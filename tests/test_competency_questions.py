@@ -41,7 +41,7 @@ def existing_terms_and_definitons():
 def pytest_generate_tests(metafunc):
     if "competency_question_path" in metafunc.fixturenames:
         competency_question_list = [
-            p for p in glob(COMPETENCY_QUESTION_DIRECTORY.as_posix() + "*/**.omn")
+            p for p in glob(COMPETENCY_QUESTION_DIRECTORY.as_posix() + "/**/*.omn", recursive=True)
         ]
         selected_filer = metafunc.config.getoption("--selected")
         competency_question_list = [
