@@ -5432,11 +5432,16 @@ Class: OEO_00010211
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "non-energy use"@en
     
     SubClassOf: 
-        OEO_00140039
+        OEO_00140039,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
     
     DisjointWith: 
         OEO_00010210
@@ -8627,11 +8632,18 @@ Class: OEO_00160001
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Frequency control is a process that regulates the electricity output of an artificial object to maintain the equilibrium between electricity supply and demand.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1107
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1202
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "frequency control"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some 
+            (OEO_00000061
+             and (OEO_00010235 some OEO_00000139))
     
     
 Class: OEO_00160002
@@ -9158,12 +9170,17 @@ Class: OEO_00260003
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A cold start is a process in which an energy transformation unit is started-up after a period of inactivity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/948
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1126
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "cold start"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
-         and (OEO_00000500 some OEO_00260002)
+         and (OEO_00000500 some OEO_00260002),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
     
 Class: OEO_00290000
