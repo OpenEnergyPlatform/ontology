@@ -59,3 +59,19 @@ jobs:
         with:
           name: test-report
           path: build/report.json
+      - name: Get Coverage for badge 
+        run : |
+          echo "COVERAGE=$(head report.json | grep -o '"coverage": "[^"]*"' | grep -o '[^"]*\%')" >> $GITHUB_ENV  
+          REF=${{ github.ref }}     
+          IFS='/' read -ra PATHS <<< "$REF"
+          BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
+          echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
+      - name: Coverage Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 6d00affa9fbc89c79684d62091d96551
+          filename: open_energy_ontology__${{ env.BRANCH }}.json
+          label: CQ Coverage
+          message: ${{ env.COVERAGE }}
+          color: green
