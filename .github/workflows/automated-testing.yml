@@ -12,16 +12,6 @@ jobs:
       - name: make
         run: |
           make
-      - name: consistency
-        run: |
-          wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
-          OUT=$(java -jar build/hermit.jar file://`pwd`/build/oeo/$(cat VERSION)/oeo-full.owl -U)
-          if [ "$(echo "$OUT" | tr -d '[:space:]')" = "Classesequivalentto'owl:Nothing':owl:Nothing" ];
-          then
-            exit 0
-          fi
-          echo "Ontology is inconsistent: $OUT"
-          exit 1
       - name: validate-profile
         run: | 
           echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
@@ -32,7 +22,7 @@ jobs:
       - uses: actions/upload-artifact@master
         with:
           name: build-artifacts
-          path: build
+          path: build/oeo
   test:
     runs-on: ubuntu-latest
     needs: build
@@ -49,7 +39,7 @@ jobs:
       - uses: actions/download-artifact@master
         with:
           name: build-artifacts
-          path: build
+          path: build/oeo
       - name: install python dependencies
         run: pip install -r src/scripts/requirements.txt
       - name: setup robot 1.9.0
@@ -66,6 +56,16 @@ jobs:
       - name: Build ETD csv
         run: |
           python $(pwd)/src/scripts/etd/etd.py $(pwd)/build/oeo/$(cat VERSION)
+      - name: consistency
+        run: |
+          wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
+          OUT=$(java -jar build/hermit.jar file://`pwd`/build/oeo/$(cat VERSION)/oeo-full.owl -U)
+          if [ "$(echo "$OUT" | tr -d '[:space:]')" = "Classesequivalentto'owl:Nothing':owl:Nothing" ];
+          then
+            exit 0
+          fi
+          echo "Ontology is inconsistent: $OUT"
+          exit 1
       - name: competency
         run: |
           pytest -s -v
