@@ -149,18 +149,20 @@ def test_synthesis(fixture_store, existing_terms_and_definitons):
         fixture_store (fixture): These are all the availible fixtures.
         existing_terms_and_definitons (fixture): Fixture with existing terms and definitions.
     """
-    report = {"coverage": "0%", "questions": {}, "terms": {}}
+    initial_terms = {t : {"covered": False, "by": []} for t in existing_terms_and_definitons if "OEO_" in t}
+    report = {"coverage": "0%", "questions": {}, "terms": initial_terms}
     for v in fixture_store["results_bag"].values():
         report["questions"].update(v["questions"])
         for term in v["terms"].keys():
             if term in report["terms"]:
+                report["terms"][term] ["covered"] = True
                 report["terms"][term]["by"].extend(v["terms"][term]["by"])
                 report["terms"][term]["by"] = list(set(report["terms"][term]["by"]))
                 report["terms"][term]["by"] = list(set(report["terms"][term]["by"]))
             else:
                 report["terms"][term] = {
-                    "covered": v["terms"][term]["covered"],
-                    "by": v["terms"][term]["by"],
+                    "covered": True,
+                    "by": list(set(report["terms"][term]["by"])),
                 }
 
     coverage = sum([1 for c in report.get("terms", {}).values() if c["covered"]]) / len(
