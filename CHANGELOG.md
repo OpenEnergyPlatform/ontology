@@ -29,6 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
 - biofuel (#1409)
+- has economic value, economic value of (#1422)
 
 ### Removed
 
