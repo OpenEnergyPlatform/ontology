@@ -23,6 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
 - sustainable biofuel, non-sustainable biofuel (#1409)
 - source category (#1428)
+- scenario bundle (#1429)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
@@ -30,6 +31,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
 - biofuel; competency questions Q1 and Q2 (#1409)
+- global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
 
 ### Removed
