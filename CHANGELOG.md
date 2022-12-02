@@ -21,7 +21,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - charging (#1394)
 - non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
 - ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
-- sustainable biofuel, non-sustainable biofuel; competency questions Q1 and Q2 (#1409)
+- sustainable biofuel, non-sustainable biofuel (#1409)
 - source category (#1428)
 
 ### Changed
@@ -29,7 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
-- biofuel (#1409)
+- biofuel; competency questions Q1 and Q2 (#1409)
 - has economic value, economic value of (#1422)
 
 ### Removed
