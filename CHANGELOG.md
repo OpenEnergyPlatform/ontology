@@ -28,6 +28,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
+- global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
 
 ### Removed
