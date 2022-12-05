@@ -24,6 +24,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sustainable biofuel, non-sustainable biofuel (#1409)
 - source category (#1428)
 - scenario bundle (#1429)
+- rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
@@ -33,6 +34,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - biofuel; competency questions Q1 and Q2 (#1409)
 - global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
+- solar thermal collector (#1432)
 
 ### Removed
 
