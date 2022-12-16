@@ -21,6 +21,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - charging (#1394)
 - non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
 - ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
+- sustainable biofuel, non-sustainable biofuel (#1409)
+- source category (#1428)
+- scenario bundle (#1429)
+- rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
 - CRF sector individuals 2.A.2, 2.A.3, 2.A.4, 2.B.1 to 2.B.10, 2.C.2 to 2.C.7 (#1440)
 
 ### Changed
@@ -28,6 +32,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
+- biofuel; competency questions Q1 and Q2 (#1409)
+- global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
+- has economic value, economic value of (#1422)
+- solar thermal collector (#1432)
 - CRF sector individual 2.C.1 (#1440)
 
 ### Removed
