@@ -9,6 +9,8 @@ on:
  push:
    tags:
      - "v*"
+   branches:
+     - 'feature-1020-export-of-existing-terms-and-definitions'
 jobs:
   exportTermsDefinitions:
     runs-on: ubuntu-latest
@@ -45,7 +47,7 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: ETD
+          name: existing-terms-and-definitions
           path: src/scripts/etd/glossary
       # - name: Checkout wiki
       #   uses: actions/checkout@v2

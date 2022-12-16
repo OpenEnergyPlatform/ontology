@@ -47,7 +47,7 @@ if __name__ == '__main__':
         table = title + buffer + "\n\n"
         #df.to_markdown(buf=cwd + "/src/scripts/etd/ETD.md", index=False)
         output += table
-    with open(pathlib.Path(target_path).joinpath("glossary.md").as_posix(), "w") as fil:
+    with open(pathlib.Path(target_path).joinpath("glossary/glossary.md").as_posix(), "w") as fil:
         fil.write(output)
 
     # create csv output
@@ -55,4 +55,4 @@ if __name__ == '__main__':
     df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-physical/", "")
     df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-model/", "")
     df_csv["ID"] = df_csv["ID"].str.replace(":", "_")
-    df_csv.to_csv(pathlib.Path(target_path).joinpath("glossary.csv").as_posix(), index=False)
+    df_csv.to_csv(pathlib.Path(target_path).joinpath("glossary/glossary.csv").as_posix(), index=False)
