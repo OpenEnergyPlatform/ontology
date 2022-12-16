@@ -21,12 +21,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - charging (#1394)
 - non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
 - ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
+- CRF sector individuals 2.A.2, 2.A.3, 2.A.4, 2.B.1 to 2.B.10, 2.C.2 to 2.C.7 (#1440)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
+- CRF sector individual 2.C.1 (#1440)
 
 ### Removed
 
