@@ -23,7 +23,7 @@ ONTOLOGY_PATH = (
     .as_posix()
 )
 EXISTING_TERMS_AND_DEFINITONS = (
-    Path(CWD).joinpath("build/oeo").joinpath(f"{__version__}").joinpath("glossary.csv")
+    Path(CWD).joinpath("build/oeo").joinpath(f"{__version__}").joinpath("glossary/glossary.csv")
 )
 COMPETENCY_QUESTION_DIRECTORY = Path(CWD).joinpath("tests/competency_questions")
 
