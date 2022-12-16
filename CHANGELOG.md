@@ -26,6 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - scenario bundle (#1429)
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
 - utilisation value (#1435)
+- amortisation time, economic life time (#1436)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
