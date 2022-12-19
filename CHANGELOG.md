@@ -39,7 +39,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
-- CRF sector individual 2.B.2 and 2.C.1 (#1440)
+- CRF sector individual 2.C.1 (#1440)
 
 ### Removed
 
