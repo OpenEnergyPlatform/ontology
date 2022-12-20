@@ -27,6 +27,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
+- has spatial region (#1441)
 
 ### Changed
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
@@ -38,6 +39,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
+- has study region, has considered region, has interacting region, has study region (#1441)
 
 ### Removed
 
