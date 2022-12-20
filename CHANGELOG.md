@@ -39,7 +39,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
-- synthetic hydrogen (#1442)
+- synthetic hydrogen, fossil hydrogen (#1442)
 
 ### Removed
 
