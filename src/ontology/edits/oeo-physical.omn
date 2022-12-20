@@ -4005,7 +4005,7 @@ Class: OEO_00010016
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic hydrogen is hydrogen with synthetic origin. It is usually produced from water applying the water electrolysis process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Synthetic hydrogen is hydrogen with synthetic origin.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411",
         rdfs:label "synthetic hydrogen"
@@ -6460,6 +6460,110 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1409",
     
     DisjointWith: 
         OEO_00010336
+    
+    
+Class: OEO_00010379
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electrolytic hydrogen is hydrogen that is physical output of a water electrolysis process.",
+        rdfs:label "electrolytic hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00000220
+         and (OEO_00240025 some OEO_00010219)
+    
+    SubClassOf: 
+        OEO_00000220,
+        OEO_00000530 some OEO_00030005
+    
+    
+Class: OEO_00010380
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable electrolytic hydrogen is electrolytic hydrogen that is produced with renewable electrical energy.",
+        rdfs:label "renewable electrolytic hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00010379
+         and (OEO_00240025 some 
+            (OEO_00010219
+             and (OEO_00010234 some OEO_00010384)))
+    
+    SubClassOf: 
+        OEO_00010379,
+        OEO_00010379
+         and (<http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020086)
+    
+    
+Class: OEO_00010381
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Steam reforming hydrogen is hydrogen that is physical output of a steam reforming process.",
+        rdfs:label "steam reforming hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00000220
+         and (OEO_00240025 some OEO_00010267)
+    
+    SubClassOf: 
+        OEO_00000220,
+        OEO_00000530 some OEO_00030005
+    
+    
+Class: OEO_00010382
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil steam reforming hydrogen is hydrogen that is produced from a fossil combustion fuel in a steam reforming process which is not followed by a carbon capture and storage process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "grey hydrogen",
+        rdfs:label "fossil steam reforming hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00000220
+         and (OEO_00240025 some 
+            (OEO_00010267
+             and (not (<http://purl.obolibrary.org/obo/RO_0002418> some OEO_00010141))
+             and (OEO_00000532 some OEO_00000014)))
+    
+    SubClassOf: 
+        OEO_00000220,
+        OEO_00000530 some OEO_00030002,
+        OEO_00000530 some OEO_00030005,
+        <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020148
+    
+    
+Class: OEO_00010383
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Abated steam reforming hydrogen is hydrogen that is output of a steam reforming process which is followed by a carbon capture and storage process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "blue hydrogen",
+        rdfs:label "abated steam reforming hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00000220
+         and (OEO_00240025 some 
+            (OEO_00010267
+             and (OEO_00000532 some OEO_00000014)
+             and (<http://purl.obolibrary.org/obo/RO_0002418> some OEO_00010141)))
+    
+    SubClassOf: 
+        OEO_00000220,
+        OEO_00000530 some OEO_00030002,
+        OEO_00000530 some OEO_00030005,
+        <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020148
+    
+    
+Class: OEO_00010384
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable electrical energy is electrical energy with a renewable origin.",
+        rdfs:label "renewable electrical energy"@en
+    
+    EquivalentTo: 
+        OEO_00000139
+         and (OEO_00000530 some OEO_00030004)
+    
+    SubClassOf: 
+        OEO_00000139
     
     
 Class: OEO_00020001
