@@ -25,6 +25,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - source category (#1428)
 - scenario bundle (#1429)
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
+- utilisation value (#1435)
+- amortisation time, economic life time (#1436)
 - renewable power unit, renewable power plant (#1437)
 
 ### Changed
@@ -36,6 +38,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
+- net capacity factor (#1435)
 - yield profile, geothermal power unit, marine current/tidal/wave energy converting unit (#1437)
 
 ### Removed
