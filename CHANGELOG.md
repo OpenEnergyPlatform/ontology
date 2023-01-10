@@ -37,7 +37,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
-- power plant, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
+- power plant, power generating unit, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
 - biofuel; competency questions Q1 and Q2 (#1409)
 - global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
