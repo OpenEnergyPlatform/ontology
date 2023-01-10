@@ -8948,7 +8948,7 @@ Class: OEO_00240010
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is an energy transformation unit that produces electrical energy and thermal energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is an energy transformation unit that has both the function to produce thermal energy and the function to produce electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "co-generating power unit",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
@@ -8957,10 +8957,16 @@ change produces energy axioms to 'has energy output':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
-change as a subclass of energy transformation unit:
+New function-based definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "combined heat and power generating unit"
+    
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some 
+            (OEO_00010386
+             and OEO_00010387))
     
     SubClassOf: 
         OEO_00020102,
@@ -8970,14 +8976,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         <http://purl.obolibrary.org/obo/BFO_0000051> some 
             (OEO_00000210 or OEO_00140102),
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009,
+        <http://purl.obolibrary.org/obo/RO_0000085> some 
+            (OEO_00010386
+             and OEO_00010387)
     
     
 Class: OEO_00240011
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power plant (CHPP) is an energy transformation unit consisting of combined heat and power generating units, a grid component that feeds electric energy into an electric grid, and a grid component that feeds thermal energy into a heating grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power plant (CHPP) is an energy transformation unit that consists of combined heat and power generating units, a grid component feeding electric energy into an electricity grid, and a grid component feeding thermal energy into a heating grid.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CHPP",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
