@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
 - tank, fuel tank, volume (#1356)
 - filling station, hydrogen station, hydrogen transport (#1357)
 - OEP user, qualitist, quantitist, apinist (#1383)
@@ -28,8 +29,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
 - renewable power unit, renewable power plant (#1437)
+- energy transformation function and subclasses (#1445)
 
 ### Changed
+- bearer of -> has characteristic (#1268)
+- ro-module -> ro-extracted (#1268)
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
