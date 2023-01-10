@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
 - tank, fuel tank, volume (#1356)
 - filling station, hydrogen station, hydrogen transport (#1357)
 - OEP user, qualitist, quantitist, apinist (#1383)
@@ -39,6 +40,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
+- bearer of -> has characteristic (#1268)
+- ro-module -> ro-extracted (#1268)
 
 ### Removed
 
