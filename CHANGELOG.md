@@ -43,7 +43,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
-- yield profile, geothermal power unit, marine current/tidal/wave energy converting unit (#1437)
+- yield profile, geothermal power unit, marine current/tidal/wave energy converting unit, solar power unit, wind energy converting unit (#1437)
 
 ### Removed
 
