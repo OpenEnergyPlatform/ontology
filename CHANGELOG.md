@@ -43,7 +43,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - biofuel; competency questions Q1 and Q2 (#1409)
 - global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
-- gas turbine (#1362)
+- gas turbine, gas power unit (#1362)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
 - has study region, has considered region, has interacting region, has study region (#1441)
