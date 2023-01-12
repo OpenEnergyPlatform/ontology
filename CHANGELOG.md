@@ -29,9 +29,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
 - has spatial region (#1441)
+- (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
 
 ### Changed
+- bearer of -> has characteristic (#1268)
+- ro-module -> ro-extracted (#1268)
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
@@ -42,8 +45,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
 - has study region, has considered region, has interacting region, has study region (#1441)
-- bearer of -> has characteristic (#1268)
-- ro-module -> ro-extracted (#1268)
+- synthetic hydrogen, fossil hydrogen (#1442)
 
 ### Removed
 
