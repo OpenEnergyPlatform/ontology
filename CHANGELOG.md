@@ -25,7 +25,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sustainable biofuel, non-sustainable biofuel (#1409)
 - source category (#1428)
 - scenario bundle (#1429)
-- heat recovery steam generator, gas turbine process, combined cycle electricity generation, steam power unit, combined cycle power plant, heat recovery steam unit (#1362)
+- gas turbine process, combined cycle electricity generation, steam power unit (#1362)
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
