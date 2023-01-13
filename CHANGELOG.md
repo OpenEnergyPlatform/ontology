@@ -31,6 +31,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has spatial region (#1441)
 - (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
+- RED sector individuals (#1446)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
@@ -46,6 +47,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - net capacity factor (#1435)
 - has study region, has considered region, has interacting region, has study region (#1441)
 - synthetic hydrogen, fossil hydrogen (#1442)
+- renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 
 ### Removed
 
