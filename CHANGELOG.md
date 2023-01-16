@@ -29,7 +29,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
 - renewable power unit, renewable power plant (#1437)
+- has spatial region (#1441)
+- (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
+- RED sector individuals (#1446)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
@@ -44,6 +47,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
 - yield profile, geothermal power unit, marine current/tidal/wave energy converting unit, solar power unit, wind energy converting unit (#1437)
+- has study region, has considered region, has interacting region, has study region (#1441)
+- synthetic hydrogen, fossil hydrogen (#1442)
+- renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
+- radiation (#1447)
 
 ### Removed
 
