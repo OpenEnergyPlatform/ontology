@@ -48,6 +48,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has study region, has considered region, has interacting region, has study region (#1441)
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
+- radiation (#1447)
 
 ### Removed
 
