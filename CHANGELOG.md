@@ -30,9 +30,16 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
+- renewable power unit, renewable power plant (#1437)
+- CRF sector individuals 2.A.2, 2.A.3, 2.A.4, 2.B.1 to 2.B.10, 2.C.2 to 2.C.7, 2.E.1 to 2.E.5, 2.F.1 to 2.F.6 and 2.G.1 to 2.G.4 (#1440)
+- has spatial region (#1441)
+- (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
+- RED sector individuals (#1446)
 
 ### Changed
+- bearer of -> has characteristic (#1268)
+- ro-module -> ro-extracted (#1268)
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
@@ -43,8 +50,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has economic value, economic value of (#1422)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
-- bearer of -> has characteristic (#1268)
-- ro-module -> ro-extracted (#1268)
+- yield profile, geothermal power unit, marine current/tidal/wave energy converting unit, solar power unit, wind energy converting unit (#1437)
+- CRF sector individual 2.C.1 (#1440)
+- has study region, has considered region, has interacting region, has study region (#1441)
+- synthetic hydrogen, fossil hydrogen (#1442)
+- renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
+- radiation (#1447)
 
 ### Removed
 
