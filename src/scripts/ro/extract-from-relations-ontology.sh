@@ -12,7 +12,7 @@ robot remove --input ../../ontology/imports/ro-extracted.owl --term oboInOwl:inS
 robot remove --input ../../ontology/imports/ro-extracted.owl --term BFO:0000002 --select "self descendants" --select "<http://purl.obolibrary.org/obo/BFO_*>"   --axioms subclass --signature true --exclude-term BFO:0000040 --preserve-structure false --output ../../ontology/imports/ro-extracted.owl
 # Remove annotations from BFO classes
 # This is kaputt, makes the annotations appear twice. 
-# robot remove --input ../../ontology/imports/ro-extracted.owl --term BFO:0000002 --select "self descendants" --exclude-term BFO:0000040 --exclude-term RO:0002577 --axioms annotation --signature true --preserve-structure false --output ../../ontology/imports/ro-extracted.owl
+# robot remove --input ../../ontology/imports/ro-extracted.owl --term BFO:0000002 --term BFO:0000004 --term BFO:0000040 --select "self"  --exclude-term RO:0002577 --exclude-term BFO:0000050 --axioms annotation --signature true --preserve-structure false --output ../../ontology/imports/ro-extracted.owl
 
 rm ro-full-download.owl
 rm ro-extracted-w-hierarchy.owl
