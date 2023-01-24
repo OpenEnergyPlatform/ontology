@@ -37,6 +37,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
 - RED sector individuals (#1446)
+- power-only generating unit (#1456)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
