@@ -1920,35 +1920,9 @@ Class: OEO_00000139
     
 Class: OEO_00000143
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a supply grid that distributes electrical energy / electricity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/138
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/165",
-        rdfs:label "electricity grid"
-    
-    SubClassOf: 
-        OEO_00000200,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
-        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 OEO_00000253
-    
     
 Class: OEO_00000144
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid component is a grid component that is part of an electricity grid."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
-        rdfs:label "electricity grid component"
-    
-    EquivalentTo: 
-        OEO_00020006
-         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143)
-    
-    SubClassOf: 
-        OEO_00020006
-    
     
 Class: OEO_00000146
 
@@ -2607,30 +2581,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
 Class: OEO_00000253
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power line is a grid component link that is an uninterrupted transmission system between two nodes in an electricity grid."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385",
-        rdfs:label "power line"@en
-    
-    SubClassOf: 
-        OEO_00000255,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
-    
     
 Class: OEO_00000255
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component link is a grid component that serves as a connection between two other grid components."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"@en,
-        rdfs:label "grid component link"
-    
-    SubClassOf: 
-        OEO_00020006
-    
     DisjointWith: 
         OEO_00000296
     
@@ -3338,6 +3291,7 @@ Class: OEO_00000387
         <http://purl.obolibrary.org/obo/IAO_0000233> "change produces energy and uses energy axioms to 'has energy output' and 'has energy input':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
 add axiom to 'has part some solar radiation receiving surface'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1074
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1228
@@ -6644,16 +6598,6 @@ Class: OEO_00010385
     
 Class: OEO_00010386
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generation function is an energy transformation function to transform other types of energy to electrical energy.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "electrical energy generation function",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1438
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1445",
-        rdfs:label "electricity generation function"@en
-    
-    SubClassOf: 
-        OEO_00010385
-    
     
 Class: OEO_00010387
 
@@ -9071,36 +9015,60 @@ Class: OEO_00240010
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is a power generating unit that produces electrical energy and thermal energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "co-generating power unit"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generating unit is an energy transformation unit that has both the function to produce thermal energy and the function to produce electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "co-generating power unit",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
 
 change produces energy axioms to 'has energy output':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+New function-based definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "combined heat and power generating unit"
     
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some 
+            (OEO_00010386
+             and OEO_00010387))
+    
     SubClassOf: 
-        OEO_00000334,
+        OEO_00020102,
         OEO_00010235 some OEO_00000139,
         OEO_00010235 some OEO_00000207,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000210 or OEO_00140102),
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009,
+        <http://purl.obolibrary.org/obo/RO_0000085> some 
+            (OEO_00010386
+             and OEO_00010387)
     
     
 Class: OEO_00240011
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power plant (CHPP) is a power plant that has combined heat and power generating units as parts."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CHPP"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power plant (CHPP) is an energy transformation unit that consists of combined heat and power generating units, a grid component feeding electric energy into an electricity grid, and a grid component feeding thermal energy into a heating grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CHPP",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
+
+change as a subclass of energy transformation unit:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "combined heat and power plant"
     
     SubClassOf: 
-        OEO_00000031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
     
     
 Class: OEO_00240012
@@ -9492,6 +9460,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
         OEO_00140104
     
     
+Class: OEO_00310008
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generating unit is an energy transformation unit that has the function to produce thermal energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "heat generating unit"
+    
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010387)
+    
+    SubClassOf: 
+        OEO_00020102,
+        OEO_00010235 some OEO_00000207,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
+    
+    
 Class: OEO_00310009
 
     Annotations: 
@@ -9518,6 +9505,42 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1432",
         OEO_00140102
     
     
+Class: OEO_00310011
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat plant is an energy transformation unit consisting of heat generating units and a grid component that feeds thermal energy into a heating grid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "heat plant"
+    
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310008)
+    
+    SubClassOf: 
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310008,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
+    
+    
+Class: OEO_00310012
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat transfer unit is a heat generating unit that contains a heat exchanger and not a heater.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "heat transfer unit"
+    
+    SubClassOf: 
+        OEO_00310008,
+        (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000210))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140102)
+    
+    
 Class: OEO_00310013
 
     Annotations: 
@@ -9530,6 +9553,65 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1432",
     SubClassOf: 
         OEO_00000210,
         OEO_00000503 some OEO_00140116
+    
+    
+Class: OEO_00310014
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion-based heater is a heater that increases the thermal energy using combustion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "combustion-based heater"
+    
+    SubClassOf: 
+        OEO_00000210,
+        OEO_00010234 some OEO_00000007,
+        <http://purl.obolibrary.org/obo/RO_0000056> some <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010249>
+    
+    
+Class: OEO_00310015
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical heater is a heater that increases the thermal energy using electric energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "electrical heater"
+    
+    SubClassOf: 
+        OEO_00000210,
+        OEO_00010234 some OEO_00000139
+    
+    
+Class: OEO_00310017
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal heat unit is a heat transfer unit that uses geothermal energy as source.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "geothermal heat unit"
+    
+    SubClassOf: 
+        OEO_00310012,
+        OEO_00010234 some OEO_00000191,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020059
+    
+    
+Class: OEO_00310018
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal heat plant is a heat plant that has geothermal heat units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "geothermal heat plant"
+    
+    SubClassOf: 
+        OEO_00310011,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310017,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020059
     
     
 Class: OEO_00310021
@@ -9782,6 +9864,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1363",
     SubClassOf: 
         OEO_00310043,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00310041
+    
+    
+Class: OEO_00310047
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:comment "A solar heat plant is a heat plant that has solar heat units as parts.",
+        rdfs:label "solar heat plant"
+    
+    SubClassOf: 
+        OEO_00310011,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310048,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020047
+    
+    
+Class: OEO_00310048
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar heat unit is a heat generating unit that has a solar collector.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "solar heat unit"
+    
+    SubClassOf: 
+        OEO_00310008,
+        OEO_00010234 some OEO_00000384,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000387,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020047
     
     
 Class: OEO_00320004
