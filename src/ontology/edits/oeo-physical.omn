@@ -948,6 +948,10 @@ Class: OEO_00000017
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas fired power unit is a power generating unit using gas as fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "gas power unit",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'gas power unit' as alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362/",
         rdfs:label "gas fired power unit"
     
     SubClassOf: 
@@ -2142,7 +2146,7 @@ Class: OEO_00000185
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine is a turbine that converts chemical energy into rotational energy using a continuous internal combustion process. Hence it is also called combustion turbine."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine is a turbine that participates in a gas turbine process. It is also called combustion turbine.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "combustion turbine",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/299
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
@@ -2167,7 +2171,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00010235 some OEO_00240000
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00310027
     
     
 Class: OEO_00000186
@@ -9638,6 +9642,60 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1432",
     
     SubClassOf: 
         OEO_00000387
+    
+    
+Class: OEO_00310025
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined cycle electricity generation process is a fuel-powered electricity generation process in which a gas turbine process is followed by an steam-electric process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "combined cycle electricity generation",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362",
+        rdfs:label "combined cycle electricity generation process"
+    
+    SubClassOf: 
+        OEO_00050001,
+        OEO_00010234 some OEO_00000139,
+        OEO_00010234 some OEO_00240000,
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00050020,
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00310027
+    
+    
+Class: OEO_00310027
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas turbine process is an energy transformation that converts chemical energy into rotational energy using a continous internal combustion process. A gas turbine is participating in a gas turbine process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362",
+        rdfs:label "gas turbine process"
+    
+    SubClassOf: 
+        OEO_00020003,
+        OEO_00000532 some OEO_00000099,
+        OEO_00010234 some OEO_00000007,
+        OEO_00010235 some OEO_00240000,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000185
+    
+    
+Class: OEO_00310028
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A steam power unit is a power generating unit that only has a steam turbine as turbine.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362",
+        rdfs:label "steam power unit"
+    
+    SubClassOf: 
+        OEO_00000334,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000396)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> only 
+            (OEO_00000396 or (not (OEO_00000425)))),
+        OEO_00000503 some OEO_00110001,
+        OEO_00010234 some OEO_00000007
     
     
 Class: OEO_00310032
