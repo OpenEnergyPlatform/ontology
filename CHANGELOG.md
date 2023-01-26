@@ -29,6 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - scenario bundle (#1429)
 - gas turbine process, combined cycle electricity generation, steam power unit (#1362)
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
+- explorative and target driven scenario (#1459)
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
 - renewable power unit, renewable power plant (#1437)
@@ -37,6 +38,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
 - RED sector individuals (#1446)
+- direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
 - power-only generating unit (#1456)
 
 ### Changed
