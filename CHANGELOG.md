@@ -60,7 +60,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
-- KSG sector division, EU emission sector division, GovReg sector division, Renewable Energy Directive sector division (#1462)
+- NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 
 ### Removed
 
@@ -83,7 +83,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - vehicle operational mode (#1314)
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 - fuel supply system (#1316)
-- NC/BR sector division; NC/BR sector individuals (#1317, #1462)
+- NC/BR sector division; NC/BR sector individuals (#1317)
 - is sector of, sectoral energy consumption, sectoral emission (#1321)
 - data file format, and subclasses (#1326)
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
