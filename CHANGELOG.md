@@ -93,6 +93,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - refinery gas, petroleum coke (#1351)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
+- energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
 - github: update the description of the readme file (#1292)
