@@ -101,6 +101,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002410>
 
     
+ObjectProperty: OEO_00000501
+
+    
 ObjectProperty: OEO_00000503
 
     
@@ -778,6 +781,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
     
     SubClassOf: 
         OEO_00020063
+    
+    
+Class: OEO_00010130
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU emission sector division is used in the EU climate policy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+        rdfs:label "EU emission sector division"@en
+    
+    SubClassOf: 
+        OEO_00000368,
+        OEO_00000501 value OEO_00010129
     
     
 Class: OEO_00010136
@@ -3089,32 +3106,14 @@ Individual: OEO_00010129
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses the EU emission sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses an EU emission sector division.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         rdfs:label "EU climate policy"@en
     
     Types: 
-        OEO_00140150
-    
-    Facts:  
-     OEO_00000503  OEO_00010130
-    
-    
-Individual: OEO_00010130
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector division is used in the EU climate policy.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
-        rdfs:label "EU emission sector division"@en
-    
-    Types: 
-        OEO_00000368
-    
-    Facts:  
-     OEO_00000504  OEO_00010129
+        OEO_00140150,
+        OEO_00000503 some OEO_00010130
     
     
 Individual: OEO_00010131
@@ -3127,10 +3126,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         rdfs:label "EU emission sector: ETS"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     
 Individual: OEO_00010132
@@ -3143,10 +3140,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         rdfs:label "EU emission sector: ETS stationary"@en
     
     Types: 
-        OEO_00000367
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     Facts:  
-     OEO_00000504  OEO_00010130,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010131
     
     
@@ -3160,10 +3157,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         rdfs:label "EU emission sector: ETS aviation"@en
     
     Types: 
-        OEO_00000422
+        OEO_00000422,
+        OEO_00000504 some OEO_00010403
     
     Facts:  
-     OEO_00000504  OEO_00010130,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010131
     
     
@@ -3177,10 +3174,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         rdfs:label "EU emission sector: effort sharing"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     
 Individual: OEO_00010135
@@ -3193,10 +3188,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         rdfs:label "EU emission sector: LULUCF"@en
     
     Types: 
-        OEO_00010035
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00010035,
+        OEO_00000504 some OEO_00010403
     
     SameAs: 
         OEO_00010048
@@ -5233,6 +5226,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446",
     
 DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
+
+DifferentIndividuals: 
+    OEO_00010131,OEO_00010134,OEO_00010135
 
 DifferentIndividuals: 
     OEO_00010305,OEO_00010306,OEO_00010307,OEO_00010308,OEO_00010309,OEO_00010310,OEO_00010311
