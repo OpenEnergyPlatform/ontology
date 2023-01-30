@@ -37,7 +37,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
 - RED sector individuals (#1446)
-- direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface #1448
+- direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
+- CRF-based sector division, EU legislation sector division (#1462)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
@@ -59,6 +60,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
+- KSG sector division, EU emission sector division, GovReg sector division, Renewable Energy Directive sector division (#1462)
 
 ### Removed
 
@@ -81,7 +83,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - vehicle operational mode (#1314)
 - gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
 - fuel supply system (#1316)
-- NC/BR sector division; NC/BR sector individuals (#1317)
+- NC/BR sector division; NC/BR sector individuals (#1317, #1462)
 - is sector of, sectoral energy consumption, sectoral emission (#1321)
 - data file format, and subclasses (#1326)
 - mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
