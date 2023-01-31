@@ -61,6 +61,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
+- energy balance, energy balance collection, energy balance calculation method, energy balance sector division, empirical/synthetic/test data set (#1463)
 
 ### Removed
 
@@ -93,7 +94,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - refinery gas, petroleum coke (#1351)
 - chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
-- energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
 - github: update the description of the readme file (#1292)
