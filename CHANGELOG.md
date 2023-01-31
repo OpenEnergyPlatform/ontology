@@ -40,6 +40,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - RED sector individuals (#1446)
 - direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
 - power-only generating unit (#1456)
+- energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
@@ -61,6 +62,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
+- german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 
 ### Removed
 
