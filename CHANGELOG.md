@@ -41,6 +41,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
 - power-only generating unit (#1456)
 - CRF-based sector division, EU legislation sector division (#1462)
+- energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
@@ -63,6 +64,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
+- german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 
 ### Removed
 
