@@ -4,26 +4,26 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.X.X] - 20XX-XX-XX
+## [1.13.0] - 2023-02-01
 
 ### Added
 - oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
 - tank, fuel tank, volume (#1356)
+- heat generating unit, heat plant, heat transfer unit, solar heat plant, solar heat unit (#1360)
+- combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant (#1360)
+- thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
+- sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
+- phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
 - filling station, hydrogen station, hydrogen transport (#1357)
 - OEP user, qualitist, quantitist, apinist (#1383)
 - sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
 - vehicle-kilometre (#1388)
 - electricity demand, fuel demand (#1389)
 - based on (#1391)
-- thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
-- sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
-- phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
 - bidirectional vehicle charging station (#1393)
 - charging (#1394)
 - non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
 - ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
-- heat generating unit, heat plant, heat transfer unit, solar heat plant, solar heat unit (#1360)
-- combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant (#1360)
 - sustainable biofuel, non-sustainable biofuel (#1409)
 - source category (#1428)
 - scenario bundle (#1429)
@@ -45,27 +45,25 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - bearer of -> has characteristic (#1268)
 - ro-module -> ro-extracted (#1268)
+- power plant, power generating unit, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
 - internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+- gas turbine, gas power unit (#1362)
 - model descriptor (#1387)
 - passenger-kilometre, ton-kilometre (#1388)
 - SMES -> superconducting magnetic energy storage (#1396)
-- power plant, power generating unit, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
 - biofuel; competency questions Q1 and Q2 (#1409)
 - global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
 - has economic value, economic value of (#1422)
-- gas turbine, gas power unit (#1362)
 - solar thermal collector (#1432)
 - net capacity factor (#1435)
 - yield profile, geothermal power unit, marine current/tidal/wave energy converting unit, solar power unit, wind energy converting unit (#1437)
 - CRF sector individual 2.C.1 (#1440)
 - has study region, has considered region, has interacting region, has study region (#1441)
 - synthetic hydrogen, fossil hydrogen (#1442)
-- renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
+- renewable_energy_directive_sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
 - german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 - replaced owl:equivalentClass with 'may be identical to' in annotation properties
-
-### Removed
 
 
 ## [1.12.0] - 2022-11-02
