@@ -60,7 +60,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF sector individual 2.C.1 (#1440)
 - has study region, has considered region, has interacting region, has study region (#1441)
 - synthetic hydrogen, fossil hydrogen (#1442)
-- renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
+- renewable_energy_directive_sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
 - german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 - replaced owl:equivalentClass with 'may be identical to' in annotation properties
