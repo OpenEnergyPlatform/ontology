@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.X.X] - 20XX-XX-XX
+## [1.13.0] - 2023-02-01
 
 ### Added
 - oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
@@ -64,8 +64,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - radiation (#1447)
 - german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 - replaced owl:equivalentClass with 'may be identical to' in annotation properties
-
-### Removed
 
 
 ## [1.12.0] - 2022-11-02
