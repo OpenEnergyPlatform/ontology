@@ -2,7 +2,7 @@
 
 ### Prerequisites
 
-- [Git](https://git-scm.com/)
+- [Git](https://git-scm.com/) for version management. [Git How To](https://githowto.com/) provides and introduction into working with Git. Also there is a helpful [Git Cheat Sheet]().
 - please make sure you changed your protégé settings to [numerical identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers) and got a personal ID to add new classes.
 
 ### Contribution of OEO content
