@@ -61,10 +61,7 @@ AnnotationProperty: dc:contributor
     
 AnnotationProperty: dc:description
 
-    
-AnnotationProperty: owl:equivalentClass
 
-    
 AnnotationProperty: rdfs:comment
 
     
@@ -105,6 +102,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
 ObjectProperty: OEO_00000503
+
+    
+ObjectProperty: OEO_00000504
 
     
 ObjectProperty: OEO_00000511
@@ -170,9 +170,9 @@ ObjectProperty: OEO_00000516
 ObjectProperty: OEO_00000517
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfill."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a transformation and the constraints it has to fulfil."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/618
-pull request:: https://github.com/OpenEnergyPlatform/ontology/pull/716",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/716",
         rdfs:label "has constraint"
     
     SubPropertyOf: 
@@ -191,8 +191,150 @@ ObjectProperty: OEO_00000522
         OEO_00020011
     
     
+ObjectProperty: OEO_00010378
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between an information content entity and a spatial region that describes that the information content entity is about a spatial region.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
+        rdfs:label "has spatial region"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
 ObjectProperty: OEO_00020056
 
+    
+ObjectProperty: OEO_00020220
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a study region to indicate the study region of a scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
+        rdfs:label "has study region"
+    
+    SubPropertyOf: 
+        OEO_00010378
+    
+    Domain: 
+        OEO_00000364
+    
+    Range: 
+        OEO_00020032
+    
+    
+ObjectProperty: OEO_00020221
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a considered region to indicated a considered region of a scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
+        rdfs:label "has considered region"
+    
+    SubPropertyOf: 
+        OEO_00010378
+    
+    Domain: 
+        OEO_00000364
+    
+    Range: 
+        OEO_00020035
+    
+    
+ObjectProperty: OEO_00020222
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and an interacting region to indicate an interacting region of a scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
+        rdfs:label "has interacting region"
+    
+    SubPropertyOf: 
+        OEO_00010378
+    
+    Domain: 
+        OEO_00000364
+    
+    Range: 
+        OEO_00020036
+    
+    
+ObjectProperty: OEO_00020223
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a study subregion to indicate a study subregion of a scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
+        rdfs:label "has study subregion"
+    
+    SubPropertyOf: 
+        OEO_00010378
+    
+    Domain: 
+        OEO_00000364
+    
+    Range: 
+        OEO_00020034
+    
+    
+ObjectProperty: OEO_00020224
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a scenario year to indicate the scenario year of a scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347",
+        rdfs:label "has scenario year"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    Domain: 
+        OEO_00000364
+    
+    Range: 
+        OEO_00020097
+    
+    
+ObjectProperty: OEO_00020226
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario study or projection and a scenario, that indicates the scenario that provides the assumptions on which the respective scenario study or projection is based on.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
+        rdfs:label "is based on"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    Domain: 
+        OEO_00010262 or <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
+    
+    Range: 
+        OEO_00000364
+    
     
 ObjectProperty: OEO_00040010
 
@@ -282,12 +424,15 @@ Class: <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario study is a study that investigates one or more scenarios.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1058
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131",
-        rdfs:label "scenario study"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131
+add based on axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
+        rdfs:label "scenario study"
     
     SubClassOf: 
         OEO_00020011,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000364
+        OEO_00020226 some OEO_00000364
     
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -389,6 +534,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000046>
         <http://purl.obolibrary.org/obo/BFO_0000141>
     
     
+Class: OEO_00000031
+
+    
 Class: OEO_00000048
 
     Annotations: 
@@ -483,7 +631,7 @@ Class: OEO_00000104
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fullfilled within a calculation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fulfilled within a calculation."@en,
         rdfs:label "constraint"
     
     SubClassOf: 
@@ -506,17 +654,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/272",
     
 Class: OEO_00000119
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A data descriptor is an information content entity that contains additional information about some data."^^xsd:string,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/612
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/724"
-        rdfs:label "data descriptor"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 Class: OEO_00000120
 
@@ -596,18 +733,6 @@ source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en,
     
 Class: OEO_00000149
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is optained from observations in the real world."@en,
-        rdfs:label "empirical dataset"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000100>
-    
-    DisjointWith: 
-        OEO_00000403
-    
     
 Class: OEO_00000161
 
@@ -657,7 +782,7 @@ Class: OEO_00000202
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A GUI (Graphical user interface)  is a software interface allowing users to communicate with a software application through a graphical window.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A GUI (Graphical user interface) is a software interface allowing users to communicate with a software application through a graphical window.",
         rdfs:label "GUI"
     
     SubClassOf: 
@@ -790,10 +915,13 @@ Class: OEO_00000313
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An optimisation is a model calculation with the goal to find a best choice or result for at least one variable or function in the model."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "optimization",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'has participant' axiom:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
         rdfs:label "optimisation"
     
     SubClassOf: 
-        OEO_00000275
+        OEO_00000275,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000314
     
     DisjointWith: 
         OEO_00000370
@@ -814,6 +942,9 @@ Class: OEO_00000314
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000304
     
+    
+Class: OEO_00000323
+
     
 Class: OEO_00000327
 
@@ -843,7 +974,7 @@ Class: OEO_00000339
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000112> "Settings for a random number generator."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A program parameter is a variable in a software."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "Rework defintion and change parent class:
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Rework definition and change parent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1199
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1274",
         rdfs:label "program parameter"
@@ -910,15 +1041,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
 Class: OEO_00000367
 
     
+Class: OEO_00000368
+
+    
 Class: OEO_00000370
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation is a model calculation that simulates a process or system behaviour from the real world."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Add 'has participant' axiom:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
         rdfs:label "simulation"
     
     SubClassOf: 
-        OEO_00000275
+        OEO_00000275,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000371
     
     DisjointWith: 
         OEO_00000313
@@ -1002,25 +1139,15 @@ Class: OEO_00000392
     
 Class: OEO_00000403
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealised model year."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is obtained by artificially creating data items. It is constructed to be an estimation of a real world dataset."@en,
-        rdfs:label "synthetic dataset"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000100>
-    
-    DisjointWith: 
-        OEO_00000149
-    
     
 Class: OEO_00000408
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A test dataset is a data set used for testing."^^xsd:string,
-        rdfs:label "test dataset"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A test data set is a data set used for testing."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Harmonise label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "test data set"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000100>
@@ -1157,18 +1284,51 @@ Class: OEO_00010262
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario projection is an intentional process in which output (endogenous) data of interest are quantified for future points in time using one or more model calculation based on a scenario.",
-        <http://purl.obolibrary.org/obo/IAO_0000116> "A scenario projection is an intentional process (with human participation): A scenario is either created or selected, its assumptions are translated into data sets. These datasets are quantified and serve as inputs to a model calculation which is applied to quantitatively project one or more a variables of interest into the future.
+        <http://purl.obolibrary.org/obo/IAO_0000116> "A scenario projection is an intentional process (with human participation): A scenario is either created or selected, its assumptions are translated into data sets. These datasets are quantified and serve as inputs to a model calculation which is applied to quantitatively project one or more variables of interest into the future.
 (Intentional: a research question is basis for the projection to be done)",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/970
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1217",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1217
+add based on axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
         rdfs:label "scenario projection"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
+        OEO_00020226 some OEO_00000364,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000275,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000364,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00020013
     
+    
+Class: OEO_00010296
+
+    
+Class: OEO_00010362
+
+    
+Class: OEO_00010404
+
+    
+Class: OEO_00010405
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance collection is a data set of energy balances for various time steps and/or temporal regions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "energy balance collection"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010404,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030033,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00010406
+
+    
+Class: OEO_00010407
+
     
 Class: OEO_00020011
 
@@ -1202,12 +1362,19 @@ Class: OEO_00020016
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model descriptor is an information content entity that contains information about some model."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577
+
+Add SubclassOf axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1386
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1387",
         rdfs:label "model descriptor"@en
     
     EquivalentTo: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
          and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000274)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: OEO_00020017
@@ -1393,6 +1560,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
         <http://purl.obolibrary.org/obo/BFO_0000006>
     
     
+Class: OEO_00020039
+
+    
 Class: OEO_00020072
 
     Annotations: 
@@ -1573,6 +1743,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020097
     
     
+Class: OEO_00020166
+
+    
+Class: OEO_00020227
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario bundle is an information content entity that connects information about a scenario study and the associated scenario projections on the OEP via the OEKG.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1343
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1429",
+        rdfs:label "scenario bundle"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
+    
+    
+Class: OEO_00020247
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A target driven scenario is a scenario that contains certain target constraints/ statements that in a possible future shall be realized. The path how the targets will be met is not predefined in the scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1110
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459",
+        rdfs:label "target driven scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00020248
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An explorative scenario is a scenario that contains certain constraints / statements regarding measures that are taken in the near future / today to explore where these measures will lead to in a later future. The later future is not predefined in the scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1110
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459",
+        rdfs:label "explorative scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
 Class: OEO_00030007
 
     Annotations: 
@@ -1639,43 +1849,9 @@ Class: OEO_00030032
     
 Class: OEO_00030033
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time step is a one-dimensional temporal region that has a start time and an endtime and thus a finite duration.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
-        rdfs:label "time step"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000038>,
-        ((<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030031)
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030032)) or ((<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030035)
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140043)
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140044))
-    
     
 Class: OEO_00030034
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time series is a data set that references to a set of time steps or zero-dimensional temporal regions.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538",
-        rdfs:label "time series",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/IAO_0000584"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000100>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030031,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030032,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00030035,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some 
-            (OEO_00030033 or <http://purl.obolibrary.org/obo/BFO_0000148>)
-    
     
 Class: OEO_00030035
 
@@ -1734,29 +1910,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
     
 Class: OEO_00140043
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a zero-dimensional temporal region that is used to describe a time step.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
-        rdfs:label "time stamp"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000148>
-    
     
 Class: OEO_00140044
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp alignment is a data descriptor that indicates the position of a time stamp in a time step.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570",
-        rdfs:label "time stamp alignment"@en
-    
-    SubClassOf: 
-        OEO_00000119
-    
     
 Class: OEO_00140068
 
@@ -1811,11 +1967,17 @@ Class: OEO_00140138
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000233> "A generation time series is a time series that describes the specific electricity generation of a particular power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793
+
+Add 'is about' axiom:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
         rdfs:label "generation time series"@en
     
     SubClassOf: 
-        OEO_00030034
+        OEO_00030034,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00240014
+             and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000031))
     
     
 Class: OEO_00140139
@@ -1824,11 +1986,16 @@ Class: OEO_00140139
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A yield profile is a generation time series of a particular renewable power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793
+
+Add 'is about' axiom:
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1423
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
         rdfs:label "yield profile"@en
     
     SubClassOf: 
-        OEO_00140138
+        OEO_00140138,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010362
     
     
 Class: OEO_00140161
@@ -1837,12 +2004,17 @@ Class: OEO_00140161
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "Cooperative programming is the process of two or more people working on program code together at the same time (according to a specified routine).",
         <http://purl.obolibrary.org/obo/IAO_0000118> "collaborative programming",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/254
-https://github.com/OpenEnergyPlatform/ontology/pull/808",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/808
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         rdfs:label "cooperative programming"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> min 2 OEO_00000323
     
     
 Class: OEO_00140167
@@ -1874,10 +2046,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
         OEO_00000078
     
     
+Class: OEO_00240014
+
+    
 Class: OEO_00280000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A file format is a data format that describes how data is stuctured in a file.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A file format is a data format that describes how data is structured in a file.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1145
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326",
         rdfs:label "data file format"
@@ -1891,11 +2066,17 @@ Class: OEO_00280001
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A text file format is a file format that is structured as a sequence of lines of electronic text.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1145
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326
+
+Add DisjointWith axiom:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
         rdfs:label "text file format"
     
     SubClassOf: 
         OEO_00280000
+    
+    DisjointWith: 
+        OEO_00280004
     
     
 Class: OEO_00280002
@@ -1929,11 +2110,17 @@ Class: OEO_00280004
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A binary file format is a file format that is not a text format.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1145
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326
+
+Add DisjointWith axiom:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
         rdfs:label "binary file format"
     
     SubClassOf: 
         OEO_00280000
+    
+    DisjointWith: 
+        OEO_00280001
     
     
 Class: OEO_00280005
@@ -1941,11 +2128,14 @@ Class: OEO_00280005
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A source code file format is a text file format that is source code in a programming language.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Issue: https://github.com/OpenEnergyPlatform/ontology/issues/1145
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326
+
+Make subclass of 'text file format`:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
         rdfs:label "source code file format"
     
     SubClassOf: 
-        OEO_00280000
+        OEO_00280001
     
     
 Individual: OEO_00000049

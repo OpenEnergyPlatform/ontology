@@ -1,0 +1,64 @@
+name: Post Release Scripts
+# on:
+#   workflow_dispatch: {}
+#   push:
+#     branches:
+#       - 'feature-1020-export-of-existing-terms-and-definitions'
+# First we test the setup, to see if the files are building correctly once that is checked we introduce the wiki upload each release.
+on:
+ push:
+   tags:
+     - "v*"
+   branches:
+     - 'feature-1020-export-of-existing-terms-and-definitions'
+jobs:
+  exportTermsDefinitions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+          architecture: x64
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - name: install python dependencies
+        run: pip install -r src/scripts/requirements.txt
+      - name: setup robot
+        run: |
+          wget https://github.com/ontodev/robot/releases/download/v1.9.0/robot.jar -O src/robot.jar
+      - name: Build ETD xlsx
+        run: |
+          java -jar src/robot.jar merge --input "src/ontology/oeo.omn" \
+            --input "src/ontology/edits/oeo-model.omn" \
+            --input "src/ontology/edits/oeo-physical.omn" \
+            --input "src/ontology/edits/oeo-shared.omn" \
+            --input "src/ontology/edits/oeo-social.omn" \
+            --include-annotations true \
+          export  --header "ID|LABEL|definition" \
+                  --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
+                  --sort "LABEL" \
+                  --export "src/scripts/etd/etd.xlsx"
+      - name: Build ETD md
+        run: |
+          python src/scripts/etd/etd.py
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: existing-terms-and-definitions
+          path: src/scripts/etd/glossary
+      # - name: Checkout wiki
+      #   uses: actions/checkout@v2
+      #   with:
+      #     repository: ${{github.repository}}.wiki
+      #     path: wiki
+      # - name: Push list to wiki
+      #   run: |
+      #     cd wiki
+      #     cp -a ../src/scripts/etd/glossary/. .
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git add .
+      #     git diff-index --quiet HEAD || git commit -m "Add changes" && git push
