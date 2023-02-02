@@ -2,8 +2,8 @@
 
 ### Prerequisites
 
-- [Git](https://git-scm.com/) for version management. [Git How To](https://githowto.com/) provides and introduction into working with Git. Also there is a helpful [Git Cheat Sheet]().
-- please make sure you changed your protégé settings to [numerical identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers) and got a personal ID to add new classes.
+- [Git](https://git-scm.com/) for version management. [Git How To](https://githowto.com/) provides an introduction into working with Git. Also there is a helpful [Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf).
+- Please make sure you changed your Protégé settings to [numerical identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers) and got a personal ID to add new classes.
 
 ### Contribution of OEO content
 Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
