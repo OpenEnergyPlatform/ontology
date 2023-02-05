@@ -1,6 +1,6 @@
 # Download the RO
 curl -L http://purl.obolibrary.org/obo/ro.owl > ro-full-download.owl
-# Annotates all axioms with the source's version IRI if it exists, else with the ontology IRI (using prov:wasDerivedFrom) and overwrites the input with that change
+# Annotates all axioms with the source's version IRI if it exists, else with the ontology IRI (using prov:wasDerivedFrom) and overwrites the input with that change (https://github.com/OpenEnergyPlatform/ontology/issues/1179 was solved by this step)
 robot annotate --input ro-full-download.owl --annotate-derived-from true --output ro-full-download.owl
 # Extract the terms we want with hierarchy
 robot merge --input ro-full-download.owl extract --method MIREOT --lower-terms ro-extract-w-hierarchy.txt --intermediates all --output ro-extracted-w-hierarchy.owl
