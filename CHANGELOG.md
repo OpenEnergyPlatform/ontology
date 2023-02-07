@@ -29,6 +29,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - scenario bundle (#1429)
 - gas turbine process, combined cycle electricity generation, steam power unit (#1362)
 - rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
+- explorative and target driven scenario (#1459)
 - utilisation value (#1435)
 - amortisation time, economic life time (#1436)
 - renewable power unit, renewable power plant (#1437)
@@ -37,7 +38,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
 - energy transformation function and subclasses (#1445)
 - RED sector individuals (#1446)
-- direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface #1448
+- direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
+- power-only generating unit (#1456)
+- energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
 - bearer of -> has characteristic (#1268)
@@ -59,6 +62,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_ energy_ directive_ sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
+- german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 
 ### Removed
 

@@ -5407,42 +5407,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
     
 Class: OEO_00010210
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy use is the consumption of an energy carrier making use of the energy it carries.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "energy consumption",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
-
-Add alternative label:
-https://github.com/OpenEnergyPlatform/ontology/pull/1321",
-        rdfs:label "energy use"@en
-    
-    SubClassOf: 
-        OEO_00140039,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
-    
     DisjointWith: 
         OEO_00010211
     
     
 Class: OEO_00010211
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
-
-add 'has participant axiom':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        rdfs:label "non-energy use"@en
-    
-    SubClassOf: 
-        OEO_00140039,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
-    
     DisjointWith: 
         OEO_00010210
     
@@ -6097,16 +6067,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1295",
     
 Class: OEO_00010296
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary energy consumption calculation method is a methodology to calculate primary energy consumption.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306",
-        rdfs:label "primary energy consumption calculation method"@en
-    
-    SubClassOf: 
-        OEO_00020166,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00050018
-    
     
 Class: OEO_00010297
 
@@ -6473,6 +6433,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1409",
         OEO_00010336
     
     
+Class: OEO_00010362
+
+    
 Class: OEO_00010379
 
     Annotations: 
@@ -6590,12 +6553,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442",
     SubClassOf: 
         OEO_00000139
     
-    
-Class: OEO_00010385
-
-    
-Class: OEO_00010362
-
     
 Class: OEO_00010385
 
@@ -6746,6 +6703,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448",
     
     SubClassOf: 
         OEO_00020199
+    
+    
+Class: OEO_00010401
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-only generating unit is a power generating unit that has only the function to produce electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1439
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1456",
+        rdfs:label "power-only generating unit"@en
+    
+    EquivalentTo: 
+        OEO_00000334
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010386)
+         and (<http://purl.obolibrary.org/obo/RO_0000085> only 
+            (OEO_00010386 or (not (OEO_00010385))))
+    
+    SubClassOf: 
+        OEO_00000334
     
     
 Class: OEO_00020001
@@ -7953,32 +7928,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
     
 Class: OEO_00050018
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy consumption is an energy consumption value accounting for the total consumption of energy in a spatial region excluding the non-energetic use of fuels."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000116> "Primary energy consumption covers consumption of the energy sector itself, losses during transformation (for example, from oil or gas into electricity) and distribution of energy, and the final consumption by end users. It excludes energy carriers used for non-energy purposes (such as petroleum not used not for combustion but for producing plastics)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption excluding non-energy use of energy carriers."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
-https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Primary_energy_consumption"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
-
-make energy consumption value:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306"@en,
-        rdfs:label "primary energy consumption"@en
-    
-    SubClassOf: 
-        OEO_00240019,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
-        (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211))
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210)
-    
     
 Class: OEO_00050019
 
@@ -9304,17 +9253,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/997"@en,
     
 Class: OEO_00240019
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption value is an energy amount value that measures the energy consumption over a time span."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/916
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/997"@en,
-        rdfs:label "energy consumption value"
-    
-    SubClassOf: 
-        OEO_00050019,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030035
-    
     
 Class: OEO_00240026
 
