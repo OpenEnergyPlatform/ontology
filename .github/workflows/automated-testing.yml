@@ -33,3 +33,8 @@ jobs:
         run: |
           bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
           bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-files
+          path: build
