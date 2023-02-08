@@ -16,3 +16,7 @@ robot annotate --input ../../ontology/imports/iao-module.owl --annotation rdfs:c
 robot annotate --input ../../ontology/imports/iao-module.owl --annotate-derived-from true --annotate-defined-by true --output ../../ontology/imports/iao-module.owl
 # Annotate with new ontology information
 robot annotate --input ../../ontology/imports/iao-module.owl  --ontology-iri http://openenergy-platform.org/ontology/oeo/imports/iao-module.owl --version-iri http://openenergy-platform.org/ontology/oeo/dev/imports/iao-module.owl --output ../../ontology/imports/iao-module.owl
+
+rm iao-full-download.owl
+rm iao-extracted-domain.owl
+rm iao-module-temp.owl
