@@ -28,6 +28,12 @@ endef
 
 define replace_oms
 	sed -i -E "s/($(OEP_BASE)\/dev\/([a-zA-Z/\-]+)\.)omn/\1owl/m" $1
+	sed -i -E "s/($(OEP_BASE)\/releases\/$(VERSION)\/([a-zA-Z/\-]+)\.)omn/\1owl/m" $1
+endef
+
+define replace_owls
+	sed -i -E "s/($(OEP_BASE)\/dev\/([a-zA-Z/\-]+)\.)owl/\1omn/m" $1
+	sed -i -E "s/($(OEP_BASE)\/releases\/$(VERSION)\/([a-zA-Z/\-]+)\.)owl/\1omn/m" $1
 endef
 
 define translate_to_owl
@@ -36,13 +42,21 @@ define translate_to_owl
 	$(call replace_devs,$1)
 endef
 
+define translate_to_omn
+	$(ROBOT) convert --input $2 --output $1 --format omn
+	$(call replace_owls,$1)
+	$(call replace_devs,$1)
+endef
+
 .PHONY: all clean base merge directories
 
-all: base merge
+all: base merge closure
 
 base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
 
-merge: | $(VERSIONDIR)/oeo-full.owl
+merge: | $(VERSIONDIR)/oeo-full.omn
+
+closure: | $(VERSIONDIR)/oeo-closure.owl
 
 clean:
 	- $(RM) -r $(VERSIONDIR) $(ROBOT_PATH)
@@ -86,9 +100,13 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 	cp -a $< $@
 	$(call replace_devs,$@)
 
-$(VERSIONDIR)/oeo-full.omn : | base
-	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.omn $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
-	$(ROBOT) reason --input $@ --output $@
-$(VERSIONDIR)/oeo-full.owl : $(VERSIONDIR)/oeo-full.omn
-	$(call translate_to_owl,$@,$<)
-	$(call replace_omns,$@)
+$(VERSIONDIR)/oeo-full.owl : | base
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.owl $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(call replace_oms,$@)
+
+$(VERSIONDIR)/oeo-full.omn : $(VERSIONDIR)/oeo-full.owl
+	$(call translate_to_omn,$@,$<)
+	$(call replace_owls,$@)
+
+$(VERSIONDIR)/oeo-closure.owl : $(VERSIONDIR)/oeo-full.owl
+	$(ROBOT) reason --input $< --output $@
