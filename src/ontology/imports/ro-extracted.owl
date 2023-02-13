@@ -13,7 +13,7 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://openenergy-platform.org/ontology/oeo/imports/ro-extracted.owl">
         <owl:versionIRI rdf:resource="http://openenergy-platform.org/ontology/oeo/dev/imports/ro-extracted.owl"/>
-        <rdfs:comment>This file contains externally imported content from the Relations Ontology (RO) for import into the Open Energy Ontology (OEO). It is automatically extracted using ROBOT from the list of selected terms (ro-extract-w-hierarchy.txt, ro-extract-n-hierarchy.txt) located in the OEO-repository.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This file contains externally imported content from the Relations Ontology (RO) for import into the Open Energy Ontology (OEO). It is automatically extracted using ROBOT from the list of selected terms (ro-extract-w-hierarchy.txt, ro-extract-n-hierarchy.txt) located in the OEO-repository.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -108,14 +108,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000424 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000424">
-        <rdfs:label xml:lang="en">expand expression to</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000589 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000589">
@@ -161,7 +153,7 @@
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/RO_0040042">
         <obo:IAO_0000112>part-of is homeomorphic for independent continuants.</obo:IAO_0000112>
         <obo:IAO_0000115>R is homemorphic for C iff (1) there exists some x,y such that x R y, and x and y instantiate C and (2) for all x, if x is an instance of C, and there exists some y some such that x R y, then it follows that y is an instance of C.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-21T19:46:34Z</oboInOwl:creation_date>
         <rdfs:comment>R homeomorphic-for C expands to: C SubClassOf R only C. Additionally, for any class D that is disjoint with C, we can also expand to C DisjointWith R some D, D DisjointWith R some C.</rdfs:comment>
         <rdfs:label>is homeomorphic for</rdfs:label>
@@ -182,7 +174,7 @@
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0040042"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <owl:annotatedTarget>cjm</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -245,22 +237,8 @@
     <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
 
     <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym">
-        <rdfs:label>has_related_synonym</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has_related_synonym</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
-
-    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset">
-        <rdfs:label>in_subset</rdfs:label>
-    </owl:AnnotationProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget>in_subset</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -317,7 +295,7 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000111 xml:lang="en">is part of</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">my brain is part of my body (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)</obo:IAO_0000112>
@@ -337,10 +315,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000020"/>
         <obo:RO_0040042 rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <rdfs:label xml:lang="en">part of</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <rdfs:seeAlso rdf:resource="http://ontologydesignpatterns.org/wiki/Submissions:PartOf"/>
@@ -390,30 +364,6 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
         <owl:annotatedTarget rdf:resource="http://ontologydesignpatterns.org/wiki/Community:Parts_and_Collections"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
@@ -430,7 +380,7 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000111 xml:lang="en">has part</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">my body has part my brain (continuant parthood, two material entities)</obo:IAO_0000112>
         <obo:IAO_0000112 xml:lang="en">my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)</obo:IAO_0000112>
@@ -443,29 +393,8 @@ A continuant cannot be part of an occurrent: use &apos;participates in&apos;. An
 A continuant cannot have an occurrent as part: use &apos;participates in&apos;. An occurrent cannot have a continuant as part: use &apos;has participant&apos;. An immaterial entity cannot have a material entity as part: use &apos;location of&apos;. An independent continuant cannot have a specifically dependent continuant as part: use &apos;bearer of&apos;. A specifically dependent continuant cannot have an independent continuant as part: use &apos;inheres in&apos;.</obo:IAO_0000116>
         <obo:IAO_0000118 xml:lang="en">has_part</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
         <rdfs:label xml:lang="en">has part</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -497,15 +426,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">is preceded by</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">preceded_by</obo:IAO_0000118>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:preceded_by</dc:source>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">preceded by</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000062"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -515,15 +437,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
         <obo:IAO_0000111 xml:lang="en">precedes</obo:IAO_0000111>
         <obo:IAO_0000115 xml:lang="en">x precedes y if and only if the time point at which x ends is before or equivalent to the time point at which y starts. Formally: x precedes y iff ω(x) &lt;= α(y), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">precedes</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/BFO_0000063"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -653,15 +568,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000118 xml:lang="en">located_in</obo:IAO_0000118>
         <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
         <dc:source>http://www.obofoundry.org/ro/#OBO_REL:located_in</dc:source>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
         <rdfs:label xml:lang="en">located in</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_gp2term"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -671,16 +579,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">&lt;=</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>Primitive instance level timing relation between events</rdfs:comment>
         <rdfs:label xml:lang="en">before or simultaneous with</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002081"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -689,7 +590,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002082">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002081"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">t1 simultaneous_with t2 iff:=  t1 before_or_simultaneous_with t2  and not (t1 before t2)</rdfs:comment>
         <rdfs:label xml:lang="en">simultaneous with</rdfs:label>
     </owl:ObjectProperty>
@@ -697,12 +597,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002082"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
         <owl:annotatedTarget>David Osumi-Sutherland</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002082"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     
@@ -713,16 +607,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002083">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002081"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">t1 before t2 iff:=  t1 before_or_simulataneous_with t2  and not (t1 simultaeous_with t2)</rdfs:comment>
         <rdfs:label xml:lang="en">before</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002083"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -731,16 +618,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002086">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">X ends_after Y iff: end(Y) before_or_simultaneous_with end(X)</rdfs:comment>
         <rdfs:label xml:lang="en">ends after</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002086"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -749,15 +629,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002089">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">starts before</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002089"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -767,16 +640,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118>io</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">X starts_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (start(X) before_or_simultaneous_with end(Y))</rdfs:comment>
         <rdfs:label xml:lang="en">starts during</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002091"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -788,37 +654,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118>d</obo:IAO_0000118>
         <obo:IAO_0000118>during</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">X happens_during Y iff: (start(Y) before_or_simultaneous_with start(X)) AND (end(X) before_or_simultaneous_with end(Y))</rdfs:comment>
         <rdfs:label xml:lang="en">happens during</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002092"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002092"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002092"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002092"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -829,80 +667,9 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000117>David Osumi-Sutherland</obo:IAO_0000117>
         <obo:IAO_0000118>o</obo:IAO_0000118>
         <obo:IAO_0000118>overlaps</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment xml:lang="en">X ends_during Y iff: ((start(Y) before_or_simultaneous_with end(X)) AND end(X) before_or_simultaneous_with end(Y). </rdfs:comment>
         <rdfs:label xml:lang="en">ends during</rdfs:label>
     </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002093"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002131 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002131">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115>x overlaps y if and only if there exists some z such that x has part z and z part of y</obo:IAO_0000115>
-        <obo:IAO_0000424>http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)</obo:IAO_0000424>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:label xml:lang="en">overlaps</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000114"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>x overlaps y if and only if there exists some z such that x has part z and z part of y</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000424"/>
-        <owl:annotatedTarget>http://purl.obolibrary.org/obo/BFO_0000051 some (http://purl.obolibrary.org/obo/BFO_0000050 some ?Y)</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001900"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002131"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="en">overlaps</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
@@ -915,7 +682,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000119 rdf:resource="https://en.wikipedia.org/wiki/Allen%27s_interval_algebra"/>
         <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for relations between occurrents involving the relative timing of their starts and ends.</obo:IAO_0000232>
         <terms:source rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1</terms:source>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:comment>A relation that holds between two occurrents. This is a grouping relation that collects together all the Allen relations.</rdfs:comment>
         <rdfs:label xml:lang="en">temporally related to</rdfs:label>
     </owl:ObjectProperty>
@@ -937,25 +703,17 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://docs.google.com/document/d/1kBv1ep_9g3sTR-SD3jqzFqhuwo9TPNF-l-9fUDbO6rM/edit?pli=1</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0002223 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002223">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>inverse of starts with</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119>Allen</obo:IAO_0000119>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">starts</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -964,26 +722,18 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002223"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0002224 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002224">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000112>Every insulin receptor signaling pathway starts with the binding of a ligand to the insulin receptor</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>x starts with y if and only if x has part y and the time point at which x starts is equivalent to the time point at which y starts. Formally: α(y) = α(x) ∧ ω(y) &lt; ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>started by</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">starts with</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -992,24 +742,16 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002224"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0002229 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002229">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>inverse of ends with</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">ends</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1018,37 +760,23 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002229"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
     
 
 
     <!-- http://purl.obolibrary.org/obo/RO_0002230 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002230">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002222"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>x ends with y if and only if x has part y and the time point at which x ends is equivalent to the time point at which y ends. Formally: α(y) &gt; α(x) ∧ ω(y) = ω(x), where α is a function that maps a process to a start point, and ω is a function that maps a process to an end point.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>finished by</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">ends with</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002230"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
         <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002230"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     
@@ -1062,10 +790,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>p has input c iff: p is a process, c is a material entity, c is a participant in p, c is present at the start of p, and the state of c is modified during p.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>consumes</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has input</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1094,30 +818,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="en">has input</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
@@ -1133,10 +833,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <obo:IAO_0000115>p has output c iff c is a participant in p, c is present at the end of p, and c is not present in the same state at the beginning of p.</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>produces</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">has output</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1165,75 +861,8 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_annotation_extension"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_gocam"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
         <owl:annotatedTarget xml:lang="en">has output</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0002323 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002323">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <obo:IAO_0000115>A mereological relationship or a topological relationship</obo:IAO_0000115>
-        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships</obo:IAO_0000232>
-        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <rdfs:label xml:lang="en">mereotopologically related to</rdfs:label>
-    </owl:ObjectProperty>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>A mereological relationship or a topological relationship</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
-        <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000232"/>
-        <owl:annotatedTarget>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001900"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget xml:lang="en">mereotopologically related to</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     
@@ -1282,8 +911,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <obo:IAO_0000115>inverse of has input</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">input of</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1296,18 +923,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002352"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
         <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002352"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002352"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1326,8 +941,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002328"/>
         <obo:IAO_0000115>inverse of has output</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">output of</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1340,18 +953,6 @@ A continuant cannot have an occurrent as part: use &apos;participates in&apos;. 
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
         <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002353"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1492,7 +1093,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000115>inverse of causally upstream of or within</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
         <rdfs:label>causally downstream of or within</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1511,12 +1111,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002427"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000119"/>
         <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/docs/causal-relations"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002427"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0002259"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1579,7 +1173,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000115>p has intermediate c if and only if p has parts p1, p2 and p1 has output c, and p2 has input c</obo:IAO_0000115>
         <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
         <obo:IAO_0000118>has intermediate product</obo:IAO_0000118>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label>has intermediate</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1604,12 +1197,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002505"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000118"/>
         <owl:annotatedTarget>has intermediate product</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002505"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1648,10 +1235,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003000">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
-        <obo:IAO_0000115>a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</obo:IAO_0000115>
         <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <rdfs:comment>Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</rdfs:comment>
         <rdfs:label xml:lang="en">produces</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1663,7 +1249,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0003000"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
-        <owl:annotatedTarget>a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a produces b if some process that occurs_in a has_output b, where a and b are material entities. Examples: hybridoma cell line produces monoclonal antibody reagent; chondroblast produces avascular GAG-rich matrix.</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1674,14 +1260,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0003000"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0003000"/>
         <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
-        <owl:annotatedTarget>Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Note that this definition doesn&apos;t quite distinguish the output of a transformation process from a production process, which is related to the identity/granularity issue.</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1700,7 +1280,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115>a produced_by b iff some process that occurs_in b has_output a.</obo:IAO_0000115>
         <obo:IAO_0000117>Melissa Haendel</obo:IAO_0000117>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <rdfs:label xml:lang="en">produced by</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1719,12 +1298,6 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0003001"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
         <owl:annotatedTarget>Melissa Haendel</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0003001"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/ro/subsets#ro-eco"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1784,9 +1357,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0004007">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000057"/>
         <obo:IAO_0000115>p &apos;has primary input ot output&apos; c iff either (a) p &apos;has primary input&apos; c or (b) p &apos;has primary output&apos; c.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-13T11:26:17Z</oboInOwl:creation_date>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <rdfs:label>has primary input or output</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
@@ -1798,19 +1370,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004007"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <owl:annotatedTarget>cjm</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004007"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-13T11:26:17Z</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004007"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1828,17 +1394,16 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002234"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004007"/>
         <obo:IAO_0000115>p has primary output c if (a) p has output c and (b) the goal of process is to modify, produce, or transform c.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-13T11:26:32Z</oboInOwl:creation_date>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <rdfs:label>has primary output</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004008"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>p has primary output c if (a) p has output c and (b) the goal of process is to modify, produce, or transform c.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:cjm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:kva</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:pt</oboInOwl:hasDbXref>
         <rdfs:comment>PMID:27812932</rdfs:comment>
@@ -1847,19 +1412,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004008"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <owl:annotatedTarget>cjm</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004008"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-13T11:26:32Z</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004008"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
@@ -1877,17 +1436,22 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002233"/>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0004007"/>
         <obo:IAO_0000115>p has primary input c if (a) p has input c and (b) the goal of process is to modify, consume, or transform c.</obo:IAO_0000115>
-        <oboInOwl:created_by>cjm</oboInOwl:created_by>
+        <oboInOwl:created_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</oboInOwl:created_by>
         <oboInOwl:creation_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-13T11:26:56Z</oboInOwl:creation_date>
-        <oboInOwl:inSubset rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
         <rdfs:label>has primary input</rdfs:label>
     </owl:ObjectProperty>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget>has primary input</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>p has primary input c if (a) p has input c and (b) the goal of process is to modify, consume, or transform c.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref>GOC:cjm</oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>GOC:dph</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:cjm</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOC:dph</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:kva</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref>GOC:pt</oboInOwl:hasDbXref>
         <rdfs:comment>PMID:27812932</rdfs:comment>
@@ -1896,25 +1460,13 @@ Each of these 3 primitives can be composed to yield a cross-product of different
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#created_by"/>
-        <owl:annotatedTarget>cjm</owl:annotatedTarget>
+        <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cjm</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#creation_date"/>
         <owl:annotatedTarget rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-13T11:26:56Z</owl:annotatedTarget>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
-        <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
-        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/valid_for_go_ontology"/>
-        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
-    </owl:Axiom>
-    <owl:Axiom>
-        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0004009"/>
-        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
-        <owl:annotatedTarget>has primary input</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
     
@@ -2007,9 +1559,57 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <owl:annotatedTarget>system</owl:annotatedTarget>
         <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
     </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002323">
+        <obo:IAO_0000232>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships</obo:IAO_0000232>
+        <obo:RO_0001900 rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <rdfs:label xml:lang="en">mereotopologically related to</rdfs:label>
+        <obo:IAO_0000115>A mereological relationship or a topological relationship</obo:IAO_0000115>
+        <obo:IAO_0000117>Chris Mungall</obo:IAO_0000117>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000232"/>
+        <owl:annotatedTarget>Do not use this relation directly. It is ended as a grouping for a diverse set of relations, all involving parthood or connectivity relationships</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001900"/>
+        <owl:annotatedTarget rdf:resource="http://purl.obolibrary.org/obo/RO_0001901"/>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+        <owl:annotatedTarget xml:lang="en">mereotopologically related to</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A mereological relationship or a topological relationship</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
+    </owl:Axiom>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/RO_0002323"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000117"/>
+        <owl:annotatedTarget>Chris Mungall</owl:annotatedTarget>
+        <prov:wasDerivedFrom rdf:resource="http://purl.obolibrary.org/obo/ro/releases/2023-01-04/ro.owl"/>
+    </owl:Axiom>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.5.24) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.6) https://github.com/owlcs/owlapi -->
 
