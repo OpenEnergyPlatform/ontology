@@ -6,7 +6,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- added built ontology to the pipeline artifacts.
 ### Changed
+- changed order in which the oeo-full files are compiled, owl now builds before omn.
+
 ### Removed
 
 ## [1.13.0] - 2023-02-01
