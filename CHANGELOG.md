@@ -9,7 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - added built ontology to the pipeline artifacts.
 ### Changed
 - changed order in which the oeo-full files are compiled, owl now builds before omn.
-- updated part relation between electricity grid and power line to have simple restrictions.
+- electricity grid
 ### Removed
 
 ## [1.13.0] - 2023-02-01
