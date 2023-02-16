@@ -6,7 +6,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
--electricity cost (#1482)
+- electricity cost (#1482)
 ### Changed
 ### Removed
 
