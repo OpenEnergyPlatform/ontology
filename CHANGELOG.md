@@ -6,7 +6,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
+
 ### Changed
 ### Removed
 
