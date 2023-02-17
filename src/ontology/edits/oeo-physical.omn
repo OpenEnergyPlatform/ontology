@@ -760,6 +760,46 @@ Class: <http://purl.obolibrary.org/obo/UO_0000270>
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330007>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel process is an energy transformation that converts electrical energy to chemical energy by synthesising portions of matter into a synthetic fuel.",
+        rdfs:label "power-to-fuel process"@en
+    
+    SubClassOf: 
+        OEO_00020003
+    
+    
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330008>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid process is a power-to-fuel process that converts electrical energy to chemical energy by synthesising portions of matter into a liquid synthetic fuel.",
+        rdfs:label "power-to-liquid process"@en
+    
+    SubClassOf: 
+        <http://www.openenergy-platform.org/ontology/oeo/OEO_00330007>
+    
+    
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330009>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel system is an energy transformation unit that implements a power-to-fuel process. A water electrolyser is participating in the power-to-fuel process.",
+        rdfs:label "power-to-fuel system"@en
+    
+    SubClassOf: 
+        OEO_00020102
+    
+    
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330010>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane system is a power-to-gas system that implements the power-to-methane process.",
+        rdfs:label "power-to-ammonia system"@en
+    
+    SubClassOf: 
+        OEO_00000335
+    
+    
 Class: OEO_00000001
 
     
@@ -3099,7 +3139,7 @@ Class: OEO_00000335
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is an energy transformation unit that implements a power-to-gas process. A water electrolyser is participating in the power-to-gas process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is a power-to-fuel system that implements a power-to-gas process. A water electrolyser is participating in the power-to-gas process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
@@ -3109,7 +3149,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
         rdfs:label "power-to-gas system"
     
     SubClassOf: 
-        OEO_00020102,
+        <http://www.openenergy-platform.org/ontology/oeo/OEO_00330009>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
     
@@ -4085,7 +4125,7 @@ Class: OEO_00010020
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid system is an energy transformation unit that implements a power-to-liquid process. A water electrolyser is participating in the power-to-liquid process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid system is a power-to-fuel system that implements a power-to-liquid process. A water electrolyser is participating in the power-to-liquid process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2L",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtL",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
@@ -4097,7 +4137,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
         rdfs:label "power-to-liquid system"
     
     SubClassOf: 
-        OEO_00020102,
+        <http://www.openenergy-platform.org/ontology/oeo/OEO_00330009>,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
     
     
@@ -5460,7 +5500,7 @@ Class: OEO_00010216
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas process is an energy transformation that converts electrical energy to chemical energy by synthesising portions of matter into a gaseous synthetic fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas process is a power-to-fuel process that converts electrical energy to chemical energy by synthesising portions of matter into a gaseous synthetic fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
@@ -5474,7 +5514,7 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         rdfs:label "power-to-gas process"@en
     
     SubClassOf: 
-        OEO_00020003,
+        <http://www.openenergy-platform.org/ontology/oeo/OEO_00330007>,
         (OEO_00000532 some OEO_00000331)
          and (OEO_00010234 some OEO_00000139),
         (OEO_00000533 some OEO_00010155)
