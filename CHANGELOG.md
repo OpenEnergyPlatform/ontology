@@ -6,10 +6,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- CRF-based sector division, EU legislation sector division (#1462)
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
 
 ### Changed
+- NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
+
 ### Removed
 
 ## [1.13.0] - 2023-02-01
@@ -48,7 +51,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - RED sector individuals (#1446)
 - direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
 - power-only generating unit (#1456)
-- CRF-based sector division, EU legislation sector division (#1462)
 - energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
@@ -71,7 +73,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - synthetic hydrogen, fossil hydrogen (#1442)
 - renewable_energy_directive_sectors -> Renewable Energy Directive sector division (#1446)
 - radiation (#1447)
-- NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 - replaced owl:equivalentClass with 'may be identical to' in annotation properties
 
