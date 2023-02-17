@@ -6,6 +6,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1477)
 - CRF-based sector division, EU legislation sector division (#1462)
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
