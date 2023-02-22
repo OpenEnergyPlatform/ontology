@@ -59,6 +59,12 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
     
 
 
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00010121 -->
+
+    <owl:ObjectProperty rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00010121"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
@@ -232,6 +238,12 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086</obo:IAO_0
     
 
 
+    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00000150 -->
+
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -247,6 +259,26 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086</obo:IAO_0
     <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00010121"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
