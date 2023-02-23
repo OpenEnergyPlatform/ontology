@@ -62,7 +62,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     One can also edit the files in a text editor
 4. 📙 Before committing your changes, open the `oeo.omn` file with Protégé and save the file from Protégé. You should also check if you included inconsistencies by following [this ontology test procedure](https://github.com/OpenEnergyPlatform/ontology/wiki/ontology-test-guide)
 
-    See the "Conventions" section below for commit messages format tips
+    See the ["Conventions"](#conventions-for-git-and-github) section below for commit messages format tips
 5. 🔶 Get your changes online
     
     stage the files you changed
