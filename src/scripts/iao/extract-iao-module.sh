@@ -1,5 +1,5 @@
-# Download the IAO
-curl -L http://purl.obolibrary.org/obo/iao.owl > iao-full-download.owl
+# Download the IAO release from 2022-11-07
+curl -L https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2022-11-07/iao.owl > iao-full-download.owl
 # Extract the terms we want with hierarchy, This removes the domain of IAO_0000136
 robot merge --input iao-full-download.owl extract --method MIREOT --lower-terms iao-w-hierarchy.txt --intermediates all --output iao-module-temp.owl
 # Remove subclass axioms from BFO classes
