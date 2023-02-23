@@ -61,7 +61,7 @@ AnnotationProperty: dc:contributor
     
 AnnotationProperty: dc:description
 
-
+    
 AnnotationProperty: rdfs:comment
 
     
@@ -275,6 +275,9 @@ ObjectProperty: OEO_00010235
 
     
 ObjectProperty: OEO_00020056
+
+    
+ObjectProperty: OEO_00020070
 
     
 ObjectProperty: OEO_00020180
@@ -3096,17 +3099,21 @@ Class: OEO_00000335
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is an energy transformation unit that implements a power-to-gas process. A water electrolyser is participating in the power-to-gas process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is a power-to-fuel system that implements a power-to-gas process. A water electrolyser is participating in the power-to-gas process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power-to-gas",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/940
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
+
+created new parent class 'power-to-fuel system'
+https://github.com/OpenEnergyPlatform/ontology/issues/1477
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
         rdfs:label "power-to-gas system"
     
     SubClassOf: 
-        OEO_00020102,
+        OEO_00330009,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
     
@@ -4082,7 +4089,7 @@ Class: OEO_00010020
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid system is an energy transformation unit that implements a power-to-liquid process. A water electrolyser is participating in the power-to-liquid process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid system is a power-to-fuel system that implements a power-to-liquid process. A water electrolyser is participating in the power-to-liquid process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2L",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtL",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/134
@@ -4090,11 +4097,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/411
 
 Align with 'power-to-gas system':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+
+created new parent class 'power-to-fuel system'
+https://github.com/OpenEnergyPlatform/ontology/issues/1477
+https://github.com/OpenEnergyPlatform/ontology/pull/1483",
         rdfs:label "power-to-liquid system"
     
     SubClassOf: 
-        OEO_00020102,
+        OEO_00330009,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
     
     
@@ -5457,7 +5468,7 @@ Class: OEO_00010216
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas process is an energy transformation that converts electrical energy to chemical energy by synthesising portions of matter into a gaseous synthetic fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas process is a power-to-fuel process that converts electrical energy to chemical energy by synthesising portions of matter into a gaseous synthetic fuel.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
@@ -5467,11 +5478,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041",
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+changed to subclass of  newly added 'power-to-fuel process'
+https://github.com/OpenEnergyPlatform/ontology/issues/1477
+https://github.com/OpenEnergyPlatform/ontology/pull/1483",
         rdfs:label "power-to-gas process"@en
     
     SubClassOf: 
-        OEO_00020003,
+        OEO_00330007,
         (OEO_00000532 some OEO_00000331)
          and (OEO_00010234 some OEO_00000139),
         (OEO_00000533 some OEO_00010155)
@@ -5489,7 +5504,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041",
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+added new parent class `power-to-fuel proces' upstream
+https://github.com/OpenEnergyPlatform/ontology/issues/1477
+https://github.com/OpenEnergyPlatform/ontology/pull/1483",
         rdfs:label "power-to-methane process"@en
     
     SubClassOf: 
@@ -5582,7 +5601,11 @@ Class: OEO_00010222
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-ammonia process is a power-to-gas process that has ammonia as output.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to ammonia",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/939
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959
+
+added new parent class `power-to-fuel proces' upstream
+https://github.com/OpenEnergyPlatform/ontology/issues/1477
+https://github.com/OpenEnergyPlatform/ontology/pull/1483",
         rdfs:label "power-to-ammonia process"@en
     
     SubClassOf: 
@@ -6723,6 +6746,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1456",
         OEO_00000334
     
     
+Class: OEO_00010408
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Brent crude is a crude oil that is extracted in the North Sea and traded at ICE London.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "Brent crude"@en
+    
+    SubClassOf: 
+        OEO_00000115,
+        OEO_00020070 some OEO_00020060
+    
+    
+Class: OEO_00010409
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Western Texas Intermediate (WTI) is a crude oil that is extracted on US territory and traded at NYMEX New York.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "WTI",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "Western Texas Intermediate"@en
+    
+    SubClassOf: 
+        OEO_00000115,
+        OEO_00020070 some OEO_00020060
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -7097,6 +7147,9 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041",
         OEO_00140101,
         OEO_00010234 only OEO_00000191
     
+    
+Class: OEO_00020060
+
     
 Class: OEO_00020066
 
@@ -11010,6 +11063,65 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1435",
     
     SubClassOf: 
         OEO_00140127
+    
+    
+Class: OEO_00330007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel process is an energy transformation that converts electrical energy to chemical energy by synthesising portions of matter into a synthetic fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
+        rdfs:label "power-to-fuel process"@en
+    
+    SubClassOf: 
+        OEO_00020003,
+        (OEO_00000532 some OEO_00000331)
+         and (OEO_00010234 some OEO_00000139),
+        (OEO_00000533 some OEO_00010017)
+         and (OEO_00010235 some OEO_00000007)
+    
+    
+Class: OEO_00330008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid process is a power-to-fuel process that converts electrical energy to chemical energy by synthesising portions of matter into a liquid synthetic fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
+        rdfs:label "power-to-liquid process"@en
+    
+    SubClassOf: 
+        OEO_00330007,
+        (OEO_00000532 some OEO_00000331)
+         and (OEO_00010234 some OEO_00000139),
+        (OEO_00000533 some OEO_00010019)
+         and (OEO_00010235 some OEO_00000007)
+    
+    
+Class: OEO_00330009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel system is an energy transformation unit that implements a power-to-fuel process. A water electrolyser is participating in the power-to-fuel process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
+        rdfs:label "power-to-fuel system"@en
+    
+    SubClassOf: 
+        OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00330007
+    
+    
+Class: OEO_00330010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-ammonia system is a power-to-gas system that implements the power-to-ammonia process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
+        rdfs:label "power-to-ammonia system"@en
+    
+    SubClassOf: 
+        OEO_00000335,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010222
     
     
 Individual: OEO_00000182

@@ -101,6 +101,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002410>
 
     
+ObjectProperty: OEO_00000501
+
+    
 ObjectProperty: OEO_00000503
 
     
@@ -372,6 +375,18 @@ Class: <http://purl.obolibrary.org/obo/UO_0000190>
     
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
+    
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330002>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity cost is a variable cost that depends on electricity price and amount.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1365
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1482",
+        rdfs:label "electricity cost"@en
+    
+    SubClassOf: 
+        OEO_00020145
+    
     
 Class: OEO_00000006
 
@@ -677,35 +692,9 @@ Class: OEO_00010079
     
 Class: OEO_00010082
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745",
-        rdfs:label "trade"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
-    
     
 Class: OEO_00010083
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in trading in a market exchange.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
-
-update definition and improve axiom:
-https://github.com/OpenEnergyPlatform/ontology/issues/617
-https://github.com/OpenEnergyPlatform/ontology/pull/1019",
-        rdfs:label "market participant"@en
-    
-    SubClassOf: 
-        OEO_00000051,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010082
-    
     
 Class: OEO_00010115
 
@@ -754,6 +743,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         OEO_00020063
     
     
+Class: OEO_00010130
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU emission sector division is used in the EU climate policy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Convert to class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "EU emission sector division"@en
+    
+    SubClassOf: 
+        OEO_00000368,
+        OEO_00000501 value OEO_00010129
+    
+    
 Class: OEO_00010136
 
     Annotations: 
@@ -797,6 +804,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000367
+    
+    
+Class: OEO_00010304
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector division is a CRF-based sector division defined by the UNFCCC reporting guidelines on national communications for Parties included in Annex I to the Convention.
+(https://unfccc.int/sites/default/files/resource/cp2019_13a01_adv.pdf, 6/CP.25, VI, Table 2)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Convert to class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "NC/BR sector division"@en
+    
+    SubClassOf: 
+        OEO_00010402
     
     
 Class: OEO_00010315
@@ -893,6 +917,34 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1428",
         OEO_00000367
     
     
+Class: OEO_00010402
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CRF-based sector division is a sector division that is derived from a common reporting format.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "CRF-based sector division"@en
+    
+    EquivalentTo: 
+        OEO_00000368
+         and (OEO_00000503 some OEO_00010055)
+    
+    SubClassOf: 
+        OEO_00000368
+    
+    
+Class: OEO_00010403
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU legislation sector division is a sector division that is used in EU legislation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "EU legislation sector division"@en
+    
+    SubClassOf: 
+        OEO_00000368
+    
+
 Class: OEO_00010407
 
     
@@ -901,18 +953,6 @@ Class: OEO_00020015
     
 Class: OEO_00020060
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "fuel market exchange"
-    
-    SubClassOf: 
-        OEO_00020065,
-        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
-    
     
 Class: OEO_00020063
 
@@ -933,16 +973,6 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
     
 Class: OEO_00020065
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "energy market exchange"
-    
-    SubClassOf: 
-        OEO_00020069
-    
     
 Class: OEO_00020066
 
@@ -964,24 +994,6 @@ Class: OEO_00020068
     
 Class: OEO_00020069
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "market exchange"
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
-    
-    SubClassOf: 
-        OEO_00030022,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/617
-https://github.com/OpenEnergyPlatform/ontology/pull/1019"
-        <http://purl.obolibrary.org/obo/RO_0000056> some 
-            (OEO_00010082
-             and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010083))
-    
     
 Class: OEO_00020075
 
@@ -1478,26 +1490,6 @@ Class: OEO_00030035
     
 Class: OEO_00040002
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "market",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
-https://github.com/OpenEnergyPlatform/ontology/pull/639
-
-https://github.com/OpenEnergyPlatform/ontology/issues/677
-https://github.com/OpenEnergyPlatform/ontology/pull/740
-
-change label to market exchange role
-https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "market exchange role"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
-    
     
 Class: OEO_00040003
 
@@ -2245,11 +2237,15 @@ Individual: OEO_00000355
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Relabel and add definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1443
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446
+
+Make instance of 'EU legislation sector division':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "Renewable Energy Directive sector division"
     
     Types: 
-        OEO_00000368
+        OEO_00010403
     
     
 Individual: OEO_00010038
@@ -2624,13 +2620,17 @@ Individual: OEO_00010056
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The KSG sector division is a sector division defined in annex 1 of the Bundes-Klimaschutzgesetz (KSG).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The KSG sector division is a CRF-based sector division defined in annex 1 of the Bundes-Klimaschutzgesetz (KSG).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/580
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
+
+Make instance of 'CRF-based sector division':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "KSG sector division"
     
     Types: 
-        OEO_00000368
+        OEO_00010402
     
     
 Individual: OEO_00010057
@@ -3035,64 +3035,56 @@ Individual: OEO_00010129
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses the EU emission sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses an EU emission sector division.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU climate policy"@en
     
     Types: 
-        OEO_00140150
-    
-    Facts:  
-     OEO_00000503  OEO_00010130
-    
-    
-Individual: OEO_00010130
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector division is used in the EU climate policy.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
-        rdfs:label "EU emission sector division"@en
-    
-    Types: 
-        OEO_00000368
-    
-    Facts:  
-     OEO_00000504  OEO_00010129
+        OEO_00140150,
+        OEO_00000503 some OEO_00010130
     
     
 Individual: OEO_00010131
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS is a sector defined by the EU emission sector division that covers greenhouse gas emissions that are regulated by the European Union Emissions Trading System.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS is a sector defined by an EU emission sector division that covers greenhouse gas emissions that are regulated by the European Union Emissions Trading System.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: ETS"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     
 Individual: OEO_00010132
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by an EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: ETS stationary"@en
     
     Types: 
-        OEO_00000367
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     Facts:  
-     OEO_00000504  OEO_00010130,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010131
     
     
@@ -3100,16 +3092,20 @@ Individual: OEO_00010133
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS aviation is a transport sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS aviation is a transport sector defined by an EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: ETS aviation"@en
     
     Types: 
-        OEO_00000422
+        OEO_00000422,
+        OEO_00000504 some OEO_00010403
     
     Facts:  
-     OEO_00000504  OEO_00010130,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010131
     
     
@@ -3119,30 +3115,34 @@ Individual: OEO_00010134
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector effort sharing is a sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the Effort Sharing Decision and the Effort Sharing Regulation.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: effort sharing"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     
 Individual: OEO_00010135
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by an EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: LULUCF"@en
     
     Types: 
-        OEO_00010035
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00010035,
+        OEO_00000504 some OEO_00010403
     
     SameAs: 
         OEO_00010048
@@ -3263,11 +3263,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 relabel:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/928
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
+
+Make instance of 'EU emission sector division':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "GovReg sector division"@en
     
     Types: 
-        OEO_00000368
+        OEO_00010130
     
     Facts:  
      OEO_00000503  OEO_00000242
@@ -4293,37 +4297,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
      OEO_00000504  OEO_00000242
     
     
-Individual: OEO_00010304
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector division is a sector division defined by the UNFCCC reporting guidelines on national communications for Parties included in Annex I to the Convention.
-(https://unfccc.int/sites/default/files/resource/cp2019_13a01_adv.pdf, 6/CP.25, VI, Table 2)",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
-        rdfs:label "NC/BR sector division"@en
-    
-    Types: 
-        OEO_00000368
-    
-    
 Individual: OEO_00010305
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"energy\" is a sector defined by the NC/BR sector division that includes all energy use that is not related to transport or industry. The sector includes:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"energy\" is a sector defined by an NC/BR sector division that includes all energy use that is not related to transport or industry. The sector includes:
 - CRF sector (IPCC 2006): energy industry
 - CRF sector (IPCC 2006): fuel combustion - other sectors
 - CRF sector (IPCC 2006): fuel combustion - other
 - CRF sector (IPCC 2006): fugitive emissions from fuels
 - CRF sector (IPCC 2006): CO2 transport and storage",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: energy"@en
     
     Types: 
-        OEO_00000367
+        OEO_00000367,
+        OEO_00000504 some OEO_00010304
     
     Facts:  
-     OEO_00000504  OEO_00010304,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010040,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010043,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010044,
@@ -4334,16 +4329,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010306
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"transport\" is a transport sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"transport\" is a transport sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): transport.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
         rdfs:label "NC/BR sector: transport"@en
     
     Types: 
-        OEO_00000422
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00000422,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010042
@@ -4352,18 +4345,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010307
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"industry/industrial processes and product use\" is an industry sector defined by the NC/BR sector division. The sector includes:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"industry/industrial processes and product use\" is an industry sector defined by an NC/BR sector division. The sector includes:
 - CRF sector (IPCC 2006): manufacture of solid fuels and other energy industries
 - CRF sector (IPCC 2006): industrial processes and product use",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: industry/industrial processes and product use"@en
     
     Types: 
-        OEO_00000227
+        OEO_00000227,
+        OEO_00000504 some OEO_00010304
     
     Facts:  
-     OEO_00000504  OEO_00010304,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010046,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010160
     
@@ -4371,13 +4368,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010308
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"agriculture\" is an agriculture, forestry and land use sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): agriculture.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"agriculture\" is an agriculture, forestry and land use sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): agriculture.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: agriculture"@en
     
     Types: 
-        OEO_00010035
+        OEO_00010035,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010047
@@ -4386,16 +4388,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010309
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"forestry/LULUCF\" is an agriculture, forestry and land use sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): land use, land-use change and forestry.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"forestry/LULUCF\" is an agriculture, forestry and land use sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): land use, land-use change and forestry.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: forestry/LULUCF"@en
     
     Types: 
-        OEO_00010035
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00010035,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010048
@@ -4404,16 +4408,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010310
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"waste management/waste\" is a waste and wastewater sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): waste.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"waste management/waste\" is a waste and wastewater sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): waste.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: waste management/waste"@en
     
     Types: 
-        OEO_00010036
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00010036,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010049
@@ -4422,16 +4428,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010311
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"other\" is a sector defined by the NC/BR sector division that includes everything that is not included in the other NC/BR sectors. It aligns to the CRF sector (IPCC 2006): other.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"other\" is a sector defined by an NC/BR sector division that includes everything that is not included in the other NC/BR sectors. It aligns to the CRF sector (IPCC 2006): other.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: other"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00000367,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010050
@@ -5199,6 +5207,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446",
     
 DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
+
+DifferentIndividuals: 
+    OEO_00010131,OEO_00010134,OEO_00010135
 
 DifferentIndividuals: 
     OEO_00010305,OEO_00010306,OEO_00010307,OEO_00010308,OEO_00010309,OEO_00010310,OEO_00010311
