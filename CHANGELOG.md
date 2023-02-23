@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - electricity grid
+
 ### Removed
 
 ## [1.13.0] - 2023-02-01
