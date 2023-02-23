@@ -14,7 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
-- class name 'storage capacity' to 'energy storage capacity', made it subclass of 'maximum value' (#1486) 
+- storage capacity -> energy storage capacity (#1486) (#1486) 
 
 ### Removed
 
