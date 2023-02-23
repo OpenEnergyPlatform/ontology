@@ -12,7 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
-
+- Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
 ### Removed
 
 ## [1.13.0] - 2023-02-01
