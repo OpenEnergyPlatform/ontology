@@ -9,10 +9,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - CRF-based sector division, EU legislation sector division (#1462)
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
+- power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
+- energy storage level, energy storage content (#1486)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
+- storage capacity -> energy storage capacity (#1486)
+
 ### Removed
 
 ## [1.13.0] - 2023-02-01
