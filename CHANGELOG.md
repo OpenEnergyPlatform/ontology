@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electricity cost (#1482)
 - power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
 - energy storage level, energy storage content (#1486)
+- compressed-air energy storage unit (#1495)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
