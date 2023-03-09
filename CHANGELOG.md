@@ -10,9 +10,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
 - power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
+- energy storage level, energy storage content (#1486)
+- compressed-air energy storage unit (#1499)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
+- air (#1499)
+- storage capacity -> energy storage capacity (#1486)
 
 ### Removed
 
