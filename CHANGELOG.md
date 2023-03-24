@@ -21,6 +21,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - air (#1499)
 - storage capacity -> energy storage capacity (#1486)
 - changed order in which the oeo-full files are compiled, owl now builds before omn (#1475)
+- specifically dependent continuant, has bearer, energy, disposition, good role, demand (#1485)
 
 ### Removed
 
