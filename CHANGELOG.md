@@ -23,6 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - changed order in which the oeo-full files are compiled, owl now builds before omn (#1475)
 - specifically dependent continuant, has bearer, energy, disposition, good role, demand (#1485)
 - sector division (#1506)
+- uses, is used by (#1508)
 
 ### Removed
 
