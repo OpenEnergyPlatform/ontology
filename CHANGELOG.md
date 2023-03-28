@@ -24,6 +24,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - specifically dependent continuant, has bearer, energy, disposition, good role, demand (#1485)
 - sector division (#1506)
 - uses, is used by (#1508)
+- update oeo.omn description (#1509)
 
 ### Removed
 
