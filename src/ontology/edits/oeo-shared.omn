@@ -799,7 +799,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
 ObjectProperty: OEO_00010121
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant or energy (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant or energy (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853
 
@@ -809,7 +809,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
 
 extend range to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
+
+correct definition with respect to energy:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
         rdfs:label "has bearer"@en
     
     Domain: 
@@ -1795,7 +1799,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165
 
 Axiomatise relations between origin, energy and portion of matter:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+Add bearer:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -1805,7 +1813,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00000530 some OEO_00000316
+        OEO_00000530 some OEO_00000316,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000151
@@ -2537,7 +2546,7 @@ Class: OEO_00010117
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a continuant over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of an independent continuant or energy over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
@@ -2549,12 +2558,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         rdfs:label "good role"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000002>,
+        OEO_00010121 some 
+            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>),
         OEO_00020180 some OEO_00040003
     
     
@@ -4282,13 +4293,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         rdfs:label "demand"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>,
         OEO_00010121 some 
-            (OEO_00000323 or OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
+            (OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
     
     
 Class: OEO_00140043
