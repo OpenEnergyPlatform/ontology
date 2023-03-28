@@ -22,6 +22,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - storage capacity -> energy storage capacity (#1486)
 - changed order in which the oeo-full files are compiled, owl now builds before omn (#1475)
 - sector division (#1506)
+- uses, is used by (#1508)
 
 ### Removed
 
