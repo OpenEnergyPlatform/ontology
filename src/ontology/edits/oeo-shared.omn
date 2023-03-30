@@ -85,7 +85,7 @@ AnnotationProperty: dc:description
 
     
 AnnotationProperty: dc:identifier
-    
+
     
 AnnotationProperty: rdfs:comment
 
@@ -343,9 +343,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871",
 ObjectProperty: OEO_00000501
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a continuant c1 and a continuant c2, where c1 is required by c2 as input to work.",
         rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472",
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472
+add def and domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1117
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/1508",
         rdfs:label "is used by"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
     
     InverseOf: 
         OEO_00000503
@@ -379,12 +389,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/pull/1085",
 ObjectProperty: OEO_00000503
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a continuant and another continuant it requires to function.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a continuant c1 and a continuant c2, where c1 requires c2 as input to work.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclass)
 https://github.com/OpenEnergyPlatform/ontology/pull/472 (move to oeo-shared)
 https://github.com/OpenEnergyPlatform/ontology/pull/478 (add definition)
-https://github.com/OpenEnergyPlatform/ontology/pull/871 (add domain and range)",
+https://github.com/OpenEnergyPlatform/ontology/pull/871 (add domain and range)
+change def
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1117
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/1508",
         rdfs:label "uses"
     
     Domain: 
@@ -799,7 +812,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
 ObjectProperty: OEO_00010121
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant or energy (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant or energy (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853
 
@@ -809,7 +822,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
 
 extend range to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
+
+correct definition with respect to energy:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
         rdfs:label "has bearer"@en
     
     Domain: 
@@ -911,6 +928,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/710",
     InverseOf: 
         OEO_00140002
     
+    
+ObjectProperty: OEO_00020071
+
     
 ObjectProperty: OEO_00020179
 
@@ -1686,13 +1706,19 @@ Class: OEO_00000143
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/165
 
 Move to oeo-shared:
-https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+https://github.com/OpenEnergyPlatform/ontology/pull/1360
+
+updated part relation between electricity grid and power line to have simple restrictions:
+
+replace min 1 restriction by some restriction
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1430
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1479",
         rdfs:label "electricity grid"
     
     SubClassOf: 
         OEO_00000200,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
-        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 OEO_00000253
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000253
     
     
 Class: OEO_00000144
@@ -1786,7 +1812,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165
 
 Axiomatise relations between origin, energy and portion of matter:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+Add bearer:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -1796,7 +1826,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00000530 some OEO_00000316
+        OEO_00000530 some OEO_00000316,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000151
@@ -2298,11 +2329,17 @@ Class: OEO_00000368
 
 Move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463
+
+Add relation to organisation or person:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1506",
         rdfs:label "sector division"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        OEO_00000504 some 
+            (OEO_00000323 or OEO_00030022)
     
     
 Class: OEO_00000395
@@ -2435,6 +2472,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
     
     
+Class: OEO_00010082
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "trade"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
+    
+    
+Class: OEO_00010083
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in trading in a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
+
+update definition and improve axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/617
+https://github.com/OpenEnergyPlatform/ontology/pull/1019
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "market participant"@en
+    
+    SubClassOf: 
+        OEO_00000051,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010082
+    
+    
 Class: OEO_00010114
 
     Annotations: 
@@ -2482,7 +2559,7 @@ Class: OEO_00010117
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a continuant over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of an independent continuant or energy over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
@@ -2494,12 +2571,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         rdfs:label "good role"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000002>,
+        OEO_00010121 some 
+            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>),
         OEO_00020180 some OEO_00040003
     
     
@@ -2998,6 +3077,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1173",
         <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
+Class: OEO_00020060
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "fuel market exchange"
+    
+    SubClassOf: 
+        OEO_00020065,
+        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
+    
+    
 Class: OEO_00020063
 
     Annotations: 
@@ -3015,6 +3113,23 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         OEO_00020015,
         OEO_00020180 some OEO_00020154,
         OEO_00140002 some OEO_00010079
+    
+    
+Class: OEO_00020065
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "energy market exchange"
+    
+    SubClassOf: 
+        OEO_00020069
     
     
 Class: OEO_00020066
@@ -3067,6 +3182,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     SubClassOf: 
         OEO_00020067
+    
+    
+Class: OEO_00020069
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "market exchange"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    SubClassOf: 
+        OEO_00030022,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/617
+https://github.com/OpenEnergyPlatform/ontology/pull/1019"
+        <http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00010082
+             and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010083))
     
     
 Class: OEO_00020085
@@ -3829,6 +3969,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1017",
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
     
     
+Class: OEO_00040002
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "market",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
+https://github.com/OpenEnergyPlatform/ontology/pull/639
+
+https://github.com/OpenEnergyPlatform/ontology/issues/677
+https://github.com/OpenEnergyPlatform/ontology/pull/740
+
+change label to market exchange role
+https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "market exchange role"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
 Class: OEO_00040003
 
     Annotations: 
@@ -4139,13 +4306,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         rdfs:label "demand"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>,
         OEO_00010121 some 
-            (OEO_00000323 or OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
+            (OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
     
     
 Class: OEO_00140043
