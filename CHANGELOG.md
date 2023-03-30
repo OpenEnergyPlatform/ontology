@@ -3,7 +3,7 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-## [1.X.X] - 20XX-XX-XX
+## [1.14.0] - 2023-03-30
 
 ### Added
 - CRF-based sector division, EU legislation sector division (#1462)
@@ -25,8 +25,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sector division (#1506)
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
-
-### Removed
 
 ## [1.13.0] - 2023-02-01
 
