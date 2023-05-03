@@ -2582,6 +2582,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         OEO_00020180 some OEO_00040003
     
     
+Class: OEO_00010127
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy production is the production of secondary energy carriers.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "secondary production of energy",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/865
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+        rdfs:label "secondary energy production"@en
+    
+    SubClassOf: 
+        OEO_00240003,
+        OEO_00000533 some OEO_00140079,
+        OEO_00140002 some OEO_00050019
+    
+    
 Class: OEO_00010210
 
     Annotations: 
@@ -2753,21 +2777,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
 Class: OEO_00010315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refining process is an energy transformation that converts crude oil by cracking and distillation into various mineral oil products.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refining process is a secondary energy production that converts crude oil by cracking and distillation into various mineral oil products.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "mineral oil refining",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331
 
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+make subclass of secondary energy production and further changes:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
         rdfs:label "mineral oil refining process"
     
     SubClassOf: 
-        OEO_00020003,
+        OEO_00010127,
         OEO_00000532 some OEO_00000115,
         OEO_00000533 some OEO_00010316,
         OEO_00010234 some OEO_00000007,
-        OEO_00010235 some OEO_00000007
+        OEO_00010235 some OEO_00000007,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140033
     
     
 Class: OEO_00010316
@@ -2779,7 +2809,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331
 
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+Add 'secondary energy carrier disposition' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
         rdfs:label "mineral oil product"
     
     EquivalentTo: 
@@ -2787,7 +2821,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
          and (OEO_00240025 some OEO_00010315)
     
     SubClassOf: 
-        OEO_00000014
+        OEO_00000014,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
     
     
 Class: OEO_00010361
@@ -4366,6 +4401,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
     SubClassOf: 
         OEO_00000151
+    
+    
+Class: OEO_00140076
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "blast furnace gas, coke oven gas, cokes, motor gasoline or electricity have the disposition to be a secondary energy carrier",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy carrier disposition is an energy carrier disposition of material entities that are manufactured from primary energy carriers or from a different form of secondary energy carriers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+        rdfs:label "secondary energy carrier disposition"@en
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00140079
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the secondary energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
+fix error in definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/669
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/678
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+        rdfs:label "secondary energy carrier"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076)
+    
+    SubClassOf: 
+        OEO_00020039
     
     
 Class: OEO_00140081
