@@ -28,7 +28,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sector division (#1506)
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
-- propultion/traction (#1541)
+- propulsion/traction (#1541)
 
 ## [1.13.0] - 2023-02-01
 
