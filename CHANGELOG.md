@@ -15,6 +15,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - added built ontology to the pipeline artifacts (#1475)
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
+- climate system (#1542)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
