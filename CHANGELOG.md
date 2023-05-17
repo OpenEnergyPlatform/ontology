@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
 - propulsion/energy-to-motion (#1541)
+- creative work (#1547)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
