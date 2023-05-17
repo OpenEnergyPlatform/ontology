@@ -30,7 +30,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
-- has copyright license -> has licence; information content entity (#1547)
+- has copyright license -> has licence; information content entity; data set, database, model, software, document, software documentation, factsheet, report (#1547)
 
 ## [1.13.0] - 2023-02-01
 
