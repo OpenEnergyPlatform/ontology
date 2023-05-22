@@ -101,28 +101,14 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002410>
 
     
+ObjectProperty: OEO_00000501
+
+    
 ObjectProperty: OEO_00000503
 
     
 ObjectProperty: OEO_00000504
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a continuant (A) and a continuant or occurent (B) in which (A) determines the semantic of (B)",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/460
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/480/
-
-domain:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871
-
-adapt domains and ranges:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-issue: https://github.com/OpenEnergyPlatform/ontology/pull/1085",
-        rdfs:label "is defined by"
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/BFO_0000002>
-    
     
 ObjectProperty: OEO_00000505
 
@@ -390,6 +376,18 @@ Class: <http://purl.obolibrary.org/obo/UO_0000190>
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330002>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity cost is a variable cost that depends on electricity price and amount.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1365
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1482",
+        rdfs:label "electricity cost"@en
+    
+    SubClassOf: 
+        OEO_00020145
+    
+    
 Class: OEO_00000006
 
     Annotations: 
@@ -579,15 +577,6 @@ Class: OEO_00000367
     
 Class: OEO_00000368
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector division is a specific way to subdivide a system."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30",
-        rdfs:label "sector division"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
-    
     
 Class: OEO_00000379
 
@@ -703,35 +692,9 @@ Class: OEO_00010079
     
 Class: OEO_00010082
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745",
-        rdfs:label "trade"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
-    
     
 Class: OEO_00010083
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in trading in a market exchange.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
-
-update definition and improve axiom:
-https://github.com/OpenEnergyPlatform/ontology/issues/617
-https://github.com/OpenEnergyPlatform/ontology/pull/1019",
-        rdfs:label "market participant"@en
-    
-    SubClassOf: 
-        OEO_00000051,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010082
-    
     
 Class: OEO_00010115
 
@@ -780,6 +743,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         OEO_00020063
     
     
+Class: OEO_00010130
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU emission sector division is used in the EU climate policy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Convert to class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "EU emission sector division"@en
+    
+    SubClassOf: 
+        OEO_00000368,
+        OEO_00000501 value OEO_00010129
+    
+    
 Class: OEO_00010136
 
     Annotations: 
@@ -823,6 +804,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000367
+    
+    
+Class: OEO_00010304
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector division is a CRF-based sector division defined by the UNFCCC reporting guidelines on national communications for Parties included in Annex I to the Convention.
+(https://unfccc.int/sites/default/files/resource/cp2019_13a01_adv.pdf, 6/CP.25, VI, Table 2)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Convert to class:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "NC/BR sector division"@en
+    
+    SubClassOf: 
+        OEO_00010402
     
     
 Class: OEO_00010315
@@ -919,23 +917,42 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1428",
         OEO_00000367
     
     
+Class: OEO_00010402
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CRF-based sector division is a sector division that is derived from a common reporting format.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "CRF-based sector division"@en
+    
+    EquivalentTo: 
+        OEO_00000368
+         and (OEO_00000503 some OEO_00010055)
+    
+    SubClassOf: 
+        OEO_00000368
+    
+    
+Class: OEO_00010403
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An EU legislation sector division is a sector division that is used in EU legislation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "EU legislation sector division"@en
+    
+    SubClassOf: 
+        OEO_00000368
+    
+
+Class: OEO_00010407
+
+    
 Class: OEO_00020015
 
     
 Class: OEO_00020060
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "fuel market exchange"
-    
-    SubClassOf: 
-        OEO_00020065,
-        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
-    
     
 Class: OEO_00020063
 
@@ -956,16 +973,6 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
     
 Class: OEO_00020065
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "energy market exchange"
-    
-    SubClassOf: 
-        OEO_00020069
-    
     
 Class: OEO_00020066
 
@@ -987,24 +994,6 @@ Class: OEO_00020068
     
 Class: OEO_00020069
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "market exchange"
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
-    
-    SubClassOf: 
-        OEO_00030022,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/617
-https://github.com/OpenEnergyPlatform/ontology/pull/1019"
-        <http://purl.obolibrary.org/obo/RO_0000056> some 
-            (OEO_00010082
-             and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010083))
-    
     
 Class: OEO_00020075
 
@@ -1501,26 +1490,6 @@ Class: OEO_00030035
     
 Class: OEO_00040002
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "market",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
-https://github.com/OpenEnergyPlatform/ontology/pull/639
-
-https://github.com/OpenEnergyPlatform/ontology/issues/677
-https://github.com/OpenEnergyPlatform/ontology/pull/740
-
-change label to market exchange role
-https://github.com/OpenEnergyPlatform/ontology/pull/748",
-        rdfs:label "market exchange role"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
-    
     
 Class: OEO_00040003
 
@@ -2166,10 +2135,13 @@ Individual: OEO_00000160
 The energy balance expresses all forms of energy in a common accounting unit. The balance shows the relationships between supply, inputs to the energy transformation processes and their outputs as well as the actual energy consumption by different sectors of end-use.",
         <http://purl.obolibrary.org/obo/IAO_0000116> "This is a general description of an energy balance. A link to a complete Eurostat energy balance is provided under the URL for 'definition source'",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://ec.europa.eu/eurostat/statistics-explained/index.php/Energy_balance#What_is_an_energy_balance.3F",
-        rdfs:label "eurostat energy balances"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Change type and label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "Eurostat energy balance sector division"
     
     Types: 
-        OEO_00000368
+        OEO_00010407
     
     
 Individual: OEO_00000193
@@ -2204,10 +2176,13 @@ In der Primärenergiebilanz werden die Energieträger mit ihrem Mengenaufkommen 
     Bestandsveränderungen, getrennt erfasst nach Bestandsentnahmen und -aufstockungen",
         <http://purl.obolibrary.org/obo/IAO_0000116> "The German Energy Balance is managed by the 'AG Energiebilanzen', where aso the energy balances can be found: https://ag-energiebilanzen.de/",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://de.wikipedia.org/w/index.php?title=Energiebilanz_(Energiewirtschaft)&oldid=176259115",
-        rdfs:label "german energy balances"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Change type and label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "German energy balance sector division"
     
     Types: 
-        OEO_00000368
+        OEO_00010407
     
     
 Individual: OEO_00000242
@@ -2257,12 +2232,20 @@ Individual: OEO_00000355
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The Renewable Energy Directive sector division is a sector division used in the Renewable Energy Directive of the European Union.",
         <http://purl.obolibrary.org/obo/IAO_0000116> "The Renewable energy Directive has been revised, but this should have had no impacts on the sectoral definitions. Factsheet on revision: https://ec.europa.eu/energy/sites/ener/files/documents/directive_renewable_factsheet.pdf",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32009L0028",
-        rdfs:label "renewable_ energy_ directive_ sectors"
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Relabel and add definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1443
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446
+
+Make instance of 'EU legislation sector division':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
+        rdfs:label "Renewable Energy Directive sector division"
     
     Types: 
-        OEO_00000368
+        OEO_00010403
     
     
 Individual: OEO_00010038
@@ -2637,13 +2620,17 @@ Individual: OEO_00010056
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The KSG sector division is a sector division defined in annex 1 of the Bundes-Klimaschutzgesetz (KSG).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The KSG sector division is a CRF-based sector division defined in annex 1 of the Bundes-Klimaschutzgesetz (KSG).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/580
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
+
+Make instance of 'CRF-based sector division':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "KSG sector division"
     
     Types: 
-        OEO_00000368
+        OEO_00010402
     
     
 Individual: OEO_00010057
@@ -3048,64 +3035,56 @@ Individual: OEO_00010129
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses the EU emission sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses an EU emission sector division.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU climate policy"@en
     
     Types: 
-        OEO_00140150
-    
-    Facts:  
-     OEO_00000503  OEO_00010130
-    
-    
-Individual: OEO_00010130
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector division is used in the EU climate policy.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
-        rdfs:label "EU emission sector division"@en
-    
-    Types: 
-        OEO_00000368
-    
-    Facts:  
-     OEO_00000504  OEO_00010129
+        OEO_00140150,
+        OEO_00000503 some OEO_00010130
     
     
 Individual: OEO_00010131
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS is a sector defined by the EU emission sector division that covers greenhouse gas emissions that are regulated by the European Union Emissions Trading System.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS is a sector defined by an EU emission sector division that covers greenhouse gas emissions that are regulated by the European Union Emissions Trading System.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: ETS"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     
 Individual: OEO_00010132
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by an EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: ETS stationary"@en
     
     Types: 
-        OEO_00000367
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     Facts:  
-     OEO_00000504  OEO_00010130,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010131
     
     
@@ -3113,16 +3092,20 @@ Individual: OEO_00010133
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS aviation is a transport sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS aviation is a transport sector defined by an EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: ETS aviation"@en
     
     Types: 
-        OEO_00000422
+        OEO_00000422,
+        OEO_00000504 some OEO_00010403
     
     Facts:  
-     OEO_00000504  OEO_00010130,
      <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010131
     
     
@@ -3132,30 +3115,34 @@ Individual: OEO_00010134
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector effort sharing is a sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the Effort Sharing Decision and the Effort Sharing Regulation.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: effort sharing"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00000367,
+        OEO_00000504 some OEO_00010403
     
     
 Individual: OEO_00010135
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by the EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU emission sector ETS stationary is a sector defined by an EU emission sector division that covers greenhouse gas emissions regulated by the European Union Emissions Trading System and that are emitted by stationary installations.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
+
+Improve axioms and definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "EU emission sector: LULUCF"@en
     
     Types: 
-        OEO_00010035
-    
-    Facts:  
-     OEO_00000504  OEO_00010130
+        OEO_00010035,
+        OEO_00000504 some OEO_00010403
     
     SameAs: 
         OEO_00010048
@@ -3276,11 +3263,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 relabel:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/928
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
+
+Make instance of 'EU emission sector division':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "GovReg sector division"@en
     
     Types: 
-        OEO_00000368
+        OEO_00010130
     
     Facts:  
      OEO_00000503  OEO_00000242
@@ -3371,11 +3362,15 @@ Individual: OEO_00010168
     Annotations: 
         OEO_00010037 "CRF 2.C.1",
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'cement production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'iron and steel production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
 Carbon dioxide is the predominant gas emitted from the production of iron and steel. The sources of the carbon dioxide emissions include that from carbon-containing reducing agents such as coke and pulverized coal, and, from minerals such as limestone and dolomite added.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/858
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
+
+Fix definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
         rdfs:label "CRF sector (IPCC 2006): iron and steel production"@en
     
     Types: 
@@ -4302,37 +4297,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/965",
      OEO_00000504  OEO_00000242
     
     
-Individual: OEO_00010304
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector division is a sector division defined by the UNFCCC reporting guidelines on national communications for Parties included in Annex I to the Convention.
-(https://unfccc.int/sites/default/files/resource/cp2019_13a01_adv.pdf, 6/CP.25, VI, Table 2)",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
-        rdfs:label "NC/BR sector division"@en
-    
-    Types: 
-        OEO_00000368
-    
-    
 Individual: OEO_00010305
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"energy\" is a sector defined by the NC/BR sector division that includes all energy use that is not related to transport or industry. The sector includes:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"energy\" is a sector defined by an NC/BR sector division that includes all energy use that is not related to transport or industry. The sector includes:
 - CRF sector (IPCC 2006): energy industry
 - CRF sector (IPCC 2006): fuel combustion - other sectors
 - CRF sector (IPCC 2006): fuel combustion - other
 - CRF sector (IPCC 2006): fugitive emissions from fuels
 - CRF sector (IPCC 2006): CO2 transport and storage",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: energy"@en
     
     Types: 
-        OEO_00000367
+        OEO_00000367,
+        OEO_00000504 some OEO_00010304
     
     Facts:  
-     OEO_00000504  OEO_00010304,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010040,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010043,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010044,
@@ -4343,16 +4329,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010306
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"transport\" is a transport sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): transport.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"transport\" is a transport sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): transport.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
         rdfs:label "NC/BR sector: transport"@en
     
     Types: 
-        OEO_00000422
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00000422,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010042
@@ -4361,18 +4345,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010307
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"industry/industrial processes and product use\" is an industry sector defined by the NC/BR sector division. The sector includes:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"industry/industrial processes and product use\" is an industry sector defined by an NC/BR sector division. The sector includes:
 - CRF sector (IPCC 2006): manufacture of solid fuels and other energy industries
 - CRF sector (IPCC 2006): industrial processes and product use",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: industry/industrial processes and product use"@en
     
     Types: 
-        OEO_00000227
+        OEO_00000227,
+        OEO_00000504 some OEO_00010304
     
     Facts:  
-     OEO_00000504  OEO_00010304,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010046,
      <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010160
     
@@ -4380,13 +4368,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010308
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"agriculture\" is an agriculture, forestry and land use sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): agriculture.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"agriculture\" is an agriculture, forestry and land use sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): agriculture.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: agriculture"@en
     
     Types: 
-        OEO_00010035
+        OEO_00010035,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010047
@@ -4395,16 +4388,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010309
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"forestry/LULUCF\" is an agriculture, forestry and land use sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): land use, land-use change and forestry.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"forestry/LULUCF\" is an agriculture, forestry and land use sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): land use, land-use change and forestry.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: forestry/LULUCF"@en
     
     Types: 
-        OEO_00010035
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00010035,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010048
@@ -4413,16 +4408,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010310
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"waste management/waste\" is a waste and wastewater sector defined by the NC/BR sector division. It aligns to the CRF sector (IPCC 2006): waste.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"waste management/waste\" is a waste and wastewater sector defined by an NC/BR sector division. It aligns to the CRF sector (IPCC 2006): waste.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: waste management/waste"@en
     
     Types: 
-        OEO_00010036
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00010036,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010049
@@ -4431,23 +4428,788 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
 Individual: OEO_00010311
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"other\" is a sector defined by the NC/BR sector division that includes everything that is not included in the other NC/BR sectors. It aligns to the CRF sector (IPCC 2006): other.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The NC/BR sector \"other\" is a sector defined by an NC/BR sector division that includes everything that is not included in the other NC/BR sectors. It aligns to the CRF sector (IPCC 2006): other.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1273
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1317
+
+Improve definition and axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462",
         rdfs:label "NC/BR sector: other"@en
     
     Types: 
-        OEO_00000367
-    
-    Facts:  
-     OEO_00000504  OEO_00010304
+        OEO_00000367,
+        OEO_00000504 some OEO_00010304
     
     SameAs: 
         OEO_00010050
     
     
+Individual: OEO_00010338
+
+    Annotations: 
+        OEO_00010037 "CRF 1.C.1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'transport of CO2' is a sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+This comprises fugitive emissions from the systems used to transport captured CO2 from the source to the injection site. These emissions may comprise losses due to fugitive equipment leaks, venting and releases due to pipeline
+ruptures or other accidental releases (e.g., temporary storage).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        rdfs:label "CRF sector (IPCC 2006): transport of CO2"@en
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010058
+    
+    
+Individual: OEO_00010339
+
+    Annotations: 
+        OEO_00010037 "CRF 1.C.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'pipelines' is a sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Fugitive emissions from activities and equipment at the injection site and those from the end containment once the CO2 is placed in storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        rdfs:label "CRF sector (IPCC 2006): injection and storage"@en
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010058
+    
+    
+Individual: OEO_00010340
+
+    Annotations: 
+        OEO_00010037 "CRF 1.C.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'CO2 transport and storage' is a sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Any other emissions from CCS not reported elsewhere.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        rdfs:label "CRF sector (IPCC 2006): CO2 transport and storage - other"@en
+    
+    Types: 
+        OEO_00000367
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010058
+    
+    
+Individual: OEO_00010341
+
+    Annotations: 
+        OEO_00010037 "CRF 2.A.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'lime production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Process-related emissions from the production of various types of lime (ISIC: D2694).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): lime production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010164
+    
+    
+Individual: OEO_00010342
+
+    Annotations: 
+        OEO_00010037 "CRF 2.A.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'glass production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Process-related emissions from the production of various types of glass (ISIC: D2610).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): glass production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010164
+    
+    
+Individual: OEO_00010343
+
+    Annotations: 
+        OEO_00010037 "CRF 2.A.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'other process uses of carbonates' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Includes limestone, dolomite and other carbonates etc. Emissions from the use of limestone, dolomite and other carbonates should be included in the industrial source category where they are emitted. Therefore, for example, where a carbonate is used as a flux for iron and steel production, resultant emissions should be reported under 2C1 “Iron and Steel Production” rather than this
+subcategory.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): other process uses of carbonates"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010344
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'ammonia' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Ammonia (NH3) is a major industrial chemical and the most important nitrogenous material produced. Ammonia gas is used directly as a fertilizer, in heat treating, paper pulping, nitric acid and nitrates manufacture, nitric acid ester and nitro compound manufacture, explosives of various types, and as a refrigerant. Amines, amides, and miscellaneous other organic compounds, such as urea, are made from ammonia. The main greenhouse gas emitted from NH3 production is CO2. CO2 used in the production of urea, a downstream process, should be subtracted from the CO2 generated and accounted for in the AFOLU Sector.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): ammonia production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010345
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'nitric acid production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Nitric acid is used as a raw material mainly in the manufacture of nitrogenous-based fertiliser. Nitric acid may also be used in the production of adipic acid and explosives (e.g., dynamite), for metal etching and in the processing of ferrous metals. The main greenhouse gas emitted from HNO3 production is nitrous oxide",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): nitric acid production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010346
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'adipic acid production is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Adipic acid is used in the manufacture of a large number of products including synthetic fibres, coatings, plastics, urethane foams, elastomers and synthetic lubricants. The production of Nylon 6.6 accounts for the bulk of adipic acid
+use. The main greenhouse gas emitted from adipic acid production is nitrous oxide.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): adipic acid production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010347
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'caprolactam, glyoxal and glyoxylic acid production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Most of the annual production of caprolactam (NH(CH2)5CO) is consumed as the monomer for nylon-6 fibres and plastics, with a substantial proportion of the fibre used in carpet manufacturing. All commercial processes for the manufacture of caprolactam are based on either toluene or benzene. This subcategory also covers production of glyoxal (ethanedial) and glyoxylic acid production. The main greenhouse gas emitted from this subcategory is nitrous oxide.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): caprolactam, gloxal and glyoxylic acid production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010348
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.5",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'carbide production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+The production of carbide can result in emissions of CO2, CH4, CO and SO2. Silicon carbide is a significant artificial abrasive. It is produced from silica sand or quartz and petroleum coke. Calcium carbide is used in the production of acetylene, in the manufacture of cyanamide (a minor historical use), and as a reductant in electric arc steel furnaces. It is made from calcium carbonate (limestone) and carbon-containing reductant (petroleum coke).",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): carbide production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010349
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.6",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'titanium dioxide producion' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Titanium dioxide (TiO2) is the most important white pigment. The main use is in paint manufacture followed by paper, plastics, rubber, ceramics, fabrics, floor covering, printing ink, and other miscellaneous uses. The main production process is the chloride route, giving rise to CO2 emissions that are likely to be significant. This category also includes synthetic rutile production using the Becher process, and titanium slag production, both of which are reduction processes using fossil fuels and resulting in CO2 emissions. Synthetic rutile is the major input to TiO2 production using the chloride route.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): titanium dioxide production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010350
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.7",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'soda ash production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Soda ash (sodium carbonate, Na2CO3) is a white crystalline solid that is used as a raw material in a large number of industries including glass manufacture, soap and detergents, pulp and paper production and water treatment. Emissions of CO2 from the production of soda ash vary dependent on the manufacturing process. Four different processes may be used to produce soda ash. Three of these processes, monohydrate, sodium sesquicarbonate (trona) and direct carbonation, are referred to as natural processes. The fourth, the Solvay process, is classified as a synthetic process.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): soda ash production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010351
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.8",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'petrochemical and carbon black production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): petrochemical and carbon black production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010352
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.9",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'fluorochemical production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): fluorochemical production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010353
+
+    Annotations: 
+        OEO_00010037 "CRF 2.B.10",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'chemical industry - other' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+For example, gases with global warming potential listed in IPCC assessment reports that do not fall within any categories above could be reported here, if they are estimated.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): chemical industry - other"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010166
+    
+    
+Individual: OEO_00010354
+
+    Annotations: 
+        OEO_00010037 "CRF 2.C.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'ferroalloys' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Ferroalloys production covers emissions from primary metallurgical reduction production of the most common ferroalloys, i.e. ferro-silicon, silicon metal, ferro-manganese, silicon manganese, and ferro-chromium, excluding those
+emissions relating to fuel use. From the production of these alloys, carbon dioxide (CO2), nitrous oxide (N2O), and methane (CH4) originating from ore- and reductant raw materials, is emitted.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): ferroalloys production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010167
+    
+    
+Individual: OEO_00010355
+
+    Annotations: 
+        OEO_00010037 "CRF 2.C.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'aluminium production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Aluminium Production covers primary production of aluminium, except the emissions related to the use of fuel. Carbon dioxide emissions result from the electrochemical reduction reaction of alumina with a carbon-based anode.
+Tetrafluoromethane (CF4) and hexafluoroethane (C2F6) are also produced intermittently. No greenhouse gases are produced in recycling of aluminium other than from the fuels uses for metal remelting. Sulphur hexafluoride (SF6)
+emissions are not associated with primary aluminium production; however, casting of some high magnesium containing alloys does result in SF6 emissions and these emissions are accounted for in Section 2C4, Magnesium
+Production.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): aluminium production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010167
+    
+    
+Individual: OEO_00010356
+
+    Annotations: 
+        OEO_00010037 "CRF 2.C.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'magnesium production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Magnesium production covers GHG emissions related to both primary magnesium production as well as oxidation protection of magnesium metal during processing (recycling and casting), excluding those emissions relating to fuel use. In the primary production of magnesium, carbon dioxide (CO2) is emitted during calcination of dolomite and magnesite raw materials. Primary production of magnesium from non-carbonate raw materials does not emit carbon dioxide. In the processing of liquid magnesium, cover gases containing carbon dioxide (CO2), sulphur hexafluoride (SF6), the hydrofluorocarbon HFC 134a or the fluorinated ketone FK 5-1-12 ( C3F7C(O)C2F5) may be used. Partial
+thermal decomposition and/or reaction between these compounds and liquid magnesium generates secondary compounds such as perfluorocarbons (PFCs), which are emitted in addition to unreacted cover gas constituents.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): magnesium production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010167
+    
+    
+Individual: OEO_00010357
+
+    Annotations: 
+        OEO_00010037 "CRF 2.C.5",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'lead production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Lead production covers production by the sintering/smelting process as well as direct smelting. Carbon dioxide emissions result as a product of the use of a variety of carbon-based reducing agents in both production 
+processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): lead production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010167
+    
+    
+Individual: OEO_00010358
+
+    Annotations: 
+        OEO_00010037 "CRF 2.C.6",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'zinc production' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Zinc production covers emissions from both primary production of zinc from ore as well as recovery of zinc from scrap metals, excluding emissions related to fuel use. Following calcination, zinc metal is produced through one of three methods; 1-electro-thermic distillation, 2-pyrometallurgical smelting or 3-electrolysis. If method 1 or 2 is used, carbon dioxide (CO2) is emitted. Method 3 does not result in carbon dioxide emissions. Recovery of zinc from metal scrap often uses the same methods as primary production and may thus produce carbon dioxide emissions, which is included in this section.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): zinc production"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010167
+    
+    
+Individual: OEO_00010359
+
+    Annotations: 
+        OEO_00010037 "CRF 2.C.7",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'metal industry - other' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): metal industry - other"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010167
+    
+    
+Individual: OEO_00010363
+
+    Annotations: 
+        OEO_00010037 "CRF 2.E.1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'integrated circuit or semiconductor' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Emissions of CF4, C2F6, C3F8, c-C4F8, C4F6, C4F8O, C5F8, CHF3, CH2F2, NF3 and SF6 from uses of these gases in Integrated Circuit (IC) manufacturing in rapidly evolving ways and in varying amounts, which depend on product
+(e.g., memory or logic devices) and equipment manufacturer.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): integrated circuit or semiconductor"
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010170
+    
+    
+Individual: OEO_00010364
+
+    Annotations: 
+        OEO_00010037 "CRF 2.E.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'TFT flat panel display' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Uses and emissions of predominantly CF4, CHF3, NF3 and SF6 during the fabrication of thin-film transistors (TFTs) on glass substrates for flat panel display manufacture. In addition to these gases, C2F6, C3F8 and c-C4F8 may also be used and emitted during the manufacture of thin and smart displays.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): TFT flat panel display"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010170
+    
+    
+Individual: OEO_00010365
+
+    Annotations: 
+        OEO_00010037 "CRF 2.E.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'photovoltaics' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Photovoltaic cell manufacture may use and emit CF4 and C2F6 among others.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        rdfs:label "CRF sector (IPCC 2006): photovoltaics"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010170
+    
+    
+Individual: OEO_00010366
+
+    Annotations: 
+        OEO_00010037 "CRF 2.E.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'heat transfer fluid' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Heat transfer fluids, which include several fully fluorinated carbon compounds (either in pure form or in mixtures) with six or more carbon atoms, used and emitted during IC manufacture, testing and assembly. They are used in chillers, temperature shock testers and vapour phase reflow soldering.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): heat transfer fluid"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010170
+    
+    
+Individual: OEO_00010367
+
+    Annotations: 
+        OEO_00010037 "CRF 2.E.5",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'electronics industry - other' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): electronics industry - other"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010170
+    
+    
+Individual: OEO_00010368
+
+    Annotations: 
+        OEO_00010037 "CRF 2.F.1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'refrigeration and air conditioning' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Refrigeration and air-conditioning systems are usually classified in six application domains or categories. These categories utilise different technologies such as heat exchangers, expansion devices, pipings and compressors. The six application domains are domestic refrigeration, commercial refrigeration, industrial processes, transport refrigeration, stationary air conditioning, mobile airconditioning systems. For all these applications, various HFCs are selectively replacing CFCs and HCFCs. For example, in developed countries, HFC-134a has replaced CFC-12 in domestic refrigeration and mobile air conditioning systems, and blends of HFCs such as R-407C (HFC-32/HFC-125/HFC-134a) and R-410A (HFC-32/HFC-125) are replacing HCFC-22 mainly in stationary air conditioning. Other, non HFC substances are used to replace CFCs and HCFCs such as iso-butane in domestic refrigeration or ammonia in industrial refrigeration. HFC- 152a is also being considered for mobile air conditioning in several regions.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): refrigeration and air conditioning"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010171
+    
+    
+Individual: OEO_00010369
+
+    Annotations: 
+        OEO_00010037 "CRF 2.F.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'foam blowing agents' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+HFCs are being used as replacements for CFCs and HCFCs in foams, particularly in closed-cell insulation applications. Compounds that are being used include HFC-245fa, HFC-365mfc, HFC-227ea, HFC-134a, and HFC-152a. The processes and applications for which these various HFCs are being used include insulation boards and panels, pipe sections, sprayed systems and onecomponent gap filling foams. For open-cell foams, such as integral skin products for automotive steering wheels and facias, emissions of HFCs used as blowing agents are likely to occur during the manufacturing process. In closedcell foam, emissions not only occur during the manufacturing phase, but usually extend into the in-use phase and often the majority of emission occurs at the endof-life (de-commissioning losses). Accordingly, emissions can occur over a period of up to 50 years or even longer.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): foam blowing agents"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010171
+    
+    
+Individual: OEO_00010370
+
+    Annotations: 
+        OEO_00010037 "CRF 2.F.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'fire protection' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+There are two general types of fire protection (fire suppression) equipment that use greenhouse gases as partial replacements for halons: portable (streaming) equipment, and fixed (flooding) equipment. The non-ozone depleting, industrial gases HFCs, PFCs and more recently a fluoroketone are mainly used as substitutes for halons, typically halon 1301, in flooding equipment. PFCs played an early role in halon 1301 replacement but current use is limited to replenishment of previously installed systems. HFCs in portable equipment, typically replacing halon 1211, are available but have achieved very limited market acceptance due primarily to their high cost. PFC use in new portable extinguishers is currently limited to a small amount (few percent) in an HCFC blend.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): fire protection"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010171
+    
+    
+Individual: OEO_00010371
+
+    Annotations: 
+        OEO_00010037 "CRF 2.F.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'aerosols' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Most aerosol packages now contain hydrocarbon (HC) as propellants but, in a small fraction of the total, HFCs and PFCs may be used as propellants or solvents. Emissions from aerosols usually occur shortly after production, on average six months after sale. During the use of aerosols, 100% of the chemical is emitted. The 5 main sources are metered dose inhalers (MDIs), personal care products (e.g. hair care, deodorant, shaving cream), household products (e.g. air-fresheners, oven and fabric cleaners), industrial products (e.g. special cleaning sprays such as those for operating electrical contact, lubricants, pipe-freezers) and other general products (e.g. silly string, tire inflators, claxons), although in some regions the use of such general products is restricted. The HFCs currently used as propellants are HFC 134a, HFC 227ea, and HFC 152a. The substance HFC 43 10mee and a PFC, perfluorohexane, are used as solvents in industrial aerosol products.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): aerosols"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010171
+    
+    
+Individual: OEO_00010372
+
+    Annotations: 
+        OEO_00010037 "CRF 2.F.5",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'solvents' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+HFCs and, to a much lesser extent PFCs, are being used as substitutes for ozone depleting substances (most notably CFC-113). Typical HFCs used are HFC-365mfc and HFC-43-10mee. Use of these fluorinated replacements is much less widespread than the ozone depleting substances they replace. Re-capture and re-use is also much more widely practiced The primary areas of use are precision cleaning, electronics cleaning, metal cleaning and deposition applications. Emissions from aerosols containing solvents should be reported undercategory 2F4 \"Aerosols\" rather than under this category.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): solvents"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010171
+    
+    
+Individual: OEO_00010373
+
+    Annotations: 
+        OEO_00010037 "CRF 2.F.6",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'other applications' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+The properties of ozone depleting substances have made them attractive for a variety of niche applications not covered in other sub-source categories. These include electronics testing, heat transfer, dielectric fluid and medical applications. The properties of HFCs and PFCs are equally attractive in some of these sectors and they have been adopted as substitutes. There are also some historical uses of PFCs, as well as emerging use of HFCs, in these applications. These applications have leakage rates ranging from 100% emissive in year of application to around 1% per annum.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): other applications"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010171
+    
+    
+Individual: OEO_00010374
+
+    Annotations: 
+        OEO_00010037 "CRF 2.G.1",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'electrical equipment' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Electrical equipment is used in the transmission and distribution of electricity above 1 kV. SF6 is used in gasinsulated switchgear (GIS), gas circuit breakers (GCB), gas-insulated transformers (GIT), gas-insulated lines (GIL), outdoor gas-insulated instrument transformers, reclosers, switches, ring main units and other equipment.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): electrical equipment"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010172
+    
+    
+Individual: OEO_00010375
+
+    Annotations: 
+        OEO_00010037 "CRF 2.G.2",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'SF6 and PFCs from other product use' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Identified remaining applications in this source category include:
+- SF6 and PFCs used in military applications, particularly SF6 used in airborne radar systems, e.g., AWACS (Airborne Warning and Control System), and PFCs used as heat transfer fluids in high-powered electronic applications;
+- SF6 used in equipment in university and research particle accelerators;
+- SF6 used in equipment in industrial and medical particle accelerators;
+- ‘Adiabatic’ applications utilising the low permeability through rubber of SF6 and some PFCs, e.g., car tires and sport shoe soles;
+- SF6 used in sound-proof windows;
+- PFCs used as heat transfer fluids in commercial and consumer applications;
+- PFCs used in cosmetics and in medical applications;
+- Other uses e.g. gas-air tracer in research and leak detectors.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 3, Chapter 8.3, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): SF6 and PFCs from other product use"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010172
+    
+    
+Individual: OEO_00010376
+
+    Annotations: 
+        OEO_00010037 "CRF 2.G.3",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'N2O from product use' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
+Evaporative emissions of nitrous oxide (N2O) can arise from various types of product use, including:
+- Medical applications (anaesthetic use, analgesic use and veterinary use);
+- Use as a propellant in aerosol products, primarily in food industry (pressure-packaged whipped cream, etc);
+- Oxidising agent and etchant used in semiconductor manufacturing;
+- Oxidising agent used, with acetylene, in atomic absorption spectrometry;
+- Production of sodium azide, which is used to inflate airbags;
+- Fuel oxidant in auto racing; and
+- Oxidising agent in blowtorches used by jewelers and others.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 3, Chapter 8.4.1, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): N2O from product use"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010172
+    
+    
+Individual: OEO_00010377
+
+    Annotations: 
+        OEO_00010037 "CRF 2.G.4",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'other product manufacture and use - other' is an industry sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1401
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440",
+        rdfs:label "CRF sector (IPCC 2006): other product manufacture and use - other"@en
+    
+    Types: 
+        OEO_00000227
+    
+    Facts:  
+     OEO_00000504  OEO_00000242,
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010172
+    
+    
+Individual: OEO_00010389
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The RED sector electricity is an electricity sector defined by the Renewable Energy Directive sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1443
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446",
+        rdfs:label "RED sector: electricity"@en
+    
+    Types: 
+        OEO_00000145
+    
+    Facts:  
+     OEO_00000504  OEO_00000355
+    
+    
+Individual: OEO_00010390
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The RED sector heating and cooling is a heating and cooling sector defined by the Renewable Energy Directive sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1443
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446",
+        rdfs:label "RED sector: heating and cooling"@en
+    
+    Types: 
+        OEO_00000213
+    
+    Facts:  
+     OEO_00000504  OEO_00000355
+    
+    
+Individual: OEO_00010391
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The RED sector heating and cooling is a heating and cooling sector defined by the Renewable Energy Directive sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1443
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1446",
+        rdfs:label "RED sector: transport"@en
+    
+    Types: 
+        OEO_00000422
+    
+    Facts:  
+     OEO_00000504  OEO_00000355
+    
+    
 DisjointClasses: 
     OEO_00000145,OEO_00000213,OEO_00000422
+
+DifferentIndividuals: 
+    OEO_00010131,OEO_00010134,OEO_00010135
 
 DifferentIndividuals: 
     OEO_00010305,OEO_00010306,OEO_00010307,OEO_00010308,OEO_00010309,OEO_00010310,OEO_00010311

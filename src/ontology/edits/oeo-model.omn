@@ -62,9 +62,6 @@ AnnotationProperty: dc:contributor
 AnnotationProperty: dc:description
 
     
-AnnotationProperty: owl:equivalentClass
-
-    
 AnnotationProperty: rdfs:comment
 
     
@@ -105,6 +102,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
 
     
 ObjectProperty: OEO_00000503
+
+    
+ObjectProperty: OEO_00000504
 
     
 ObjectProperty: OEO_00000511
@@ -191,6 +191,24 @@ ObjectProperty: OEO_00000522
         OEO_00020011
     
     
+ObjectProperty: OEO_00010378
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between an information content entity and a spatial region that describes that the information content entity is about a spatial region.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
+        rdfs:label "has spatial region"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
 ObjectProperty: OEO_00020056
 
     
@@ -199,11 +217,15 @@ ObjectProperty: OEO_00020220
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a study region to indicate the study region of a scenario.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
         rdfs:label "has study region"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
+        OEO_00010378
     
     Domain: 
         OEO_00000364
@@ -217,11 +239,15 @@ ObjectProperty: OEO_00020221
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a considered region to indicated a considered region of a scenario.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
         rdfs:label "has considered region"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
+        OEO_00010378
     
     Domain: 
         OEO_00000364
@@ -235,11 +261,15 @@ ObjectProperty: OEO_00020222
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and an interacting region to indicate an interacting region of a scenario.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
         rdfs:label "has interacting region"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
+        OEO_00010378
     
     Domain: 
         OEO_00000364
@@ -253,11 +283,15 @@ ObjectProperty: OEO_00020223
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a study subregion to indicate a study subregion of a scenario.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+Make subproperty of 'has spatial region':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441",
         rdfs:label "has study subregion"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
+        OEO_00010378
     
     Domain: 
         OEO_00000364
@@ -699,18 +733,6 @@ source: https://en.wikipedia.org/wiki/Digital_object_identifier"@en,
     
 Class: OEO_00000149
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical dataset is a dataset that is obtained from observations in the real world."@en,
-        rdfs:label "empirical dataset"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000100>
-    
-    DisjointWith: 
-        OEO_00000403
-    
     
 Class: OEO_00000161
 
@@ -1019,6 +1041,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
 Class: OEO_00000367
 
     
+Class: OEO_00000368
+
+    
 Class: OEO_00000370
 
     Annotations: 
@@ -1114,25 +1139,15 @@ Class: OEO_00000392
     
 Class: OEO_00000403
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealised model year."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic dataset is a dataset that is obtained by artificially creating data items. It is constructed to be an estimation of a real-world dataset."@en,
-        rdfs:label "synthetic dataset"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000100>
-    
-    DisjointWith: 
-        OEO_00000149
-    
     
 Class: OEO_00000408
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A test dataset is a data set used for testing."^^xsd:string,
-        rdfs:label "test dataset"
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A test data set is a data set used for testing."^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Harmonise label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "test data set"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000100>
@@ -1283,6 +1298,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
         OEO_00020226 some OEO_00000364,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000275,
         <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00020013
+    
+    
+Class: OEO_00010296
+
+    
+Class: OEO_00010362
+
+    
+Class: OEO_00010404
+
+    
+Class: OEO_00010405
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance collection is a data set of energy balances for various time steps and/or temporal regions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "energy balance collection"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010404,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030033,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00010406
+
+    
+Class: OEO_00010407
+
+    
+Class: OEO_00010411
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A forecast is an information content entity that contains statements about the most probable future development predicted with the help of past and present data.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1501
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1544",
+        rdfs:label "forecast"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
 Class: OEO_00020011
@@ -1515,6 +1572,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
         <http://purl.obolibrary.org/obo/BFO_0000006>
     
     
+Class: OEO_00020039
+
+    
 Class: OEO_00020072
 
     Annotations: 
@@ -1695,6 +1755,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020097
     
     
+Class: OEO_00020166
+
+    
 Class: OEO_00020227
 
     Annotations: 
@@ -1706,6 +1769,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1429",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
         <http://purl.obolibrary.org/obo/IAO_0000136> some <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
+    
+    
+Class: OEO_00020247
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A target driven scenario is a scenario that contains certain target constraints/ statements that in a possible future shall be realized. The path how the targets will be met is not predefined in the scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1110
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459",
+        rdfs:label "target driven scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00020248
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An explorative scenario is a scenario that contains certain constraints / statements regarding measures that are taken in the near future / today to explore where these measures will lead to in a later future. The later future is not predefined in the scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1110
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459",
+        rdfs:label "explorative scenario"
+    
+    SubClassOf: 
+        OEO_00000364
     
     
 Class: OEO_00030007
@@ -1911,11 +1998,16 @@ Class: OEO_00140139
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A yield profile is a generation time series of a particular renewable power plant.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793
+
+Add 'is about' axiom:
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1423
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
         rdfs:label "yield profile"@en
     
     SubClassOf: 
-        OEO_00140138
+        OEO_00140138,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010362
     
     
 Class: OEO_00140161

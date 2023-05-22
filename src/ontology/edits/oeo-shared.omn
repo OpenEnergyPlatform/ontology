@@ -11,7 +11,7 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-shared/>
 <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/iao-module.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/ro-module.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/ro-extracted.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/uo-module.owl>
 Import: <http://purl.obolibrary.org/obo/omo.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
@@ -40,6 +40,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0006011>
 
     
 AnnotationProperty: <http://purl.org/dc/terms/license>
@@ -82,9 +85,6 @@ AnnotationProperty: dc:description
 
     
 AnnotationProperty: dc:identifier
-
-    
-AnnotationProperty: owl:equivalentClass
 
     
 AnnotationProperty: rdfs:comment
@@ -233,12 +233,6 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0001025>
 
-    Domain: 
-        <http://purl.obolibrary.org/obo/BFO_0000004>
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/BFO_0000004>
-    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002222>
 
@@ -349,9 +343,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871",
 ObjectProperty: OEO_00000501
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a continuant c1 and a continuant c2, where c1 is required by c2 as input to work.",
         rdfs:comment "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
-pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472",
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/472
+add def and domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1117
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/1508",
         rdfs:label "is used by"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
     
     InverseOf: 
         OEO_00000503
@@ -385,12 +389,15 @@ issue: https://github.com/OpenEnergyPlatform/ontology/pull/1085",
 ObjectProperty: OEO_00000503
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a continuant and another continuant it requires to function.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a continuant c1 and a continuant c2, where c1 requires c2 as input to work.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/66
 pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/452 (delete unused subclass)
 https://github.com/OpenEnergyPlatform/ontology/pull/472 (move to oeo-shared)
 https://github.com/OpenEnergyPlatform/ontology/pull/478 (add definition)
-https://github.com/OpenEnergyPlatform/ontology/pull/871 (add domain and range)",
+https://github.com/OpenEnergyPlatform/ontology/pull/871 (add domain and range)
+change def
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1117
+pull requests: https://github.com/OpenEnergyPlatform/ontology/pull/1508",
         rdfs:label "uses"
     
     Domain: 
@@ -401,6 +408,30 @@ https://github.com/OpenEnergyPlatform/ontology/pull/871 (add domain and range)",
     
     InverseOf: 
         OEO_00000501
+    
+    
+ObjectProperty: OEO_00000504
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a continuant (A) and a continuant or occurent (B) in which (A) determines the semantic of (B)",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/460
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/480/
+
+domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871
+
+adapt domains and ranges:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
+issue: https://github.com/OpenEnergyPlatform/ontology/pull/1085
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "is defined by"
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
     
     
 ObjectProperty: OEO_00000505
@@ -781,7 +812,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
 ObjectProperty: OEO_00010121
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant or energy (the dependent) and an independent continuant (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant or energy (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853
 
@@ -791,7 +822,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
 
 extend range to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
+
+correct definition with respect to energy:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
         rdfs:label "has bearer"@en
     
     Domain: 
@@ -893,6 +928,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/710",
     InverseOf: 
         OEO_00140002
     
+    
+ObjectProperty: OEO_00020071
+
     
 ObjectProperty: OEO_00020179
 
@@ -1160,6 +1198,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000006>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000009>
 
     SubClassOf: 
@@ -1311,11 +1352,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "fuel role",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_33292"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/CHEBI_33292",
+        rdfs:label "fuel role"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
@@ -1332,11 +1373,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/214
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "chemical energy",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000023"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_2000023",
+        rdfs:label "chemical energy"
     
     SubClassOf: 
         OEO_00000150
@@ -1440,14 +1481,22 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
 
 subclass of energy transformation unit
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
+more precise axioms
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360",
         rdfs:label "power plant"
+    
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334)
     
     SubClassOf: 
         OEO_00020102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020006,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240014
     
     
 Class: OEO_00000051
@@ -1635,17 +1684,61 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221
 move class to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        rdfs:label "electrical energy",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000020"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_2000020",
+        rdfs:label "electrical energy"
     
     SubClassOf: 
         OEO_00000150,
         OEO_00020182 some OEO_00020207,
         OEO_00020182 some OEO_00020208,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00000143
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a supply grid that distributes electrical energy / electricity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/138
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/165
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1360
+
+updated part relation between electricity grid and power line to have simple restrictions:
+
+replace min 1 restriction by some restriction
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1430
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1479",
+        rdfs:label "electricity grid"
+    
+    SubClassOf: 
+        OEO_00000200,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000253
+    
+    
+Class: OEO_00000144
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid component is a grid component that is part of an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "electricity grid component"
+    
+    EquivalentTo: 
+        OEO_00020006
+         and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143)
+    
+    SubClassOf: 
+        OEO_00020006
     
     
 Class: OEO_00000147
@@ -1681,6 +1774,23 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956",
         OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
+Class: OEO_00000149
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical data set is a dataset that is obtained from observations in the real world."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Move to oeo-shared and harmonise label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "empirical data set"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    DisjointWith: 
+        OEO_00000403
+    
+    
 Class: OEO_00000150
 
     Annotations: 
@@ -1702,17 +1812,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1165
 
 Axiomatise relations between origin, energy and portion of matter:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
-        rdfs:comment "Energy is power integrated over time.",
-        rdfs:label "energy",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+Add bearer:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000015"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_2000015",
+        rdfs:comment "Energy is power integrated over time.",
+        rdfs:label "energy"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00000530 some OEO_00000316
+        OEO_00000530 some OEO_00000316,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000151
@@ -1813,11 +1928,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1353
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "greenhouse effect disposition",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/CHEBI_76413"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/CHEBI_76413",
+        rdfs:label "greenhouse effect disposition"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
@@ -1900,11 +2015,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/609
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390"@en,
-        rdfs:label "thermal energy"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_2000032"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_2000032",
+        rdfs:label "thermal energy"@en
     
     SubClassOf: 
         OEO_00000150
@@ -1921,6 +2036,39 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871",
     
     SubClassOf: 
         OEO_00030022
+    
+    
+Class: OEO_00000253
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power line is a grid component link that is an uninterrupted transmission system between two nodes in an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "power line"@en
+    
+    SubClassOf: 
+        OEO_00000255,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
+    
+    
+Class: OEO_00000255
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component link is a grid component that serves as a connection between two other grid components."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1360"@en,
+        rdfs:label "grid component link"
+    
+    SubClassOf: 
+        OEO_00020006
     
     
 Class: OEO_00000264
@@ -2078,7 +2226,7 @@ Class: OEO_00000334
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an energy transformation unit that contains a generator."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an energy transformation unit that has the function to produce electrical energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "block",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
@@ -2095,8 +2243,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
 remove \"among other parts from definition\"
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1258
-pull request: https://github.com/OpenEnergyPlatform/ontology/issues/1259"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/issues/1259
+
+New function-based definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+https://github.com/OpenEnergyPlatform/ontology/pull/1360"@en,
         rdfs:label "power generating unit"
+    
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010386)
     
     SubClassOf: 
         OEO_00020102,
@@ -2138,11 +2294,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
-        rdfs:label "quantity value",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/IAO_0000032"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/IAO_0000032",
+        rdfs:label "quantity value"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
@@ -2162,6 +2318,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>
+    
+    
+Class: OEO_00000368
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A sector division is a specific way to subdivide a system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463
+
+Add relation to organisation or person:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1449
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1506",
+        rdfs:label "sector division"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        OEO_00000504 some 
+            (OEO_00000323 or OEO_00030022)
     
     
 Class: OEO_00000395
@@ -2185,6 +2363,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
         OEO_00010121 some OEO_00000331
+    
+    
+Class: OEO_00000403
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The projected power usage during an idealised model year."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A synthetic data set is a dataset that is obtained by artificially creating data items. It is constructed to be an estimation of a real-world dataset."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Harmonise label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "synthetic data set"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    DisjointWith: 
+        OEO_00000149
     
     
 Class: OEO_00000419
@@ -2233,11 +2428,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
-        rdfs:label "vehicle",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000604"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_01000604",
+        rdfs:label "vehicle"
     
     SubClassOf: 
         OEO_00000061,
@@ -2275,6 +2470,46 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
+    
+    
+Class: OEO_00010082
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "trade"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
+    
+    
+Class: OEO_00010083
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in trading in a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
+
+update definition and improve axiom:
+https://github.com/OpenEnergyPlatform/ontology/issues/617
+https://github.com/OpenEnergyPlatform/ontology/pull/1019
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "market participant"@en
+    
+    SubClassOf: 
+        OEO_00000051,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010082
     
     
 Class: OEO_00010114
@@ -2324,7 +2559,7 @@ Class: OEO_00010117
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of a continuant over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of an independent continuant or energy over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
@@ -2336,13 +2571,81 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         rdfs:label "good role"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000002>,
+        OEO_00010121 some 
+            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>),
         OEO_00020180 some OEO_00040003
+    
+    
+Class: OEO_00010127
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy production is the production of secondary energy carriers.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "secondary production of energy",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
+pull: https://github.com/OpenEnergyPlatform/ontology/pull/865
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+        rdfs:label "secondary energy production"@en
+    
+    SubClassOf: 
+        OEO_00240003,
+        OEO_00000533 some OEO_00140079,
+        OEO_00140002 some OEO_00050019
+    
+    
+Class: OEO_00010210
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy use is the consumption of an energy carrier making use of the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy consumption",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
+
+Add alternative label:
+https://github.com/OpenEnergyPlatform/ontology/pull/1321
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "energy use"@en
+    
+    SubClassOf: 
+        OEO_00140039,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
+    
+    
+Class: OEO_00010211
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
+
+add 'has participant axiom':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "non-energy use"@en
+    
+    SubClassOf: 
+        OEO_00140039,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
     
     
 Class: OEO_00010263
@@ -2454,24 +2757,47 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253",
         OEO_00020154
     
     
+Class: OEO_00010296
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A primary energy consumption calculation method is a methodology to calculate primary energy consumption.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "primary energy consumption calculation method"@en
+    
+    SubClassOf: 
+        OEO_00020166,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00050018
+    
+    
 Class: OEO_00010315
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refining process is an energy transformation that converts crude oil by cracking and distillation into various mineral oil products.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mineral oil refining process is a secondary energy production that converts crude oil by cracking and distillation into various mineral oil products.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "mineral oil refining",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331
 
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+make subclass of secondary energy production and further changes:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
         rdfs:label "mineral oil refining process"
     
     SubClassOf: 
-        OEO_00020003,
+        OEO_00010127,
         OEO_00000532 some OEO_00000115,
         OEO_00000533 some OEO_00010316,
         OEO_00010234 some OEO_00000007,
-        OEO_00010235 some OEO_00000007
+        OEO_00010235 some OEO_00000007,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140033
     
     
 Class: OEO_00010316
@@ -2483,7 +2809,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331
 
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+Add 'secondary energy carrier disposition' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
         rdfs:label "mineral oil product"
     
     EquivalentTo: 
@@ -2491,7 +2821,130 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
          and (OEO_00240025 some OEO_00010315)
     
     SubClassOf: 
-        OEO_00000014
+        OEO_00000014,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076
+    
+    
+Class: OEO_00010361
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable power unit is a power generating unit that has the function to transform renewable energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1423
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+        rdfs:label "renewable power unit"@en
+    
+    EquivalentTo: 
+        OEO_00000334
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010388)
+    
+    SubClassOf: 
+        OEO_00000334,
+        OEO_00010234 some OEO_00020085
+    
+    
+Class: OEO_00010362
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable power plant is a power plant that has renewable power units as parts.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1423
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+        rdfs:label "renewable power plant"@en
+    
+    EquivalentTo: 
+        OEO_00000031
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010361)
+    
+    SubClassOf: 
+        OEO_00000031
+    
+    
+Class: OEO_00010385
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation function is the function of an artificial object that has been engineered to transform input energy into usable output energy of a different type.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1438
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1445
+
+Move to oeo-shared:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+        rdfs:label "energy transformation function"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000034>,
+        OEO_00010121 some OEO_00000061
+    
+    
+Class: OEO_00010386
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generation function is an energy transformation function to transform other types of energy to electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "electrical energy generation function",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1438
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1445
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1360",
+        rdfs:label "electricity generation function"@en
+    
+    SubClassOf: 
+        OEO_00010385
+    
+    
+Class: OEO_00010388
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy function is the energy transformation function to transform renewable energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1438
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1445
+
+Move to oeo-shared:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+        rdfs:label "renewable energy transformation function"@en
+    
+    SubClassOf: 
+        OEO_00010385
+    
+    
+Class: OEO_00010404
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance is an empirical data set that describes a specified set of energy transformations and a specified set of energy carriers in a spatial region for a specific time step (usually a year).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "energy balance"
+    
+    SubClassOf: 
+        OEO_00000149,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020039,
+        <http://purl.obolibrary.org/obo/IAO_0000136> exactly 1 OEO_00030033,
+        <http://purl.obolibrary.org/obo/IAO_0000136> exactly 1 <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00010406
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance calculation method is a methodology to calculate an energy balance.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "energy balance calculation method"@en
+    
+    SubClassOf: 
+        OEO_00020166,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010296,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010404
+    
+    
+Class: OEO_00010407
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance sector division is a sector division that is defined by an energy balance calculation method.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463",
+        rdfs:label "energy balance sector division"@en
+    
+    SubClassOf: 
+        OEO_00000368,
+        OEO_00000504 some OEO_00010406
     
     
 Class: OEO_00020003
@@ -2659,6 +3112,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1173",
         <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
+Class: OEO_00020060
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "fuel market exchange"
+    
+    SubClassOf: 
+        OEO_00020065,
+        OEO_00020071 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066)
+    
+    
 Class: OEO_00020063
 
     Annotations: 
@@ -2676,6 +3148,23 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1034",
         OEO_00020015,
         OEO_00020180 some OEO_00020154,
         OEO_00140002 some OEO_00010079
+    
+    
+Class: OEO_00020065
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "energy market exchange"
+    
+    SubClassOf: 
+        OEO_00020069
     
     
 Class: OEO_00020066
@@ -2728,6 +3217,52 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     SubClassOf: 
         OEO_00020067
+    
+    
+Class: OEO_00020069
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "market exchange"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+    
+    SubClassOf: 
+        OEO_00030022,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/617
+https://github.com/OpenEnergyPlatform/ontology/pull/1019"
+        <http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00010082
+             and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010083))
+    
+    
+Class: OEO_00020085
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy is an energy that has renewable origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+Move to oeo-shared:
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1423
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+        rdfs:label "renewable energy"
+    
+    EquivalentTo: 
+        OEO_00000150
+         and (OEO_00000530 some OEO_00030004)
+    
+    SubClassOf: 
+        OEO_00000150
     
     
 Class: OEO_00020102
@@ -3252,6 +3787,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
             (OEO_00000150 or OEO_00000331)
     
     
+Class: OEO_00030004
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Renewable is an origin of energies that replenish on a human time scale.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/397
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/398
+include \"or energies\"
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/728
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
+change def
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+Axiomatise relations between origin, energy and portion of matter:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
+
+Move to oeo-shared:
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1423
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+        rdfs:label "renewable"
+    
+    SubClassOf: 
+        OEO_00000316,
+        OEO_00010121 some OEO_00000150
+    
+    
 Class: OEO_00030015
 
     Annotations: 
@@ -3406,11 +3971,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "time series",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/IAO_0000584"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/IAO_0000584",
+        rdfs:label "time series"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000100>,
@@ -3437,6 +4002,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1017",
         OEO_00000350,
         OEO_00020056 some <http://purl.obolibrary.org/obo/BFO_0000038>,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000003>
+    
+    
+Class: OEO_00040002
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "market",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "https://github.com/OpenEnergyPlatform/ontology/issues/341
+https://github.com/OpenEnergyPlatform/ontology/pull/639
+
+https://github.com/OpenEnergyPlatform/ontology/issues/677
+https://github.com/OpenEnergyPlatform/ontology/pull/740
+
+change label to market exchange role
+https://github.com/OpenEnergyPlatform/ontology/pull/748
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+        rdfs:label "market exchange role"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
 Class: OEO_00040003
@@ -3520,6 +4112,38 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843",
         OEO_00010117
     
     
+Class: OEO_00050018
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy consumption is an energy consumption value accounting for the total consumption of energy in a spatial region excluding the non-energetic use of fuels."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Primary energy consumption covers consumption of the energy sector itself, losses during transformation (for example, from oil or gas into electricity) and distribution of energy, and the final consumption by end users. It excludes energy carriers used for non-energy purposes (such as petroleum not used not for combustion but for producing plastics)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Primary energy consumption excluding non-energy use of energy carriers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Eurostat Energy Glossary
+https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Primary_energy_consumption"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/709
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/719
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
+
+make energy consumption value:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463"@en,
+        rdfs:label "primary energy consumption"@en
+    
+    SubClassOf: 
+        OEO_00240019,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950"
+        (not (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010211))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010210)
+    
+    
 Class: OEO_00050019
 
     Annotations: 
@@ -3566,11 +4190,11 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289
 add has participant axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1271
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1309",
-        rdfs:label "transport"@en,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_02000125"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_02000125",
+        rdfs:label "transport"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
@@ -3717,13 +4341,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
         rdfs:label "demand"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>,
         OEO_00010121 some 
-            (OEO_00000323 or OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
+            (OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
     
     
 Class: OEO_00140043
@@ -3776,6 +4401,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
     SubClassOf: 
         OEO_00000151
+    
+    
+Class: OEO_00140076
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "blast furnace gas, coke oven gas, cokes, motor gasoline or electricity have the disposition to be a secondary energy carrier",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy carrier disposition is an energy carrier disposition of material entities that are manufactured from primary energy carriers or from a different form of secondary energy carriers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+        rdfs:label "secondary energy carrier disposition"@en
+    
+    SubClassOf: 
+        OEO_00000151
+    
+    
+Class: OEO_00140079
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the secondary energy carrier disposition.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
+fix error in definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/669
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/678
+
+Move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+        rdfs:label "secondary energy carrier"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076)
+    
+    SubClassOf: 
+        OEO_00020039
     
     
 Class: OEO_00140081
@@ -3870,6 +4537,23 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041",
     EquivalentTo: 
         OEO_00020003
          and (OEO_00010235 some OEO_00000139)
+    
+    
+Class: OEO_00240019
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption value is an energy amount value that measures the energy consumption over a time span."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/916
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/997
+
+Move to oeo-shared:
+https://github.com/OpenEnergyPlatform/ontology/pull/1463"@en,
+        rdfs:label "energy consumption value"
+    
+    SubClassOf: 
+        OEO_00050019,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030035
     
     
 Class: OEO_00240022
@@ -3999,6 +4683,30 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1388",
     
     SubClassOf: 
         OEO_00320001
+    
+    
+Class: OEO_00320073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An amortisation time is the time span in which the investment costs are refinanced from the annual profits and depreciation of the investment.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1380
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1436",
+        rdfs:label "amortisation time"
+    
+    SubClassOf: 
+        OEO_00030035
+    
+    
+Class: OEO_00320074
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic life time is the operational life time during which an artificial object is profitable to the owner.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1380
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1436",
+        rdfs:label "economic life time"
+    
+    SubClassOf: 
+        OEO_00020178
     
     
 Individual: OEO_00000182
