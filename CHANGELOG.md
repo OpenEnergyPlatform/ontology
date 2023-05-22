@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
 - propulsion/energy-to-motion (#1541)
+- forecast (#1544)
 - creative work (#1547)
 
 ### Changed
@@ -30,7 +31,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
-- has copyright license -> has licence; information content entity; data set, database, model, software, document, software documentation, factsheet, report (#1547)
+- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
 
 ## [1.13.0] - 2023-02-01
 
