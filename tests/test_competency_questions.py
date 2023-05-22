@@ -19,7 +19,7 @@ ONTOLOGY_PATH = (
     Path(CWD)
     .joinpath("build/oeo")
     .joinpath(f"{__version__}")
-    .joinpath("oeo-full.omn")
+    .joinpath("oeo-full.owl")
     .as_posix()
 )
 EXISTING_TERMS_AND_DEFINITONS = (

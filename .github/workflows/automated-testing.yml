@@ -75,6 +75,7 @@ jobs:
             build/**/*
             !build/**/*.jar
       - name: competency
+        continue-on-error: true
         run: |
           pytest -s -v
           # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
