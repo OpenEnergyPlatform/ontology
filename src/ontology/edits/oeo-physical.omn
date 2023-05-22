@@ -374,7 +374,7 @@ Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas mixture is a portion of matter that is a composition of different kinds of portions of matter and that has a gaseous normal state of matter.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009",
         rdfs:label "gas mixture"@en
     
     SubClassOf: 
@@ -617,11 +617,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1210",
 Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010253>
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is a process of pushing or pulling to drive an object.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "traction process",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Traction is a process of pushing or pulling to drive an object.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "propulsion",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1029
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135",
-        rdfs:label "propulsion"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1135
+relabel
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1528
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1541",
+        rdfs:label "traction"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
@@ -1455,7 +1458,11 @@ remove origin
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
 make subclass of gas mixture and improve definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009
+
+remove axiom 'is used by' some 'energy storage unit'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1495
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1499",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -1464,7 +1471,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010236>,
-        OEO_00000501 some OEO_00000399,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000446,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
         OEO_00000529 value OEO_00000182
@@ -1653,7 +1659,7 @@ Class: OEO_00000074
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
 improve definition and make subclass of gas mixture:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -2658,7 +2664,7 @@ Class: OEO_00000263
         <http://purl.obolibrary.org/obo/IAO_0000115> "A manufactured coal based gas is a gas mixture that is manufactured from coal. It is used as fossil fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "improve definition and make subclass of gas mixture:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009
 add axiom to secondary energy carrier disposition
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1243",
@@ -2750,7 +2756,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
 
 improve definition and make subclass of gas mixture and add disjoints:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -3421,11 +3427,15 @@ Class: OEO_00000399
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A storage unit is a grid component that stores energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage unit is a grid component that stores energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "Make equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1338
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
-        rdfs:label "storage unit"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+
+Changed 'storage unit' to 'energy storage unit'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1466
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
+        rdfs:label "energy storage unit"
     
     EquivalentTo: 
         OEO_00020006
@@ -5094,23 +5104,6 @@ Class: OEO_00010117
     
 Class: OEO_00010127
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy production is the production of secondary energy carriers.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "secondary production of energy",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add alternative term:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
-pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
-pull: https://github.com/OpenEnergyPlatform/ontology/pull/865",
-        rdfs:label "secondary energy production"@en
-    
-    SubClassOf: 
-        OEO_00240003,
-        OEO_00000533 some OEO_00140079,
-        OEO_00140002 some OEO_00050019
-    
     
 Class: OEO_00010137
 
@@ -5452,7 +5445,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
 
 improve definition and make subclass of gas mixture:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009",
         rdfs:label "biomethane"@en
     
     SubClassOf: 
@@ -5697,7 +5690,11 @@ Class: OEO_00010256
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A maximum value is a quantity value that represents the upper limit of an artificial object or process to contain or transform another entity.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1092
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1155
+
+Made 'energy storage capacity' subclass of \"maximum value'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1466
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
         rdfs:label "maximum value"
     
     SubClassOf: 
@@ -6773,6 +6770,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
         OEO_00020070 some OEO_00020060
     
     
+Class: OEO_00010410
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transfer function is a function of an artificial object that has been engineered to transfer energy over a spatial distance.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1454
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1515",
+        rdfs:label "energy transfer function"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000034>,
+        OEO_00010121 some OEO_00000061
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -7536,6 +7546,36 @@ Class: OEO_00020210
         OEO_00000331,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000441,
         OEO_00000531 value OEO_00000256
+    
+    
+Class: OEO_00020249
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A compressed-air energy storage unit is an energy storage unit that uses compressed air.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1495
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1499",
+        rdfs:label "compressed-air energy storage unit"@de
+    
+    SubClassOf: 
+        OEO_00000399,
+        OEO_00000503 some OEO_00000102
+    
+    
+Class: OEO_00020251
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is an energy transformation that converts other forms of energy to kinetic energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy-to-motion-process",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1528
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1541",
+        rdfs:label "propulsion"@en
+    
+    EquivalentTo: 
+        OEO_00020003
+         and (OEO_00010235 some OEO_00230020)
+    
+    SubClassOf: 
+        OEO_00020003
     
     
 Class: OEO_00030000
@@ -8467,17 +8507,6 @@ Class: OEO_00140075
     
 Class: OEO_00140076
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "blast furnace gas, coke oven gas, cokes, motor gasoline or electricity have the disposition to be a secondary energy carrier",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy carrier disposition is an energy carrier disposition of material entities that are manufactured from primary energy carriers or from a different form of secondary energy carriers.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
-        rdfs:label "secondary energy carrier disposition"@en
-    
-    SubClassOf: 
-        OEO_00000151
-    
     
 Class: OEO_00140077
 
@@ -8512,23 +8541,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
     
 Class: OEO_00140079
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the disposition secondary energy carrier disposition.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
-fix error in definition
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/669
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/678",
-        rdfs:label "secondary energy carrier"@en
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
-         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076)
-    
-    SubClassOf: 
-        OEO_00020039
-    
     
 Class: OEO_00140080
 
@@ -8880,7 +8892,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/931
 
 improve definition and make subclass of gas mixture:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/988
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1007
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009
 
 add axiom to secondary energy carrier disposition
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1222
@@ -8978,13 +8990,17 @@ Class: OEO_00230000
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Storage capacity is the quantity value stating the maximum energy an energy storage object can store.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage capacity is the quantity value stating the maximum energy an energy storage object can store.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/320
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391",
-        rdfs:label "storage capacity"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/391
+
+Changed 'storage capacity' to 'energy storage capacity' 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1466
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
+        rdfs:label "energy storage capacity"
     
     SubClassOf: 
-        OEO_00000350,
+        OEO_00010256,
         OEO_00020056 some OEO_00000159
     
     
@@ -11122,6 +11138,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
     SubClassOf: 
         OEO_00000335,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010222
+    
+    
+Class: OEO_00330012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage content is an energy amount value that measures the quantity of energy stored in an energy storage object.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1466
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
+        rdfs:label "energy storage content"@en
+    
+    SubClassOf: 
+        OEO_00050019,
+        OEO_00020056 some OEO_00000159
+    
+    
+Class: OEO_00330013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage level is a utilisation value that measures the utilisation/usage/exploitation of energy storage capacity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1466
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
+        rdfs:label "energy storage level"@en
+    
+    SubClassOf: 
+        OEO_00320072,
+        OEO_00020056 some OEO_00000159
     
     
 Individual: OEO_00000182

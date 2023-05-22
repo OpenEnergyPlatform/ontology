@@ -3,18 +3,33 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-## [1.X.X] - 20XX-XX-XX
+## [1.14.0] - 2023-03-30
 
 ### Added
 - CRF-based sector division, EU legislation sector division (#1462)
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
 - power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
+- energy storage level, energy storage content (#1486)
+- compressed-air energy storage unit (#1499)
+- added built ontology to the pipeline artifacts (#1475)
+- energy transfer function (#1515)
+- mineral oil refining process, mineral oil product (#1531)
+- propulsion/energy-to-motion (#1541)
+- forecast (#1544)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
-
-### Removed
+- electricity grid (#1479)
+- Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
+- air (#1499)
+- storage capacity -> energy storage capacity (#1486)
+- changed order in which the oeo-full files are compiled, owl now builds before omn (#1475)
+- specifically dependent continuant, has bearer, energy, disposition, good role, demand (#1485)
+- sector division (#1506)
+- uses, is used by (#1508)
+- update oeo.omn description (#1509)
+- propulsion/traction (#1541)
 
 ## [1.13.0] - 2023-02-01
 
