@@ -17,7 +17,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil refining process, mineral oil product (#1531)
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
-- creative work (#1547)
+- creative work licence (#1547)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
