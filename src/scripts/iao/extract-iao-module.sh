@@ -1,3 +1,4 @@
+# Note: For consistent results run with ROBOT v1.91 or higher
 # Download the IAO release from 2022-11-07
 curl -L https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2022-11-07/iao.owl > iao-full-download.owl
 # Extract the terms we want with hierarchy, This removes the domain of IAO_0000136
