@@ -17,6 +17,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - mineral oil refining process, mineral oil product (#1531)
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
+- creative work licence (#1547)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
@@ -30,6 +31,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
+- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
 
 ## [1.13.0] - 2023-02-01
 
