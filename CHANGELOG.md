@@ -6,6 +6,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.14.0] - 2023-03-30
 
 ### Added
+- Add alternative labels national report inventory to common report format (#1558)
 - CRF-based sector division, EU legislation sector division (#1462)
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
