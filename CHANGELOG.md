@@ -18,6 +18,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
 - creative work licence (#1547)
+- electrical energy share, RE-share value, electrical energy share value (#1561)
 
 ### Changed
 - common report format (#1558)
@@ -33,6 +34,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
+- RE-share (#1561)
 
 ## [1.13.0] - 2023-02-01
 
