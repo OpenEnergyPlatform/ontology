@@ -33,7 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
-
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2022-11-07/iao.owl)
 ## [1.13.0] - 2023-02-01
 
 ### Added
