@@ -36,6 +36,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
+- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
 
 ## [1.13.0] - 2023-02-01
 
