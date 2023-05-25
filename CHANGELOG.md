@@ -18,6 +18,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
 - creative work licence (#1547)
+- subsurface collector, downhole heat exchanger (#1557)
 
 ### Changed
 - common report format (#1558)
