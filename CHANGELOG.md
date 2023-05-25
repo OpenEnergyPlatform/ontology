@@ -15,11 +15,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - added built ontology to the pipeline artifacts (#1475)
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
+- climate system (#1542)
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
 - creative work licence (#1547)
 - electrical energy share, renewable energy share value, electrical energy share value (#1561)
 - subsurface collector, downhole heat exchanger (#1557)
+- nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
 
 ### Changed
 - common report format (#1558)
