@@ -20,6 +20,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - creative work licence (#1547)
 
 ### Changed
+- common report format (#1558)
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - electricity grid (#1479)
 - Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
