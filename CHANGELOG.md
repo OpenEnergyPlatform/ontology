@@ -18,9 +18,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
 - creative work licence (#1547)
+- subsurface collector, downhole heat exchanger (#1557)
 - nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
 
 ### Changed
+- common report format (#1558)
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - electricity grid (#1479)
 - Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
