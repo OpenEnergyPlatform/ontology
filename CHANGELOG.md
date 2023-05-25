@@ -19,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - forecast (#1544)
 - creative work licence (#1547)
 - electrical energy share, RE-share value, electrical energy share value (#1561)
+- subsurface collector, downhole heat exchanger (#1557)
 
 ### Changed
 - common report format (#1558)
