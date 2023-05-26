@@ -22,6 +22,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electrical energy share, renewable energy share value, electrical energy share value (#1561)
 - subsurface collector, downhole heat exchanger (#1557)
 - nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
+- has energy main/auxilary input, has energy main/waste output (#1564)
 
 ### Changed
 - common report format (#1558)
