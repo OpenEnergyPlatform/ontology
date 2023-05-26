@@ -39,6 +39,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
 - heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
 - RE-share -> renewable energy share (#1561)
+- policy instrument, guides (#1563)
 
 ## [1.13.0] - 2023-02-01
 
