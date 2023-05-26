@@ -15,9 +15,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - added built ontology to the pipeline artifacts (#1475)
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
+- climate system (#1542)
 - propulsion/energy-to-motion (#1541)
 - forecast (#1544)
 - creative work licence (#1547)
+- electrical energy share, renewable energy share value, electrical energy share value (#1561)
+- subsurface collector, downhole heat exchanger (#1557)
+- nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
+- has energy main/auxilary input, has energy main/waste output (#1564)
 
 ### Changed
 - common report format (#1558)
@@ -33,7 +38,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
-- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/IAO/v2022-11-07/iao.owl)
+- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
+- RE-share -> renewable energy share (#1561)
+- policy instrument, guides (#1563)
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/
+
 ## [1.13.0] - 2023-02-01
 
 ### Added

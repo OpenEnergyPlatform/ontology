@@ -310,6 +310,78 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
         OEO_00020182
     
     
+ObjectProperty: OEO_00020257
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is required as major energy input for p.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564",
+        rdfs:label "has main energy input"
+    
+    SubPropertyOf: 
+        OEO_00010234
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
+ObjectProperty: OEO_00020258
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is required as input for p, but not as main input.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564",
+        rdfs:label "has auxilary energy input"
+    
+    SubPropertyOf: 
+        OEO_00010234
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
+ObjectProperty: OEO_00020259
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is the intended energy output of p, e.g. for further usage.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564",
+        rdfs:label "has main energy output"
+    
+    SubPropertyOf: 
+        OEO_00010235
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
+ObjectProperty: OEO_00020260
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is an unintended, unwanted or unevitable output of p, e.g. waste heat.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564",
+        rdfs:label "has waste energy output"
+    
+    SubPropertyOf: 
+        OEO_00010235
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -581,8 +653,13 @@ Class: <http://openenergy-platform.org/ontology/oeo/oeo-physical/OEO_00010248>
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generation process is an energy transformation that has thermal energy as energy output.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130
+
+Add alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1455
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562",
         rdfs:label "heat generation process"@en
     
     EquivalentTo: 
@@ -6783,6 +6860,113 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1515",
         OEO_00010121 some OEO_00000061
     
     
+Class: OEO_00010413
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsurface collector is a heat exchanger that transfers ambient thermal energy to a working fluid. It consists of plastic pipes laid horizontally under the ground.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1361
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1557",
+        rdfs:label "subsurface collector"@en
+    
+    SubClassOf: 
+        OEO_00140102
+    
+    
+Class: OEO_00010414
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A downhole heat exchanger is a heat exchanger that transfers ambient thermal energy or geothermal energy to a working fluid. It consists of plastic pipes installed vertically or inclined in a borehole.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1361
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1557",
+        rdfs:label "downhole heat exchanger"@en
+    
+    SubClassOf: 
+        OEO_00140102
+    
+    
+Class: OEO_00010415
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear is a conventional origin that indicates that the energy comes originally from nuclear binding energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1491
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559",
+        rdfs:label "nuclear"@en
+    
+    SubClassOf: 
+        OEO_00020147
+    
+    
+Class: OEO_00010416
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear electrolytic hydrogen is electrolytic hydrogen that is produced with nuclear electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "pink hydrogen",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559",
+        rdfs:label "nuclear electric hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00010379
+         and (OEO_00240025 some 
+            (OEO_00010219
+             and (OEO_00010234 some OEO_00010417)))
+    
+    SubClassOf: 
+        OEO_00010379
+    
+    
+Class: OEO_00010417
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear electrical energy is electrical energy with a nuclear origin.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559",
+        rdfs:label "nuclear electrical energy"@en
+    
+    EquivalentTo: 
+        OEO_00000139
+         and (OEO_00000530 some OEO_00010415)
+    
+    SubClassOf: 
+        OEO_00000139
+    
+    
+Class: OEO_00010418
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar electrolytic hydrogen is electrolytic hydrogen that is produced with solar electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "yellow hydrogen",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559",
+        rdfs:label "solar electrolytic hydrogen"@en
+    
+    EquivalentTo: 
+        OEO_00010379
+         and (OEO_00240025 some 
+            (OEO_00010219
+             and (OEO_00010234 some OEO_00010419)))
+    
+    SubClassOf: 
+        OEO_00010379
+    
+    
+Class: OEO_00010419
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Solar electrical energy is electrical energy that is energy output of a solar energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559",
+        rdfs:label "solar electrical energy"@en
+    
+    EquivalentTo: 
+        OEO_00000139
+         and (OEO_00020184 some OEO_00020046)
+    
+    SubClassOf: 
+        OEO_00000139,
+        OEO_00000530 some OEO_00030004
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -7578,6 +7762,63 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1541",
         OEO_00020003
     
     
+Class: OEO_00020252
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A climate system is a system that has five interacting components: the atmosphere (air), the hydrosphere (water), the cryosphere (ice and permafrost), the lithosphere (earth's upper rocky layer) and the biosphere (living things)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1540
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1542",
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_01001364
+A climate system is a system that has five interacting components: the atmosphere (air), the hydrosphere (water), the cryosphere (ice and permafrost), the lithosphere (earth's upper rocky layer) and the biosphere (living things).",
+        rdfs:label "climate system"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0002577>
+    
+    
+Class: OEO_00020254
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy share is a process attribute that indicates the fraction of electrical energy related to the total energy of an energy generation or consumption process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "degree of electrification",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561",
+        rdfs:label "electrical energy share"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00140002 some OEO_00020256
+    
+    
+Class: OEO_00020255
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy share value is a fraction value that quantifies a share of renewable energy (RE-share)",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "RE share value",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561",
+        rdfs:label "renewable energy share value"@en
+    
+    SubClassOf: 
+        OEO_00140127,
+        OEO_00020056 some OEO_00140133
+    
+    
+Class: OEO_00020256
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy share value is a fraction value that quantifies the share of electrical energy (degree of electrification).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "renewable energy share value",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561",
+        rdfs:label "electrical energy share value"@en
+    
+    SubClassOf: 
+        OEO_00140127,
+        OEO_00020056 some OEO_00020254
+    
+    
 Class: OEO_00030000
 
     Annotations: 
@@ -7792,14 +8033,19 @@ Class: OEO_00050001
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel-powered electricity generation is an electricity generation process that converts chemical energy from a combustion fuel to electrical energy. It causes some emission.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel-powered electricity generation process is an electricity generation process that converts chemical energy from a combustion fuel to electrical energy. It causes some emission.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "fuel-powered electricity generation",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/582
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/592
 
 Update definition and axioms:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/936
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1240",
-        rdfs:label "fuel-powered electricity generation"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1240
+
+Relabel and add old label as alternative term:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1455
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562",
+        rdfs:label "fuel-powered electricity generation process"@en
     
     EquivalentTo: 
         OEO_00240014
@@ -8822,15 +9068,19 @@ Class: OEO_00140133
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "RE-share is a process attribute that indicates the fraction of renewable energy related to the total energy of an energy generation or consumption process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A renewable energy share is a process attribute that indicates the fraction of renewable energy related to the total energy of an energy generation or consumption process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "RE share",
         <http://purl.obolibrary.org/obo/IAO_0000118> "renewables share",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/187
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/780",
-        rdfs:label "RE-share"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/780
+axiom to RE share value and alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561",
+        rdfs:label "renewable energy share"@en
     
     SubClassOf: 
         OEO_00030019,
-        OEO_00140002 some OEO_00140127
+        OEO_00140002 some OEO_00020255
     
     
 Class: OEO_00140134
@@ -9151,16 +9401,21 @@ Class: OEO_00240009
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Combined heat and power generation (CHP) is an energy transformation that converts energy simultaneously to electrical energy and thermal energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined heat and power generation (CHP) process is an energy transformation that converts energy simultaneously to electrical energy and thermal energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "CHP"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "co-generation"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "combined heat and power generation",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/915
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041",
-        rdfs:label "combined heat and power generation"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+Relabel and add old label as alternative label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1455
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562",
+        rdfs:label "combined heat and power generation process"
     
     SubClassOf: 
         OEO_00020003,
@@ -9260,6 +9515,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932",
     
 Class: OEO_00240014
 
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "electricity generation"
+    
     SubClassOf: 
         OEO_00020003,
         OEO_00000500 some OEO_00240012,
