@@ -43,7 +43,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - RE-share -> renewable energy share (#1561)
 - policy instrument, guides (#1563)
 - Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
-- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml (#1555)
+- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
 
 ### Removed
 -  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
