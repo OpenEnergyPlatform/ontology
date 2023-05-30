@@ -15,9 +15,18 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - added built ontology to the pipeline artifacts (#1475)
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
+- climate system (#1542)
 - propulsion/energy-to-motion (#1541)
+- forecast (#1544)
+- creative work licence (#1547)
+- electrical energy share, renewable energy share value, electrical energy share value (#1561)
+- subsurface collector, downhole heat exchanger (#1557)
+- nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
+- has energy main/auxilary input, has energy main/waste output (#1564)
+- IAO extraction file iao-extracted.owl and extraction scripts extract-iao-module.sh, iao-w-hierarchy.txt (#1555)
 
 ### Changed
+- common report format (#1558)
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - electricity grid (#1479)
 - Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
@@ -30,6 +39,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
 - clean up oeo.omn and oeo-shared (#1546)
+- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
+- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
+- RE-share -> renewable energy share (#1561)
+- policy instrument, guides (#1563)
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
+- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
+
+### Removed
+-  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
 
 ## [1.13.0] - 2023-02-01
 
