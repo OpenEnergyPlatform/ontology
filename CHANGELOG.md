@@ -23,6 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - subsurface collector, downhole heat exchanger (#1557)
 - nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
 - has energy main/auxilary input, has energy main/waste output (#1564)
+- IAO extraction file iao-extracted.owl and extraction scripts extract-iao-module.sh, iao-w-hierarchy.txt (#1555)
 
 ### Changed
 - common report format (#1558)
@@ -41,7 +42,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
 - RE-share -> renewable energy share (#1561)
 - policy instrument, guides (#1563)
-- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
+- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml (#1555)
+
+### Removed
+-  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
 
 ## [1.13.0] - 2023-02-01
 
