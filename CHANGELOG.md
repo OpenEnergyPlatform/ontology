@@ -3,16 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-## [1.14.0] - 2023-03-30
+
+## [1.15.0] - 2023-05-31
 
 ### Added
-- CRF-based sector division, EU legislation sector division (#1462)
-- Brent crude, Western Texas Intermediate (#1478)
-- electricity cost (#1482)
-- power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
-- energy storage level, energy storage content (#1486)
-- compressed-air energy storage unit (#1499)
-- added built ontology to the pipeline artifacts (#1475)
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
 - climate system (#1542)
@@ -26,7 +20,31 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - IAO extraction file iao-extracted.owl and extraction scripts extract-iao-module.sh, iao-w-hierarchy.txt (#1555)
 
 ### Changed
+- propulsion/traction (#1541)
+- clean up oeo.omn and oeo-shared (#1546)
+- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
 - common report format (#1558)
+- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
+- RE-share -> renewable energy share (#1561)
+- policy instrument, guides (#1563)
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
+- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
+
+### Removed
+-  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
+
+## [1.14.0] - 2023-03-30
+
+### Added
+- CRF-based sector division, EU legislation sector division (#1462)
+- Brent crude, Western Texas Intermediate (#1478)
+- electricity cost (#1482)
+- power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
+- energy storage level, energy storage content (#1486)
+- compressed-air energy storage unit (#1499)
+- added built ontology to the pipeline artifacts (#1475)
+
+### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
 - electricity grid (#1479)
 - Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
@@ -37,17 +55,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sector division (#1506)
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
-- propulsion/traction (#1541)
-- clean up oeo.omn and oeo-shared (#1546)
-- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
-- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
-- RE-share -> renewable energy share (#1561)
-- policy instrument, guides (#1563)
-- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
-- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
-
-### Removed
--  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
 
 ## [1.13.0] - 2023-02-01
 
