@@ -38,6 +38,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
 - propulsion/traction (#1541)
+- clean up oeo.omn and oeo-shared (#1546)
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
 - heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
 - RE-share -> renewable energy share (#1561)
