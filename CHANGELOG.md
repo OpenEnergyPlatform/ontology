@@ -10,7 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - material transformation, fuel production (#1575)
 
 ### Changed
-- production (#1757)
+- production (#1575)
 
 ### Removed
 
