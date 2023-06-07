@@ -7,8 +7,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- material transformation, fuel production (#1575)
 
 ### Changed
+- production (#1575)
 
 ### Removed
 
