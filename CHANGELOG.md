@@ -26,7 +26,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
 - electrical energy share, renewable energy share value, electrical energy share value (#1561)
 - has energy main/auxilary input, has energy main/waste output (#1564)
-- life cycle assessment (#1576)
 
 ### Changed
 - propulsion/traction (#1541)
