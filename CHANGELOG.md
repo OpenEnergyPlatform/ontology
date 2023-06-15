@@ -3,6 +3,48 @@ All notable changes to this project will be documented in this file.
 
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+- material transformation, fuel production (#1575)
+- life cycle assessment (#1576)
+- issue template for new users (#1525)
+
+### Changed
+- production (#1575)
+
+### Removed
+
+## [1.15.0] - 2023-05-31
+
+### Added
+- energy transfer function (#1515)
+- mineral oil refining process, mineral oil product (#1531)
+- propulsion/energy-to-motion (#1541)
+- climate system (#1542)
+- forecast (#1544)
+- creative work licence (#1547)
+- IAO extraction file iao-extracted.owl and extraction scripts extract-iao-module.sh, iao-w-hierarchy.txt (#1555)
+- subsurface collector, downhole heat exchanger (#1557)
+- nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
+- electrical energy share, renewable energy share value, electrical energy share value (#1561)
+- has energy main/auxilary input, has energy main/waste output (#1564)
+
+### Changed
+- propulsion/traction (#1541)
+- clean up oeo.omn and oeo-shared (#1546)
+- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
+- common report format (#1558)
+- RE-share -> renewable energy share (#1561)
+- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
+- policy instrument, guides (#1563)
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
+- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
+
+### Removed
+-  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
+
 ## [1.14.0] - 2023-03-30
 
 ### Added
@@ -14,7 +56,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - compressed-air energy storage unit (#1499)
 - added built ontology to the pipeline artifacts (#1475)
 - energy transfer function (#1515)
-- issue template for new users (#1525)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
