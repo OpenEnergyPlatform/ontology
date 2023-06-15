@@ -1,8 +1,8 @@
 ---
 name: "[E] New user"
 about: For adding new users into the ontology
-title: Your title should make sense if said after "The issue is <your issue title>"
-labels: "[E] new user, To do"
+title: Add new user
+labels: "To do"
 assignees: 'Ludee, stap-m, l-emele'
 
 ---
