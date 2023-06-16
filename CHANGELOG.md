@@ -7,15 +7,193 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
-- steam reforming process (#1251)
+- material transformation, fuel production (#1575)
+- life cycle assessment (#1576)
 
 ### Changed
-- energy transformation (#1251)
+- production (#1575)
 
 ### Removed
 
+## [1.15.0] - 2023-05-31
+
+### Added
+- energy transfer function (#1515)
+- mineral oil refining process, mineral oil product (#1531)
+- propulsion/energy-to-motion (#1541)
+- climate system (#1542)
+- forecast (#1544)
+- creative work licence (#1547)
+- IAO extraction file iao-extracted.owl and extraction scripts extract-iao-module.sh, iao-w-hierarchy.txt (#1555)
+- subsurface collector, downhole heat exchanger (#1557)
+- nuclear, nuclear electric hydrogen, nuclear electrical energy, solar electric hydrogen, solar electrical energy (#1559)
+- electrical energy share, renewable energy share value, electrical energy share value (#1561)
+- has energy main/auxilary input, has energy main/waste output (#1564)
+
 ### Changed
+- propulsion/traction (#1541)
+- clean up oeo.omn and oeo-shared (#1546)
+- has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
+- common report format (#1558)
+- RE-share -> renewable energy share (#1561)
+- heat generation process, fuel-powered electricity generation (process), combined heat and power generation (CHP) (process), electricity generation process (#1562)
+- policy instrument, guides (#1563)
+- Fixed IAO import source to [v2022-11-07](https://raw.githubusercontent.com/information-artifact-ontology/ (#1555)
+- update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
+
+### Removed
+-  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
+
+## [1.14.0] - 2023-03-30
+
+### Added
+- CRF-based sector division, EU legislation sector division (#1462)
+- Brent crude, Western Texas Intermediate (#1478)
+- electricity cost (#1482)
+- power-to-fuel system, power-to-fuel process, power-to-ammonia system, power-to-liquid process (#1483)
+- energy storage level, energy storage content (#1486)
+- compressed-air energy storage unit (#1499)
+- added built ontology to the pipeline artifacts (#1475)
+
+### Changed
+- NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
+- electricity grid (#1479)
+- Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
+- air (#1499)
+- storage capacity -> energy storage capacity (#1486)
+- changed order in which the oeo-full files are compiled, owl now builds before omn (#1475)
+- specifically dependent continuant, has bearer, energy, disposition, good role, demand (#1485)
+- sector division (#1506)
+- uses, is used by (#1508)
+- update oeo.omn description (#1509)
+
+## [1.13.0] - 2023-02-01
+
+### Added
+- oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
+- tank, fuel tank, volume (#1356)
+- heat generating unit, heat plant, heat transfer unit, solar heat plant, solar heat unit (#1360)
+- combustion-based heater, electrical heater, geothermal heat unit, geothermal heat plant (#1360)
+- thermo-chemical heat storage object, chemical heat storage object, sorption heat storage object, adsorption, desorption (#1363)
+- sensible heat storage object, sensible solid heat storage object, sensible fluid heat storage object (#1363)
+- phase transition, evaporation, melting, latent heat storage object, latent fluid-gaseous heat storage object, latent solid-fluid heat storage object (#1363)
+- filling station, hydrogen station, hydrogen transport (#1357)
+- OEP user, qualitist, quantitist, apinist (#1383)
+- sustainability criterion, material sustainability, process sustainability, process sustainability, sustainable process (#1385)
+- vehicle-kilometre (#1388)
+- electricity demand, fuel demand (#1389)
+- based on (#1391)
+- bidirectional vehicle charging station (#1393)
+- charging (#1394)
+- non-energy use, cold start, cooperative programming, distribution, (electricity) export/import, frequency control, request, service, chemical reaction (#1395)
+- ton of oil equivalent, ton of coal equivalent, kilo ton of oil equivalent, kilo ton of coal equivalent, million ton of oil equivalent, million ton of coal equivalent (#1398)
+- sustainable biofuel, non-sustainable biofuel (#1409)
+- source category (#1428)
+- scenario bundle (#1429)
+- gas turbine process, combined cycle electricity generation, steam power unit (#1362)
+- rotary heat exchanger, plate heat exchanger, boiler, tube collector, flat-plate collector (#1432)
+- explorative and target driven scenario (#1459)
+- utilisation value (#1435)
+- amortisation time, economic life time (#1436)
+- renewable power unit, renewable power plant (#1437)
+- CRF sector individuals 2.A.2, 2.A.3, 2.A.4, 2.B.1 to 2.B.10, 2.C.2 to 2.C.7, 2.E.1 to 2.E.5, 2.F.1 to 2.F.6 and 2.G.1 to 2.G.4 (#1440)
+- has spatial region (#1441)
+- (renewable) electrolytic hydrogen, (fossil/abated) steam reforming hydrogen, renewable electrical energy (#1442)
+- energy transformation function and subclasses (#1445)
+- RED sector individuals (#1446)
+- direct/diffuse solar radiation, non-scattered radiant flux density, (single/two axis) solar tracking, (single/two axis) solar tracked receiving surface (#1448)
+- power-only generating unit (#1456)
+- energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
+
+### Changed
+- bearer of -> has characteristic (#1268)
+- ro-module -> ro-extracted (#1268)
+- power plant, power generating unit, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
+- internal combustion vehicle, plug-in hybrid electric vehicle, fuel cell electric vehicle, tank ship, gas turbine vehicle (#1356)
+- gas turbine, gas power unit (#1362)
+- model descriptor (#1387)
+- passenger-kilometre, ton-kilometre (#1388)
+- SMES -> superconducting magnetic energy storage (#1396)
+- biofuel; competency questions Q1 and Q2 (#1409)
+- global warming potential, binary file format, text file format, source code file format, generation time series, optimisation, simulation (#1410)
+- has economic value, economic value of (#1422)
+- solar thermal collector (#1432)
+- net capacity factor (#1435)
+- yield profile, geothermal power unit, marine current/tidal/wave energy converting unit, solar power unit, wind energy converting unit (#1437)
+- CRF sector individual 2.C.1 (#1440)
+- has study region, has considered region, has interacting region, has study region (#1441)
+- synthetic hydrogen, fossil hydrogen (#1442)
+- renewable_energy_directive_sectors -> Renewable Energy Directive sector division (#1446)
+- radiation (#1447)
+- german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
+- replaced owl:equivalentClass with 'may be identical to' in annotation properties
+
+
+## [1.12.0] - 2022-11-02
+
+### Added
+- github: template for pull requests (#1162)
+- steam reforming process (#1251)
+- emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
+- fuel cost (#1260)
+- transport performance value, transport performance unit, passenger-kilometre, ton-kilometre (#1289)
+- gas vehicles, gas engines, more gas fuels, compressed gas fuel role (#1290, #1305)
+- motorised vehicle, aircraft and subclasses, land vehicle and subclasses, watercraft and subclasses (#1293)
+- conventional energy (#1295)
+- transport network, transport network component, transport hubs, and subclasses (#1297)
+- subclasses for energy transfer, fuel transport and subclass, axiom for fuel, axiom for freight transport (#1299)
+- primary energy consumption calculation method and subclasses (#1306)
+- vehicle charging station (#1312)
+- vehicle operational mode (#1314)
+- gas turbine vehicle, jet fuel vehicle, jet fuel gas turbine (#1315)
+- fuel supply system (#1316)
+- NC/BR sector division; NC/BR sector individuals (#1317)
+- is sector of, sectoral energy consumption, sectoral emission (#1321)
+- data file format, and subclasses (#1326)
+- mineral oil, mineral oil product, mineral oil refinery, mineral oil refining, mineral oil refining sector (#1331)
+- international transport sector (#1334)
+- has study region, has study subregio, has considered region, has interacting region, has scenario year (#1347)
+- equivalence subclasses for car and truck (#1345)
+- refinery gas, petroleum coke (#1351)
+- chemical/electrical/kinetic/potential energy storage function; underground fuel storage object (#1348)
+- data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
+
+### Changed
+- github: update the description of the readme file (#1292)
+- energy transformation (#1251)
 - added annotations for which modules classes and individuals belong to (#1252)
+- emission certificate price (#1253)
+- power generating unit (#1259)
+- equipment cost, variable cost, property cost, delivery cost, fixed cost (#1260)
+- heat exchanger (#1263)
+- program parameter (#1274)
+- electrical heat pump (#1282)
+- internal combustion engine (#1285)
+- analysis scope (#1286)
+- diesel fuel, diesel fuel role, diesel engine, diesel vehicle (#1288, #1315)
+- internal combustion vehicle (#1293, #1315)
+- scenario (#1296)
+- heat transfer (#1299)
+- bottom up, hybrid, top down (#1302)
+- primary energy consumption, gross inland energy consumption (#1306)
+- transport (#1309)
+- has bearer axioms to OEO-defined realizable entities (#1310)
+- vehicle (#1314)
+- electric vehicle and subclasses, plug-in hybrid vehicle, gasoline vehicle, e-bike (#1315)
+- energy use (#1321)
+- data format (#1326)
+- crude oil; gas diesel oil, gasoline, kerosene, and subclasses; CRF sector (IPCC 2006): petroleum refining (#1331)
+- CRF sector (IPCC 2006): international bunkers / international aviation / maritime bunkers; MMR sector: M.International aviation in the EU ETS (#1334)
+- final energy consumption (#1340)
+- fuel cell (#1341)
+- realized in, greenhouse effect disposition, combustible energy carrier disposition (#1353)
+- energy storage -> energy storage function; thermal energy storage function; energy storage object; storage unit (#1348)
+- methanation gas storage -> power-to-methane system; power-to-liquid system; pumped water, pumped hydro storage power plant (#1348)
+- energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
+
+### Removed
+- battery storage (#1348)
+- csv and txt (#1371)
 
 ## [1.11.0] - 2022-07-04
 
