@@ -44,9 +44,12 @@ def pytest_generate_tests(metafunc):
             p for p in glob(COMPETENCY_QUESTION_DIRECTORY.as_posix() + "/**/*.omn", recursive=True)
         ]
         selected_filer = metafunc.config.getoption("--selected")
+        run_deprecated = metafunc.config.getoption("--deprecated")
         competency_question_list = [
             cq for cq in competency_question_list if selected_filer in cq
         ]
+        if not run_deprecated:
+            competency_question_list = [cq for cq in competency_question_list if not "deprecated" in cq]
         metafunc.parametrize("competency_question_path", competency_question_list)
 
 
