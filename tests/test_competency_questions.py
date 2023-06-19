@@ -37,6 +37,9 @@ def existing_terms_and_definitons():
     terms_and_definitions = pd.read_csv(EXISTING_TERMS_AND_DEFINITONS)
     return list(terms_and_definitions["ID"])
 
+@pytest.fixture
+def implementation(request):
+    return request.config.getoption("--implementation")
 
 def pytest_generate_tests(metafunc):
     if "competency_question_path" in metafunc.fixturenames:
@@ -105,10 +108,10 @@ def search_term_in_question_file(question, pattern=r"\w+_\d{8}"):
 
 
 def test_competency_question(
-    competency_question_path, existing_terms_and_definitons, results_bag
+    competency_question_path, existing_terms_and_definitons, results_bag, implementation
 ):
     """Metatest to produce competency question tests."""
-    implementing = ("implementing" in competency_question_path)
+    implementing = ("implementing" in competency_question_path) and implementation
     results_bag.questions = {}
     results_bag.terms = {}
     name = Path(competency_question_path).stem
@@ -140,9 +143,9 @@ def test_competency_question(
                 results_bag.terms[term] = {"covered": False, "by": []}
             results_bag.terms[term]["covered"] = True
             results_bag.terms[term]["by"].append(name)
-    if len(failure) > 0 and not implementing:
+    if len(failure) > 0 and implementing:
         raise RuntimeError(failure)
-    if not implementing:
+    if implementing:
         assert query_result, f"{name} failed"
 
 
