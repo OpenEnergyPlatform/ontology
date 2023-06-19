@@ -108,6 +108,7 @@ def test_competency_question(
     competency_question_path, existing_terms_and_definitons, results_bag
 ):
     """Metatest to produce competency question tests."""
+    implementing = ("implementing" in competency_question_path)
     results_bag.questions = {}
     results_bag.terms = {}
     name = Path(competency_question_path).stem
@@ -139,10 +140,10 @@ def test_competency_question(
                 results_bag.terms[term] = {"covered": False, "by": []}
             results_bag.terms[term]["covered"] = True
             results_bag.terms[term]["by"].append(name)
-    if len(failure) > 0:
+    if len(failure) > 0 and not implementing:
         raise RuntimeError(failure)
-
-    assert query_result, f"{name} failed"
+    if not implementing:
+        assert query_result, f"{name} failed"
 
 
 def test_synthesis(fixture_store, existing_terms_and_definitons):

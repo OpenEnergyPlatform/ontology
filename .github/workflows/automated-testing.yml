@@ -13,7 +13,7 @@ jobs:
         run: |
           make
       - name: validate-profile
-        run: | 
+        run: |
           echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
           java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt
       - name: verify
@@ -86,10 +86,10 @@ jobs:
         with:
           name: test-report
           path: build/report.json
-      - name: Get Coverage for badge 
+      - name: Get Coverage for badge
         run : |
-          echo "COVERAGE=$(head build/report.json | grep -o '"coverage": "[^"]*"' | grep -o '[^"]*\%')" >> $GITHUB_ENV  
-          REF=${{ github.ref }}     
+          echo "COVERAGE=$(head build/report.json | grep -o '"coverage": "[^"]*"' | grep -o '[^"]*\%')" >> $GITHUB_ENV
+          REF=${{ github.ref }}
           IFS='/' read -ra PATHS <<< "$REF"
           BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
           echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
@@ -102,12 +102,3 @@ jobs:
           label: CQ Coverage
           message: ${{ env.COVERAGE }}
           color: green
-#           bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
-#           bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
-#       - name: Upload Artifacts
-#         uses: actions/upload-artifact@v3
-#         with:
-#           name: build-files
-#           path: |
-#             build/**/*
-#             !build/**/*.jar
