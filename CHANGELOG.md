@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - production (#1575)
+- technology (#1591)
 
 ### Removed
 
