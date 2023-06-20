@@ -9,9 +9,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
+- energy technology (#1591)
 
 ### Changed
 - production (#1575)
+- technology (#1591)
 
 ### Removed
 
