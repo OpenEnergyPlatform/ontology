@@ -17,6 +17,23 @@ Annotations:
     <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)"
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
     
 AnnotationProperty: <http://purl.org/dc/terms/license>
 
@@ -566,11 +583,15 @@ Class: OEO_00000078
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that represents a boolean value."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
         rdfs:label "boolean variable"
     
     SubClassOf: 
-        OEO_00000435
+        OEO_00000435,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010422
     
     DisjointWith: 
         OEO_00240004
@@ -1344,10 +1365,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1544",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
-
-Class: OEO_00010412
     
+Class: OEO_00010412
 
+    
+Class: OEO_00010422
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean value is an variable information content entity that can only be true or false.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "truth value",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
+        rdfs:label "boolean value"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
 Class: OEO_00020011
 
     SubClassOf: 
@@ -2226,10 +2260,18 @@ Individual: OEO_00000163
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "False is a boolean value which is intended to represent the truth value false (denoted by 0, by -, the falsum ⊥, or falsch (F) in German).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "falsch"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
         rdfs:label "false"
     
     Types: 
-        OEO_00000078
+        OEO_00010422
+    
+    DifferentFrom: 
+        OEO_00000424
     
     
 Individual: OEO_00000170
@@ -2426,10 +2468,18 @@ Individual: OEO_00000424
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "True is a boolean value which is intended to represent the truth value true (denoted by 1, by +, the verum ⊤, or wahr (W) in German).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "wahr"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
         rdfs:label "true"
     
     Types: 
-        OEO_00000078
+        OEO_00010422
+    
+    DifferentFrom: 
+        OEO_00000163
     
     
 Individual: OEO_00000450

@@ -7,11 +7,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- boolean value (#1255)
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
+- energy technology (#1591)
 
 ### Changed
+- boolean variable, true, false (#1255)
 - production (#1575)
+- technology (#1591)
 
 ### Removed
 
