@@ -6,6 +6,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [1.X.X] - 20XX-XX-XX
 
+### Changed
+- energy transformation (#1543)
+
 ### Added
 - boolean value (#1255)
 - material transformation, fuel production (#1575)
