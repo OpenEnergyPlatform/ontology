@@ -11,7 +11,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
 - energy technology (#1591)
-- equivalent class and axiom for secondary energy production (#1523)
 
 ### Changed
 - boolean variable, true, false (#1255)
