@@ -17,6 +17,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - production (#1575)
 - technology (#1591)
 - secondary energy production (#1523)
+- quantity value (#1606)
+
 
 ### Removed
 
