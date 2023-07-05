@@ -11,11 +11,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
 - energy technology (#1591)
+- wind energy, hydro energy, solar energy (#1600)
 
 ### Changed
 - boolean variable, true, false (#1255)
 - production (#1575)
 - technology (#1591)
+- wind energy, hydro energy, solar energy (#1600)
 
 ### Removed
 
