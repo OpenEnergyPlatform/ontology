@@ -16,6 +16,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - boolean variable, true, false (#1255)
 - production (#1575)
 - technology (#1591)
+- electricity generation process, heat generation process, heat transfer, chemical energy transfer, electrical energy transfer (#1599)
+- combined heat and power generation process, combustion thermal energy transformation, fuel-powered electricity generation process, hydro energy and hydroelectric transformation, nuclear energy transformation, solar energy transformation and subclasses, steam-electric process, wind energy transformation,  (#1599)
+- radiative, potential, kinetic energy (#1599)
 
 ### Removed
 
