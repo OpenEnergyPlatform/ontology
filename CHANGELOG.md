@@ -17,7 +17,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - boolean variable, true, false (#1255)
 - production (#1575)
 - technology (#1591)
+1600-add-relations-between-energy-subclasses-and-its-bearers
 - wind energy, hydro energy, solar energy (#1600)
+
+- quantity value (#1606)
+ dev
 
 ### Removed
 
