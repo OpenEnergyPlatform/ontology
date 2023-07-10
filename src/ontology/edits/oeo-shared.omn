@@ -4053,13 +4053,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1591",
 Class: OEO_00020309
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario in which certain policy instruments or transformative measures and their impacts are assessed.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy scenario is a scenario in which certain policy instruments or transformative measures and their impacts are assessed.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
         rdfs:label "policy scenario"
     
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00140149 or OEO_00140151))
+    
     SubClassOf: 
         OEO_00000364
+    
+    
+Class: OEO_00020310
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A without measures scenario (WOM) is a policy scenario that excludes all policy instruments and transformative measures which are planned, adopted or implemented.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "WOM",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "baseline scenario",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1999&from=EN#d1e968-1-1 Article 2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "without measures scenario"
+    
+    SubClassOf: 
+        OEO_00020309
     
     
 Class: OEO_00030002
@@ -4826,10 +4846,11 @@ Class: OEO_00140149
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A transformative measure is a process that is an activity that has a direct impact on a specific variable in question.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
 
-move to oeo-shared
+move to oeo-shared, alternative label
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
         rdfs:label "transformative measure"@en
@@ -4843,6 +4864,7 @@ Class: OEO_00140151
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A policy instrument is a plan specification of an organisation (e.g. a government) that promotes transformative measures.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
 
@@ -4850,7 +4872,7 @@ Redefine as 'plan specification' and add axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1507
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1563
 
-move to oeo-shared
+move to oeo-shared, alternative label
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
         rdfs:label "policy instrument"@en
