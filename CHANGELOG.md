@@ -11,12 +11,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
 - energy technology (#1591)
+- policy scenario, reference role, reference scenario (#1614)
+
 
 ### Changed
 - boolean variable, true, false (#1255)
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
+- moved to oeo-shared: scneario, analysis scope, study/considered region, scenario year/horizon, model descriptor, methodical focus, policy instrument, transformative measure, guides (#1614)
 
 ### Removed
 
