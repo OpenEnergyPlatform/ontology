@@ -12,6 +12,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - life cycle assessment (#1576)
 - energy technology (#1591)
 - wind energy, hydro energy, solar energy (#1600)
+=======
+- policy scenario, reference role, reference scenario (#1614)
 
 ### Changed
 - boolean variable, true, false (#1255)
