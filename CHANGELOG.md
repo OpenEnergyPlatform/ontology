@@ -19,7 +19,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
-- moved to oeo-shared: scneario, analysis scope, study/considered region, scenario year/horizon, model descriptor, methodical focus, policy instrument, transformative measure, guides (#1614)
 
 ### Removed
 
