@@ -20,7 +20,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - technology (#1591)
 - quantity value (#1606)
 - secondary energy production (#1619)
-- energy subclasses (#1620)
+- hydro energy, solar energy, wind energy (#1620)
 
 ### Removed
 
