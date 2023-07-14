@@ -12,11 +12,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - life cycle assessment (#1576)
 - energy technology (#1591)
 - power generation technology and 20 subclasses (#1601)
+- policy scenario, reference role, reference scenario (#1614)
 
 ### Changed
 - boolean variable, true, false (#1255)
 - production (#1575)
 - technology (#1591)
+- quantity value (#1606)
+- secondary energy production (#1619)
 
 ### Removed
 
