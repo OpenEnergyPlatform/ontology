@@ -2881,7 +2881,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/961",
     
     
 Class: OEO_00000300
-    
+
     
 Class: OEO_00000302
 
@@ -3175,7 +3175,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
     
     
 Class: OEO_00000350
-    
+
     
 Class: OEO_00000356
 
@@ -7098,12 +7098,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1599",
     
     SubClassOf: 
         OEO_00020003,
+        OEO_00020257 some OEO_00000446,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
         OEO_00020259 some OEO_00000139,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044,
-        OEO_00020257 only OEO_00000446
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044
     
     
 Class: OEO_00020045
@@ -7149,7 +7149,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1599",
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00020257 only OEO_00000384
+        OEO_00020257 some OEO_00000384
     
     
 Class: OEO_00020047
@@ -7512,6 +7512,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
     
     
 Class: OEO_00020147
+
+    DisjointWith: 
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1048"
+        OEO_00030004
     
     
 Class: OEO_00020148
@@ -8229,13 +8235,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1599"@en,
     
     SubClassOf: 
         OEO_00020003,
+        OEO_00020257 some OEO_00000207,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
         OEO_00020259 some OEO_00000139,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
-        OEO_00020257 only OEO_00000207
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
     
 Class: OEO_00090000
@@ -8335,7 +8341,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1599"@en,
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00020257 only OEO_00000218
+        OEO_00020257 some OEO_00000218
     
     
 Class: OEO_00110005
@@ -9379,6 +9385,12 @@ adjust input/output energy axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1527
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1599",
         rdfs:label "combined heat and power generation process"
+    
+    EquivalentTo: 
+        OEO_00020257 some 
+            (OEO_00000150
+             and (not (OEO_00000139))
+             and (not (OEO_00000207)))
     
     SubClassOf: 
         OEO_00020003,
