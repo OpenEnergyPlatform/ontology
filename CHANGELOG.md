@@ -21,6 +21,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - technology (#1591)
 - quantity value (#1606)
 - climate scenario, energy scenario (#1615)
+- secondary energy production (#1619)
+- hydro energy, solar energy, wind energy (#1620)
 
 
 ### Removed
