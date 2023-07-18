@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - life cycle assessment (#1576)
 - energy technology (#1591)
 - policy scenario, reference role, reference scenario (#1614)
+- greenhouse gas emission scenario, co2 emission scenario (#1615)
 
 
 ### Changed
@@ -19,6 +20,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
+- climate scenario, energy scenario (#1615)
+
 
 ### Removed
 
