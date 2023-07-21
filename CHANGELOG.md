@@ -11,6 +11,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
 - energy technology (#1591)
+- policy scenario, reference role, reference scenario (#1614)
+
 
 ### Changed
 - boolean variable, true, false (#1255)
@@ -18,6 +20,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - technology (#1591)
 - quantity value (#1606)
 - trade (#1613)
+- secondary energy production (#1619)
+- hydro energy, solar energy, wind energy (#1620)
 
 ### Removed
 
