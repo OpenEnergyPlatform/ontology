@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - life cycle assessment (#1576)
 - energy technology (#1591)
 - policy scenario, reference role, reference scenario (#1614)
+- population count, annual GDP growth (#1623)
 
 
 ### Changed
@@ -21,6 +22,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - quantity value (#1606)
 - secondary energy production (#1619)
 - hydro energy, solar energy, wind energy (#1620)
+- gross domestic product (#1623)
 
 ### Removed
 
