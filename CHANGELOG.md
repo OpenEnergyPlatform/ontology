@@ -19,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
+- trade (#1613)
 - secondary energy production (#1619)
 - hydro energy, solar energy, wind energy (#1620)
 
