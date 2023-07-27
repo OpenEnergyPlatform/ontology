@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy technology (#1591)
 - policy scenario, reference role, reference scenario (#1614)
 - population count, annual GDP growth (#1623)
+- greenhouse gas emission scenario, co2 emission scenario (#1615)
 
 
 ### Changed
@@ -20,9 +21,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
+- trade (#1613)
+- climate scenario, climate system, energy scenario, carbon dioxide, energy system, supply system, emission scenario (#1615)
 - secondary energy production (#1619)
 - hydro energy, solar energy, wind energy (#1620)
 - gross domestic product (#1623)
+
 
 ### Removed
 
@@ -306,7 +310,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Removed
 
-## [1.9.0] - 2022-03-01 
+## [1.9.0] - 2022-03-01
 
 ### Added
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
@@ -384,7 +388,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
 - biomass, biomethane (#952)
 - variable (production) cost (#953)
-- conventional (energy carrier disposition), fossil energy (#955) 
+- conventional (energy carrier disposition), fossil energy (#955)
 - carbon tax, social cost of carbon, carbon price (#956)
 - synthetic ammonia, power-to-ammonia process (#959)
 - renewable waste fuel, fossil waste fuel, renewable industrial waste fuel, fossil industrial waste fuel (#961)
@@ -444,7 +448,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - objective variable (#878)
 - metric ton (#879)
 - target description (#881)
-- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882) 
+- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882)
 - axioms of typical period and aggregation type (#883)
 
 ### Changed
@@ -681,8 +685,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
-- issue templates (#92, #146) 
-- ArtificialObject (#121) 
+- issue templates (#92, #146)
+- ArtificialObject (#121)
 - classes for objects that apply to technologies like EnergyGenerator (#128)
 - Grid class (#137)
 - object properties to describe models (#109)
