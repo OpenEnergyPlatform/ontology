@@ -24,6 +24,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - climate scenario, climate system, energy scenario, carbon dioxide, energy system, supply system, emission scenario (#1615)
 - secondary energy production (#1619)
 - hydro energy, solar energy, wind energy (#1620)
+- energy transformation (#1625)
 
 
 ### Removed
