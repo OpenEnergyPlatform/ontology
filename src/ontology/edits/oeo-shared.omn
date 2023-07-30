@@ -2328,6 +2328,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
         OEO_00000530 some OEO_00000316
     
     
+Class: OEO_00000333
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that is the amount of energy transformed or transferred per time unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/79
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369
+
+moved to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
+        rdfs:comment "Power is the derivative of energy transformation over time",
+        rdfs:label "power"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003
+    
+    
 Class: OEO_00000334
 
     Annotations: 
@@ -3161,7 +3185,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1251
 
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+added process attributes:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625"@en,
         rdfs:label "energy transformation"@en
     
     EquivalentTo: 
@@ -4924,6 +4952,47 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
         OEO_00000119
     
     
+Class: OEO_00140049
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion efficiency is a process attribute describing the ratio between the input of an energy transformation and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
+
+moved to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
+        rdfs:label "energy conversion efficiency"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003,
+        OEO_00140002 some OEO_00140050
+    
+    
+Class: OEO_00140050
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
+        <http://purl.obolibrary.org/obo/IAO_0000118> "efficiency",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
+
+moved to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
+        rdfs:label "efficiency value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
+    
+    
 Class: OEO_00140075
 
     Annotations: 
@@ -5406,58 +5475,5 @@ Individual: OEO_00020165
     
     Types: 
         OEO_00020122
-
-
-Class: OEO_00000333
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that is the amount of energy transformed or transferred per time unit."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "classification:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
-
-definition:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/79
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369",
-        rdfs:comment "Power is the derivative of energy transformation over time",
-        rdfs:label "power"
     
-    SubClassOf: 
-        OEO_00030019,
-        OEO_00000502 some OEO_00020003
-
-
-Class: OEO_00140050
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
-        <http://purl.obolibrary.org/obo/IAO_0000118> "efficiency",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
-        rdfs:label "efficiency value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
-
-
- Class: OEO_00140049
-
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion efficiency is a process attribute describing the ratio between the input of an energy transformation and the outputs that are used.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591",
-        rdfs:label "energy conversion efficiency"@en
-    
-    SubClassOf: 
-        OEO_00030019,
-        OEO_00000502 some OEO_00020003,
-        OEO_00140002 some OEO_00140050
-
     
