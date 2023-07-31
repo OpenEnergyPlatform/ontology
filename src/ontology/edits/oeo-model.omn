@@ -17,6 +17,23 @@ Annotations:
     <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)"
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000112>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000116>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
     
 AnnotationProperty: <http://purl.org/dc/terms/license>
 
@@ -566,11 +583,15 @@ Class: OEO_00000078
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that can only be true or false."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that represents a boolean value."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
         rdfs:label "boolean variable"
     
     SubClassOf: 
-        OEO_00000435
+        OEO_00000435,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010422
     
     DisjointWith: 
         OEO_00240004
@@ -1001,25 +1022,6 @@ Class: OEO_00000353
     
 Class: OEO_00000364
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario is an information content entity that contains statements about a possible future development based on a coherent and internally consistent set of assumptions and their motivation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "narrative",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "storyline",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
-add is about-relation
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764
-
-Add 'narrative' and 'storyline' as alternative label
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1232
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1296",
-        rdfs:label "scenario"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020072
-    
     
 Class: OEO_00000365
 
@@ -1344,10 +1346,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1544",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
-
-Class: OEO_00010412
     
+Class: OEO_00010412
 
+    
+Class: OEO_00010422
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean value is an variable information content entity that can only be true or false.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "truth value",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
+        rdfs:label "boolean value"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
 Class: OEO_00020011
 
     SubClassOf: 
@@ -1376,24 +1391,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
     
 Class: OEO_00020016
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model descriptor is an information content entity that contains information about some model."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577
-
-Add SubclassOf axiom:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1386
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1387",
-        rdfs:label "model descriptor"@en
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000274)
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 Class: OEO_00020017
 
@@ -1412,20 +1409,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/981",
     
 Class: OEO_00020018
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A methodical focus is a model descriptor that specifies the primary calculation method used in a model.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "methodology",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577
-alternative term
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011",
-        rdfs:label "methodical focus"@en
-    
-    SubClassOf: 
-        OEO_00020016,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000275
-    
     
 Class: OEO_00020019
 
@@ -1498,20 +1481,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1302",
     
 Class: OEO_00020032
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
-The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
-In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
-The union of the study region and the interacting/ external region ist the considered region.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A study region is a spatial region that is under investigation and consists entirely of one or more subregions.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
-        rdfs:label "study region"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000006>
-    
     
 Class: OEO_00020033
 
@@ -1545,20 +1514,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
     
 Class: OEO_00020035
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
-The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
-In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
-The union of the study region and the interacting/ external region ist the considered region.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A considered region is a spatial region that is used in an analysis.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
-        rdfs:label "considered region"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000006>
-    
     
 Class: OEO_00020036
 
@@ -1583,26 +1538,6 @@ Class: OEO_00020039
     
 Class: OEO_00020072
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An analysis scope is an information content entity that describes the boundaries of what a study or scenario covers.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/638
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764
-
-Add 'is about' axioms:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1059
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1286",
-        rdfs:label "analysis scope"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000367,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020018,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020032,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020035,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020097,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020098
-    
     
 Class: OEO_00020089
 
@@ -1682,38 +1617,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/881",
     
 Class: OEO_00020097
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario year is a time step that has a duration of one year and is part of a scenario horizon.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
-        rdfs:label "scenario year"
-    
-    SubClassOf: 
-        OEO_00030033,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020098,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some 
-            (OEO_00030035
-             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
-             and (OEO_00140178 value 1))
-    
     
 Class: OEO_00020098
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario horizon is a time step that is under investigation and consists entirely of one or more scenario years.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
-        rdfs:label "scenario horizon"
-    
-    SubClassOf: 
-        OEO_00030033,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020097,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some 
-            (OEO_00030035
-             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>))
-    
     
 Class: OEO_00020099
 
@@ -1807,14 +1713,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459",
         OEO_00000364
     
     
+Class: OEO_00020252
+
+    
+Class: OEO_00020309
+
+    
 Class: OEO_00030007
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A climate scenario is a scenario that describes a possible future state of a climate system.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
         rdfs:label "climate scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020252)
     
     SubClassOf: 
         OEO_00000364
@@ -1835,16 +1754,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
     
 Class: OEO_00030009
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission scenario is a scenario that describes a possible emission trajectory.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
-        rdfs:label "emission scenario"
-    
-    SubClassOf: 
-        OEO_00000364
-    
     
 Class: OEO_00030010
 
@@ -1852,12 +1761,23 @@ Class: OEO_00030010
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy scenario is a scenario that describes a possible future state of an energy system.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
+
+make equivalent
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
         rdfs:label "energy scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030024)
     
     SubClassOf: 
         OEO_00000364
     
+    
+Class: OEO_00030024
+
     
 Class: OEO_00030029
 
@@ -2226,10 +2146,18 @@ Individual: OEO_00000163
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "False is a boolean value which is intended to represent the truth value false (denoted by 0, by -, the falsum ⊥, or falsch (F) in German).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "falsch"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
         rdfs:label "false"
     
     Types: 
-        OEO_00000078
+        OEO_00010422
+    
+    DifferentFrom: 
+        OEO_00000424
     
     
 Individual: OEO_00000170
@@ -2426,10 +2354,18 @@ Individual: OEO_00000424
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "True is a boolean value which is intended to represent the truth value true (denoted by 1, by +, the verum ⊤, or wahr (W) in German).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "wahr"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
         rdfs:label "true"
     
     Types: 
-        OEO_00000078
+        OEO_00010422
+    
+    DifferentFrom: 
+        OEO_00000163
     
     
 Individual: OEO_00000450

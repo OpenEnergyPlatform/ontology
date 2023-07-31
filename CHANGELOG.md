@@ -7,11 +7,23 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- boolean value (#1255)
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
+- energy technology (#1591)
+- policy scenario, reference role, reference scenario (#1614)
+- greenhouse gas emission scenario, co2 emission scenario (#1615)
+
 
 ### Changed
+- boolean variable, true, false (#1255)
 - production (#1575)
+- technology (#1591)
+- quantity value (#1606)
+- trade (#1613)
+- climate scenario, climate system, energy scenario, carbon dioxide, energy system, supply system, emission scenario (#1615)
+- secondary energy production (#1619)
+- hydro energy, solar energy, wind energy (#1620)
 - reimplemented competency question tests in pytest (#1420)
 - added commands to filter competency questions from the command line (#1420)
 - added descriptive names to competency questions. and organized them in directories (#1420)
