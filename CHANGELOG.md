@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [1.16.1] - 2023-08-01
+
+### Changed
+- Update module files after saving with Protégé 5.6.1(#1628)
+
 ## [1.16.0] - 2023-08-01
 
 ### Added
@@ -31,7 +37,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - gross domestic product (#1623)
 
 ### Removed
-- old compteency question bash script (#1420)
+- old competency question bash script (#1420)
 
 ## [1.15.0] - 2023-05-31
 
