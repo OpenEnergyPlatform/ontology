@@ -102,6 +102,9 @@ AnnotationProperty: rdfs:seeAlso
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:integer
+
+    
 Datatype: xsd:string
 
     
@@ -833,6 +836,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838"
         OEO_00240025
     
     
+ObjectProperty: OEO_00010119
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a policy instrument and a transformative measure where a policy instrument guides a transformative measure.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853
+
+Make subproperty of 'is about':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1507
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1563
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "guides"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    Domain: 
+        OEO_00140151
+    
+    Range: 
+        OEO_00140149
+    
+    
 ObjectProperty: OEO_00010121
 
     Annotations: 
@@ -1348,6 +1377,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000002>
 Class: <http://purl.obolibrary.org/obo/UO_0000003>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000036>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
 
     SubClassOf: 
@@ -1374,6 +1406,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/924",
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
+Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330023>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A life cycle assessment is a methodology to calculate and analyse environmental impacts of the life cycle of a material entity or process.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "LCA"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Lebenszyklusanalyse"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "life cycle analysis"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Ökobilanz"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1551
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1576",
+        rdfs:label "life cycle assessment"@en
+    
+    SubClassOf: 
+        OEO_00020166
+    
+    
 Class: OEO_00000001
 
     Annotations: 
@@ -1398,6 +1446,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
         OEO_00010121 some OEO_00000331
+    
+    
+Class: OEO_00000006
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/CHEBI_16526",
+        rdfs:label "carbon dioxide"
+    
+    SubClassOf: 
+        OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198,
+        OEO_00000529 value OEO_00000182
     
     
 Class: OEO_00000007
@@ -2330,7 +2399,10 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/495
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/496
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/505
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/518
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1405
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1606",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -2340,6 +2412,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    
+Class: OEO_00000364
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario is an information content entity that contains statements about a possible future development based on a coherent and internally consistent set of assumptions and their motivation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "narrative",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "storyline",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
+add is about-relation
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764
+
+Add 'narrative' and 'storyline' as alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1232
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1296",
+        rdfs:label "scenario"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020072
     
     
 Class: OEO_00000367
@@ -2417,6 +2511,25 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1463",
     
     DisjointWith: 
         OEO_00000149
+    
+    
+Class: OEO_00000407
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is a plan specification that describes how to combine artificial objects or other material entities and processes in a specific way."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/136
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/334
+moved to oeo-shared, change definition, reclassify, add axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1591",
+        rdfs:label "technology"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000061
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://purl.obolibrary.org/obo/BFO_0000015>))
     
     
 Class: OEO_00000419
@@ -2513,18 +2626,21 @@ Class: OEO_00010082
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one commodity or service is exchanged for another commodity or service.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one good or service is exchanged for another good or service or money.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
 
 Move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1458
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1565
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1613",
         rdfs:label "trade"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00040011
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116
     
     
 Class: OEO_00010083
@@ -2634,13 +2750,22 @@ pull: https://github.com/OpenEnergyPlatform/ontology/pull/865
 
 Move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531
+
+make equivalent and add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1523
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1619",
         rdfs:label "secondary energy production"@en
+    
+    EquivalentTo: 
+        OEO_00240003
+         and (OEO_00000533 some OEO_00140079)
     
     SubClassOf: 
         OEO_00240003,
         OEO_00000533 some OEO_00140079,
-        OEO_00140002 some OEO_00050019
+        OEO_00140002 some OEO_00050019,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003
     
     
 Class: OEO_00010210
@@ -3140,6 +3265,78 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
+Class: OEO_00020016
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model descriptor is an information content entity that contains information about some model."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577
+
+Add SubclassOf axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1386
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1387",
+        rdfs:label "model descriptor"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000274)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: OEO_00020018
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A methodical focus is a model descriptor that specifies the primary calculation method used in a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "methodology",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/82
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/577
+alternative term
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011",
+        rdfs:label "methodical focus"@en
+    
+    SubClassOf: 
+        OEO_00020016,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000275
+    
+    
+Class: OEO_00020032
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
+The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
+In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
+The union of the study region and the interacting/ external region ist the considered region.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study region is a spatial region that is under investigation and consists entirely of one or more subregions.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "study region"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
+Class: OEO_00020035
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
+The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
+In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
+The union of the study region and the interacting/ external region ist the considered region.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A considered region is a spatial region that is used in an analysis.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
+        rdfs:label "considered region"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000006>
+    
+    
 Class: OEO_00020039
 
     Annotations: 
@@ -3294,6 +3491,29 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1019"
              and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010083))
     
     
+Class: OEO_00020072
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An analysis scope is an information content entity that describes the boundaries of what a study or scenario covers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/638
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/764
+
+Add 'is about' axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1059
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1286",
+        rdfs:label "analysis scope"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000367,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020018,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020032,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020035,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020097,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020098
+    
+    
 Class: OEO_00020085
 
     Annotations: 
@@ -3313,6 +3533,41 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
     
     SubClassOf: 
         OEO_00000150
+    
+    
+Class: OEO_00020097
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario year is a time step that has a duration of one year and is part of a scenario horizon.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "scenario year"
+    
+    SubClassOf: 
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020098,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>)
+             and (OEO_00140178 value 1))
+    
+    
+Class: OEO_00020098
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-model"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario horizon is a time step that is under investigation and consists entirely of one or more scenario years.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/474
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
+        rdfs:label "scenario horizon"
+    
+    SubClassOf: 
+        OEO_00030033,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020097,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00030035
+             and (OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000036>))
     
     
 Class: OEO_00020102
@@ -3794,6 +4049,165 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000139
     
     
+Class: OEO_00020252
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A climate system is a system that has five interacting components: the atmosphere (air), the hydrosphere (water), the cryosphere (ice and permafrost), the lithosphere (earth's upper rocky layer) and the biosphere (living things)."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1540
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1542
+
+move to oeo-share
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_01001364
+A climate system is a system that has five interacting components: the atmosphere (air), the hydrosphere (water), the cryosphere (ice and permafrost), the lithosphere (earth's upper rocky layer) and the biosphere (living things).",
+        rdfs:label "climate system"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0002577>
+    
+    
+Class: OEO_00020264
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A material transformation is a transformation in which one or more input material entities are, at least partially, physically changed and result in output material entites."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "class added:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1526
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1575"@en,
+        rdfs:label "material transformation"
+    
+    EquivalentTo: 
+        OEO_00000419
+         and (OEO_00000532 some <http://purl.obolibrary.org/obo/BFO_0000040>)
+         and (OEO_00000533 some <http://purl.obolibrary.org/obo/BFO_0000040>)
+    
+    SubClassOf: 
+        OEO_00000419
+    
+    
+Class: OEO_00020267
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy technology is a technology that describes how to combine energy transformation units, energy transformations, energy carriers and energy in a specific way.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1591",
+        rdfs:label "energy technology"
+    
+    SubClassOf: 
+        OEO_00000407,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020102
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003))
+    
+    
+Class: OEO_00020309
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy scenario is a scenario in which certain policy instruments or transformative measures and their impacts are assessed.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "policy scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00140149 or OEO_00140151))
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00020310
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A without measures scenario (WOM) is a policy scenario that excludes all policy instruments and transformative measures which are planned, adopted or implemented.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "WOM scenario",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "baseline scenario",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1999&from=EN#d1e968-1-1 Article 2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "without measures scenario"
+    
+    SubClassOf: 
+        OEO_00020309
+    
+    
+Class: OEO_00020311
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A with existing measures scenario (WEM) is a policy scenario that includes policy instruments and transformative measures that have been adopted and implemented.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "WEM scenario",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "baseline scenario",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1999&from=EN#d1e968-1-1 Article 2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "with existing measures scenario"
+    
+    SubClassOf: 
+        OEO_00020309
+    
+    
+Class: OEO_00020312
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A with additional measures scenario (WAM) is a policy scenario that includes policy instruments and transformative measures which have been adopted and implemented to mitigate climate change or meet energy objectives, as well as policy instruments and transformative measures which are planned for that purpose.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "WAM scenario",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32018R1999&from=EN#d1e968-1-1 Article 2",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "with additional measures scenario"
+    
+    SubClassOf: 
+        OEO_00020309
+    
+    
+Class: OEO_00020313
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an information content entity, that indicates a benchmark, e.g. in a comparison.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "Although contradicting to BFO2, we add the reference role to the generically dependent \"information content entity\", aware of the ongoing discussion.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "reference role"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00020314
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reference scenario is a scenario that is used as a reference, e.g. in a scenario comparison. It has the reference role.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "reference scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020313)
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
+Class: OEO_00020317
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission scenario is an emission scenario that describes a possible greenhouse gas emission trajectory.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        rdfs:label "greenhouse gas emission scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000199)
+    
+    SubClassOf: 
+        OEO_00030009
+    
+    
 Class: OEO_00030002
 
     Annotations: 
@@ -3882,6 +4296,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
         OEO_00010121 some OEO_00000150
     
     
+Class: OEO_00030009
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission scenario is a scenario that describes a possible emission trajectory.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
+
+move to oeo-share
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        rdfs:label "emission scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000147)
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
 Class: OEO_00030015
 
     Annotations: 
@@ -3926,6 +4361,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/992",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000141>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000315
+    
+    
+Class: OEO_00030024
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system is a supply system of spatially extended linked energy sources and sinks.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy supply system",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/432
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/493
+
+make subclass of supply system:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1071
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1123
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        rdfs:label "energy system"
+    
+    SubClassOf: 
+        OEO_00030025
+    
+    
+Class: OEO_00030025
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A supply system is a system that connects producers and consumers.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/432
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/493
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        rdfs:label "supply system"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0002577>
     
     
 Class: OEO_00030029
@@ -4553,6 +5027,51 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000051
     
     
+Class: OEO_00140149
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformative measure is a process that is an activity that has a direct impact on a specific variable in question.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
+
+move to oeo-shared, alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "transformative measure"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00140151
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy instrument is a plan specification of an organisation (e.g. a government) that promotes transformative measures.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
+
+Redefine as 'plan specification' and add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1507
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1563
+
+move to oeo-shared, alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+        rdfs:label "policy instrument"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853"
+        OEO_00010119 some OEO_00140149,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030022
+    
+    
 Class: OEO_00140159
 
     Annotations: 
@@ -4577,13 +5096,23 @@ Class: OEO_00240003
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Production is the process of combining various inputs in order to create an output that has value and can be used by other processes."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Production is the transformation process of combining various inputs in order to create an output that is a good."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/835
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845
+reclassify and make equivalent
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1526
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1575",
         rdfs:label "production"
     
+    EquivalentTo: 
+        OEO_00000419
+         and (OEO_00000533 some <http://purl.obolibrary.org/obo/BFO_0000040>)
+         and (<http://purl.obolibrary.org/obo/RO_0002234> some OEO_00010116)
+    
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        OEO_00000419,
+        OEO_00000532 some <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00010116
     
     
 Class: OEO_00240014
@@ -4664,6 +5193,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1084",
     
     SubClassOf: 
         OEO_00020136
+    
+    
+Class: OEO_00260007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission is an emission that releases carbon dioxide."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253/
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615"@en,
+        rdfs:label "CO2 emission"@en,
+        rdfs:label "carbon dioxide emission"@en
+    
+    EquivalentTo: 
+        OEO_00000147
+         and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000006)
+    
+    SubClassOf: 
+        OEO_00000147
     
     
 Class: OEO_00320000

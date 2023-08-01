@@ -133,25 +133,6 @@ ObjectProperty: OEO_00000522
     
 ObjectProperty: OEO_00010119
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a policy instrument and a transformative measure where a policy instrument guides a transformative measure.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853
-
-Make subproperty of 'is about':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1507
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1563",
-        rdfs:label "guides"@en
-    
-    SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
-    
-    Domain: 
-        OEO_00140151
-    
-    Range: 
-        OEO_00140149
-    
     
 ObjectProperty: OEO_00010121
 
@@ -374,6 +355,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000000>
 Class: <http://purl.obolibrary.org/obo/UO_0000187>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000189>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000190>
 
     
@@ -390,15 +374,38 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1482",
     
     SubClassOf: 
         OEO_00020145
+        
+        
+Class: OEO_00350000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A population count is a quantity value to measure the size of a population.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623",
+        rdfs:label "population count"@en
+        
+    SubClassOf:
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000189>
+        
+        
+Class: OEO_00350001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Annual GDP growth is an economic value that quantifies the difference between GDP in one year compared to the previous year.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623",
+        rdfs:label "annual GDP growth"@en
+    
+    SubClassOf: 
+        OEO_00140012,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000187>
     
     
 Class: OEO_00000006
 
-    Annotations: 
-        rdfs:label "carbon dioxide"@en
-    
-    SubClassOf: 
-        OEO_00000331
     
     
 Class: OEO_00000045
@@ -1627,11 +1634,15 @@ Class: OEO_00140013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559
 alternative term:
 https://github.com/OpenEnergyPlatform/ontology/issues/675
-https://github.com/OpenEnergyPlatform/ontology/pull/676",
+https://github.com/OpenEnergyPlatform/ontology/pull/676
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623",
+        rdfs:comment "has unit some currency per time unit",
         rdfs:label "gross domestic product"@en
     
     SubClassOf: 
-        OEO_00140012
+        OEO_00140012,
+        OEO_00040010 some OEO_00040004
     
     
 Class: OEO_00140023
@@ -1887,28 +1898,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/796",
     
 Class: OEO_00140149
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformative measure is a process that is an activity that has a direct impact on a specific variable in question.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797",
-        rdfs:label "transformative measure"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
     
 Class: OEO_00140150
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a specifically dependent continuant that is a deliberate system of principles, rules and guidelines, adopted by an organisation to guide decision making with respect to particular situations and implemented to achieve stated goals.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
 
 relations:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853
+
+alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
         rdfs:label "policy"@en
     
     SubClassOf: 
@@ -1919,25 +1925,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853",
     
 Class: OEO_00140151
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy instrument is a plan specification of an organisation (e.g. a government) that promotes transformative measures.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
-
-Redefine as 'plan specification' and add axiom:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1507
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1563",
-        rdfs:label "policy instrument"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000104>,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853"
-        OEO_00010119 some OEO_00140149,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030022
-    
     
 Class: OEO_00140171
 
@@ -2088,20 +2075,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1083",
     
     
 Class: OEO_00260007
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission is an emission that releases carbon dioxide."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253/"@en,
-        rdfs:label "CO2 emission"@en,
-        rdfs:label "carbon dioxide emission"@en
-    
-    EquivalentTo: 
-        OEO_00000147
-         and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000006)
-    
-    SubClassOf: 
-        OEO_00000147
     
     
 Class: OEO_00260008

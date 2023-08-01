@@ -887,21 +887,6 @@ Class: OEO_00000005
     
 Class: OEO_00000006
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon dioxide is a portion of matter with the chemical formula CO2. It has a gaseous normal state of matter. It occurs naturally in the atmosphere as a trace gas and can work as a greenhouse gas.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/CHEBI_16526",
-        rdfs:label "carbon dioxide"
-    
-    SubClassOf: 
-        OEO_00000331,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000198,
-        OEO_00000529 value OEO_00000182
-    
     
 Class: OEO_00000007
 
@@ -2428,11 +2413,15 @@ Class: OEO_00000218
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681
 change axiom from participates in to is energy participant of
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+added axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1600
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1620",
         rdfs:label "hydro energy"
     
     SubClassOf: 
         OEO_00230020,
+        OEO_00010121 some OEO_00000441,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
@@ -3247,9 +3236,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
     
 Class: OEO_00000350
 
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000006>
-    
     
 Class: OEO_00000356
 
@@ -3291,6 +3277,9 @@ Class: OEO_00000361
     DisjointWith: 
         OEO_00000165
     
+    
+Class: OEO_00000364
+
     
 Class: OEO_00000374
 
@@ -3350,12 +3339,16 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/663
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
 remove disposition renewable fuel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732
+added axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1600
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1620",
         rdfs:label "solar energy"
     
     SubClassOf: 
         OEO_00020040,
-        OEO_00000530 some OEO_00030004
+        OEO_00000530 some OEO_00030004,
+        OEO_00010121 some OEO_00230021
     
     
 Class: OEO_00000386
@@ -3541,16 +3534,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
 Class: OEO_00000407
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A Technology is an information content entity that specifies how to create an artificial object."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/136
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/334",
-        rdfs:label "technology"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 Class: OEO_00000419
 
@@ -3779,12 +3762,16 @@ remove disposition renewable fuel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732
 add and change axioms
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+added axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1600
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1620",
         rdfs:label "wind energy"
     
     SubClassOf: 
         OEO_00230020,
         OEO_00000530 some OEO_00030004,
+        OEO_00010121 some OEO_00000054,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
@@ -6967,6 +6954,347 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559",
         OEO_00000530 some OEO_00030004
     
     
+Class: OEO_00010420
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel production is a production process which has fuel as physical output.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1526
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1575",
+        rdfs:label "fuel production"@en
+    
+    EquivalentTo: 
+        OEO_00240003
+         and (OEO_00000533 some OEO_00000173)
+    
+    SubClassOf: 
+        OEO_00240003
+    
+    
+Class: OEO_00010423
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generation technology is an energy technology that describes how to combine power generating units and energy carriers in a power generation process to generate electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "power generation technology"@en
+    
+    SubClassOf: 
+        OEO_00020267,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000334
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240014))
+    
+    
+Class: OEO_00010424
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A wind power technology is a power generation technology that describes how to combine wind energy converting units and a wind energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "wind power technology"@en
+    
+    SubClassOf: 
+        OEO_00010423,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000044)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043)
+    
+    
+Class: OEO_00010425
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An onshore wind power technology is a wind power generation technology that describes how to use wind energy converting units in onshore wind farms.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "onshore wind power technology"@en
+    
+    SubClassOf: 
+        OEO_00010424,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000044
+             and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000311)))
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043)
+    
+    
+Class: OEO_00010426
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An offshore wind power technology is a wind power generation technology that describes how to use wind energy converting units in offshore wind farms.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "offshore wind power technology"@en
+    
+    SubClassOf: 
+        OEO_00010424,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000044
+             and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000308)))
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043)
+    
+    
+Class: OEO_00010427
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar power technology is a power generation technology that describes how to combine solar power units in an electricity generation process with solar energy as input.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "solar power technology"@en
+    
+    SubClassOf: 
+        OEO_00010423,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000034)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00020003
+             and (OEO_00010234 some OEO_00000384)))
+    
+    
+Class: OEO_00010428
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A photovoltaic technology is a power generation technology that describes how to combine photovoltaic panels in an electricity generation process with solar energy as input.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "photovoltaic technology"@en
+    
+    SubClassOf: 
+        OEO_00010427,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000348)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00020003
+             and (OEO_00010234 some OEO_00000384)))
+    
+    
+Class: OEO_00010429
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A solar thermal power technology is a power generation technology that describes how to combine solar thermal power units in an electricity generation process with solar energy as input.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "solar thermal power technology"@en
+    
+    SubClassOf: 
+        OEO_00010427,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000035)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00020003
+             and (OEO_00010234 some OEO_00000384)))
+    
+    
+Class: OEO_00010430
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A geothermal power technology is a power generation technology that describes how to combine geothermal power units in an electricity generation process with geothermal energy as input.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "geothermal power technology"@en
+    
+    SubClassOf: 
+        OEO_00010423,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000019)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00240014
+             and (OEO_00010234 some OEO_00000191)))
+    
+    
+Class: OEO_00010431
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro power technology is a power generation technology that describes how to combine hydro power units and a hydroelectric energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "hydro power technology"@en
+    
+    SubClassOf: 
+        OEO_00010423,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010085
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005))
+    
+    
+Class: OEO_00010432
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir hydro storage power technology is a power generation technology that describes how to combine hydro power units in run of river power plant and a hydroelectric energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "run of river power technology"@en
+    
+    SubClassOf: 
+        OEO_00010431,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010085
+             and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00010087)))
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005)
+    
+    
+Class: OEO_00010433
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir hydro storage power technology is a power generation technology that describes how to combine hydro power units in reservoir hydro storage power plants and a hydroelectric energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "reservoir hydro storage power technology"@en
+    
+    SubClassOf: 
+        OEO_00010431,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010085
+             and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00010094)))
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005)
+    
+    
+Class: OEO_00010434
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine hydro power technology is a hydro power technology that describes how to combine hydro power units, a hydroelectric energy transformation and oceans.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "marine hydro power technology"@en
+    
+    SubClassOf: 
+        OEO_00010431,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010085
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+                (OEO_00110005
+                 and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105))))
+    
+    
+Class: OEO_00010435
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine current energy technology is a marine hydro power technology that describes how to combine marine current energy converting units in marine current energy transformations.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "marine current energy technology"@en
+    
+    SubClassOf: 
+        OEO_00010434,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010108)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010098)
+    
+    
+Class: OEO_00010436
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine tidal energy technology is a marine hydro power technology that describes how to combine marine tidal energy converting units in marine tidal energy transformations.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "marine tidal energy technology"@en
+    
+    SubClassOf: 
+        OEO_00010434,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010109)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099)
+    
+    
+Class: OEO_00010437
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A marine wave energy technology is a marine hydro power technology that describes how to combine marine wave energy converting units in marine wave energy transformations.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "marine wave energy technology"@en
+    
+    SubClassOf: 
+        OEO_00010434,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010109)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099)
+    
+    
+Class: OEO_00010438
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A pumped hydro storage power technology is a power generation technology that describes how to combine hydro power units in pumped hydro storage power plants and a hydroelectric energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "pumped hydro storage power technology"@en
+    
+    SubClassOf: 
+        OEO_00010431,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010085
+             and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00010089)))
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005)
+    
+    
+Class: OEO_00010439
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A nuclear power generation technology is a power generation technology that describes how to combine nuclear power units and nuclear fuel in an electricity generation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "nuclear power technology"@en
+    
+    SubClassOf: 
+        OEO_00010423,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000029)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00240014
+             and (OEO_00000532 some OEO_00000302)))
+    
+    
+Class: OEO_00010440
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel-powered generation technology is a power technology that describes how to combine fuel-powered units in a fuel-powered electricity generation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "fuel power technology"@en
+    
+    SubClassOf: 
+        OEO_00010423,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000175)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001)
+    
+    
+Class: OEO_00010441
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal power technology is a fuel-powered technology that describes how to combine coal power units and coal in a fuel-powered electricity generation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "coal power technology"@en
+    
+    SubClassOf: 
+        OEO_00010440,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000008)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00050001
+             and (OEO_00000532 some OEO_00000088)))
+    
+    
+Class: OEO_00010442
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hard coal power technology is a coal power technology that describes how to combine hard coal power units and hard coal in a fuel-powered electricity generation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "hard coal power technology"@en
+    
+    SubClassOf: 
+        OEO_00010441,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000021)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00050001
+             and (OEO_00000532 some OEO_00000204)))
+    
+    
+Class: OEO_00010443
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lignite power technology is a coal power technology that describes how to combine hard coal power units and lignite in a fuel-powered electricity generation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
+        rdfs:label "lignite power technology"@en
+    
+    SubClassOf: 
+        OEO_00010441,
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000024)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+            (OEO_00050001
+             and (OEO_00000532 some OEO_00000251)))
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -7764,17 +8092,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1541",
     
 Class: OEO_00020252
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A climate system is a system that has five interacting components: the atmosphere (air), the hydrosphere (water), the cryosphere (ice and permafrost), the lithosphere (earth's upper rocky layer) and the biosphere (living things)."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1540
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1542",
-        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_01001364
-A climate system is a system that has five interacting components: the atmosphere (air), the hydrosphere (water), the cryosphere (ice and permafrost), the lithosphere (earth's upper rocky layer) and the biosphere (living things).",
-        rdfs:label "climate system"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/RO_0002577>
-    
     
 Class: OEO_00020254
 
@@ -7817,6 +8134,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561",
     SubClassOf: 
         OEO_00140127,
         OEO_00020056 some OEO_00020254
+    
+    
+Class: OEO_00020267
+
+
+Class: OEO_00020321
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission scenario is an emission scenario that describes a possible CO2 emission trajectory.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+        rdfs:label "CO2 emission scenario"
+    
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00260007)
+    
+    SubClassOf: 
+        OEO_00030009
     
     
 Class: OEO_00030000
@@ -7903,6 +8239,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192",
         OEO_00010121 some OEO_00000331
     
     
+Class: OEO_00030009
+
+    
 Class: OEO_00030015
 
     SubClassOf: 
@@ -7917,34 +8256,9 @@ Class: OEO_00030019
     
 Class: OEO_00030024
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system is a supply system of spatially extended linked energy sources and sinks.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "energy supply system",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/432
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/493
-
-make subclass of supply system:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1071
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1123",
-        rdfs:label "energy system"
-    
-    SubClassOf: 
-        OEO_00030025
-    
     
 Class: OEO_00030025
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical"^^xsd:string,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A supply system is a system that connects producers and consumers.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/432
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/493",
-        rdfs:label "supply system"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/RO_0002577>
-    
     
 Class: OEO_00030026
 
@@ -9762,6 +10076,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
          and (OEO_00000500 some OEO_00260002),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020102
     
+    
+Class: OEO_00260007
+
     
 Class: OEO_00290000
 
