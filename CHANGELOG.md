@@ -26,9 +26,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - secondary energy production (#1619)
 - hydro energy, solar energy, wind energy (#1620)
 - gross domestic product (#1623)
-
+- reimplemented competency question tests in pytest (#1420)
+- added commands to filter competency questions from the command line (#1420)
+- added descriptive names to competency questions. and organized them in directories (#1420)
 
 ### Removed
+- old compteency question bash script (#1420)
 
 ## [1.15.0] - 2023-05-31
 
