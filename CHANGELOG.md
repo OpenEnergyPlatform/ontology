@@ -11,10 +11,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
 - energy technology (#1591)
+- power generation technology and 20 subclasses (#1601)
 - policy scenario, reference role, reference scenario (#1614)
 - population count, annual GDP growth (#1623)
 - greenhouse gas emission scenario, co2 emission scenario (#1615)
-
 
 ### Changed
 - boolean variable, true, false (#1255)
