@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.X.X] - 20XX-XX-XX
+## [1.16.0] - 2023-08-01
 
 ### Added
 - boolean value (#1255)
@@ -13,11 +13,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy technology (#1591)
 - power generation technology and 20 subclasses (#1601)
 - policy scenario, reference role, reference scenario (#1614)
-- population count, annual GDP growth (#1623)
 - greenhouse gas emission scenario, co2 emission scenario (#1615)
+- population count, annual GDP growth (#1623)
 
 ### Changed
 - boolean variable, true, false (#1255)
+- reimplemented competency question tests in pytest (#1420)
+- added commands to filter competency questions from the command line (#1420)
+- added descriptive names to competency questions. and organized them in directories (#1420)
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
@@ -26,9 +29,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - secondary energy production (#1619)
 - hydro energy, solar energy, wind energy (#1620)
 - gross domestic product (#1623)
-- reimplemented competency question tests in pytest (#1420)
-- added commands to filter competency questions from the command line (#1420)
-- added descriptive names to competency questions. and organized them in directories (#1420)
 
 ### Removed
 - old compteency question bash script (#1420)
