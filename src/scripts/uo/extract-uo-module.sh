@@ -1,5 +1,5 @@
-# Download current UO release
-curl -L https://raw.githubusercontent.com/bio-ontology-research-group/unit-ontology/master/uo.owl > uo-full-download.owl
+# Download UO release from 2023-05-25
+curl -L https://data.bioontology.org/ontologies/UO/submissions/219/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb > uo-full-download.owl
 # Extract the terms we want with hierarchy
 robot merge --input uo-full-download.owl extract --method MIREOT --lower-terms uo-w-hierarchy.txt --intermediates all --output uo-module-temp.owl
 # add xmlns:obo="http://purl.obolibrary.org/obo/"

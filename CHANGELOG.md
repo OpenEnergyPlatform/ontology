@@ -8,7 +8,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.16.1] - 2023-08-01
 
 ### Added
-- New files for updated UO import process (#1633)
+- New files for new UO v2023-05-25 import process (#1633)
 
 ### Changed
 - Update module files after saving with Protégé 5.6.1(#1628)
