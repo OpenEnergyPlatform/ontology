@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - Update module files after saving with Protégé 5.6.1(#1628)
+- added process attributes to energy transformation (#1625)
 
 ## [1.16.0] - 2023-08-01
 
