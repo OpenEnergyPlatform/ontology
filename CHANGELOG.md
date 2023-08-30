@@ -4,12 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.X.X] - 20XX-XX-XX
+
+### Added
+
+### Changed
+- energy transformation (#1625)
+
+### Removed
 
 ## [1.16.1] - 2023-08-01
 
 ### Changed
 - Update module files after saving with Protégé 5.6.1(#1628)
-- added process attributes to energy transformation (#1625)
 
 ## [1.16.0] - 2023-08-01
 
