@@ -7,9 +7,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- sufficiency scenario (#1642)
 
 ### Changed
 - energy transformation (#1625)
+- economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 
 ### Removed
 
