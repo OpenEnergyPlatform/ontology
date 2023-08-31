@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- regionalisation (#1639)
 - sufficiency scenario (#1642)
 
 ### Changed
