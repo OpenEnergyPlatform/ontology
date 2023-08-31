@@ -8,8 +8,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - regionalisation (#1639)
+- sufficiency scenario (#1642)
 
 ### Changed
+- economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 
 ### Removed
 
