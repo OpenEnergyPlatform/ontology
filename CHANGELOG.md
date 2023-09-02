@@ -19,9 +19,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [1.16.1] - 2023-08-01
 
-### Added
-- recycling (#1638)
-
 ### Changed
 - Update module files after saving with Protégé 5.6.1(#1628)
 
