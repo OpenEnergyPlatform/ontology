@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - regionalisation (#1639)
 - sufficiency scenario (#1642)
+- recycling (#1638)
 
 ### Changed
 - energy transformation (#1625)
