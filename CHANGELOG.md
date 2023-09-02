@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sufficiency scenario (#1642)
 
 ### Changed
+- energy transformation (#1625)
 - economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 
 ### Removed
