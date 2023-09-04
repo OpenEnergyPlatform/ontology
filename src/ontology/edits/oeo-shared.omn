@@ -2328,6 +2328,30 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
         OEO_00000530 some OEO_00000316
     
     
+Class: OEO_00000333
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that is the amount of energy transformed or transferred per time unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "classification:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
+
+definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/79
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369
+
+moved to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
+        rdfs:comment "Power is the derivative of energy transformation over time",
+        rdfs:label "power"
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003
+    
+    
 Class: OEO_00000334
 
     Annotations: 
@@ -2684,6 +2708,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
     SubClassOf: 
         OEO_00000207
+    
+    
+Class: OEO_00010115
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-social",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economy is a system of production, distribution, trade and consumption of goods and services.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "economic system",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
+move to oeo-shared, add alternative lable
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1642",
+        rdfs:label "economy"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0002577>
     
     
 Class: OEO_00010116
@@ -3161,7 +3202,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1251
 
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390"@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+added process attributes:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625"@en,
         rdfs:label "energy transformation"@en
     
     EquivalentTo: 
@@ -3171,6 +3216,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390"@en,
     
     SubClassOf: 
         OEO_00000419,
+        OEO_00000500 some OEO_00000333,
+        OEO_00000500 some OEO_00140049,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
@@ -4049,6 +4096,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000139
     
     
+Class: OEO_00020248
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An explorative scenario is a scenario that contains certain constraints / statements regarding measures that are taken in the near future / today to explore where these measures will lead to in a later future. The later future is not predefined in the scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1110
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1642",
+        rdfs:label "explorative scenario"
+    
+    SubClassOf: 
+        OEO_00000364
+    
+    
 Class: OEO_00020252
 
     Annotations: 
@@ -4106,16 +4168,17 @@ Class: OEO_00020309
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A policy scenario is a scenario in which certain policy instruments or transformative measures and their impacts are assessed.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1642",
         rdfs:label "policy scenario"
     
     EquivalentTo: 
-        OEO_00000364
+        OEO_00020248
          and (<http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00140149 or OEO_00140151))
     
     SubClassOf: 
-        OEO_00000364
+        OEO_00020248
     
     
 Class: OEO_00020310
@@ -4922,6 +4985,47 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
     
     SubClassOf: 
         OEO_00000119
+    
+    
+Class: OEO_00140049
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion efficiency is a process attribute describing the ratio between the input of an energy transformation and the outputs that are used.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
+
+moved to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
+        rdfs:label "energy conversion efficiency"@en
+    
+    SubClassOf: 
+        OEO_00030019,
+        OEO_00000502 some OEO_00020003,
+        OEO_00140002 some OEO_00140050
+    
+    
+Class: OEO_00140050
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
+        
+            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
+        <http://purl.obolibrary.org/obo/IAO_0000118> "efficiency",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
+
+moved to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
+        rdfs:label "efficiency value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
     
     
 Class: OEO_00140075

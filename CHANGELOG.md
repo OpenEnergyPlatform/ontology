@@ -4,12 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.x.x] - 20xx-xx-xx
+## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- regionalisation (#1639)
+- sufficiency scenario (#1642)
 - New files for new UO v2023-05-25 import process (#1633)
 
 ### Changed
+- energy transformation (#1625)
+- economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 
 ### Removed
 
