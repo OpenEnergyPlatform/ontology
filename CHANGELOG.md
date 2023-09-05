@@ -10,6 +10,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - regionalisation (#1639)
 - sufficiency scenario (#1642)
 - New files for new UO v2023-05-25 import process (#1633)
+- increase (#1644)
+- decrease (#1644)
 
 ### Changed
 - energy transformation (#1625)
