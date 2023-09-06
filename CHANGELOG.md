@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - regionalisation (#1639)
 - sufficiency scenario (#1642)
 - New files for new UO v2023-05-25 import process (#1633)
+- power-to-fuel technology and subclasses (#1647)
 
 ### Changed
 - energy transformation (#1625)
