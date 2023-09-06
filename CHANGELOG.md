@@ -7,18 +7,51 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.X.X] - 20XX-XX-XX
 
 ### Added
+- regionalisation (#1639)
+- sufficiency scenario (#1642)
+- New files for new UO v2023-05-25 import process (#1633)
+
+### Changed
+- energy transformation (#1625)
+- economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
+
+### Removed
+
+## [1.16.1] - 2023-08-01
+
+### Added
+
+### Changed
+- Update module files after saving with Protégé 5.6.1(#1628)
+
+## [1.16.0] - 2023-08-01
+
+### Added
 - boolean value (#1255)
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
 - energy technology (#1591)
+- power generation technology and 20 subclasses (#1601)
+- policy scenario, reference role, reference scenario (#1614)
+- greenhouse gas emission scenario, co2 emission scenario (#1615)
+- population count, annual GDP growth (#1623)
 
 ### Changed
 - boolean variable, true, false (#1255)
+- reimplemented competency question tests in pytest (#1420)
+- added commands to filter competency questions from the command line (#1420)
+- added descriptive names to competency questions. and organized them in directories (#1420)
 - production (#1575)
 - technology (#1591)
 - quantity value (#1606)
+- trade (#1613)
+- climate scenario, climate system, energy scenario, carbon dioxide, energy system, supply system, emission scenario (#1615)
+- secondary energy production (#1619)
+- hydro energy, solar energy, wind energy (#1620)
+- gross domestic product (#1623)
 
 ### Removed
+- old competency question bash script (#1420)
 
 ## [1.15.0] - 2023-05-31
 
@@ -300,7 +333,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Removed
 
-## [1.9.0] - 2022-03-01 
+## [1.9.0] - 2022-03-01
 
 ### Added
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
@@ -378,7 +411,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
 - biomass, biomethane (#952)
 - variable (production) cost (#953)
-- conventional (energy carrier disposition), fossil energy (#955) 
+- conventional (energy carrier disposition), fossil energy (#955)
 - carbon tax, social cost of carbon, carbon price (#956)
 - synthetic ammonia, power-to-ammonia process (#959)
 - renewable waste fuel, fossil waste fuel, renewable industrial waste fuel, fossil industrial waste fuel (#961)
@@ -438,7 +471,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - objective variable (#878)
 - metric ton (#879)
 - target description (#881)
-- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882) 
+- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882)
 - axioms of typical period and aggregation type (#883)
 
 ### Changed
@@ -675,8 +708,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
-- issue templates (#92, #146) 
-- ArtificialObject (#121) 
+- issue templates (#92, #146)
+- ArtificialObject (#121)
 - classes for objects that apply to technologies like EnergyGenerator (#128)
 - Grid class (#137)
 - object properties to describe models (#109)
