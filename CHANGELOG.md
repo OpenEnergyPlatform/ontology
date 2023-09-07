@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - energy transformation (#1625)
 - economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
+- regionalistaion (#1644)
 
 ### Removed
 
