@@ -13,7 +13,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - energy transformation (#1625)
-- economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
+- economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
+- waste role (#1638)
 
 ### Removed
 
