@@ -11,6 +11,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sufficiency scenario (#1642)
 - New files for new UO v2023-05-25 import process (#1633)
 - increase, decrease (#1644)
+- power-to-fuel technology and subclasses (#1647)
+- heat generation technology, solar heat technology, geothermal heat technology (#1619)
+- New files for new OMO v2023-08-23 import process (#1646)
+
 
 ### Changed
 - energy transformation (#1625)
