@@ -14,12 +14,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - power-to-fuel technology and subclasses (#1647)
 - heat generation technology, solar heat technology, geothermal heat technology (#1619)
 - New files for new OMO v2023-08-23 import process (#1646)
+- new module oeo-shared-axioms.omn (#1649)
 
 
 ### Changed
 - energy transformation (#1625)
 - economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 - regionalistaion (#1644)
+- oeo.omn imports (#1649)
 
 ### Removed
 
