@@ -1472,6 +1472,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     
     
 Class: OEO_00000087
+
     
 Class: OEO_00000097
 
@@ -1480,16 +1481,18 @@ Class: OEO_00000099
 
     
 Class: OEO_00000107
-    Annotations:
+
+    Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A contact person is an agent that can be contacted for help or information about a specific service or good.",
-        rdfs:label "contact person",
         <http://purl.obolibrary.org/obo/IAO_0000233> "rework module structure
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
-
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        rdfs:label "contact person"
+    
     SubClassOf: 
         OEO_00000051
+    
     
 Class: OEO_00000115
 
@@ -1592,37 +1595,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
     
 Class: OEO_00000316
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Origin is a quality of a portion of matter or energy based on where it comes from. It is inherited from its primary sources.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/108
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/130
-
-change def
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/741
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
-
-change definition and add comment with examples:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/974
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/976
-
-Axiomatise relations between origin, energy and portion of matter:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
-
-Move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1218
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
-        rdfs:comment "* Biomass has a biogenic origin and if it is converted to biogas, the biogas inherits the the biogenic origin.
-* Hard coal has a fossil origin and if it is used in a coal power plant to generate electrical energy, the electrical energy inherits the fossil origin.
-* Wind energy has renewable origin and if it is converted to electrical energy using a wind turbine, the electrical energy inherits the renewable origin",
-        rdfs:label "origin"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00010121 some 
-            (OEO_00000150 or OEO_00000331)
-    
     
 Class: OEO_00000323
 
@@ -1643,98 +1615,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     
 Class: OEO_00000331
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A portion of matter is an aggregate of material entities that have a state of matter."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000116> "Portions of matter describe mass nouns like e.g. water, air and fuel. Mass nouns are uncountable, but portions of these can be quantified, like 1 glass of water, 1 m³ of air or 1 barrel of fuel. For further explanation please refer to: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/227
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/279
-
-definition update and editor note:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/738
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/759
-
-Axiomatise relations between origin, energy and portion of matter:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1183
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1192
-
-Move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1218
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1219",
-        rdfs:comment "wiki page: https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns",
-        rdfs:label "portion of matter"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>,
-        OEO_00000530 some OEO_00000316
-    
     
 Class: OEO_00000333
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Power is the process attribute that is the amount of energy transformed or transferred per time unit."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "classification:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386
-
-definition:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/79
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/369
-
-moved to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
-        rdfs:comment "Power is the derivative of energy transformation over time",
-        rdfs:label "power"
-    
-    SubClassOf: 
-        OEO_00030019,
-        OEO_00000502 some OEO_00020003
-    
     
 Class: OEO_00000334
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power generating unit is an energy transformation unit that has the function to produce electrical energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "block",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/273
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/372
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/646
-
-subclass of energy transformation unit
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
-
-change produces energy axiom to 'has energy output':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
-
-remove \"among other parts from definition\"
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1258
-pull request: https://github.com/OpenEnergyPlatform/ontology/issues/1259
-
-New function-based definition:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
-https://github.com/OpenEnergyPlatform/ontology/pull/1360"@en,
-        rdfs:label "power generating unit"
-    
-    EquivalentTo: 
-        OEO_00020102
-         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010386)
-    
-    SubClassOf: 
-        OEO_00020102,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        OEO_00010235 some OEO_00000139,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107
-    
     
 Class: OEO_00000340
 
@@ -1821,26 +1707,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1506",
     
 Class: OEO_00000395
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "In physics, a state of matter is one of the distinct forms in which matter can exist. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Many intermediate states are known to exist, such as liquid crystal, and some states only exist under extreme conditions",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=State_of_matter&oldid=903680856",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/38
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/39
-
-add 'has bearer' axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "state of matter"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00010121 some OEO_00000331
-    
     
 Class: OEO_00000403
 
@@ -1888,61 +1754,12 @@ Class: OEO_00000423
     
 Class: OEO_00010023
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A vehicle is an artificial object that is used for transporting people or goods.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/425
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/431
-
-Add vehicle operational mode axiom:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1304
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1314
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_01000604",
-        rdfs:label "vehicle"
-    
-    SubClassOf: 
-        OEO_00000061,
-        OEO_00010235 some OEO_00010114,
-        <http://purl.obolibrary.org/obo/RO_0000053> some OEO_00320041
-    
     
 Class: OEO_00010078
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Global warming potential (GWP) is a quantity value that measures the the time-integrated radiative forcing due to a pulse emission of a given component, relative to a pulse emission of an equal mass of carbon dioxide (CO2).",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "GWP",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/683
-
-move to oeo-shared:
-https://github.com/OpenEnergyPlatform/ontology/pull/1410",
-        rdfs:label "global warming potential"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
-    
     
 Class: OEO_00010079
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity value is a quantity value that has a mass unit as unit. It is the quantity value of an emission value."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697",
-        rdfs:label "emission quantity value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
-    
     
 Class: OEO_00010082
 
@@ -1966,27 +1783,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1613",
     
     
 Class: OEO_00010083
+
     
 Class: OEO_00010114
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Waste thermal energy is thermal energy that is the physical output of an energy transformation process and that is released into the environment unused."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "waste heat",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/775
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/813
-
-change label and definition language
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "waste thermal energy"
-    
-    SubClassOf: 
-        OEO_00000207
-    
     
 Class: OEO_00010115
 
@@ -2056,78 +1856,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
     
 Class: OEO_00010127
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy production is the production of secondary energy carriers.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "secondary production of energy",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add alternative term:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/920
-pull: https://github.com/OpenEnergyPlatform/ontology/pull/924
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/860
-pull: https://github.com/OpenEnergyPlatform/ontology/pull/865
-
-Move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531
-
-make equivalent and add axiom:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1523
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1619",
-        rdfs:label "secondary energy production"@en
-    
-    EquivalentTo: 
-        OEO_00240003
-         and (OEO_00000533 some OEO_00140079)
-    
-    SubClassOf: 
-        OEO_00240003,
-        OEO_00000533 some OEO_00140079,
-        OEO_00140002 some OEO_00050019,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003
-    
     
 Class: OEO_00010210
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy use is the consumption of an energy carrier making use of the energy it carries.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "energy consumption",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
-
-Add alternative label:
-https://github.com/OpenEnergyPlatform/ontology/pull/1321
-
-Move to oeo-shared:
-https://github.com/OpenEnergyPlatform/ontology/pull/1463",
-        rdfs:label "energy use"@en
-    
-    SubClassOf: 
-        OEO_00140039,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
-    
     
 Class: OEO_00010211
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
-
-add 'has participant axiom':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395
-
-Move to oeo-shared:
-https://github.com/OpenEnergyPlatform/ontology/pull/1463",
-        rdfs:label "non-energy use"@en
-    
-    SubClassOf: 
-        OEO_00140039,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00020039
-    
     
 Class: OEO_00010263
 
@@ -2550,11 +2284,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     
 Class: OEO_00020016
 
-
-    
     
 Class: OEO_00020018
-    
+
     
 Class: OEO_00020032
 
@@ -2720,7 +2452,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
     
     
 Class: OEO_00020069
-    
+
     
 Class: OEO_00020072
 
@@ -3105,14 +2837,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
 Class: OEO_00020185
 
     
-    
-    
 Class: OEO_00020186
 
     
 Class: OEO_00020187
 
-    
     
 Class: OEO_00020201
 
