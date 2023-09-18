@@ -261,6 +261,9 @@ ObjectProperty: OEO_00000522
         OEO_00020011
     
     
+ObjectProperty: OEO_00010121
+
+    
 ObjectProperty: OEO_00010378
 
     Annotations: 
@@ -283,6 +286,12 @@ ObjectProperty: OEO_00020056
 
     
 ObjectProperty: OEO_00020188
+
+    
+ObjectProperty: OEO_00020189
+
+    
+ObjectProperty: OEO_00020190
 
     
 ObjectProperty: OEO_00020220
@@ -2091,12 +2100,67 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/882",
     
 Class: OEO_00020121
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Resolution is a quality of a dataset that indicates the level of detail of the data.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        rdfs:label "resolution"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/IAO_0000100>
+    
     
 Class: OEO_00020122
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Temporal resolution is the resolution of a time series that indicates time-dependent the level of detail.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912
+
+add individuals
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/972
+
+add 'has bearer' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        rdfs:label "temporal resolution"
+    
+    SubClassOf: 
+        OEO_00020121,
+        OEO_00010121 some OEO_00030034
+    
     
 Class: OEO_00020123
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Spatial resolution is the resolution of a georeferenced dataset that indicates the geographical level of detail.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/849
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/912
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        rdfs:label "spatial resolution"
+    
+    SubClassOf: 
+        OEO_00020121
+    
     
 Class: OEO_00020166
 
@@ -2478,9 +2542,60 @@ Class: OEO_00030024
     
 Class: OEO_00030029
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Exogenous data is a data item whose quantity value is determined outside of a model and is imposed on a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "input data",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
+
+make equivalent class
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113
+
+add relation to quantity value:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1216
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        rdfs:label "exogenous data"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+         and (OEO_00020189 some OEO_00000275)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000350
+    
     
 Class: OEO_00030030
 
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Endogenous data is a data item whose quantity value is determined by a model.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/482
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/500
+
+make equivalent class
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113
+
+add relation to quantity value:
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1216
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        rdfs:label "endogenous data"
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>
+         and (OEO_00020190 some OEO_00000275)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000027>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000350
+    
     
 Class: OEO_00030031
 
