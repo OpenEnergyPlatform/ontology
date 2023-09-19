@@ -24,6 +24,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - oeo.omn imports (#1649)
 
 ### Removed
+- all scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
 
 ## [1.16.1] - 2023-08-01
 
