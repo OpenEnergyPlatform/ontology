@@ -1036,6 +1036,9 @@ ObjectProperty: OEO_00040010
     
     
 ObjectProperty: OEO_00140002
+
+    InverseOf: 
+        OEO_00020056
     
     
 ObjectProperty: OEO_00140008
@@ -1430,6 +1433,9 @@ Class: OEO_00000275
 
     
 Class: OEO_00000315
+
+    DisjointWith: 
+        OEO_00000323
     
     
 Class: OEO_00000316
@@ -1452,19 +1458,6 @@ Class: OEO_00000334
     
 Class: OEO_00000340
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A project is a process to achieve a specified goal that is unique in the sum of its conditions like its goal, time and cost budget and its organisation.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/418
-move to oeo-shared
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/862
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869",
-        rdfs:label "project"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
     
 Class: OEO_00000350
 
@@ -1490,7 +1483,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
-    
+  
     
 Class: OEO_00000364
 
@@ -1509,18 +1502,7 @@ Class: OEO_00000403
     
 Class: OEO_00000407
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is a plan specification that describes how to combine artificial objects or other material entities and processes in a specific way."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/136
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/334
-moved to oeo-shared, change definition, reclassify, add axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1591",
-        rdfs:label "technology"
-    
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000104>,
         <http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00000061
              and (<http://purl.obolibrary.org/obo/RO_0000056> some <http://purl.obolibrary.org/obo/BFO_0000015>))
@@ -1528,22 +1510,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1591",
     
 Class: OEO_00000419
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformation is a process that transforms one or more inputs into at least one output."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/435
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450
-
-input and output axioms:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1167
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1178",
-        rdfs:label "transformation"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        <http://purl.obolibrary.org/obo/RO_0002233> some <http://purl.obolibrary.org/obo/BFO_0000002>,
-        <http://purl.obolibrary.org/obo/RO_0002234> some <http://purl.obolibrary.org/obo/BFO_0000002>
-    
     
 Class: OEO_00000423
 
@@ -1583,29 +1549,9 @@ Class: OEO_00010116
     
 Class: OEO_00010117
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The role of an independent continuant or energy over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
-add relation to monetary price
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034
-
-update definition:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
-
-add 'has bearer' axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
-        rdfs:label "good role"@en
-    
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>,
         OEO_00010121 some 
-            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>),
-        OEO_00020180 some OEO_00040003
+            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>)
     
     
 Class: OEO_00010127
@@ -1724,27 +1670,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557"
     
 Class: OEO_00020012
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A study report is a report that is the output from some study."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
-add etitor note
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1025"@en,
-        rdfs:label "study report"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000088>,
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557
-
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871"
-        OEO_00000506 some (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064),
-        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000100>,
-        <http://purl.obolibrary.org/obo/RO_0002353> some OEO_00020011
-    
     
 Class: OEO_00020015
 
@@ -1932,21 +1857,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034",
     
 Class: OEO_00020166
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A methodology is a plan specification that describes processes that are part of a study.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/971
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1011
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1129
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1306"@en,
-        rdfs:label "methodology"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000104>,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020011
-    
     
 Class: OEO_00020175
 
@@ -1989,41 +1899,9 @@ Class: OEO_00020187
     
 Class: OEO_00020201
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Import is the process of purchasing goods or services abroad and their delivery to the domestic market.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221
-
-add 'has participant axiom':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        rdfs:label "import"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116) or (<http://purl.obolibrary.org/obo/RO_0002410> some OEO_00140124)
-    
     
 Class: OEO_00020202
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Export is the process of selling goods or services abroad and their delivery to a foreign market.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add class
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221
-
-add 'has participant axiom':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        rdfs:label "export"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116) or (<http://purl.obolibrary.org/obo/RO_0002410> some OEO_00140124)
-    
     
 Class: OEO_00020204
 
@@ -2101,6 +1979,13 @@ Class: OEO_00030004
 Class: OEO_00030008
     
     
+Class: OEO_00030008
+
+    EquivalentTo: 
+        OEO_00000364
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010115)
+    
+    
 Class: OEO_00030009
 
     EquivalentTo: 
@@ -2113,13 +1998,6 @@ Class: OEO_00030015
     
 Class: OEO_00030019
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A process attribute is a dependent occurrent that existentially depends on a process.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/205
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/386",
-        rdfs:label "process attribute"
-    
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000003>
     
@@ -2267,200 +2145,39 @@ Class: OEO_00050018
     
 Class: OEO_00050019
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "energy quantity value",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
-moved to oeo-shared
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221",
-        rdfs:label "energy amount value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000111>
-    
     
 Class: OEO_00090001
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A funder is a sponsor that supports by giving money.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
-        rdfs:label "funder"@en
-    
-    SubClassOf: 
-        OEO_00140009
-    
     
 Class: OEO_00140003
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Transport is the process of moving people or goods from one place to another.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
-
-add performance axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1272
-pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1289
-
-add has participant axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1271
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1309",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
-        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/ENVO_02000125",
-        rdfs:label "transport"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>,
-        OEO_00140002 some OEO_00320000,
-        <http://purl.obolibrary.org/obo/RO_0000057> some 
-            (OEO_00000323 or OEO_00010116)
-    
     
 Class: OEO_00140004
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "International transport is a transport process between different countries or within the same country via another country.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517",
-        rdfs:label "international transport"@en
-    
-    SubClassOf: 
-        OEO_00140003
-    
     
 Class: OEO_00140005
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Freight transport is a transport process which moves goods from one place to another.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
-
-Add axiom for goods as participant:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1269
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299",
-        rdfs:label "freight transport"@en
-    
-    SubClassOf: 
-        OEO_00140003,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116
-    
     
 Class: OEO_00140006
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A private transport is a passenger transport in which people use their own vehicle for movement e.g. bicycle, motorcycle and cars.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
-
-Make subclass of 'passenger transport'
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
-        rdfs:label "private transport"
-    
-    SubClassOf: 
-        OEO_00010263
-    
     
 Class: OEO_00140007
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A public transport is a passenger transport in which a number of passengers share a common vehicle.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/503
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/517
-
-Make subclass of 'passenger transport'
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1055
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1234",
-        rdfs:label "public transport"
-    
-    SubClassOf: 
-        OEO_00010263
-    
     
 Class: OEO_00140009
 
     
 Class: OEO_00140012
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic value is a quantity value that is economically relevant.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559
-move to oeo-shared
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
-        rdfs:label "economic value"@en
-    
-    SubClassOf: 
-        OEO_00000350
-    
     
 Class: OEO_00140033
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical reaction is a transformation that involves the interconversion of chemical species.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/449
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/568
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
-
-add 'has participant axiom':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        rdfs:label "chemical reaction"@en
-    
-    SubClassOf: 
-        OEO_00000419,
-        <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>
-    
     
 Class: OEO_00140039
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Consumption is the process of using something and thereby reducing its amount.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569",
-        rdfs:label "consumption"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
-    
     
 Class: OEO_00140040
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A demand is a realizable entity that is characterised by a person, organisation or object needing it for a specific purpose.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/140
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/569
-
-add 'has bearer' axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485",
-        rdfs:label "demand"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000017>,
-        OEO_00010121 some 
-            (OEO_00030022 or <http://purl.obolibrary.org/obo/BFO_0000030>)
-    
     
 Class: OEO_00140043
 
@@ -2470,104 +2187,18 @@ Class: OEO_00140044
     
 Class: OEO_00140049
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy conversion efficiency is a process attribute describing the ratio between the input of an energy transformation and the outputs that are used.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
-
-moved to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
-        rdfs:label "energy conversion efficiency"@en
-    
-    SubClassOf: 
-        OEO_00030019,
-        OEO_00000502 some OEO_00020003,
-        OEO_00140002 some OEO_00140050
-    
     
 Class: OEO_00140050
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An efficiency value is a quantity value stating the ratio between a process's inputs and the outputs that are used.",
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
-        <http://purl.obolibrary.org/obo/IAO_0000118> "efficiency",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
-
-moved to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1543
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625",
-        rdfs:label "efficiency value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0010006>
-    
     
 Class: OEO_00140075
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-shared",
-        <http://purl.obolibrary.org/obo/IAO_0000112> "coals, cruide oil, natural gas, wood or moving air (wind) have the disposition of being primary energy carriers",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Primary energy carrier disposition is an energy carrier disposition of material entities that are extracted directly from natural resources or that are natural energy flows.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390",
-        rdfs:label "primary energy carrier disposition"@en
-    
-    SubClassOf: 
-        OEO_00000151
-    
     
 Class: OEO_00140076
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000112> "blast furnace gas, coke oven gas, cokes, motor gasoline or electricity have the disposition to be a secondary energy carrier",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Secondary energy carrier disposition is an energy carrier disposition of material entities that are manufactured from primary energy carriers or from a different form of secondary energy carriers.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
-
-Move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
-        rdfs:label "secondary energy carrier disposition"@en
-    
-    SubClassOf: 
-        OEO_00000151
-    
     
 Class: OEO_00140079
 
-    Annotations: 
-        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A secondary energy carrier is an energy carrier that has the secondary energy carrier disposition.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/575
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633
-fix error in definition
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/669
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/678
-
-Move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1522
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531",
-        rdfs:label "secondary energy carrier"@en
-    
-    EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000040>
-         and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140076)
-    
-    SubClassOf: 
-        OEO_00020039
-    
     
 Class: OEO_00140081
 
