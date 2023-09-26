@@ -15,6 +15,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - heat generation technology, solar heat technology, geothermal heat technology (#1619)
 - New files for new OMO v2023-08-23 import process (#1646)
 - new module oeo-shared-axioms.omn (#1649)
+- acceptance (#1698)
 
 
 ### Changed
