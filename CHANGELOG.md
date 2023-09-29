@@ -8,7 +8,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - regionalisation (#1639)
-- sufficiency scenario (#1642)
+- sufficiency scenario, sufficiency (#1642, #1648)
 - New files for new UO v2023-05-25 import process (#1633)
 - increase, decrease (#1644)
 - power-to-fuel technology and subclasses (#1647)
