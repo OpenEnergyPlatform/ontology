@@ -15,19 +15,24 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy transformation (#1625)
 - economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
 - waste role (#1638)
+- sufficiency scenario, sufficiency (#1642, #1648)
 - New files for new UO v2023-05-25 import process (#1633)
 - increase, decrease (#1644)
 - power-to-fuel technology and subclasses (#1647)
 - heat generation technology, solar heat technology, geothermal heat technology (#1619)
 - New files for new OMO v2023-08-23 import process (#1646)
+- new module oeo-shared-axioms.omn (#1649)
+- acceptance (#1698)
 
 
 ### Changed
 - energy transformation (#1625)
 - economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 - regionalistaion (#1644)
+- oeo.omn imports (#1649)
 
 ### Removed
+- import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
 
 ## [1.16.1] - 2023-08-01
 
