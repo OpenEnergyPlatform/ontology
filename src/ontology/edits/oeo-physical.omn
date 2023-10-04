@@ -1619,13 +1619,17 @@ Class: OEO_00000042
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste role is a role of an object aggregate that has been discarded after primary use.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A waste role is a role of a material entity that has been discarded after primary use.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/132
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/207
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+changed bearer to material entity
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1638",
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
@@ -1634,7 +1638,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000027>
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000043
@@ -6079,6 +6083,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     
     
 Class: OEO_00010116
+
+    
 
     
 Class: OEO_00010117
@@ -12716,6 +12722,9 @@ Class: OEO_00310022
 
     Annotations: 
         OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
+        OEO_00040001 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1432",
+
         <http://purl.obolibrary.org/obo/IAO_0000115> "A flat-plate collector is a solar thermal collector that consists of flat-plates.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1432",
@@ -14246,6 +14255,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
     SubClassOf: 
         OEO_00320072,
         OEO_00020056 some OEO_00000159
+    
+    
+Class: OEO_00360001
+
+    Annotations: 
+        OEO_00040001 "http://openenergy-platform.org/ontology/oeo/oeo-physical",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Recycling is a material transformation that regains materials and/or energy from an artificial product or waste."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "class added: 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1638"@en,
+        rdfs:label "recycling"@en
+    
+    SubClassOf: 
+        OEO_00020264,
+        <http://purl.obolibrary.org/obo/RO_0002233> some 
+            (<http://purl.obolibrary.org/obo/BFO_0000040>
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000042)),
+        <http://purl.obolibrary.org/obo/RO_0002234> some 
+            (OEO_00000150 or OEO_00010116)
     
     
 Individual: OEO_00000182
