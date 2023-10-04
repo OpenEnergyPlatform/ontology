@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - New files for new OMO v2023-08-23 import process (#1646)
 - new module oeo-shared-axioms.omn (#1649)
 - acceptance (#1698)
+- scenario projection comparison, model intercomparison study (#1711)
 
 
 ### Changed
@@ -23,6 +24,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 - regionalistaion (#1644)
 - oeo.omn imports (#1649)
+- study (#1711)
 
 ### Removed
 - import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
