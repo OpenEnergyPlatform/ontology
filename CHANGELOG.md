@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - regionalisation (#1639)
 - sufficiency scenario (#1642)
 - recycling (#1638)
+- flexibility, energy balancing (#1717)
 
 ### Changed
 - energy transformation (#1625)
@@ -24,6 +25,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - new module oeo-shared-axioms.omn (#1649)
 - acceptance (#1698)
 - scenario projection comparison, model intercomparison study (#1711)
+- energy balance data set (#1717) 
 
 
 ### Changed
