@@ -26,6 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - acceptance (#1698)
 - scenario projection comparison, model intercomparison study (#1711)
 - energy balance data set (#1717) 
+- person, organisational role, organisation (#1716)
 
 
 ### Changed
