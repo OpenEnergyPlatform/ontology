@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - regionalisation (#1639)
 - sufficiency scenario (#1642)
 - recycling (#1638)
+- control area, bidding zone, bidding zone role (#1718)
 
 ### Changed
 - energy transformation (#1625)
