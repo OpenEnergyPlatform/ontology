@@ -26,6 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - acceptance (#1698)
 - scenario projection comparison, model intercomparison study (#1711)
 - person, organisational role, organisation (#1716)
+- added missing english language labels (#1719)
 
 
 ### Changed
