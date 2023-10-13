@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sufficiency scenario (#1642)
 - recycling (#1638)
 - flexibility, energy balancing (#1717)
+- control area, bidding zone, bidding zone role (#1718)
 
 ### Changed
 - energy transformation (#1625)
