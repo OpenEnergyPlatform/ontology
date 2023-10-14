@@ -26,7 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - acceptance (#1698)
 - scenario projection comparison, model intercomparison study (#1711)
 - person, organisational role, organisation (#1716)
-- sate of matter (#1720)
+- state of matter (#1720)
 
 ### Changed
 - energy transformation (#1625)
