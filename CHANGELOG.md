@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - sufficiency scenario (#1642)
 - recycling (#1638)
 - control area, bidding zone, bidding zone role (#1718)
+- climate neutrality criterion, process climate neutrality, climate neutral process, material climate neutrality (#1722)
 
 ### Changed
 - energy transformation (#1625)
