@@ -26,7 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - new module oeo-shared-axioms.omn (#1649)
 - acceptance (#1698)
 - scenario projection comparison, model intercomparison study (#1711)
-- energy balance data set (#1717) 
+- energy balance -> energy balance data set (#1717) 
 - person, organisational role, organisation (#1716)
 
 
