@@ -38,6 +38,7 @@ The source code of the ontology is found in the folder `src/ontology/` <br>
 The main file is `src/ontology/oeo.omn` <br>
 
 All own modules are collected in the folder `src/ontology/edits/` <br>
+To understand the structure of these modules, take a look at the structure diagram (https://user-images.githubusercontent.com/38690039/275459325-1c6eb63d-287a-45b5-a107-839c8c09bfe0.png).<br>
 The imported modules are under `src/ontology/imports/` <br>
 We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology. Additionally, an ontology viewer is available on the [Open Energy Platform](https://openenergy-platform.org/viewer/oeo/).
 
