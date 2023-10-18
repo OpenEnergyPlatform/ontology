@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - control area, bidding zone, bidding zone role (#1718)
 - climate neutrality criterion, process climate neutrality, climate neutral process, material climate neutrality (#1722)
 - blended liquid fuel, bioethanol, E10, B7 (#1723)
+- energy storage object hierarchy, energy storage technology hierarchy (#1728)
 
 ### Changed
 - energy transformation (#1625)
