@@ -33,6 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy balance -> energy balance data set (#1717) 
 - person, organisational role, organisation (#1716)
 - state of matter (#1720)
+- potential energy stroage function (#1728)
 
 ### Changed
 - energy transformation (#1625)
