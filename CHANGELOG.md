@@ -27,6 +27,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - scenario projection comparison, model intercomparison study (#1711)
 - person, organisational role, organisation (#1716)
 - state of matter (#1720)
+- new module oeo-sectors (#1649)
 
 ### Changed
 - energy transformation (#1625)
