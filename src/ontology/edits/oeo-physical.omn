@@ -3978,11 +3978,16 @@ Class: OEO_00000374
         <http://purl.obolibrary.org/obo/IAO_0000118> "SMES",
         <http://purl.obolibrary.org/obo/IAO_0000233> "Shorten definition and new label:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1349
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1396",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1396
+
+add axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
         rdfs:label "superconducting magnetic energy storage"
     
     SubClassOf: 
-        OEO_00000159
+        OEO_00000159,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
     
     
 Class: OEO_00000376
@@ -7604,8 +7609,13 @@ Class: OEO_00010324
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A potential energy storage function is an energy storage function with potential energy as input and output.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "This function was introduce for the sake of completeness, but there is no actual use case seen at the moment.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+
+add editor note
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
         rdfs:label "potential energy storage function"
     
     SubClassOf: 
@@ -8621,6 +8631,98 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601",
          and (<http://purl.obolibrary.org/obo/RO_0000056> some 
             (OEO_00050001
              and (OEO_00000532 some OEO_00000251)))
+    
+    
+Class: OEO_00010445
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A blended liquid fuel is a liquid combustion fuel that contains a liquid fossil fuel and a liquid renewable fuel or a liquid biofuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1504
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1723",
+        rdfs:label "blended liquid fuel"@en
+    
+    EquivalentTo: 
+        OEO_00010145
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010147)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000258 or OEO_00010150))
+    
+    SubClassOf: 
+        OEO_00010145
+    
+    
+Class: OEO_00010446
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Bioethanol is ethanol with a biogenic origin."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1504
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1723",
+        rdfs:label "bioethanol"@en
+    
+    EquivalentTo: 
+        OEO_00020001
+         and (OEO_00000530 some OEO_00030001)
+    
+    SubClassOf: 
+        OEO_00020001
+    
+    
+Class: OEO_00010447
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "E10 is a gasoline fuel that consists of (fossil) gasoline and up to 10 % ethanol."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1504
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1723",
+        rdfs:label "E10"@en
+    
+    SubClassOf: 
+        OEO_00010241,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000183)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010446)
+    
+    
+Class: OEO_00010448
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "B7 is a diesel fuel that consists of fossil diesel fuel and up to 7 % biodiesel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1504
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1723",
+        rdfs:label "B7"@en
+    
+    SubClassOf: 
+        OEO_00010242,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000071)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000183)
+    
+    
+Class: OEO_00010449
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mobility technology is a technology that describes how vehicles participate in transport"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1727",
+        rdfs:label "mobility technology"@en
+    
+    SubClassOf: 
+        OEO_00000407,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010023
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140003))
+    
+    
+Class: OEO_00010450
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric mobility is a technology that describes how electric vehicles participate in transport."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1727",
+        rdfs:label "electric mobility technology"@en
+    
+    SubClassOf: 
+        OEO_00010449,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000146
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140003))
     
     
 Class: OEO_00020001
@@ -9789,7 +9891,7 @@ Class: OEO_00020249
         <http://purl.obolibrary.org/obo/IAO_0000115> "A compressed-air energy storage unit is an energy storage unit that uses compressed air.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1495
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1499",
-        rdfs:label "compressed-air energy storage unit"@de
+        rdfs:label "compressed-air energy storage unit"@en
     
     SubClassOf: 
         OEO_00000399,
@@ -10038,6 +10140,181 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647",
         <http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00010020
              and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00330008))
+    
+    
+Class: OEO_00020362
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy storage object is an energy storage object that has the function to store electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:comment "The electrical energy storage object is being charged with electrical energy and releases electrical energy during the decharging process. The stored energy within the object may appear in a different form of energy, though.",
+        rdfs:label "electrical energy storage object"
+    
+    EquivalentTo: 
+        OEO_00000159
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322)
+    
+    SubClassOf: 
+        OEO_00000159
+    
+    
+Class: OEO_00020363
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A chemical energy storage object is an energy storage object that has the function to store chemical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "chemical energy storage object"
+    
+    EquivalentTo: 
+        OEO_00000159
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010321)
+    
+    SubClassOf: 
+        OEO_00000159
+    
+    
+Class: OEO_00020364
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A kinetic energy storage object is an energy storage object that has the function to store kinetic energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:comment "The kinetic energy storage object is being charged with kinetic energy and releases kinetic energy during the decharging process. The stored energy within the object may appear in a different form of energy, though.",
+        rdfs:label "kinetic energy storage object"
+    
+    EquivalentTo: 
+        OEO_00000159
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010323)
+    
+    SubClassOf: 
+        OEO_00000159
+    
+    
+Class: OEO_00020365
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A thermal energy storage object is an energy storage object that has the function to store thermal energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:comment "The thermal energy storage object is being charged with thermal energy and releases thermal energy during the decharging process. The stored energy within the object may appear in a different form of energy, though.",
+        rdfs:label "thermal energy storage object"
+    
+    EquivalentTo: 
+        OEO_00000159
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000039)
+    
+    SubClassOf: 
+        OEO_00000159
+    
+    
+Class: OEO_00020366
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage technology is an energy technology that describes how to combine energy storage objects and energy carriers in charging and decharging processes for the purpose of temporarily storing energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "energy storage technology"
+    
+    SubClassOf: 
+        OEO_00020267,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000159
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320064))
+    
+    
+Class: OEO_00020367
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy storage technology is an energy storage technology that describes how to combine electrical energy storage objects and electrical energy in charging and decharging processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "electrical energy storage technology"
+    
+    SubClassOf: 
+        OEO_00020366,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020362
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320064))
+    
+    
+Class: OEO_00020368
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An kinetic energy storage technology is an energy storage technology that describes how to combine kinetic energy storage objects and kinetic energy in charging and decharging processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "kinetic energy storage technology"
+    
+    SubClassOf: 
+        OEO_00020366,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020364
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320064))
+    
+    
+Class: OEO_00020369
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An thermal energy storage technology is an energy storage technology that describes how to combine thermal energy storage objects and thermal energy in charging and decharging processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "thermal energy storage technology"
+    
+    SubClassOf: 
+        OEO_00020366,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020365
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320064))
+    
+    
+Class: OEO_00020370
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An chemical energy storage technology is an energy storage technology that describes how to combine chemical energy storage objects and chemical energy in charging and decharging processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "chemical energy storage technology"
+    
+    SubClassOf: 
+        OEO_00020366,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020363
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320064))
+    
+    
+Class: OEO_00020371
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A potential energy storage object is an energy storage object that has the function to store potential energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "This object was introduce for the sake of completeness, but there is no actual use case seen at the moment.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "potential energy storage object"
+    
+    EquivalentTo: 
+        OEO_00000159
+         and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010324)
+    
+    SubClassOf: 
+        OEO_00000159
+    
+    
+Class: OEO_00020372
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An potential energy storage technology is an energy storage technology that describes how to combine potential energy storage objects and potential energy in charging and decharging processes.",
+        <http://purl.obolibrary.org/obo/IAO_0000116> "This technology was introduce for the sake of completeness, but there is no actual use case seen at the moment.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1728",
+        rdfs:label "potential energy storage technology"
+    
+    SubClassOf: 
+        OEO_00020366,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020371
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320064))
     
     
 Class: OEO_00030000
@@ -14499,6 +14776,85 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1718",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00360007
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Flexibility is a disposition of an energy system that is able to balance energy by adjusting energy supply and energy demand."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1549
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1717",
+        rdfs:label "flexibility"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        OEO_00010121 some <http://purl.obolibrary.org/obo/RO_0002577>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00360008
+    
+    
+Class: OEO_00360008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Energy balancing is a process that levels out energy supply and demand for system stability."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1549
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1717",
+        rdfs:label "energy balancing"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00360010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A climate neutrality criterion is a plan specification that intends to describe a state in which human activities result in no net effect on the climate system."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1392
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1722",
+        rdfs:comment "There are several climate neutrality criteria defined, e.g. by UNFCCC, IPCC or other institutions, with more or less differing sprecifications. A climate neutrality criterion usually includes net-zero emissions but might, e.g. include non-emission effects like surface albedo."@en,
+        rdfs:label "climate neutrality criterion"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>
+    
+    
+Class: OEO_00360011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Process climate neutrality is a process attribute that conforms to some climate neutrality criteria."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1392
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1722",
+        rdfs:label "process climate neutrality"@en
+    
+    SubClassOf: 
+        OEO_00030019
+    
+    
+Class: OEO_00360013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A climate neutral process is a process that has a process climate neutrality attribute."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1392
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1722",
+        rdfs:label "climate neutral process"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+         and (OEO_00000500 some OEO_00360011)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00360014
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Material climate neutrality is a disposition of a material entity that conforms to some climate neutrality criterion."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1392
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1722",
+        rdfs:label "material climate neutrality"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>
     
     
 Individual: OEO_00000182

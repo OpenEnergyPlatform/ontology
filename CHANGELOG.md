@@ -10,7 +10,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - regionalisation (#1639)
 - sufficiency scenario (#1642)
 - recycling (#1638)
+- flexibility, energy balancing (#1717)
 - control area, bidding zone, bidding zone role (#1718)
+- climate neutrality criterion, process climate neutrality, climate neutral process, material climate neutrality (#1722)
+- blended liquid fuel, bioethanol, E10, B7 (#1723)
+- mobility technology, electric mobility technology (#1727)
+- energy storage object hierarchy, energy storage technology hierarchy (#1728)
 
 ### Changed
 - energy transformation (#1625)
@@ -25,9 +30,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - new module oeo-shared-axioms.omn (#1649)
 - acceptance (#1698)
 - scenario projection comparison, model intercomparison study (#1711)
+- energy balance -> energy balance data set (#1717) 
 - person, organisational role, organisation (#1716)
 - state of matter (#1720)
 - new module oeo-sectors (#1649)
+- potential energy stroage function (#1728)
 
 ### Changed
 - energy transformation (#1625)
