@@ -31,7 +31,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy transformation (#1625)
 - waste role (#1638)
 - economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
-- regionalistaion (#1644)
+- regionalisation (#1644)
 - oeo.omn imports (#1649)
 - study (#1711)
 - person, organisational role, organisation (#1716)
