@@ -8,6 +8,19 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - regionalisation (#1639)
+- sufficiency scenario (#1642)
+- recycling (#1638)
+- flexibility, energy balancing (#1717)
+- control area, bidding zone, bidding zone role (#1718)
+- climate neutrality criterion, process climate neutrality, climate neutral process, material climate neutrality (#1722)
+- blended liquid fuel, bioethanol, E10, B7 (#1723)
+- mobility technology, electric mobility technology (#1727)
+- energy storage object hierarchy, energy storage technology hierarchy (#1728)
+
+### Changed
+- energy transformation (#1625)
+- economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
+- waste role (#1638)
 - sufficiency scenario, sufficiency (#1642, #1648)
 - New files for new UO v2023-05-25 import process (#1633)
 - increase, decrease (#1644)
@@ -17,6 +30,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - new module oeo-shared-axioms.omn (#1649)
 - acceptance (#1698)
 - generic model class, mathematical model, scale model, model role (#1707)
+- scenario projection comparison, model intercomparison study (#1711)
+- energy balance -> energy balance data set (#1717) 
+- person, organisational role, organisation (#1716)
+- state of matter (#1720)
+- potential energy stroage function (#1728)
 
 ### Changed
 - energy transformation (#1625)
@@ -24,6 +42,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - regionalistaion (#1644)
 - oeo.omn imports (#1649)
 - model relabeled to numerical computer model, model, has contributor and subclasses (#1707)
+- study (#1711)
 
 ### Removed
 - import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)

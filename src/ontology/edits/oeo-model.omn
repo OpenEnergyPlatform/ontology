@@ -113,6 +113,33 @@ ObjectProperty: OEO_00000503
 ObjectProperty: OEO_00000504
 
     
+ObjectProperty: OEO_00000506
+
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064
+    
+    
+ObjectProperty: OEO_00000507
+
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+ObjectProperty: OEO_00000508
+
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+ObjectProperty: OEO_00000510
+
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
 ObjectProperty: OEO_00000511
 
     Annotations: 
@@ -412,7 +439,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
         <http://purl.obolibrary.org/obo/RO_0000057>
     
     Domain: 
-        OEO_00010262 or <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
+        OEO_00010252 or OEO_00010262
     
     Range: 
         OEO_00000364
@@ -423,6 +450,12 @@ ObjectProperty: OEO_00040010
     
 ObjectProperty: OEO_00140002
 
+    
+ObjectProperty: OEO_00140008
+
+    Domain: 
+        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
+    
     
 ObjectProperty: OEO_00140093
 
@@ -453,7 +486,11 @@ ObjectProperty: OEO_00140096
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an algorithm or a software and the typical hardware used for its execution.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/527
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/723",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/723
+
+move axiom to shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
         rdfs:label "has typical computation hardware"@en
     
     SubPropertyOf: 
@@ -462,11 +499,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/723",
     Domain: 
         <http://purl.obolibrary.org/obo/IAO_0000010> or <http://purl.obolibrary.org/obo/IAO_0000064>
     
-    Range: 
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/749
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/751"
-        OEO_00000206
+    
+ObjectProperty: OEO_00140164
+
+    Domain: 
+        OEO_00000274
     
     
 ObjectProperty: owl:topObjectProperty
@@ -474,48 +511,6 @@ ObjectProperty: owl:topObjectProperty
     
 DataProperty: OEO_00140178
 
-    
-Class: <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010250>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A study factsheet is a factsheet that contains information about a scenario study.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1069
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131",
-        rdfs:label "study factsheet"@en
-    
-    SubClassOf: 
-        OEO_00000162,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020011
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010251>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An OEP study factsheet is an study factsheet hosted on the Open Energy Platform. It is used to access the Open Energy Knowledge Graph (OEKG).",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1069
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131",
-        rdfs:label "OEP study factsheet"@en
-    
-    SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010250>,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
-    
-    
-Class: <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario study is a study that investigates one or more scenarios.",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1058
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131
-add based on axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
-        rdfs:label "scenario study"
-    
-    SubClassOf: 
-        OEO_00020011,
-        OEO_00020226 some OEO_00000364
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
@@ -610,9 +605,6 @@ Class: <http://purl.obolibrary.org/obo/UO_0000036>
 Class: <http://purl.obolibrary.org/obo/UO_0000046>
 
     
-Class: OEO_00000031
-
-    
 Class: OEO_00000048
 
     Annotations: 
@@ -654,6 +646,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/525"@en,
         <http://purl.obolibrary.org/obo/IAO_0000030>,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000364
     
+    
+Class: OEO_00000064
+
     
 Class: OEO_00000078
 
@@ -898,9 +893,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/584",
         <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000382
     
     
-Class: OEO_00000199
-
-    
 Class: OEO_00000202
 
     Annotations: 
@@ -914,9 +906,6 @@ Class: OEO_00000202
     DisjointWith: 
         OEO_00000059
     
-    
-Class: OEO_00000206
-
     
 Class: OEO_00000228
 
@@ -1464,6 +1453,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1075",
         <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000300>
     
     
+Class: OEO_00010250
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study factsheet is a factsheet that contains information about a scenario study.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1069
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131",
+        rdfs:label "study factsheet"@en
+    
+    SubClassOf: 
+        OEO_00000162,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020011
+    
+    
+Class: OEO_00010251
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An OEP study factsheet is an study factsheet hosted on the Open Energy Platform. It is used to access the Open Energy Knowledge Graph (OEKG).",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1069
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131",
+        rdfs:label "OEP study factsheet"@en
+    
+    SubClassOf: 
+        OEO_00010250,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010252
+    
+    
+Class: OEO_00010252
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario study is a study that investigates one or more scenarios.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1058
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1131
+add based on axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1346
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1391",
+        rdfs:label "scenario study"
+    
+    SubClassOf: 
+        OEO_00020011,
+        OEO_00020226 some OEO_00000364
+    
+    
 Class: OEO_00010255
 
     Annotations: 
@@ -1471,12 +1502,15 @@ Class: OEO_00010255
         <http://purl.obolibrary.org/obo/IAO_0000115> "A nationally determined contribution (NDC) is a target description of future greenhouse gas emission reductions prepared, communicated and maintained by a party to the Paris Agreement.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "NDC",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/947
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1151",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1151
+
+move axiom to shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
         rdfs:label "nationally determined contribution"
     
     SubClassOf: 
-        OEO_00020093,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00000199
+        OEO_00020093
     
     
 Class: OEO_00010260
@@ -1597,20 +1631,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
         OEO_00010296
     
     
-Class: OEO_00010362
-
-    
 Class: OEO_00010404
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance is an empirical data set that describes a specified set of energy transformations and a specified set of energy carriers in a spatial region for a specific time step (usually a year).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance data set is an empirical data set that describes a specified set of energy transformations and a specified set of energy carriers in a spatial region for a specific time step (usually a year).",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        rdfs:label "energy balance"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+change label 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1549
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1717",
+        rdfs:label "energy balance data set"
     
     SubClassOf: 
         OEO_00000149,
@@ -1940,9 +1975,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000006>
     
-    
-Class: OEO_00020039
-
     
 Class: OEO_00020072
 
@@ -2289,7 +2321,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1429",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010252>
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010252
     
     
 Class: OEO_00020247
@@ -2328,9 +2360,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     SubClassOf: 
         OEO_00000364
     
-    
-Class: OEO_00020252
-
     
 Class: OEO_00020309
 
@@ -2529,12 +2558,12 @@ Class: OEO_00030007
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615
+
+move axiom to shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
         rdfs:label "climate scenario"
-    
-    EquivalentTo: 
-        OEO_00000364
-         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00020252)
     
     SubClassOf: 
         OEO_00000364
@@ -2587,12 +2616,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
 
 make equivalent
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1615
+
+move axiom to shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
         rdfs:label "energy scenario"
-    
-    EquivalentTo: 
-        OEO_00000364
-         and (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030024)
     
     SubClassOf: 
         OEO_00000364
@@ -2613,9 +2642,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     SubClassOf: 
         OEO_00000274
     
-    
-Class: OEO_00030024
-
     
 Class: OEO_00030029
 
@@ -2917,14 +2943,15 @@ Class: OEO_00140138
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793
 
 Add 'is about' axiom:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1410
+
+move axiom to shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
         rdfs:label "generation time series"@en
     
     SubClassOf: 
-        OEO_00030034,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some 
-            (OEO_00240014
-             and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000031))
+        OEO_00030034
     
     
 Class: OEO_00140139
@@ -2937,12 +2964,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793
 
 Add 'is about' axiom:
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1423
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437
+
+move axiom to shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
         rdfs:label "yield profile"@en
     
     SubClassOf: 
-        OEO_00140138,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010362
+        OEO_00140138
     
     
 Class: OEO_00140161
@@ -2992,9 +3022,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
     DisjointWith: 
         OEO_00000078
     
-    
-Class: OEO_00240014
-
     
 Class: OEO_00280000
 
@@ -3094,7 +3121,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1639",
         rdfs:label "regionalisation"@de
     
     SubClassOf: 
-        <http://openenergy-platform.org/ontology/oeo/oeo-model/OEO_00010250>
+        OEO_00010250
+    
+    
+Class: OEO_00360002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model intercomparison study is a scenario study that performs a comparison of several models using a reference scenario."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1640
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1711",
+        rdfs:label "model intercomparison study"@en
+    
+    SubClassOf: 
+        OEO_00010252
+    
+    
+Class: OEO_00360003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scenario comparison study is a scenario study that performs a scenario projection comparison"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1640
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1711",
+        rdfs:label "scenario projection comparison"@en
+    
+    SubClassOf: 
+        OEO_00010252
     
     
 Individual: OEO_00000049
