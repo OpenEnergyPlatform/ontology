@@ -37,7 +37,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - person, organisational role, organisation (#1716)
 - energy balance -> energy balance data set (#1717) 
 - state of matter (#1720)
-- potential energy stroage function (#1728)
+- potential energy storage function (#1728)
 
 ### Removed
 - import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
