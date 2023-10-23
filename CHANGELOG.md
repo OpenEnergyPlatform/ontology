@@ -16,13 +16,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - New files for new OMO v2023-08-23 import process (#1646)
 - new module oeo-shared-axioms.omn (#1649)
 - acceptance (#1698)
-
+- generic model class, mathematical model, scale model, model role (#1707)
 
 ### Changed
 - energy transformation (#1625)
 - economy, economic scenario, trarget driven scenario, explorative scenario, policy scenario (#1642)
 - regionalistaion (#1644)
 - oeo.omn imports (#1649)
+- model relabeled to numerical computer model, model, has contributor and subclasses (#1707)
 
 ### Removed
 - import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
