@@ -112,30 +112,15 @@ ObjectProperty: OEO_00000504
     
 ObjectProperty: OEO_00000506
 
-    Domain: 
-        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00000064
-    
     
 ObjectProperty: OEO_00000507
 
-    Domain: 
-        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 ObjectProperty: OEO_00000508
 
-    Domain: 
-        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 ObjectProperty: OEO_00000510
 
-    Domain: 
-        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 ObjectProperty: OEO_00000511
 
@@ -450,9 +435,6 @@ ObjectProperty: OEO_00140002
     
 ObjectProperty: OEO_00140008
 
-    Domain: 
-        OEO_00000274 or <http://purl.obolibrary.org/obo/IAO_0000030>
-    
     
 ObjectProperty: OEO_00140093
 
@@ -922,7 +904,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00000274
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A model is a generically dependent continuant that is used for computing an idealised reproduction of a system and its behaviours."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A numerical computer model is a mathematical model that is calculated by a computer."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000116> "formerly called \"model\"",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/180
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/349
 
@@ -934,11 +917,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        rdfs:label "model"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+rename and reclassify
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707",
+        rdfs:label "numerical computer model"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000031>
+        OEO_00020354
     
     
 Class: OEO_00000275
@@ -2415,6 +2402,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1648",
     
     SubClassOf: 
         OEO_00000364
+    
+    
+Class: OEO_00020352
+
+    
+Class: OEO_00020353
+
+    
+Class: OEO_00020354
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A mathematical model is a information content artifact that represents a system and its behaviours mathematically.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/1444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707",
+        rdfs:label "mathematical model"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020353
+    
+    
+Class: OEO_00020355
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A scale model is model comprising of a spatial pattern of components arranged in such a way for them to represent a system.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/1444
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707",
+        rdfs:label "scale model"
+    
+    SubClassOf: 
+        OEO_00020352
     
     
 Class: OEO_00030007
