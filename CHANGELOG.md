@@ -361,7 +361,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.9.0] - 2022-03-01
 
 ### Added
-- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
+- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#967)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
 - energy consumption value, gross national electricity consumption (#997)
