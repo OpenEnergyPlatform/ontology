@@ -7,7 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.0.0] - 2023-10-24
 
 ### Major stuctural changes
-For the version 2.0.0 we especially did some major stuctural changes on the OEO. Two new modules were introduced:
+For the version 2.0.0 we especially did some major structural changes on the OEO. Two new modules were introduced:
 * The first one, oeo-sector, is a module on the same hierarchical level as the other content-related modules, i.e. oeo-physical, oeo-model and oeo-social. All sector-related entities were moved there from oeo-social.
 * The second one, oeo-shared-axioms, is a module that imports the four content-related modules and contains all axioms that are introduced across modules.
 
