@@ -6,6 +6,14 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [1.X.X] - 20XX-XX-XX
 
+The version 2.0.0 of the OEO brings an improved modular structure. Two new modules were added:
+* The new module 'sectors' (file oeo-sectors.omn) covers entities that relate to sectors and sector divisions. This new module is a parallel module to the three existing thematic modules 'model', 'physical', and 'social'.
+* A second new module (file oeo-shared-axioms.omn) covers axioms that connect classes from more than one thematic module.
+
+This new structure made it possible to move a lot of classes from the oeo-shared module to the respective thematic modules. It is easier possible to re-use only parts of the OEO (e.g. only one or two thematic modules). However, keep in note that full axiomatisation of a class is now only provided if the module oeo-shared-axioms is used. See also the wiki article on the [modules of the OEO](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO).
+
+Next to the restructuring and the two new modules, version 2.0.0 brings further changes:
+
 ### Added
 - heat generation technology, solar heat technology, geothermal heat technology (#1610)
 - new files for new UO v2023-05-25 import process (#1633)
