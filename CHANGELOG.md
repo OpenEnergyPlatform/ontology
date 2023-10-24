@@ -43,6 +43,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Removed
 - import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
 
+### Deprecated
+- belongs to module (#1732)
+
 ## [1.16.1] - 2023-08-01
 
 ### Added
