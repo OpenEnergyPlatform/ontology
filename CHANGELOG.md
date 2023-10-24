@@ -13,7 +13,7 @@ For the version 2.0.0 we especially did some major stuctural changes on the OEO.
 
 This caused a lot of movement of entities, especially from oeo-shared. Many classes were moved back to their original module. This restructuring was done to foster the modularity, which makes the implementation easier and more error-prone. Yet, we had to break with the rule, that all axioms should live in the same module as their class of declaration. The full axiomatisation of a class is now only provided if the module oeo-shared-axioms is used. See also the wiki article on the [modules of the OEO](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO).
 
-Further, the import process for UO and OMO where updated. And any scripts and tools not essential for the building routine moved to a [seperate repository](https://github.com/OpenEnergyPlatform/oeo-tools).
+Further, the import process for UO and OMO where updated. All scripts and tools not essential for the building routine moved to a [seperate repository](https://github.com/OpenEnergyPlatform/oeo-tools). And finally, english language labels were added to (english) definitions and labels, to allow other language extentions in the future.
 
 ### Content-related changes
 We added a lot of classes that are relevant for the OEKG development, i.e. technologies (#1572) and descriptors for scenario studies (#https://github.com/OpenEnergyPlatform/oekg/issues/19).
