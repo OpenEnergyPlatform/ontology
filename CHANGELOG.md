@@ -33,6 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
 - regionalisation (#1644)
 - oeo.omn imports (#1649)
+- model relabeled to numerical computer model, model, has contributor and subclasses (#1707)
 - study (#1711)
 - person, organisational role, organisation (#1716)
 - energy balance -> energy balance data set (#1717) 
