@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.X.X] - 20XX-XX-XX
+## [2.0.0] - 2023-10-24
 
 ### Major stuctural changes
 For the version 2.0.0 we especially did some major stuctural changes on the OEO. Two new modules were introduced:
