@@ -16,7 +16,7 @@ This caused a lot of movement of entities, especially from oeo-shared. Many clas
 Further, the import process for UO and OMO were updated. All scripts and tools not essential for the building routine moved to a [seperate repository](https://github.com/OpenEnergyPlatform/oeo-tools). And finally, english language labels were added to (english) definitions and labels, to allow other language extentions in the future.
 
 ### Content-related changes
-We added a lot of classes that are relevant for the OEKG development, i.e. technologies (#1572) and descriptors for scenario studies (#https://github.com/OpenEnergyPlatform/oekg/issues/19).
+We added a lot of classes that are relevant for the OEKG development, i.e. technologies (#1572) and descriptors for scenario studies (https://github.com/OpenEnergyPlatform/oekg/issues/19).
 
 ### Added
 - heat generation technology, solar heat technology, geothermal heat technology (#1610)
