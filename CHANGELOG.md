@@ -4,8 +4,63 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.0.0] - 2023-10-25
+
+### Major stuctural changes
+For the version 2.0.0 we especially did some major structural changes on the OEO. Two new modules were introduced:
+* The first one, oeo-sector, is a module on the same hierarchical level as the other content-related modules, i.e. oeo-physical, oeo-model and oeo-social. All sector-related entities were moved there from oeo-social.
+* The second one, oeo-shared-axioms, is a module that imports the four content-related modules and contains all axioms that are introduced across modules.
+
+This caused a lot of movement of entities, especially from oeo-shared. Many classes were moved back to their original module. This restructuring was done to foster the modularity, which makes the implementation easier and more error-prone. Yet, we had to break with the rule, that all axioms should live in the same module as their class of declaration. The full axiomatisation of a class is now only provided if the module oeo-shared-axioms is used. See also the wiki article on the [modules of the OEO](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO).
+
+Further, the import process for UO and OMO were updated. All scripts and tools not essential for the building routine moved to a [seperate repository](https://github.com/OpenEnergyPlatform/oeo-tools). And finally, english language labels were added to (english) definitions and labels, to allow other language extentions in the future.
+
+### Content-related changes
+We added a lot of classes that are relevant for the OEKG development, i.e. technologies (#1572) and descriptors for scenario studies (https://github.com/OpenEnergyPlatform/oekg/issues/19).
+
+### Added
+- heat generation technology, solar heat technology, geothermal heat technology (#1610)
+- new files for new UO v2023-05-25 import process (#1633)
+- recycling (#1638)
+- regionalisation (#1639)
+- sufficiency scenario (#1642)
+- increase, decrease (#1644)
+- new files for new OMO v2023-08-23 import process (#1646)
+- power-to-fuel technology and subclasses (#1647)
+- sufficiency scenario, sufficiency (#1642, #1648)
+- new module oeo-shared-axioms.omn (#1649)
+- acceptance (#1698)
+- scenario projection comparison, model intercomparison study (#1711)
+- flexibility, energy balancing (#1717)
+- control area, bidding zone, bidding zone role (#1718)
+- climate neutrality criterion, process climate neutrality, climate neutral process, material climate neutrality (#1722)
+- blended liquid fuel, bioethanol, E10, B7 (#1723)
+- new module oeo-sectors (#1724)
+- mobility technology, electric mobility technology (#1727)
+- energy storage object hierarchy, energy storage technology hierarchy (#1728)
+
+### Changed
+- energy transformation (#1625)
+- waste role (#1638)
+- economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
+- regionalisation (#1644)
+- oeo.omn imports (#1649)
+- model relabeled to numerical computer model, model, has contributor and subclasses (#1707)
+- study (#1711)
+- person, organisational role, organisation (#1716)
+- energy balance -> energy balance data set (#1717) 
+- state of matter (#1720)
+- potential energy storage function (#1728)
+
+### Removed
+- import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
+
+### Deprecated
+- belongs to module (#1732)
 
 ## [1.16.1] - 2023-08-01
+
+### Added
 
 ### Changed
 - Update module files after saving with Protégé 5.6.1(#1628)
@@ -322,7 +377,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [1.9.0] - 2022-03-01
 
 ### Added
-- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
+- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#967)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
 - energy consumption value, gross national electricity consumption (#997)
