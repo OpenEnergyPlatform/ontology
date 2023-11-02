@@ -9,8 +9,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - resilience, power system resilience, power system (#1744)
+- region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
 
 ### Changed
+- subregion, study region, study subregion, interacting region, considered region (#1749)
+
 ### Removed
 
 
