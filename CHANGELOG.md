@@ -11,6 +11,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - resilience, power system resilience, power system (#1744)
 
 ### Changed
+- model factsheet (#1751)
+
 ### Removed
 
 
