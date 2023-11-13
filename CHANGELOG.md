@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - subregion, study region, study subregion, interacting region, considered region (#1749)
+- model factsheet (#1751)
 
 ### Removed
 
