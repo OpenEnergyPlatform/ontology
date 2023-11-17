@@ -7,10 +7,14 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://openenergy-platform.org/ontology/oeo/oeo-import-edits.owl">
         <owl:versionIRI rdf:resource="http://openenergy-platform.org/ontology/oeo/dev/oeo-import-edits.owl"/>
+        <owl:imports rdf:resource="http://openenergy-platform.org/ontology/oeo/dev/imports/iao-extracted.owl"/>
+        <owl:imports rdf:resource="http://openenergy-platform.org/ontology/oeo/dev/imports/ro-extracted.owl"/>
         <dc:description>Open Energy Ontology (imports-edit module)</dc:description>
         <dc:description>This module contains ontology parts which extend the definitions of elements defined in imported ontologies. This is necessary to prevent manual edits on the automatically generated import modules.
 Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relation Ontology, and the `iao-extracted.owl`-file which is a subset of the Information Artifact Ontology.</dc:description>
@@ -269,7 +273,9 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086</obo:IAO_0
 
     <!-- http://openenergy-platform.org/ontology/oeo/OEO_00010412 -->
 
-    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00010412"/>
+    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00010412">
+        <rdfs:subClassOf rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
+    </owl:Class>
     
 
 
