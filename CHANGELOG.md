@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - resilience, power system resilience, power system (#1744)
+- service product role, service product (#1748)
 - region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
 
 ### Changed
