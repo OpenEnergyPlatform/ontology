@@ -15,6 +15,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - subregion, study region, study subregion, interacting region, considered region (#1749)
 - model factsheet (#1751)
+- is connected to, has sink, has source (1762)
 
 ### Removed
 
