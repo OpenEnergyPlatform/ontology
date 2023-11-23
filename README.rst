@@ -36,17 +36,17 @@ Open Energy Family - Open Energy Ontology (OEO)
 Developing a common ontology for the domain of energy system analysis.
 
 Introduction
-------------
+================================================
 
 The **Open Energy Ontology (OEO)** is a domain ontology of the energy system analysis context. It is developed as part of the `Open Energy Family <https://github.com/OpenEnergyPlatform>`_. The OEO is published on GitHub under an open source license. The language used is the Manchester OWL Syntax, which was chosen because it is user-friendly for editing and viewing differences of edited files. The OEO is constantly being extended. The first version of the OEO was released on June 11th 2020. A Steering Committee (OEO-SC) was created to accompany the development, increase awareness of the ontology and include it in current projects.
 
 Scope of this ontology
-----------------------
+================================================
 
 This domain ontology is a collaborative effort to represent the context of **energy system analysis** based on standard terminologies used by human experts in this field of research. It is designed to improve transparency and facilitate comparability and transferability of energy system modelling and scenario analysis. This ontology makes use of the Basic Formal Ontology (`BFO <https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes>`_) and its principles. It re-uses several other ontologies as described in the `GitHub Wiki <https://github.com/OpenEnergyPlatform/ontology/wiki/use-of-external-ontologies>`_.
 
 License / Copyright / Citation
--------------------------------
+================================================
 
 This repository is licensed under `CC0 1.0 Universal (CC0 1.0) Public Domain Dedication <http://creativecommons.org/publicdomain/zero/1.0/>`_.
 For a scientific citation please see the `CITATION.cff <CITATION.cff>`_ file.
@@ -58,7 +58,7 @@ Example:
 > 'energy system' (`https://openenergy-platform.org/ontology/oeo/OEO_00030024 <https://openenergy-platform.org/ontology/oeo/OEO_00030024>`_) from the `Open Energy Ontology (OEO) <https://github.com/OpenEnergyPlatform/ontology>`_
 
 Releases and installation
--------------------------
+================================================
 
 The latest version of the OEO can be accessed on the `Open Energy Platform <https://openenergy-platform.org/ontology/oeo>`_ and the `Master Branch <https://github.com/OpenEnergyPlatform/ontology/tree/master>`_.
 All released versions can be downloaded directly from the `GitGub Releases <https://github.com/OpenEnergyPlatform/ontology/releases/>`_.
@@ -78,7 +78,7 @@ To get an overview of the existing modules, take a look at the following wiki ar
 We recommend to use the software `Protégé <https://protege.stanford.edu/>`_ to open and edit the ontology. Additionally, an ontology viewer is available on the `Open Energy Platform <https://openenergy-platform.org/viewer/oeo/>`_.
 
 Collaboration
--------------
+================================================
 
 This is an interdisciplinary open source project, help is always welcome.
 Everyone is invited to develop this repository with good intentions.
@@ -90,7 +90,7 @@ The workflow is described in the `CONTRIBUTING.md <https://github.com/OpenEnergy
 Please read the `GitHub Wiki <https://github.com/OpenEnergyPlatform/ontology/wiki>`_ for more information about the ontology, its standards, its best practice principles and the BFO classification.
 
 Teams
------
+================================================
 
 Experts in ontology engineering, economy and energy-system modelling work together collaboratively.
 We combine domain knowledge with knowledge about how an ontology should be designed.
