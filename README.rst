@@ -30,6 +30,23 @@ ontology
     :local:
     :backlinks: top
 
+.. list-table::
+   :widths: 10, 50
+
+   * - License
+     - |badge_license|
+   * - Documentation
+     - |badge_rtd|
+   * - Tests
+     - |badge_ci|
+   * - Publication
+     - |badge_pypi| |badge_zenodo|
+   * - Development
+     - |badge_issue_open| |badge_issue_closes| |badge_pr_open| |badge_pr_closes|
+   * - Community
+     - |badge_contributing| |badge_contributors| |badge_repo_counts| |PyPI download month|
+ 
+
 Open Energy Family - Open Energy Ontology (OEO)
 ================================================
 
