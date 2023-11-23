@@ -24,6 +24,19 @@ ontology
 
 .. image:: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/areleu/6d00affa9fbc89c79684d62091d96551/raw/open_energy_ontology__heads_feature-1419-competency-question-coverage-report.json
 
+.. list-table::
+   :widths: auto
+
+   * - License
+     - |badge_license|
+   * - Documentation
+     - |badge_documentation|
+   * - Publication
+     -
+   * - Development
+     - |badge_issue_open| |badge_issue_closes| |badge_pr_open| |badge_pr_closes|
+   * - Community
+     - |badge_contributing| |badge_contributors| |badge_repo_counts|
 
 .. contents::
     :depth: 2
@@ -128,3 +141,33 @@ The OEO is organised in a general team and several `subteams <https://github.com
 
 - `@oeo-general-expert-formal-ontology <https://github.com/orgs/OpenEnergyPlatform/teams/oeo-general-expert-formal-ontology>`
     - Knowledge related to formal ontology expertise and BFO
+
+
+.. |badge_license| image:: https://img.shields.io/github/license/OpenEnergyPlatform/oeo-ontology
+    :target: LICENSE.txt
+    :alt: License
+
+.. |badge_documentation| image::
+    :target:
+    :alt: Documentation
+
+.. |badge_contributing| image:: https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat
+    :alt: contributions
+
+.. |badge_repo_counts| image:: http://hits.dwyl.com/OpenEnergyPlatform/ontology.svg
+    :alt: counter
+
+.. |badge_contributors| image:: https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square
+    :alt: contributors
+
+.. |badge_issue_open| image:: https://img.shields.io/github/issues-raw/OpenEnergyPlatform/ontology
+    :alt: open issues
+
+.. |badge_issue_closes| image:: https://img.shields.io/github/issues-closed-raw/OpenEnergyPlatform/ontology
+    :alt: closes issues
+
+.. |badge_pr_open| image:: https://img.shields.io/github/issues-pr-raw/OpenEnergyPlatform/ontology
+    :alt: closes issues
+
+.. |badge_pr_closes| image:: https://img.shields.io/github/issues-pr-closed-raw/OpenEnergyPlatform/ontology
+    :alt: closes issues
