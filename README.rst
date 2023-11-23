@@ -8,11 +8,6 @@
 ontology
 ==========
 
-.. contents::
-    :depth: 2
-    :local:
-    :backlinks: top
-
 
 .. image:: https://avatars2.githubusercontent.com/u/37101913?s=400&u=9b593cfdb6048a05ea6e72d333169a65e7c922be&v=4
    :align: right
@@ -28,6 +23,12 @@ ontology
 .. image:: https://img.shields.io/github/v/release/OpenEnergyPlatform/ontology
 
 .. image:: https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/areleu/6d00affa9fbc89c79684d62091d96551/raw/open_energy_ontology__heads_feature-1419-competency-question-coverage-report.json
+
+
+.. contents::
+    :depth: 2
+    :local:
+    :backlinks: top
 
 Open Energy Family - Open Energy Ontology (OEO)
 ================================================
