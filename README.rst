@@ -143,7 +143,7 @@ The OEO is organised in a general team and several `subteams <https://github.com
     - Knowledge related to formal ontology expertise and BFO
 
 
-.. |badge_license| image:: https://img.shields.io/github/license/OpenEnergyPlatform/oeo-ontology
+.. |badge_license| image:: https://img.shields.io/github/license/OpenEnergyPlatform/ontology
     :target: LICENSE.txt
     :alt: License
 
