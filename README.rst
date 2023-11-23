@@ -8,7 +8,10 @@
 ontology
 ==========
 
-
+.. contents::
+    :depth: 2
+    :local:
+    :backlinks: top
 
 
 .. image:: https://avatars2.githubusercontent.com/u/37101913?s=400&u=9b593cfdb6048a05ea6e72d333169a65e7c922be&v=4
@@ -17,6 +20,7 @@ ontology
    :height: 200
    :alt: OpenEnergyPlatform
    :target: https://openenergy-platform.org/
+
 
 .. image:: https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg
    :target: http://creativecommons.org/publicdomain/zero/1.0/
