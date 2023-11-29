@@ -4,15 +4,14 @@ Describe the findings of the discussion in the issue or meeting.
 
 ## Type of change (CHANGELOG.md)
 
-### Added
+### Add
 - Added a new class [#](https://github.com/OpenEnergyPlatform/ontology/issues/)
 
-### Updated
+### Update
 - Updated a definition [#](https://github.com/OpenEnergyPlatform/ontology/issues/)
 
-### Removed
+### Remove
 - Removed a broken link [#](https://github.com/OpenEnergyPlatform/ontology/issues/)
-
 
 ## Workflow checklist
 
