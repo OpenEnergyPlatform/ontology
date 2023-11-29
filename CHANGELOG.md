@@ -17,6 +17,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model factsheet (#1751)
 - is connected to, has sink, has source (#1762)
 - carbon capture and storage technology (#1768)
+- temperature, pressure (#1767)
 
 ### Removed
 
