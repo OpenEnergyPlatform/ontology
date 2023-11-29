@@ -10,9 +10,16 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - resilience, power system resilience, power system (#1744)
 - import from IAO: time stamped measurement datum, action specification, data format specification, objective specification, study design, software application, software library, software method, software module, software script, document part, journal article, version number, cartesian spatial coordinate datum, one dimensional cartesian spatial coordinate datum, two dimensional cartesian spatial coordinate datum, three dimensional cartesian spatial coordinate datum, has time stamp (#1754)
+- service product role, service product (#1748)
+- region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
+- fuel blending quota, fuel quota blending value (#1763)
 
 ### Changed
+- subregion, study region, study subregion, interacting region, considered region (#1749)
 - model factsheet (#1751)
+- is connected to, has sink, has source (#1762)
+- carbon capture and storage technology (#1768)
+- temperature, pressure (#1767)
 
 ### Removed
 
