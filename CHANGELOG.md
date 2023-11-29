@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - resilience, power system resilience, power system (#1744)
+- import from IAO: time stamped measurement datum, action specification, data format specification, objective specification, study design, software application, software library, software method, software module, software script, document part, journal article, version number, cartesian spatial coordinate datum, one dimensional cartesian spatial coordinate datum, two dimensional cartesian spatial coordinate datum, three dimensional cartesian spatial coordinate datum, has time stamp (#1754)
 
 ### Changed
 - model factsheet (#1751)
