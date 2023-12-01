@@ -37,13 +37,13 @@ define replace_owls
 endef
 
 define translate_to_owl
-	$(ROBOT) convert --input $2 --output $1 --format owl
+	$(ROBOT) convert --catalog $(VERSIONDIR)/catalog-v001.xml --input $2 --output $1 --format owl
 	$(call replace_omns,$1)
 	$(call replace_devs,$1)
 endef
 
 define translate_to_omn
-	$(ROBOT) convert --input $2 --output $1 --format omn
+	$(ROBOT) convert --catalog $(VERSIONDIR)/catalog-v001.xml --input $2 --output $1 --format omn
 	$(call replace_owls,$1)
 	$(call replace_devs,$1)
 endef
@@ -52,7 +52,7 @@ endef
 
 all: base merge closure
 
-base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
+base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OWL_COPY) $(OMN_COPY) $(OMN_TRANSLATE)
 
 merge: | $(VERSIONDIR)/oeo-full.omn
 
@@ -78,10 +78,10 @@ build/robot.jar: | build
 	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.2/robot.jar
 
 
-$(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
+$(VERSIONDIR)/%.owl: $(VERSIONDIR)/%.omn
 	$(call translate_to_owl,$@,$<)
 
-$(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
+$(VERSIONDIR)/modules/%.owl: $(VERSIONDIR)/edits/%.omn
 	$(call translate_to_owl,$@,$<)
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
