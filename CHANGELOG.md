@@ -19,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is connected to, has sink, has source (#1762)
 - boiler (#1771)
 - temperature, pressure (#1767)
+- data descriptor (#1775)
 - carbon capture and storage technology (#1768)
 - B7, E10 (#1774)
 
