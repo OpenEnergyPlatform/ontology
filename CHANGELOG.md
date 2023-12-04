@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - service product role, service product (#1748)
 - region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
 - fuel blending quota, fuel quota blending value (#1763)
+- study report due to legal obligation (#1777)
 
 ### Changed
 - subregion, study region, study subregion, interacting region, considered region (#1749)
