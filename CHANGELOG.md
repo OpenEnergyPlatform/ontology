@@ -23,6 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - data descriptor (#1775)
 - carbon capture and storage technology (#1768)
 - B7, E10 (#1774)
+- target description, policy instrument, policy (#1778)
 
 ### Removed
 
