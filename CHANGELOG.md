@@ -5,7 +5,7 @@ The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.X.X] - 20XX-XX-XX
+## [2.1.0] - 2023-12-05
 
 ### Added
 - resilience, power system resilience, power system (#1744)
@@ -28,9 +28,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - carbon capture and storage technology (#1768)
 - B7, E10 (#1774)
 - target description, policy instrument, policy (#1778)
-
-### Removed
-
 
 ## [2.0.1] - 2023-10-26
 
