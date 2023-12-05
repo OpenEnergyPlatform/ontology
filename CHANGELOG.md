@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
 - fuel blending quota, fuel quota blending value (#1763)
 - study report due to legal obligation (#1777)
+- market share and market share value (#1779)
 
 ### Changed
 - subregion, study region, study subregion, interacting region, considered region (#1749)
