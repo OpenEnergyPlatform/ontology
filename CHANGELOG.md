@@ -19,6 +19,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - subregion, study region, study subregion, interacting region, considered region (#1749)
 - model factsheet (#1751)
 - is connected to, has sink, has source (#1762)
+- power rating, power capacity (#1770)
+- carbon capture and storage technology (#1768)
 - boiler (#1771)
 - temperature, pressure (#1767)
 - data descriptor (#1775)
