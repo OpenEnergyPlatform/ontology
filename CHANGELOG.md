@@ -5,13 +5,13 @@ The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.X.X] - 20XX-XX-XX
+## [2.1.0] - 2023-12-05
 
 ### Added
 - resilience, power system resilience, power system (#1744)
-- import from IAO: time stamped measurement datum, action specification, data format specification, objective specification, study design, software application, software library, software method, software module, software script, document part, journal article, version number, cartesian spatial coordinate datum, one dimensional cartesian spatial coordinate datum, two dimensional cartesian spatial coordinate datum, three dimensional cartesian spatial coordinate datum, has time stamp (#1754)
 - service product role, service product (#1748)
 - region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
+- import from IAO: time stamped measurement datum, action specification, data format specification, objective specification, study design, software application, software library, software method, software module, software script, document part, journal article, version number, cartesian spatial coordinate datum, one dimensional cartesian spatial coordinate datum, two dimensional cartesian spatial coordinate datum, three dimensional cartesian spatial coordinate datum, has time stamp (#1754)
 - fuel blending quota, fuel quota blending value (#1763)
 - study report due to legal obligation (#1777)
 - market share and market share value (#1779)
@@ -20,17 +20,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - subregion, study region, study subregion, interacting region, considered region (#1749)
 - model factsheet (#1751)
 - is connected to, has sink, has source (#1762)
-- power rating, power capacity (#1770)
-- carbon capture and storage technology (#1768)
-- boiler (#1771)
 - temperature, pressure (#1767)
-- data descriptor (#1775)
 - carbon capture and storage technology (#1768)
+- power rating, power capacity (#1770)
+- boiler (#1771)
 - B7, E10 (#1774)
+- data descriptor (#1775)
 - target description, policy instrument, policy (#1778)
-
-### Removed
-
 
 ## [2.0.1] - 2023-10-26
 
