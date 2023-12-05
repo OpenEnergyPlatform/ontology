@@ -361,6 +361,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: <http://purl.obolibrary.org/obo/BFO_0000148>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000007>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
     
@@ -1948,7 +1951,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00140150
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a specifically dependent continuant that is a deliberate system of principles, rules and guidelines, adopted by an organisation to guide decision making with respect to particular situations and implemented to achieve stated goals.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a plan specification that is a deliberate system of principles, rules and guidelines, adopted by an organisation to guide decision making with respect to particular situations and implemented to achieve stated goals.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
@@ -1959,11 +1962,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853
 
 alternative label
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614
+
+reclassify and add axiom to target description
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1684
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1778",
         rdfs:label "policy"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000020>,
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
         OEO_00010121 some OEO_00030022,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140151
     
@@ -1986,11 +1993,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+reclassify
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1684
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1778",
         rdfs:label "policy instrument"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/IAO_0000007>,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853"
@@ -2192,6 +2203,34 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1698"@en,
             (OEO_00000323 or OEO_00030022)
     
     
+Class: OEO_00360018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A service product role is the role of an immaterial entity that is the result of a service process, and whose value is determined by the value and the costs of the service."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1584
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748",
+        rdfs:label "service product role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00360019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A service product is an immaterial entity that has the service product role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1584
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748",
+        rdfs:label "service product"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360018)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000141>
+    
+    
 Individual: OEO_00010122
 
     Annotations: 
@@ -2271,3 +2310,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
         OEO_00140150
     
     
+Class: OEO_00160006
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market share is a quality of a market exchange which quantifies the proportion a good to the total amount of goods traded in that market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1779",
+        rdfs:label "market share"@en
+
+    SubClassOf:
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+
+
+Class: OEO_00160007
+
+    Annotations:
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market share value is a fraction value that quantifies a market share.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1779",
+        rdfs:label "market share value"@en
+
+    SubClassOf:
+        OEO_00000350

@@ -7,8 +7,10 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://openenergy-platform.org/ontology/oeo/oeo-import-edits.owl">
         <owl:versionIRI rdf:resource="http://openenergy-platform.org/ontology/oeo/dev/oeo-import-edits.owl"/>
         <dc:description>Open Energy Ontology (imports-edit module)</dc:description>
@@ -35,9 +37,21 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000116"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000118"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000119"/>
     
 
 
@@ -70,24 +84,6 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
     
 
 
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00010121 -->
-
-    <owl:ObjectProperty rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00010121"/>
-    
-
-
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00020188 -->
-
-    <owl:ObjectProperty rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00020188"/>
-    
-
-
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00140002 -->
-
-    <owl:ObjectProperty rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00140002"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050">
@@ -98,7 +94,32 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
 
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051"/>
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
+        <obo:IAO_0000233>issue https://github.com/OpenEnergyPlatform/ontology/issues/596
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/599
+Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603
+
+fix duplicate implementation of `Inverse Of`
+issue https://github.com/OpenEnergyPlatform/ontology/issues/979
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086</obo:IAO_0000233>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000136 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000136">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000581 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000581">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000582"/>
+        <obo:IAO_0000116>IAO declared &quot;time measurement datum&quot; as range, which is (not yet) imported by OEO. Therefore the range declaration is missing here.</obo:IAO_0000116>
+    </owl:ObjectProperty>
     
 
 
@@ -261,36 +282,6 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086</obo:IAO_0
     
 
 
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00000150 -->
-
-    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
-    
-
-
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00010412 -->
-
-    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00010412"/>
-    
-
-
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00020143 -->
-
-    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00020143"/>
-    
-
-
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00020186 -->
-
-    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00020186"/>
-    
-
-
-    <!-- http://openenergy-platform.org/ontology/oeo/OEO_00020187 -->
-
-    <owl:Class rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00020187"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -305,30 +296,13 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086</obo:IAO_0
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000009 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00140002"/>
-                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00020143"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000009"/>
     
 
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000016 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00010121"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000233>add bearer axiom to oeo-import-edits
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485</obo:IAO_0000233>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016"/>
     
 
 
@@ -341,19 +315,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485</obo:IAO_
     <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00010121"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://openenergy-platform.org/ontology/oeo/OEO_00000150"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000004"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000233>add bearer axiom to oeo-import-edits
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485</obo:IAO_0000233>
@@ -376,13 +337,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485</obo:IAO_
     <!-- http://purl.obolibrary.org/obo/IAO_0000010 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000010">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00020188"/>
-                <owl:someValuesFrom rdf:resource="http://openenergy-platform.org/ontology/oeo/OEO_00020187"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <obo:IAO_0000233>Add &apos;has licence&apos; axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1275
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1547
+move axiom to oeo-model
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1738</obo:IAO_0000233>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000013 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000013">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000088"/>
+        <obo:IAO_0000233>add subclass axiom to report
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1700
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1754</obo:IAO_0000233>
+        <rdfs:comment>IAO provides two parent classes, from which only &quot;report&quot; in imported to OEO.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000030 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <obo:IAO_0000233>add axiom has copyright license
+issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090
+
+Delete axiom has (copyright) licence:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1275
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1547</obo:IAO_0000233>
     </owl:Class>
@@ -431,6 +415,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652</obo:IAO_
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000582 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000582"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/UO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000000">
@@ -465,6 +455,17 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1741</obo:IAO_0000233>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+        <obo:IAO_0000115>A data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://www.ontobee.org/ontology/IAO?iri=http://purl.obolibrary.org/obo/IAO_0000027</obo:IAO_0000119>
+    </rdf:Description>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.</owl:annotatedTarget>
+        <obo:IAO_0000233>issue: https://github.com/OpenEnergyPlatform/ontology/issues/823
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/826</obo:IAO_0000233>
+    </owl:Axiom>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002418">
         <obo:IAO_0000233>add subset of relation below &apos;causally related to&apos;
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079

@@ -10,8 +10,8 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-shared/>
 <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-import-edits.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/iao-extracted.owl>
-Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/omo-extracted.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/ro-extracted.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/uo-extracted.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
@@ -121,15 +121,6 @@ Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603"
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/596
-Pull request https://github.com/OpenEnergyPlatform/ontology/pull/599
-Pull request https://github.com/OpenEnergyPlatform/ontology/pull/603
-
-fix duplicate implementation of `Inverse Of`
-issue https://github.com/OpenEnergyPlatform/ontology/issues/979
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/1086"
-    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
 
@@ -1010,6 +1001,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
+    SubClassOf: 
+        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000004>
+    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000017>
 
@@ -1019,6 +1013,10 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000019>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000020>
 
+    SubClassOf: 
+        OEO_00010121 some 
+            (OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>)
+    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
 
@@ -1049,25 +1047,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000148>
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000027>
 
-    Annotations: 
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/823
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/826"
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A data item is an information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "http://www.ontobee.org/ontology/IAO?iri=http://purl.obolibrary.org/obo/IAO_0000027"
-    
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add axiom has copyright license
-issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090
-
-Delete axiom has (copyright) licence:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1275
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1547"
-    
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000088>
 
