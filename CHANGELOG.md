@@ -7,6 +7,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- economic instrument, voluntary agreement, regulatory instrument, information instrument, education instrument (#1786)
+
 ### Changed
 ### Removed
 
