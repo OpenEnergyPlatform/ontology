@@ -7,7 +7,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+
 ### Changed
+- energy transfer function, energy transformation function and subclasses (#1785)
+
 ### Removed
 
 ## [2.1.0] - 2023-12-05
