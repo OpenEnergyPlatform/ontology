@@ -32,6 +32,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - B7, E10 (#1774)
 - data descriptor (#1775)
 - target description, policy instrument, policy (#1778)
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (###)
 
 ## [2.0.1] - 2023-10-26
 
