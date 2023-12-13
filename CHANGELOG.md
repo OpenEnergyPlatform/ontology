@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
 
 ### Changed
+- energy transfer function, energy transformation function and subclasses (#1785)
 - effort sharing, feed-in tariff, levy, market premium (#1786)
 
 ### Removed
