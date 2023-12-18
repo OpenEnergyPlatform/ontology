@@ -168,6 +168,39 @@ ObjectProperty: OEO_00010312
         OEO_00000367
     
     
+ObjectProperty: OEO_00010465
+
+    
+ObjectProperty: OEO_00010466
+
+    Annotations: 
+        rdfs:label "subsector of"@en
+    
+    SubPropertyOf: 
+        OEO_00010465
+    
+    Domain: 
+        OEO_00010464
+    
+    Range: 
+        OEO_00000367
+    
+    
+ObjectProperty: OEO_00010467
+
+    Annotations: 
+        rdfs:label "has subsector"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051>
+    
+    Domain: 
+        OEO_00000367
+    
+    Range: 
+        OEO_00010464
+    
+    
 ObjectProperty: OEO_00020056
 
     
@@ -755,6 +788,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
     
     SubClassOf: 
         OEO_00000368
+    
+    
+Class: OEO_00010464
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsector is a sector that is a proper part of an other sector."@en,
+        rdfs:label "subsector"@en
+    
+    EquivalentTo: 
+        OEO_00000367
+         and (OEO_00010465 some OEO_00000367)
+    
+    SubClassOf: 
+        OEO_00000367
     
     
 Class: OEO_00020015
@@ -1466,18 +1513,18 @@ Individual: OEO_00010061
     Annotations: 
         OEO_00010037 "CRF 1.A.3.c",
         <http://purl.obolibrary.org/obo/IAO_0000115> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/580
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
-
-move to oeo-sector 
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'railways' is a transport sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
 Emissions from railway transport for both freight and passenger traffic routes.
 
 Add 'is sector of' axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/580
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
+
+move to oeo-sector 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
         rdfs:label "CRF sector (IPCC 2006): railways"@en
     
     Types: 
@@ -1585,9 +1632,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
     
     Facts:  
      OEO_00000504  OEO_00010056,
-     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010040,
-     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010057,
-     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010064
+     OEO_00010467  OEO_00010040,
+     OEO_00010467  OEO_00010057,
+     OEO_00010467  OEO_00010064
     
     
 Individual: OEO_00010066
@@ -1880,7 +1927,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
     
     Facts:  
      OEO_00000504  OEO_00000242,
-     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010040
+     OEO_00010466  OEO_00010040
     
     
 Individual: OEO_00010159
