@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy transfer function, energy transformation function and subclasses (#1785)
 - effort sharing, feed-in tariff, levy, market premium (#1786)
 - policy instrument (#1791)
+- region of relevance (#1791)
 
 ### Removed
 
