@@ -8,10 +8,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
+- priority region role, priority region, conditionally reserved region role, conditionally reserved region, suitable region role, suitable region, priority region with effect of suitable region, spatial planning policy (#1791)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
 - effort sharing, feed-in tariff, levy, market premium (#1786)
+- policy instrument (#1791)
+- region of relevance (#1791)
 
 ### Removed
 
