@@ -17,6 +17,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - policy instrument (#1791)
 - region of relevance (#1791)
 - MMR sector division, EU emission sector division (#1797)
+- forecasting (#1799)
 
 ### Removed
 
