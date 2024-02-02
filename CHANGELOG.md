@@ -19,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - MMR sector division, EU emission sector division (#1797)
 - German energy balance sector division (#1798)
 - API -> application programming interface; GUI -> graphical user interface (#1810)
+- forecasting model calculation (#1799)
 
 ### Removed
 
