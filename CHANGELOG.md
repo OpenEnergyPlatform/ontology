@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
 - priority region role, priority region, conditionally reserved region role, conditionally reserved region, suitable region role, suitable region, priority region with effect of suitable region, spatial planning policy (#1791)
 - missing value reason, notation key (#1795)
+- non-energy use technology (#1803)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
@@ -18,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - region of relevance (#1791)
 - MMR sector division, EU emission sector division (#1797)
 - German energy balance sector division (#1798)
+- non-energy use (#1803)
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
 
