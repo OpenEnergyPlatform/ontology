@@ -6106,6 +6106,7 @@ Class: OEO_00010211
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Non-energy use is the consumption of an energy carrier without making use the energy it carries.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "non-energy consumption"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/718
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/950
 
@@ -6118,7 +6119,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1463
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+Add alternative label:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1773
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1803",
         rdfs:label "non-energy use"@en
     
     SubClassOf: 
@@ -8575,6 +8580,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1768",
         <http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00000061
              and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010141))
+    
+    
+Class: OEO_00010471
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A non-energy use technology is a technology that describes among other things how to combine the consumption of energy carriers for non-energy use with other processes and artificial objects or other material entities in a specific way."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "non-energy consumption technology"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1773
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1803",
+        rdfs:label "non-energy use technology"@en
+    
+    EquivalentTo: 
+        OEO_00000407
+         and (<http://purl.obolibrary.org/obo/IAO_0000136> some (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010211))
+    
+    SubClassOf: 
+        OEO_00000407
     
     
 Class: OEO_00010480
@@ -14558,6 +14580,42 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1744",
     
     SubClassOf: 
         OEO_00030024
+    
+    
+Class: OEO_00360040
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A critical infrastructure role is a role of artificial objects, such as plants and systems, that are assessed to be crucial for the preservation of societal functions, health, safety and economical or social welfare."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "The definition is based on information obtained from https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32008L0114 and https://de.wikipedia.org/w/index.php?title=Kritische_Infrastrukturen&oldid=240000353 in January 2024."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1792
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1809",
+        rdfs:label "critical infrastructure role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00010121 some OEO_00000061
+    
+    
+Class: OEO_00360041
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A critical infrastructure is an object aggregate of artificial objects and systems which have the critical infrastructure role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "The definition is based on information obtained from https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32008L0114 and https://de.wikipedia.org/w/index.php?title=Kritische_Infrastrukturen&oldid=240000353 in January 2024."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1792
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1809",
+        rdfs:label "critical infrastructure"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (OEO_00000061
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360040)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (<http://purl.obolibrary.org/obo/RO_0002577>
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360040)))
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000027>
     
     
 Individual: OEO_00000182
