@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - non-energy use technology (#1803)
 - BSI-KritisV sector division, BSI-KritisV energy sector, BSI-KritisV transport sector, critical infrastructure role, critical infrastructure (#1809)
 - has unit numerator, has unit denominator and subproperties (#1816)
+- compressor, compressor station and subclasses (#1818)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
