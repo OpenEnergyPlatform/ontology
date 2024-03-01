@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - BSI-KritisV sector division, BSI-KritisV energy sector, BSI-KritisV transport sector, critical infrastructure role, critical infrastructure (#1809)
 - has unit numerator, has unit denominator and subproperties (#1816)
 - compressor, compressor station and subclasses (#1818)
+- new units and prefixes from UO (#1820)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
@@ -25,6 +26,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - non-energy use (#1803)
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
+- uo-extracted.owl (#1820)
 
 ### Removed
 
