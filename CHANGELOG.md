@@ -23,9 +23,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - region of relevance (#1791)
 - MMR sector division, EU emission sector division (#1797)
 - German energy balance sector division (#1798)
+- forecasting model calculation (#1799)
 - non-energy use (#1803)
 - API -> application programming interface; GUI -> graphical user interface (#1810)
-- forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
 
 ### Removed
