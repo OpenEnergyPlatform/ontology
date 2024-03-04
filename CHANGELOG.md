@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.X.X] - 20XX-XX-XX
+## [2.2.0] - 2024-03-04
 
 ### Added
 - economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
@@ -27,8 +27,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
-
-### Removed
 
 ## [2.1.0] - 2023-12-05
 
