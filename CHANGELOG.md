@@ -7,7 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
-- has proper part (1788)
+- has proper part, proper part of, subsector, has subsector, subsector of (1788)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (1788)
