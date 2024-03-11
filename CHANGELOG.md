@@ -4,11 +4,20 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.X.X] - 20XX-XX-XX
+
+### Added
+- has proper part (1788)
+
+### Changed
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (1788)
+
+### Removed
+
 ## [2.2.0] - 2024-03-04
 
 ### Added
 - economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
-- has proper part (1788)
 - priority region role, priority region, conditionally reserved region role, conditionally reserved region, suitable region role, suitable region, priority region with effect of suitable region, spatial planning policy (#1791)
 - missing value reason, notation key (#1795)
 - non-energy use technology (#1803)
@@ -20,7 +29,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
 - effort sharing, feed-in tariff, levy, market premium (#1786)
-- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (1788)
 - policy instrument (#1791)
 - region of relevance (#1791)
 - MMR sector division, EU emission sector division (#1797)
