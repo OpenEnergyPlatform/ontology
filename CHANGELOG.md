@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.X.X] - 20XX-XX-XX
+
+### Added
+- has proper part, proper part of, subsector, has subsector, subsector of (1788)
+
+### Changed
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (1788)
+
+### Removed
+
 ## [2.2.0] - 2024-03-04
 
 ### Added
