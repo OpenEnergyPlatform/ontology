@@ -37,24 +37,26 @@ define replace_owls
 endef
 
 define translate_to_owl
-	$(ROBOT) convert --input $2 --output $1 --format owl
+	$(ROBOT) convert --catalog $(VERSIONDIR)/catalog-v001.xml --input $2 --output $1 --format owl
 	$(call replace_omns,$1)
 	$(call replace_devs,$1)
 endef
 
 define translate_to_omn
-	$(ROBOT) convert --input $2 --output $1 --format omn
+	$(ROBOT) convert --catalog $(VERSIONDIR)/catalog-v001.xml --input $2 --output $1 --format omn
 	$(call replace_owls,$1)
 	$(call replace_devs,$1)
 endef
 
 .PHONY: all clean base merge directories
 
-all: base merge
+all: base merge closure
 
-base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OMN_TRANSLATE) $(OWL_COPY) $(OMN_COPY)
+base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OWL_COPY) $(OMN_COPY) $(OMN_TRANSLATE)
 
 merge: | $(VERSIONDIR)/oeo-full.omn
+
+closure: | $(VERSIONDIR)/oeo-closure.owl
 
 clean:
 	- $(RM) -r $(VERSIONDIR) $(ROBOT_PATH)
@@ -73,13 +75,13 @@ $(VERSIONDIR)/catalog-v001.xml: src/ontology/catalog-v001.xml
 	sed -i -E "s/edits\//modules\//m" $@
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.4.1/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.2/robot.jar
 
 
-$(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.omn
+$(VERSIONDIR)/%.owl: $(VERSIONDIR)/%.omn
 	$(call translate_to_owl,$@,$<)
 
-$(VERSIONDIR)/modules/%.owl: $(ONTOLOGY_SOURCE)/edits/%.omn
+$(VERSIONDIR)/modules/%.owl: $(VERSIONDIR)/edits/%.omn
 	$(call translate_to_owl,$@,$<)
 
 $(VERSIONDIR)/%.owl: $(ONTOLOGY_SOURCE)/%.owl
@@ -105,3 +107,7 @@ $(VERSIONDIR)/oeo-full.owl : | base
 $(VERSIONDIR)/oeo-full.omn : $(VERSIONDIR)/oeo-full.owl
 	$(call translate_to_omn,$@,$<)
 	$(call replace_owls,$@)
+
+$(VERSIONDIR)/oeo-closure.owl : $(VERSIONDIR)/oeo-full.owl
+	$(ROBOT) reason --input $< --reasoner hermit --catalog $(VERSIONDIR)/catalog-v001.xml --axiom-generators "SubClass EquivalentClass DataPropertyCharacteristic EquivalentDataProperties SubDataProperty ClassAssertion EquivalentObjectProperty InverseObjectProperties ObjectPropertyCharacteristic SubObjectProperty ObjectPropertyRange ObjectPropertyDomain" --include-indirect true annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input $< --input $@ annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@

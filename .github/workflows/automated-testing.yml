@@ -12,6 +12,50 @@ jobs:
       - name: make
         run: |
           make
+      - name: validate-profile
+        run: |
+          echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
+          java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt
+      - name: verify
+        run: |
+          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*
+      - uses: actions/upload-artifact@master
+        with:
+          name: build-artifacts
+          path: build/oeo
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.7'
+          architecture: x64
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+      - uses: actions/download-artifact@master
+        with:
+          name: build-artifacts
+          path: build/oeo
+      - name: install python dependencies
+        run: pip install -r src/scripts/requirements.txt
+      - name: setup robot 1.9.0
+        run: |
+          wget https://github.com/ontodev/robot/releases/download/v1.9.0/robot.jar -O build/robot19.jar
+      - name: Build ETD xlsx
+        run: |
+          java -jar build/robot19.jar merge --input build/oeo/$(cat VERSION)/oeo-full.omn \
+            --include-annotations true \
+          export  --header "ID|LABEL|definition" \
+                  --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
+                  --sort "LABEL" \
+                  --export $(pwd)/build/oeo/$(cat VERSION)/etd.xlsx
+      - name: Build ETD csv
+        run: |
+          python $(pwd)/src/scripts/etd/etd.py $(pwd)/build/oeo/$(cat VERSION)
       - name: consistency
         run: |
           wget https://github.com/owlcs/releases/raw/master/HermiT/org.semanticweb.hermit-packaged-1.4.6.519-SNAPSHOT.jar -O build/hermit.jar
@@ -22,21 +66,39 @@ jobs:
           fi
           echo "Ontology is inconsistent: $OUT"
           exit 1
-      - name: validate-profile
-        run: | 
-          echo "java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt"
-          java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt
-      - name: verify
-        run: |
-          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*
-      - name: competency
-        run: |
-          bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
-          bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
-      - name: Upload Artifacts
+      - name: Upload Ontology
+        if: always()
         uses: actions/upload-artifact@v3
         with:
           name: build-files
           path: |
             build/**/*
             !build/**/*.jar
+      - name: competency
+        continue-on-error: true
+        run: |
+          pytest -s -v
+          # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl true
+          # bash tests/competency_questions/run_questions.sh "java -jar build/hermit.jar" $(pwd)/build/oeo/$(cat VERSION)/oeo-full.owl false
+      - name: Upload Artifacts
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: build/report.json
+      - name: Get Coverage for badge
+        run : |
+          echo "COVERAGE=$(head build/report.json | grep -o '"coverage": "[^"]*"' | grep -o '[^"]*\%')" >> $GITHUB_ENV
+          REF=${{ github.ref }}
+          IFS='/' read -ra PATHS <<< "$REF"
+          BRANCH_NAME="${PATHS[1]}_${PATHS[2]}"
+          echo "BRANCH=$(echo ${BRANCH_NAME})" >> $GITHUB_ENV
+      - name: Coverage Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: 6d00affa9fbc89c79684d62091d96551
+          filename: open_energy_ontology__${{ env.BRANCH }}.json
+          label: CQ Coverage
+          message: ${{ env.COVERAGE }}
+          color: green

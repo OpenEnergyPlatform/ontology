@@ -4,17 +4,155 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [1.X.X] - 20XX-XX-XX
+## [2.X.X] - 20XX-XX-XX
 
 ### Added
-- material transformation, fuel production (#1575)
-- life cycle assessment (#1576)
 - issue template for new users (#1525)
 
 ### Changed
-- production (#1575)
+### Removed
+
+## [2.2.0] - 2024-03-04
+
+### Added
+- economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
+- priority region role, priority region, conditionally reserved region role, conditionally reserved region, suitable region role, suitable region, priority region with effect of suitable region, spatial planning policy (#1791)
+- missing value reason, notation key (#1795)
+- non-energy use technology (#1803)
+- BSI-KritisV sector division, BSI-KritisV energy sector, BSI-KritisV transport sector, critical infrastructure role, critical infrastructure (#1809)
+- has unit numerator, has unit denominator and subproperties (#1816)
+- compressor, compressor station and subclasses (#1818)
+- new units and prefixes from UO (#1820)
+
+### Changed
+- energy transfer function, energy transformation function and subclasses (#1785)
+- effort sharing, feed-in tariff, levy, market premium (#1786)
+- policy instrument (#1791)
+- region of relevance (#1791)
+- MMR sector division, EU emission sector division (#1797)
+- German energy balance sector division (#1798)
+- non-energy use (#1803)
+- API -> application programming interface; GUI -> graphical user interface (#1810)
+- forecasting model calculation (#1799)
+- uo-extracted.owl (#1820)
+
+## [2.1.0] - 2023-12-05
+
+### Added
+- resilience, power system resilience, power system (#1744)
+- service product role, service product (#1748)
+- region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
+- import from IAO: time stamped measurement datum, action specification, data format specification, objective specification, study design, software application, software library, software method, software module, software script, document part, journal article, version number, cartesian spatial coordinate datum, one dimensional cartesian spatial coordinate datum, two dimensional cartesian spatial coordinate datum, three dimensional cartesian spatial coordinate datum, has time stamp (#1754)
+- fuel blending quota, fuel quota blending value (#1763)
+- study report due to legal obligation (#1777)
+- market share and market share value (#1779)
+
+### Changed
+- subregion, study region, study subregion, interacting region, considered region (#1749)
+- model factsheet (#1751)
+- is connected to, has sink, has source (#1762)
+- temperature, pressure (#1767)
+- carbon capture and storage technology (#1768)
+- power rating, power capacity (#1770)
+- boiler (#1771)
+- B7, E10 (#1774)
+- data descriptor (#1775)
+- target description, policy instrument, policy (#1778)
+
+## [2.0.1] - 2023-10-26
+
+### Changed
+- unit, prefix, generically dependent continuant (#1741/#1742)
+
+## [2.0.0] - 2023-10-25
+
+### Major stuctural changes
+For the version 2.0.0 we especially did some major structural changes on the OEO. Two new modules were introduced:
+* The first one, oeo-sector, is a module on the same hierarchical level as the other content-related modules, i.e. oeo-physical, oeo-model and oeo-social. All sector-related entities were moved there from oeo-social.
+* The second one, oeo-shared-axioms, is a module that imports the four content-related modules and contains all axioms that are introduced across modules.
+
+This caused a lot of movement of entities, especially from oeo-shared. Many classes were moved back to their original module. This restructuring was done to foster the modularity, which makes the implementation easier and more error-prone. Yet, we had to break with the rule, that all axioms should live in the same module as their class of declaration. The full axiomatisation of a class is now only provided if the module oeo-shared-axioms is used. See also the wiki article on the [modules of the OEO](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO).
+
+Further, the import process for UO and OMO were updated. All scripts and tools not essential for the building routine moved to a [seperate repository](https://github.com/OpenEnergyPlatform/oeo-tools). And finally, english language labels were added to (english) definitions and labels, to allow other language extentions in the future.
+
+### Content-related changes
+We added a lot of classes that are relevant for the OEKG development, i.e. technologies (#1572) and descriptors for scenario studies (https://github.com/OpenEnergyPlatform/oekg/issues/19).
+
+### Added
+- heat generation technology, solar heat technology, geothermal heat technology (#1610)
+- new files for new UO v2023-05-25 import process (#1633)
+- recycling (#1638)
+- regionalisation (#1639)
+- sufficiency scenario (#1642)
+- increase, decrease (#1644)
+- new files for new OMO v2023-08-23 import process (#1646)
+- power-to-fuel technology and subclasses (#1647)
+- sufficiency scenario, sufficiency (#1642, #1648)
+- new module oeo-shared-axioms.omn (#1649)
+- acceptance (#1698)
+- scenario projection comparison, model intercomparison study (#1711)
+- flexibility, energy balancing (#1717)
+- control area, bidding zone, bidding zone role (#1718)
+- climate neutrality criterion, process climate neutrality, climate neutral process, material climate neutrality (#1722)
+- blended liquid fuel, bioethanol, E10, B7 (#1723)
+- new module oeo-sectors (#1724)
+- mobility technology, electric mobility technology (#1727)
+- energy storage object hierarchy, energy storage technology hierarchy (#1728)
+
+### Changed
+- energy transformation (#1625)
+- waste role (#1638)
+- economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
+- regionalisation (#1644)
+- oeo.omn imports (#1649)
+- model relabeled to numerical computer model, model, has contributor and subclasses (#1707)
+- study (#1711)
+- person, organisational role, organisation (#1716)
+- energy balance -> energy balance data set (#1717) 
+- state of matter (#1720)
+- potential energy storage function (#1728)
 
 ### Removed
+- import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
+
+### Deprecated
+- belongs to module (#1732)
+
+## [1.16.1] - 2023-08-01
+
+### Added
+
+### Changed
+- Update module files after saving with Protégé 5.6.1(#1628)
+
+## [1.16.0] - 2023-08-01
+
+### Added
+- boolean value (#1255)
+- material transformation, fuel production (#1575)
+- life cycle assessment (#1576)
+- energy technology (#1591)
+- power generation technology and 20 subclasses (#1601)
+- policy scenario, reference role, reference scenario (#1614)
+- greenhouse gas emission scenario, co2 emission scenario (#1615)
+- population count, annual GDP growth (#1623)
+
+### Changed
+- boolean variable, true, false (#1255)
+- reimplemented competency question tests in pytest (#1420)
+- added commands to filter competency questions from the command line (#1420)
+- added descriptive names to competency questions. and organized them in directories (#1420)
+- production (#1575)
+- technology (#1591)
+- quantity value (#1606)
+- trade (#1613)
+- climate scenario, climate system, energy scenario, carbon dioxide, energy system, supply system, emission scenario (#1615)
+- secondary energy production (#1619)
+- hydro energy, solar energy, wind energy (#1620)
+- gross domestic product (#1623)
+
+### Removed
+- old competency question bash script (#1420)
 
 ## [1.15.0] - 2023-05-31
 
@@ -297,10 +435,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Removed
 
-## [1.9.0] - 2022-03-01 
+## [1.9.0] - 2022-03-01
 
 ### Added
-- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#966)
+- memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#967)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
 - energy consumption value, gross national electricity consumption (#997)
@@ -375,7 +513,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - power-to-gas process, power-to-methane process, methanation, oxygen, water electrolysis process (#954)
 - biomass, biomethane (#952)
 - variable (production) cost (#953)
-- conventional (energy carrier disposition), fossil energy (#955) 
+- conventional (energy carrier disposition), fossil energy (#955)
 - carbon tax, social cost of carbon, carbon price (#956)
 - synthetic ammonia, power-to-ammonia process (#959)
 - renewable waste fuel, fossil waste fuel, renewable industrial waste fuel, fossil industrial waste fuel (#961)
@@ -435,7 +573,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - objective variable (#878)
 - metric ton (#879)
 - target description (#881)
-- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882) 
+- scenario year, scenario horizon, meteorological year, weather time series, scenario time series (#882)
 - axioms of typical period and aggregation type (#883)
 
 ### Changed
@@ -672,8 +810,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - Add has_normal_state_of_matter value solid/liquid/gaseous/plasmatic to fuels (#39)
 - object properties: 'has_disposition', 'has_role', 'has_function',
   'has_quality' (#51)
-- issue templates (#92, #146) 
-- ArtificialObject (#121) 
+- issue templates (#92, #146)
+- ArtificialObject (#121)
 - classes for objects that apply to technologies like EnergyGenerator (#128)
 - Grid class (#137)
 - object properties to describe models (#109)
