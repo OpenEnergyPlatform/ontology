@@ -7,6 +7,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- methanol (#1827)
+
 ### Changed
 ### Removed
 
