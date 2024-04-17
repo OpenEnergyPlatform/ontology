@@ -10,6 +10,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - methanol (#1827)
 
 ### Changed
+- has documentation quality (#1834)
+
 ### Removed
 
 ## [2.2.0] - 2024-03-04
