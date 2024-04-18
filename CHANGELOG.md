@@ -8,6 +8,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Added
 - methanol (#1827)
+- has prefix (#1835)
 
 ### Changed
 ### Removed
