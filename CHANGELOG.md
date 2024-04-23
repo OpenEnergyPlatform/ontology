@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - methanol (#1827)
 - has prefix (#1835)
 - quantity (#1839)
+- model coupling, sector coupling, sector coupling technology (#1842)
 
 ### Changed
 - has documentation quality (#1834)
