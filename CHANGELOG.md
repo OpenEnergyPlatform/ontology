@@ -10,8 +10,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - methanol (#1827)
 - has prefix (#1835)
 - imported 'has characteristic' from RO (#1838)
+- quantity (#1839)
 
 ### Changed
+- has documentation quality (#1834)
+
 ### Removed
 
 ## [2.2.0] - 2024-03-04
