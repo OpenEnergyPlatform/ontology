@@ -12,7 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - has documentation quality (#1834)
-- Final Energy Consumption Value (#1841)
+- Final Energy Consumption Value, Energy Consumption Value (#1841)
 
 ### Removed
 
