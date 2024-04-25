@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - has documentation quality (#1834)
+- megawatt-hour, gigawatt-hour, terawatt-hour, petawatt-hour (#1845)
 
 ### Removed
 
