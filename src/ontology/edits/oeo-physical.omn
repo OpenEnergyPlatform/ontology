@@ -2299,7 +2299,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00000148
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that quantifies the emissions or removals of a gas per unit activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor is a process attribute that describes the correlation of emissions and the activity causing that emission.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/243
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/581
 moved to oeo-shared
@@ -2307,13 +2307,18 @@ https://github.com/OpenEnergyPlatform/ontology/pull/956
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
         rdfs:label "emission factor"@en
     
     SubClassOf: 
         OEO_00030019,
-        OEO_00000502 some OEO_00000147,
-        OEO_00000502 some <http://purl.obolibrary.org/obo/BFO_0000015>
+        OEO_00000502 some 
+            (<http://purl.obolibrary.org/obo/BFO_0000015>
+             and (<http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147))
     
     
 Class: OEO_00000150
@@ -10214,7 +10219,7 @@ Class: OEO_00020407
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector coupling technology is a technology that intends to connect processes from the electricity, heat, mobility or industrial sectors, as well as their infrastructures.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1521
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842",
-       <http://purl.obolibrary.org/obo/IAO_0000600> "The aim of sector coupling is usually an optimisation of an energy system (e.g. with respect to cost, environmental impact, sustainability and decarbonisation) by establishing energy flows across sectorial borders",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "The aim of sector coupling is usually an optimisation of an energy system (e.g. with respect to cost, environmental impact, sustainability and decarbonisation) by establishing energy flows across sectorial borders",
         rdfs:label "sector coupling technology"
     
     SubClassOf: 
@@ -11543,7 +11548,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/633",
 Class: OEO_00140081
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a process attribute that quantifies the output of an emission process. It can be calculated using the emission factor of that emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission rate is a process attribute that describes the output of an emission process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
@@ -11556,8 +11561,12 @@ add axiom to social cost of carbon
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        rdfs:label "emission value"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        rdfs:label "emission rate"@en
     
     SubClassOf: 
         OEO_00030019,
@@ -11568,10 +11577,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00140082
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission value is an emission value that quantifies the output of a greenhouse gas emission process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission rate is an emission rate that describes the output of a greenhouse gas emission process.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651",
-        rdfs:label "greenhouse gas emission value"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+
+restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        rdfs:label "greenhouse gas emission rate"@en
     
     SubClassOf: 
         OEO_00140081,
@@ -11584,11 +11597,15 @@ Class: OEO_00140083
         <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon dioxide equivalent quantity is a greenhouse gas emission value that quantifies the combined effect of all emitted greenhouse gases by giving an equivalent amount of CO2 which would have the same effect on the climate.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 equivalent quantity",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/420
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651",
-        rdfs:label "carbon dioxide equivalent quantity"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/651
+
+restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        rdfs:label "carbon dioxide equivalent quantity value"@en
     
     SubClassOf: 
-        OEO_00140082
+        OEO_00340064
     
     
 Class: OEO_00140091
@@ -12662,18 +12679,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"@en,
 Class: OEO_00260008
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission value is greenhouse gas emission value that quantifies the output of a CO2 emission process."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "carbon dioxide emission value"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission rate is a greenhouse gas emission rate that describes the output of a CO2 emission process."@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253/
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"@en,
-        rdfs:label "CO2 emission value"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846"@en,
+        rdfs:label "CO2 emission rate"@en
     
     SubClassOf: 
-        OEO_00140081
+        OEO_00140082,
+        OEO_00000502 some OEO_00260007
     
     
 Class: OEO_00290000
@@ -14452,6 +14473,64 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
     SubClassOf: 
         OEO_00320072,
         OEO_00020056 some OEO_00000159
+    
+    
+Class: OEO_00340063
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission factor value is a fraction value that quantifies an emission factor as quotient of the emissions or removals of a gas per unit activity.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        rdfs:label "emission factor value"@de
+    
+    SubClassOf: 
+        OEO_00140127
+    
+    
+Class: OEO_00340064
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a quantity value that quantifies an emission rate and has a mass unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "emission quantity value",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "It can be calculated using the an emission factor.",
+        rdfs:label "emission value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00020056 some OEO_00140081,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
+    
+    
+Class: OEO_00340065
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission value is an emission value that quantifies a greenhouse gas emission rate and has a mass unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        rdfs:label "greenhouse gas emission value"@en
+    
+    SubClassOf: 
+        OEO_00340064,
+        OEO_00020056 some OEO_00140082
+    
+    
+Class: OEO_00340066
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission value is a greenhouse gas emission value that quantifies a CO2 emission rate and has a mass unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        rdfs:label "CO2 emission value"@en
+    
+    SubClassOf: 
+        OEO_00340065,
+        OEO_00020056 some OEO_00260008
     
     
 Class: OEO_00360001

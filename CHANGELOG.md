@@ -11,9 +11,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has prefix (#1835)
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
+- emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
 
 ### Changed
 - has documentation quality (#1834)
+- emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
 
 ### Removed
 
