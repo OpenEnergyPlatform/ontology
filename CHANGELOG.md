@@ -11,6 +11,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has prefix (#1835)
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
+- system robustness, robust system scenario, statistically robust, statistically robust scenario (#1843)
+
 
 ### Changed
 - has documentation quality (#1834)
