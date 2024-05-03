@@ -9,10 +9,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - methanol (#1827)
 - has prefix (#1835)
+- quantity (#1839)
+- model coupling, sector coupling, sector coupling technology (#1842)
+- emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
 
 ### Changed
 - has documentation quality (#1834)
 - energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
+- emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
+
 
 ### Removed
 
