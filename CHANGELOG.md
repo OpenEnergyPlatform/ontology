@@ -9,7 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - methanol (#1827)
 - has prefix (#1835)
-- imported 'has characteristic' from RO (#1838)
+- imported 'characteristic of' and subclasses from RO (#1838)
 - quantity (#1839)
 
 ### Changed
