@@ -13,10 +13,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
+- (de)commissioning start, (de)commissioning end (#1853)
 
 ### Changed
 - has documentation quality (#1834)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
+- time stamp (#1853)
 
 ### Removed
 
