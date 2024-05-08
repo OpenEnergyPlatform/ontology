@@ -19,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has documentation quality (#1834)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
 - time stamp (#1853)
+- has bearer, has characteristic, characteristic of, role of, model role (#1852)
 
 ### Removed
 
