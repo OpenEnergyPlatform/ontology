@@ -9,6 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - methanol (#1827)
 - has prefix (#1835)
+- imported 'characteristic of' and subclasses from RO (#1838)
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
@@ -18,6 +19,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has documentation quality (#1834)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
 - area value (#1851)
+- has bearer, has characteristic, characteristic of, role of, model role (#1852)
 
 ### Removed
 
