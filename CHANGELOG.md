@@ -14,11 +14,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model coupling, sector coupling, sector coupling technology (#1842)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
 - size (#1851)
+- (de)commissioning start, (de)commissioning end (#1853)
 
 ### Changed
 - has documentation quality (#1834)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
 - area value (#1851)
+- time stamp (#1853)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 
 ### Removed
