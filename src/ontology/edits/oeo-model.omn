@@ -503,6 +503,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000003>
 Class: <http://purl.obolibrary.org/obo/BFO_0000006>
 
     
+Class: <http://purl.obolibrary.org/obo/BFO_0000008>
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000009>
 
     
@@ -576,6 +579,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000300>
 
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000310>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000582>
 
     
 Class: <http://purl.obolibrary.org/obo/RO_0002577>
@@ -2572,6 +2578,56 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842",
         OEO_00000275
     
     
+Class: OEO_00020416
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commissioning start is a start time that indicates the beginning of a commissioning time.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1536
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853",
+        rdfs:label "commissioning start"
+    
+    SubClassOf: 
+        OEO_00030031
+    
+    
+Class: OEO_00020417
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A decommissioning start is a start time that indicates the beginning of a decommissioning time.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1536
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853",
+        rdfs:label "decommissioning start"
+    
+    SubClassOf: 
+        OEO_00030031
+    
+    
+Class: OEO_00020420
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A decommissioning end is an end time that indicates the beginning of a decommissioning time.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "decommissioning date",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1536
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853",
+        rdfs:label "decommissioning end"
+    
+    SubClassOf: 
+        OEO_00030032
+    
+    
+Class: OEO_00020421
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commissioning end is an end time that indicates the beginning of a commissioning time.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "commissioning date",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1536
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853",
+        rdfs:label "commissioning end"
+    
+    SubClassOf: 
+        OEO_00030032
+    
+    
 Class: OEO_00030007
 
     Annotations: 
@@ -2856,7 +2912,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
 Class: OEO_00140043
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a zero-dimensional temporal region that is used to describe a time step.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a data descriptor that is used to describe a zero-dimensional temporal region, or a data item that is related to a zero-dimensional temporal region, e.g. a time stamped measurement datum.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/570
 
@@ -2866,11 +2922,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+reclassify as data descriptor
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1536
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853",
         rdfs:label "time stamp"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000148>
+        OEO_00000119,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/BFO_0000008>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some <http://purl.obolibrary.org/obo/IAO_0000582>
     
     
 Class: OEO_00140044
