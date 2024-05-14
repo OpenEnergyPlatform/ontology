@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - imported 'characteristic of' and subclasses from RO (#1838)
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
+- system robustness, robust system scenario, statistically robust, statistically robust scenario (#1843)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
 - size (#1851)
 - (de)commissioning start, (de)commissioning end (#1853)
