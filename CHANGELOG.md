@@ -9,9 +9,24 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - methanol (#1827)
 - has prefix (#1835)
+- imported 'characteristic of' and subclasses from RO (#1838)
+- quantity (#1839)
 - industrial technology, industrial plant (#1840)
+- model coupling, sector coupling, sector coupling technology (#1842)
+- system robustness, robust system scenario, statistically robust, statistically robust scenario (#1843)
+- emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
+- size (#1851)
+- (de)commissioning start, (de)commissioning end (#1853)
+- German alternative labels to about 40 classes (#1854)
 
 ### Changed
+- has documentation quality (#1834)
+- energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
+- emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
+- area value (#1851)
+- time stamp (#1853)
+- has bearer, has characteristic, characteristic of, role of, model role (#1852)
+
 ### Removed
 
 ## [2.2.0] - 2024-03-04
