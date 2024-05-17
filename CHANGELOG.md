@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- issue template for new users (#1525)
 - methanol (#1827)
 - has prefix (#1835)
 - imported 'characteristic of' and subclasses from RO (#1838)
@@ -25,7 +26,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - area value (#1851)
 - time stamp (#1853)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
-
 
 ### Removed
 
@@ -210,6 +210,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - energy storage level, energy storage content (#1486)
 - compressed-air energy storage unit (#1499)
 - added built ontology to the pipeline artifacts (#1475)
+- energy transfer function (#1515)
 
 ### Changed
 - NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
