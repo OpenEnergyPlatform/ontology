@@ -7,10 +7,26 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
-- has proper part, proper part of, subsector, has subsector, subsector of (1788)
+- has proper part, proper part of, subsector, has subsector, subsector of (#1788)
+- methanol (#1827)
+- has prefix (#1835)
+- imported 'characteristic of' and subclasses from RO (#1838)
+- quantity (#1839)
+- model coupling, sector coupling, sector coupling technology (#1842)
+- system robustness, robust system scenario, statistically robust, statistically robust scenario (#1843)
+- emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
+- size (#1851)
+- (de)commissioning start, (de)commissioning end (#1853)
+- German alternative labels to about 40 classes (#1854)
 
 ### Changed
-- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (1788)
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
+- has documentation quality (#1834)
+- energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
+- emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
+- area value (#1851)
+- time stamp (#1853)
+- has bearer, has characteristic, characteristic of, role of, model role (#1852)
 
 ### Removed
 

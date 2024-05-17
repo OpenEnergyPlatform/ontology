@@ -10,10 +10,10 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-shared/>
 <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/uo-extracted.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-import-edits.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/iao-extracted.owl>
 Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/ro-extracted.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/imports/uo-extracted.owl>
 Import: <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl>
 
 Annotations: 
@@ -139,23 +139,17 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000118> "has characteristic"
     
-    Domain: 
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985"
-        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
-    
     Range: 
         <http://purl.obolibrary.org/obo/BFO_0000020>
-    
-    InverseOf: 
-        OEO_00010121
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000081>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
@@ -171,9 +165,6 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
         <http://purl.obolibrary.org/obo/IAO_0000233> "extend domain / definition
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1030
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101"
-    
-    Domain: 
-        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
@@ -616,7 +607,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
 
 correct definition with respect to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484
+
+remove inverse:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1844
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1852",
         rdfs:label "has bearer"@en
     
     Domain: 
@@ -624,9 +619,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
     
     Range: 
         OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
-    
-    InverseOf: 
-        <http://purl.obolibrary.org/obo/RO_0000053>
     
     
 ObjectProperty: OEO_00010231
@@ -1030,6 +1022,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1113",
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
+ObjectProperty: OEO_00020404
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a unit and a prefix that indicate the magnitude of the unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1402
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1835",
+        <http://purl.obolibrary.org/obo/IAO_0006011> "http://purl.obolibrary.org/obo/has_prefix",
+        rdfs:label "has prefix"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/UO_0000000>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/UO_0000046>
+    
+    
 ObjectProperty: OEO_00040010
 
     Annotations: 
@@ -1227,10 +1238,6 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000019>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000020>
 
-    SubClassOf: 
-        OEO_00010121 some 
-            (OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>)
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
 
@@ -1335,6 +1342,8 @@ Class: OEO_00000051
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Agent"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Agentin"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue:https://github.com/OpenEnergyPlatform/ontology/issues/148
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210
 
@@ -1353,6 +1362,8 @@ Class: OEO_00000064
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An author is an agent that creates or has created written work.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Autor"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Autorin"@de,
         rdfs:label "author"@en
     
     SubClassOf: 
@@ -1739,11 +1750,16 @@ Class: OEO_00020353
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model role is a a role of a continuant for representing a system and its behaviours in a simplified or idealised way.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707
+
+add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1844
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1852",
         rdfs:label "model role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        <http://purl.obolibrary.org/obo/RO_0000081> some OEO_00020352
     
     
 Class: OEO_00030019
@@ -1885,5 +1901,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00340062
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quantity is a quality of a material entity where the magnitude  of the quality can be quantified via a quantity value, which means that it can be expressed as a number and a unit.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from: https://jcgm.bipm.org/vim/en/1.1.html",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1510
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1839",
+        rdfs:label "quantity"@en
+    
+    EquivalentTo: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+         and (OEO_00140002 some OEO_00000350)
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
