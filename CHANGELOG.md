@@ -20,6 +20,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - has documentation quality (#1834)
+- megawatt-hour, gigawatt-hour, terawatt-hour, petawatt-hour (#1845)
 - energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
 - area value (#1851)
