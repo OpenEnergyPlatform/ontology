@@ -7,7 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
-- has proper part, proper part of, subsector, has subsector, subsector of (#1788)
+- subsector, has subsector, subsector of (#1788)
 - methanol (#1827)
 - has prefix (#1835)
 - imported 'characteristic of' and subclasses from RO (#1838)
