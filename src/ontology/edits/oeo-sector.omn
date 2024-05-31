@@ -174,6 +174,9 @@ ObjectProperty: OEO_00010312
 ObjectProperty: OEO_00010466
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A part of relation between a sector and its parent sector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "subsector of"@en
     
     SubPropertyOf: 
@@ -185,10 +188,16 @@ ObjectProperty: OEO_00010466
     Range: 
         OEO_00000367
     
+    InverseOf: 
+        OEO_00010467
+    
     
 ObjectProperty: OEO_00010467
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A has part relation between a sector and its subsector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "has subsector"@en
     
     SubPropertyOf: 
@@ -199,6 +208,9 @@ ObjectProperty: OEO_00010467
     
     Range: 
         OEO_00010464
+    
+    InverseOf: 
+        OEO_00010466
     
     
 ObjectProperty: OEO_00020056
@@ -798,8 +810,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
 Class: OEO_00010464
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsector is a sector that is a proper part of an other sector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsector is a sector that is a part of an other sector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "subsector"@en
+    
+    EquivalentTo: 
+        OEO_00000367
+         and (OEO_00010466 some OEO_00000367)
     
     SubClassOf: 
         OEO_00000367
