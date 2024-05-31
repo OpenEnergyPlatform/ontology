@@ -6,15 +6,16 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [2.X.X] - 20XX-XX-XX
 ### Added
+- subsector, has subsector, subsector of (#1788)
 
 ### Changed
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
 
 ### Removed
 
 ## [2.3.0] - 2024-05-21
 
 ### Added
-- subsector, has subsector, subsector of (#1788)
 - methanol (#1827)
 - has prefix (#1835)
 - imported 'characteristic of' and subclasses from RO (#1838)
@@ -27,7 +28,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - German alternative labels to about 40 classes (#1854)
 
 ### Changed
-- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
 - has documentation quality (#1834)
 - megawatt-hour, gigawatt-hour, terawatt-hour, petawatt-hour (#1845)
 - energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
