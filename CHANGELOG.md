@@ -33,7 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - area value (#1851)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
-
+- electricity import/export value (#1864)
 
 ### Removed
 
