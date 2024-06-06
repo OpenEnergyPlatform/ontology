@@ -106,7 +106,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - new module oeo-sectors (#1724)
 - mobility technology, electric mobility technology (#1727)
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
-- german alternative labels (#1854) (#1862)
+- German alternative labels (#1854, #1862)
 
 ### Changed
 - energy transformation (#1625)
