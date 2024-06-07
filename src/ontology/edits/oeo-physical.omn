@@ -124,6 +124,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000080>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
 
     
@@ -2359,7 +2362,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
 Class: OEO_00000150
 
     SubClassOf: 
-        OEO_00000530 some OEO_00000316
+        OEO_00000530 some OEO_00000316,
+        OEO_00140002 some OEO_00050019
     
     
 Class: OEO_00000151
@@ -9734,13 +9738,13 @@ Class: OEO_00020202
 Class: OEO_00020204
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy amount value is an energy amount value that measures a quantity of electrical energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical energy value is an energy value that measures a quantity of electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/998
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        rdfs:label "electrical energy amount value"@en
+        rdfs:label "electrical energy value"@en
     
     SubClassOf: 
         OEO_00050019
@@ -10903,7 +10907,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"@en,
 Class: OEO_00050019
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy value is a quantity value that has an energy unit as unit."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "energy quantity value",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/576
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/613
@@ -10914,7 +10918,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        rdfs:label "energy amount value"@en
+        rdfs:label "energy value"@en
     
     SubClassOf: 
         OEO_00000350,
@@ -14579,7 +14583,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483",
 Class: OEO_00330012
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage content is an energy amount value that measures the quantity of energy stored in an energy storage object.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage content is an energy value that quantifies stored energy.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1466
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1486",
         rdfs:label "energy storage content"@en
@@ -14675,6 +14679,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1851",
     
     SubClassOf: 
         OEO_00340062
+    
+    
+Class: OEO_00340069
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A stored energy is an energy that is contained in an energy storage object.",
+        rdfs:label "stored energy"@en
+    
+    SubClassOf: 
+        OEO_00000150,
+        OEO_00140002 some OEO_00330012,
+        <http://purl.obolibrary.org/obo/RO_0000080> some OEO_00000159
     
     
 Class: OEO_00360001
