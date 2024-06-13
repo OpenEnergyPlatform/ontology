@@ -5,6 +5,16 @@ The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [2.X.X] - 20XX-XX-XX
+### Added
+- subsector, has subsector, subsector of (#1788)
+
+### Changed
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
+- electricity import/export value (#1864)
+
+### Removed
+
+## [2.3.0] - 2024-05-21
 
 ### Added
 - methanol (#1827)
@@ -21,11 +31,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - has documentation quality (#1834)
+- megawatt-hour, gigawatt-hour, terawatt-hour, petawatt-hour (#1845)
 - energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
 - area value (#1851)
-- time stamp (#1853)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
+- time stamp (#1853)
 
 ### Removed
 
@@ -115,6 +126,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - new module oeo-sectors (#1724)
 - mobility technology, electric mobility technology (#1727)
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
+- German alternative labels (#1854, #1862)
 
 ### Changed
 - energy transformation (#1625)
