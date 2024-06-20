@@ -25,7 +25,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
 - size (#1851)
 - (de)commissioning start, (de)commissioning end (#1853)
-- German alternative labels to about 40 classes (#1854)
+- German alternative labels to about 80 classes (#1854, #1868)
+- English language tags to existing English alternative labels (#1867, #1868)
 
 ### Changed
 - has documentation quality (#1834)
