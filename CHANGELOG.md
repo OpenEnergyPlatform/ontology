@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 ### Added
 - subsector, has subsector, subsector of (#1788)
+- industrial technology, industrial plant (#1840)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
@@ -21,7 +22,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has prefix (#1835)
 - imported 'characteristic of' and subclasses from RO (#1838)
 - quantity (#1839)
-- industrial technology, industrial plant (#1840)
 - model coupling, sector coupling, sector coupling technology (#1842)
 - system robustness, robust system scenario, statistically robust, statistically robust scenario (#1843)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
