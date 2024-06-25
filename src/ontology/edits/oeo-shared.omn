@@ -139,23 +139,17 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000118> "has characteristic"
     
-    Domain: 
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985"
-        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
-    
     Range: 
         <http://purl.obolibrary.org/obo/BFO_0000020>
-    
-    InverseOf: 
-        OEO_00010121
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000081>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000085>
@@ -171,9 +165,6 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
         <http://purl.obolibrary.org/obo/IAO_0000233> "extend domain / definition
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1030
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1101"
-    
-    Domain: 
-        OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
     
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000091>
@@ -616,7 +607,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
 
 correct definition with respect to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484
+
+remove inverse:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1844
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1852",
         rdfs:label "has bearer"@en
     
     Domain: 
@@ -624,9 +619,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484",
     
     Range: 
         OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>
-    
-    InverseOf: 
-        <http://purl.obolibrary.org/obo/RO_0000053>
     
     
 ObjectProperty: OEO_00010231
@@ -1209,10 +1201,6 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000019>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000020>
 
-    SubClassOf: 
-        OEO_00010121 some 
-            (OEO_00000150 or <http://purl.obolibrary.org/obo/BFO_0000004>)
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000023>
 
@@ -1731,11 +1719,16 @@ Class: OEO_00020353
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A model role is a a role of a continuant for representing a system and its behaviours in a simplified or idealised way.",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1444
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1707
+
+add axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1844
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1852",
         rdfs:label "model role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        <http://purl.obolibrary.org/obo/RO_0000081> some OEO_00020352
     
     
 Class: OEO_00030019
