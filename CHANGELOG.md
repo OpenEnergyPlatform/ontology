@@ -13,7 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
-- german alternative labels (#1854, #1862, #1868)
+- German alternative labels (#1854, #1862, #1868)
 
 ### Changed
 - has documentation quality (#1834)
