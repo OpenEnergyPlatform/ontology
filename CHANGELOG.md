@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
+- german alternative labels (#1854, #1862, #1868)
 
 ### Changed
 - has documentation quality (#1834)
@@ -106,7 +107,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - new module oeo-sectors (#1724)
 - mobility technology, electric mobility technology (#1727)
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
-- german alternative labels (#1854) (#1862)
 
 ### Changed
 - energy transformation (#1625)
