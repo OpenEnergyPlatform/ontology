@@ -7,9 +7,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 ### Added
 - subsector, has subsector, subsector of (#1788)
+- Matlab programming language (#1869)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
+- C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
 
 ### Removed
 
