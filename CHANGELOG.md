@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 ### Added
 - subsector, has subsector, subsector of (#1788)
+- SKOS annotaions: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
