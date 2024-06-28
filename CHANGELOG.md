@@ -8,6 +8,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - subsector, has subsector, subsector of (#1788)
 - Matlab programming language (#1869)
+- SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
