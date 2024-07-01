@@ -67,6 +67,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
+- emission factor value (#1880)
+
+### Removed
+- emission value (#1880)
 
 ## [2.1.0] - 2023-12-05
 
