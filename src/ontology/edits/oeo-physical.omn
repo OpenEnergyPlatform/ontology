@@ -5265,17 +5265,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00010079
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission quantity value is a quantity value that has a mass unit as unit. It is the quantity value of an emission value."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a quantity value that quantifies an emission rate and has a mass unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "emission quantity value",
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/695
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/697
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        rdfs:label "emission quantity value"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+restructuring emission rate and emission value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "It can be calculated using the an emission factor.",
+        rdfs:label "emission value"@en
     
     SubClassOf: 
         OEO_00000350,
+        OEO_00020056 some OEO_00140081,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
     
     
@@ -11872,7 +11879,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
         rdfs:label "carbon dioxide equivalent quantity value"@en
     
     SubClassOf: 
-        OEO_00340064
+        OEO_00010079
     
     
 Class: OEO_00140091
@@ -14832,24 +14839,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
         OEO_00140127
     
     
-Class: OEO_00340064
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission value is a quantity value that quantifies an emission rate and has a mass unit.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionswert"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "emission quantity value",
-        <http://purl.obolibrary.org/obo/IAO_0000233> "restructuring emission rate and emission value
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1759
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
-        <http://purl.obolibrary.org/obo/IAO_0000600> "It can be calculated using the an emission factor.",
-        rdfs:label "emission value"@en
-    
-    SubClassOf: 
-        OEO_00000350,
-        OEO_00020056 some OEO_00140081,
-        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000002>
-    
-    
 Class: OEO_00340065
 
     Annotations: 
@@ -14860,7 +14849,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846",
         rdfs:label "greenhouse gas emission value"@en
     
     SubClassOf: 
-        OEO_00340064,
+        OEO_00010079,
         OEO_00020056 some OEO_00140082
     
     
