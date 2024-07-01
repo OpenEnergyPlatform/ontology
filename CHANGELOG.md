@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
 - German alternative labels (#1862, #1868)
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
+- ENVO mappings (#1879)
 
 ### Removed
 
