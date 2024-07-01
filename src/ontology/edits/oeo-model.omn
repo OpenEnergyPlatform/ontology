@@ -3,6 +3,7 @@ Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -59,6 +60,15 @@ AnnotationProperty: rdfs:isDefinedBy
 AnnotationProperty: rdfs:label
 
     
+AnnotationProperty: skos:closeMatch
+
+    
+AnnotationProperty: skos:exactMatch
+
+    
+AnnotationProperty: skos:relatedMatch
+
+    
 Datatype: rdf:PlainLiteral
 
     
@@ -90,6 +100,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
+
+    
+ObjectProperty: OEO_00000501
 
     
 ObjectProperty: OEO_00000503
@@ -553,6 +566,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000010>
     SubClassOf: 
         OEO_00020188 some OEO_00020187
     
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000025>
+
     
 Class: <http://purl.obolibrary.org/obo/IAO_0000027>
 
@@ -2597,7 +2613,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842",
         OEO_00000275
     
     
-
 Class: OEO_00020411
 
     Annotations: 
@@ -2638,8 +2653,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1843",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
-
-
+    
+    
 Class: OEO_00020416
 
     Annotations: 
@@ -3486,10 +3501,14 @@ Individual: OEO_00000049
 Individual: OEO_00000081
 
     Annotations: 
-        rdfs:label "c++"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "C++ is a programming languages designed by Bjarne Stroustrup and standardised by ISO/IEC."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "C++"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000097>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000092
@@ -3548,11 +3567,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
 Individual: OEO_00000170
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fortran is a programming language designed by John Backus, developed by IBM and standardised by ISO/IEC."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Fortran"@de,
-        rdfs:label "fortran"@en
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Fortran"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000105>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000180
@@ -3614,10 +3637,14 @@ Individual: OEO_00000225
 Individual: OEO_00000244
 
     Annotations: 
-        rdfs:label "java"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Java is a programming language designed by James Gosling and developed by Oracle."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Java"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000012>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000266
@@ -3632,10 +3659,17 @@ Individual: OEO_00000266
 Individual: OEO_00000267
 
     Annotations: 
-        rdfs:label "matlab"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The Matlab software framework is a proprietary software framework developed by MathWorks that uses the Matlab programming language."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Matlab"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Matlab software framework"@en
     
     Types: 
         OEO_00000382
+    
+    Facts:  
+     OEO_00000503  OEO_00010487
     
     
 Individual: OEO_00000280
@@ -3668,10 +3702,15 @@ Individual: OEO_00000287
 Individual: OEO_00000288
 
     Annotations: 
-        rdfs:label "vba"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Visual Basic for Applications (VBA) is a programming language based on Visual Basic and developed by Microsoft for use within the Microsoft Office software package."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "VBA"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Visual Basic for Applications"@en,
+        skos:relatedMatch <http://www.ebi.ac.uk/swo/SWO_0000130>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000319
@@ -3686,37 +3725,53 @@ Individual: OEO_00000319
 Individual: OEO_00000325
 
     Annotations: 
-        rdfs:label "php"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PHP is a programming language designed by Rasmus Lerdorf."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "PHP"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000116>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000349
 
     Annotations: 
-        rdfs:label "python"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Python is a programming language designed by Guido van Rossum and developed by the Python Software Foundation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Python"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000118>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000351
 
     Annotations: 
-        rdfs:label "r"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "R is a programming language designed by Ross Ihaka and Robert Gentleman and the R Core Team.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "R"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000415>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000362
 
     Annotations: 
-        rdfs:label "ruby"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ruby is a programming language designed by Yukihiro Matsumoto."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Ruby"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000120>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000424
@@ -3752,6 +3807,23 @@ Individual: OEO_00000451
     
     Types: 
         OEO_00000120
+    
+    
+Individual: OEO_00010487
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Matlab"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Matlab programming language"@en,
+        rdfs:label "The Matlab programming language is a programming language developed by MathWorks for use in the Matlab software framework."@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000274>
+    
+    Types: 
+        <http://purl.obolibrary.org/obo/IAO_0000025>
+    
+    Facts:  
+     OEO_00000501  OEO_00000267
     
     
 Individual: OEO_00020027
