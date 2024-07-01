@@ -3,6 +3,7 @@ Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -72,6 +73,15 @@ AnnotationProperty: rdfs:label
 
     
 AnnotationProperty: rdfs:seeAlso
+
+    
+AnnotationProperty: skos:closeMatch
+
+    
+AnnotationProperty: skos:exactMatch
+
+    
+AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
@@ -169,6 +179,48 @@ ObjectProperty: OEO_00010312
 
     Domain: 
         OEO_00000367
+    
+    
+ObjectProperty: OEO_00010466
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A part of relation between a sector and its parent sector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
+        rdfs:label "subsector of"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000050>
+    
+    Domain: 
+        OEO_00010464
+    
+    Range: 
+        OEO_00000367
+    
+    InverseOf: 
+        OEO_00010467
+    
+    
+ObjectProperty: OEO_00010467
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A has part relation between a sector and its subsector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
+        rdfs:label "has subsector"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000051>
+    
+    Domain: 
+        OEO_00000367
+    
+    Range: 
+        OEO_00010464
+    
+    InverseOf: 
+        OEO_00010466
     
     
 ObjectProperty: OEO_00020056
@@ -310,6 +362,7 @@ Class: OEO_00000128
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy demand sector is a sector that covers energy consumers."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Energienachfragesektor"@de,
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1014
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1015"
@@ -330,12 +383,17 @@ Class: OEO_00000145
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity sector is a transformation sector that covers electricity generation and transport of electrical energy to consumers of electrical energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Stromsektor"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "electricity sector"@en
     
     SubClassOf: 
@@ -364,7 +422,8 @@ Class: OEO_00000213
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heating and cooling sector is a sector that covers heating and cooling activities."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "H&C sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "H&C sector"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Wärme- und Kältesektor"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
 
@@ -381,7 +440,8 @@ Class: OEO_00000214
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A household sector is a sector that covers households."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "private household sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Haushaltssektor"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "private household sector"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
 
@@ -398,12 +458,17 @@ Class: OEO_00000227
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An industry sector is a sector that covers industrial activities with other main purposes of energy transformation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Industriesektor"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "industry sector"@en
     
     SubClassOf: 
@@ -469,9 +534,10 @@ Class: OEO_00000405
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A commercial sector is a sector that covers non-industrial commercial activities."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "TCS sector",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "service sector",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "trading, commerce and service sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "TCS sector"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "kommerzieller Sektor"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "service sector"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "trading, commerce and service sector"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
 
@@ -505,6 +571,7 @@ Class: OEO_00010034
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A building sector is a sector that covers buildings.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Gebäudesektor"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
 
@@ -521,7 +588,7 @@ Class: OEO_00010035
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A agriculture, forestry and land use (AFOLU) sector is a sector that covers activities and natural processes from agriculture, forestry, land use and land use change.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "AFOLU sector",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "AFOLU sector"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Landwirtschaft, Forstwirtschaft und Landnutzungssektor"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/30
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/484
@@ -755,6 +822,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
     
     SubClassOf: 
         OEO_00000368
+    
+    
+Class: OEO_00010464
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A subsector is a sector that is a part of an other sector."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
+        rdfs:label "subsector"@en
+    
+    EquivalentTo: 
+        OEO_00000367
+         and (OEO_00010466 some OEO_00000367)
+    
+    SubClassOf: 
+        OEO_00000367
     
     
 Class: OEO_00020015
@@ -1033,7 +1116,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): transport"@en
     
     Types: 
@@ -1059,7 +1146,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): fuel combustion - other sectors"@en
     
     Types: 
@@ -1112,7 +1203,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): industrial processes and product use"@en
     
     Types: 
@@ -1388,7 +1483,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): CO2 transport and storage"@en
     
     Types: 
@@ -1457,7 +1556,11 @@ Individual: OEO_00010061
         OEO_00010037 "CRF 1.A.3.c",
         <http://purl.obolibrary.org/obo/IAO_0000115> "2006 IPCC Guidelines for National Greenhouse Gas Inventories, Volume 1, Chapter 8.5, https://www.ipcc-nggip.iges.or.jp/public/2006gl/",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The CRF sector (IPCC 2006) 'railways' is a transport sector defined by the 2006 IPCC Guidelines for National Greenhouse Gas Inventories:
-Emissions from railway transport for both freight and passenger traffic routes.",
+Emissions from railway transport for both freight and passenger traffic routes.
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         <http://purl.obolibrary.org/obo/IAO_0000115> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/580
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/595
 
@@ -1571,9 +1674,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
     
     Facts:  
      OEO_00000504  OEO_00010056,
-     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010040,
-     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010057,
-     <http://purl.obolibrary.org/obo/BFO_0000051>  OEO_00010064
+     OEO_00010467  OEO_00010040,
+     OEO_00010467  OEO_00010057,
+     OEO_00010467  OEO_00010064
     
     
 Individual: OEO_00010066
@@ -1866,7 +1969,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
     
     Facts:  
      OEO_00000504  OEO_00000242,
-     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00010040
+     OEO_00010466  OEO_00010040
     
     
 Individual: OEO_00010159
@@ -2005,7 +2108,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): mineral industry"@en
     
     Types: 
@@ -2028,7 +2135,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): cement production"@en
     
     Types: 
@@ -2051,7 +2162,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): chemical industry"@en
     
     Types: 
@@ -2074,7 +2189,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/941
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): metal industry"@en
     
     Types: 
@@ -2101,7 +2220,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1440
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): iron and steel production"@en
     
     Types: 
@@ -2834,7 +2957,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): international bunkers"@en
     
     Types: 
@@ -2865,7 +2992,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): international aviation"@en
     
     Types: 
@@ -2898,7 +3029,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1334
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): maritime navigation"@en
     
     Types: 
@@ -3099,7 +3234,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/967
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): CO2 emissions from biomass"@en
     
     Types: 
@@ -3120,7 +3259,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/967
 
 move to oeo-sector 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724
+
+Add 'is sector of' axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1333
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1788",
         rdfs:label "CRF sector (IPCC 2006): CO2 captured"@en
     
     Types: 

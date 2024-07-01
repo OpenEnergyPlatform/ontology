@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.X.X] - 20XX-XX-XX
+### Added
+
+### Changed
+
+### Removed
+
+## [2.4.0] - 2024-07-01
+### Added
+- subsector, has subsector, subsector of (#1788)
+- Matlab programming language (#1869)
+- SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
+
+### Changed
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
+- German alternative labels (#1862, #1868)
+- C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
+- ENVO mappings (#1879)
+- emission factor value (#1880)
+
+### Removed
+- emission value (#1880)
+
 ## [2.3.0] - 2024-05-21
 
 ### Added
@@ -26,7 +49,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - area value (#1851)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
-
+- electricity import/export value (#1864)
 
 ### Removed
 
@@ -53,6 +76,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
+
+### Removed
 
 ## [2.1.0] - 2023-12-05
 
@@ -116,6 +141,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - new module oeo-sectors (#1724)
 - mobility technology, electric mobility technology (#1727)
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
+
 
 ### Changed
 - energy transformation (#1625)

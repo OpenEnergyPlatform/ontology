@@ -3,6 +3,7 @@ Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: skos: <http://www.w3.org/2004/02/skos/core#>
 Prefix: xml: <http://www.w3.org/XML/1998/namespace>
 Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -59,6 +60,15 @@ AnnotationProperty: rdfs:isDefinedBy
 AnnotationProperty: rdfs:label
 
     
+AnnotationProperty: skos:closeMatch
+
+    
+AnnotationProperty: skos:exactMatch
+
+    
+AnnotationProperty: skos:relatedMatch
+
+    
 Datatype: rdf:PlainLiteral
 
     
@@ -90,6 +100,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002234>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002353>
+
+    
+ObjectProperty: OEO_00000501
 
     
 ObjectProperty: OEO_00000503
@@ -554,6 +567,9 @@ Class: <http://purl.obolibrary.org/obo/IAO_0000010>
         OEO_00020188 some OEO_00020187
     
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000025>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000027>
 
     
@@ -652,6 +668,7 @@ Class: OEO_00000078
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A boolean variable is a variable that represents a boolean value."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "boolsche Variable"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1148
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
@@ -669,6 +686,7 @@ Class: OEO_00000085
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A citation reference is a reference stating where a citation was taken from.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Quellenverweis"@de,
         rdfs:label "citation reference"@en
     
     SubClassOf: 
@@ -700,6 +718,7 @@ Class: OEO_00000104
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "\"The carbon dioxide emissions in Germany have to be reduced by 95% till 2050.\" is a constraint for a model calculation about the energy system."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A constraint is a condition that has to be fulfilled within a calculation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Nebenbedingung"@de,
         rdfs:label "constraint"@en
     
     SubClassOf: 
@@ -710,6 +729,7 @@ Class: OEO_00000118
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A database is an information content entity that stores data items and data sets.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Datenbank"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/253
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/272
 
@@ -749,6 +769,7 @@ Class: OEO_00000120
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A data format is a data descriptor that specifies the structure in which the data item is encoded.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Datenformat"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1145
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326",
         rdfs:label "data format"@en
@@ -783,6 +804,7 @@ Class: OEO_00000123
 Class: OEO_00000124
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Datenverarbeitung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/252
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/289",
         rdfs:comment "data processing is a transformation in which a data item gets transformed.",
@@ -797,6 +819,7 @@ Class: OEO_00000125
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "data processing software is software used in the context of data processing.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Datenverarbeitungssoftware"@de,
         rdfs:label "data processing software"@en
     
     SubClassOf: 
@@ -820,6 +843,7 @@ Class: OEO_00000149
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000112> "The measurement series of some experiment."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An empirical data set is a dataset that is obtained from observations in the real world."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Empirischer Datensatz"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "Move to oeo-shared and harmonise label:
 https://github.com/OpenEnergyPlatform/ontology/pull/1463
 rework module structure 
@@ -838,7 +862,8 @@ Class: OEO_00000161
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An external optimiser is a software external to a model that computes an optimisation.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "external optimizer",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "external optimizer"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "externer Optimierer"@de,
         rdfs:label "external optimiser"@en
     
     SubClassOf: 
@@ -882,6 +907,7 @@ Class: OEO_00000202
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A graphical user interface (GUI) is a software interface allowing users to communicate with a software application through a graphical window."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "GUI"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Graphische Benutzeroberfläche"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "Change label:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1804
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1810",
@@ -898,6 +924,7 @@ Class: OEO_00000228
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An installation guide is a documentation intended to help users install a Software.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Installationsanleitung"@de,
         rdfs:label "installation guide"@en
     
     SubClassOf: 
@@ -918,6 +945,7 @@ Class: OEO_00000264
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market model is a model that is about the energy market.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Energiemarktmodell"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821
 
@@ -1385,6 +1413,7 @@ Class: OEO_00010233
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A forecast error is a quantity value that quantifies the difference between a measured and a forecasted value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Vorhersagefehler"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/907
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1002",
         rdfs:label "forecast error"@en
@@ -1585,6 +1614,7 @@ Class: OEO_00010404
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy balance data set is an empirical data set that describes a specified set of energy transformations and a specified set of energy carriers in a spatial region for a specific time step (usually a year).",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Energiebilanzdatensatz"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1400
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1463
 
@@ -1860,6 +1890,7 @@ Class: OEO_00020026
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Hybrid is an analytical approach that combines the top down and the bottom up approach. Some parts are based on composition approach while other parts are based on decomposition approach.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "hybrid"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "Convert to subclass and add definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1147
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1302",
@@ -1945,6 +1976,7 @@ The study region is not modelled as a whole, but several subregions are modelled
 In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
 The union of the study region and the interacting/ external region ist the considered region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A considered region is a region of relevance that has the considered region role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "betrachtete Region"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/475
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/585
 
@@ -2250,7 +2282,8 @@ Class: OEO_00020185
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A copyright licence is a licence that states the ownership and contractually sets the rights and obligations to use, copy, and distribute a creative work.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "copyright license",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Urheberrechtslizenz"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "copyright license"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "add relation has copyright license
 issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090
@@ -2272,7 +2305,8 @@ Class: OEO_00020186
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A data licence is a licence that determines ownership, database protection, and permissions for data.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "data license",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Datenlizenz"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "data license"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue https://github.com/OpenEnergyPlatform/ontology/issues/1061
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/1090
 
@@ -2350,6 +2384,7 @@ Class: OEO_00020248
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An explorative scenario is a scenario that contains certain constraints / statements regarding measures that are taken in the near future / today to explore where these measures will lead to in a later future. The later future is not predefined in the scenario.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "exploratives Szenario"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1110
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1459
 move to oeo-shared
@@ -2578,7 +2613,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842",
         OEO_00000275
     
     
-
 Class: OEO_00020411
 
     Annotations: 
@@ -2619,8 +2653,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1843",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
-
-
+    
+    
 Class: OEO_00020416
 
     Annotations: 
@@ -2675,6 +2709,7 @@ Class: OEO_00030007
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A climate scenario is a scenario that describes a possible future state of a climate system.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Klimaszenario"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
 
@@ -2694,6 +2729,7 @@ Class: OEO_00030008
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An economic scenario is a scenario that describes a possible future state of economic systems.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Wirtschaftsszenario"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344 
 make equivalent
@@ -2709,6 +2745,7 @@ Class: OEO_00030009
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission scenario is a scenario that describes a possible emission trajectory.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionsszenario"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
 
@@ -2729,6 +2766,7 @@ Class: OEO_00030010
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy scenario is a scenario that describes a possible future state of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Energieszenario"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/328
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/344
 
@@ -2749,6 +2787,7 @@ Class: OEO_00030015
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy system model is a model of an energy system.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Energiesystemmodell"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/337
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/358
 rework module structure 
@@ -2835,6 +2874,7 @@ Class: OEO_00030032
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An ending time is a zero-dimensional temporal region that indicates the end of a one-dimensional temporal region.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Endzeit"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538
 
@@ -2932,6 +2972,7 @@ Class: OEO_00140026
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Checking against measurements is a validation where something gets checked by using relevant measurements.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Abgleich mit Messwerten"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/487
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
         rdfs:label "checking against measurements"@en
@@ -2944,6 +2985,7 @@ Class: OEO_00140027
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Checking against empirical data is a validation where something gets checked against empirical data.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Abgleich mit empirischen Daten"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/487
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/565",
         rdfs:label "checking against empirical data"@en
@@ -3035,6 +3077,7 @@ Class: OEO_00140099
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A goal description is an information content entity that contains statements about a desired future state of a system that a person or organisation envisions or plans, or to which it commits.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Zielbeschreibung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/28
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/729",
         rdfs:label "goal description"@en
@@ -3187,6 +3230,7 @@ Class: OEO_00280004
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A binary file format is a file format that is not a text format.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "binäres Dateiformat"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1145
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1326
 
@@ -3457,10 +3501,14 @@ Individual: OEO_00000049
 Individual: OEO_00000081
 
     Annotations: 
-        rdfs:label "c++"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "C++ is a programming languages designed by Bjarne Stroustrup and standardised by ISO/IEC."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "C++"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000097>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000092
@@ -3519,15 +3567,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1255",
 Individual: OEO_00000170
 
     Annotations: 
-        rdfs:label "fortran"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fortran is a programming language designed by John Backus, developed by IBM and standardised by ISO/IEC."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Fortran"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Fortran"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000105>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000180
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "GAMS"@de,
         rdfs:label "gams"@en
     
     Types: 
@@ -3573,6 +3627,7 @@ Individual: OEO_00000203
 Individual: OEO_00000225
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "inaktiv"@de,
         rdfs:label "inactive"@en
     
     Types: 
@@ -3582,10 +3637,14 @@ Individual: OEO_00000225
 Individual: OEO_00000244
 
     Annotations: 
-        rdfs:label "java"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Java is a programming language designed by James Gosling and developed by Oracle."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Java"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000012>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000266
@@ -3600,10 +3659,17 @@ Individual: OEO_00000266
 Individual: OEO_00000267
 
     Annotations: 
-        rdfs:label "matlab"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The Matlab software framework is a proprietary software framework developed by MathWorks that uses the Matlab programming language."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Matlab"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Matlab software framework"@en
     
     Types: 
         OEO_00000382
+    
+    Facts:  
+     OEO_00000503  OEO_00010487
     
     
 Individual: OEO_00000280
@@ -3636,10 +3702,15 @@ Individual: OEO_00000287
 Individual: OEO_00000288
 
     Annotations: 
-        rdfs:label "vba"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Visual Basic for Applications (VBA) is a programming language based on Visual Basic and developed by Microsoft for use within the Microsoft Office software package."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "VBA"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Visual Basic for Applications"@en,
+        skos:relatedMatch <http://www.ebi.ac.uk/swo/SWO_0000130>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000319
@@ -3654,37 +3725,53 @@ Individual: OEO_00000319
 Individual: OEO_00000325
 
     Annotations: 
-        rdfs:label "php"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "PHP is a programming language designed by Rasmus Lerdorf."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "PHP"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000116>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000349
 
     Annotations: 
-        rdfs:label "python"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Python is a programming language designed by Guido van Rossum and developed by the Python Software Foundation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Python"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000118>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000351
 
     Annotations: 
-        rdfs:label "r"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "R is a programming language designed by Ross Ihaka and Robert Gentleman and the R Core Team.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "R"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000415>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000362
 
     Annotations: 
-        rdfs:label "ruby"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ruby is a programming language designed by Yukihiro Matsumoto."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Ruby"@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000120>
     
     Types: 
-        OEO_00000382
+        <http://purl.obolibrary.org/obo/IAO_0000025>
     
     
 Individual: OEO_00000424
@@ -3722,6 +3809,23 @@ Individual: OEO_00000451
         OEO_00000120
     
     
+Individual: OEO_00010487
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Matlab"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/859
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1869",
+        rdfs:label "Matlab programming language"@en,
+        rdfs:label "The Matlab programming language is a programming language developed by MathWorks for use in the Matlab software framework."@en,
+        skos:closeMatch <http://www.ebi.ac.uk/swo/SWO_0000274>
+    
+    Types: 
+        <http://purl.obolibrary.org/obo/IAO_0000025>
+    
+    Facts:  
+     OEO_00000501  OEO_00000267
+    
+    
 Individual: OEO_00020027
 
     Annotations: 
@@ -3743,6 +3847,7 @@ Individual: OEO_00020028
 Individual: OEO_00020029
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "ökonometrisch"@de,
         rdfs:label "econometric"@en
     
     Types: 
@@ -3780,6 +3885,7 @@ Individual: OEO_00020163
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per day",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "täglich"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
@@ -3793,6 +3899,7 @@ Individual: OEO_00020164
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "one value per hour",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "stündlich"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
@@ -3859,6 +3966,7 @@ Individual: OEO_00140069
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "value measured at or modelled for exactly one 0-dim temporal region, referenced by a time stamp, e.g. to represent a time step in a time series",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "instantan"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
         rdfs:label "instantaneous"@en
@@ -3871,6 +3979,7 @@ Individual: OEO_00140070
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "sum or integral of values, e.g. within a time step or a spatial region",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Integral"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/571
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/610",
         rdfs:label "integral"@en
@@ -3930,6 +4039,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/824",
 Individual: OEO_00140169
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "deterministisch"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/183
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/824",
         rdfs:label "deterministic"@en
