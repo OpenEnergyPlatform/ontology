@@ -6,6 +6,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [2.X.X] - 20XX-XX-XX
 ### Added
+
+### Changed
+
+### Removed
+
+## [2.4.0] - 2024-07-01
+### Added
 - subsector, has subsector, subsector of (#1788)
 - industrial technology, industrial plant (#1840)
 - German alternative labels (#1862, #1868)
@@ -16,8 +23,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
 - electricity import/export value (#1864)
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
+- ENVO mappings (#1879)
+- emission factor value (#1880)
 
 ### Removed
+- emission value (#1880)
 
 ## [2.3.0] - 2024-05-21
 
@@ -67,6 +77,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
+
+### Removed
 
 ## [2.1.0] - 2023-12-05
 
