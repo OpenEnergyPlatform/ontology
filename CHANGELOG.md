@@ -5,6 +5,31 @@ The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [2.X.X] - 20XX-XX-XX
+### Added
+- German alternative labels (#1883)
+- English language tags to existing alternative labels (#1883)
+
+### Changed
+
+### Removed
+
+## [2.4.0] - 2024-07-01
+### Added
+- subsector, has subsector, subsector of (#1788)
+- Matlab programming language (#1869)
+- SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
+
+### Changed
+- electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
+- German alternative labels (#1862, #1868)
+- C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
+- ENVO mappings (#1879)
+- emission factor value (#1880)
+
+### Removed
+- emission value (#1880)
+
+## [2.3.0] - 2024-05-21
 
 ### Added
 - methanol (#1827)
@@ -12,14 +37,21 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - imported 'characteristic of' and subclasses from RO (#1838)
 - quantity (#1839)
 - model coupling, sector coupling, sector coupling technology (#1842)
+- system robustness, robust system scenario, statistically robust, statistically robust scenario (#1843)
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
-- German alternative labels (#1883)
-- English language tags to existing alternative labels (#1883)
-
+- size (#1851)
+- (de)commissioning start, (de)commissioning end (#1853)
+- German alternative labels to about 40 classes (#1854)
 
 ### Changed
 - has documentation quality (#1834)
+- megawatt-hour, gigawatt-hour, terawatt-hour, petawatt-hour (#1845)
+- energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
 - emission factor, emission rate, greenhouse gas emission rate, CO2 emission rate, carbon dioxide equivalent quantity value (#1846)
+- area value (#1851)
+- has bearer, has characteristic, characteristic of, role of, model role (#1852)
+- time stamp (#1853)
+- electricity import/export value (#1864)
 
 ### Removed
 
@@ -46,6 +78,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - API -> application programming interface; GUI -> graphical user interface (#1810)
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
+
+### Removed
 
 ## [2.1.0] - 2023-12-05
 
@@ -109,7 +143,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - new module oeo-sectors (#1724)
 - mobility technology, electric mobility technology (#1727)
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
-- german alternative labels (#1854) (#1862)
+
 
 ### Changed
 - energy transformation (#1625)
