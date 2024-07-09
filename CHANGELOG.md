@@ -6,6 +6,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [2.X.X] - 20XX-XX-XX
 ### Added
+- German alternative labels (#1883)
+- English language tags to existing alternative labels (#1883)
 
 ### Changed
 
