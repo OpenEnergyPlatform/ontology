@@ -52,6 +52,8 @@ endef
 
 all: base merge closure
 
+imports: directories $(IMPORTS)/ro-extracted.owl $(IMPORTS)/iao-extracted.owl
+
 base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OWL_COPY) $(OMN_COPY) $(OMN_TRANSLATE)
 
 merge: | $(VERSIONDIR)/oeo-full.omn
