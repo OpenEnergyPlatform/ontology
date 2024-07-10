@@ -2,7 +2,7 @@ MKDIR_P = mkdir -p
 VERSION:= $(shell cat VERSION)
 VERSIONDIR := build/oeo/$(VERSION)
 ONTOLOGY_SOURCE := src/ontology
-
+IMPORTS := $(ONTOLOGY_SOURCE)/imports
 subst_paths =	${subst $(ONTOLOGY_SOURCE),$(VERSIONDIR),${patsubst $(ONTOLOGY_SOURCE)/edits/%,$(ONTOLOGY_SOURCE)/modules/%,$(1)}}
 
 OWL_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl"))
@@ -61,7 +61,19 @@ closure: | $(VERSIONDIR)/oeo-closure.owl
 clean:
 	- $(RM) -r $(VERSIONDIR) $(ROBOT_PATH)
 
+clean-imports:
+	- $(RM) -r $(IMPORTS)/*.owl
+
 directories: ${VERSIONDIR}/imports ${VERSIONDIR}/modules
+
+$(IMPORTS)/iao-extracted.owl: $(ROBOT_PATH)
+	bash oeo-tools/oeo-imports/iao/extract-iao-module.sh
+
+$(IMPORTS)/ro-extracted.owl: $(ROBOT_PATH)
+	bash oeo-tools/oeo-imports/ro/extract-from-relations-ontology.sh
+
+$(IMPORTS)/uo-extracted.owl: $(ROBOT_PATH)
+	bash oeo-tools/oeo-imports/uo/extract-uo-module.sh
 
 ${VERSIONDIR}/imports:
 	${MKDIR_P} ${VERSIONDIR}/imports
