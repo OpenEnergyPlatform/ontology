@@ -89,7 +89,7 @@ $(VERSIONDIR)/catalog-v001.xml: src/ontology/catalog-v001.xml
 	sed -i -E "s/edits\//modules\//m" $@
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.2/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.6/robot.jar
 
 
 $(VERSIONDIR)/%.owl: $(VERSIONDIR)/%.omn
