@@ -8,8 +8,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - German alternative labels (#1883)
 - English language tags to existing alternative labels (#1883)
+- oeo:unit, oeo:physical unit (#1892)
 
 ### Changed
+- uo:unit (#1892)
 
 ### Removed
 
