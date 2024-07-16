@@ -8,8 +8,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - German alternative labels (#1883)
 - English language tags to existing alternative labels (#1883)
+- GAMS programming language (#1889)
 
 ### Changed
+- gams -> General Algebraic Modeling System (#1889)
 
 ### Removed
 
