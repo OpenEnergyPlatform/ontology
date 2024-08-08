@@ -6,8 +6,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [2.X.X] - 20XX-XX-XX
 ### Added
-- German alternative labels (#1883)
-- English language tags to existing alternative labels (#1883)
+- German alternative labels (#1883, #1895)
+- English language tags to existing alternative labels (#1883, #1895)
 - GAMS programming language (#1889)
 
 ### Changed
@@ -43,7 +43,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - emission value, greenhouse gas emission value, CO2 emission value, emission factor value (#1846)
 - size (#1851)
 - (de)commissioning start, (de)commissioning end (#1853)
-- English language tags to existing alternative labels (#1895)
 - German alternative labels to about 40 classes (#1854)
 
 ### Changed
