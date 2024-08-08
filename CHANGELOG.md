@@ -6,8 +6,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [2.X.X] - 20XX-XX-XX
 ### Added
-- German alternative labels (#1883)
-- English language tags to existing alternative labels (#1883)
+- German alternative labels (#1883, #1895)
+- English language tags to existing alternative labels (#1883, #1895)
 - GAMS programming language (#1889)
 
 ### Changed
