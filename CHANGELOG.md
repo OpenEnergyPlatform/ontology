@@ -12,7 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
-
+- train, regionalisation (#1899)
 ### Removed
 
 ## [2.4.0] - 2024-07-01
