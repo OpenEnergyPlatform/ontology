@@ -9,7 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - German alternative labels (#1883, #1895)
 - English language tags to existing alternative labels (#1883, #1895)
 - GAMS programming language (#1889)
-- kilowatt and megawatt (#1900)
+- kilowatt, megawatt (#1900)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
