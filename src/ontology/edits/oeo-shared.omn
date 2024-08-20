@@ -70,6 +70,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/523",
         dc:identifier
     
     
+AnnotationProperty: OEO_00020425
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An oekg specific annotation that indicates how an entity should be used by the OEKG.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897",
+        rdfs:comment "allowed value: \"study descriptor\"",
+        rdfs:label "oekg annotation"
+    
+    
 AnnotationProperty: OEO_00040001
 
     Annotations: 
@@ -1301,13 +1311,17 @@ Class: <http://purl.obolibrary.org/obo/UO_0010006>
 Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330023>
 
     Annotations: 
+        OEO_00020425 "study descriptor",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A life cycle assessment is a methodology to calculate and analyse environmental impacts of the life cycle of a material entity or process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "LCA"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Lebenszyklusanalyse"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "life cycle analysis"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Ökobilanz"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1551
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1576",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1576
+add oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897",
         rdfs:label "life cycle assessment"@en
     
     SubClassOf: 
@@ -1492,6 +1506,7 @@ Class: OEO_00000407
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A technology is a plan specification that describes how to combine artificial objects or other material entities and processes in a specific way."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Technologie"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/136
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/334
 moved to oeo-shared, change definition, reclassify, add axiom
@@ -1510,6 +1525,7 @@ Class: OEO_00000419
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A transformation is a process that transforms one or more inputs into at least one output."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Umwandlung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/435
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/450
 
@@ -1612,6 +1628,7 @@ Class: OEO_00020011
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study is a project with the goal to methodologically investigate something."@en,
         <http://purl.obolibrary.org/obo/IAO_0000116> "The construct 'has funding source' some ('has role' some funder) is necessary, because has funding source has the range has role some funder. This range comes from issue https://github.com/OpenEnergyPlatform/ontology/issues/850 : funding source is some kind of independent continuant, i.e. a organisation or person, that does something special (giving money). So it is anything that has role some funder.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Studie"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/247
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/497
 add covers-relation (oeo-model)
@@ -1828,7 +1845,8 @@ Class: OEO_00030035
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A time span is a quantity value indicating the duration of a one-dimensional temporal region, measured in a time unit.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "duration",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Zeitspanne"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "duration"@en,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/267
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/538
 change duration to time span (def, label, alternative term)
@@ -1864,6 +1882,10 @@ Class: OEO_00140009
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sponsor is an agent that supports a person, organisation, or project by giving money, allowance of kind, services or other help.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Förderer"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Förderin"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Sponsor"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Sponsorin"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/473
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/557
 rework module structure
