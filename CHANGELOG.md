@@ -10,9 +10,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - English language tags to existing alternative labels (#1883, #1895)
 - GAMS programming language (#1889)
 - kilowatt, megawatt (#1900)
+- oekg annotation (#1897)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
+- train, regionalisation (#1899)
+- add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
 
 ### Removed
 
