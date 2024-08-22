@@ -14,7 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.4.0] - 2024-07-01
 ### Added
 - subsector, has subsector, subsector of (#1788)
-- industrial technology, industrial plant (#1840)
+- manufacturing technology, manufacturing plant (#1840)
 - German alternative labels (#1862, #1868)
 - Matlab programming language (#1869)
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
