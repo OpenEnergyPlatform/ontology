@@ -9156,6 +9156,52 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1827",
         OEO_00000529 value OEO_00000256
     
     
+Class: OEO_00010485
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufacturing technology is a technology that describes how to combine manufactuing plants and manufacturing processes to produce manufactured materials."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "industrial technology"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1840",
+        rdfs:label "manufacturing technology"@en
+    
+    SubClassOf: 
+        OEO_00000407,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00010486
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some 
+                (OEO_00050000
+                 and (OEO_00000533 some OEO_00240026))))
+    
+    
+Class: OEO_00010486
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufacturing plant is an artificial object that applies one or more manufacturing processes to produce one more kinds of manufactured materials."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "industrial plant"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1840",
+        rdfs:label "manufacturing plant"@en
+    
+    SubClassOf: 
+        OEO_00000061,
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050000
+    
+    
+Class: OEO_00010491
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufactured commodity is a portion of matter that is the physical output of a manufacturing process and that has a commodity role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "industrial commodity"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Split 'industrial material' into 'manufactured material' and 'manufactured commodity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1840",
+        rdfs:label "manufactured commodity"@en
+    
+    SubClassOf: 
+        OEO_00000331
+    
+    
 Class: OEO_00020001
 
     Annotations: 
@@ -11106,16 +11152,26 @@ Class: OEO_00030035
 Class: OEO_00050000
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial process is a process that has output object or object aggregates that are economic goods. An industrial process consists of several subprocesses. Examples of subprocesses that can be involved in an industrial process are energy transformations, mechanical operations and chemical reactions.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufacturing process is a process that produces artificial objects or object aggregates that are economic goods. It involves several subprocesses, which are energy transformations and material transformations amongst others."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Herstellungsprozess"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "industrial process"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "industrieller Prozess"@de,
         <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/534
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/589",
-        rdfs:label "industrial process"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/589
+
+Relabel and redefine:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1840",
+        rdfs:label "manufacturing process"@en,
+        skos:closeMatch <https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess>
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020003)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020264),
         <http://purl.obolibrary.org/obo/RO_0002234> some 
-            (<http://purl.obolibrary.org/obo/BFO_0000027> or <http://purl.obolibrary.org/obo/BFO_0000030>)
+            ((OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000027>)
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010117))
     
     
 Class: OEO_00050001
@@ -13188,8 +13244,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00240026
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An industrial material is a portion of matter that is the physical output of an industrial process and that has a good role."@en,
-        rdfs:label "industrial material"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A manufactured material is a portion of matter that is the physical output of a manufacturing process and that has a good role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "industrial material"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1082
+
+Split 'industrial material' into 'manufactured material' and 'manufactured commodity':
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1726
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1840",
+        rdfs:label "manufactured material"@en
     
     SubClassOf: 
         OEO_00000331
