@@ -14,6 +14,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
 - uo:unit (#1892)
+- kilowatt, megawatt (#1900)
 - oekg annotation (#1897)
 
 ### Changed
