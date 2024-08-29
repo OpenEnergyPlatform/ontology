@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - GAMS programming language (#1889)
 - kilowatt, megawatt (#1900)
 - oekg annotation (#1897)
+- economic instrument function, education instrument function, information instrument function, voluntary agreement instrument function (#1906)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
