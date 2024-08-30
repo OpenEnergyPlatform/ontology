@@ -9,12 +9,12 @@ jobs:
       if: github.event_name == 'issues' && github.event.action == 'opened'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PROJECT_URL: https://github.com/OpenEnergyPlatform/ontology/projects/3
+        GITHUB_PROJECT_URL: https://github.com/orgs/OpenEnergyPlatform/projects/45
         GITHUB_PROJECT_COLUMN_NAME: To do
     - name: add-new-prs-to-repository-based-project-column
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'pull_request' && github.event.action == 'opened'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PROJECT_URL: https://github.com/OpenEnergyPlatform/ontology/projects/3
+        GITHUB_PROJECT_URL: https://github.com/orgs/OpenEnergyPlatform/projects/45
         GITHUB_PROJECT_COLUMN_NAME: Review in progress
