@@ -12,6 +12,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - kilowatt, megawatt (#1900)
 - oekg annotation (#1897)
 - economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
+- term tracker annotation (#1913)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
