@@ -16,23 +16,29 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - uo:unit (#1892)
 - kilowatt, megawatt (#1900)
 - oekg annotation (#1897)
+- economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
+- term tracker annotation (#1913)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
 - train, regionalisation (#1899)
 - add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
+- economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
 
 ### Removed
 
 ## [2.4.0] - 2024-07-01
 ### Added
 - subsector, has subsector, subsector of (#1788)
+- manufacturing technology, manufacturing plant, manufactured commodity (#1840)
+- German alternative labels (#1862, #1868)
 - Matlab programming language (#1869)
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
-- German alternative labels (#1862, #1868)
+- industrial process -> manufacturing process, industrial material -> manufactured material (#1840)
+- electricity import/export value (#1864)
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
 - ENVO mappings (#1879)
 - emission factor value (#1880)
@@ -62,7 +68,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - area value (#1851)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
-- electricity import/export value (#1864)
 
 ### Removed
 
