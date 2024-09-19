@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - oekg annotation (#1897)
 - economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
 - term tracker annotation (#1913)
+- monetary price (new entity) (#1902)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
@@ -20,6 +21,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
 - economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
 - replace term tracker item with term tracker annotation (#1922, #1923)
+- monetary value (formerly: monetary price) and subclasses (#1902)
 
 ### Removed
 
