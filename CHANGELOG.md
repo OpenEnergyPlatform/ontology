@@ -15,6 +15,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
 - product (#1912)
 - term tracker annotation (#1913)
+- monetary price (new entity) (#1902)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
@@ -24,6 +25,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
+- monetary value (formerly: monetary price) and subclasses (#1902)
 
 ### Removed
 
