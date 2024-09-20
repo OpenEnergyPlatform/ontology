@@ -27,6 +27,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
+- replace has bearer with characteristic of (#1928)
 
 ### Removed
 
