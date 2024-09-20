@@ -9,6 +9,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - German alternative labels (#1883, #1895)
 - English language tags to existing alternative labels (#1883, #1895)
 - GAMS programming language (#1889)
+- oeo:unit, oeo:physical unit (#1892)
+
+### Changed
+- gams -> General Algebraic Modeling System (#1889)
+- uo:unit (#1892)
 - kilowatt, megawatt (#1900)
 - oekg annotation (#1897)
 - economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
