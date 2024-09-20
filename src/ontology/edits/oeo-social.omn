@@ -221,8 +221,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/842
 
 add domain:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a market exchange and the financial instruments, commodities, or other products, services, or goods which are traded there.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
+
+Simplify domain and range by using product:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a product and a market exchange where the product is offered for trade/sale at the market exchange."@en,
         rdfs:label "is traded at"@en
     
     SubPropertyOf: 
@@ -231,10 +235,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
     Domain: 
         
             Annotations: <http://purl.obolibrary.org/obo/IAO_0000116> "Extension of domain to financial instrument and other products planned"
-        OEO_00010116 or OEO_00020067 or OEO_00140124
+        OEO_00010501
     
     Range: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+        OEO_00020069
     
     InverseOf: 
         OEO_00020071
@@ -247,20 +251,22 @@ ObjectProperty: OEO_00020071
 
 add domain and range:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between financial instruments, commodities, or other products, services, or goods and a market exchange.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
+
+Simplify domain and range by using product:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a product and a market exchange.",
         rdfs:label "trades"@en
     
     SubPropertyOf: 
         owl:topObjectProperty
     
     Domain: 
-        <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
+        OEO_00020069
     
     Range: 
-        
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000116> "Extension of range to financial instrument and other products planned"
-        OEO_00010116 or OEO_00020067 or OEO_00140124
+        OEO_00010501
     
     InverseOf: 
         OEO_00020070
@@ -1007,6 +1013,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
         <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00140151
+    
+    
+Class: OEO_00010501
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1514
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A product is a continuant that is either a good or a service product."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Produkt"@de,
+        rdfs:label "product"@en
+    
+    EquivalentTo: 
+        OEO_00010116 or OEO_00360019
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
     
     
 Class: OEO_00020015
