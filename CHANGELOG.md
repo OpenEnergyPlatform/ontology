@@ -27,6 +27,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - monetary value (formerly: monetary price) and subclasses (#1902)
 
+### Obsoletion
+- economic value, has economic value, economic value (#1931)
+
 ### Removed
 
 ## [2.4.0] - 2024-07-01
