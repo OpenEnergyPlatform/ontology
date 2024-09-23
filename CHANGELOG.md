@@ -12,10 +12,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - oeo:unit, oeo:physical unit (#1892)
 - kilowatt, megawatt (#1900)
 - oekg annotation (#1897)
+- monetary price (new entity) (#1902)
 - economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
 - product (#1912)
 - term tracker annotation (#1913)
-- monetary price (new entity) (#1902)
+- licence provider, licensee, has licence provider, permits (#1925)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
