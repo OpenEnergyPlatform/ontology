@@ -42,6 +42,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - German alternative labels (#1862, #1868)
 - Matlab programming language (#1869)
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
+- amount (#1905)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
@@ -50,6 +51,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
 - ENVO mappings (#1879)
 - emission factor value (#1880)
+- size (#1905)
 
 ### Removed
 - emission value (#1880)
