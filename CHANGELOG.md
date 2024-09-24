@@ -27,9 +27,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - monetary value (formerly: monetary price) and subclasses (#1902)
+- replace has bearer with characteristic of (#1928)
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
+- has bearer (#1928)
 
 ### Removed
 

@@ -173,6 +173,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
         OEO_00010231
     
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000052>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
 
     Annotations: 
@@ -634,24 +637,25 @@ ObjectProperty: OEO_00010121
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: issue: https://github.com/OpenEnergyPlatform/ontology/pull/853
-
 add domains and ranges:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
-
 extend range to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/973
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/985
-
 correct definition with respect to energy:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1484
-
 remove inverse:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1844
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1852",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a specifically dependent continuant (the dependent) and an independent continuant or energy (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
-        rdfs:label "has bearer"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1852
+obsoletion / replacement with characteristic of
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "OBSOLETE: A relation between a specifically dependent continuant (the dependent) and an independent continuant or energy (the bearer), in which the dependent is specifically reliant on the bearer for its existence",
+        rdfs:comment "The relation was replaced by RO_0000052 (characteristic of). Please use this relation and its subrelations in the future.",
+        rdfs:label "obsolete has bearer"@en,
+        owl:deprecated true
     
     Domain: 
         <http://purl.obolibrary.org/obo/BFO_0000020>
@@ -1236,9 +1240,6 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
-    SubClassOf: 
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000004>
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000017>
 
@@ -1363,7 +1364,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/210
 
 add 'has bearer' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
+
+replaced 'has bearer' with 'characteristic of'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Agent is a role of a person or organisation that directs its activity towards achieving goals."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Agent"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Agentin"@de,
@@ -1371,7 +1376,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>,
-        OEO_00010121 some 
+        <http://purl.obolibrary.org/obo/RO_0000052> some 
             (OEO_00000323 or OEO_00030022)
     
     
@@ -1427,7 +1432,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+replaced 'has bearer' with 'characteristic of'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Energy is a quality of material entities which manifests as a capacity to perform work (such as causing motion or the interaction of molecules)",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Energie"@de,
         <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from https://www.lexico.com/en/definition/energy",
@@ -1444,7 +1453,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1879"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00010121 some <http://purl.obolibrary.org/obo/BFO_0000040>
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000315
@@ -1611,7 +1620,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1310
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485
 rework module structure
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+replaced 'has bearer' with 'characteristic of' in oeo-shared-axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The role of an independent continuant or energy over which ownership rights can be established, whose ownership can be passed from one party to another by engaging in transactions, and that is not money.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Good",
         rdfs:label "good role"@en
