@@ -35,9 +35,6 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
-AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
-
-    
 AnnotationProperty: <http://purl.org/dc/terms/license>
 
     
@@ -45,6 +42,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
+
+    
+AnnotationProperty: OEO_00020426
 
     
 AnnotationProperty: OEO_00110012
@@ -93,6 +93,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000052>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
@@ -303,7 +306,7 @@ ObjectProperty: OEO_00140096
 
     Range: 
         
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/749
+            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/749
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/751"
         OEO_00000206
     
@@ -334,14 +337,6 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000015>
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000016>
 
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000233> "add bearer axiom to oeo-import-edits
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485
-move bearer axiom to oeo-shared
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1738
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1776"
-    
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000020>
 
@@ -456,7 +451,7 @@ Class: OEO_00000264
 
     SubClassOf: 
         
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
         OEO_00140164 some OEO_00020065
     
@@ -500,7 +495,7 @@ Class: OEO_00000423
 
     SubClassOf: 
         
-            Annotations: <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
+            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/415
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/821"
         OEO_00140164 some OEO_00000143
     
@@ -523,9 +518,9 @@ Class: OEO_00010116
 Class: OEO_00010117
 
     SubClassOf: 
-        OEO_00010121 some 
-            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>),
-        OEO_00020180 some OEO_00040003
+        OEO_00020180 some OEO_00040003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some 
+            (OEO_00000139 or <http://purl.obolibrary.org/obo/BFO_0000004>)
     
     
 Class: OEO_00010130
@@ -549,6 +544,9 @@ Class: OEO_00010255
 Class: OEO_00010268
 
     SubClassOf: 
+        OEO_00020056 some 
+            (OEO_00000147
+             and (<http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020427)),
         OEO_00020179 some OEO_00140081
     
     
@@ -622,6 +620,14 @@ Class: OEO_00010444
             (OEO_00140039 or OEO_00240003)
     
     
+Class: OEO_00010491
+
+    EquivalentTo: 
+        OEO_00000331
+         and (OEO_00240025 some OEO_00050000)
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011)
+    
+    
 Class: OEO_00020011
 
     
@@ -657,6 +663,14 @@ Class: OEO_00020072
     
 Class: OEO_00020093
 
+    
+Class: OEO_00020117
+
+    SubClassOf: 
+        OEO_00020056 some 
+            (OEO_00000139
+             and (<http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020427))
+    
     
 Class: OEO_00020121
 
@@ -739,6 +753,9 @@ Class: OEO_00020411
             (OEO_00030024
              and (<http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020410)))
     
+    
+Class: OEO_00020427
+
     
 Class: OEO_00030007
 
@@ -854,8 +871,9 @@ Class: OEO_00240014
 Class: OEO_00240026
 
     EquivalentTo: 
-        (OEO_00240025 some OEO_00050000)
-         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011)
+        OEO_00000331
+         and (OEO_00240025 some OEO_00050000)
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00010117)
     
     
 Class: OEO_00240027
@@ -898,6 +916,24 @@ Class: OEO_00240035
 
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040011
+    
+    
+Class: OEO_00240036
+
+    SubClassOf: 
+        OEO_00020056 some 
+            (OEO_00010116
+             and (<http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020427)
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020201))
+    
+    
+Class: OEO_00240037
+
+    SubClassOf: 
+        OEO_00020056 some 
+            (OEO_00010116
+             and (<http://purl.obolibrary.org/obo/RO_0000053> some OEO_00020427)
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020202))
     
     
 Class: OEO_00260007
@@ -1031,8 +1067,8 @@ Individual: OEO_00010202
         OEO_00010312 some 
             (OEO_00140004
              and (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010285))
-
-
+    
+    
 Individual: OEO_00010204
 
     Facts:  

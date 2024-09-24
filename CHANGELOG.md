@@ -4,22 +4,51 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.X.X] - 20XX-XX-XX
+## [2.5.0] - 2024-09-24
 ### Added
+- German alternative labels (#1883, #1895)
+- English language tags to existing alternative labels (#1883, #1895)
+- GAMS programming language (#1889)
+- oeo:unit, oeo:physical unit (#1892)
+- oekg annotation (#1897)
+- kilowatt, megawatt (#1900)
+- monetary price (new entity) (#1902)
+- amount (#1905)
+- economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
+- product (#1912)
+- term tracker annotation (#1913)
+- licence provider, licensee, has licence provider, permits (#1925)
 
 ### Changed
+- gams -> General Algebraic Modeling System (#1889)
+- uo:unit (#1892)
+- train, regionalisation (#1899)
+- add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
+- monetary value (formerly: monetary price) and subclasses (#1902)
+- size (#1905)
+- economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
+- is traded at, trades (#1912)
+- replace term tracker item with term tracker annotation (#1922, #1923)
+- replace has bearer with characteristic of (#1928)
+
+### Obsoletion
+- economic value, has economic value, economic value (#1931)
+- has bearer (#1928)
 
 ### Removed
 
 ## [2.4.0] - 2024-07-01
 ### Added
 - subsector, has subsector, subsector of (#1788)
+- manufacturing technology, manufacturing plant, manufactured commodity (#1840)
+- German alternative labels (#1862, #1868)
 - Matlab programming language (#1869)
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
-- German alternative labels (#1862, #1868)
+- industrial process -> manufacturing process, industrial material -> manufactured material (#1840)
+- electricity import/export value (#1864)
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
 - ENVO mappings (#1879)
 - emission factor value (#1880)
@@ -49,7 +78,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - area value (#1851)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
-- electricity import/export value (#1864)
 
 ### Removed
 
