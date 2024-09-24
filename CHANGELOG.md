@@ -13,6 +13,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - oekg annotation (#1897)
 - kilowatt, megawatt (#1900)
 - monetary price (new entity) (#1902)
+- amount (#1905)
 - economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
 - product (#1912)
 - term tracker annotation (#1913)
@@ -24,6 +25,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - train, regionalisation (#1899)
 - add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
 - monetary value (formerly: monetary price) and subclasses (#1902)
+- size (#1905)
 - economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
@@ -42,7 +44,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - German alternative labels (#1862, #1868)
 - Matlab programming language (#1869)
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
-- amount (#1905)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
@@ -51,7 +52,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
 - ENVO mappings (#1879)
 - emission factor value (#1880)
-- size (#1905)
 
 ### Removed
 - emission value (#1880)
