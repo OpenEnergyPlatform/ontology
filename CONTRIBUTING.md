@@ -1,3 +1,19 @@
+## Table of Contents
+
+- [Welcome](#Welcome)<br>
+    - [Prerequisites](#Prerequisites)<br>
+- [Development](#development)<br>
+    - [Getting Started](#getting-started)<br>
+    - [Conventions for git and GitHub](#conventions-for-git-and-github)<br>
+    - [Workflow](#workflow)<br>
+        - [Communicate your Ideas or Concerns](#communicate-your-ideas-or-concerns)<br>
+        - [Make Changes to the OEO](#make-changes-to-the-oeo)<br>
+        - [Wait for Review of your Changes](#wait-for-review-of-your-changes)<br>
+        - [Merge your Changes after Approval](#merge-your-changes-after-approval)<br>
+    - [Fixing merge conflicts in git](#fixing-merge-conflicts-in-git)<br>
+    - [Communicate](#communicate)<br>
+
+
 ## Welcome!
 
 First of all, thank you for wanting to participate. Any new idea, any reported problem is helpful for the development and most appreciated. <br>
@@ -13,7 +29,7 @@ To get started quickly, there are some prerequisities that you need to fullfill.
 
 ## Development
 
-### Contribution of OEO content
+### Getting Started
 Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
 
 | Emoji ...                | ... symbolizes tool ... | ...which is used for ...                                   |
@@ -79,7 +95,7 @@ With `--amend` you can even add/modify changes to the commit.
 The workflow for contributing to this project has been inspired by the workflow described 
 by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 
-**Discussion**
+#### Communicate your Ideas or Concerns
 
 1. 🐙 Create
    [an issue](https://help.github.com/en/articles/creating-an-issue) on
@@ -99,7 +115,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 
     Discussion about the implementation should take place within the issue. **Important**: Please discuss the proposal within the issue thread **before** starting to work on a solution. For minor changes, which include small changes to improve clarity of definitions and the addition of clarifying annotations, at least one other person from the project team should agree to the proposed change before it is implemented. For major changes, which include adding new entities and restructuring the ontology, at least two other members of the project team need to agree to the change before it is implemented, which should include at least one domain expert and at least one ontology expert. Issues which are contentious, for which it is difficult to reach agreement, should be added to the agenda of the next ontology working group teleconference for discussion to reach agreement amongst the full working group. Subsequent to such discussion, the issue's first thread should be updated with a documented record of the conclusions reached.   
 
-**Implementation**
+#### Make Changes To the OEO
 
 2. 🔶 Once a solution has been agreed, create a branch from `dev` to work on your issue (see below, the ["Conventions for git and GitHub"](#conventions-for-git-and-github) section)
 
@@ -147,7 +163,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     
 6. 🐙 Make sure that all automated tests are successful. This will be indicated by a green or red icon next to your most recent commit. In case an error occured that you don't know how to solve, write a comment in the PR and ask for help from the ontology-expert-team.
 
-**Review**
+#### Wait for Review of your Changes
 
 7. 🐙 Submit a pull request (PR)
     - Follow the [steps](https://help.github.com/en/articles/creating-a-pull-request) of the github help to create the PR.
@@ -163,7 +179,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 11. 🐙 [Ask](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) for review of your PR.  
     As the issue will have been discussed and agreed on prior to implementation, the purpose of the review step post-implementation is to check that the implementation has been faithful to what was agreed. One or two reviewers may be needed depending on the nature of the change that has been made. If the change involves adding content (A), a domain expert should review the issue. If the change involves restructuring the ontology (B), an ontology expert should review. If the change involves both changes to content and restructuring (B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
 
-**Merge**
+#### Merge your Changes after Approval
 
 12. 🐙 Check that, after this whole process, your branch does not have conflicts with `dev` (GitHub will prevent you from merging if there are conflicts). In case of conflicts you are responsible for fixing them on your branch before you merge (see below "Fixing merge conflicts" section). If you need help, write a comment in the PR and ask for help from the ontology-expert-team.
     
