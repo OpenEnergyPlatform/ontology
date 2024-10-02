@@ -13,6 +13,16 @@ To get started quickly, there are some prerequisities that you need to fullfill.
 
 ## Development
 
+### Contribution of OEO content
+Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
+
+| Emoji ...                | ... symbolizes tool ... | ...which is used for ...                                   |
+|:------------------------:|:-----------------------:| ---------------------------------------------------------- |
+| 🔶 <br/>*orange diamond* | git                     | keeping code in sync between your PC and online-repository |
+| 🐙 <br/>*octopus*        | github                  | discussions and reviews                                    |
+| 📙 <br/>*orange book*    | protégé                 | changing the ontology                                      |
+| 📝 <br/>*memo*           | text editor             | changing the ontology as well as other files   
+
 ### Conventions for git and GitHub
 
 🔶 Naming convention for branches
@@ -61,17 +71,7 @@ git commit --amend
 ```
 to edit the commit message of your latest commit (provided it is not already pushed on the remote server). <br>
 With `--amend` you can even add/modify changes to the commit.
-
-
-### Contribution of OEO content
-Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
-
-| Emoji ...                | ... symbolizes tool ... | ...which is used for ...                                   |
-|:------------------------:|:-----------------------:| ---------------------------------------------------------- |
-| 🔶 <br/>*orange diamond* | git                     | keeping code in sync between your PC and online-repository |
-| 🐙 <br/>*octopus*        | github                  | discussions and reviews                                    |
-| 📙 <br/>*orange book*    | protégé                 | changing the ontology                                      |
-| 📝 <br/>*memo*           | text editor             | changing the ontology as well as other files               |
+            |
 
 
 ### Workflow
