@@ -24,13 +24,13 @@ To get started quickly, there are some prerequisities that you need to fullfill.
 
 - We are using [Git](https://git-scm.com/) for version management. [Git How To](https://githowto.com/) provides an introduction into working with Git. Also there is a helpful [Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf).
 - We use [Protégé](https://protege.stanford.edu/) to edit the ontology. To get to know Protégé you can use the [Pizza Tutorial](https://www.michaeldebellis.com/post/new-protege-pizza-tutorial). <br> Please make sure you changed your Protégé settings to [numerical identifiers](https://github.com/OpenEnergyPlatform/ontology/wiki/Numerical-Identifiers) and got a [personal ID](https://github.com/OpenEnergyPlatform/ontology/wiki/Add-yourself-as-a-contributor) to add new classes.
-- Every other Thursday (even weeks) an online [OEO developer meeting](https://github.com/OpenEnergyPlatform/ontology/wiki/oeo-dev-meeting-plan) takes place. 
+- Every other Thursday (even weeks) an online [OEO developer meeting](https://github.com/OpenEnergyPlatform/ontology/wiki/oeo-dev-meeting-plan) takes place. Use the [OEP contact form](https://openenergyplatform.org/contact/) to gain access. 
 - Before you change anything, get familiar with the [OEO Workflow](#workflow).
 
 ## Development
 
 ### Getting Started
-Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully.
+Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) carefully. The following emojis are used in the text to help you identify the tool you are supposed to use for a specific workstep.
 
 | Emoji ...                | ... symbolizes tool ... | ...which is used for ...                                   |
 |:------------------------:|:-----------------------:| ---------------------------------------------------------- |
@@ -78,6 +78,7 @@ Try to follow esxisting conventions for commit messages:
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
+- Start with a [capital letter](https://chris.beams.io/posts/git-commit/#capitalize)
 - Do not end the commit message with a [period](https://chris.beams.io/posts/git-commit/#end) 
 
 
@@ -113,7 +114,10 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 
     [Assign a project](https://help.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar) (default "Issues") to the issue
 
-    Discussion about the implementation should take place within the issue. **Important**: Please discuss the proposal within the issue thread **before** starting to work on a solution. For minor changes, which include small changes to improve clarity of definitions and the addition of clarifying annotations, at least one other person from the project team should agree to the proposed change before it is implemented. For major changes, which include adding new entities and restructuring the ontology, at least two other members of the project team need to agree to the change before it is implemented, which should include at least one domain expert and at least one ontology expert. Issues which are contentious, for which it is difficult to reach agreement, should be added to the agenda of the next ontology working group teleconference for discussion to reach agreement amongst the full working group. Subsequent to such discussion, the issue's first thread should be updated with a documented record of the conclusions reached.   
+    Discussion about the implementation should take place within the issue. **Important**: Please discuss the proposal within the issue thread **before** starting to work on a solution. <br>
+    For minor changes, which include small changes to improve clarity of definitions and the addition of clarifying annotations, at least one other person from the project team should agree to the proposed change before it is implemented. <br>
+    For major changes, which include adding new entities and restructuring the ontology, at least two other members of the project team need to agree to the change before it is implemented, which should include at least one domain expert and at least one ontology expert. <br>
+    Issues which are contentious, for which it is difficult to reach agreement, should be added to the agenda of the next ontology working group teleconference for discussion to reach agreement amongst the full working group. Subsequent to such discussion, the issue's first thread should be updated with a documented record of the conclusions reached.   
 
 #### Make Changes To the OEO
 
@@ -159,7 +163,8 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     ```
     If your branch does not exist on the remote server yet, git will provide you with instructions, simply follow them. 
     
-    Hint: You can create a draft pull request directly after your first commit 🐙, see 7.). Then you get the pull request number and 📙 implement the [term tracker annotations](https://github.com/OpenEnergyPlatform/ontology/wiki/Term-Tracker-Annotation) in Protégé. Only after finishing the implementations you can assign reviewers and thus change the state of the PR. Using that workflow, it is clear whether a PR is actually ready for review.
+    **Hint:** You can create a draft pull request directly after your first commit 🐙, see 7.). <br>
+    Then you get the pull request number and 📙 implement the [term tracker annotations](https://github.com/OpenEnergyPlatform/ontology/wiki/Term-Tracker-Annotation) in Protégé. Only after finishing the implementations you can assign reviewers and thus change the state of the PR. Using that workflow, it is clear whether a PR is actually ready for review.
     
 6. 🐙 Make sure that all automated tests are successful. This will be indicated by a green or red icon next to your most recent commit. In case an error occured that you don't know how to solve, write a comment in the PR and ask for help from the ontology-expert-team.
 
@@ -175,15 +180,16 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 9. 📙 Add [term tracker annotations](https://github.com/OpenEnergyPlatform/ontology/wiki/Term-Tracker-Annotation) to the main changed classes of the ontology
 
      ![img](https://github.com/user-attachments/assets/70b0a061-f852-4567-9e1f-146f6fc04ed4)
-10. 🔶 stage, commit and push the changes of steps 7 and 8
+10. 🔶 Stage, commit and push the changes of steps 7 and 8
 11. 🐙 [Ask](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) for review of your PR.  
-    As the issue will have been discussed and agreed on prior to implementation, the purpose of the review step post-implementation is to check that the implementation has been faithful to what was agreed. One or two reviewers may be needed depending on the nature of the change that has been made. If the change involves adding content (A), a domain expert should review the issue. If the change involves restructuring the ontology (B), an ontology expert should review. If the change involves both changes to content and restructuring (B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
+    As the issue will have been discussed and agreed on prior to implementation, the purpose of the review step post-implementation is to check that the implementation has been faithful to what was agreed. One or two reviewers may be needed depending on the nature of the change that has been made.<br> 
+    If the change involves adding content (A), a domain expert should review the issue. If the change involves restructuring the ontology (B), an ontology expert should review. If the change involves both changes to content and restructuring (B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
 
 #### Merge your Changes after Approval
 
 12. 🐙 Check that, after this whole process, your branch does not have conflicts with `dev` (GitHub will prevent you from merging if there are conflicts). In case of conflicts you are responsible for fixing them on your branch before you merge (see below "Fixing merge conflicts" section). If you need help, write a comment in the PR and ask for help from the ontology-expert-team.
     
-13. 🐙 Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`
+13. 🐙 Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`.
    
    
 ### Fixing merge conflicts in git
