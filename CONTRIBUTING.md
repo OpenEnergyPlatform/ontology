@@ -1,3 +1,8 @@
+## Welcome!
+
+First of all, thank you for wanting to participate. Any new idea, any reported problem is helpful for the development and most appreciated. <br>
+To get started quickly, there are some prerequisities that you need to fullfill. For a full tutorial, please check out the [Open Energy Academy Course](https://openenergyplatform.github.io/academy/courses/05_ontology/#how-to-become-an-oeo-developer).
+
 ## Development
 
 ### Prerequisites
