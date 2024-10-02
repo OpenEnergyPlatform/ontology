@@ -223,4 +223,4 @@ In case of conflicts between your branch and `dev` you must solve them either on
 
 ### Communicate
 
-Feel free to ask the community if you need help. We are happy to support you.
+Feel free to ask the community if you need help. We are happy to support you. If you want to contact specific teammembers or experts, please check out the Team section of our [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) file. Use the [OEP contact form](https://openenergyplatform.org/contact/) if you want to become a team member.
