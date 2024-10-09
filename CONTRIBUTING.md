@@ -74,7 +74,7 @@ Examples of branch names : `feature-43-add-new-ontology-class` or `feature-711-b
 
 🔶 Commit messages
 
-Try to follow esxisting conventions for commit messages:
+Try to follow existing conventions for commit messages:
 - [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/)
 - Keep the subject line [short](https://chris.beams.io/posts/git-commit/#limit-50) (i.e. do not commit more than a few changes at the time)
 - Use [imperative](https://chris.beams.io/posts/git-commit/#imperative) for commit messages 
