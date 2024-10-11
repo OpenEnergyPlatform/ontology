@@ -22,6 +22,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - product (#1912)
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
+- has aggregation type, has time stamp alignment (#1944)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
@@ -35,6 +36,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
 - rework contributing and readme file (#1937)
+- time stamp (#1944)
+
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
