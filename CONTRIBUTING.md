@@ -192,7 +192,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 13. 🐙 Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`.
 
 **Hint**
-GitHub has three versions of merging: 'Create a merge commit', 'Squash and merge' and 'Rebase and merge'. All tree are explained in [this article.](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github) <br>
+GitHub has three versions of merging: 'Create a merge commit', 'Squash and merge' and 'Rebase and merge'. All three are explained in [this article.](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github) <br>
 In general you are fine just keeping the default option but either one is feasible.
    
    
