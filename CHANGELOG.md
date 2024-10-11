@@ -22,7 +22,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - product (#1912)
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
-- object properties "has aggregation type" and "has time stamp alignment" (#1944)
+- has aggregation type, has time stamp alignment (#1944)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
