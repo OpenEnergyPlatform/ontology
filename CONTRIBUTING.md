@@ -183,7 +183,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 10. 🔶 Stage, commit and push the changes of steps 7 and 8
 11. 🐙 [Ask](https://help.github.com/en/github/managing-your-work-on-github/assigning-issues-and-pull-requests-to-other-github-users) for review of your PR.  
     As the issue will have been discussed and agreed on prior to implementation, the purpose of the review step post-implementation is to check that the implementation has been faithful to what was agreed. One or two reviewers may be needed depending on the nature of the change that has been made.<br> 
-    If the change involves adding content (A), a domain expert should review the issue. If the change involves restructuring the ontology (B), an ontology expert should review. If the change involves both changes to content and restructuring (B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
+    If the change involves adding content (issue type A), a domain expert should review the issue. If the change involves restructuring the ontology (issue type B), an ontology expert should review. If the change involves both changes to content and restructuring (issue types B and C), it is best to ask both an ontology expert and a domain expert to review. See the section "Teams tag" of the [README](https://github.com/OpenEnergyPlatform/ontology/blob/dev/README.md) for more information about the expertise of the different team members.
 
 #### Merge your Changes after Approval
 
