@@ -37,7 +37,7 @@ Please read the [OEO best practices](https://github.com/OpenEnergyPlatform/ontol
 | 🔶 <br/>*orange diamond* | git                     | keeping code in sync between your PC and online-repository |
 | 🐙 <br/>*octopus*        | github                  | discussions and reviews                                    |
 | 📙 <br/>*orange book*    | protégé                 | changing the ontology                                      |
-| 📝 <br/>*memo*           | text editor             | changing the ontology as well as other files   
+| 📝 <br/>*memo*           | text editor             | changing the ontology as well as other files               |
 
 ### Conventions for git and GitHub
 
@@ -61,11 +61,11 @@ Add the issue number where you describe, discuss and document your development.
 
 **short-description**
 
-Describe shortly what the branch is about. Avoid long and short descriptive names for branches, 2-4 words are optimal.
+Describe shortly what the branch is about. Avoid descriptive names for branches that are either too short or too long, 2-4 words are optimal.
 
 Other hints:
 - Separate words with `-` (minus)
-- Do not put your name to the branch name, it's a collaborative project
+- Do not add your name to the branch name, it's a collaborative project
 - Avoid using numbers only 
 - Branch names should be precise and informative
 - Avoid using capital letters
@@ -88,7 +88,6 @@ git commit --amend
 ```
 to edit the commit message of your latest commit (provided it is not already pushed on the remote server). <br>
 With `--amend` you can even add/modify changes to the commit.
-            |
 
 
 ### Workflow
@@ -114,7 +113,8 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 
     [Assign a project](https://help.github.com/en/github/managing-your-work-on-github/adding-issues-and-pull-requests-to-a-project-board#adding-issues-and-pull-requests-to-a-project-board-from-the-sidebar) (default "Issues") to the issue
 
-    Discussion about the implementation should take place within the issue. **Important**: Please discuss the proposal within the issue thread **before** starting to work on a solution. <br>
+    Discussion about the implementation should take place within the issue. <br> <br>
+    **Important**: Please discuss the proposal within the issue thread **before** starting to work on a solution. <br>
     For minor changes, which include small changes to improve clarity of definitions and the addition of clarifying annotations, at least one other person from the project team should agree to the proposed change before it is implemented. <br>
     For major changes, which include adding new entities and restructuring the ontology, at least two other members of the project team need to agree to the change before it is implemented, which should include at least one domain expert and at least one ontology expert. <br>
     Issues which are contentious, for which it is difficult to reach agreement, should be added to the agenda of the next ontology working group teleconference for discussion to reach agreement amongst the full working group. Subsequent to such discussion, the issue's first thread should be updated with a documented record of the conclusions reached.   
@@ -163,7 +163,7 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
     ```
     If your branch does not exist on the remote server yet, git will provide you with instructions, simply follow them. 
     
-    **Hint:** You can create a draft pull request directly after your first commit 🐙, see 7.). <br>
+    **Hint:** You can create a draft pull request directly after your first commit 🐙, see 7). <br>
     Then you get the pull request number and 📙 implement the [term tracker annotations](https://github.com/OpenEnergyPlatform/ontology/wiki/Term-Tracker-Annotation) in Protégé. Only after finishing the implementations you can assign reviewers and thus change the state of the PR. Using that workflow, it is clear whether a PR is actually ready for review.
     
 6. 🐙 Make sure that all automated tests are successful. This will be indicated by a green or red icon next to your most recent commit. In case an error occured that you don't know how to solve, write a comment in the PR and ask for help from the ontology-expert-team.
