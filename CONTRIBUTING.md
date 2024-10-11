@@ -190,6 +190,9 @@ by [Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/).
 12. 🐙 Check that, after this whole process, your branch does not have conflicts with `dev` (GitHub will prevent you from merging if there are conflicts). In case of conflicts you are responsible for fixing them on your branch before you merge (see below "Fixing merge conflicts" section). If you need help, write a comment in the PR and ask for help from the ontology-expert-team.
     
 13. 🐙 Once approved, merge the PR into `dev` and delete the branch on which you were working. In the merge message on github, you can notify people who are currently working on other branches that you just merged into `dev`, so they know they have to check for potential conflicts with `dev`.
+
+**Hint**
+GitHub has three versions of merging: 'Create a merge commit', 'Squash and merge' and 'Rebase and merge'. All tree are explaines in [this article](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/about-merge-methods-on-github) In general you are fine just keeping the default option but either option is feasible.
    
    
 ### Fixing merge conflicts in git
