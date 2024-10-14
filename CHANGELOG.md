@@ -37,6 +37,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - replace has bearer with characteristic of (#1928)
 - rework contributing and readme file (#1937)
 - time stamp (#1944)
+- move supply grid, transport network and critical infrastructure to subclass of supply system (#1947)
 
 
 ### Obsoletion
