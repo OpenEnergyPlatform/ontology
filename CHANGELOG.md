@@ -22,6 +22,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - product (#1912)
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
+- has aggregation type, has time stamp alignment (#1944)
 - file oeo-tasks (#1940)
 - classes to oeo-tasks: data acquisition and pre-processing, extrapolate wind speed vertically to hub height, account for air density change, determine wind speed frequency distribution, determine seasonal/diurnal variability, determine the theoretical potential/WPD, determined wind characteristics of a region, determination method for wind characteristics of a region, method realization potential, determination process for wind characteristics of a region, process endpoint, determine wind characteristics of a region endpoint (#1940)
 - axioms in oeo-tasks to determination method for wind characteristics of a region, method realization potential, determination process for wind characteristics of a region (#1940)
@@ -38,7 +39,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
-- replace term tracker item with annotation in pull request template (#1938)
+- rework contributing and readme file (#1937)
+- time stamp (#1944)
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
