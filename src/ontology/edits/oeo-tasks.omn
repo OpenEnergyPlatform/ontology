@@ -48,6 +48,45 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: OEO_00390025
+
+    Annotations: 
+        OEO_00020426 "Add:",
+        OEO_00020426 "Add:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1891
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relationship between a continuant and a process, in which the continuant predefines or planns the process.",
+        rdfs:label "structures"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000056>
+    
+    InverseOf: 
+        OEO_00390026
+    
+    
+ObjectProperty: OEO_00390026
+
+    Annotations: 
+        OEO_00020426 "Add:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1891
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relationship between a process and a continuant, in which the process is predefined or planned by the process.",
+        rdfs:label "structured by"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000057>
+    
+    InverseOf: 
+        OEO_00390025
+    
+    
 ObjectProperty: owl:topObjectProperty
 
     
@@ -86,6 +125,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00390015)
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00390016)
          and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00390017),
+        OEO_00390025 some OEO_00390007,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00390004
     
     
@@ -128,20 +168,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
         <http://purl.obolibrary.org/obo/IAO_0000007>
     
     
-Class: OEO_00390006
-
-    Annotations: 
-        OEO_00020426 "Add:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Method realization potential is a realizable entity that describes the potential unleashable by employing a method.",
-        rdfs:label "method realization potential"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000017>,
-        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00390007
-    
-    
 Class: OEO_00390007
 
     Annotations: 
@@ -153,33 +179,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00390011
-    
-    
-Class: OEO_00390010
-
-    Annotations: 
-        OEO_00020426 "Add:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A process endpoint is a process boundary describing the endpoint of a process.",
-        rdfs:label "process endpoint"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000035>
-    
-    
-Class: OEO_00390011
-
-    Annotations: 
-        OEO_00020426 "Add:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1940",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Determine wind characteristics of a region endpoint is a process endpoint that marks the end of the 'determine the characteristics of a region' process.",
-        rdfs:label "determine wind characteristics of a region endpoint"@en
-    
-    SubClassOf: 
-        OEO_00390010
+        OEO_00390026 some OEO_00390002
     
     
 Class: OEO_00390014
