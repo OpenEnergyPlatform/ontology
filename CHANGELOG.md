@@ -35,7 +35,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
-- replace lable "energy amount value" with "energy value and added it as alt lable (#1941)
+- energy amount value / energy value (#1941)
 - rework contributing and readme file (#1937)
 - time stamp (#1944)
 
