@@ -39,7 +39,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
-- rework contributing and readme file (#1937)
+- rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
 
 ### Obsoletion
