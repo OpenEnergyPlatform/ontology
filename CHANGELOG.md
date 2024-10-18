@@ -24,8 +24,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - licence provider, licensee, has licence provider, permits (#1925)
 - has aggregation type, has time stamp alignment (#1944)
 - file oeo-tasks (#1940)
-- classes to oeo-tasks: data acquisition and pre-processing, extrapolate wind speed vertically to hub height, account for air density change, determine wind speed frequency distribution, determine seasonal/diurnal variability, determine the theoretical potential/WPD, determined wind characteristics of a region, determination method for wind characteristics of a region, method realization potential, determination process for wind characteristics of a region, process endpoint, determine wind characteristics of a region endpoint (#1940)
-- axioms in oeo-tasks to determination method for wind characteristics of a region, method realization potential, determination process for wind characteristics of a region (#1940)
+- action specification for available area for wind farm development, acquisition and processing datasets for exclusion criteria, determine area for development, determine geographical potential, determine MCDA approach for soft exclusion criteria, interpolate wind data to greater resolution horizontally, select exclusion criteria and buffer distances(#1940)
+- action specification for for the technical wind potential, account for wake losses, calculate technical potential, determine capacity factor (CF), place turbines in area or determine capacity density, select appropriate turbine type(s), use power curve with wind distribution function to determine annual energy yield (#1940)
+- action specification for techno-economic potential, calculate economic potential for LCOE range, calculate Levelized Cost of Energy (LCOE), determine discount & interest rate, determine investment costs, determine operating and maintenance costs, determine wind turbine lifetime (#1940)
+- action specification for the feasible potential, apply additional social/market constraints, calculate feasible potential for the region (#1940)
+- action specification for wind characteristics, data acquisition and pre-processing, extrapolate wind speed vertically to hub height, account for air density change, determine wind speed frequency distribution, determine seasonal/diurnal variability, determine the theoretical potential / WPD (#1940)
+- determined wind characteristics of a region, determined available area for wind farm development, determined feasible potential, determined the technical wind potential of the available area, determined the techno-economic potential of the available region (#1940)
+- determination method for wind characteristics of a region, determination method for the available area for wind farm development, determination method for the feasible potential, determination method for the technical wind potential of the available area, determination method for the techno-economic potential of the available region (#1940)
+- determination process for wind characteristics of a region, determination process for the available area for wind farm development, determination process for the feasible potential, determination process for the technical wind potential of the available area, determination process for the techno-economic potential of the available region (#1940)
+
 
 
 ### Changed
