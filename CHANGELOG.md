@@ -23,6 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
 - has aggregation type, has time stamp alignment (#1944)
+- study descriptor (#1950)
 - file oeo-tasks (#1940)
 - action specification for available area for wind farm development, acquisition and processing datasets for exclusion criteria, determine area for development, determine geographical potential, determine MCDA approach for soft exclusion criteria, interpolate wind data to greater resolution horizontally, select exclusion criteria and buffer distances(#1940)
 - action specification for for the technical wind potential, account for wake losses, calculate technical potential, determine capacity factor (CF), place turbines in area or determine capacity density, select appropriate turbine type(s), use power curve with wind distribution function to determine annual energy yield (#1940)
@@ -32,6 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - determined wind characteristics of a region, determined available area for wind farm development, determined feasible potential, determined the technical wind potential of the available area, determined the techno-economic potential of the available region (#1940)
 - determination method for wind characteristics of a region, determination method for the available area for wind farm development, determination method for the feasible potential, determination method for the technical wind potential of the available area, determination method for the techno-economic potential of the available region (#1940)
 - determination process for wind characteristics of a region, determination process for the available area for wind farm development, determination process for the feasible potential, determination process for the technical wind potential of the available area, determination process for the techno-economic potential of the available region (#1940)
+
 
 
 
@@ -46,6 +48,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
+- energy amount value / energy value (#1941)
 - rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
 
