@@ -21,7 +21,7 @@ Closes #
 ### PR-Assignee
 - [ ] 🐙 Follow the [Pull Request Workflow](https://github.com/OpenEnergyPlatform/ontology/wiki/Pull-request-workflow)
 - [ ] 📝 Update the [CHANGELOG.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CHANGELOG.md)
-- [ ] 📙 Add #'s to `term tracker item`
+- [ ] 📙 Add #'s to `term tracker annotation`
 
 ### Reviewer
 - [ ] 🐙 Follow the [Reviewer Guide](https://github.com/OpenEnergyPlatform/ontology/wiki/Pull-request-workflow#reviewer-guide-check-changes-introduced-by-a-pull-request)
