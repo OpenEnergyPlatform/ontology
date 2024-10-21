@@ -39,6 +39,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - energy amount value / energy value (#1941)
 - rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
+- supply grid, transport network, critical infrastructure (#1947)
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
