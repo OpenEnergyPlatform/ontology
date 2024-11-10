@@ -23,7 +23,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
 - has aggregation type, has time stamp alignment (#1944)
-- concepts for (modelling) uncertainties (#1829)
+- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambigous uncertainty, epistomological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
