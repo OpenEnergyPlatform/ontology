@@ -23,6 +23,15 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
 - has aggregation type, has time stamp alignment (#1944)
+- file oeo-tasks (#1940)
+- action specification for techno-economic potential, calculate economic potential, calculate levelised cost of energy, determine capital expenditures, determine discount and interest rate, determine operational expenditures, determine wind turbine lifetime (#1940)
+- action specification for the feasible potential, apply constraints for assessment of potential, calculate feasible potential (#1940)
+- action specification for the technical wind potential, account for wake losses, calculate technical potential, determine annual energy yield, determine capacity density, determine capacity factor, place turbines within area, select appropriate turbine types (#1940)
+- action specification for wind characteristics, air density adjustment, data preparation, wind power density calculation, wind speed calculation, wind speed frequency analysis, wind variability identification (#1940)
+- action specification for wind farm development area, determine development area, determine geographical potential, improve spatial resolution, prepare exclusion criteria datasets, run multi-criteria decision analysis, select exclusion criteria (#1940)
+- determined feasible potential, determined techno-economic potential, determined wind characteristics, determined wind farm area, determined wind potential (#1940)
+- feasible potential determination process, techno-economic potential determination process, wind characteristics determination process, wind farm area determination process, wind potential determination process (#1940)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#1940)
 - uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambigous uncertainty, epistomological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
 
 ### Changed
@@ -36,9 +45,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
-- rework contributing and readme file (#1937)
+- energy amount value / energy value (#1941)
+- rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
-
+- supply grid, transport network, critical infrastructure (#1947)
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
