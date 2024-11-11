@@ -52,6 +52,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
 - supply grid, transport network, critical infrastructure (#1947)
+- definitions: wind characteristics determination method, wind characteristics determination process, action specification for wind characteristics, wind variability identification, select appropriate turbine types (#1966)
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
