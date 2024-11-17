@@ -33,7 +33,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - determined feasible potential, determined techno-economic potential, determined wind characteristics, determined wind farm area, determined wind potential (#1940)
 - feasible potential determination process, techno-economic potential determination process, wind characteristics determination process, wind farm area determination process, wind potential determination process (#1940)
 - feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#1940)
-- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambigous uncertainty, epistomological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
+- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambiguous uncertainty, epistomological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
 
 
 
