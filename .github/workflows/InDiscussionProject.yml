@@ -1,18 +1,22 @@
+name: Label & Move issues to "In discussion" project column
 on:
   issue_comment:
     types: [created]
+  issues: 
+    types: [labeled]
+
 jobs:
-  FindOutHowManyComments:
+  labelIssueAsInDiscussion:
+    if: github.event_name == 'issue_comment'
     runs-on: ubuntu-latest
-    name: aJobThatMoves
+    permissions:
+      issues: write
     steps:
     - name: count
       id: count
       uses: akleinau/githubJSActions/DiscussedToColumn@master
       with:
         repo: https://api.github.com/repos/OpenEnergyPlatform/ontology
-    - name: printit
-      run: echo ${{ steps.count.outputs.continue }} 
     - name: addToColumn
       uses: peter-evans/create-or-update-project-card@v1
       with:
@@ -20,8 +24,32 @@ jobs:
         column-name: In discussion
         issue-number: ${{ steps.count.outputs.issue_number }} 
       if: steps.count.outputs.continue == 'true' 
-    - name: remove to do label
-      uses: andymckay/labeler@master
-      with:
-        remove-labels: "To do"
+    - run: gh issue edit "$NUMBER" --remove-label "$LABELS"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_REPO: ${{ github.repository }}
+        NUMBER: ${{ github.event.issue.number }}
+        LABELS: To do
       if: steps.count.outputs.continue == 'true' 
+    - run: gh issue edit "$NUMBER" --add-label "$LABELS"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_REPO: ${{ github.repository }}
+        NUMBER: ${{ github.event.issue.number }}
+        LABELS: in discussion
+      if: steps.count.outputs.continue == 'true' 
+  moveIssueToInDiscussionColumn:
+    if: github.event_name == 'issues' && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: PaperMC/update-projects-action@v0.2.0
+        with:
+          github-token: "${{ secrets.OEO_WORKFLOWS }}"
+          project-url: https://github.com/orgs/OpenEnergyPlatform/projects/45/views/1
+          column-field: Status
+          clear-on-no-match: false
+          label-to-column-map: |
+            {
+              "To do": "To do",
+              "in discussion": "In discussion"
+            }
