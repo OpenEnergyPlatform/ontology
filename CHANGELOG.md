@@ -7,6 +7,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.x.y] - 202x-xx-xx
 ### Added
 ### Changed
+* gaseous (#1980)
 
 ## [2.5.0] - 2024-09-24
 ### Added
