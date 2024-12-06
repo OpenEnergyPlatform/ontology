@@ -8,6 +8,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 ### Changed
 * gaseous (#1980)
+* areal solar energy density (#1983)
 
 ## [2.5.0] - 2024-09-24
 ### Added
