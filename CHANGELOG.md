@@ -4,24 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.x.y] - 202x-xx-xx
-### Added
-### Changed
+## [2.6.0] - 2024-12-06
 
-## [2.5.0] - 2024-09-24
 ### Added
-- German alternative labels (#1883, #1895)
-- English language tags to existing alternative labels (#1883, #1895)
-- GAMS programming language (#1889)
-- oeo:unit, oeo:physical unit (#1892)
-- oekg annotation (#1897)
-- kilowatt, megawatt (#1900)
-- monetary price (new entity) (#1902)
-- amount (#1905)
-- economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
-- product (#1912)
-- term tracker annotation (#1913)
-- licence provider, licensee, has licence provider, permits (#1925)
 - has aggregation type, has time stamp alignment (#1944)
 - study descriptor (#1950)
 - file oeo-tasks (#1940)
@@ -37,6 +22,30 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - technical model implementation(#1978)
 
 ### Changed
+- energy amount value / energy value (#1941)
+- rework contributing and readme file (#1937, #1946)
+- time stamp (#1944)
+- supply grid, transport network, critical infrastructure (#1947)
+
+### Removed
+
+## [2.5.0] - 2024-09-24
+### Added
+- German alternative labels (#1883, #1895)
+- English language tags to existing alternative labels (#1883, #1895)
+- GAMS programming language (#1889)
+- oeo:unit, oeo:physical unit (#1892)
+- oekg annotation (#1897)
+- kilowatt, megawatt (#1900)
+- monetary price (new entity) (#1902)
+- amount (#1905)
+- economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
+- product (#1912)
+- term tracker annotation (#1913)
+- licence provider, licensee, has licence provider, permits (#1925)
+
+
+### Changed
 - gams -> General Algebraic Modeling System (#1889)
 - uo:unit (#1892)
 - train, regionalisation (#1899)
@@ -47,10 +56,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
-- energy amount value / energy value (#1941)
-- rework contributing and readme file (#1937, #1946)
-- time stamp (#1944)
-- supply grid, transport network, critical infrastructure (#1947)
+
 
 
 ### Obsoletion
