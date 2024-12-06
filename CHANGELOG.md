@@ -4,7 +4,6 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.6.0] - 2024-12-06
 
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
