@@ -7,6 +7,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.x.y] - 202x-xx-xx
 ### Added
 ### Changed
+* gaseous (#1980)
+* areal solar energy density (#1983)
 
 ## [2.5.0] - 2024-09-24
 ### Added
@@ -31,10 +33,11 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - action specification for wind characteristics, air density adjustment, data preparation, wind power density calculation, wind speed calculation, wind speed frequency analysis, wind variability identification (#1940, #1964, #1966)
 - action specification for wind farm development area, determine development area, determine geographical potential, improve spatial resolution, prepare exclusion criteria datasets, run multi-criteria decision analysis, select exclusion criteria (#1940, #1964)
 - determined feasible potential, determined techno-economic potential, determined wind characteristics, determined wind farm area, determined wind potential (#1940)
-- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambiguous uncertainty, epistemological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
+- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambiguous uncertainty, epistemological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1945)
 - feasible potential determination process, techno-economic potential determination process, wind characteristics determination process, wind farm area determination process, wind potential determination process (#1940, #1966)
 - feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#1940, #1966)
 - technical model implementation(#1978)
+- model system boundary (#1977)
 
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
