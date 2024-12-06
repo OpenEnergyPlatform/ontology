@@ -29,7 +29,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - supply grid, transport network, critical infrastructure (#1947)
 - areal solar energy density (#1983)
 
-### Removed
 
 
 ## [2.5.0] - 2024-09-24
