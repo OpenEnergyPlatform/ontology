@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-
+## [2.x.y] - 202x-xx-xx
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
 - study descriptor (#1950)
@@ -18,15 +18,19 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambiguous uncertainty, epistemological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
 - feasible potential determination process, techno-economic potential determination process, wind characteristics determination process, wind farm area determination process, wind potential determination process (#1940, #1966)
 - feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#1940, #1966)
+- model system boundary (#1977)
 - technical model implementation(#1978)
+- gaseous (#1980)
 
 ### Changed
 - energy amount value / energy value (#1941)
 - rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
 - supply grid, transport network, critical infrastructure (#1947)
+- areal solar energy density (#1983)
 
 ### Removed
+
 
 ## [2.5.0] - 2024-09-24
 ### Added
@@ -43,7 +47,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - term tracker annotation (#1913)
 - licence provider, licensee, has licence provider, permits (#1925)
 
-
 ### Changed
 - gams -> General Algebraic Modeling System (#1889)
 - uo:unit (#1892)
@@ -55,8 +58,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - is traded at, trades (#1912)
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
-
-
 
 ### Obsoletion
 - economic value, has economic value, economic value (#1931)
