@@ -4,6 +4,33 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.6.0] - 2024-12-06
+### Added
+- has aggregation type, has time stamp alignment (#1944)
+- study descriptor (#1950)
+- file oeo-tasks (#1940)
+- action specification for techno-economic potential, calculate economic potential, calculate levelised cost of energy, determine capital expenditures, determine discount and interest rate, determine operational expenditures, determine wind turbine lifetime (#1940, #1964)
+- action specification for the feasible potential, apply constraints for assessment of potential, calculate feasible potential (#1940)
+- action specification for the technical wind potential, account for wake losses, calculate technical potential, determine annual energy yield, determine capacity density, determine capacity factor, place turbines within area, select appropriate turbine types (#1940, #1966)
+- action specification for wind characteristics, air density adjustment, data preparation, wind power density calculation, wind speed calculation, wind speed frequency analysis, wind variability identification (#1940, #1964, #1966)
+- action specification for wind farm development area, determine development area, determine geographical potential, improve spatial resolution, prepare exclusion criteria datasets, run multi-criteria decision analysis, select exclusion criteria (#1940, #1964)
+- determined feasible potential, determined techno-economic potential, determined wind characteristics, determined wind farm area, determined wind potential (#1940)
+- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambiguous uncertainty, epistemological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
+- feasible potential determination process, techno-economic potential determination process, wind characteristics determination process, wind farm area determination process, wind potential determination process (#1940, #1966)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#1940, #1966)
+- model system boundary (#1977)
+- technical model implementation(#1978)
+- gaseous (#1980)
+
+### Changed
+- energy amount value / energy value (#1941)
+- rework contributing and readme file (#1937, #1946)
+- time stamp (#1944)
+- supply grid, transport network, critical infrastructure (#1947)
+- areal solar energy density (#1983)
+
+
+
 ## [2.5.0] - 2024-09-24
 ### Added
 - German alternative labels (#1883, #1895)

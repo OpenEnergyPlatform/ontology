@@ -33,6 +33,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0006011>
 
     
@@ -89,7 +92,7 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
     
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
-
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000052>
 
     
@@ -97,6 +100,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000057>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000086>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
@@ -526,6 +532,77 @@ ObjectProperty: OEO_00140164
         OEO_00000274
     
     
+ObjectProperty: OEO_00390023
+
+    Annotations: 
+        OEO_00020426 "Added
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1901
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a data item or data set and an aggregation type that indicates the method of data aggregation applied to the data set.",
+        rdfs:label "has aggregation type"@en
+    
+    
+ObjectProperty: OEO_00390024
+
+    Annotations: 
+        OEO_00020426 "Added
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1901
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a time stamp or time series and a time stamp alignment that indicates the position of the time stamps that refer to the time step(s).",
+        rdfs:label "has time stamp alignment"@en
+    
+    
+ObjectProperty: OEO_00400037
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an uncertainty of a model (x) and a nature of model uncertainty (z) that indicates x is of kind z."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        rdfs:label "has uncertainty nature"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000086>
+    
+    Domain: 
+        OEO_00400012
+    
+    Range: 
+        OEO_00400013
+    
+    
+ObjectProperty: OEO_00400038
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an uncertainty of a model (x) and a level of model uncertainty (y) that indicates the degree or severity y of x.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        rdfs:label "has uncertainty level"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000086>
+    
+    Domain: 
+        OEO_00400012
+    
+    Range: 
+        OEO_00400017
+    
+    
+ObjectProperty: OEO_00400039
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an uncertainty of a model (x) and a location of model uncertainty (y) that indicates x is located in y.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "has uncertainty location"@en
+    
+    Domain: 
+        OEO_00400012
+    
+    
 ObjectProperty: owl:topObjectProperty
 
     
@@ -551,6 +628,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000006>
@@ -2012,7 +2092,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1749",
         <http://purl.obolibrary.org/obo/IAO_0000112> "In a study, the spatial focus of the investigation lies on one European country, e.g. Germany. This is the study region.
 The study region is not modelled as a whole, but several subregions are modelled, e.g. German Federal States. These are study subregions.
 In the study, a spatial region outside the study region plays a role. E.g. for modelling the electricity transfer between Germany and its neighbouring countries. In this example, the neighbouring countries represent the interacting / external region.
-The union of the study region and the interacting/ external region ist the considered region."@en,
+The union of the study region and the interacting/ external region is the considered region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A study region is a region of relevance that has the study region role and consists entirely of one or more subregions."@en,
         rdfs:label "study region"@en
     
@@ -2214,7 +2294,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/881
 reclassify
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1684
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1778",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A target description is an  objective specification that contains statements about a desired future state of a system that a person or organisation commits to in a legally binding way.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A target description is an objective specification that contains statements about a desired future state of a system that a person or organisation commits to in a legally binding way.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Zielbeschreibung"@de,
         rdfs:label "target description"@en
     
@@ -2679,6 +2759,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1648",
     
 Class: OEO_00020352
 
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00400012
+    
     
 Class: OEO_00020353
 
@@ -3142,8 +3225,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 
 reclassify as data descriptor
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1536
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a data descriptor that is used to describe a zero-dimensional temporal region, or a data item that is related to a zero-dimensional temporal region, e.g. a time stamped measurement datum.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1853
+
+update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1901
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A time stamp is a data descriptor that is used to describe either a temporal region or a data item that is related to a temporal region, e.g. a time stamped measurement datum. If the time stamp refers to a time step/one-dimensional temporal region, the indication of a time stamp alignment is required",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Zeitstempel"@de,
         rdfs:label "time stamp"@en
     
@@ -3654,6 +3741,102 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
     
     SubClassOf: 
         OEO_00360020
+    
+    
+Class: OEO_00390064
+
+    Annotations: 
+        OEO_00020426 "add:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1943
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1950",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A study descriptor is a data descriptor that allows the annotation of study information within a scenario bundle by means of keywords from ontological terminology.",
+        rdfs:label "study descriptor"@en
+    
+    SubClassOf: 
+        OEO_00000119
+    
+    
+Class: OEO_00400012
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Uncertainty of a model is a qualtity of a model that represents any departure from the unachievable ideal of complete determinism.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:comment "Uncertainty of a model is a situation of inadequate information, which can be of three sorts: inexactness, unreliability, and border with ignorance.",
+        rdfs:label "uncertainty of a model"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00400037 some OEO_00400013,
+        OEO_00400038 some OEO_00400017
+    
+    
+Class: OEO_00400013
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Nature of model uncertainty is a quality of a model that represents the core reason for uncertainty within it.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "nature of model uncertainty"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
+Class: OEO_00400017
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Level of model uncertainty is a quality of a model that represents the degree or severity of an uncertainty.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "level of model uncertainty"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
+Class: OEO_00400022
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Location of model uncertainty role is a role of an entity in which a model uncertainty is located in.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "location of model uncertainty role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00400041
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A model system boundary is a generically dependent continuant that is part of a model and separates aspects of the real world included in the model from those that are not.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1951
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1977",
+        rdfs:label "model system boundary"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000274
+    
+    
+Class: OEO_00400042
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A technical model implementation is a generically dependent continuant that is part of a model and consists of the hardware and software realization of a (conceptual) model.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "model code",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1953
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1978",
+        rdfs:label "technical model implementation"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000031>
     
     
 Individual: OEO_00000049
@@ -4244,5 +4427,99 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/824",
     
     Types: 
         OEO_00140167
+    
+    
+Individual: OEO_00400014
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ambiguous uncertainty is a nature of model uncertainty that stems from multiple frames of reference about a phenomenon existing similtaneously.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "ambiguity of uncertainty"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "ambiguous uncertainty"@en
+    
+    Types: 
+        OEO_00400013
+    
+    
+Individual: OEO_00400015
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Epistemological uncertainty is a nature of model uncertainty that stems from a lack of knowledge about a certain phenomenon.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "epistemology of uncertainty"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "epistemological uncertainty"@en
+    
+    Types: 
+        OEO_00400013
+    
+    
+Individual: OEO_00400016
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ontological uncertainty is a nature of model uncertainty that stems from inherent variability of a phenomenon.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "ontology of uncertainty"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "ontological uncertainty"@en
+    
+    Types: 
+        OEO_00400013
+    
+    
+Individual: OEO_00400018
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Shallow uncertainty is a level of model uncertainty at which one can enumerate multiple alternatives and provide probabilites(subjective or objective) for them.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "shallow uncertainty"@en
+    
+    Types: 
+        OEO_00400017
+    
+    
+Individual: OEO_00400019
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Medium uncertainty is a level of model uncertainty at which one can enumerate multiple alternatives and rank them in order of perceived likelihood, without being able to discern how intensely the likelihood varies between two alternatives.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "medium uncertainty"@en
+    
+    Types: 
+        OEO_00400017
+    
+    
+Individual: OEO_00400020
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Deep uncertainty is a level of model uncertainty at which one can enumerate multiple alternatives, without being able to rank them in order of likelihood.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "deep uncertainty"@en
+    
+    Types: 
+        OEO_00400017
+    
+    
+Individual: OEO_00400021
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Recognised ignorance is a level of model uncertainty at which one isn't able to enumerate multiple alternatives, while admitting the possibility of being surprised.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
+        rdfs:label "recognised ignorance"@en
+    
+    Types: 
+        OEO_00400017
     
     

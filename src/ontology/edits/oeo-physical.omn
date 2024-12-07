@@ -131,6 +131,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000052>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000053>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000056>
 
     
@@ -2526,8 +2529,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>,
-        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00000159
@@ -2907,10 +2910,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00000199,
         <http://purl.obolibrary.org/obo/RO_0000052> some 
             (OEO_00000331
-             and (OEO_00000531 value OEO_00000182)),
-        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00000199
+             and (OEO_00000531 value OEO_00000182))
     
     
 Class: OEO_00000199
@@ -2957,15 +2960,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/137
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A supply grid is an object aggregate of systematically connected artificial objects that can work as a supply system.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+make subclass of supply system:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1947",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A supply grid is a supply system of systematically connected artificial objects that can work as a supply system.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Versorgungsnetz"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "grid"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "network"@en,
         rdfs:label "supply grid"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
+        OEO_00030025
     
     
 Class: OEO_00000204
@@ -3118,7 +3125,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         OEO_00230020,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000441,
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
@@ -3126,7 +3132,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        OEO_00020182 some OEO_00110002
+        OEO_00020182 some OEO_00110002,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000441
     
     
 Class: OEO_00000219
@@ -4688,13 +4695,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     SubClassOf: 
         OEO_00230020,
         OEO_00000530 some OEO_00030004,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000054,
         
             Annotations: OEO_00020426 "change axiom to 'participates in'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
         OEO_00020182 some OEO_00000043,
-        OEO_00020183 some OEO_00020043
+        OEO_00020183 some OEO_00020043,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000054
     
     
 Class: OEO_00000447
@@ -5498,8 +5505,12 @@ Class: OEO_00010077
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/597
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal solar energy density is an areal energy density that gives the arriving solar power per area. A synonym for areal solar power density is irradiation.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/615
+
+correct definition to state 'energy' instead of 'power'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1981
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1983",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An areal solar energy density is an areal energy density that gives the arriving solar energy per area. A synonym for areal solar energy density is irradiation.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "irradiation",
         rdfs:label "areal solar energy density"@en
     
@@ -6241,7 +6252,7 @@ Class: OEO_00010138
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/863
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/911",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon capture is a process that captures carbon dioxide from a gas. test",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon capture is a process that captures carbon dioxide from a gas.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Abscheidung"@de,
         rdfs:label "carbon capture"@en
     
@@ -7970,8 +7981,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>,
-        OEO_00010231 some OEO_00010332
+        OEO_00010231 some OEO_00010332,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
     
     
 Class: OEO_00010334
@@ -8232,8 +8243,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000061,
-        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000061
     
     
 Class: OEO_00010386
@@ -8499,8 +8510,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000061,
-        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020103
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020103,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000061
     
     
 Class: OEO_00010413
@@ -10113,9 +10124,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
+        OEO_00140002 some OEO_00140001,
         <http://purl.obolibrary.org/obo/RO_0000052> some 
-            (OEO_00000044 or OEO_00000448),
-        OEO_00140002 some OEO_00140001
+            (OEO_00000044 or OEO_00000448)
     
     
 Class: OEO_00020147
@@ -11250,19 +11261,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/498",
 Class: OEO_00030035
 
     
-Class: OEO_00340069
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An amount is a quality of an object aggregate that counts the number of entities that form the object aggregate.",
-        OEO_00020426 "Update size and add amount
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1896
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1905",
-        rdfs:label "amount"@en
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
-    
-    
 Class: OEO_00050000
 
     Annotations: 
@@ -11605,11 +11603,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1221
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy amount value is a quantity value that has an energy unit as unit."@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+change label and add alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1865
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1941",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy value is a quantity value that has an energy unit as unit."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Energiemenge"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "energy amount value",
         <http://purl.obolibrary.org/obo/IAO_0000118> "energy quantity value",
-        rdfs:label "energy amount value"@en
+        rdfs:label "energy value"@en
     
     SubClassOf: 
         OEO_00000350,
@@ -11773,8 +11776,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000044,
-        OEO_00140002 some OEO_00140001
+        OEO_00140002 some OEO_00140001,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000044
     
     
 Class: OEO_00140001
@@ -12636,8 +12639,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000031,
-        OEO_00140002 some OEO_00140127
+        OEO_00140002 some OEO_00140127,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000031
     
     
 Class: OEO_00140127
@@ -12674,8 +12677,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000031,
-        OEO_00140002 some OEO_00140127
+        OEO_00140002 some OEO_00140127,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000031
     
     
 Class: OEO_00140133
@@ -14515,12 +14518,16 @@ Class: OEO_00320016
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1266
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1297",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A transport network is an object aggregate of transport network components that enables the transport of people and/or goods."@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1297
+
+make subclass of supply system:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1947",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transport network is a supply system of transport network components that enables the transport of people and/or goods."@en,
         rdfs:label "transport network"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        OEO_00030025,
         OEO_00140002 some OEO_00140001,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00320021
     
@@ -15563,19 +15570,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1880",
 Class: OEO_00340068
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Size is a quantity of an entity that quantifies its spatial extend.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from: http://purl.allotrope.org/ontologies/result#AFR_0002109 and http://purl.obolibrary.org/obo/PATO_0000117",
         OEO_00020426 "restructuring of quantity values
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1848
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1851
 Update size and add amount
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1896
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1905",
-     
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Size is a quantity of an entity that quantifies its spatial extend.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Derived from: http://purl.allotrope.org/ontologies/result#AFR_0002109 and http://purl.obolibrary.org/obo/PATO_0000117",
         rdfs:label "size"@en
     
     SubClassOf: 
         OEO_00340062
+    
+    
+Class: OEO_00340069
+
+    Annotations: 
+        OEO_00020426 "Update size and add amount
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1896
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1905",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An amount is a quality of an object aggregate that counts the number of entities that form the object aggregate.",
+        rdfs:label "amount"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
     
     
 Class: OEO_00360001
@@ -15654,8 +15673,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
-        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/RO_0002577>,
-        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00360008
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00360008,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/RO_0002577>
     
     
 Class: OEO_00360008
@@ -15802,22 +15821,23 @@ Class: OEO_00360041
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1792
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1809",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A critical infrastructure is an object aggregate of artificial objects and systems which have the critical infrastructure role."@en,
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1809
+
+make subclass of supply system, edit axiom:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1833
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1947",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A critical infrastructure is a supply system of artificial objects and systems which have the critical infrastructure role."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "The definition is based on information obtained from https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32008L0114 and https://de.wikipedia.org/w/index.php?title=Kritische_Infrastrukturen&oldid=240000353 in January 2024."@en,
         rdfs:label "critical infrastructure"@en
     
     EquivalentTo: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+        OEO_00030025
+         and ((<http://purl.obolibrary.org/obo/BFO_0000051> some 
             (OEO_00000061
-             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360040)))
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
-            (<http://purl.obolibrary.org/obo/RO_0002577>
-             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360040)))
+             and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360040))) or (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00360040))
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000027>
+        OEO_00030025
     
     
 Class: OEO_00390000
@@ -15864,8 +15884,11 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390,
 restructure modules:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a gas. A portion of matter is in gaseous state if and only if it has has no definite shape and no definite volume and is not electrically conductive.",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+Fix definition:
+https://github.com/OpenEnergyPlatform/ontology/pull/1980",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The state of being a gas. A portion of matter is in gaseous state if and only if it has no definite shape and no definite volume and is not electrically conductive.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "gasförmig"@de,
         rdfs:label "gaseous"@en
     

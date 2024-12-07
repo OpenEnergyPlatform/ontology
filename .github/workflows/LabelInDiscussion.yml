@@ -1,0 +1,30 @@
+name: Label issues as "In discussion"
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  labelIssueAsInDiscussion:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+    - name: count
+      id: count
+      uses: akleinau/githubJSActions/DiscussedToColumn@master
+      with:
+        repo: https://api.github.com/repos/OpenEnergyPlatform/ontology
+    - run: gh issue edit "$NUMBER" --remove-label "$LABELS"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_REPO: ${{ github.repository }}
+        NUMBER: ${{ github.event.issue.number }}
+        LABELS: To do
+      if: steps.count.outputs.continue == 'true' 
+    - run: gh issue edit "$NUMBER" --add-label "$LABELS"
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GH_REPO: ${{ github.repository }}
+        NUMBER: ${{ github.event.issue.number }}
+        LABELS: in discussion
+      if: steps.count.outputs.continue == 'true' 
