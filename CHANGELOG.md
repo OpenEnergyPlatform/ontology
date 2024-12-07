@@ -21,6 +21,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model system boundary (#1977)
 - technical model implementation(#1978)
 - gaseous (#1980)
+- conceptual model (#1976)
 
 ### Changed
 - energy amount value / energy value (#1941)
