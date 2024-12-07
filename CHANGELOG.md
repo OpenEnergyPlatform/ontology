@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.x.x] - 
+### Added
+- conceptual model (#1976)
+
 ## [2.6.0] - 2024-12-06
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
@@ -21,7 +25,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model system boundary (#1977)
 - technical model implementation(#1978)
 - gaseous (#1980)
-- conceptual model (#1976)
 
 ### Changed
 - energy amount value / energy value (#1941)
