@@ -137,4 +137,8 @@ jobs:
           omitBodyDuringUpdate: true
           omitDraftDuringUpdate: true
           omitPrereleaseDuringUpdate: true
+          # The default behavior of this action is to determine the release by the version number.
+          # We don't want this behavior, as releases created as draft or pre-release won't be updated in that regard and therefore result in
+          # unconsistent behavior when creating normal releases vs. draft or pre-releases.
+          makeLatest: false
           artifacts: "${{ github.workspace }}/build-files.zip,${{ github.workspace }}/existing-terms-and-definitions.zip"
