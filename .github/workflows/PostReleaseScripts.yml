@@ -104,11 +104,13 @@ jobs:
 
   attachArtifactsToRelease:
     runs-on: ubuntu-latest
+    # these jobs have to finish so that the existing-terms-and-definitions and build-files exist
+    needs: [exportTermsDefinitions, buildOntologyFullAndClosure]
     steps:
       - uses: actions/download-artifact@v4
         with:
           name: build-files
-          path: build/oeo
+          path: build
       - name: Zip build files again for usage as release artifact
         run: |
           cd build
@@ -128,5 +130,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.event.release.tag_name }}
+          # allowing the action to update the release as it is already created
           allowUpdates: true
+          # omitting the release name, body, draft state and prerelease state so they won't be updated by attaching the artifacts
+          omitNameDuringUpdate: true
+          omitBodyDuringUpdate: true
+          omitDraftDuringUpdate: true
+          omitPrereleaseDuringUpdate: true
           artifacts: "${{ github.workspace }}/build-files.zip,${{ github.workspace }}/existing-terms-and-definitions.zip"
