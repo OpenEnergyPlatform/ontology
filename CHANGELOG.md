@@ -8,6 +8,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - conceptual model (#1976)
 
+### Changed
+- has model(#2001)
+
 ## [2.6.0] - 2024-12-06
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
