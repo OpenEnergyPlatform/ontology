@@ -7,6 +7,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.x.x] - 
 ### Added
 - conceptual model (#1976)
+- file stato extracted (#2002)
+- cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 
 ## [2.6.0] - 2024-12-06
 ### Added
