@@ -4,9 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.x.x] - 
+## [2.X.X] - 20XX-XX-XX
 ### Added
+- legislation, ROG, BNatSchG (#1991)
+- protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
+- Fauna Flora Habitat, Bird Sanctuary (#1991)
 - conceptual model (#1976)
+
+### Changed
+- protected area (#1991)
+- conditionally reserved region, priority region, priority region with effect of suitable region, suitable region (#1991)
+- conditionally reserved region role, priority region role, suitable region role (#1991)
+
+### Removed
 
 ## [2.6.0] - 2024-12-06
 ### Added
