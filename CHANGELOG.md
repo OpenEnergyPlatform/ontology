@@ -8,6 +8,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - conceptual model (#1976)
 
+### Changed
+axiom: feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
+
 ## [2.6.0] - 2024-12-06
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
