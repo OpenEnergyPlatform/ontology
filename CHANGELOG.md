@@ -6,6 +6,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ## [2.X.X] - 20XX-XX-XX
 ### Added
+- WHG, BWaldG (#2006)
+- biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
+- biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
 - legislation, ROG, BNatSchG (#1991)
 - protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
 - Fauna Flora Habitat, Bird Sanctuary (#1991)
