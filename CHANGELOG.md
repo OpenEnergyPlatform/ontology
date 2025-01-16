@@ -10,6 +10,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - conceptual model (#1976)
 - model uncertainty location (#1990)
 
+### Changed
+- technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
+
 
 ## [2.6.0] - 2024-12-06
 ### Added
@@ -28,7 +31,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model system boundary (#1977)
 - technical model implementation(#1978)
 - gaseous (#1980)
-- model uncertainty location (#)
 
 ### Changed
 - energy amount value / energy value (#1941)
