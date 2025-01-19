@@ -9,7 +9,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - conceptual model (#1976)
 
 ### Changed
-- restructure cost and its subclasses (#1999)
+- cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost  (#1999)
 
 ## [2.6.0] - 2024-12-06
 ### Added
