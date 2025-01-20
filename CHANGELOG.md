@@ -7,7 +7,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
--CF alternative label/ net capacity factor (#1995)
 
 ### Changed
 - apply socio-economic constraints for assessment of potential (#1995)
