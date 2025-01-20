@@ -12,10 +12,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
 
-
-### Changed
-feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
 
 ## [2.6.0] - 2024-12-06
 ### Added
