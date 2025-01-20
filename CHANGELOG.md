@@ -10,6 +10,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Changed
 - apply socio-economic constraints for assessment of potential (#1995)
+- net capacity factor (#1995)
 
 ### Removed
 
