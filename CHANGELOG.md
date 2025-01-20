@@ -4,9 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
 ## [2.x.x] - 
 ### Added
 - conceptual model (#1976)
+- model uncertainty location (#1990)
+
+### Changed
+- technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
+
 
 ### Changed
 feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
