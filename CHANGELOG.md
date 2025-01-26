@@ -9,7 +9,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 ### Added
 - conceptual model (#1976)
 - imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
-- cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
 
 ### Changed
