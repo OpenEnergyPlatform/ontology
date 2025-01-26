@@ -16,6 +16,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
 - apply socio-economic constraints for assessment of potential (#1995)
 - net capacity factor (#1995)
+- has model(#2001)
 
 ## [2.6.0] - 2024-12-06
 ### Added
