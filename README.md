@@ -39,7 +39,8 @@ The main file is `src/ontology/oeo.omn` <br>
 
 All own modules are collected in the folder `src/ontology/edits/` <br>
 The following diagram illustrates the modular file structure of the OEO. It depicts the import and file hierarchy from external imports (right) to the main file oeo.omn (left).
-![Structure of the OEO](https://user-images.githubusercontent.com/38690039/275459325-1c6eb63d-287a-45b5-a107-839c8c09bfe0.png)
+![grafik](https://github.com/user-attachments/assets/13e25c6e-aa15-4be5-9b81-df58fc097e48)
+
 
 The imported modules are under `src/ontology/imports/` <br>
 To get an overview of the existing modules, take a look at the following wiki article: [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO)
