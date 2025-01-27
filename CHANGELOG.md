@@ -4,9 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
 ## [2.x.x] - 
 ### Added
 - conceptual model (#1976)
+- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
+- model uncertainty location (#1990)
+
+### Changed
+- technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
+- apply socio-economic constraints for assessment of potential (#1995)
+- net capacity factor (#1995)
+- has model(#2001)
 
 ### Changed
 - model (#2007)
