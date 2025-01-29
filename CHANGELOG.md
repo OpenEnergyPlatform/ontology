@@ -18,6 +18,9 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - net capacity factor (#1995)
 - has model(#2001)
 
+### Changed
+- cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost  (#1999)
+
 ## [2.6.0] - 2024-12-06
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
