@@ -11,6 +11,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
 - Fauna Flora Habitat, Bird Sanctuary (#1991)
 - conceptual model (#1976)
+- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
 
 ### Changed
@@ -18,6 +19,10 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
 - apply socio-economic constraints for assessment of potential (#1995)
 - net capacity factor (#1995)
+- has model(#2001)
+- model (#2007)
+- models (#2007)
+- cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost (#1999)
 - protected area (#1991)
 - conditionally reserved region, priority region, priority region with effect of suitable region, suitable region (#1991)
 - conditionally reserved region role, priority region role, suitable region role (#1991)
