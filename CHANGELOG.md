@@ -4,24 +4,96 @@ All notable changes to this project will be documented in this file.
 The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.X.X] - 20XX-XX-XX
+
+## [2.x.x] - 
 ### Added
-- German alternative labels (#1883)
-- English language tags to existing alternative labels (#1883)
+- conceptual model (#1976)
+- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
+- model uncertainty location (#1990)
 
 ### Changed
+- technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
+- apply socio-economic constraints for assessment of potential (#1995)
+- net capacity factor (#1995)
+- has model(#2001)
+- model (#2007)
+- models (#2007)
+- cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost  (#1999)
+
+
+## [2.6.0] - 2024-12-06
+### Added
+- has aggregation type, has time stamp alignment (#1944)
+- study descriptor (#1950)
+- file oeo-tasks (#1940)
+- action specification for techno-economic potential, calculate economic potential, calculate levelised cost of energy, determine capital expenditures, determine discount and interest rate, determine operational expenditures, determine wind turbine lifetime (#1940, #1964)
+- action specification for the feasible potential, apply constraints for assessment of potential, calculate feasible potential (#1940)
+- action specification for the technical wind potential, account for wake losses, calculate technical potential, determine annual energy yield, determine capacity density, determine capacity factor, place turbines within area, select appropriate turbine types (#1940, #1966)
+- action specification for wind characteristics, air density adjustment, data preparation, wind power density calculation, wind speed calculation, wind speed frequency analysis, wind variability identification (#1940, #1964, #1966)
+- action specification for wind farm development area, determine development area, determine geographical potential, improve spatial resolution, prepare exclusion criteria datasets, run multi-criteria decision analysis, select exclusion criteria (#1940, #1964)
+- determined feasible potential, determined techno-economic potential, determined wind characteristics, determined wind farm area, determined wind potential (#1940)
+- uncertainty of a model, nature of uncertainty, level of uncertainty, location of uncertainty role, ambiguous uncertainty, epistemological uncertainty, ontological uncertainty, shallow uncertainty, medium uncertainty, deep uncertainty, recognised ignorance, has uncertainty nature, has uncertainty location, has uncertainty level (#1829)
+- feasible potential determination process, techno-economic potential determination process, wind characteristics determination process, wind farm area determination process, wind potential determination process (#1940, #1966)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#1940, #1966)
+- model system boundary (#1977)
+- technical model implementation(#1978)
+- gaseous (#1980)
+
+### Changed
+- energy amount value / energy value (#1941)
+- rework contributing and readme file (#1937, #1946)
+- time stamp (#1944)
+- supply grid, transport network, critical infrastructure (#1947)
+- areal solar energy density (#1983)
+
+
+
+## [2.5.0] - 2024-09-24
+### Added
+- German alternative labels (#1883, #1895)
+- English language tags to existing alternative labels (#1883, #1895)
+- GAMS programming language (#1889)
+- oeo:unit, oeo:physical unit (#1892)
+- oekg annotation (#1897)
+- kilowatt, megawatt (#1900)
+- monetary price (new entity) (#1902)
+- amount (#1905)
+- economic instrument function, education instrument function, information instrument function, regulatory instrument function, voluntary agreement instrument function (#1906)
+- product (#1912)
+- term tracker annotation (#1913)
+- licence provider, licensee, has licence provider, permits (#1925)
+
+### Changed
+- gams -> General Algebraic Modeling System (#1889)
+- uo:unit (#1892)
+- train, regionalisation (#1899)
+- add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
+- monetary value (formerly: monetary price) and subclasses (#1902)
+- size (#1905)
+- economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
+- is traded at, trades (#1912)
+- replace term tracker item with term tracker annotation (#1922, #1923)
+- replace has bearer with characteristic of (#1928)
+
+### Obsoletion
+- economic value, has economic value, economic value (#1931)
+- has bearer (#1928)
 
 ### Removed
 
 ## [2.4.0] - 2024-07-01
 ### Added
 - subsector, has subsector, subsector of (#1788)
+- manufacturing technology, manufacturing plant, manufactured commodity (#1840)
+- German alternative labels (#1862, #1868)
 - Matlab programming language (#1869)
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
 
 ### Changed
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
-- German alternative labels (#1862, #1868)
+- industrial process -> manufacturing process, industrial material -> manufactured material (#1840)
+- electricity import/export value (#1864)
 - C++, Fortran, Java, Matlab, PHP, Python, R, Ruby, VBA (#1869)
 - ENVO mappings (#1879)
 - emission factor value (#1880)
@@ -51,7 +123,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - area value (#1851)
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
-- electricity import/export value (#1864)
 
 ### Removed
 
