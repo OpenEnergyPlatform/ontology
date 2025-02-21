@@ -1,3 +1,8 @@
+<!--
+SPDX-FileCopyrightText: Open Energy Ontology (OEO) <https://github.com/OpenEnergyPlatform/ontology/>
+SPDX-License-Identifier: CC0-1.0 OR MIT
+-->
+
 ## Table of Contents
 
 - [Welcome](#Welcome)<br>
