@@ -18,7 +18,8 @@ This domain ontology is a collaborative effort to represent the context of **ene
 
 ## License / Copyright / Citation
 
-This repository is licensed under `CC0 1.0 Universal (CC0 1.0) Public Domain Dedication`. <br>
+This repository is dual-licensed under [Creative Commons Zero v1.0 Universal (CC0-1.0)](https://creativecommons.org/publicdomain/zero/1.0/legalcode) and [MIT License (MIT)](https://opensource.org/license/mit). <br>
+You can choose between one of them if you use this work. <br>
 For a scientific citation please see the [CITATION.cff](CITATION.cff). <br>
 
 To cite a specific class of the ontology and its definition please use the following convention:
