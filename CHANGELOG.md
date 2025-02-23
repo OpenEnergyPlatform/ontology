@@ -21,6 +21,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - model (#2007)
 - models (#2007)
 - cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost  (#1999)
+- uncertainty of a model, model, model system boundary (#2012)
 - solid (#2019)
 
 
