@@ -35,6 +35,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000601>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/license>
 
     
@@ -45,6 +48,9 @@ AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynony
 
     
 AnnotationProperty: OEO_00020426
+
+    
+AnnotationProperty: OEO_00020434
 
     
 AnnotationProperty: OEO_00110012
@@ -290,7 +296,14 @@ ObjectProperty: OEO_00020190
 ObjectProperty: OEO_00020432
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and an energy carrier. It is a shortcut relation, see annotation.",
+        OEO_00020434 "SELECT ?scenariobundle ?energycarrier WHERE {
+?scenariobundle IAO:0000136 _:1.
+_:1 OEO:00000523 ?energycarrier.
+}",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and an energy carrier. It is a shortcut relation, see associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000601> "'scenatio bundle' 'is about' some scenario
+and
+scenario 'has energy carrier' some 'energy carrier'",
         rdfs:label "covers bundle energy carrier"@en
     
     SubPropertyOf: 
