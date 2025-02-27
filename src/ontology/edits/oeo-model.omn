@@ -75,6 +75,15 @@ AnnotationProperty: skos:exactMatch
 AnnotationProperty: skos:relatedMatch
 
     
+Datatype: OEO_00390099
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        rdfs:label "dateYear"@en
+    
+    
 Datatype: rdf:PlainLiteral
 
     
@@ -561,52 +570,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944",
         rdfs:label "has time stamp alignment"@en
     
     
-ObjectProperty: OEO_00390069
-
-    Annotations: 
-        OEO_00020426 "add
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "has iri is a relation between a data item or document and the IRI that identifies it as rescource on the internet.",
-        rdfs:label "has iri"@en
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/IAO_0000027> or <http://purl.obolibrary.org/obo/IAO_0000310>
-    
-    Range: 
-        OEO_00390080 some rdfs:Literal
-    
-    
 ObjectProperty: OEO_00390071
 
     Annotations: 
         OEO_00020426 "add
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "has study descriptor tag is a relation between a scenario bundle and a study descriptor that is tagging it.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has study descriptor tag is a relation between a scenario bundle and a oeo class represented by a study descriptor that is tagging it.
+
+Only classes with the oekg annotation property are eligible.",
         rdfs:label "has study descriptor tag"@en
     
     Domain: 
         OEO_00020227
     
     Range: 
-        OEO_00390080 some rdfs:Literal
-    
-    
-ObjectProperty: OEO_00390072
-
-    Annotations: 
-        OEO_00020426 "add
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "has uuid is the relation between a factsheet or report and the 128-bit label used to identify it in a computer system.",
-        rdfs:label "has uuid"@en
-    
-    Domain: 
-        OEO_00000162 or <http://purl.obolibrary.org/obo/IAO_0000088>
-    
-    Range: 
-        OEO_00140178 some xsd:hexBinary
+        <http://purl.obolibrary.org/obo/BFO_0000001>
     
     
 ObjectProperty: OEO_00390073
@@ -625,54 +604,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
         OEO_00000364
     
     
-ObjectProperty: OEO_00390075
-
-    Annotations: 
-        OEO_00020426 "add
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "has publication date is the relation between a scenario bundle or report and the date it was published at.",
-        rdfs:label "has publication date"@en
-    
-    Domain: 
-        OEO_00020227 or <http://purl.obolibrary.org/obo/IAO_0000088>
-    
-    Range: 
-        OEO_00390080 some xsd:dateTime
-    
-    
-ObjectProperty: OEO_00390076
-
-    Annotations: 
-        OEO_00020426 "add
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "has report title is a relation between a report and its title.",
-        rdfs:label "has report title"@en
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/IAO_0000088>
-    
-    Range: 
-        OEO_00390080 some xsd:Name
-    
-    
-ObjectProperty: OEO_00390077
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "add
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "has doi is the relation between an information scenario bundle or report and the literal representing its doi.",
-        rdfs:label "has doi"@en
-    
-    Domain: 
-        OEO_00020227 or <http://purl.obolibrary.org/obo/IAO_0000088>
-    
-    Range: 
-        OEO_00390080 some rdfs:Literal
-    
-    
 ObjectProperty: OEO_00390078
 
     Annotations: 
@@ -687,6 +618,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
     
     Range: 
         OEO_00000353
+    
+    
+ObjectProperty: OEO_00390101
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "covers technology is a relation that holds between a study and the technology it covers.",
+        rdfs:label "covers technology"@en
+    
+    SubPropertyOf: 
+        OEO_00000522
+    
+    Domain: 
+        OEO_00020011
+    
+    Range: 
+        OEO_00000407
     
     
 ObjectProperty: OEO_00400037
@@ -761,20 +711,106 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1834",
 DataProperty: OEO_00140178
 
     
-DataProperty: OEO_00390080
+DataProperty: OEO_00390094
 
     Annotations: 
         OEO_00020426 "add
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Has literal value is a data property that links an entity to a type of literal that describes it.",
-        rdfs:label "has literal value"@en
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has iri is a relation between a data item or document and the IRI that identifies it as rescource on the internet.",
+        rdfs:label "has iri"@en
     
-    SubPropertyOf: 
-        owl:topDataProperty
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000027> or <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: OEO_00390095
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has uuid is the relation between a factsheet or report and the 128-bit label used to identify it in a computer system.",
+        rdfs:label "has uuid"@en
+    
+    Domain: 
+        OEO_00000162 or <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:hexBinary
+    
+    
+DataProperty: OEO_00390096
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has publication date is the relation between a report and the year it was published at.",
+        rdfs:label "has publication date"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        OEO_00390099
+    
+    
+DataProperty: OEO_00390097
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has report title is a relation between a report and its title.",
+        rdfs:label "has report title"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:Name
+    
+    
+DataProperty: OEO_00390098
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has doi is the relation between a report and the literal representing its doi.",
+        rdfs:label "has doi"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: OEO_00390100
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has creation date is the relation between a scenario bundle and the date it was created at.",
+        rdfs:label "has creation date"@en
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        xsd:dateTime
     
     
 DataProperty: owl:topDataProperty
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000001>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1624,6 +1660,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     DisjointWith: 
         OEO_00000149
     
+    
+Class: OEO_00000407
+
     
 Class: OEO_00000408
 
