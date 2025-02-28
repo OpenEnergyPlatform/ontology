@@ -50,6 +50,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
+AnnotationProperty: <https://www.commoncoreontologies.org/ont00001754>
+
+    
 AnnotationProperty: OEO_00020426
 
     
@@ -330,15 +333,33 @@ _:2 RO:0002234 ?dataset.
 
 }",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario factsheet and a dataset, where the dataset is an output of the scenario projection process the scenario factsheet is about. It is a shortcut relation, see elucidation and associated sparql axiom.",
-        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio factsheet' to 'data set'. The original relation 'has output' relates 'scenario projection' (process) to 'data set'. 
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio factsheet' to 'data set'. The original relation 'has information output' relates 'scenario projection' (process) to 'data set'. 
 The shortcut relation should be used to represents these statements:
 ('scenario factsheet' 'is about' some scenario) and
 ('scenario projection' 'is based on' some scenario) and
-('scenario projection' 'has output' some dataset)",
-        rdfs:label "has output (shortcut)"@en
+('scenario projection' 'has information output' some dataset)",
+        rdfs:label "has information output (shortcut)"@en
     
     SubPropertyOf: 
         owl:topObjectProperty
+    
+    Domain: 
+        OEO_00000365
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    
+ObjectProperty: OEO_00020437
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio factsheet' to 'data set'. The original relation 'has information input' relates 'scenario projection' (process) to 'data set'. 
+The shortcut relation should be used to represents these statements:
+('scenario factsheet' 'is about' some scenario) and
+('scenario projection' 'is based on' some scenario) and
+('scenario projection' 'has information input' some dataset)",
+        rdfs:label "has information input (shortcut)"@en,
+        <https://www.commoncoreontologies.org/ont00001754> "A relation between a scenario factsheet and a dataset, where the dataset is an input to the scenario projection process the scenario factsheet is about. It is a shortcut relation, see elucidation and associated sparql axiom."
     
     Domain: 
         OEO_00000365
