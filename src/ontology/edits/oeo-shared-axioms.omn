@@ -303,7 +303,7 @@ ObjectProperty: OEO_00020432
 ?scenariobundle IAO:0000136 _:1.
 _:1 OEO:00000523 ?energycarrier.
 }",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and an energy carrier. It is a shortcut relation, see associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and an energy carrier. It is a shortcut relation, see elucidation and associated sparql axiom.",
         <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio bundle' to 'energy carrier'. The original relation 'covers energy carrier' relates 'study' (process) to 'energy carrier'. 
 The shortcut relation should be used to represents these statements:
 ('scenario bundle 'is about' some 'scenario study'`) and ('scenario study' 'covers energy carrier' some 'energy carrier')",
@@ -317,6 +317,34 @@ The shortcut relation should be used to represents these statements:
     
     Range: 
         OEO_00020039
+    
+    
+ObjectProperty: OEO_00020436
+
+    Annotations: 
+        OEO_00020434 "select ?scenariofactsheet ?dataset where {
+
+?scenariofactsheet IAO:0000136 _:1.
+_:2 OEO:00020226 _:1.
+_:2 RO:0002234 ?dataset.
+
+}",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario factsheet and a dataset, where the dataset is an output of the scenario projection process the scenario factsheet is about. It is a shortcut relation, see elucidation and associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio factsheet' to 'data set'. The original relation 'has output' relates 'scenario projection' (process) to 'data set'. 
+The shortcut relation should be used to represents these statements:
+('scenario factsheet' 'is about' some scenario) and
+('scenario projection' 'is based on' some scenario) and
+('scenario projection' 'has output' some dataset)",
+        rdfs:label "has output (shortcut)"@en
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        OEO_00000365
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
     
     
 ObjectProperty: OEO_00040010
@@ -504,6 +532,9 @@ Class: OEO_00000350
 
     
 Class: OEO_00000364
+
+    
+Class: OEO_00000365
 
     
 Class: OEO_00000367
