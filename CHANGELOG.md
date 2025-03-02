@@ -16,6 +16,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - conceptual model (#1976)
 - imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
+- arable land, arable land with poor soil quality, arable land with high soil quality (#2006)
+- soil quality role, high soil quality role, poor soil quality role (#2006)
 
 ### Changed
 - technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
