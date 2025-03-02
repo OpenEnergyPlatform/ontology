@@ -27,7 +27,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - models (#2007)
 - cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost (#1999)
 - protected area (#1991)
-- conditionally reserved region, priority region, priority region with effect of suitable region, suitable region (#1991)
 - conditionally reserved region role, priority region role, suitable region role (#1991)
 
 ### Removed
