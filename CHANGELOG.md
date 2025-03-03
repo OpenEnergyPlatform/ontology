@@ -150,6 +150,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - has unit numerator, has unit denominator and subproperties (#1816)
 - compressor, compressor station and subclasses (#1818)
 - new units and prefixes from UO (#1820)
+- has associated axiom(sparql), shortcut relations for has information input/output, covers energy carrier, covers technology, covers sector (#2023)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
