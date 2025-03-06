@@ -14,16 +14,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 
 ### Added
-- legislation, ROG, BNatSchG (#1991)
-- protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
-- Fauna Flora Habitat, Bird Sanctuary (#1991)
 - conceptual model (#1976)
-- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
+- legislation, ROG, BNatSchG, protected area role, Fauna Flora Habitat role, Bird Sanctuary role, Fauna Flora Habitat, Bird Sanctuary (#1991)
+- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
+- import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
 - has iri, has study descriptor tag, has uuid, has scenario type, has publication date, has report title, has doi, has reference, based on sector division, has creation date, covers technology (#2020)
 - add dual licensing CC0-1.0 OR MIT (#2021)
 - add REUSE license check and copyright info (#2021)
-- import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
 - import from MENO ontology: energetic conversion process, energy decrease, energy increase, quality transfer + subclasses, quality transformation + subclasses(#2022)
 
 ### Changed
