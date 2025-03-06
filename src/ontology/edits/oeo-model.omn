@@ -36,6 +36,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000600>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0006011>
 
     
@@ -76,6 +79,18 @@ AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: rdfs:Literal
+
+    
+Datatype: xsd:Name
+
+    
+Datatype: xsd:dateTime
+
+    
+Datatype: xsd:hexBinary
 
     
 Datatype: xsd:integer
@@ -549,6 +564,78 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944",
         rdfs:label "has time stamp alignment"@en
     
     
+ObjectProperty: OEO_00390071
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has study descriptor tag is a relation between a scenario bundle and an oeo class which is used as a study descriptor.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "OEO classes that are used as study descriptors are annotated by the annotation property \"oekg annotation\" with value \"study descriptor\".",
+        rdfs:label "has study descriptor tag"@en
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000001>
+    
+    
+ObjectProperty: OEO_00390073
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has scenario type is a relation between a scenario factsheet and a subclass of scenario.",
+        rdfs:label "has scenario type"@en
+    
+    Domain: 
+        OEO_00000365
+    
+    Range: 
+        OEO_00000364
+    
+    
+ObjectProperty: OEO_00390078
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000112> "http://openenergyplatform.org/ontology/oekg/region/Albania 
+has reference https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Albania
+
+Here the region Albania in the oekg references the region Albania in the LCC ontology. In the same way any continuant may link to a document it is referencing.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has reference is the relation between a continuant and a reference that points to a relevant resource to the continuant.",
+        rdfs:label "has reference"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    Range: 
+        OEO_00000353
+    
+    
+ObjectProperty: OEO_00390101
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "covers technology is a relation that holds between a study and a technology covered in the study.",
+        rdfs:label "covers technology"@en
+    
+    SubPropertyOf: 
+        OEO_00000522
+    
+    Domain: 
+        OEO_00020011
+    
+    Range: 
+        OEO_00000407
+    
+    
 ObjectProperty: OEO_00400037
 
     Annotations: 
@@ -619,6 +706,108 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1834",
     
     
 DataProperty: OEO_00140178
+
+    
+DataProperty: OEO_00390094
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has iri is a relation between a data item or document and the IRI that identifies it as rescource on the internet.",
+        rdfs:label "has iri"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000027> or <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: OEO_00390095
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has uuid is the relation between a factsheet or report and the 128-bit label used to identify it in a computer system.",
+        rdfs:label "has uuid"@en
+    
+    Domain: 
+        OEO_00000162 or <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:hexBinary
+    
+    
+DataProperty: OEO_00390096
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has publication date is the relation between a report and the year it was published in.",
+        rdfs:label "has publication date"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:dateTime
+    
+    
+DataProperty: OEO_00390097
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has report title is a relation between a report and its title.",
+        rdfs:label "has report title"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:Name
+    
+    
+DataProperty: OEO_00390098
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has doi is the relation between a digital object and the literal representing its doi (digital object identifier).",
+        rdfs:label "has doi"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: OEO_00390100
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has creation date is the relation between a scenario bundle and the date it was created at.",
+        rdfs:label "has creation date"@en
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        xsd:dateTime
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000001>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1468,6 +1657,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     DisjointWith: 
         OEO_00000149
     
+    
+Class: OEO_00000407
+
     
 Class: OEO_00000408
 
@@ -2763,8 +2955,7 @@ Class: OEO_00020352
 
     SubClassOf: 
         OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000015>,
-        OEO_00140164 some <http://purl.obolibrary.org/obo/RO_0002577>,
-        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00400012
+        OEO_00140164 some <http://purl.obolibrary.org/obo/RO_0002577>
     
     
 Class: OEO_00020353
@@ -3401,6 +3592,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
         OEO_00000078
     
     
+Class: OEO_00240022
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1052
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+made subclass of 'region of relevance' and moved to oeo-model
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A protected area is a region of relevance that has the protected area role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Naturschutzgebiet"@de,
+        rdfs:label "protected area"@en
+    
+    EquivalentTo: 
+        OEO_00360020
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410013)
+    
+    SubClassOf: 
+        OEO_00360020
+    
+    
 Class: OEO_00280000
 
     Annotations: 
@@ -3644,39 +3860,54 @@ Class: OEO_00360026
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
+
+added \"'is defined by' value ROG\" relation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A priority region role is a role of a region of interest that gives high priority to building wind park projects, excluding building projects that are not compatible with this priority."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "See German spatial planning law: §7 Absatz 3 ROG: https://www.gesetze-im-internet.de/rog_2008/__7.html",
         rdfs:label "priority region role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00000504 value OEO_00410011
     
     
 Class: OEO_00360027
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
+
+added \"'is defined by' value ROG\" relation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A conditionally reserved region role is a role of a region of interest that is prioritised to be used for wind park projects during the planning process, without excluding incompatible building projects.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "See German spatial planning law: §7 Absatz 3 ROG: https://www.gesetze-im-internet.de/rog_2008/__7.html",
         rdfs:label "conditionally reserved region role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00000504 value OEO_00410011
     
     
 Class: OEO_00360028
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
+
+added \"'is defined by' value ROG\" relation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A suitable region role is a role of a region of interest that designates an agreeable location for wind park projects within the planning region while excluding the building of wind park projects in the rest of the planning region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "See German spatial planning law: §7 Absatz 3 ROG: https://www.gesetze-im-internet.de/rog_2008/__7.html",
         rdfs:label "suitable region role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00000504 value OEO_00410011
     
     
 Class: OEO_00360029
@@ -3769,7 +4000,11 @@ Class: OEO_00400012
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945
+
+Add uncertainty axioms
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1989
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2012",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Uncertainty of a model is a qualtity of a model that represents any departure from the unachievable ideal of complete determinism.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
         rdfs:comment "Uncertainty of a model is a situation of inadequate information, which can be of three sorts: inexactness, unreliability, and border with ignorance.",
@@ -3778,7 +4013,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
         OEO_00400037 some OEO_00400013,
-        OEO_00400038 some OEO_00400017
+        OEO_00400038 some OEO_00400017,
+        OEO_00400039 some OEO_00400043,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00020352
     
     
 Class: OEO_00400013
@@ -3849,12 +4086,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1977
 
 Add 'model uncertainty location axiom'
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1829
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1990",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1990
+
+Add uncertainty axioms
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1989
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2012",
         rdfs:label "model system boundary"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000274,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00400040,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://purl.obolibrary.org/obo/RO_0002577>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00400022
     
     
@@ -3891,6 +4134,95 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1990",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    
+Class: OEO_00410008
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Bird Sanctuary role is a protected area role for areas, aimed at protecting and conserving endangered and migratory bird species, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "See German nature conservation law: § 31 ff. BNatSchG, Netz „Natura 2000“: https://www.gesetze-im-internet.de/bnatschg_2009/BJNR254210009.html#BJNR254210009BJNG000600000",
+        rdfs:label "Bird Sanctuary role"@en
+    
+    SubClassOf: 
+        OEO_00410013,
+        OEO_00000504 value OEO_00410014
+    
+    
+Class: OEO_00410009
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A legislation is a plan specification that is produced by a government and enables, prohibits or bans activities, or establishes rights or responsibilities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Definition partly adapted from https://addictovocab.org/ADDICTO_0000488",
+        rdfs:label "legislation"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020093
+    
+    
+Class: OEO_00410010
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Fauna Flora Habitat role is a protected area role for areas, aimed at conserving natural habitats and wild fauna and flora, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "See German nature conservation law: § 31 ff. BNatSchG, Netz „Natura 2000“: https://www.gesetze-im-internet.de/bnatschg_2009/BJNR254210009.html#BJNR254210009BJNG000600000",
+        rdfs:label "Fauna Flora Habitat role"@en
+    
+    SubClassOf: 
+        OEO_00410013,
+        OEO_00000504 value OEO_00410014
+    
+    
+Class: OEO_00410012
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Fauna Flora Habitat is a protected area that has the Fauna Flora Habitat role, aimed at conserving natural habitats and wild fauna and flora, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Fauna Flora Habitat"@de,
+        rdfs:label "Fauna Flora Habitat"@en
+    
+    EquivalentTo: 
+        OEO_00240022
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410010)
+    
+    SubClassOf: 
+        OEO_00240022
+    
+    
+Class: OEO_00410013
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A protected area role is a role of a region of relevance recognised, dedicated and managed through legal or other effective means, to achieve the long term conservation of nature with associated ecosystem services and cultural values."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Definition partly adapted from IUCN protected area category V: https://en.wikipedia.org/wiki/IUCN_protected_area_categories#Category_V_%E2%80%93_protected_landscape_or_seascape",
+        rdfs:label "protected area role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00410016
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Bird Sanctuary is a protected area that has the Bird Sanctuary role, which is aimed at protecting and conserving endangered and migratory bird species, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Vogelschutzgebiet"@de,
+        rdfs:label "Bird Sanctuary"@en
+    
+    EquivalentTo: 
+        OEO_00240022
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410008)
+    
+    SubClassOf: 
+        OEO_00240022
     
     
 Individual: OEO_00000049
@@ -4575,5 +4907,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
     
     Types: 
         OEO_00400017
+    
+    
+Individual: OEO_00410011
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The ROG is a legislation providing the legal framework for spatial planning in Germany."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "German spatial planning law"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Raumordnungsgesetz"@de,
+        rdfs:label "ROG"@en
+    
+    Types: 
+        OEO_00410009
+    
+    
+Individual: OEO_00410014
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The BNatSchG is a legislation providing the legal framework for nature conservation and landscape management in Germany."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Bundesnaturschutzgesetz"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "German nature conservation law"@en,
+        rdfs:label "BNatSchG"@en
+    
+    Types: 
+        OEO_00410009
     
     
