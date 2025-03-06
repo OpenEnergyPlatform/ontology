@@ -10,7 +10,7 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.X.X] - 20XX-XX-XX
+## [2.7.0] - 2025-03-06
 
 
 ### Added
@@ -37,7 +37,6 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - uncertainty of a model, model, model system boundary (#2012)
 - solid (#2019)
 
-### Removed
 
 ## [2.6.0] - 2024-12-06
 
