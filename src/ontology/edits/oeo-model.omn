@@ -36,6 +36,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000600>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0006011>
 
     
@@ -76,6 +79,18 @@ AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: rdfs:Literal
+
+    
+Datatype: xsd:Name
+
+    
+Datatype: xsd:dateTime
+
+    
+Datatype: xsd:hexBinary
 
     
 Datatype: xsd:integer
@@ -549,6 +564,78 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944",
         rdfs:label "has time stamp alignment"@en
     
     
+ObjectProperty: OEO_00390071
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has study descriptor tag is a relation between a scenario bundle and an oeo class which is used as a study descriptor.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "OEO classes that are used as study descriptors are annotated by the annotation property \"oekg annotation\" with value \"study descriptor\".",
+        rdfs:label "has study descriptor tag"@en
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000001>
+    
+    
+ObjectProperty: OEO_00390073
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has scenario type is a relation between a scenario factsheet and a subclass of scenario.",
+        rdfs:label "has scenario type"@en
+    
+    Domain: 
+        OEO_00000365
+    
+    Range: 
+        OEO_00000364
+    
+    
+ObjectProperty: OEO_00390078
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000112> "http://openenergyplatform.org/ontology/oekg/region/Albania 
+has reference https://www.omg.org/spec/LCC/Countries/ISO3166-1-CountryCodes/Albania
+
+Here the region Albania in the oekg references the region Albania in the LCC ontology. In the same way any continuant may link to a document it is referencing.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has reference is the relation between a continuant and a reference that points to a relevant resource to the continuant.",
+        rdfs:label "has reference"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    Range: 
+        OEO_00000353
+    
+    
+ObjectProperty: OEO_00390101
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "covers technology is a relation that holds between a study and a technology covered in the study.",
+        rdfs:label "covers technology"@en
+    
+    SubPropertyOf: 
+        OEO_00000522
+    
+    Domain: 
+        OEO_00020011
+    
+    Range: 
+        OEO_00000407
+    
+    
 ObjectProperty: OEO_00400037
 
     Annotations: 
@@ -619,6 +706,108 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1834",
     
     
 DataProperty: OEO_00140178
+
+    
+DataProperty: OEO_00390094
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has iri is a relation between a data item or document and the IRI that identifies it as rescource on the internet.",
+        rdfs:label "has iri"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000027> or <http://purl.obolibrary.org/obo/IAO_0000310>
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: OEO_00390095
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has uuid is the relation between a factsheet or report and the 128-bit label used to identify it in a computer system.",
+        rdfs:label "has uuid"@en
+    
+    Domain: 
+        OEO_00000162 or <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:hexBinary
+    
+    
+DataProperty: OEO_00390096
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has publication date is the relation between a report and the year it was published in.",
+        rdfs:label "has publication date"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:dateTime
+    
+    
+DataProperty: OEO_00390097
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has report title is a relation between a report and its title.",
+        rdfs:label "has report title"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        xsd:Name
+    
+    
+DataProperty: OEO_00390098
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has doi is the relation between a digital object and the literal representing its doi (digital object identifier).",
+        rdfs:label "has doi"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000088>
+    
+    Range: 
+        rdfs:Literal
+    
+    
+DataProperty: OEO_00390100
+
+    Annotations: 
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "has creation date is the relation between a scenario bundle and the date it was created at.",
+        rdfs:label "has creation date"@en
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        xsd:dateTime
+    
+    
+DataProperty: owl:topDataProperty
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000001>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
@@ -1468,6 +1657,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
     DisjointWith: 
         OEO_00000149
     
+    
+Class: OEO_00000407
+
     
 Class: OEO_00000408
 
@@ -2763,8 +2955,7 @@ Class: OEO_00020352
 
     SubClassOf: 
         OEO_00140164 some <http://purl.obolibrary.org/obo/BFO_0000015>,
-        OEO_00140164 some <http://purl.obolibrary.org/obo/RO_0002577>,
-        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00400012
+        OEO_00140164 some <http://purl.obolibrary.org/obo/RO_0002577>
     
     
 Class: OEO_00020353
@@ -3809,7 +4000,11 @@ Class: OEO_00400012
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1829
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945
+
+Add uncertainty axioms
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1989
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2012",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Uncertainty of a model is a qualtity of a model that represents any departure from the unachievable ideal of complete determinism.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.researchgate.net/publication/264816512_Classifying_and_communicating_uncertainties_in_model-based_policy_analysis",
         rdfs:comment "Uncertainty of a model is a situation of inadequate information, which can be of three sorts: inexactness, unreliability, and border with ignorance.",
@@ -3818,7 +4013,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
         OEO_00400037 some OEO_00400013,
-        OEO_00400038 some OEO_00400017
+        OEO_00400038 some OEO_00400017,
+        OEO_00400039 some OEO_00400043,
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00020352
     
     
 Class: OEO_00400013
@@ -3889,12 +4086,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1977
 
 Add 'model uncertainty location axiom'
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/1829
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1990",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1990
+
+Add uncertainty axioms
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1989
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2012",
         rdfs:label "model system boundary"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000031>,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000274,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00400040,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some <http://purl.obolibrary.org/obo/RO_0002577>,
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00400022
     
     
@@ -5006,5 +5209,4 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2006",
     
     Types: 
         OEO_00410009
-    
     
