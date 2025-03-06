@@ -91,7 +91,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
 
-### Removed
+### Obsoletion
 - economic value, has economic value, economic value (#1931)
 - has bearer (#1928)
 
