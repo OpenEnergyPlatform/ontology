@@ -3592,6 +3592,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/878",
         OEO_00000078
     
     
+Class: OEO_00240022
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1052
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1078
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+made subclass of 'region of relevance' and moved to oeo-model
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A protected area is a region of relevance that has the protected area role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Naturschutzgebiet"@de,
+        rdfs:label "protected area"@en
+    
+    EquivalentTo: 
+        OEO_00360020
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410013)
+    
+    SubClassOf: 
+        OEO_00360020
+    
+    
 Class: OEO_00280000
 
     Annotations: 
@@ -3835,39 +3860,54 @@ Class: OEO_00360026
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
+
+added \"'is defined by' value ROG\" relation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A priority region role is a role of a region of interest that gives high priority to building wind park projects, excluding building projects that are not compatible with this priority."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "See German spatial planning law: §7 Absatz 3 ROG: https://www.gesetze-im-internet.de/rog_2008/__7.html",
         rdfs:label "priority region role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00000504 value OEO_00410011
     
     
 Class: OEO_00360027
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
+
+added \"'is defined by' value ROG\" relation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A conditionally reserved region role is a role of a region of interest that is prioritised to be used for wind park projects during the planning process, without excluding incompatible building projects.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "See German spatial planning law: §7 Absatz 3 ROG: https://www.gesetze-im-internet.de/rog_2008/__7.html",
         rdfs:label "conditionally reserved region role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00000504 value OEO_00410011
     
     
 Class: OEO_00360028
 
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
+
+added \"'is defined by' value ROG\" relation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A suitable region role is a role of a region of interest that designates an agreeable location for wind park projects within the planning region while excluding the building of wind park projects in the rest of the planning region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "See German spatial planning law: §7 Absatz 3 ROG: https://www.gesetze-im-internet.de/rog_2008/__7.html",
         rdfs:label "suitable region role"@en
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
+        <http://purl.obolibrary.org/obo/BFO_0000023>,
+        OEO_00000504 value OEO_00410011
     
     
 Class: OEO_00360029
@@ -4094,6 +4134,95 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1990",
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000002>
+    
+    
+Class: OEO_00410008
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Bird Sanctuary role is a protected area role for areas, aimed at protecting and conserving endangered and migratory bird species, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "See German nature conservation law: § 31 ff. BNatSchG, Netz „Natura 2000“: https://www.gesetze-im-internet.de/bnatschg_2009/BJNR254210009.html#BJNR254210009BJNG000600000",
+        rdfs:label "Bird Sanctuary role"@en
+    
+    SubClassOf: 
+        OEO_00410013,
+        OEO_00000504 value OEO_00410014
+    
+    
+Class: OEO_00410009
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A legislation is a plan specification that is produced by a government and enables, prohibits or bans activities, or establishes rights or responsibilities."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Definition partly adapted from https://addictovocab.org/ADDICTO_0000488",
+        rdfs:label "legislation"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020093
+    
+    
+Class: OEO_00410010
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Fauna Flora Habitat role is a protected area role for areas, aimed at conserving natural habitats and wild fauna and flora, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "See German nature conservation law: § 31 ff. BNatSchG, Netz „Natura 2000“: https://www.gesetze-im-internet.de/bnatschg_2009/BJNR254210009.html#BJNR254210009BJNG000600000",
+        rdfs:label "Fauna Flora Habitat role"@en
+    
+    SubClassOf: 
+        OEO_00410013,
+        OEO_00000504 value OEO_00410014
+    
+    
+Class: OEO_00410012
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Fauna Flora Habitat is a protected area that has the Fauna Flora Habitat role, aimed at conserving natural habitats and wild fauna and flora, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Fauna Flora Habitat"@de,
+        rdfs:label "Fauna Flora Habitat"@en
+    
+    EquivalentTo: 
+        OEO_00240022
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410010)
+    
+    SubClassOf: 
+        OEO_00240022
+    
+    
+Class: OEO_00410013
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A protected area role is a role of a region of relevance recognised, dedicated and managed through legal or other effective means, to achieve the long term conservation of nature with associated ecosystem services and cultural values."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Definition partly adapted from IUCN protected area category V: https://en.wikipedia.org/wiki/IUCN_protected_area_categories#Category_V_%E2%80%93_protected_landscape_or_seascape",
+        rdfs:label "protected area role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00410016
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A Bird Sanctuary is a protected area that has the Bird Sanctuary role, which is aimed at protecting and conserving endangered and migratory bird species, within the European \"Natura 2000\" network of protected areas."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Vogelschutzgebiet"@de,
+        rdfs:label "Bird Sanctuary"@en
+    
+    EquivalentTo: 
+        OEO_00240022
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410008)
+    
+    SubClassOf: 
+        OEO_00240022
     
     
 Individual: OEO_00000049
@@ -4778,5 +4907,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1945",
     
     Types: 
         OEO_00400017
+    
+    
+Individual: OEO_00410011
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The ROG is a legislation providing the legal framework for spatial planning in Germany."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "German spatial planning law"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Raumordnungsgesetz"@de,
+        rdfs:label "ROG"@en
+    
+    Types: 
+        OEO_00410009
+    
+    
+Individual: OEO_00410014
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1962
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1991",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The BNatSchG is a legislation providing the legal framework for nature conservation and landscape management in Germany."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Bundesnaturschutzgesetz"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "German nature conservation law"@en,
+        rdfs:label "BNatSchG"@en
+    
+    Types: 
+        OEO_00410009
     
     

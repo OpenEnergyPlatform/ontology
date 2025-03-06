@@ -10,10 +10,13 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.X.X] - 20XX-XX-XX
 
-## [2.x.x] - 
 
 ### Added
+- legislation, ROG, BNatSchG (#1991)
+- protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
+- Fauna Flora Habitat, Bird Sanctuary (#1991)
 - conceptual model (#1976)
 - imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
@@ -25,16 +28,16 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Changed
 - technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
-- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
-- apply socio-economic constraints for assessment of potential (#1995)
-- net capacity factor (#1995)
+- protected area, conditionally reserved region role, priority region role, suitable region role (#1991)
+- apply socio-economic constraints for assessment of potential, net capacity factor (#1995)
+- cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost (#1999)
 - has model(#2001)
-- model (#2007)
-- models (#2007)
-- cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost  (#1999)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
+- model, models (#2007)
 - uncertainty of a model, model, model system boundary (#2012)
 - solid (#2019)
 
+### Removed
 
 ## [2.6.0] - 2024-12-06
 
