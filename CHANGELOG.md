@@ -21,6 +21,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add dual licensing CC0-1.0 OR MIT (#2021)
 - add REUSE license check and copyright info (#2021)
 - import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
+- import from MENO ontology: energetic conversion process, energy decrease, energy increase, quality transfer + subclasses, quality transformation + subclasses(#2022)
 
 ### Changed
 - technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
