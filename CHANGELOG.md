@@ -17,6 +17,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - conceptual model (#1976)
 - imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
+- has iri, has study descriptor tag, has uuid, has scenario type, has publication date, has report title, has doi, has reference, based on sector division, has creation date, covers technology (#2020)
 - add dual licensing CC0-1.0 OR MIT (#2021)
 - add REUSE license check and copyright info (#2021)
 - import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
@@ -151,6 +152,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - has unit numerator, has unit denominator and subproperties (#1816)
 - compressor, compressor station and subclasses (#1818)
 - new units and prefixes from UO (#1820)
+- has associated axiom(sparql), shortcut relations for has information input/output, covers energy carrier, covers technology, covers sector (#2023)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
