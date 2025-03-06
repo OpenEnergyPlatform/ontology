@@ -12,14 +12,17 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ## [2.X.X] - 20XX-XX-XX
 
-
 ### Added
+- WHG, BWaldG (#2006)
+- biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
+- biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
 - legislation, ROG, BNatSchG (#1991)
 - protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
 - Fauna Flora Habitat, Bird Sanctuary (#1991)
 - conceptual model (#1976)
 - imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
+- arable land, arable land with poor soil quality, arable land with high soil quality, soil quality role, high soil quality role, poor soil quality role (#2006)
 - has iri, has study descriptor tag, has uuid, has scenario type, has publication date, has report title, has doi, has reference, based on sector division, has creation date, covers technology (#2020)
 - add dual licensing CC0-1.0 OR MIT (#2021)
 - add REUSE license check and copyright info (#2021)
