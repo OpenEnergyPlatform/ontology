@@ -1,10 +1,17 @@
-# Changelog
-All notable changes to this project will be documented in this file.
+<!--
+SPDX-FileCopyrightText: Open Energy Ontology (OEO) <https://github.com/OpenEnergyPlatform/ontology/>
+SPDX-License-Identifier: CC0-1.0 OR MIT
+-->
 
-The format is inspired from [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
-and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+# Changelog
+All notable changes to this project will be documented in this file. <br>
+For each version, important additions, changes and removals are listed here.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
+and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [2.X.X] - 20XX-XX-XX
+
 
 ### Added
 - legislation, ROG, BNatSchG (#1991)
@@ -13,22 +20,27 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - conceptual model (#1976)
 - imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
+- has iri, has study descriptor tag, has uuid, has scenario type, has publication date, has report title, has doi, has reference, based on sector division, has creation date, covers technology (#2020)
+- add dual licensing CC0-1.0 OR MIT (#2021)
+- add REUSE license check and copyright info (#2021)
+- import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
+- import from MENO ontology: energetic conversion process, energy decrease, energy increase, quality transfer + subclasses, quality transformation + subclasses(#2022)
 
 ### Changed
 - technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
-- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
-- apply socio-economic constraints for assessment of potential (#1995)
-- net capacity factor (#1995)
-- has model(#2001)
-- model (#2007)
-- models (#2007)
+- protected area, conditionally reserved region role, priority region role, suitable region role (#1991)
+- apply socio-economic constraints for assessment of potential, net capacity factor (#1995)
 - cost, delivery cost, fixed cost, investment cost, levelised cost of electricity, social cost of emission, system cost, variable cost (#1999)
-- protected area (#1991)
-- conditionally reserved region role, priority region role, suitable region role (#1991)
+- has model(#2001)
+- feasible potential determination method, techno-economic potential determination method, wind characteristics determination method, wind farm area determination method, wind potential determination method (#2005)
+- model, models (#2007)
+- uncertainty of a model, model, model system boundary (#2012)
+- solid (#2019)
 
 ### Removed
 
 ## [2.6.0] - 2024-12-06
+
 ### Added
 - has aggregation type, has time stamp alignment (#1944)
 - study descriptor (#1950)
@@ -54,8 +66,8 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - areal solar energy density (#1983)
 
 
-
 ## [2.5.0] - 2024-09-24
+
 ### Added
 - German alternative labels (#1883, #1895)
 - English language tags to existing alternative labels (#1883, #1895)
@@ -82,13 +94,13 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
 
-### Obsoletion
+### Removed
 - economic value, has economic value, economic value (#1931)
 - has bearer (#1928)
 
-### Removed
 
 ## [2.4.0] - 2024-07-01
+
 ### Added
 - subsector, has subsector, subsector of (#1788)
 - manufacturing technology, manufacturing plant, manufactured commodity (#1840)
@@ -106,6 +118,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 
 ### Removed
 - emission value (#1880)
+
 
 ## [2.3.0] - 2024-05-21
 
@@ -130,7 +143,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
 
-### Removed
 
 ## [2.2.0] - 2024-03-04
 
@@ -143,6 +155,7 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - has unit numerator, has unit denominator and subproperties (#1816)
 - compressor, compressor station and subclasses (#1818)
 - new units and prefixes from UO (#1820)
+- has associated axiom(sparql), shortcut relations for has information input/output, covers energy carrier, covers technology, covers sector (#2023)
 
 ### Changed
 - energy transfer function, energy transformation function and subclasses (#1785)
@@ -156,7 +169,6 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
 
-### Removed
 
 ## [2.1.0] - 2023-12-05
 
@@ -181,10 +193,12 @@ and the versioning aims to respect [Semantic Versioning](http://semver.org/spec/
 - data descriptor (#1775)
 - target description, policy instrument, policy (#1778)
 
+
 ## [2.0.1] - 2023-10-26
 
 ### Changed
 - unit, prefix, generically dependent continuant (#1741/#1742)
+
 
 ## [2.0.0] - 2023-10-25
 
@@ -221,7 +235,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - mobility technology, electric mobility technology (#1727)
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
 
-
 ### Changed
 - energy transformation (#1625)
 - waste role (#1638)
@@ -241,12 +254,12 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 ### Deprecated
 - belongs to module (#1732)
 
-## [1.16.1] - 2023-08-01
 
-### Added
+## [1.16.1] - 2023-08-01
 
 ### Changed
 - Update module files after saving with Protégé 5.6.1(#1628)
+
 
 ## [1.16.0] - 2023-08-01
 
@@ -277,6 +290,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 ### Removed
 - old competency question bash script (#1420)
 
+
 ## [1.15.0] - 2023-05-31
 
 ### Added
@@ -306,6 +320,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 ### Removed
 -  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
 
+
 ## [1.14.0] - 2023-03-30
 
 ### Added
@@ -328,6 +343,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - sector division (#1506)
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
+
 
 ## [1.13.0] - 2023-02-01
 
@@ -457,6 +473,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - battery storage (#1348)
 - csv and txt (#1371)
 
+
 ## [1.11.0] - 2022-07-04
 
 ### Added
@@ -482,7 +499,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - jet fuel (#1237)
 - fuel-powered electricity generation (#1240)
 - charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, steam, compressed air, pumped water (#1243)
-
 
 
 ## [1.10.1] - 2022-06-14
@@ -515,7 +531,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - has institution (#1200)
 - waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 
-### Removed
 
 ## [1.10.0] - 2022-05-09
 
@@ -555,7 +570,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - trades / is traded at, good, good role (#1127)
 - traction motor -> electric traction motor (#1135)
 
-### Removed
 
 ## [1.9.0] - 2022-03-01
 
@@ -606,6 +620,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - cost in oeo-social (#977)
 - organisation in oeo-social (#992)
 - oil and petroleum products (#1024)
+
 
 ## [1.8.0] - 2021-12-01
 
@@ -659,7 +674,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - ammonia (#959)
 - industrial waste fuel, municipal waste fuel, renewable municipal waste fuel, fossil municipal waste fuel (previously: non renewable municipal waste fuel) (#961)
 
-### Removed
 
 ## [1.7.0] - 2021-10-04
 
@@ -720,10 +734,12 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - molten state battery (#801)
 - duplicate model factsheet OEO:00020031 (#854)
 
+
 ## [1.6.1] - 2021-07-07
 
 ### Changed
 - commodity (#789)
+
 
 ## [1.6.0] - 2021-07-01
 
@@ -758,6 +774,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 ### Removed
 - hydroelectric dam energy transformation and run-off-river energy transformation (#758)
 
+
 ## [1.5.0] - 2021-05-03
 
 ### Added
@@ -774,7 +791,6 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - energy market exchange (#748)
 - public and private funders (#246)
 
-
 ### Changed
 - has physical output, has constraint (#716)
 - gross inland energy consumption, primary energy consumption (#719)
@@ -788,6 +804,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 ### Removed
 - has numerical input / output (#716)
 - computation time (#723)
+
 
 ## [1.4.0] - 2021-03-02
 
@@ -831,6 +848,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 ### Removed
 - delete hydroelectricity class (#682)
 
+
 ## [1.3.0] - 2020-12-18
 
 ### Added
@@ -857,6 +875,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - energy carrier disposition (#627)
 - comment on waste fuel (#631)
 - energy transformation has input/output energy (#690)
+
 
 ## [1.2.0] - 2020-10-30
 
@@ -886,6 +905,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 
 ### Removed
 - software maintenance (#566)
+
 
 ## [1.1.0] - 2020-09-01
 
@@ -920,6 +940,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 
 ### Removed
 - unused object properties (#452)
+
 
 ## [1.0.0] - 2020-06-11
 
