@@ -16,17 +16,26 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - WHG, BWaldG (#2006)
 - biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
 - biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
-- legislation, ROG, BNatSchG (#1991)
+- arable land, arable land with poor soil quality, arable land with high soil quality, soil quality role, high soil quality role, poor soil quality role (#2006)
 - protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
 - Fauna Flora Habitat, Bird Sanctuary (#1991)
+
+
+### Changed
+### Removed
+
+
+## [2.7.0] - 2025-03-06
+
+### Added
 - conceptual model (#1976)
-- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
 - model uncertainty location (#1990)
-- arable land, arable land with poor soil quality, arable land with high soil quality, soil quality role, high soil quality role, poor soil quality role (#2006)
+- legislation, ROG, BNatSchG, protected area role, Fauna Flora Habitat role, Bird Sanctuary role, Fauna Flora Habitat, Bird Sanctuary (#1991)
+- imports from stato: cutoff, lower confdence limit, upper confdence limit, statistic, measure of dispersion, confidence interval (#2002)
+- import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
 - has iri, has study descriptor tag, has uuid, has scenario type, has publication date, has report title, has doi, has reference, based on sector division, has creation date, covers technology (#2020)
 - add dual licensing CC0-1.0 OR MIT (#2021)
 - add REUSE license check and copyright info (#2021)
-- import from CCO event ontology: Change, Effect, Stasis and subclasses, has occurent part, occurrent part of and subproperties (#2016)
 - import from MENO ontology: energetic conversion process, energy decrease, energy increase, quality transfer + subclasses, quality transformation + subclasses(#2022)
 
 ### Changed
@@ -40,7 +49,6 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - uncertainty of a model, model, model system boundary (#2012)
 - solid (#2019)
 
-### Removed
 
 ## [2.6.0] - 2024-12-06
 
@@ -97,7 +105,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - replace term tracker item with term tracker annotation (#1922, #1923)
 - replace has bearer with characteristic of (#1928)
 
-### Removed
+### Obsoletion
 - economic value, has economic value, economic value (#1931)
 - has bearer (#1928)
 
