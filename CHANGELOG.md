@@ -17,8 +17,6 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
 - biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
 - arable land, arable land with poor soil quality, arable land with high soil quality, soil quality role, high soil quality role, poor soil quality role (#2006)
-- protected area role, Fauna Flora Habitat role, Bird Sanctuary role (#1991)
-- Fauna Flora Habitat, Bird Sanctuary (#1991)
 
 
 ### Changed
