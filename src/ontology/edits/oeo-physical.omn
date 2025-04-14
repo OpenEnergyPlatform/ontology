@@ -51,6 +51,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
+AnnotationProperty: <https://www.commoncoreontologies.org/ont00001754>
+
+    
 AnnotationProperty: OEO_00020425
 
     
@@ -85,6 +88,12 @@ AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:integer
 
     
 Datatype: xsd:string
@@ -695,6 +704,9 @@ ObjectProperty: OEO_00240025
 ObjectProperty: owl:topObjectProperty
 
     
+DataProperty: OEO_00140178
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -806,6 +818,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000114>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000122>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000217>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000223>
@@ -15865,6 +15880,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1900",
         <http://purl.obolibrary.org/obo/UO_1000114>
     
     
+Class: OEO_00410050
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage level is a quality inherent in an electricity grid, electricity grid component or energy system representing the electrical potential difference present during its operation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Spannungsebene"@de,
+        rdfs:label "voltage level"@en,
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    EquivalentTo: 
+        {OEO_00410051 , OEO_00410052 , OEO_00410053 , OEO_00410054}
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
+Class: OEO_00410055
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric potential difference value is a quantity value that has an electric potential difference unit as unit."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Spannungsmenge"@de,
+        rdfs:label "electric potential difference value"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>
+    
+    
 Individual: OEO_00000182
 
     Annotations: 
@@ -15920,6 +15962,66 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2019",
     
     Types: 
         OEO_00000395
+    
+    
+Individual: OEO_00410051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Niederspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "A low voltage level is a voltage level describing an electric potential difference of 400 volts.",
+        rdfs:label "low voltage level"@en,
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410050,
+        OEO_00140002 some 
+            (OEO_00410055
+             and (OEO_00140178 value 400))
+    
+    
+Individual: OEO_00410052
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A medium voltage level is a voltage level describing an electric potential difference between 10,000 and 30,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Mittelspannungsebene"@de,
+        rdfs:label "medium voltage level"@en,
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410050,
+        OEO_00140002 some 
+            (OEO_00410055
+             and (OEO_00140178 some xsd:decimal[>= 10000 , <= 30000]))
+    
+    
+Individual: OEO_00410053
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A high voltage level is a voltage level describing an electric potential difference of 110,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Hochspannungsebene"@de,
+        rdfs:label "high voltage level"@en,
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410050,
+        OEO_00140002 some 
+            (OEO_00410055
+             and (OEO_00140178 value 110000))
+    
+    
+Individual: OEO_00410054
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A extra high voltage level is a voltage level describing an electric potential difference between 220,000 and 380,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Höchstspannungsebene"@de,
+        rdfs:label "extra high voltage level"@en,
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410050,
+        OEO_00140002 some 
+            (OEO_00410055
+             and (OEO_00140178 some xsd:decimal[>= 220000 , <= 380000]))
     
     
 DisjointClasses: 
