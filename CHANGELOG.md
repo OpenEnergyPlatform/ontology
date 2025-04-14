@@ -13,6 +13,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- electricity transmission function, electricity distribution function (#2043)
 ### Changed
 ### Removed
 
