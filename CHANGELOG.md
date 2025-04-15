@@ -14,6 +14,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 ### Changed
+- vehicle operational mode (bug fix) (#2046)
 ### Removed
 
 
