@@ -13,6 +13,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- has scenario year value (#2045)
 ### Changed
 ### Removed
 
