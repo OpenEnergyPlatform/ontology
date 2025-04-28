@@ -11,7 +11,7 @@ GLOSSARY_HEADER = """# Existing Terms and Definitions
 
 """
 BASE_LINK_WIKI = "https://github.com/OpenEnergyPlatform/ontology/wiki/"
-BASE_IRI = "http://openenergy-platform.org/ontology/oeo/"
+BASE_IRI = "https://openenergyplatform.org/ontology/oeo/"
 
 if __name__ == '__main__':
     arguments = sys.argv[1:]
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     # create csv output
     df_csv = df.copy()
-    df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-physical/", "")
-    df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-model/", "")
+    df_csv["ID"] = df_csv["ID"].str.replace("https://openenergyplatform.org/ontology/oeo/oeo-physical/", "")
+    df_csv["ID"] = df_csv["ID"].str.replace("https://openenergyplatform.org/ontology/oeo/oeo-model/", "")
     df_csv["ID"] = df_csv["ID"].str.replace(":", "_")
     df_csv.to_csv(pathlib.Path(target_path).joinpath("glossary/glossary.csv").as_posix(), index=False)
