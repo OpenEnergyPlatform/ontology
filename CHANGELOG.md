@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 - electric potential difference value, voltage level, low voltage level, medium voltage level, high voltage level, extra high voltage level (#2042)
 ### Changed
+- vehicle operational mode (bug fix) (#2046)
 ### Removed
 
 
