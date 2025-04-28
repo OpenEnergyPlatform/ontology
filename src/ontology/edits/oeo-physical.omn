@@ -15880,23 +15880,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1900",
         <http://purl.obolibrary.org/obo/UO_1000114>
     
     
-Class: OEO_00410050
-
-    Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage level is a quality inherent in an electricity grid, electricity grid component or energy system representing the electrical potential difference present during its operation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Spannungsebene"@de,
-        rdfs:label "voltage level"@en,
-        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
-    
-    EquivalentTo: 
-        {OEO_00410051 , OEO_00410052 , OEO_00410053 , OEO_00410054}
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000019>
-    
-    
 Class: OEO_00410055
 
     Annotations: 
@@ -15909,6 +15892,76 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
     SubClassOf: 
         OEO_00000350,
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>
+    
+    
+Class: OEO_00410058
+
+    Annotations: 
+        rdfs:label "voltage classification system"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 OEO_00410060
+    
+    
+Class: OEO_00410059
+
+    Annotations: 
+        rdfs:label "operational voltage level"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00410060
+    
+    
+Class: OEO_00410060
+
+    Annotations: 
+        rdfs:label "voltage level"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00410059
+    
+    
+Class: OEO_00410062
+
+    Annotations: 
+        rdfs:label "low operational voltage level"@en
+    
+    SubClassOf: 
+        OEO_00410059,
+        <http://purl.obolibrary.org/obo/IAO_0000136> value OEO_00410051
+    
+    
+Class: OEO_00410063
+
+    Annotations: 
+        rdfs:label "medium operational voltage level"@en
+    
+    SubClassOf: 
+        OEO_00410059,
+        <http://purl.obolibrary.org/obo/IAO_0000136> value OEO_00410052
+    
+    
+Class: OEO_00410064
+
+    Annotations: 
+        rdfs:label "high operational voltage level"@en
+    
+    SubClassOf: 
+        OEO_00410059,
+        <http://purl.obolibrary.org/obo/IAO_0000136> value OEO_00410053
+    
+    
+Class: OEO_00410065
+
+    Annotations: 
+        rdfs:label "extra high operational voltage level"@en
+    
+    SubClassOf: 
+        OEO_00410059,
+        <http://purl.obolibrary.org/obo/IAO_0000136> value OEO_00410054
     
     
 Individual: OEO_00000182
@@ -15973,16 +16026,18 @@ Individual: OEO_00410051
     Annotations: 
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Niederspannungsebene"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "A low voltage level is a voltage level describing an electric potential difference of 400 volts.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Niederspannungsebene"@de,
         rdfs:label "low voltage level"@en,
         <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
     
     Types: 
-        OEO_00410050,
-        OEO_00140002 some 
-            (OEO_00410055
-             and (OEO_00140178 value 400))
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061,
+     OEO_00140178  400
     
     
 Individual: OEO_00410052
@@ -15996,10 +16051,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
         <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
     
     Types: 
-        OEO_00410050,
-        OEO_00140002 some 
-            (OEO_00410055
-             and (OEO_00140178 some xsd:decimal[>= 10000 , <= 30000]))
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>,
+        OEO_00140178 some xsd:decimal[>= 10000 , <= 30000]
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061
     
     
 Individual: OEO_00410053
@@ -16013,10 +16070,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
         <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
     
     Types: 
-        OEO_00410050,
-        OEO_00140002 some 
-            (OEO_00410055
-             and (OEO_00140178 value 110000))
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061,
+     OEO_00140178  110000
     
     
 Individual: OEO_00410054
@@ -16030,10 +16089,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
         <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
     
     Types: 
-        OEO_00410050,
-        OEO_00140002 some 
-            (OEO_00410055
-             and (OEO_00140178 some xsd:decimal[>= 220000 , <= 380000]))
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>,
+        OEO_00140178 some xsd:decimal[>= 220000 , <= 380000]
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061
+    
+    
+Individual: OEO_00410061
+
+    Annotations: 
+        rdfs:label "german voltage classification system"@en
+    
+    Types: 
+        OEO_00410058
     
     
 DisjointClasses: 
