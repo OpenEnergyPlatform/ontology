@@ -8,7 +8,7 @@ subst_paths =	${subst $(ONTOLOGY_SOURCE),$(VERSIONDIR),${patsubst $(ONTOLOGY_SOU
 OWL_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl"))
 OMN_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.omn"))
 
-OEP_BASE := http:\/\/openenergy-platform\.org\/ontology\/oeo
+OEP_BASE := https:\/\/openenergyplatform\.org\/ontology\/oeo
 
 OWL_COPY := $(OWL_FILES)
 

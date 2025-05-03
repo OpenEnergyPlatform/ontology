@@ -36,9 +36,9 @@ if __name__ == '__main__':
         if current_df.empty:
             continue
         buffer = current_df.to_markdown(index=False)
-        buffer = re.sub(r"(?s)(http:\/\/openenergy-platform.org\/ontology\/oeo\/?)\w+-\w+\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
+        buffer = re.sub(r"(?s)(https:\/\/openenergyplatform.org\/ontology\/oeo\/?)\w+-\w+\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
         # There is a weird typo in surface azimuth angle ?
-        buffer = re.sub(r"(?s)(http:\/\/opennergy-plattform.org\/ontology\/oeo\/?)\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
+        buffer = re.sub(r"(?s)(https:\/\/opennergyplattform.org\/ontology\/oeo\/?)\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
         # Remove the thing above when the typo is fixed 
         buffer =re.sub(r"(?s)(\w+?)(?=:):(\d+?)(?=\s)", r"[\1:\2]({}".format(BASE_IRI)+ r"\1_\2)", buffer)
         title = f"## {letter.capitalize()}\n\n"
