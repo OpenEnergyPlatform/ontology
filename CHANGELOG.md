@@ -21,6 +21,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Changed
 - vehicle operational mode (bug fix) (#2046)
+- energetic conversion process, energy transfer (bug fix) (#2061)
 ### Removed
 
 
