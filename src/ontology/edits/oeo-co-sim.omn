@@ -1,8 +1,162 @@
-format-version: 1.2
-data-version: http://openenergy-platform.org/ontology/oeo/dev/oeo-co-sim.omn
-import: http://openenergy-platform.org/ontology/oeo/dev/oeo-model.omn
-ontology: http://openenergy-platform.org/ontology/oeo/oeo-co-sim/
-property_value: http://purl.org/dc/elements/1.1/description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Co-Sim' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation." xsd:string
-property_value: http://purl.org/dc/terms/license "http://creativecommons.org/publicdomain/zero/1.0/" xsd:string
-property_value: http://purl.org/dc/terms/title "Open Energy Ontology (Modelling module)" xsd:string
+Prefix: : <http://openenergy-platform.org/ontology/oeo/oeo-co-sim/>
+Prefix: dc: <http://purl.org/dc/elements/1.1/>
+Prefix: owl: <http://www.w3.org/2002/07/owl#>
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+Prefix: xml: <http://www.w3.org/XML/1998/namespace>
+Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
+
+
+Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-co-sim/>
+<http://purl.obolibrary.org/obo/http://openenergy-platform.org/ontology/oeo/oeo-co-sim//http://openenergy-platform.org/ontology/oeo/dev/oeo-co-sim.omn/http://openenergy-platform.org/ontology/oeo/oeo-co-sim/.owl>
+Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-model.omn>
+
+Annotations: 
+    dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Co-Sim' module covers entities for models, assumptions, parameters, data, software and all the processes that transform these, including model execution and data transformation.",
+    <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
+    <http://purl.org/dc/terms/title> "Open Energy Ontology (Modelling module)",
+    <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> "1.2"
+
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/license>
+
+    
+AnnotationProperty: <http://purl.org/dc/terms/title>
+
+    
+AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion>
+
+    Annotations: 
+        rdfs:label "has_obo_format_version"
+    
+    
+AnnotationProperty: dc:description
+
+    
+AnnotationProperty: rdfs:label
+
+    
+Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:string
+
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420001>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An information content entity that is intended for use within simulation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Simulationskomponente"@de,
+        rdfs:label "simulation component"@de
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420002>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "a simulation component that is materialized through a discrete, standalone computational, executable model that represents a realworld system or process in a simplfied way."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Simulationsmodell"@de,
+        rdfs:label "simulation model"@en
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00420001>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420003>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation component that interacts with a hardware that fullfills the device under test role in a simulation"@en,
+        rdfs:label "simulation hardware component"@en
+    
+    SubClassOf: 
+        <http://openenergy-platform.org/ontology/oeo/OEO_00420001>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420004>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of a hardware that is analysed within a simulation."@en,
+        rdfs:label "device under test"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420005>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relational quality that describes how information is exchanged between connection points within a simulation"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Simulationsverbindung"@de,
+        rdfs:label "simulation connection"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000145>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420006>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A quality that describes which co-simulation frameworks support the integration of the simulation component."@en,
+        rdfs:label "co-simulation framework compatibility"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000019>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420010>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification that has simulation objective specifications as parts and contains a simulation configuration."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Simulationsszenario"@de,
+        rdfs:label "simulation scenario"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420011>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A plan specification that contains the technical setup describing simulation components, which are part of the simulation, their connections, and all the data necessary to be realized in a simulation process."@en,
+        rdfs:label "simulation configuration"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>
+    
+    
+Class: <http://openenergy-platform.org/ontology/oeo/OEO_00420012>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An objective specification that has the process endpoint to get output data for further analysis."@en,
+        rdfs:label "simulation objective specification"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000005>
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000019>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000023>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000145>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000005>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000030>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000104>
+
+    
