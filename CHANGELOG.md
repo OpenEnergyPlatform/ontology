@@ -13,6 +13,12 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- has scenario year value (#2045)
+- WHG, BWaldG (#2006)
+- biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
+- biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
+- arable land, arable land with poor soil quality, arable land with high soil quality, arable land role, arable land with poor soil quality role, arable land with high soil quality role (#2041)
+
 ### Changed
 - changed base IRI to https://openenergyplatform.org/
 - vehicle operational mode (bug fix) (#2046)
