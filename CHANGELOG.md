@@ -22,6 +22,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Changed
 - changed base IRI to https://openenergyplatform.org/
 - vehicle operational mode (bug fix) (#2046)
+- demand, efficiency value, final energy consumption value, process climate neutrality, material climate neutrality, primary energy consumption value, net electricity generation, climate neutrality criterion (#2063)
+
 ### Removed
 
 
