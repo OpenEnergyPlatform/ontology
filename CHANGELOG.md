@@ -19,6 +19,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
 - arable land, arable land with poor soil quality, arable land with high soil quality, arable land role, arable land with poor soil quality role, arable land with high soil quality role (#2041)
 - electricity transmission function, electricity distribution function (#2043)
+- prescribes, prescribed by, designates, designated by, describes, described by,represents, represented by (#2074)
 
 ### Changed
 - changed base IRI to https://openenergyplatform.org/
