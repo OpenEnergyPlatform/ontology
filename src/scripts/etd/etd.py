@@ -11,7 +11,7 @@ GLOSSARY_HEADER = """# Existing Terms and Definitions
 
 """
 BASE_LINK_WIKI = "https://github.com/OpenEnergyPlatform/ontology/wiki/"
-BASE_IRI = "http://openenergy-platform.org/ontology/oeo/"
+BASE_IRI = "https://openenergyplatform.org/ontology/oeo/"
 
 if __name__ == '__main__':
     arguments = sys.argv[1:]
@@ -36,9 +36,9 @@ if __name__ == '__main__':
         if current_df.empty:
             continue
         buffer = current_df.to_markdown(index=False)
-        buffer = re.sub(r"(?s)(http:\/\/openenergy-platform.org\/ontology\/oeo\/?)\w+-\w+\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
+        buffer = re.sub(r"(?s)(https:\/\/openenergyplatform.org\/ontology\/oeo\/?)\w+-\w+\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
         # There is a weird typo in surface azimuth angle ?
-        buffer = re.sub(r"(?s)(http:\/\/opennergy-plattform.org\/ontology\/oeo\/?)\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
+        buffer = re.sub(r"(?s)(https:\/\/opennergyplattform.org\/ontology\/oeo\/?)\/(\w+)(?=_)_(\d+?)(?=\s)", r"\2:\3", buffer)
         # Remove the thing above when the typo is fixed 
         buffer =re.sub(r"(?s)(\w+?)(?=:):(\d+?)(?=\s)", r"[\1:\2]({}".format(BASE_IRI)+ r"\1_\2)", buffer)
         title = f"## {letter.capitalize()}\n\n"
@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
     # create csv output
     df_csv = df.copy()
-    df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-physical/", "")
-    df_csv["ID"] = df_csv["ID"].str.replace("http://openenergy-platform.org/ontology/oeo/oeo-model/", "")
+    df_csv["ID"] = df_csv["ID"].str.replace("https://openenergyplatform.org/ontology/oeo/oeo-physical/", "")
+    df_csv["ID"] = df_csv["ID"].str.replace("https://openenergyplatform.org/ontology/oeo/oeo-model/", "")
     df_csv["ID"] = df_csv["ID"].str.replace(":", "_")
     df_csv.to_csv(pathlib.Path(target_path).joinpath("glossary/glossary.csv").as_posix(), index=False)

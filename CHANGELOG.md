@@ -18,9 +18,15 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
 - biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
 - arable land, arable land with poor soil quality, arable land with high soil quality, arable land role, arable land with poor soil quality role, arable land with high soil quality role (#2041)
+- wind power density (#2067)
+- electricity transmission function, electricity distribution function (#2043)
 - grid component role (#2054)
+
 ### Changed
+- changed base IRI to https://openenergyplatform.org/
 - vehicle operational mode (bug fix) (#2046)
+- demand, efficiency value, final energy consumption value, process climate neutrality, material climate neutrality, primary energy consumption value, net electricity generation, climate neutrality criterion (#2063)
+
 ### Removed
 
 
