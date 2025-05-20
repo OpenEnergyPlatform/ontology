@@ -36,6 +36,9 @@ AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000119>
 
     
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000600>
 
     
@@ -89,6 +92,32 @@ Datatype: rdf:PlainLiteral
     
 Datatype: xsd:string
 
+    
+ObjectProperty: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00010238>
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is used in the artificial object or process.",
+        rdfs:label "has energy participant"@en
+    
+    Domain: 
+        OEO_00000061 or <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
+    
+    InverseOf: 
+        OEO_00020182
+    
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
@@ -695,6 +724,21 @@ ObjectProperty: OEO_00240025
 ObjectProperty: owl:topObjectProperty
 
     
+Class: OEO_00400054
+
+    Annotations: 
+        OEO_00110012 "WPD = 0.5 * air density * ([wind speed]^3).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Wind power density (WPD) is a quantity value of the power wind has in a specific area.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Windleistungsdichte"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "Issue: https://github.com/OpenEnergyPlatform/ontology/pull/1997
+Pull Request: https://github.com/OpenEnergyPlatform/ontology/pull/2067",
+        rdfs:label "wind power density"@en
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000155>
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -806,6 +850,9 @@ Class: <http://purl.obolibrary.org/obo/UO_0000114>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000122>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000155>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000223>
@@ -9431,7 +9478,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+dependence to 'grid component role'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2054",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component is an energy transformation unit that is a discrete part of a supply grid serving a specific purpose. A grid component is defined by having a grid component role."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Netzkomponente"@de,
+        rdfs:label "grid component"@en
+    
+    EquivalentTo: 
+        OEO_00020102
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00410067)
     
     SubClassOf: 
         OEO_00020102,
@@ -15936,6 +15994,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2043",
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
         <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000200
+    
+    
+Class: OEO_00410067
+
+    Annotations: 
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2054",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A grid component role is a role of an energy transformation unit that is a discrete part of a supply grid serving a specific purpose."@en,
+        rdfs:label "grid component role"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
     
     
 Individual: OEO_00000182
