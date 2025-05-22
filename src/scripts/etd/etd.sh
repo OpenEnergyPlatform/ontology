@@ -12,7 +12,7 @@ robot merge --input "$ONTO_PATH""oeo.omn" \
             --input "$ONTO_PATH""edits/oeo-social.omn" \
             --include-annotations true \
     export  --header "LABEL|ID|definition" \
-            --prefix "OEO: http://openenergy-platform.org/ontology/oeo/OEO_" \
+            --prefix "OEO: https://openenergyplatform.org/ontology/oeo/OEO_" \
             --sort "LABEL" \
             --export "$ETD_PATH""etd.xlsx"
 python3 etd.py
