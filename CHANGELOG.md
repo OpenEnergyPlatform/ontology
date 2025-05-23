@@ -29,7 +29,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - grid component (#2054)
 
 ### Removed
-
+- has creation date, has report title (#2079)
 
 ## [2.7.0] - 2025-03-06
 
