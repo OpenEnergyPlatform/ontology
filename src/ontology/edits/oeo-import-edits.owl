@@ -32,12 +32,6 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
     
 
 
-    <!-- https://openenergyplatform.org/ontology/oeo/OEO_00020426 -->
-
-    <owl:AnnotationProperty rdf:about="https://openenergyplatform.org/ontology/oeo/OEO_00020426"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
@@ -77,6 +71,12 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
     <!-- http://purl.org/dc/terms/title -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- https://openenergyplatform.org/ontology/oeo/OEO_00020426 -->
+
+    <owl:AnnotationProperty rdf:about="https://openenergyplatform.org/ontology/oeo/OEO_00020426"/>
     
 
 
@@ -459,18 +459,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_
     
 
 
-    <!-- https://openenergyplatform.org/ontology/oeo/OEO_00020003 -->
-
-    <owl:Class rdf:about="https://openenergyplatform.org/ontology/oeo/OEO_00020003"/>
-    
-
-
-    <!-- https://openenergyplatform.org/ontology/oeo/OEO_00020103 -->
-
-    <owl:Class rdf:about="https://openenergyplatform.org/ontology/oeo/OEO_00020103"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/BFO_0000002 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002"/>
@@ -575,6 +563,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1485</oeo:OEO_
         <oeo:OEO_00020426>Add &apos;has licence&apos; axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1275
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1547
+
 move axiom to oeo-model
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1738</oeo:OEO_00020426>
     </owl:Class>
@@ -585,10 +574,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1738</oeo:OEO_
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000013">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000088"/>
+        <rdfs:comment>IAO provides two parent classes, from which only &quot;report&quot; in imported to OEO.</rdfs:comment>
         <oeo:OEO_00020426>add subclass axiom to report
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1700
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1754</oeo:OEO_00020426>
-        <rdfs:comment>IAO provides two parent classes, from which only &quot;report&quot; in imported to OEO.</rdfs:comment>
     </owl:Class>
     
 
@@ -737,6 +726,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1133</oeo:OEO_
     <!-- http://purl.obolibrary.org/obo/UO_0000000 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/UO_0000000">
+        <obo:IAO_0000118 xml:lang="en">unit of measurement</obo:IAO_0000118>
         <oeo:OEO_00020426>issue: https://github.com/OpenEnergyPlatform/ontology/issues/533
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/537
 renaming
@@ -746,7 +736,6 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1741
 Delete SubClassOf axiom, add EquivalentTo axiom and restore definition from UO:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1871
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1892</oeo:OEO_00020426>
-        <obo:IAO_0000118 xml:lang="en">unit of measurement</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -759,6 +748,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1892</oeo:OEO_
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1690
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1820</oeo:OEO_00020426>
     </owl:Class>
+    
+
+
+    <!-- https://openenergyplatform.org/ontology/oeo/OEO_00020003 -->
+
+    <owl:Class rdf:about="https://openenergyplatform.org/ontology/oeo/OEO_00020003"/>
+    
+
+
+    <!-- https://openenergyplatform.org/ontology/oeo/OEO_00020103 -->
+
+    <owl:Class rdf:about="https://openenergyplatform.org/ontology/oeo/OEO_00020103"/>
     
 
 
@@ -880,9 +881,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022</oeo:OEO_
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>In CCO, the SubClassOf axioms are actually anonymous ancestors and inherited from process (BFO 2020).</rdfs:comment>
         <oeo:OEO_00020426>issue https://github.com/OpenEnergyPlatform/ontology/issues/2014
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_00020426>
-        <rdfs:comment>In CCO, the SubClassOf axioms are actually anonymous ancestors and inherited from process (BFO 2020).</rdfs:comment>
     </owl:Class>
     
 
@@ -939,9 +940,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>In CCO, the SubClassOf axioms are actually anonymous ancestors and inherited from process (BFO 2020).</rdfs:comment>
         <oeo:OEO_00020426>issue https://github.com/OpenEnergyPlatform/ontology/issues/2014
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_00020426>
-        <rdfs:comment>In CCO, the SubClassOf axioms are actually anonymous ancestors and inherited from process (BFO 2020).</rdfs:comment>
     </owl:Class>
     
 
@@ -975,9 +976,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>In CCO, the SubClassOf axioms are actually anonymous ancestors and inherited from process (BFO 2020).</rdfs:comment>
         <oeo:OEO_00020426>issue https://github.com/OpenEnergyPlatform/ontology/issues/2014
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_00020426>
-        <rdfs:comment>In CCO, the SubClassOf axioms are actually anonymous ancestors and inherited from process (BFO 2020).</rdfs:comment>
     </owl:Class>
     
 
