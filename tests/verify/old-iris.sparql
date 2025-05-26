@@ -1,0 +1,14 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#> 
+SELECT ?old_iris
+WHERE { 
+    { ?old_iris a owl:Class . }
+    UNION 
+    { ?old_iris a owl:ObjectProperty . } 
+    UNION 
+    { ?old_iris a owl:AnnotationProperty . } 
+    UNION 
+    { ?old_iris a owl:NamedIndividual . } 
+    FILTER (!isBlank(?old_iris))
+    FILTER (strstarts(str(?old_iris), "https://openenergy-platform.org") || 
+            strstarts(str(?old_iris), "http://openenergy"))
+}
