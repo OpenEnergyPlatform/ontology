@@ -28,6 +28,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - demand, efficiency value, final energy consumption value, process climate neutrality, material climate neutrality, primary energy consumption value, net electricity generation, climate neutrality criterion (#2063)
 - grid component (#2054)
 - has uuid (#2077)
+- electricity grid, energy transfer function (#2073)
 
 ### Removed
 - has creation date, has report title (#2079)
