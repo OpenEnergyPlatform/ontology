@@ -10,5 +10,7 @@ WHERE {
     { ?old_iris a owl:NamedIndividual . } 
     FILTER (!isBlank(?old_iris))
     FILTER (strstarts(str(?old_iris), "https://openenergy-platform.org") || 
-            strstarts(str(?old_iris), "http://openenergy"))
+            strstarts(str(?old_iris), "http://openenergy") ||
+            strstarts(str(?old_iris), "http://www.openenergy") ||
+            strstarts(str(?old_iris), "https://www.openenergy"))
 }
