@@ -3,7 +3,7 @@ SPDX-FileCopyrightText: Open Energy Ontology (OEO) <https://github.com/OpenEnerg
 SPDX-License-Identifier: CC0-1.0 OR MIT
 -->
 
-<a href="https://openenergy-platform.org/"><img align="right" width="200" height="200" src="https://avatars2.githubusercontent.com/u/37101913?s=400&u=9b593cfdb6048a05ea6e72d333169a65e7c922be&v=4" alt="OpenEnergyPlatform"></a>
+<a href="https://openenergyplatform.org/"><img align="right" width="200" height="200" src="https://avatars2.githubusercontent.com/u/37101913?s=400&u=9b593cfdb6048a05ea6e72d333169a65e7c922be&v=4" alt="OpenEnergyPlatform"></a>
 
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-green.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit)
@@ -33,12 +33,12 @@ To cite a specific class of the ontology and its definition please use the follo
 > 'class label' (FUll-URI) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
 
 Example:
-> 'energy system' (https://openenergy-platform.org/ontology/oeo/OEO_00030024) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
+> 'energy system' (https://openenergyplatform.org/ontology/oeo/OEO_00030024) from the [Open Energy Ontology (OEO)](https://github.com/OpenEnergyPlatform/ontology)
 
 
 ## Releases and installation
 
-The latest version of the OEO can be accessed on the [Open Energy Platform](https://openenergy-platform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
+The latest version of the OEO can be accessed on the [Open Energy Platform](https://openenergyplatform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
 All released versions can be downloaded directly from the [GitGub Releases](https://github.com/OpenEnergyPlatform/ontology/releases/). <br>
 The currently developed version is available on the default [dev Branch](https://github.com/OpenEnergyPlatform/ontology/).
 
@@ -52,7 +52,7 @@ The following diagram illustrates the modular file structure of the OEO. It depi
 
 The imported modules are under `src/ontology/imports/` <br>
 To get an overview of the existing modules, take a look at the following wiki article: [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO)
-We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology. Additionally, an ontology viewer is available on the [Open Energy Platform](https://openenergy-platform.org/viewer/oeo/).
+We recommend to use the software [Protégé](https://protege.stanford.edu/) to open and edit the ontology. Additionally, an ontology viewer is available on the [Open Energy Platform](https://openenergyplatform.org/viewer/oeo/).
 
 
 ## Collaboration
@@ -98,7 +98,7 @@ The OEO is organised in a general team and several [subteams](https://github.com
 - [@oeo-concept-owner](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-concept-owner)
     - Strategic and long-term development and coordination of developers
 - [@oeo-steering-committee](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-steering-committee)
-    - Members of the [Steering Committee (OEO-SC)](https://openenergy-platform.org/ontology/oeo-steering-committee/)
+    - Members of the [Steering Committee (OEO-SC)](https://openenergyplatform.org/ontology/oeo-steering-committee/)
 - [@oeo-release-team](https://github.com/orgs/OpenEnergyPlatform/teams/oeo-release-team)
     - Coordinates the periodic releases
 

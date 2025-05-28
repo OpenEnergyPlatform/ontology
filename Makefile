@@ -8,7 +8,7 @@ subst_paths =	${subst $(ONTOLOGY_SOURCE),$(VERSIONDIR),${patsubst $(ONTOLOGY_SOU
 OWL_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl"))
 OMN_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.omn"))
 
-OEP_BASE := http:\/\/openenergy-platform\.org\/ontology\/oeo
+OEP_BASE := https:\/\/openenergyplatform\.org\/ontology\/oeo
 
 OWL_COPY := $(OWL_FILES)
 
@@ -101,7 +101,7 @@ $(VERSIONDIR)/%.omn: $(ONTOLOGY_SOURCE)/%.omn
 	$(call replace_devs,$@)
 
 $(VERSIONDIR)/oeo-full.owl : | base
-	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.owl $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml $(foreach f, $(VERSIONDIR)/oeo.owl $(OMN_COPY) $(OWL_COPY), --input $(f)) annotate --ontology-iri https://openenergyplatform.org/ontology/oeo/ --output $@
 	$(call replace_oms,$@)
 
 $(VERSIONDIR)/oeo-full.omn : $(VERSIONDIR)/oeo-full.owl
@@ -109,5 +109,5 @@ $(VERSIONDIR)/oeo-full.omn : $(VERSIONDIR)/oeo-full.owl
 	$(call replace_owls,$@)
 
 $(VERSIONDIR)/oeo-closure.owl : $(VERSIONDIR)/oeo-full.owl
-	$(ROBOT) reason --input $< --reasoner hermit --catalog $(VERSIONDIR)/catalog-v001.xml --axiom-generators "SubClass EquivalentClass DataPropertyCharacteristic EquivalentDataProperties SubDataProperty ClassAssertion EquivalentObjectProperty InverseObjectProperties ObjectPropertyCharacteristic SubObjectProperty ObjectPropertyRange ObjectPropertyDomain" --include-indirect true annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
-	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input $< --input $@ annotate --ontology-iri http://openenergy-platform.org/ontology/oeo/ --output $@
+	$(ROBOT) reason --input $< --reasoner hermit --catalog $(VERSIONDIR)/catalog-v001.xml --axiom-generators "SubClass EquivalentClass DataPropertyCharacteristic EquivalentDataProperties SubDataProperty ClassAssertion EquivalentObjectProperty InverseObjectProperties ObjectPropertyCharacteristic SubObjectProperty ObjectPropertyRange ObjectPropertyDomain" --include-indirect true annotate --ontology-iri https://openenergyplatform.org/ontology/oeo/ --output $@
+	$(ROBOT) merge --catalog $(VERSIONDIR)/catalog-v001.xml --input $< --input $@ annotate --ontology-iri https://openenergyplatform.org/ontology/oeo/ --output $@
