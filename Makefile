@@ -2,7 +2,7 @@ MKDIR_P = mkdir -p
 VERSION:= $(shell cat VERSION)
 VERSIONDIR := build/oeo/$(VERSION)
 ONTOLOGY_SOURCE := src/ontology
-
+IMPORTS := $(ONTOLOGY_SOURCE)/imports
 subst_paths =	${subst $(ONTOLOGY_SOURCE),$(VERSIONDIR),${patsubst $(ONTOLOGY_SOURCE)/edits/%,$(ONTOLOGY_SOURCE)/modules/%,$(1)}}
 
 OWL_FILES := $(call subst_paths,$(shell find $(ONTOLOGY_SOURCE)/* -type f -name "*.owl"))
@@ -52,6 +52,8 @@ endef
 
 all: base merge closure
 
+imports: directories $(IMPORTS)/ro-extracted.owl $(IMPORTS)/iao-extracted.owl $(IMPORTS)/uo-extracted.owl
+
 base: | directories $(VERSIONDIR)/catalog-v001.xml build/robot.jar $(OWL_COPY) $(OMN_COPY) $(OMN_TRANSLATE)
 
 merge: | $(VERSIONDIR)/oeo-full.omn
@@ -61,7 +63,19 @@ closure: | $(VERSIONDIR)/oeo-closure.owl
 clean:
 	- $(RM) -r $(VERSIONDIR) $(ROBOT_PATH)
 
+clean-imports:
+	- $(RM) -r $(IMPORTS)/*.owl
+
 directories: ${VERSIONDIR}/imports ${VERSIONDIR}/modules
+
+$(IMPORTS)/iao-extracted.owl: $(ROBOT_PATH)
+	bash oeo-tools/oeo-imports/iao/extract-iao-module.sh
+
+$(IMPORTS)/ro-extracted.owl: $(ROBOT_PATH)
+	bash oeo-tools/oeo-imports/ro/extract-from-relations-ontology.sh
+
+$(IMPORTS)/uo-extracted.owl: $(ROBOT_PATH)
+	bash oeo-tools/oeo-imports/uo/extract-uo-module.sh
 
 ${VERSIONDIR}/imports:
 	${MKDIR_P} ${VERSIONDIR}/imports
@@ -75,7 +89,7 @@ $(VERSIONDIR)/catalog-v001.xml: src/ontology/catalog-v001.xml
 	sed -i -E "s/edits\//modules\//m" $@
 
 build/robot.jar: | build
-	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.2/robot.jar
+	curl -L -o $@ https://github.com/ontodev/robot/releases/download/v1.9.6/robot.jar
 
 
 $(VERSIONDIR)/%.owl: $(VERSIONDIR)/%.omn
