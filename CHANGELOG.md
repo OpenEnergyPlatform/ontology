@@ -31,6 +31,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - electricity transmission function, electricity distribution function (#2043)
 - grid component role (#2054)
 - CCO import: prescribes, prescribed by, designates, designated by, describes, described by, represents, represented by (#2074)
+- quarter-hourly, every minute, every ten-minutes
 
 ### Changed
 - changed base IRI to https://openenergyplatform.org/
