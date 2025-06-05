@@ -13,17 +13,36 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+
+### Changed
+
+### Removed
+
+
+## [2.8.0] - 2025-05-28
+
+### Added
 - has scenario year value (#2045)
 - WHG, BWaldG (#2006)
 - biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
 - biosphere reserve, protected landscape area, water protection area, floodplain, forest (#2006)
 - arable land, arable land with poor soil quality, arable land with high soil quality, arable land role, arable land with poor soil quality role, arable land with high soil quality role (#2041)
+- wind power density (#2067)
+- electricity transmission function, electricity distribution function (#2043)
+- grid component role (#2054)
+- CCO import: prescribes, prescribed by, designates, designated by, describes, described by, represents, represented by (#2074)
 
 ### Changed
+- changed base IRI to https://openenergyplatform.org/
 - vehicle operational mode (bug fix) (#2046)
+- demand, efficiency value, final energy consumption value, process climate neutrality, material climate neutrality, primary energy consumption value, net electricity generation, climate neutrality criterion (#2063)
+- grid component (#2054)
+- has uuid (#2077)
+- electricity grid, energy transfer function (#2073)
 - energetic conversion process, energy transfer (bug fix) (#2061)
-### Removed
 
+### Removed
+- has creation date, has report title (#2079)
 
 ## [2.7.0] - 2025-03-06
 
