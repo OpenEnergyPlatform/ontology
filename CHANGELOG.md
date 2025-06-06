@@ -13,6 +13,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- add new module file for co-simulation ontology (#2090)
 
 ### Changed
 
