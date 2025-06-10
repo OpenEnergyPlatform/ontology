@@ -13,6 +13,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- voltage classification system, german voltage classification system (#2042)
+- operational voltage level, low operational voltage level, medium operational voltage level, high operational voltage level, extra high operational voltage level (#2042)
+- voltage level, low voltage level, medium voltage level, high voltage level, extra high voltage level (#2042)
 
 ### Changed
 
