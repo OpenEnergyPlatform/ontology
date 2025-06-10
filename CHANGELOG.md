@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 
 ### Changed
+- 'has information content entity' renamed to 'is subject of' (#2092)
 
 ### Removed
 
