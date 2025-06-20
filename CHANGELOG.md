@@ -18,6 +18,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 
 ### Changed
+- air, water, biomass, biofuel, nuclear fuel (#2095)
 
 ### Removed
 
