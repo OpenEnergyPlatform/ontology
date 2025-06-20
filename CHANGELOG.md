@@ -14,6 +14,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 - add new module file for co-simulation ontology (#2090)
+- multi-criteria decision analysis (#2091)
+
 
 ### Changed
 
