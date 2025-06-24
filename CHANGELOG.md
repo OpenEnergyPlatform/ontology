@@ -16,6 +16,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - voltage classification system, german voltage classification system (#2042)
 - operational voltage level, low operational voltage level, medium operational voltage level, high operational voltage level, extra high operational voltage level (#2042)
 - voltage level, low voltage level, medium voltage level, high voltage level, extra high voltage level (#2042)
+- add new module file for co-simulation ontology (#2090)
+- multi-criteria decision analysis (#2091)
 
 ### Changed
 
@@ -34,6 +36,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - electricity transmission function, electricity distribution function (#2043)
 - grid component role (#2054)
 - CCO import: prescribes, prescribed by, designates, designated by, describes, described by, represents, represented by (#2074)
+- quarter-hourly, every minute, every ten minutes (#2087)
 
 ### Changed
 - changed base IRI to https://openenergyplatform.org/
@@ -42,6 +45,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - grid component (#2054)
 - has uuid (#2077)
 - electricity grid, energy transfer function (#2073)
+- energetic conversion process, energy transfer (bug fix) (#2061)
 
 ### Removed
 - has creation date, has report title (#2079)
