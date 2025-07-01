@@ -102,32 +102,6 @@ Datatype: xsd:integer
 Datatype: xsd:string
 
     
-ObjectProperty: OEO_00010238
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is used in the artificial object or process.",
-        rdfs:label "has energy participant"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
-
-move to oeo-shared:
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
-
-rework module structure 
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
-    
-    Range: 
-        OEO_00000150
-    
-    InverseOf: 
-        OEO_00020182
-    
-    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000050>
 
     
@@ -546,6 +520,32 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
         OEO_00000150
     
     
+ObjectProperty: OEO_00010238
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is used in the artificial object or process.",
+        rdfs:label "has energy participant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
+    
+    Range: 
+        OEO_00000150
+    
+    InverseOf: 
+        OEO_00020182
+    
+    
 ObjectProperty: OEO_00010473
 
     
@@ -578,7 +578,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
         <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
     
     InverseOf: 
-        <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00010238>
+        <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00010238>,
+        OEO_00010238
     
     
 ObjectProperty: OEO_00020183
@@ -16038,6 +16039,7 @@ Class: OEO_00410059
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An operational voltage level is an objective specification that prescribes the intended operating voltage of some electrical artifact."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "definition partly adapted from: https://dlr-ve-esy.github.io/charging-ontology/CHIO_00000091.html",
+        rdfs:comment "An objective specification always describes an intended process endpoint. In the case of an operational voltage level, this endpoint concerns the micro-process of returning the voltage within an electrical artifact to its designated level after any deviation. Thus, the process endpoint is characterized by the restoration of the target voltage level in the given electrical artifact."@en,
         rdfs:label "operational voltage level"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
