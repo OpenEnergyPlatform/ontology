@@ -20,6 +20,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
 - 'has information content entity' renamed to 'is subject of' (#2092)
+- update license and citation (#2096)
 
 ### Removed
 
