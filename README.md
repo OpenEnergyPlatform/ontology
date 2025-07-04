@@ -25,12 +25,12 @@ This domain ontology is a collaborative effort to represent the context of **ene
 
 ## License / Copyright
 
-This repository is dual-licensed under [Creative Commons Zero v1.0 Universal (CC0-1.0)](https://creativecommons.org/publicdomain/zero/1.0/legalcode) or [MIT License (MIT)](https://opensource.org/license/mit). <br>
+This repository is **dual-licensed** under [Creative Commons Zero v1.0 Universal (CC0-1.0)](https://creativecommons.org/publicdomain/zero/1.0/legalcode) or [MIT License (MIT)](https://opensource.org/license/mit). <br>
 You can choose between one of them if you use this work. <br>
 
 ## Citation
 
-For scientific citation of this ontology, please refer to the [CITATION.cff](CITATION.cff) file. <br>
+For **scientific citation** of this ontology, please refer to the [CITATION.cff](CITATION.cff) file. <br>
 If you cite this work in a publication, please reference the following article: <br>
 Booshehri, Meisam, et al. "Introducing the Open Energy Ontology: Enhancing data interpretation and interfacing in energy systems analysis."
 Energy and AI 5 (2021): 100074. [10.1016/j.egyai.2021.100074](http://dx.doi.org/10.1016/j.egyai.2021.100074)
