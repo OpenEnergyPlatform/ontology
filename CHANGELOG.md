@@ -21,6 +21,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - air, water, biomass, biofuel, nuclear fuel (#2095)
 - 'has information content entity' renamed to 'is subject of' (#2092)
 - update license and citation (#2096)
+- 'target description' renamed to 'legal target description' (#2102)
+- 'goal description' made a subclass of 'objective specification' (#2102)
 
 ### Removed
 
