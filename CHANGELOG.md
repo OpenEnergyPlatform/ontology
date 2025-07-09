@@ -16,12 +16,13 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add new module file for co-simulation ontology (#2090)
 - multi-criteria decision analysis (#2091)
 
-
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
 - 'has information content entity' renamed to 'is subject of' (#2092)
 - update license and citation (#2096)
 - causally related to (#2104)
+- 'target description' renamed to 'legal target description' (#2102)
+- 'goal description' made a subclass of 'objective specification' (#2102)
 
 ### Removed
 
