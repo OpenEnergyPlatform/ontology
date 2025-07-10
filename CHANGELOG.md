@@ -15,7 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 - add new module file for co-simulation ontology (#2090)
 - multi-criteria decision analysis (#2091)
-
+- RO import: regulates characteristic, positively regulates characteristic, negatively regulates (#2094)
 
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
@@ -23,6 +23,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - update license and citation (#2096)
 - 'target description' renamed to 'legal target description' (#2102)
 - 'goal description' made a subclass of 'objective specification' (#2102)
+
 
 ### Removed
 
