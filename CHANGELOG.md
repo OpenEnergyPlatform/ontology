@@ -20,7 +20,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - operational voltage level, low operational voltage level, medium operational voltage level, high operational voltage level, extra high operational voltage level (#2042)
 - voltage level, low voltage level, medium voltage level, high voltage level, extra high voltage level (#2042)
 - CCO import: Performance Specification (#2108)
-- rated voltage (#2108)
+- rated voltage, low rated voltage, medium rated voltage, high rated voltage, extra high rated voltage (#2108)
 
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
@@ -30,6 +30,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - 'target description' renamed to 'legal target description' (#2102)
 - 'goal description' made a subclass of 'objective specification' (#2102)
 - electricity grid (#2042)
+- electricity grid voltage level, electricity grid component (#2108)
 
 ### Removed
 
