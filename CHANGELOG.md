@@ -17,8 +17,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - multi-criteria decision analysis (#2091)
 - RO import: regulates characteristic, positively regulates characteristic, negatively regulates (#2094)
 - voltage classification system, german voltage classification system (#2042)
-- operational voltage level, low operational voltage level, medium operational voltage level, high operational voltage level, extra high operational voltage level (#2042)
-- voltage level, low voltage level, medium voltage level, high voltage level, extra high voltage level (#2042)
+- electricity grid voltage level, low electricity grid voltage level, medium electricity grid voltage level, high electricity grid voltage level, extra high electricity grid voltage level (#2042)
 - CCO import: Performance Specification (#2108)
 - rated voltage, low rated voltage, medium rated voltage, high rated voltage, extra high rated voltage (#2108)
 
