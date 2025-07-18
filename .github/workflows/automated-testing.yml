@@ -18,7 +18,7 @@ jobs:
           java -jar build/robot.jar validate-profile --input build/oeo/$(cat VERSION)/oeo-full.owl --profile Full -vvv --output merged-validation.txt
       - name: verify
         run: |
-          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*
+          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*.sparql
       - uses: actions/upload-artifact@v4
         with:
           name: build-artifacts

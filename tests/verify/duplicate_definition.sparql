@@ -1,0 +1,15 @@
+# Adapted from:
+# https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/v2.0-2024-11-06/.github/deployment/sparql/duplicate_definition.sparql
+# No two ontology elements may have the exact same definition.    
+
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?element ?definition ?error
+WHERE {
+  ?element obo:IAO_0000115 ?definition .
+  ?element2 obo:IAO_0000115 ?definition .
+  FILTER (?element != ?element2)
+  FILTER (!isBlank(?element))
+  BIND (concat("WARNING: The following ontology elements have the same cco:definition ", str(?element), " and ", str(?element2)) AS ?error)
+}
