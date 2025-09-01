@@ -45,7 +45,7 @@ Example:
 ## Releases and installation
 
 The latest version of the OEO can be accessed on the [Open Energy Platform](https://openenergyplatform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
-All released versions can be downloaded directly from the [GitGub Releases](https://github.com/OpenEnergyPlatform/ontology/releases/). <br>
+All released versions can be downloaded directly from the [GitHub Releases](https://github.com/OpenEnergyPlatform/ontology/releases/). <br>
 The currently developed version is available on the default [dev Branch](https://github.com/OpenEnergyPlatform/ontology/).
 
 The source code of the ontology is found in the folder `src/ontology/` <br>
@@ -68,16 +68,16 @@ Everyone with good intentions is invited to develop this repository.
 The development of the ontology happens mainly on [GitHub](https://github.com/OpenEnergyPlatform/ontology) and is supplemented by regular (online) [developer meetings](https://github.com/OpenEnergyPlatform/ontology/wiki/oeo-dev-meeting-plan) to review the progress and discuss more complicated topics. <br>
 If you would like to participate in meetings you can become a team member. Use the [OEP contact form](https://openenergyplatform.org/contact/) and [add yourself as a contributor](https://github.com/OpenEnergyPlatform/ontology/wiki/Add-yourself-as-a-contributor) after approval.
 <br><br>
-If you're new to GitHub or ontologies check out our ["How to participate"](https://github.com/OpenEnergyPlatform/ontology/wiki/Welcome!-How-to-participate) article for some first advice and helpful links. You may also use the [Open Engery Academy course](https://openenergyplatform.github.io/academy/courses/05_ontology/#how-to-become-an-oeo-developer) to get used to the necessary tools and background information.
+If you're new to GitHub or ontologies check out our ["How to participate"](https://github.com/OpenEnergyPlatform/ontology/wiki/Welcome!-How-to-participate) article for some first advice and helpful links. You may also use the [Open Energy Academy course](https://openenergyplatform.github.io/academy/courses/05_ontology/#how-to-become-an-oeo-developer) to get used to the necessary tools and background information.
 <br>
 The workflow is described in the [CONTRIBUTING.md](https://github.com/OpenEnergyPlatform/ontology/blob/dev/CONTRIBUTING.md) file. Please check it out before you start working on this project. Points that are not clear in the file can be discussed in a [GitHub Issue](https://github.com/OpenEnergyPlatform/ontology/issues/new/choose).
 Please read the [GitHub Wiki](https://github.com/OpenEnergyPlatform/ontology/wiki) for more information about the ontology, its standards, its best practice principles and the BFO classification.
 <br><br>
-Wiki articles that you would be most helpflul to a beginner are:
+Wiki articles that you would be most helpful to a beginner are:
 - [How to Participate](https://github.com/OpenEnergyPlatform/ontology/wiki/Welcome!-How-to-participate)
 - [Best Practice Principles](https://github.com/OpenEnergyPlatform/ontology/wiki/Best-Practice-Principles) including subsections
 - [BFO Upper Ontology](https://github.com/OpenEnergyPlatform/ontology/wiki/BFO-Upper-Ontology-Classes) including subsections
-- [Explaination on Mass Nouns](https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns)
+- [Explanation on Mass Nouns](https://github.com/OpenEnergyPlatform/ontology/wiki/Explanation-on-mass-nouns)
 - [Handeling Ambiguous Terms](https://github.com/OpenEnergyPlatform/ontology/wiki/Handling-ambiguous-terms)
 - [Use Protégé to Change the Ontology](https://github.com/OpenEnergyPlatform/ontology/wiki/How-to-use-prot%C3%A9g%C3%A9-to-change-the-ontology)
 - [Term Tracker Annotation](https://github.com/OpenEnergyPlatform/ontology/wiki/Term-Tracker-Annotation)
