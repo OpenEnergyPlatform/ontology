@@ -16,6 +16,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add new module file for co-simulation ontology (#2090)
 - multi-criteria decision analysis (#2091)
 - RO import: regulates characteristic, positively regulates characteristic, negatively regulates (#2094)
+- voltage classification system, german voltage classification system (#2042)
+- electricity grid voltage level, low electricity grid voltage level, medium electricity grid voltage level, high electricity grid voltage level, extra high electricity grid voltage level (#2042)
 
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
@@ -24,6 +26,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - causally related to (#2104)
 - 'target description' renamed to 'legal target description' (#2102)
 - 'goal description' made a subclass of 'objective specification' (#2102)
+- electricity grid (#2042)
 
 ### Removed
 

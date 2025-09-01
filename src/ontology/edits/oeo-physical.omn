@@ -54,6 +54,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
+AnnotationProperty: <https://www.commoncoreontologies.org/ont00001754>
+
+    
 AnnotationProperty: OEO_00020425
 
     
@@ -88,6 +91,12 @@ AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:integer
 
     
 Datatype: xsd:string
@@ -189,6 +198,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     InverseOf: 
         OEO_00020182
     
+    
+ObjectProperty: <https://www.commoncoreontologies.org/ont00001920>
+
+    
+ObjectProperty: <https://www.commoncoreontologies.org/ont00001942>
+
     
 ObjectProperty: OEO_00000500
 
@@ -698,6 +713,9 @@ ObjectProperty: OEO_00240025
 ObjectProperty: owl:topObjectProperty
 
     
+DataProperty: OEO_00140178
+
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -772,6 +790,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: <http://purl.obolibrary.org/obo/BFO_0000144>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000005>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
     
@@ -812,6 +833,12 @@ Class: <http://purl.obolibrary.org/obo/UO_0000122>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000155>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000217>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000218>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_0000223>
@@ -2412,10 +2439,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
 
 Changed definition to use verb 'transfer'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2044
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2073"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2073
+
+Added 'part of' some 'power system' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
     
     SubClassOf: 
         OEO_00000200,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00360017,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000253
     
@@ -15989,6 +16021,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2043"
         <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000200
     
     
+Class: OEO_00410058
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage classification system is an information content entity that categorizes the voltages that components of an electricity grid power system usually operate on, into different levels."@en,
+        rdfs:comment "Voltage classifications are crucial because they determine system requirements, equipment standards, and safety protocols. These classifications serve as a framework that industries—ranging from utility networks to manufacturers—use to design systems and equipment in accordance with predetermined voltage levels. By standardizing voltage levels, it ensures that the systems operate safely, efficiently, and consistently across different applications and regions. (source: https://missioncriticalengineers.com/voltage-classifications/ accessed 2025-07-04)"@en,
+        rdfs:label "voltage classification system"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 OEO_00410060
+    
+    
+Class: OEO_00410060
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid voltage level is a quantity value reflecting the normative voltage value that an electricity grid is operating on."@en,
+        rdfs:label "electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>
+    
+    
 Class: OEO_00410067
 
     Annotations: 
@@ -16056,6 +16115,98 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2019"
     
     Types: 
         OEO_00000395
+    
+    
+Individual: OEO_00410051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A low voltage level is a voltage level in the german voltage classification system describing an electric potential difference of 400 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Niederspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "low voltage level"@en,
+        rdfs:label "low electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061,
+     OEO_00140178  400
+    
+    
+Individual: OEO_00410052
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A medium voltage level is a voltage level in the german voltage classification system describing an electric potential difference between 10,000 and 30,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Mittelspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "medium voltage level"@en,
+        rdfs:label "medium electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>,
+        OEO_00140178 some xsd:decimal[>= 10000 , <= 30000]
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061
+    
+    
+Individual: OEO_00410053
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A high voltage level is a voltage level in the german voltage classification system describing an electric potential difference of 110,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Hochspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "high voltage level"@en,
+        rdfs:label "high electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061,
+     OEO_00140178  110000
+    
+    
+Individual: OEO_00410054
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A extra high voltage level is a voltage level in the german voltage classification system describing an electric potential difference between 220,000 and 380,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Höchstspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "extra high voltage level"@en,
+        rdfs:label "extra high electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>,
+        OEO_00140178 some xsd:decimal[>= 220000 , <= 380000]
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061
+    
+    
+Individual: OEO_00410061
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The german voltage classification system is a voltage classification system currently being used in the electricity grid of Germany."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        rdfs:label "german voltage classification system"@en
+    
+    Types: 
+        OEO_00410058
     
     
 DisjointClasses: 
