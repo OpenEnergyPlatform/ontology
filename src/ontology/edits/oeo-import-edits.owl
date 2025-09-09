@@ -62,6 +62,12 @@ Currently, it covers the `ro-extracted.owl`-file which is a subset of the Relati
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000602 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000602"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/description -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
@@ -415,6 +421,18 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136</oeo:OEO_
     <!-- http://purl.obolibrary.org/obo/RO_0003301 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0003301"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0019000 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0019000">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <oeo:OEO_00020426>import from RO
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2094</oeo:OEO_00020426>
+    </owl:ObjectProperty>
     
 
 
@@ -837,12 +855,64 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1820</oeo:OEO_
     
 
 
+    <!-- https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01002 -->
+
+    <owl:Class rdf:about="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01002">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000602>(forall (?et) (iff (EnergyTransfer ?et)  
+  (exists (?ed ?ei ?en1 ?en2 ?me1 ?me2) 
+    (and (EnergyDecrease ?ed) (has_part ?et ?ed) 
+      (EnergyIncrease ?ei) (has_part ?et ?ei)
+      (causally_related_to ?ed ?ei)            
+      (Quality ?en1) (negatively_regulates ?ed ?en1) 
+      (Quality ?en2) (positively_regulates ?ei ?en2)  
+      (MaterialEntity ?me1) (MaterialEntity ?me2) 
+      (not (= ?me1 ?me2)) (not (= ?en1 ?en2))
+      (has_participant ?ed ?me1) (inheres_in ?en1 ?me1) 
+      (has_participant ?ei ?me2) (inheres_in ?en2 ?me2) ))))</obo:IAO_0000602>
+        <oeo:OEO_00020426>issue: https://github.com/OpenEnergyPlatform/ontology/issues/1959
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022
+
+readd axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2058
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2061</oeo:OEO_00020426>
+    </owl:Class>
+    
+
+
     <!-- https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01003 -->
 
     <owl:Class rdf:about="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01003">
         <rdfs:subClassOf rdf:resource="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01039"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <oeo:OEO_00020426>issue: https://github.com/OpenEnergyPlatform/ontology/issues/1959
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022</oeo:OEO_00020426>
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022
+
+readd axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2058
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2061</oeo:OEO_00020426>
     </owl:Class>
     
 
@@ -864,6 +934,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022</oeo:OEO_
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                                 <owl:someValuesFrom rdf:resource="https://openenergyplatform.org/ontology/oeo/OEO_00020103"/>
                             </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                                <owl:someValuesFrom rdf:resource="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01002"/>
+                            </owl:Restriction>
                         </owl:unionOf>
                     </owl:Class>
                 </owl:intersectionOf>
@@ -871,7 +945,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022</oeo:OEO_
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000015"/>
         <oeo:OEO_00020426>issue: https://github.com/OpenEnergyPlatform/ontology/issues/1959
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022</oeo:OEO_00020426>
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022
+
+change axiom to include meno instead of oeo classes
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2058
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2061</oeo:OEO_00020426>
     </owl:Class>
     
 
@@ -1065,6 +1143,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2016</oeo:OEO_
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002410">
+        <oeo:OEO_00020426>Removed class expression (process or &apos;material entity&apos;) both as domain and as range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2103
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2104</oeo:OEO_00020426>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002418">
         <oeo:OEO_00020426>add subset of relation below &apos;causally related to&apos;
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079
@@ -1075,9 +1158,15 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136</oeo:OEO_
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1079
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1136</oeo:OEO_00020426>
     </rdf:Description>
-    <rdf:Description rdf:about="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01002">
-        <oeo:OEO_00020426>issue: https://github.com/OpenEnergyPlatform/ontology/issues/1959
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2022</oeo:OEO_00020426>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0019001">
+        <oeo:OEO_00020426>import from RO
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2094</oeo:OEO_00020426>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0019002">
+        <oeo:OEO_00020426>import from RO
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2094</oeo:OEO_00020426>
     </rdf:Description>
     <rdf:Description rdf:about="https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01040">
         <oeo:OEO_00020426>issue: https://github.com/OpenEnergyPlatform/ontology/issues/1959
