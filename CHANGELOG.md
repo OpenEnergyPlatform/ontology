@@ -18,6 +18,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - RO import: regulates characteristic, positively regulates characteristic, negatively regulates (#2094)
 - voltage classification system, german voltage classification system (#2042)
 - electricity grid voltage level, low electricity grid voltage level, medium electricity grid voltage level, high electricity grid voltage level, extra high electricity grid voltage level (#2042)
+- delayed transition scenario (#2116)
 
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
