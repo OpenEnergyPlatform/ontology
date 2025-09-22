@@ -27,6 +27,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - 'target description' renamed to 'legal target description' (#2102)
 - 'goal description' made a subclass of 'objective specification' (#2102)
 - electricity grid (#2042)
+- regulates characteristic (#2118)
 
 ### Removed
 
