@@ -20,6 +20,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - electricity grid voltage level, low electricity grid voltage level, medium electricity grid voltage level, high electricity grid voltage level, extra high electricity grid voltage level (#2042)
 - CCO import: Performance Specification (#2108)
 - rated voltage, low rated voltage, medium rated voltage, high rated voltage, extra high rated voltage (#2108)
+- Added battery sub-technologies: flow battery, NMC battery, LFP battery, lead-acid battery (#2055)
+- Added generator types: permanent magnet synchronous generator, squirrel-cage induction generator, induction generator (#2055)
+- Added RE sub-technologies: PERC pane, SCIG wind energy converting unit, PMSG wind power technology, direct drive wind energy converting unit, gearbox wind energy converting unit (#2055) 
 
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)

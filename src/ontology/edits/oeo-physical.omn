@@ -81,7 +81,13 @@ AnnotationProperty: rdfs:isDefinedBy
 AnnotationProperty: rdfs:label
 
     
+AnnotationProperty: skos:altLabel
+
+    
 AnnotationProperty: skos:closeMatch
+
+    
+AnnotationProperty: skos:definition
 
     
 AnnotationProperty: skos:exactMatch
@@ -1122,7 +1128,7 @@ Class: OEO_00000010
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electro motive generator is a generator that converts kinetic energy into electric energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Generator"@de,
-        rdfs:label "electro motive generator"@en
+        rdfs:label "electromotive generator"@en
     
     SubClassOf: 
         OEO_00000188,
@@ -2711,11 +2717,17 @@ Class: OEO_00000165
 Class: OEO_00000169
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow battery is a battery in which chemical energy is provided by two chemical components dissolved in liquids contained within the system and separated by a membrane. Ion exchange (accompanied by flow of electric current) occurs through the membrane while both liquids circulate in their own respective space."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow battery is a battery in which chemical energy is provided by two chemical components dissolved in liquids contained within the system and separated by a membrane."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "redox flow battery",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Flow_battery&oldid=907053515"@en,
+        rdfs:comment "Ion exchange (accompanied by flow of electric current) occurs through the membrane while both liquids circulate in their own respective space.",
         rdfs:label "flow battery"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/773
+        OEO_00020426 "Updated definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055
+
+Created:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/773
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801"
     
     SubClassOf: 
@@ -13812,6 +13824,177 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846"@en
     SubClassOf: 
         OEO_00140082,
         OEO_00000502 some OEO_00260007
+    
+    
+Class: OEO_00280006
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A permanent magnet synchronous generator is an electromotive generator where the excitation field is provided by a permanent magnet.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PMSG",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "permanent magnet synchronous generator"@en
+    
+    SubClassOf: 
+        OEO_00000010
+    
+    
+Class: OEO_00280008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PMSG wind energy converting unit is a wind energy converting unit that has a permanent magnet synchronous generator as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "permanent magnet synchronous generator wind energy converting unit",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "PMSG wind energy converting unit"@en
+    
+    EquivalentTo: 
+        OEO_00000044
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00280006)
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
+Class: OEO_00280009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "permanent magnet synchronous generator wind power technology"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:comment "A PMSG wind power technology is a wind power generation technology that describes how to use wind energy converting units with permanent magnet synchronous generators as parts.",
+        rdfs:label "PMSG wind power technology"@en
+    
+    SubClassOf: 
+        OEO_00010424
+    
+    
+Class: OEO_00280010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passivated emitter rear contact solar cell is a photovoltaic cell with dielectric surface passivation.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PERC",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "passivated emitter rear contact solar cell"@en
+    
+    SubClassOf: 
+        OEO_00000032
+    
+    
+Class: OEO_00280011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PERC panel is a PV panel constructed with PERC cells.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "PERC panel"@en
+    
+    EquivalentTo: 
+        OEO_00000348
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00280010)
+    
+    SubClassOf: 
+        OEO_00000348
+    
+    
+Class: OEO_00280012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A NMC battery is a lithium-ion battery that is composed of mixed metal oxides of lithium, nickel, manganese and cobalt.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "nickel-manganese-cobalt battery",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:comment "These batteries are commonly used for mobile devices and electric vehicles.",
+        rdfs:label "NMC battery"@en
+    
+    SubClassOf: 
+        OEO_00000248
+    
+    
+Class: OEO_00280013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A LFP battery is a lithium-ion battery containing iron phosphate.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "lithium ferrophosphate battery",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:comment "These batteries use lithium iron phosphate as the cathode material, and a graphitic carbon electrode with a metallic backing as the anode.",
+        rdfs:label "LFP battery"@en
+    
+    SubClassOf: 
+        OEO_00000248
+    
+    
+Class: OEO_00280014
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lead-acid battery is a battery whose electrodes are composed of lead and its electrolyte is a solution of sulfuric acid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "lead-acid battery"@en
+    
+    SubClassOf: 
+        OEO_00000068
+    
+    
+Class: OEO_00280015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A squirrel-cage induction generator is an induction generator whose rotating component is a squirrel-cage rotor.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SCIG",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "squirrel-cage induction generator"@en
+    
+    SubClassOf: 
+        OEO_00280016
+    
+    
+Class: OEO_00280016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An induction generator is an electromotive generator where the excitation field is provided by an electric current.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "asynchronous generator",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "induction generator"@en
+    
+    SubClassOf: 
+        OEO_00000010
+    
+    
+Class: OEO_00280017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SCIG wind energy converting unit is a wind energy converting unit that has a squirrel-cage induction generator as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "squirrel-cage induction generator wind energy converting unit",
+        rdfs:label "SCIG wind energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
+Class: OEO_00280018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A direct drive wind energy converting unit is a wind energy converting unit whose rotor is directly connected to the generator.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "direct drive wind energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
+Class: OEO_00280019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gearbox wind energy converting unit is a wind energy converting unit whose rotor is connected to its generator through a gearbox.",
+        rdfs:label "gearbox wind energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00000044
     
     
 Class: OEO_00290000
