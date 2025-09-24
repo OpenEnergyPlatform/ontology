@@ -24,6 +24,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - causally related to (#2104)
 - 'target description' renamed to 'legal target description' (#2102)
 - 'goal description' made a subclass of 'objective specification' (#2102)
+- export, import, distribution (#2105)
 
 ### Removed
 
