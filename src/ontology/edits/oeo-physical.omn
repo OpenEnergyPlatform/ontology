@@ -5681,15 +5681,18 @@ change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
 https://github.com/OpenEnergyPlatform/ontology/pull/1041"
     
-    EquivalentTo: 
-        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020047)
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00050020)
-    
     SubClassOf: 
-        OEO_00020046,
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020047)
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00050020),
+        (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000384)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
-        OEO_00010235 some OEO_00000139
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
     
 Class: OEO_00010081
