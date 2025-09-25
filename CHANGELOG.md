@@ -32,6 +32,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - causally related to (#2104)
 - 'target description' renamed to 'legal target description' (#2102)
 - 'goal description' made a subclass of 'objective specification' (#2102)
+- causally upstream of or within, causally downstream of or within (#2109)
 - export, import, distribution (#2105)
 - electricity grid (#2042)
 - electricity grid voltage level, electricity grid component (#2108)
