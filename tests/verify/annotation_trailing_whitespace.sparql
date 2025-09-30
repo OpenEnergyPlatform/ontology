@@ -10,6 +10,7 @@ WHERE {
   ?property a owl:AnnotationProperty .
   ?element ?property ?value .
   FILTER (!isBlank(?element) && (REGEX(str(?value), "^[\\s\r\n]+") || REGEX(str(?value), "[\\s\r\n]+$")))
+  FILTER (regex(str(?element),"https://openenergyplatform.org/ontology/oeo/"))
   BIND (concat("ERROR: The following annotation value has leading or trailing whitespace ", str(?element)) AS ?error)
 }
 ORDER BY ?element

@@ -11,5 +11,7 @@ WHERE {
   ?element2 obo:IAO_0000115 ?definition .
   FILTER (?element != ?element2)
   FILTER (!isBlank(?element))
+  FILTER (regex(str(?element),"https://openenergyplatform.org/ontology/oeo/"))
+  FILTER (regex(str(?element2),"https://openenergyplatform.org/ontology/oeo/"))
   BIND (concat("WARNING: The following ontology elements have the same cco:definition ", str(?element), " and ", str(?element2)) AS ?error)
 }
