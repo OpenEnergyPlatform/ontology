@@ -19,7 +19,7 @@ jobs:
       - name: verify
         run: |
           mkdir -p reports
-          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*.sparql
+          java -jar build/robot.jar verify --input build/oeo/$(cat VERSION)/oeo-full.owl --queries tests/verify/*.sparql --output-dir reports
       - uses: actions/upload-artifact@v4
         with:
           name: build-artifacts
