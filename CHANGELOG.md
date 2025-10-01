@@ -10,6 +10,37 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.9.0] - 2025-10-01
+
+### Added
+- voltage classification system, german voltage classification system (#2042)
+- electricity grid voltage level, low electricity grid voltage level, medium electricity grid voltage level, high electricity grid voltage level, extra high electricity grid voltage level (#2042)
+- Added battery sub-technologies: flow battery, NMC battery, LFP battery, lead-acid battery (#2055)
+- Added generator types: permanent magnet synchronous generator, squirrel-cage induction generator, induction generator (#2055)
+- Added RE sub-technologies: PERC pane, SCIG wind energy converting unit, PMSG wind power technology, direct drive wind energy converting unit, gearbox wind energy converting unit (#2055) 
+- add new module file for co-simulation ontology (#2090)
+- multi-criteria decision analysis (#2091)
+- RO import: regulates characteristic, positively regulates characteristic, negatively regulates (#2094)
+- rated voltage, low rated voltage, medium rated voltage, high rated voltage, extra high rated voltage (#2108)
+- CCO import: Performance Specification (#2108)
+- delayed transition scenario (#2116)
+- technology scenario, sector focused scenario (#2124)
+
+### Changed
+- electricity grid (#2042)
+- 'has information content entity' renamed to 'is subject of' (#2092)
+- air, water, biomass, biofuel, nuclear fuel (#2095)
+- update license and citation (#2096)
+- 'target description' renamed to 'legal target description' (#2102)
+- 'goal description' made a subclass of 'objective specification' (#2102)
+- causally related to (#2104)
+- export, import, distribution (#2105)
+- electricity grid voltage level, electricity grid component (#2108)
+- causally upstream of or within, causally downstream of or within (#2109)
+- based on sector division, covers technology (shortcut), covers energy carrier (shortcut), has informarion input (shortcut), has information ouputt (shortcut) (#2122)
+- has squared / linear unit denominator, RED sector transport, EU emission sector LULUCF (#2126)
+
+
 ## [2.8.0] - 2025-05-28
 
 ### Added
@@ -22,6 +53,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - electricity transmission function, electricity distribution function (#2043)
 - grid component role (#2054)
 - CCO import: prescribes, prescribed by, designates, designated by, describes, described by, represents, represented by (#2074)
+- quarter-hourly, every minute, every ten minutes (#2087)
 
 ### Changed
 - changed base IRI to https://openenergyplatform.org/
@@ -30,6 +62,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - grid component (#2054)
 - has uuid (#2077)
 - electricity grid, energy transfer function (#2073)
+- energetic conversion process, energy transfer (bug fix) (#2061)
 
 ### Removed
 - has creation date, has report title (#2079)

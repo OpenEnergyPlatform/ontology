@@ -54,6 +54,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
+AnnotationProperty: <https://www.commoncoreontologies.org/ont00001754>
+
+    
 AnnotationProperty: OEO_00020425
 
     
@@ -78,7 +81,13 @@ AnnotationProperty: rdfs:isDefinedBy
 AnnotationProperty: rdfs:label
 
     
+AnnotationProperty: skos:altLabel
+
+    
 AnnotationProperty: skos:closeMatch
+
+    
+AnnotationProperty: skos:definition
 
     
 AnnotationProperty: skos:exactMatch
@@ -88,6 +97,12 @@ AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
+
+    
+Datatype: xsd:decimal
+
+    
+Datatype: xsd:integer
 
     
 Datatype: xsd:string
@@ -189,6 +204,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     InverseOf: 
         OEO_00020182
     
+    
+ObjectProperty: <https://www.commoncoreontologies.org/ont00001920>
+
+    
+ObjectProperty: <https://www.commoncoreontologies.org/ont00001942>
+
     
 ObjectProperty: OEO_00000500
 
@@ -698,6 +719,85 @@ ObjectProperty: OEO_00240025
 ObjectProperty: owl:topObjectProperty
 
     
+DataProperty: OEO_00140178
+
+    
+Class: OEO_00410068
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Rated voltage is a Performance Specification that prescribes the intended operating voltage of some electrical artifact."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "maximum voltage"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "definition adapted from: https://dlr-ve-esy.github.io/charging-ontology/CHIO_00000091.html",
+        rdfs:comment "Rated voltage usually means maximum voltage."@en,
+        rdfs:label "rated voltage"@en,
+        OEO_00020426 "first implementation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+    
+    SubClassOf: 
+        <https://www.commoncoreontologies.org/ont00000127>
+    
+    
+Class: OEO_00410070
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A low rated voltage is a rated voltage usually used for the local distribution of electricity. Electricity at this voltage can be converted to a medium rated voltage. The usual producers feeding electricity into the grid at this voltage are smaller wind farms and solar installations. Households are the usual consumers receiving electricity at this voltage."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.smard.de/page/en/wiki-article/5884/214026",
+        rdfs:label "low rated voltage"@en,
+        OEO_00020426 "first implementation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+    
+    SubClassOf: 
+        OEO_00410068,
+        <https://www.commoncoreontologies.org/ont00001942> value OEO_00410051
+    
+    
+Class: OEO_00410071
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A medium rated voltage is a rated voltage usually used for the regional distribution of electricity. Electricity at this voltage can be converted to a high or low rated voltage. The usual producers feeding electricity into the grid at this voltage are wind and solar farms. Industries can be consumers receiving electricity at this voltage."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.smard.de/page/en/wiki-article/5884/214026",
+        rdfs:label "medium rated voltage"@en,
+        OEO_00020426 "first implementation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+    
+    SubClassOf: 
+        OEO_00410068,
+        <https://www.commoncoreontologies.org/ont00001942> value OEO_00410052
+    
+    
+Class: OEO_00410072
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A high rated voltage is a rated voltage usually used for the interregional distribution of electricity. Electricity at this voltage can be converted to an extra high or medium rated voltage. The usual producers feeding electricity into the grid at this voltage are natural gas and hydro power plants. Large-scale industries can be consumers receiving electricity at this voltage."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.smard.de/page/en/wiki-article/5884/214026",
+        rdfs:label "high rated voltage"@en,
+        OEO_00020426 "first implementation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+    
+    SubClassOf: 
+        OEO_00410068,
+        <https://www.commoncoreontologies.org/ont00001942> value OEO_00410053
+    
+    
+Class: OEO_00410073
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An extra high rated voltage is a rated voltage usually used for the transmission of electricity. This is the usual voltage for electricity imports and exports. Electricity at this voltage can be converted to a high rated voltage. The usual producers feeding electricity into the grid at this voltage are coal and nuclear power plants, as well as offshore wind farms and hydro power plants."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://www.smard.de/page/en/wiki-article/5884/214026",
+        rdfs:label "extra high rated voltage"@en,
+        OEO_00020426 "first implementation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+    
+    SubClassOf: 
+        OEO_00410068,
+        <https://www.commoncoreontologies.org/ont00001942> value OEO_00410054
+    
+    
 Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
@@ -772,6 +872,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000141>
 Class: <http://purl.obolibrary.org/obo/BFO_0000144>
 
     
+Class: <http://purl.obolibrary.org/obo/IAO_0000005>
+
+    
 Class: <http://purl.obolibrary.org/obo/IAO_0000030>
 
     
@@ -814,6 +917,12 @@ Class: <http://purl.obolibrary.org/obo/UO_0000122>
 Class: <http://purl.obolibrary.org/obo/UO_0000155>
 
     
+Class: <http://purl.obolibrary.org/obo/UO_0000217>
+
+    
+Class: <http://purl.obolibrary.org/obo/UO_0000218>
+
+    
 Class: <http://purl.obolibrary.org/obo/UO_0000223>
 
     
@@ -842,6 +951,9 @@ Class: <http://purl.obolibrary.org/obo/UO_1000114>
 
     
 Class: <http://purl.obolibrary.org/obo/UO_1000223>
+
+    
+Class: <https://www.commoncoreontologies.org/ont00000127>
 
     
 Class: OEO_00000001
@@ -1016,7 +1128,7 @@ Class: OEO_00000010
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electro motive generator is a generator that converts kinetic energy into electric energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Generator"@de,
-        rdfs:label "electro motive generator"@en
+        rdfs:label "electromotive generator"@en
     
     SubClassOf: 
         OEO_00000188,
@@ -1749,12 +1861,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1009
 
 remove axiom 'is used by' some 'energy storage unit'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1495
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1499"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1499
+
+added axiom 'has disposition' some 'primary energy carrier disposition'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1032
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2095"
     
     SubClassOf: 
         OEO_00010236,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000446,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140075,
         OEO_00000529 value OEO_00000182
     
     
@@ -1932,7 +2048,11 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1048
 
 delete 'renewable energy carrier disposition':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1409"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1409
+
+added axiom 'has disposition' some 'primary energy carrier disposition'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1032
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2095"
     
     EquivalentTo: 
         OEO_00000099
@@ -1941,6 +2061,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1409"
     SubClassOf: 
         OEO_00000099,
         <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000097,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140075,
         OEO_00000530 some OEO_00030001
     
     DisjointWith: 
@@ -2403,10 +2524,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
 
 Changed definition to use verb 'transfer'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2044
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2073"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2073
+
+Added 'part of' some 'power system' axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
     
     SubClassOf: 
         OEO_00000200,
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00360017,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000253
     
@@ -2424,14 +2550,19 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1360
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+added 'is subject of' some 'rated voltage' subclass axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
     
     EquivalentTo: 
         OEO_00020006
          and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143)
     
     SubClassOf: 
-        OEO_00020006
+        OEO_00020006,
+        OEO_00010231 some OEO_00410068
     
     
 Class: OEO_00000146
@@ -2586,11 +2717,17 @@ Class: OEO_00000165
 Class: OEO_00000169
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow battery is a battery in which chemical energy is provided by two chemical components dissolved in liquids contained within the system and separated by a membrane. Ion exchange (accompanied by flow of electric current) occurs through the membrane while both liquids circulate in their own respective space."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A flow battery is a battery in which chemical energy is provided by two chemical components dissolved in liquids contained within the system and separated by a membrane."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "redox flow battery",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/w/index.php?title=Flow_battery&oldid=907053515"@en,
+        rdfs:comment "Ion exchange (accompanied by flow of electric current) occurs through the membrane while both liquids circulate in their own respective space.",
         rdfs:label "flow battery"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/773
+        OEO_00020426 "Updated definition:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055
+
+Created:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/773
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801"
     
     SubClassOf: 
@@ -3713,7 +3850,11 @@ Class: OEO_00000302
         <http://purl.obolibrary.org/obo/IAO_0000118> "Kernbrennstoff"@de,
         rdfs:label "nuclear fuel"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/182
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237
+
+added axiom 'has disposition' some 'primary energy carrier disposition'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1032
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2095"
     
     EquivalentTo: 
         OEO_00000173
@@ -3721,7 +3862,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/237"
     
     SubClassOf: 
         OEO_00000173,
-        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000300
+        <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00000300,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140075
     
     
 Class: OEO_00000303
@@ -4636,11 +4778,15 @@ add origin
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/515
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/684
 remove origin 
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861
+
+added axiom 'has disposition' some 'primary energy carrier disposition'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1032
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2095"
     
     SubClassOf: 
         OEO_00000331,
-        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00000151,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140075,
         OEO_00000529 value OEO_00000256
     
     
@@ -6609,10 +6755,15 @@ Class: OEO_00010214
         <http://purl.obolibrary.org/obo/IAO_0000118> "Biomasse"@de,
         rdfs:label "biomass"@en,
         OEO_00020426 "issue:https://github.com/OpenEnergyPlatform/ontology/issues/872
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/952
+
+added axiom 'has disposition' some 'primary energy carrier disposition'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1032
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2095"
     
     SubClassOf: 
         OEO_00000331,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00140075,
         OEO_00000530 some OEO_00030001
     
     
@@ -13675,6 +13826,177 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1846"@en
         OEO_00000502 some OEO_00260007
     
     
+Class: OEO_00280006
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A permanent magnet synchronous generator is an electromotive generator where the excitation field is provided by a permanent magnet.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PMSG",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "permanent magnet synchronous generator"@en
+    
+    SubClassOf: 
+        OEO_00000010
+    
+    
+Class: OEO_00280008
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PMSG wind energy converting unit is a wind energy converting unit that has a permanent magnet synchronous generator as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "permanent magnet synchronous generator wind energy converting unit",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "PMSG wind energy converting unit"@en
+    
+    EquivalentTo: 
+        OEO_00000044
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00280006)
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
+Class: OEO_00280009
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000118> "permanent magnet synchronous generator wind power technology"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:comment "A PMSG wind power technology is a wind power generation technology that describes how to use wind energy converting units with permanent magnet synchronous generators as parts.",
+        rdfs:label "PMSG wind power technology"@en
+    
+    SubClassOf: 
+        OEO_00010424
+    
+    
+Class: OEO_00280010
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A passivated emitter rear contact solar cell is a photovoltaic cell with dielectric surface passivation.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PERC",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "passivated emitter rear contact solar cell"@en
+    
+    SubClassOf: 
+        OEO_00000032
+    
+    
+Class: OEO_00280011
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A PERC panel is a PV panel constructed with PERC cells.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "PERC panel"@en
+    
+    EquivalentTo: 
+        OEO_00000348
+         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00280010)
+    
+    SubClassOf: 
+        OEO_00000348
+    
+    
+Class: OEO_00280012
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A NMC battery is a lithium-ion battery that is composed of mixed metal oxides of lithium, nickel, manganese and cobalt.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "nickel-manganese-cobalt battery",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:comment "These batteries are commonly used for mobile devices and electric vehicles.",
+        rdfs:label "NMC battery"@en
+    
+    SubClassOf: 
+        OEO_00000248
+    
+    
+Class: OEO_00280013
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A LFP battery is a lithium-ion battery containing iron phosphate.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "lithium ferrophosphate battery",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:comment "These batteries use lithium iron phosphate as the cathode material, and a graphitic carbon electrode with a metallic backing as the anode.",
+        rdfs:label "LFP battery"@en
+    
+    SubClassOf: 
+        OEO_00000248
+    
+    
+Class: OEO_00280014
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A lead-acid battery is a battery whose electrodes are composed of lead and its electrolyte is a solution of sulfuric acid.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "lead-acid battery"@en
+    
+    SubClassOf: 
+        OEO_00000068
+    
+    
+Class: OEO_00280015
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A squirrel-cage induction generator is an induction generator whose rotating component is a squirrel-cage rotor.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "SCIG",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "squirrel-cage induction generator"@en
+    
+    SubClassOf: 
+        OEO_00280016
+    
+    
+Class: OEO_00280016
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An induction generator is an electromotive generator where the excitation field is provided by an electric current.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "asynchronous generator",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "induction generator"@en
+    
+    SubClassOf: 
+        OEO_00000010
+    
+    
+Class: OEO_00280017
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A SCIG wind energy converting unit is a wind energy converting unit that has a squirrel-cage induction generator as part.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "squirrel-cage induction generator wind energy converting unit",
+        rdfs:label "SCIG wind energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
+Class: OEO_00280018
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A direct drive wind energy converting unit is a wind energy converting unit whose rotor is directly connected to the generator.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1979
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2055",
+        rdfs:label "direct drive wind energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
+Class: OEO_00280019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gearbox wind energy converting unit is a wind energy converting unit whose rotor is connected to its generator through a gearbox.",
+        rdfs:label "gearbox wind energy converting unit"@en
+    
+    SubClassOf: 
+        OEO_00000044
+    
+    
 Class: OEO_00290000
 
     Annotations: 
@@ -15966,6 +16288,38 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2043"
         <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000200
     
     
+Class: OEO_00410058
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A voltage classification system is an information content entity that categorizes the voltages that components of an electricity grid power system usually operate on, into different levels."@en,
+        rdfs:comment "Voltage classifications are crucial because they determine system requirements, equipment standards, and safety protocols. These classifications serve as a framework that industries—ranging from utility networks to manufacturers—use to design systems and equipment in accordance with predetermined voltage levels. By standardizing voltage levels, it ensures that the systems operate safely, efficiently, and consistently across different applications and regions. (source: https://missioncriticalengineers.com/voltage-classifications/ accessed 2025-07-04)"@en,
+        rdfs:label "voltage classification system"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> min 1 OEO_00410060
+    
+    
+Class: OEO_00410060
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid voltage level is a quantity value reflecting the normative voltage value that an electricity grid is operating on."@en,
+        rdfs:label "electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042
+
+added 'prescribed by' some 'rated voltage' subclass axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+    
+    SubClassOf: 
+        OEO_00000350,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000217>,
+        <https://www.commoncoreontologies.org/ont00001920> some OEO_00410068
+    
+    
 Class: OEO_00410067
 
     Annotations: 
@@ -16033,6 +16387,98 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2019"
     
     Types: 
         OEO_00000395
+    
+    
+Individual: OEO_00410051
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A low voltage level is a voltage level in the german voltage classification system describing an electric potential difference of 400 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Niederspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "low voltage level"@en,
+        rdfs:label "low electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061,
+     OEO_00140178  400
+    
+    
+Individual: OEO_00410052
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A medium voltage level is a voltage level in the german voltage classification system describing an electric potential difference between 10,000 and 30,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Mittelspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "medium voltage level"@en,
+        rdfs:label "medium electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>,
+        OEO_00140178 some xsd:decimal[>= 10000 , <= 30000]
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061
+    
+    
+Individual: OEO_00410053
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A high voltage level is a voltage level in the german voltage classification system describing an electric potential difference of 110,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Hochspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "high voltage level"@en,
+        rdfs:label "high electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061,
+     OEO_00140178  110000
+    
+    
+Individual: OEO_00410054
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A extra high voltage level is a voltage level in the german voltage classification system describing an electric potential difference between 220,000 and 380,000 volts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Höchstspannungsebene"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "extra high voltage level"@en,
+        rdfs:label "extra high electricity grid voltage level"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        <https://www.commoncoreontologies.org/ont00001754> "https://www.smard.de/page/en/wiki-article/5884/214026"
+    
+    Types: 
+        OEO_00410060,
+        OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000218>,
+        OEO_00140178 some xsd:decimal[>= 220000 , <= 380000]
+    
+    Facts:  
+     <http://purl.obolibrary.org/obo/BFO_0000050>  OEO_00410061
+    
+    
+Individual: OEO_00410061
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The german voltage classification system is a voltage classification system currently being used in the electricity grid of Germany."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042",
+        rdfs:label "german voltage classification system"@en
+    
+    Types: 
+        OEO_00410058
     
     
 DisjointClasses: 
