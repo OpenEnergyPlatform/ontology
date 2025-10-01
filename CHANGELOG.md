@@ -24,6 +24,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Added battery sub-technologies: flow battery, NMC battery, LFP battery, lead-acid battery (#2055)
 - Added generator types: permanent magnet synchronous generator, squirrel-cage induction generator, induction generator (#2055)
 - Added RE sub-technologies: PERC pane, SCIG wind energy converting unit, PMSG wind power technology, direct drive wind energy converting unit, gearbox wind energy converting unit (#2055) 
+- technology scenario, sector focused scenario (#2124)
 
 ### Changed
 - air, water, biomass, biofuel, nuclear fuel (#2095)
