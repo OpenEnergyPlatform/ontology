@@ -1,4 +1,4 @@
-Prefix: : <http://openenergy-platform.org/ontology/oeo/>
+Prefix: : <https://openenergyplatform.org/ontology/oeo/>
 Prefix: dc: <http://purl.org/dc/elements/1.1/>
 Prefix: owl: <http://www.w3.org/2002/07/owl#>
 Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -9,9 +9,9 @@ Prefix: xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
 
-Ontology: <http://openenergy-platform.org/ontology/oeo/oeo-social/>
-<http://openenergy-platform.org/ontology/oeo/dev/oeo-social.omn>
-Import: <http://openenergy-platform.org/ontology/oeo/dev/oeo-shared.omn>
+Ontology: <https://openenergyplatform.org/ontology/oeo/oeo-social/>
+<https://openenergyplatform.org/ontology/oeo/dev/oeo-social.omn>
+Import: <https://openenergyplatform.org/ontology/oeo/dev/oeo-shared.omn>
 
 Annotations: 
     dc:description "The Open Energy Ontology is an ontology for all aspects of the energy modelling domain. The 'Social' module covers entities that relate to people and the social, organisational and economic environment in which energy is produced and consumed, including sector, organisation, and various roles.",
@@ -123,6 +123,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0000087>
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002410>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0002418>
+
+    
 ObjectProperty: OEO_00000501
 
     
@@ -162,6 +165,8 @@ ObjectProperty: OEO_00000522
 ObjectProperty: OEO_00010119
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a policy instrument and a transformative measure where a policy instrument guides a transformative measure.",
+        rdfs:label "guides"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853
 
@@ -175,9 +180,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a policy instrument and a transformative measure where a policy instrument guides a transformative measure.",
-        rdfs:label "guides"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubPropertyOf: 
         <http://purl.obolibrary.org/obo/IAO_0000136>
@@ -195,10 +198,10 @@ ObjectProperty: OEO_00010121
 ObjectProperty: OEO_00010128
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/855
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/868",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a policy or policy instrument and the thing it governs.",
-        rdfs:label "governs"@en
+        rdfs:label "governs"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/855
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/868"
     
     Domain: 
         OEO_00140150 or OEO_00140151
@@ -216,6 +219,8 @@ ObjectProperty: OEO_00020056
 ObjectProperty: OEO_00020070
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a product and a market exchange where the product is offered for trade/sale at the market exchange."@en,
+        rdfs:label "is traded at"@en,
         OEO_00020426 "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
 
 change range:
@@ -228,9 +233,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
 
 Simplify domain and range by using product:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Is traded at is a relation that holds between a product and a market exchange where the product is offered for trade/sale at the market exchange."@en,
-        rdfs:label "is traded at"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912"
     
     SubPropertyOf: 
         owl:topObjectProperty
@@ -250,6 +253,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
 ObjectProperty: OEO_00020071
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a product and a market exchange.",
+        rdfs:label "trades"@en,
         OEO_00020426 "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
 
 add domain and range:
@@ -258,9 +263,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1127
 
 Simplify domain and range by using product:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between a product and a market exchange.",
-        rdfs:label "trades"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912"
     
     SubPropertyOf: 
         owl:topObjectProperty
@@ -293,10 +296,10 @@ ObjectProperty: OEO_00140008
 ObjectProperty: OEO_00140017
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/486
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a person and an organisation where the person is a member of the organisation.",
-        rdfs:label "member of"@en
+        rdfs:label "member of"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/486
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562"
     
     Domain: 
         OEO_00000323
@@ -308,10 +311,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562",
 ObjectProperty: OEO_00140018
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/486
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an organisation and a person where the person is a member of the organisation.",
-        rdfs:label "has member"@en
+        rdfs:label "has member"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/486
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/562"
     
     SubPropertyOf: 
         owl:topObjectProperty
@@ -422,25 +425,13 @@ Class: <http://purl.obolibrary.org/obo/UO_0000190>
 Class: <http://purl.obolibrary.org/obo/UO_0010006>
 
     
-Class: <http://www.openenergy-platform.org/ontology/oeo/OEO_00330002>
-
-    Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1365
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1482
-
-make subclass of process attribute
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity cost is a variable cost that depends on electricity price and amount.",
-        rdfs:label "electricity cost"@en
-    
-    SubClassOf: 
-        OEO_00020145
-    
-    
 Class: OEO_00000045
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Produzent"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Produzentin"@de,
+        rdfs:label "producer"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/835
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/845
 
@@ -449,11 +440,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370
 
 move axiom to shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1703
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A producer is an agent that makes goods.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Produzent"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Produzentin"@de,
-        rdfs:label "producer"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706"
     
     SubClassOf: 
         OEO_00000051
@@ -468,13 +455,13 @@ Class: OEO_00000064
 Class: OEO_00000087
 
     Annotations: 
-        OEO_00020426 "rework module structure
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A client is an agent that receives a product or service.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Kunde"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Kundin"@de,
-        rdfs:label "client"@en
+        rdfs:label "client"@en,
+        OEO_00020426 "rework module structure
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00000051
@@ -498,14 +485,14 @@ Class: OEO_00000107
 Class: OEO_00000238
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organisation that serves a social purpose."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Institution"@de,
+        rdfs:label "institution"@en,
         OEO_00020426 "moved term to oeo-shared:
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An institution is an organisation that serves a social purpose."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Institution"@de,
-        rdfs:label "institution"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00030022
@@ -568,6 +555,9 @@ Class: OEO_00000431
 Class: OEO_00010082
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one good or service is exchanged for another good or service or money.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Handel"@de,
+        rdfs:label "trade"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/307
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
 
@@ -580,10 +570,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1613
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A trade is a process in which one good or service is exchanged for another good or service or money.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Handel"@de,
-        rdfs:label "trade"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
@@ -593,6 +580,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00010083
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in trading in a market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Marktteilnehmer"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Marktteilnehmerin"@de,
+        rdfs:label "market participant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/745
 
@@ -606,11 +597,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478
 
 rework module structure
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market participant is an agent who participates in trading in a market exchange.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Marktteilnehmer"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Marktteilnehmerin"@de,
-        rdfs:label "market participant"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00000051,
@@ -620,15 +607,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00010115
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economy is a system of production, distribution, trade and consumption of goods and services.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Wirtschaft"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "economic system",
+        rdfs:label "economy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/832
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
 move to oeo-shared, add alternative lable
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1329
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1642",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economy is a system of production, distribution, trade and consumption of goods and services.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Wirtschaft"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "economic system",
-        rdfs:label "economy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1642"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/RO_0002577>
@@ -643,15 +630,15 @@ Class: OEO_00010117
 Class: OEO_00010123
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Effort sharing is a regulatory instrument that sets a common emission reduction goal for a number of countries. Each country has a national reduction goal. Under- or overachievement of that goal can be compensated by various flexibilities given in the regulation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Lastenteilung"@de,
+        rdfs:label "effort sharing"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
 
 Make subclass of 'regulatory instrument' and improve definition:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Effort sharing is a regulatory instrument that sets a common emission reduction goal for a number of countries. Each country has a national reduction goal. Under- or overachievement of that goal can be compensated by various flexibilities given in the regulation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Lastenteilung"@de,
-        rdfs:label "effort sharing"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786"
     
     SubClassOf: 
         OEO_00010458,
@@ -661,12 +648,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
 Class: OEO_00010126
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An Annual Emission Allocation (AEA) is an emission certificate used in the Effort Sharing Decision (ESD) and the Effort Sharing Regulation (ESR). It permits the emission of a CO2 equivalent quantity of 1 tonne.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "AEA"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "jährliche Emissionszuweisung"@de,
-        rdfs:label "Annual Emission Allocation"@en
+        rdfs:label "Annual Emission Allocation"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857"
     
     SubClassOf: 
         OEO_00020063
@@ -675,33 +662,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
 Class: OEO_00010136
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Distribution is the process of delivering goods and services to agents. ETst",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Verteilung"@de,
+        rdfs:label "distribution"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/836
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/876
 
 add 'has participant axiom':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Distribution is the process of delivering goods and services to agents. ETst",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Verteilung"@de,
-        rdfs:label "distribution"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
-        (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116) or (<http://purl.obolibrary.org/obo/RO_0002410> some OEO_00140124)
+        (<http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010116) or (<http://purl.obolibrary.org/obo/RO_0002418> some OEO_00140124)
     
     
 Class: OEO_00010212
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A decarbonisation pathway is a policy that aims at long-term emissions reductions.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Dekarbonisierungspfad"@de,
+        rdfs:label "decarbonisation pathway"@en,
         OEO_00020425 "study descriptor",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/831
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/951
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A decarbonisation pathway is a policy that aims at long-term emissions reductions.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Dekarbonisierungspfad"@de,
-        rdfs:label "decarbonisation pathway"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
     
     SubClassOf: 
         OEO_00140150
@@ -710,6 +697,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897",
 Class: OEO_00010268
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission price is a monetary price of emitting a certain emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionspreis"@de,
+        rdfs:label "emission price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253
 rework module structure 
@@ -717,10 +707,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 add axiom to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission price is a monetary price of emitting a certain emission value.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionspreis"@de,
-        rdfs:label "emission price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915"
     
     SubClassOf: 
         OEO_00040003
@@ -729,15 +716,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
 Class: OEO_00010269
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 price is an emission price of emitting a certain CO2 emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Preis"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "carbon price"@en,
+        rdfs:label "CO2 price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 price is an emission price of emitting a certain CO2 emission value.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Preis"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "carbon price"@en,
-        rdfs:label "CO2 price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00010268
@@ -746,15 +733,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00010270
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon tax value is a CO2 price that is set by a carbon tax.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Steuer-Höhe"@de,
+        rdfs:label "carbon tax value"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A carbon tax value is a CO2 price that is set by a carbon tax.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Steuer-Höhe"@de,
-        rdfs:label "carbon tax value"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00010269
@@ -763,15 +750,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00010271
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission certificate price is an emission price of an CO2 emission certificate that allows the emission of certain CO2 emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Zertifikatspreis"@de,
+        rdfs:label "CO2 emission certificate price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A CO2 emission certificate price is an emission price of an CO2 emission certificate that allows the emission of certain CO2 emission value.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Zertifikatspreis"@de,
-        rdfs:label "CO2 emission certificate price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00020154
@@ -780,10 +767,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00010328
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An OEP user is a user who interacts with the Open Energy Platform.",
-        rdfs:label "OEP user"@en
+        rdfs:label "OEP user"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383"
     
     SubClassOf: 
         OEO_00000431
@@ -792,10 +779,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
 Class: OEO_00010329
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A qualitist is an OEP user who mainly interacts with qualitative information.",
-        rdfs:label "qualitist"@en
+        rdfs:label "qualitist"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383"
     
     SubClassOf: 
         OEO_00010328
@@ -804,10 +791,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
 Class: OEO_00010330
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A quantitist is an OEP user who mainly interacts with quantitative information.",
-        rdfs:label "quantitist"@en
+        rdfs:label "quantitist"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383"
     
     SubClassOf: 
         OEO_00010328
@@ -816,10 +803,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
 Class: OEO_00010331
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An apinist is an OEP user who mainly interacts via an API.",
-        rdfs:label "apinist"@en
+        rdfs:label "apinist"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1339
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383"
     
     SubClassOf: 
         OEO_00010328
@@ -828,17 +815,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1383",
 Class: OEO_00010444
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Sufficiency is a plan specification for reducing, in absolute terms, the consumption and production of end-use products and services through changes in social practices in order to comply with environmental sustainability while ensuring an adequate social foundation for all people.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "Definition and elucidation based on:
+Jonas Lage, Johannes Thema, Carina Zell-Ziegler, Benjamin Best, Luisa Cordroch, and Frauke Wiese (2023): Citizens call for sufficiency and regulation — A comparison of European citizen assemblies and National Energy and Climate Plans. In: Energy Research & Social Science, Vol. 104, https://doi.org/10.1016/j.erss.2023.103254",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This definition consists of three characteristics that are present in most definitions of sufficiency: 1) sufficiency is understood as a strategy for achieving mainly (but not solely) environmental goals of sustainability, 2) sufficiency pursues sustainability goals by absolute reductions in consumption and production and 3) sufficiency implies a focus on social innovation to change social practices and individual behaviour.",
+        rdfs:label "sufficiency"@en,
         OEO_00020425 "study descriptor",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1553
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1648
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Sufficiency is a plan specification for reducing, in absolute terms, the consumption and production of end-use products and services through changes in social practices in order to comply with environmental sustainability while ensuring an adequate social foundation for all people.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "Definition and elucidation based on:
-Jonas Lage, Johannes Thema, Carina Zell-Ziegler, Benjamin Best, Luisa Cordroch, and Frauke Wiese (2023): Citizens call for sufficiency and regulation — A comparison of European citizen assemblies and National Energy and Climate Plans. In: Energy Research & Social Science, Vol. 104, https://doi.org/10.1016/j.erss.2023.103254",
-        <http://purl.obolibrary.org/obo/IAO_0000600> "This definition consists of three characteristics that are present in most definitions of sufficiency: 1) sufficiency is understood as a strategy for achieving mainly (but not solely) environmental goals of sustainability, 2) sufficiency pursues sustainability goals by absolute reductions in consumption and production and 3) sufficiency implies a focus on social innovation to change social practices and individual behaviour.",
-        rdfs:label "sufficiency"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000104>
@@ -847,15 +834,15 @@ Jonas Lage, Johannes Thema, Carina Zell-Ziegler, Benjamin Best, Luisa Cordroch, 
 Class: OEO_00010456
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic instrument is a policy instrument that creates monetary (price) incentives to stimulate transformative measures."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000600> "Examples: subsidies for installation of renewable energy technologies, tradable permits"@en,
+        rdfs:label "economic instrument"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786
 
 Convert to equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An economic instrument is a policy instrument that creates monetary (price) incentives to stimulate transformative measures."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000600> "Examples: subsidies for installation of renewable energy technologies, tradable permits"@en,
-        rdfs:label "economic instrument"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     EquivalentTo: 
         OEO_00140151
@@ -868,10 +855,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010457
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
         <http://purl.obolibrary.org/obo/IAO_0000600> "A voluntary agreement is a contract between a government (institution) and one or more private institutions. The agreement's goal is to ensure transformative measures by the participating private institutions."@en,
-        rdfs:label "voluntary agreement"@en
+        rdfs:label "voluntary agreement"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786"
     
     SubClassOf: 
         OEO_00140109
@@ -880,14 +867,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
 Class: OEO_00010458
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A regulatory instrument is a policy instrument that stipulates rules made by a government (=institution) to control the way something is done."@en,
+        rdfs:label "regulatory instrument"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786
 
 Convert to equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A regulatory instrument is a policy instrument that stipulates rules made by a government (=institution) to control the way something is done."@en,
-        rdfs:label "regulatory instrument"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     EquivalentTo: 
         OEO_00140151
@@ -900,14 +887,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010459
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An information instrument is a policy instrument that aims at providing knowledge to persons and/or institutions to stimulate transformative measures."@en,
+        rdfs:label "information instrument"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786
 
 Convert to equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An information instrument is a policy instrument that aims at providing knowledge to persons and/or institutions to stimulate transformative measures."@en,
-        rdfs:label "information instrument"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     EquivalentTo: 
         OEO_00140151
@@ -920,14 +907,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010460
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An education instrument is a policy instrument that aims at teaching the necessary understanding and skills to specific groups of people so that these are enabled to perform specific transformative measures."@en,
+        rdfs:label "education instrument"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786
 
 Convert to equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An education instrument is a policy instrument that aims at teaching the necessary understanding and skills to specific groups of people so that these are enabled to perform specific transformative measures."@en,
-        rdfs:label "education instrument"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     EquivalentTo: 
         OEO_00140151
@@ -940,14 +927,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010461
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A voluntary agreement instrument is a policy instrument that uses voluntary instruments between a government (institution) and one or more private institutions. The agreement's goal is to ensure transformative measures by the participating private institutions."@en,
+        rdfs:label "voluntary agreement instrument"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786
 
 Convert to equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A voluntary agreement instrument is a policy instrument that uses voluntary instruments between a government (institution) and one or more private institutions. The agreement's goal is to ensure transformative measures by the participating private institutions."@en,
-        rdfs:label "voluntary agreement instrument"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     EquivalentTo: 
         OEO_00140151
@@ -964,10 +951,10 @@ Class: OEO_00010489
 Class: OEO_00010492
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An economic instrument function is a function of a policy instrument that promotes, amongst others, economic measures."@en,
-        rdfs:label "economic instrument function"@en
+        rdfs:label "economic instrument function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
@@ -977,10 +964,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010493
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An education instrument function is a function of a policy instrument that promotes, amongst others, education measures."@en,
-        rdfs:label "education instrument function"@en
+        rdfs:label "education instrument function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
@@ -990,10 +977,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010494
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An information instrument function is a function of a policy instrument that promotes, amongst others, information measures."@en,
-        rdfs:label "information instrument function"@en
+        rdfs:label "information instrument function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
@@ -1003,10 +990,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010495
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An regulatory instrument function is a function of a policy instrument that promotes, amongst others, regulatory measures.",
-        rdfs:label "regulatory instrument function"@en
+        rdfs:label "regulatory instrument function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
@@ -1016,10 +1003,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010496
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An voluntary agreement instrument function is a function of a policy instrument that promotes, amongst others, voluntary agreement measures."@en,
-        rdfs:label "voluntary agreement instrument function"@en
+        rdfs:label "voluntary agreement instrument function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1826
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
@@ -1029,12 +1016,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1906",
 Class: OEO_00010501
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1514
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A product is a continuant that is either a good or a service product."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Produkt"@de,
-        rdfs:label "product"@en
+        rdfs:label "product"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1239
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1514
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1912"
     
     EquivalentTo: 
         OEO_00010116 or OEO_00360019
@@ -1049,6 +1036,8 @@ Class: OEO_00020015
 Class: OEO_00020060
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
+        rdfs:label "fuel market exchange"@en,
         OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/748
@@ -1059,9 +1048,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel market exchange is an energy market exchange where fuels like oil, coal, renewable fuels, and natural gas are traded.",
-        rdfs:label "fuel market exchange"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00020065,
@@ -1071,6 +1058,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00020063
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a licence that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionszertifikat"@de,
+        rdfs:label "emission certificate"@en,
         OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/740
 moved to oeo-shared
@@ -1079,10 +1069,7 @@ add axiom to emission quantity value and emission certificate price
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/1034
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An emission certificate is a licence that permits its holder/owner a specific emission value. An emission certificate can be traded at a CO2 market exchange.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionszertifikat"@de,
-        rdfs:label "emission certificate"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00020015,
@@ -1092,13 +1079,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00020064
 
     Annotations: 
-        OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An EU Allowance (EUA) is an emission certificate used in the European Union Emissions Trading System (EU ETS). It permits the emission of a CO2 equivalent quantity of 1 tonne.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "EU-Berechtigung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "EU-Klimazertifikat"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "EUA"@en,
-        rdfs:label "EU allowance"@en
+        rdfs:label "EU allowance"@en,
+        OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/677
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/740"
     
     SubClassOf: 
         OEO_00020063
@@ -1107,6 +1094,9 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/740",
 Class: OEO_00020065
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Energiebörse"@de,
+        rdfs:label "energy market exchange"@en,
         OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request https://github.com/OpenEnergyPlatform/ontology/pull/748
 
@@ -1116,10 +1106,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy market exchange is a market exchange in which energy commodities are traded.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Energiebörse"@de,
-        rdfs:label "energy market exchange"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00020069
@@ -1128,13 +1115,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00020066
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel commodity role is the commodity role of fuels.",
+        rdfs:label "fuel commodity role"@en,
         OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/256
 https://github.com/OpenEnergyPlatform/ontology/pull/748
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Fuel commodity role is the commodity role of fuels.",
-        rdfs:label "fuel commodity role"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00040011
@@ -1143,6 +1130,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00020067
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a good that bears the commodity role.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Ware"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "product"@en,
+        rdfs:label "commodity"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
 add alternative term
@@ -1153,11 +1144,7 @@ change axiom
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/869
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity is a good that bears the commodity role.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Ware"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "product"@en,
-        rdfs:label "commodity"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     EquivalentTo: 
         OEO_00010116
@@ -1171,10 +1158,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00020068
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel commodity is a commodity that is a fuel.",
-        rdfs:label "fuel commodity"@en
+        rdfs:label "fuel commodity"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748"
     
     EquivalentTo: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020066
@@ -1187,6 +1174,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748",
 Class: OEO_00020069
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
+        rdfs:label "market exchange"@en,
         OEO_00020426 "pull request: https://github.com/OpenEnergyPlatform/ontology/pull/748
 
 Move to oeo-shared:
@@ -1195,9 +1184,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478
 
 rework module structure
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652s",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market exchange is an organisation that has the market exchange role.",
-        rdfs:label "market exchange"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652s"
     
     EquivalentTo: 
         <http://purl.obolibrary.org/obo/RO_0000087> some OEO_00040002
@@ -1218,10 +1205,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
 Class: OEO_00020075
 
     Annotations: 
-        OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/302
-pull request https://github.com/OpenEnergyPlatform/ontology/pull/781",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An emission market exchange is a market exchange where emission certificates are traded",
-        rdfs:label "emission market exchange"@en
+        rdfs:label "emission market exchange"@en,
+        OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/302
+pull request https://github.com/OpenEnergyPlatform/ontology/pull/781"
     
     SubClassOf: 
         OEO_00020069,
@@ -1231,14 +1218,14 @@ pull request https://github.com/OpenEnergyPlatform/ontology/pull/781",
 Class: OEO_00020076
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A markup is a quantity value that indicates a virtual amount added to an assumed or historical price to predict a price in a different context.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Aufschlag"@de,
+        rdfs:label "markup"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/800
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A markup is a quantity value that indicates a virtual amount added to an assumed or historical price to predict a price in a different context.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Aufschlag"@de,
-        rdfs:label "markup"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1248,14 +1235,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00020077
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A markdown is a quantity value that indicates a virtual amount deducted from an assumed or historical price to predict a price in a different context.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Abschlag"@de,
+        rdfs:label "markdown"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/800
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A markdown is a quantity value that indicates a virtual amount deducted from an assumed or historical price to predict a price in a different context.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Abschlag"@de,
-        rdfs:label "markdown"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1265,17 +1252,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00020108
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A feed-in tariff is an economic instrument designed to stimulate investment in renewable energy technologies by offering long-term contracts to agents who are producers of renewable energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Einspeisetarif"@de,
+        rdfs:comment "Feed-in tariffs provide cost-based compensation to renewable energy producers, leading to price certainty and long-term contracts that help finance energy transformation units, e.g. power plants",
+        rdfs:label "feed-in tariff"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/898
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909
 
 Make subclass of 'economic instrument':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A feed-in tariff is an economic instrument designed to stimulate investment in renewable energy technologies by offering long-term contracts to agents who are producers of renewable energy."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Einspeisetarif"@de,
-        rdfs:comment "Feed-in tariffs provide cost-based compensation to renewable energy producers, leading to price certainty and long-term contracts that help finance energy transformation units, e.g. power plants",
-        rdfs:label "feed-in tariff"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786"
     
     SubClassOf: 
         OEO_00010456
@@ -1284,16 +1271,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
 Class: OEO_00020109
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market premium is an economic instrument that ensures a guaranteed remuneration, e.g. a fixed feed-in tariff, by paying to the producing agent the difference between a guaranteed return on a good/product and the monetary price for which the good/product is traded on the market."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Marktprämie"@de,
+        rdfs:label "market premium"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/899
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909
 
 Make subclass of 'economic instrument':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market premium is an economic instrument that ensures a guaranteed remuneration, e.g. a fixed feed-in tariff, by paying to the producing agent the difference between a guaranteed return on a good/product and the monetary price for which the good/product is traded on the market."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Marktprämie"@de,
-        rdfs:label "market premium"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786"
     
     SubClassOf: 
         OEO_00010456
@@ -1302,16 +1289,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
 Class: OEO_00020110
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A levy is an economic instrument that consists of a compulsory financial charge imposed on an agent or institution by a governmental organisation."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Umlage"@de,
+        rdfs:label "levy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/900
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909
 
 Make subclass of 'economic instrument':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1545
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A levy is an economic instrument that consists of a compulsory financial charge imposed on an agent or institution by a governmental organisation."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Umlage"@de,
-        rdfs:label "levy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786"
     
     SubClassOf: 
         OEO_00010456
@@ -1320,12 +1307,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1786",
 Class: OEO_00020111
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/903
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A capacity premium is a market premium that guarantees remuneration for reserving capacity of energy transformation units to be available for unexpected events.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Kapazitätsprämie"@de,
-        rdfs:label "capacity premium"@en
+        rdfs:label "capacity premium"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/903
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909"
     
     SubClassOf: 
         OEO_00020109
@@ -1334,12 +1321,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909",
 Class: OEO_00020112
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/901
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A tax is a levy whose returns are used by the government to finance expenditures for the common welfare.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Steuer"@de,
-        rdfs:label "tax"@en
+        rdfs:label "tax"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/839
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/901
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909"
     
     SubClassOf: 
         OEO_00020110
@@ -1348,15 +1335,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/909",
 Class: OEO_00020113
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Inflation rate is an economic value reprensenting the ratio between the monetary price for a good at two different points in time that equalises differences in monetary price levels between these two points in time.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Inflationsrate"@de,
+        rdfs:label "inflation rate"@en,
         OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/335
 https://github.com/OpenEnergyPlatform/ontology/pull/910
 
 make subclass of fraction value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Inflation rate is an economic value reprensenting the ratio between the monetary price for a good at two different points in time that equalises differences in monetary price levels between these two points in time.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Inflationsrate"@de,
-        rdfs:label "inflation rate"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"
     
     SubClassOf: 
         OEO_00140127,
@@ -1366,18 +1353,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
 Class: OEO_00020114
 
     Annotations: 
-        OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/335
-https://github.com/OpenEnergyPlatform/ontology/pull/910
-
-make subclass of fraction value
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
         <http://purl.obolibrary.org/obo/IAO_0000112> "The exchange rate between USD and EUR on March 15, 2020 was X.X.",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The exchange rate is an economic value representing the ratio at which one currency can be exchanged for another.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Umrechnungskurs"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "market exchange rate"@en,
         rdfs:comment "The ratio at which one can exchange one currency for another can differ over time therefore it is necessary to specify a time point when referring to an exchange rate.",
-        rdfs:label "exchange rate"@en
+        rdfs:label "exchange rate"@en,
+        OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/335
+https://github.com/OpenEnergyPlatform/ontology/pull/910
+
+make subclass of fraction value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"
     
     SubClassOf: 
         OEO_00140127,
@@ -1387,16 +1374,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
 Class: OEO_00020115
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Purchasing power parity is an economic value representing the ratio between currencies that equalises differences in monetary price levels between countries for the same set of goods.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "PPP",
+        <http://purl.org/dc/terms/source> "https://www.oecd.org/sdd/prices-ppp/purchasingpowerparities-frequentlyaskedquestionsfaqs.htm#FAQ1",
+        rdfs:label "purchasing power parity"@en,
         OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/867
 https://github.com/OpenEnergyPlatform/ontology/pull/910
 
 make subclass of fraction value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Purchasing power parity is an economic value representing the ratio between currencies that equalises differences in monetary price levels between countries for the same set of goods.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "PPP",
-        <http://purl.org/dc/terms/source> "https://www.oecd.org/sdd/prices-ppp/purchasingpowerparities-frequentlyaskedquestionsfaqs.htm#FAQ1",
-        rdfs:label "purchasing power parity"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"
     
     SubClassOf: 
         OEO_00140127,
@@ -1406,15 +1393,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
 Class: OEO_00020116
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "System cost are total costs of a system.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Systemkosten"@de,
+        rdfs:label "system cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/335
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/910
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "System cost are total costs of a system.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Systemkosten"@de,
-        rdfs:label "system cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1423,18 +1410,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020117
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The electricity price is Y EUR per megawatt-hour.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity price is the monetary price per energy unit of electricity.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Strompreis"@de,
+        rdfs:comment "has unit some \"currency per energy unit\"",
+        rdfs:label "electricity price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/335
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/910",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/335
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/910
 add axiom in oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The electricity price is Y EUR per megawatt-hour.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Electricity price is the monetary price per energy unit of electricity.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Strompreis"@de,
-        rdfs:comment "has unit some \"currency per energy unit\"",
-        rdfs:label "electricity price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915"
     
     SubClassOf: 
         OEO_00040003
@@ -1443,14 +1430,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
 Class: OEO_00020124
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A due is a quantity value that represents a payment that an agent makes to belong to an organisation.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Mitgliedsbeitrag"@de,
+        rdfs:label "due"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/904
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/913
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A due is a quantity value that represents a payment that an agent makes to belong to an organisation.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Mitgliedsbeitrag"@de,
-        rdfs:label "due"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1460,13 +1447,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00020125
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A remuneration is a quantity value that describes a financial compensation provided in exchange for services performed.",
+        rdfs:label "remuneration"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/902
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/913
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A remuneration is a quantity value that describes a financial compensation provided in exchange for services performed.",
-        rdfs:label "remuneration"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1476,14 +1463,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00020126
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fee is a quantity value that represents an amount of money paid for a  particular piece of work or for a particular right or service.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Gebühr"@de,
+        rdfs:label "fee"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/905
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/913
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fee is a quantity value that represents an amount of money paid for a  particular piece of work or for a particular right or service.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Gebühr"@de,
-        rdfs:label "fee"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1493,16 +1480,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00020127
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Levelised cost of electricity are the net cost of converting energy to electricity / electric energy over the lifetime of an energy transformation unit. They are calculated considering all relevant costs including investment, operation, maintenance and fuel cost, etc.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "LCOE",
+        rdfs:comment "Since over the lifetime of an energy transformation unit different costs exhibit different relevance or vary over time, the LCOE differ over the course of the lifetime.",
+        rdfs:label "levelised cost of electricity"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/906
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/913
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Levelised cost of electricity are the net cost of converting energy to electricity / electric energy over the lifetime of an energy transformation unit. They are calculated considering all relevant costs including investment, operation, maintenance and fuel cost, etc.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "LCOE",
-        rdfs:comment "Since over the lifetime of an energy transformation unit different costs exhibit different relevance or vary over time, the LCOE differ over the course of the lifetime.",
-        rdfs:label "levelised cost of electricity"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1511,14 +1498,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020128
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Market revenue is a quantity value that represents the income from a trade at a market exchange.",
+        rdfs:label "market revenue"@en,
         OEO_00020426 "add term
 https://github.com/OpenEnergyPlatform/ontology/issues/908
 https://github.com/OpenEnergyPlatform/ontology/pull/929
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Market revenue is a quantity value that represents the income from a trade at a market exchange.",
-        rdfs:label "market revenue"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1528,6 +1515,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00020145
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A variable cost is a cost that depends on an amount of goods or services.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "unit-level cost"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "variable Kosten"@de,
+        rdfs:label "variable cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/953
 
@@ -1537,11 +1528,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1260
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A variable cost is a cost that depends on an amount of goods or services.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "unit-level cost"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "variable Kosten"@de,
-        rdfs:label "variable cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1550,16 +1537,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020146
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "An example for variable production cost are costs incurred for raw materials (of which more are needed if production is increased).",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Variable production costs are costs that depend on the amount of goods or services produced and which are paid by the producer.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "variable Produktionskosten"@de,
+        rdfs:label "variable production cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/953
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000112> "An example for variable production cost are costs incurred for raw materials (of which more are needed if production is increased).",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Variable production costs are costs that depend on the amount of goods or services produced and which are paid by the producer.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "variable Produktionskosten"@de,
-        rdfs:label "variable production cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020145
@@ -1568,6 +1555,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020154
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionszertifikatspreis"@de,
+        rdfs:label "emission certificate price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
 add relation to emission certificate
@@ -1579,11 +1570,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Emission certificate price is a monetary price of an emission certificate that allows the emission of a certain emission value.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 price",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionszertifikatspreis"@de,
-        rdfs:label "emission certificate price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     EquivalentTo: 
         OEO_00010268
@@ -1593,6 +1580,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00020155
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon emission is the cost the society bears for a greenhouse gas emission value.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "social cost of CO2",
+        rdfs:label "social cost of carbon emission"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956
 add axiom to emission value, add new parent class and relabel
@@ -1602,10 +1592,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of carbon emission is the cost the society bears for a greenhouse gas emission value.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "social cost of CO2",
-        rdfs:label "social cost of carbon emission"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020181
@@ -1614,12 +1601,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020156
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Carbon tax is a tax for emitting CO2 or other greenhouse gases (measured in CO2 equivalent values).",
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2 tax"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Steuer"@de,
-        rdfs:label "carbon tax"@en
+        rdfs:label "carbon tax"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956"
     
     SubClassOf: 
         OEO_00020112
@@ -1628,12 +1615,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/956",
 Class: OEO_00020167
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
-
-make subclass of process attribute
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Investment costs are costs of a long-term commitment of financial resources in tangible or intangible assets.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Investitionskosten"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "capital investment cost"@en,
@@ -1642,7 +1623,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
         <http://purl.obolibrary.org/obo/IAO_0000119> "FIBO definition of investment relates to property only: https://spec.edmcouncil.org/fibo/ontology?searchBoxQuery=investment,
 
 Gabler on Investition: langfristige Bindung finanzieller Mittel in materiellen oder in immateriellen Vermögensgegenständen (https://wirtschaftslexikon.gabler.de/definition/investition-39454)",
-        rdfs:label "investment cost"@en
+        rdfs:label "investment cost"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
+
+make subclass of process attribute
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1651,6 +1638,14 @@ Gabler on Investition: langfristige Bindung finanzieller Mittel in materiellen o
 Class: OEO_00020168
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "rent, regular technical maintenance cost, staff cost, certification cost",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fixed cost is a cost for operation and maintenance that does not vary with the amount of goods or services produced.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Fixkosten"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "fixed operation and maintenance cost"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "oemof-Model: https://oemof-solph.readthedocs.io/en/latest/_modules/oemof/solph/options.html?highlight=fix%20costs
+
+Fixe Kosten: Kosten, die von der jeweils betrachteten Einflussgröße bzw. Entscheidung unabhängig sind, d.h. Kosten, die sich nicht mit der jeweils betrachteten Einflussgröße ändern. (https://wirtschaftslexikon.gabler.de/definition/fixe-kosten-33359)",
+        rdfs:label "fixed cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
 
@@ -1660,15 +1655,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1260
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000112> "rent, regular technical maintenance cost, staff cost, certification cost",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fixed cost is a cost for operation and maintenance that does not vary with the amount of goods or services produced.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Fixkosten"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "fixed operation and maintenance cost"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "oemof-Model: https://oemof-solph.readthedocs.io/en/latest/_modules/oemof/solph/options.html?highlight=fix%20costs
-
-Fixe Kosten: Kosten, die von der jeweils betrachteten Einflussgröße bzw. Entscheidung unabhängig sind, d.h. Kosten, die sich nicht mit der jeweils betrachteten Einflussgröße ändern. (https://wirtschaftslexikon.gabler.de/definition/fixe-kosten-33359)",
-        rdfs:label "fixed cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1677,6 +1664,9 @@ Fixe Kosten: Kosten, die von der jeweils betrachteten Einflussgröße bzw. Entsc
 Class: OEO_00020169
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Equipment cost is an investment cost for acquisition of the components and machinery including environmental facilities.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Ausrüstungskosten"@de,
+        rdfs:label "equipment cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
 
@@ -1686,10 +1676,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1260
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Equipment cost is an investment cost for acquisition of the components and machinery including environmental facilities.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Ausrüstungskosten"@de,
-        rdfs:label "equipment cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020167
@@ -1698,18 +1685,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020170
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
-
-make subclass of process attribute
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
         <http://purl.obolibrary.org/obo/IAO_0000112> "costs that occur for becoming operational",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Installation and development cost are investment costs incurred for setting up the installation.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Installationskosten"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "installation and development cost"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "site development cost"@en,
-        rdfs:label "installation cost"@en
+        rdfs:label "installation cost"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
+
+make subclass of process attribute
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020167
@@ -1718,14 +1705,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020171
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid connection costs are investment costs for establishing the grid connection from the energy generating device to point of connection to national grid.",
+        rdfs:label "grid connection cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Grid connection costs are investment costs for establishing the grid connection from the energy generating device to point of connection to national grid.",
-        rdfs:label "grid connection cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020167
@@ -1734,6 +1721,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020172
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A property cost is an investment cost arising from the acquisition of a property.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "land cost",
+        rdfs:label "property cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
 
@@ -1743,10 +1733,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1260
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A property cost is an investment cost arising from the acquisition of a property.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "land cost",
-        rdfs:label "property cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020167
@@ -1755,15 +1742,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020173
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Decommissioning costs are investment costs arising from the decommissioning of a technological device at the end of its lifetime.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Stilllegungskosten"@de,
+        rdfs:label "decommissioning cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Decommissioning costs are investment costs arising from the decommissioning of a technological device at the end of its lifetime.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Stilllegungskosten"@de,
-        rdfs:label "decommissioning cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020167
@@ -1772,6 +1759,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020174
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A delivery cost is a cost for a product or service that refers to the total unit cost of a product or commodity delivered to a certain market, city or customer. It is normally composed of all associated transport costs and the unit cost of production for that product.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Lieferkosten"@de,
+        rdfs:label "delivery cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/891
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1022
 
@@ -1781,10 +1771,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1260
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A delivery cost is a cost for a product or service that refers to the total unit cost of a product or commodity delivered to a certain market, city or customer. It is normally composed of all associated transport costs and the unit cost of production for that product.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Lieferkosten"@de,
-        rdfs:label "delivery cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1793,6 +1780,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020181
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of emission is the cost the society bears for an emission value.",
+        rdfs:label "social cost of emission"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/958
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1034
 rework module structure 
@@ -1800,9 +1789,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Social cost of emission is the cost the society bears for an emission value.",
-        rdfs:label "social cost of emission"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00040009
@@ -1811,26 +1798,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00020427
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary price is a quality of a product that indicates the value in terms of the amount of money requested, expected, required or given in exchange for something else.",
-        rdfs:label "monetary price"
+        rdfs:label "monetary price",
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>,
-        OEO_00140002 some OEO_00040003,
-        <http://purl.obolibrary.org/obo/RO_0000080> some OEO_00010501
+        <http://purl.obolibrary.org/obo/RO_0000080> some OEO_00010501,
+        OEO_00140002 some OEO_00040003
     
     
 Class: OEO_00030016
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An organisational energy producer is an organisation that undertakes the generation of electricity and/or heat.\"",
         <http://purl.obolibrary.org/obo/IAO_0000118> "organisational energy producer",
         <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
-        rdfs:label "organisational energy producer"@en
+        rdfs:label "organisational energy producer"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370"
     
     SubClassOf: 
         OEO_00030022,
@@ -1840,12 +1827,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00030017
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An energy autoproducer is an organisational energy producer who produces electrical energy and/or heat wholly or partly for their own use as an activity which supports their primary activity.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
         rdfs:comment "They may be privately or publicly owned.",
-        rdfs:label "energy autoproducer"@en
+        rdfs:label "energy autoproducer"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370"
     
     SubClassOf: 
         OEO_00030016
@@ -1854,12 +1841,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
 Class: OEO_00030018
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A main activity energy producer is an organisational energy producer whose primary activity is electrical energy and/or heat production.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "inspired by https://ec.europa.eu/eurostat/documents/38154/41386/Ele_AQ_documentation.pdf/a06bf650-1830-4fcb-9376-7be1f8ab080c",
         rdfs:comment "They may be privately or publicly owned. Note that the sale need not take place through the public grid.",
-        rdfs:label "main activity energy producer"@en
+        rdfs:label "main activity energy producer"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/314
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/370"
     
     SubClassOf: 
         OEO_00030016
@@ -1880,6 +1867,12 @@ Class: OEO_00030035
 Class: OEO_00040002
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "market",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
+        rdfs:label "market exchange role"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange",
         OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/341
 https://github.com/OpenEnergyPlatform/ontology/pull/639
 
@@ -1895,13 +1888,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1478
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A role of an organisation, association, or group of persons, whether incorporated or unincorporated, which constitutes, maintains, or provides a facility for bringing together purchasers and sellers of financial instruments, commodities, or other products, services, or goods, and includes the market place and facilities maintained by the exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "exchange",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "market",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-fct-mkt:Exchange",
-        rdfs:label "market exchange role"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/FunctionalEntities/Markets/Exchange"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -1910,6 +1897,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00040003
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary value is a quantity value that states the amount of money specified in monetary units.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Geldwert"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "amount of money",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:MonetaryPrice",
+        rdfs:label "monetary value"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/331
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/640
 move to oeo-shared
@@ -1924,13 +1917,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A monetary value is a quantity value that states the amount of money specified in monetary units.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Geldwert"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "amount of money",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:MonetaryPrice",
-        rdfs:label "monetary value"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/MonetaryPrice"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -1941,6 +1928,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00040004
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000112> "The currency used in France in 2020 was Euro.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Währung"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
+        rdfs:comment "Currency is the unit of monetary value as defined by each country.",
+        rdfs:label "currency"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency",
         OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/331
 https://github.com/OpenEnergyPlatform/ontology/pull/640
 add comment and example
@@ -1949,14 +1943,7 @@ moved to oeo-shared
 https://github.com/OpenEnergyPlatform/ontology/pull/956
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000112> "The currency used in France in 2020 was Euro.",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A unit which is a measure of the medium of an exchange value, defined by reference to the geographical location of the monetary authorities responsible for it.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Währung"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-acc-cur:Currency",
-        rdfs:comment "Currency is the unit of monetary value as defined by each country.",
-        rdfs:label "currency"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/Accounting/CurrencyAmount/Currency"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00010489
@@ -1965,19 +1952,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00040005
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A trader is a market participant that engages in the transfer of financial assets in any financial market on behalf of a client or a financial services provider.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Händler"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Händlerin"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-pas-fpas:Trader",
+        rdfs:label "trader"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/Trader",
         OEO_00020426 "Implement in line with FIBO:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/377
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/641
 
 Make trader subclass of market participant:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/330
-https://github.com/OpenEnergyPlatform/ontology/pull/745",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A trader is a market participant that engages in the transfer of financial assets in any financial market on behalf of a client or a financial services provider.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Händler"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Händlerin"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fbc-pas-fpas:Trader",
-        rdfs:label "trader"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FBC/ProductsAndServices/FinancialProductsAndServices/Trader"
+https://github.com/OpenEnergyPlatform/ontology/pull/745"
     
     SubClassOf: 
         OEO_00010083
@@ -1986,16 +1973,16 @@ https://github.com/OpenEnergyPlatform/ontology/pull/745",
 Class: OEO_00040006
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A request is a process whereby an agent asks another agent for something or to do something.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Anfrage"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Communications/Request",
+        rdfs:label "request"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/642
 
 add 'has participant axiom':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1327
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A request is a process whereby an agent asks another agent for something or to do something.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Anfrage"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/Arrangements/Communications/Request",
-        rdfs:label "request"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
@@ -2005,10 +1992,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395",
 Class: OEO_00040007
 
     Annotations: 
-        OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/376
-https://github.com/OpenEnergyPlatform/ontology/pull/642",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A price request is a request in which an agent asks another agent for a price.",
-        rdfs:label "price request"@en
+        rdfs:label "price request"@en,
+        OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/376
+https://github.com/OpenEnergyPlatform/ontology/pull/642"
     
     SubClassOf: 
         OEO_00040006
@@ -2017,15 +2004,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/642",
 Class: OEO_00040008
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Marginal cost is the quantity value that corresponds to the change in the total cost that arises when the quantity produced is incremented by one unit; that is, it is the cost of producing one more unit of a good.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Grenzkosten"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "O'Sullivan, Arthur; Sheffrin, Steven M. (2003). Economics: Principles in Action.",
+        rdfs:label "marginal cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/642
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Marginal cost is the quantity value that corresponds to the change in the total cost that arises when the quantity produced is incremented by one unit; that is, it is the cost of producing one more unit of a good.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Grenzkosten"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "O'Sullivan, Arthur; Sheffrin, Steven M. (2003). Economics: Principles in Action.",
-        rdfs:label "marginal cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350
@@ -2034,6 +2021,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00040009
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Cost is a process attribute that describes the amount of money needed to buy, make, or do a thing.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Kosten"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://dictionary.cambridge.org/dictionary/english/cost",
+        rdfs:label "cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/268
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/643
 move to oeo-shared
@@ -2049,11 +2040,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Cost is a process attribute that describes the amount of money needed to buy, make, or do a thing.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Kosten"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://dictionary.cambridge.org/dictionary/english/cost",
-        rdfs:label "cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00030019,
@@ -2063,6 +2050,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00040011
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a good role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
+        rdfs:label "commodity role"@en,
+        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity",
         OEO_00020426 "https://github.com/OpenEnergyPlatform/ontology/issues/339
 https://github.com/OpenEnergyPlatform/ontology/pull/644
 moved to oeo-shared and renamed
@@ -2071,11 +2062,7 @@ made subclass of good role
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/843
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A commodity role is a good role that inheres in something that is used in commerce and is exchangeable with other commodities of the same type.",
-        <http://purl.obolibrary.org/obo/IAO_0000119> "fibo-fnd-pas-pas:Commodity",
-        rdfs:label "commodity role"@en,
-        rdfs:seeAlso "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Commodity"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00010117
@@ -2087,11 +2074,11 @@ Class: OEO_00090001
 Class: OEO_00090002
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A public funder is a funder that gives public money.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "öffentlicher Förderer"@de,
-        rdfs:label "public funder"@en
+        rdfs:label "public funder"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776"
     
     SubClassOf: 
         OEO_00090001
@@ -2100,11 +2087,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
 Class: OEO_00090003
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A private funder is a funder that gives private money.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "privater Förderer"@de,
-        rdfs:label "private funder"@en
+        rdfs:label "private funder"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/776"
     
     SubClassOf: 
         OEO_00090001
@@ -2119,6 +2106,12 @@ Class: OEO_00140012
 Class: OEO_00140013
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gross domestic product is a quantity value that represents the broadest measure of aggregate economic activity, measuring the total unduplicated market value of all final goods and services produced within a statistical area in a period.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "BIP"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Bruttoinlandsprodukt"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "GDP"@en,
+        rdfs:comment "has unit some currency per time unit",
+        rdfs:label "gross domestic product"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/454
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/559
 alternative term:
@@ -2128,13 +2121,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A gross domestic product is a quantity value that represents the broadest measure of aggregate economic activity, measuring the total unduplicated market value of all final goods and services produced within a statistical area in a period.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "BIP"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Bruttoinlandsprodukt"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "GDP"@en,
-        rdfs:comment "has unit some currency per time unit",
-        rdfs:label "gross domestic product"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350,
@@ -2144,6 +2131,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00140023
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross value added is a quantity value that is the value of goods and services produced in a sector of an economy, measuring that sector's contribution to gross domestic product (GDP). It is calculated as the monetary value of products and services produced, less the value of intermediate consumption.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Bruttowertschöpfung"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "GVA"@en,
+        rdfs:label "gross value added"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/455
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/563
 alternative term:
@@ -2151,11 +2142,7 @@ https://github.com/OpenEnergyPlatform/ontology/issues/675
 https://github.com/OpenEnergyPlatform/ontology/pull/676
 make subclass of quantity value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1917
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Gross value added is a quantity value that is the value of goods and services produced in a sector of an economy, measuring that sector's contribution to gross domestic product (GDP). It is calculated as the monetary value of products and services produced, less the value of intermediate consumption.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Bruttowertschöpfung"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "GVA"@en,
-        rdfs:label "gross value added"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931"
     
     SubClassOf: 
         OEO_00000350
@@ -2164,12 +2151,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1931",
 Class: OEO_00140109
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/756",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A contract is a document that contains an agreement between two or more competent agents to which those agents agree to be legally bound.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Vertrag"@de,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/Agreements/Contracts/Contract",
-        rdfs:label "contract"@en
+        rdfs:label "contract"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/756"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000310>
@@ -2178,11 +2165,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/756",
 Class: OEO_00140117
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Delivery time is a one-dimensional temporal region expressing the amount of time that it takes for goods that have been bought to arrive at the place where they are wanted.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Lieferzeit"@de,
-        rdfs:label "delivery time"@en
+        rdfs:label "delivery time"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000038>
@@ -2191,11 +2178,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140118
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A delivery time point is a zero-dimensional temporal region expressing the point in time when goods that have been bought arrive at the place where they are wanted.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Lieferzeitpunkt"@de,
-        rdfs:label "delivery time point"@en
+        rdfs:label "delivery time point"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000148>
@@ -2204,11 +2191,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140119
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sender is an agent who initiates a communication.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Sender"@de,
-        rdfs:label "sender"@en
+        rdfs:label "sender"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         OEO_00000051
@@ -2217,12 +2204,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140120
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A receiver is an agent who obtains information from a sender.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Empfänger"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Empfängerin"@de,
-        rdfs:label "receiver"@en
+        rdfs:label "receiver"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         OEO_00000051
@@ -2231,11 +2218,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140121
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A bid is a document describing an offer made by an agent to another agent in an effort to exchange commodities or services via terms relating to price and quantity which will be part of the resulting contract.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Gebot"@de,
-        rdfs:label "bid"@en
+        rdfs:label "bid"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000310>
@@ -2244,11 +2231,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140122
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An award is a document that signifies that a supplier for a particular commodity or service specified in a bid has been accepted.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Zuschlag"@de,
-        rdfs:label "award"@en
+        rdfs:label "award"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000310>
@@ -2257,12 +2244,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140123
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A provider is an agent that transfers commodities or services to other agents.",
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/ServiceProvider (adapted)",
         rdfs:comment "The transfer is typically defined in a contract.",
-        rdfs:label "provider"@en
+        rdfs:label "provider"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778"
     
     SubClassOf: 
         OEO_00000051
@@ -2271,6 +2258,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778",
 Class: OEO_00140124
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A service is a process that is an intangible activity performed by some agent for the benefit of another agent.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Dienstleistung"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service (adapted)",
+        rdfs:label "service"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/778
 
@@ -2280,11 +2271,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A service is a process that is an intangible activity performed by some agent for the benefit of another agent.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Dienstleistung"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000119> "https://spec.edmcouncil.org/fibo/ontology/FND/ProductsAndServices/ProductsAndServices/Service (adapted)",
-        rdfs:label "service"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
@@ -2294,12 +2281,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00140125
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A delivery interval is the duration between repeated deliveries of services or commodities.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Lieferintervall"@de,
         rdfs:comment "This duration is often contractually fixed and regular.",
-        rdfs:label "delivery interval"@en
+        rdfs:label "delivery interval"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
     
     SubClassOf: 
         OEO_00030035
@@ -2311,12 +2298,12 @@ Class: OEO_00140127
 Class: OEO_00140130
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power plant operator is an agent that operates an electric utility generation station.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Kraftwerksbetreiber"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Kraftwerksbetreiberin"@de,
-        rdfs:label "power plant operator"@en
+        rdfs:label "power plant operator"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
     
     SubClassOf: 
         OEO_00000051
@@ -2325,10 +2312,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
 Class: OEO_00140131
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A trader that trades the power of fossil fuel power plants.",
-        rdfs:label "conventional trader"@en
+        rdfs:label "conventional trader"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779"
     
     SubClassOf: 
         OEO_00040005
@@ -2337,10 +2324,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/779",
 Class: OEO_00140136
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/792",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Dispatch assignment is a plan specification that refers to resource planning at a power plant (usually by the plant’s operator).",
-        rdfs:label "dispatch assignment"@en
+        rdfs:label "dispatch assignment"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/792"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000104>
@@ -2349,10 +2336,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/792",
 Class: OEO_00140137
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/792",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power plant portfolio is an information content entity that describes a particular combination or mix of different power plants, e.g. renewables and fossil plants within one business unit or company or trader.",
-        rdfs:label "power plant portfolio"@en
+        rdfs:label "power plant portfolio"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/376
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/792"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
@@ -2361,10 +2348,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/792",
 Class: OEO_00140140
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A demand trader is a trader that deals specifically with energy demand.",
-        rdfs:label "demand trader"@en
+        rdfs:label "demand trader"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793"
     
     SubClassOf: 
         OEO_00040005
@@ -2373,12 +2360,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
 Class: OEO_00140141
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A merit order is a plan specification that describes the dispatch ranking of power plants (electrical generation) based on ascending order of price.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Merit-Order"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "geordnete Grenzkostenkurve"@de,
-        rdfs:label "merit order"@en
+        rdfs:label "merit order"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000104>
@@ -2387,11 +2374,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
 Class: OEO_00140143
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A direct marketer is a trader who is the relay between the energy exchange and power plant operators.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Direktvermarkter"@de,
-        rdfs:label "direct marketer"@en
+        rdfs:label "direct marketer"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/256
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793"
     
     SubClassOf: 
         OEO_00040005
@@ -2400,6 +2387,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/793",
 Class: OEO_00140149
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformative measure is a process that is an activity that has a direct impact on a specific variable in question.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
+        rdfs:label "transformative measure"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
 
@@ -2409,10 +2399,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1614
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A transformative measure is a process that is an activity that has a direct impact on a specific variable in question.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures",
-        rdfs:label "transformative measure"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -2421,6 +2408,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
 Class: OEO_00140150
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a plan specification that is a deliberate system of principles, rules and guidelines, adopted by an organisation to guide decision making with respect to particular situations and implemented to achieve stated goals.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Politik"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures"@en,
+        rdfs:label "policy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
 
@@ -2438,11 +2429,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1778
 
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy is a plan specification that is a deliberate system of principles, rules and guidelines, adopted by an organisation to guide decision making with respect to particular situations and implemented to achieve stated goals.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Politik"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures"@en,
-        rdfs:label "policy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000104>,
@@ -2453,6 +2440,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928",
 Class: OEO_00140151
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy instrument is an action specification of an organisation (e.g. a government) that promotes transformative measures."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Politikinstrument"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures"@en,
+        rdfs:label "policy instrument"@en,
         OEO_00020425 "study descriptor",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/797
@@ -2479,29 +2470,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791
 
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A policy instrument is an action specification of an organisation (e.g. a government) that promotes transformative measures."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Politikinstrument"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "policies and measures"@en,
-        rdfs:label "policy instrument"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000007>,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030022,
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/444
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/853"
-        OEO_00010119 some OEO_00140149,
-        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00030022
+        OEO_00010119 some OEO_00140149
     
     
 Class: OEO_00140171
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/818
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/827",
         <http://purl.obolibrary.org/obo/IAO_0000115> "An email address is an information content entity that identifies an email box to which messages are delivered.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "E-Mail-Adresse"@de,
-        rdfs:label "email address"@en
+        rdfs:label "email address"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/818
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/827"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
@@ -2510,16 +2497,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/827",
 Class: OEO_00160005
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel cost is a variable cost that depends on the type and amount of fuel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Brennstoffkosten"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Kraftstoffkosten"@de,
+        rdfs:label "fuel cost"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1257
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1260
 
 make subclass of process attribute
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A fuel cost is a variable cost that depends on the type and amount of fuel.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Brennstoffkosten"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Kraftstoffkosten"@de,
-        rdfs:label "fuel cost"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
     
     SubClassOf: 
         OEO_00020145
@@ -2528,10 +2515,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999",
 Class: OEO_00160006
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1779",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A market share is a quality of a market exchange which quantifies the proportion a good to the total amount of goods traded in that market exchange.",
-        rdfs:label "market share"@en
+        rdfs:label "market share"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1636
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1779"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000019>
@@ -2540,14 +2527,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1779",
 Class: OEO_00160007
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A market share value is a fraction value that quantifies a market share.",
+        rdfs:label "market share value"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1636
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1779
 
 make subclass of fraction value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A market share value is a fraction value that quantifies a market share.",
-        rdfs:label "market share value"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"
     
     SubClassOf: 
         OEO_00140127
@@ -2556,12 +2543,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
 Class: OEO_00230013
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
-https://github.com/OpenEnergyPlatform/ontology/issues/301
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A population is an aggregate of people in a spatial region."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Bevölkerung"@de,
-        rdfs:label "population"@en
+        rdfs:label "population"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
+https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000027>
@@ -2570,13 +2557,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
 Class: OEO_00230014
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
-https://github.com/OpenEnergyPlatform/ontology/issues/301
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "An urban population is a population living in urban areas, as defined by national statistical offices."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Städtische Bevölkerung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000119> "United Nations Population Division. World Urbanization Prospects: 2018 Revision."@en,
-        rdfs:label "urban population"@en
+        rdfs:label "urban population"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
+https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en
     
     SubClassOf: 
         OEO_00230013
@@ -2588,13 +2575,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
 Class: OEO_00230015
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
-https://github.com/OpenEnergyPlatform/ontology/issues/479
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "A rural population is a population living in rural areas, as defined by national statistical offices."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "ländliche Bevölkerung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000119> "United Nations Population Division. World Urbanization Prospects: 2018 Revision."@en,
-        rdfs:label "rural population"@en
+        rdfs:label "rural population"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+https://github.com/OpenEnergyPlatform/ontology/issues/479
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en
     
     SubClassOf: 
         OEO_00230013
@@ -2606,15 +2593,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
 Class: OEO_00230016
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
-https://github.com/OpenEnergyPlatform/ontology/issues/301
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The labour force is the population of people ages 15 and older who supply labour to the production of goods and services.  It includes people who are currently employed and people who are unemployed but seeking work as well as first-time job-seekers."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Arbeiterschaft"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Arbeitskräfte"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "labor force"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "https://databank.worldbank.org/reports.aspx?source=2&type=metadata&series=SL.TLF.TOTL.IN"@en,
-        rdfs:label "labour force"@en
+        rdfs:label "labour force"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/479
+https://github.com/OpenEnergyPlatform/ontology/issues/301
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en
     
     SubClassOf: 
         OEO_00230013
@@ -2623,12 +2610,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
 Class: OEO_00230017
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
-https://github.com/OpenEnergyPlatform/ontology/issues/479
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
         <http://purl.obolibrary.org/obo/IAO_0000115> "The working age population is the population of people aged 15 to 65."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Bevökerung im erwerbstätigen Alter"@de,
-        rdfs:label "working age population"@en
+        rdfs:label "working age population"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/301
+https://github.com/OpenEnergyPlatform/ontology/issues/479
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en
     
     SubClassOf: 
         OEO_00230013
@@ -2637,15 +2624,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/491"@en,
 Class: OEO_00240021
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A discount rate is an economic value with the unit percent that refers to the interest rate used in discounted cash flow (DCF) analysis to determine the present value of future cash flows."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Diskontierungsrate"@de,
+        rdfs:label "discount rate"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1049
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1077
 
 make subclass of fraction value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A discount rate is an economic value with the unit percent that refers to the interest rate used in discounted cash flow (DCF) analysis to determine the present value of future cash flows."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Diskontierungsrate"@de,
-        rdfs:label "discount rate"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"@en
     
     SubClassOf: 
         OEO_00140127,
@@ -2655,14 +2642,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"@en,
 Class: OEO_00240036
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An import price is the monetary price for the import of a material entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Importpreis"@de,
+        rdfs:label "import price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1050
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1083
 add axiom to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An import price is the monetary price for the import of a material entity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Importpreis"@de,
-        rdfs:label "import price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915"
     
     SubClassOf: 
         OEO_00040003
@@ -2671,14 +2658,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
 Class: OEO_00240037
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An export price is the monetary price for the export of a material entity."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Exportpreis"@de,
+        rdfs:label "export price"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1050
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1083
 add axiom to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1902
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An export price is the monetary price for the export of a material entity."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Exportpreis"@de,
-        rdfs:label "export price"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915"
     
     SubClassOf: 
         OEO_00040003
@@ -2687,28 +2674,44 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1915",
 Class: OEO_00320073
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An amortisation time is the time span in which the investment costs are refinanced from the annual profits and depreciation of the investment.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Amortisationszeit"@de,
+        rdfs:label "amortisation time"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1380
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1436
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An amortisation time is the time span in which the investment costs are refinanced from the annual profits and depreciation of the investment.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Amortisationszeit"@de,
-        rdfs:label "amortisation time"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00030035
     
     
+Class: OEO_00330002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity cost is a variable cost that depends on electricity price and amount.",
+        rdfs:label "electricity cost"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1365
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1482
+
+make subclass of process attribute
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1914
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1999"
+    
+    SubClassOf: 
+        OEO_00020145
+    
+    
 Class: OEO_00350000
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A population count is a quantity value to measure the size of a population.",
+        rdfs:label "population count"@en,
         OEO_00020426 "
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A population count is a quantity value to measure the size of a population.",
-        rdfs:label "population count"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623"
     
     SubClassOf: 
         OEO_00000350,
@@ -2718,14 +2721,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623",
 Class: OEO_00350001
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Annual GDP growth is an economic value that quantifies the difference between GDP in one year compared to the previous year.",
+        rdfs:label "annual GDP growth"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623
 
 make subclass of fraction value
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1875
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Annual GDP growth is an economic value that quantifies the difference between GDP in one year compared to the previous year.",
-        rdfs:label "annual GDP growth"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878"
     
     SubClassOf: 
         OEO_00140127,
@@ -2735,18 +2738,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1878",
 Class: OEO_00360000
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Acceptance is a realizable entity that represents the attitude of a person or organisation with respect to a certain constructional, (infra)structural or political measure that may be realized in, affected by or results of complex processes like discussions, communications, transformative measures or former personal experiences."@en,
+        rdfs:label "acceptance"@en,
         OEO_00020425 "study descriptor",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1552
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1698
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
-
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Acceptance is a realizable entity that represents the attitude of a person or organisation with respect to a certain constructional, (infra)structural or political measure that may be realized in, affected by or results of complex processes like discussions, communications, transformative measures or former personal experiences."@en,
-        rdfs:label "acceptance"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"@en
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000017>,
@@ -2757,10 +2759,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"@en,
 Class: OEO_00360018
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1584
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A service product role is the role of an immaterial entity that is the result of a service process, and whose value is determined by the value and the costs of the service."@en,
-        rdfs:label "service product role"@en
+        rdfs:label "service product role"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1584
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -2769,10 +2771,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748",
 Class: OEO_00360019
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1584
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748",
         <http://purl.obolibrary.org/obo/IAO_0000115> "A service product is an immaterial entity that has the service product role."@en,
-        rdfs:label "service product"@en
+        rdfs:label "service product"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1584
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748"
     
     EquivalentTo: 
         <http://purl.obolibrary.org/obo/BFO_0000141>
@@ -2785,10 +2787,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1748",
 Class: OEO_00360033
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
         <http://purl.obolibrary.org/obo/IAO_0000115> "Spatial planning policy is a policy of a German federal state that designates portions of a spatial region to purposes like settlement, infrastructur and sustainability."@en,
-        rdfs:label "spatial planning policy"@en
+        rdfs:label "spatial planning policy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1766
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791"
     
     SubClassOf: 
         OEO_00140150
@@ -2797,6 +2799,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1791",
 Individual: OEO_00010122
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The European Union Emissions Trading System (EU ETS) is a policy instrument that implements an emissions trading system covering the European Union, Norway, Iceland and Liechtenstein.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "EU ETS"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "EU-EHS"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionshandelssystem der Europäischen Union"@de,
+        rdfs:label "European Union Emissions Trading System"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
 
@@ -2806,12 +2813,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/944
 
 move govern axioms to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The European Union Emissions Trading System (EU ETS) is a policy instrument that implements an emissions trading system covering the European Union, Norway, Iceland and Liechtenstein.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "EU ETS"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "EU-EHS"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "Emissionshandelssystem der Europäischen Union"@de,
-        rdfs:label "European Union Emissions Trading System"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724"
     
     Types: 
         OEO_00140151,
@@ -2824,12 +2826,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
 Individual: OEO_00010124
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The Effort Sharing Decision (ESD) is the European effort sharing for the years 2013-2020. It covers the European Union, Norway, Iceland and Liechtenstein and the following greenhouse gases: carbon dioxide, methane, nitrous oxide, hydrofluorocarbons, perfluorocarbons and sulphur hexafluoride. Emission quantities under the ESD are calculated using global warming potentials from the Fourth IPCC Assessment Report.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "ESD",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Lastenteilungsentscheidung"@de,
-        rdfs:label "Effort Sharing Decision"@en
+        rdfs:label "Effort Sharing Decision"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857"
     
     Types: 
         OEO_00010123,
@@ -2842,12 +2844,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
 Individual: OEO_00010125
 
     Annotations: 
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
         <http://purl.obolibrary.org/obo/IAO_0000115> "The Effort Sharing Regulation (ESR) is the European effort sharing for the years 2021-2030. It covers the European Union, Norway, Iceland and Liechtenstein and the following greenhouse gases: carbon dioxide, methane, nitrous oxide, hydrofluorocarbons, perfluorocarbons, sulphur hexafluoride and nitrogen trifluoride. Emission quantities under the ESR are calculated using global warming potentials from the Fifth IPCC Assessment Report.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "ESR",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Lastenteilungsverordnung"@de,
-        rdfs:label "Effort Sharing Regulation"@en
+        rdfs:label "Effort Sharing Regulation"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857"
     
     Types: 
         OEO_00010123,
@@ -2860,6 +2862,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857",
 Individual: OEO_00010129
 
     Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses an EU emission sector division.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "EU-Klimapolitik"@de,
+        rdfs:label "EU climate policy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/834
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/857
 
@@ -2869,10 +2874,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1462
 
 move axiom to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1399
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724",
-        <http://purl.obolibrary.org/obo/IAO_0000115> "The EU climate policy is the policy of the European Union for reducing greenhouse gas emissions. It uses an EU emission sector division.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "EU-Klimapolitik"@de,
-        rdfs:label "EU climate policy"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1724"
     
     Types: 
         OEO_00140150
