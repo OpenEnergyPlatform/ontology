@@ -37,6 +37,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - electricity grid (#2042)
 - electricity grid voltage level, electricity grid component (#2108)
 - based on sector division, covers technology (shortcut), covers energy carrier (shortcut), has informarion input (shortcut), has information ouputt (shortcut) (#2122)
+- has squared / linear unit denominator, RED sector transport, EU emission sector LULUCF (#2126)
 
 
 ### Removed
