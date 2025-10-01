@@ -58,6 +58,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
+AnnotationProperty: <https://www.commoncoreontologies.org/ont00001754>
+
+    
 AnnotationProperty: OEO_00010037
 
     Annotations: 
@@ -1057,6 +1060,125 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1835"
         <http://purl.obolibrary.org/obo/UO_0000046>
     
     
+ObjectProperty: OEO_00020432
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and an energy carrier that is covered by the study the scenario bundle is about. It is a shortcut relation, see elucidation and associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio bundle' to 'energy carrier'. The original relation 'covers energy carrier' relates 'study' (process) to 'energy carrier'. 
+The shortcut relation should be used to represents these statements:
+('scenario bundle 'is about' some 'scenario study'`) and ('scenario study' 'covers energy carrier' some 'energy carrier')",
+        rdfs:label "covers energy carrier (shortcut)"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2023
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122",
+        OEO_00020434 "SELECT ?scenariobundle ?energycarrier WHERE {
+?scenariobundle IAO:0000136 _:1.
+_:1 OEO:00000523 ?energycarrier.
+}"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        OEO_00020039
+    
+    
+ObjectProperty: OEO_00020436
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario factsheet and a dataset, where the dataset is an output of the scenario projection process the scenario factsheet is about. It is a shortcut relation, see elucidation and associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio factsheet' to 'data set'. The original relation 'has information output' relates 'scenario projection' (process) to 'data set'. 
+The shortcut relation should be used to represents these statements:
+('scenario factsheet' 'is about' some scenario) and
+('scenario projection' 'is based on' some scenario) and
+('scenario projection' 'has information output' some dataset)",
+        rdfs:label "has information output (shortcut)"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2023
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122",
+        OEO_00020434 "select ?scenariofactsheet ?dataset where {
+?scenariofactsheet IAO:0000136 _:1.
+_:2 OEO:00020226 _:1.
+_:2 OEO_00140094 ?dataset.
+}"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        OEO_00000365
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    
+ObjectProperty: OEO_00020437
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio factsheet' to 'data set'. The original relation 'has information input' relates 'scenario projection' (process) to 'data set'. 
+The shortcut relation should be used to represents these statements:
+('scenario factsheet' 'is about' some scenario) and
+('scenario projection' 'is based on' some scenario) and
+('scenario projection' 'has information input' some dataset)",
+        rdfs:label "has information input (shortcut)"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2023
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122",
+        OEO_00020434 "select ?scenariofactsheet ?dataset where {
+?scenariofactsheet IAO:0000136 _:1.
+_:2 OEO:00020226 _:1.
+_:2 OEO_00140093 ?dataset.
+}",
+        <https://www.commoncoreontologies.org/ont00001754> "A relation between a scenario factsheet and a dataset, where the dataset is an input to the scenario projection process the scenario factsheet is about. It is a shortcut relation, see elucidation and associated sparql axiom."
+    
+    Domain: 
+        OEO_00000365
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/IAO_0000100>
+    
+    
+ObjectProperty: OEO_00020438
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and a technology that is covered by the study the scenario bundle is about. It is a shortcut relation, see elucidation and associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenatio bundle' to 'technology'. The original relation 'covers technology' relates 'study' (process) to 'technology'. 
+The shortcut relation should be used to represents these statements:
+('scenario bundle 'is about' some 'scenario study'`) and ('scenario study' 'covers technology' some 'technology')",
+        rdfs:label "covers technology (shortcut)"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2023
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122",
+        OEO_00020434 "SELECT ?scenariobundle ?technology WHERE {
+?scenariobundle IAO:0000136 _:1.
+_:1 OEO:00390101 ?technology.
+}"
+    
+    SubPropertyOf: 
+        owl:topObjectProperty
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        OEO_00000407
+    
+    
 ObjectProperty: OEO_00040010
 
     Annotations: 
@@ -1206,6 +1328,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390"
     
     InverseOf: 
         OEO_00000533
+    
+    
+ObjectProperty: OEO_00390079
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "based on sector division is a relation between a scenario bundle and a sector division it is based on.",
+        rdfs:label "based on sector division"@en,
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2020
+
+move to oeo-shared
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122"
+    
+    Domain: 
+        OEO_00020227
+    
+    Range: 
+        OEO_00000368
     
     
 ObjectProperty: owl:topObjectProperty
@@ -1520,6 +1662,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1606"
         OEO_00040010 some <http://purl.obolibrary.org/obo/UO_0000000>
     
     
+Class: OEO_00000365
+
+    
+Class: OEO_00000368
+
+    
 Class: OEO_00000407
 
     Annotations: 
@@ -1727,6 +1875,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
         <http://purl.obolibrary.org/obo/IAO_0000030>
     
     
+Class: OEO_00020039
+
+    
 Class: OEO_00020166
 
     Annotations: 
@@ -1788,6 +1939,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
     
+    
+Class: OEO_00020227
+
     
 Class: OEO_00020352
 
