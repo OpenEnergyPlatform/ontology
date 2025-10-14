@@ -18,6 +18,15 @@ Annotations:
     <http://purl.org/dc/terms/license> "http://creativecommons.org/publicdomain/zero/1.0/",
     <http://purl.org/dc/terms/title> "Open Energy Ontology (Co-Simulation module)"
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000118>
+
+    
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
+
+    
 AnnotationProperty: <http://purl.org/dc/terms/license>
 
     
@@ -25,6 +34,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 
     
 AnnotationProperty: dc:description
+
+    
+AnnotationProperty: rdfs:comment
 
     
 AnnotationProperty: rdfs:label
@@ -35,4 +47,57 @@ Datatype: rdf:PlainLiteral
     
 Datatype: xsd:string
 
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000005>
+
+    
+Class: <http://purl.obolibrary.org/obo/IAO_0000104>
+
+    
+Class: OEO_00420000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation scenario is a plan specification that references a simulation configuration and contains simulation objective specifications to motivate the planned analysis.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Simulationsszenario"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2071
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2125",
+        rdfs:comment "The bearer of the simulation scenario is the researcher, starting the simulation and analysing the results.",
+        rdfs:label "simulation scenario"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00420001
+    
+    
+Class: OEO_00420001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A simulation configuration is a plan specification that describes the technical setup containing simulation components, their connections, and all the exogeneous data necessary to be realized in a simulation process.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2071
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2125",
+        rdfs:comment "The bearer of the simulation configuration is the simulation framework realizing the simulation configuration in the simulation.",
+        rdfs:label "simulation configuration"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00420002
+    
+    
+Class: OEO_00420002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An output creation objective is an objective specification that defines the goal to produce output data.",
+        <http://purl.obolibrary.org/obo/IAO_0000233> "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2071
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2125",
+        rdfs:label "output creation objective"@en
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000005>
+    
     

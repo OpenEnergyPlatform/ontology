@@ -13,6 +13,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 202X-XX-XX
 
 ### Added
+- simulation scenario concept (#2071)
 ### Changed
 ### Removed
 
