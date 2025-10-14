@@ -1,0 +1,17 @@
+# Adapted from:
+# https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/v2.0-2024-11-06/.github/deployment/sparql/duplicate_definition.sparql
+# No two ontology elements may have the exact same definition.    
+
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?element ?definition ?error
+WHERE {
+  ?element obo:IAO_0000115 ?definition .
+  ?element2 obo:IAO_0000115 ?definition .
+  FILTER (?element != ?element2)
+  FILTER (!isBlank(?element))
+  FILTER (regex(str(?element),"https://openenergyplatform.org/ontology/oeo/"))
+  FILTER (regex(str(?element2),"https://openenergyplatform.org/ontology/oeo/"))
+  BIND (concat("WARNING: Same definition:", str(?element), " and ", str(?element2)) AS ?error)
+}
