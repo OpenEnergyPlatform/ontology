@@ -10,7 +10,7 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.10.0] - 2025-12-10
+## [2.X.X] - 202X-XX-XX
 
 ### Added
 -  Added new gas turbine types: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine as subclasses of gas turbine. (#2132)
