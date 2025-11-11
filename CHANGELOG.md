@@ -13,7 +13,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 202X-XX-XX
 
 ### Added
+
 ### Changed
+cold start, emission certificate price, greenhouse gas emission, start-up speed #2143
+
 ### Removed
 
 ## [2.9.0] - 2025-10-01
