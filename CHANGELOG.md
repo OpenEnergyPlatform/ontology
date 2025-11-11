@@ -13,7 +13,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 202X-XX-XX
 
 ### Added
+- motion, translational energy #2145
+
 ### Changed
+
 ### Removed
 
 ## [2.9.0] - 2025-10-01
