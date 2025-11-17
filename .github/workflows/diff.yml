@@ -1,0 +1,68 @@
+name: 'Create ROBOT diffs on Pull requests'
+
+on:
+  # Triggers the workflow on pull request events for the master branch
+  pull_request:
+    branches: [ dev, dif-as-comment ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  create_diff_file:
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:v1.4
+    steps:
+      # Checks-out the branch being merged into master in the root directory
+      # The ontology obo file path will be: src/ontology/fypo-edit.owl
+      - uses: actions/checkout@v5
+      # Checks-out the master branch in a subfolder called master
+      # The ontology obo file path will be: master/src/ontology/fypo-edit.owl
+      - uses: actions/checkout@v5
+        with:
+          ref: dev
+          path: dev
+      - name: Run robot diff
+        # -Xmx6G extension is to set 6gb of memory for java virtual machine
+        # The second line produces the difference in the edit files only
+        # The third line produces the difference after reasoner. I still have to figure what the best file for this is.
+        # robot diff --labels True --left master/fypo.owl --right fypo.owl -f markdown -o reasoned-diff.md;
+        # To edit the second and third line for another ontology, test the robot code locally, and edit accordingly.
+        # For example, FYPO does not need an extra --right-catalog but other ontologies may need it
+        # See https://github.com/obophenotype/cell-ontology/blob/master/.github/workflows/diff.yml
+        shell: bash
+        run: >
+          export ROBOT_JAVA_ARGS=-Xmx6G;
+          function robot_diff { robot diff --labels True --left ./dev/$1 --right $1 -f markdown; };
+          export -f robot_diff;
+          git config --global --add safe.directory $PWD;
+          git fetch origin ${{ github.base_ref }};
+          git diff --name-only origin/dev | grep -E "src/.*(omn|owl)" | xargs -I% bash -c 'robot_diff % > %.changes.md';
+#          gh pr diff 2 --name-only | xargs -I% bash -c 'robot_diff % > %.changed.md';
+#          find src \( -name "*.omn" -o -name "*.owl" \) -exec bash -c 'robot_diff $0 > $0.changes.md' {} \;
+
+#          robot diff --labels True --left master/src/ontology/fypo-edit.owl --right src/ontology/fypo-edit.owl -f markdown -o edit-diff.md;
+#          robot --catalog src/ontology/catalog-v001.xml report -i src/ontology/oeo.omn -l true  --fail-on None --base-iri ttps://openenergyplatform.org/ontology/oeo/ --print 5 -o errors.tsv;
+      - name: Format comment
+        # Create a comment where the diffs can be folded, so it does not take so much space
+        # add this eventually: cat reasoned-diff.md >> comment.md;
+        run: >
+            find . -name "*.changes.md" -exec bash -c \
+              'printf "<details><summary>%s: %s changes</summary>\n\n%s\n</details>\n\n" $(basename $0 ".changes.md") $(grep -E "^- \[" $0 | wc -l) "$(cat $0)" | sed "s/^#/##/"' {} \; > comment.md;
+            realpath comment.md;
+            cat comment.md;
+#            printf "# Errors reported\n\n" >> comment.md;
+#            printf "\`\`\`\n" >> comment.md;
+#            cat errors.tsv >> comment.md;
+#            printf "\n\`\`\`\n" >> comment.md;
+      - name: Post comment in the PR
+        # Note how the path to comment.md needs ../../ in the path.
+        # Because we provide an identifier, the comment will be overwritten every time the action
+        # is run. I guess one could have an identifier that contains the commit_id so that a new
+        # comment is posted every time a change is made in the branch that is being merged.
+        env:
+            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        uses: NejcZdovc/comment-pr@v1.1.1
+        with:
+          file: "../../comment.md"
+          identifier: "DIFF_COMMENT"
