@@ -14,6 +14,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 - motion, translational energy #2145
+- Added new gas turbine types: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine. (#2132)
 
 ### Changed
 - cold start, emission certificate price, greenhouse gas emission, start-up speed #2143
