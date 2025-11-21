@@ -16,6 +16,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - motion, translational energy #2145
 
 ### Changed
+- cold start, emission certificate price, greenhouse gas emission, start-up speed #2143
 
 ### Removed
 
