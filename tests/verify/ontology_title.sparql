@@ -1,0 +1,16 @@
+# Adapted from: 
+# https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/v2.0-2024-11-06/.github/deployment/sparql/min_1_ontology_title.sparql
+# Any owl:Ontology must have an terms:title .
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX terms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?resource ?error
+WHERE
+{
+    ?resource a owl:Ontology .
+    FILTER (!ISBLANK (?resource)) .
+    FILTER NOT EXISTS {?resource terms:title ?title}
+    BIND (concat("WARNING: An rdfs:label is missing for ontology ", str(?resource)) AS ?error)
+}

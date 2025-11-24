@@ -1,0 +1,14 @@
+# Adapted from: 
+# https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/v2.0-2024-11-06/.github/deployment/sparql/subclass_circularity.sparql
+# No class should appear in a circular `subClassOf` hierarchy.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?class ?error
+WHERE 
+{
+  ?class rdfs:subClassOf+ ?class .
+  FILTER (!ISBLANK (?class)) .
+  FILTER regex(str(?class), "https://openenergyplatform.org/ontology/oeo/")
+  BIND (concat("ERROR: There is a subclass cycle around class ", str(?class)) AS ?error)
+}

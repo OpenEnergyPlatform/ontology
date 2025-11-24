@@ -758,7 +758,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+make equivalent axiom a subclass of axiom and split it 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2138
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2143"
     
     SubClassOf: 
         OEO_00020154
@@ -1572,9 +1576,9 @@ rework module structure
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
-    EquivalentTo: 
-        OEO_00010268
-         and (OEO_00020179 some OEO_00020063)
+    SubClassOf: 
+        OEO_00010268,
+        OEO_00020056 some OEO_00020063
     
     
 Class: OEO_00020155
@@ -2709,8 +2713,7 @@ Class: OEO_00350000
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A population count is a quantity value to measure the size of a population.",
         rdfs:label "population count"@en,
-        OEO_00020426 "
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1487
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1623"
     
     SubClassOf: 
