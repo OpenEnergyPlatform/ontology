@@ -13,7 +13,7 @@ on:
 jobs:
   create_diff_file:
     runs-on: ubuntu-latest
-    container: obolibrary/odklite:v1.4
+    container: obolibrary/odklite:latest
     steps:
       # Checks-out the branch being merged into master in the root directory
       # The ontology obo file path will be: src/ontology/fypo-edit.owl
@@ -31,27 +31,32 @@ jobs:
         # The last line fetches all changed .omn and .owl files in src/ collects the changes in respective .changes.md files
         shell: bash
         run: |
+          set -x
+          robot --version
           export ROBOT_JAVA_ARGS=-Xmx6G
-          function process-file {
-            # Drop term tracker annotations
-            robot remove --select complement --drop-axiom-annotations http://purl.obolibrary.org/obo/IAO_0000118 --input $1 --output $1
-            robot remove --select complement --drop-axiom-annotations http://purl.obolibrary.org/obo/IAO_0000118 --input dev/$1 --output dev/$1
-            robot diff --labels True --left ./dev/% --right % -f markdown
-          }
-          export -f process-file
           git config --global --add safe.directory $PWD
           git fetch origin ${{ github.base_ref }}
-          git diff --name-only origin/dev | grep -E "src/.*(omn|owl)" \
-            | xargs -I% bash -c 'process-file % > %.changes.md'
+          CHANGES=($(git diff --name-only origin/dev | grep -E "src/.*(omn|owl)"))
+          for c in ${CHANGES[@]}; do
+            # Drop term tracker annotations
+            robot remove --select complement --drop-axiom-annotations https://openenergyplatform.org/ontology/oeo/OEO_00020426 --input $c \
+                  remove --term https://openenergyplatform.org/ontology/oeo/OEO_00020426 --output $c
+            robot remove --select complement --drop-axiom-annotations https://openenergyplatform.org/ontology/oeo/OEO_00020426 --input dev/$c \
+                  remove --term https://openenergyplatform.org/ontology/oeo/OEO_00020426 --output dev/$c
+
+            # Get diff
+            robot diff --labels True --left ./dev/$c --right $c -f markdown > $c.changes.md
+          done
       - name: Format comment
         # Create a comment where the diffs can be folded, so it does not take so much space
         # Finds all previously created .changes.md files and embeds them in collapsible sections
-        run: >
+        run: |
             printf "# Changed axioms per ontology\n\n _**Note**: Changes in term tracker annotations are not displayed_\n\n" > comment.md
+            find . -name "*.changes.md"
             find . -name "*.changes.md" -exec bash -c \
-              'printf "<details><summary>%s: %s changes</summary>\n\n%s\n</details>\n\n" $(basename $0 ".changes.md") $(grep -E "^- \[" $0 | wc -l) "$(cat $0)"' {} \; >> comment.md;
-            realpath comment.md;
-            cat comment.md;
+              'printf "<details><summary>%s: %s changes</summary>\n\n%s\n</details>\n\n" $(basename $0 ".changes.md") $(grep -E "^- \[" $0 | wc -l) "$(cat $0)"' {} \; >> comment.md
+            realpath comment.md
+            cat comment.md
 #            printf "# Errors reported\n\n" >> comment.md;
 #            printf "\`\`\`\n" >> comment.md;
 #            cat errors.tsv >> comment.md;
