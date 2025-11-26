@@ -13,11 +13,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 202X-XX-XX
 
 ### Added
+- motion, translational energy #2145
+- Added new gas turbine types: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine. (#2132)
 
 ### Changed
 - imported subclasses of uo:unit (#2141)
 - has unit, is unit of, has prefix, has unit denominator, has unit numerator, prefix, unit, quantity value (#2141)
-- internal combustion engine (#2153)
+- internal combustion engine (#2157)
+- cold start, emission certificate price, greenhouse gas emission, start-up speed #2143
 
 ### Removed
 - uo:unit (#2141)
