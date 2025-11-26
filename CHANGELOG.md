@@ -17,6 +17,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Changed
 - imported subclasses of uo:unit (#2141)
 - has unit, is unit of, has prefix, has unit denominator, has unit numerator, prefix, unit, quantity value (#2141)
+- internal combustion engine (#2153)
 
 ### Removed
 - uo:unit (#2141)
