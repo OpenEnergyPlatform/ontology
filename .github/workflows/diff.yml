@@ -1,0 +1,74 @@
+name: 'Create ROBOT diffs on Pull requests'
+
+on:
+  # Triggers the workflow on pull request events for the master branch
+  pull_request:
+    branches: [ dev ]
+    paths:
+      - 'src/ontology/**'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  create_diff_file:
+    runs-on: ubuntu-latest
+    container: obolibrary/odklite:latest
+    steps:
+      # Checks-out the branch being merged into master in the root directory
+      # The ontology obo file path will be: src/ontology/fypo-edit.owl
+      - uses: actions/checkout@v5
+      # Checks-out the master branch in a subfolder called master
+      # The ontology obo file path will be: master/src/ontology/fypo-edit.owl
+      - uses: actions/checkout@v5
+        with:
+          ref: dev
+          path: dev
+      - name: Run robot diff
+        # -Xmx6G extension is to set 6gb of memory for java virtual machine
+        # See https://github.com/obophenotype/cell-ontology/blob/master/.github/workflows/diff.yml
+        # Firstly, we remove all term tracker annotations since they only bloat the comment
+        # The last line fetches all changed .omn and .owl files in src/ collects the changes in respective .changes.md files
+        shell: bash
+        run: |
+          set -x
+          robot --version
+          export ROBOT_JAVA_ARGS=-Xmx6G
+          git config --global --add safe.directory $PWD
+          git fetch origin ${{ github.base_ref }}
+          CHANGES=($(git diff --name-only origin/dev | grep -E "src/.*(omn|owl)"))
+          for c in ${CHANGES[@]}; do
+            # Drop term tracker annotations
+            robot remove --select complement --drop-axiom-annotations https://openenergyplatform.org/ontology/oeo/OEO_00020426 --input $c \
+                  remove --term https://openenergyplatform.org/ontology/oeo/OEO_00020426 --output $c
+            robot remove --select complement --drop-axiom-annotations https://openenergyplatform.org/ontology/oeo/OEO_00020426 --input dev/$c \
+                  remove --term https://openenergyplatform.org/ontology/oeo/OEO_00020426 --output dev/$c
+
+            # Get diff
+            robot diff --labels True --left ./dev/$c --right $c -f markdown > $c.changes.md
+          done
+      - name: Format comment
+        # Create a comment where the diffs can be folded, so it does not take so much space
+        # Finds all previously created .changes.md files and embeds them in collapsible sections
+        run: |
+            printf "# Changed axioms per ontology\n\n _**Note**: Changes in term tracker annotations are not displayed_\n\n" > comment.md
+            find . -name "*.changes.md"
+            find . -name "*.changes.md" -exec bash -c \
+              'printf "<details><summary>%s: %s changes</summary>\n\n%s\n</details>\n\n" $(basename $0 ".changes.md") $(grep -E "^- \[" $0 | wc -l) "$(cat $0)"' {} \; >> comment.md
+            realpath comment.md
+            cat comment.md
+#            printf "# Errors reported\n\n" >> comment.md;
+#            printf "\`\`\`\n" >> comment.md;
+#            cat errors.tsv >> comment.md;
+#            printf "\n\`\`\`\n" >> comment.md;
+      - name: Post comment in the PR
+        # Note how the path to comment.md needs ../../ in the path.
+        # Because we provide an identifier, the comment will be overwritten every time the action
+        # is run. I guess one could have an identifier that contains the commit_id so that a new
+        # comment is posted every time a change is made in the branch that is being merged.
+        env:
+            GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        uses: NejcZdovc/comment-pr@v1.1.1
+        with:
+          file: "../../comment.md"
+          identifier: "DIFF_COMMENT"
