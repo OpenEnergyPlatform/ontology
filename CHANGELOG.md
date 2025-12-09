@@ -13,17 +13,22 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 202X-XX-XX
 
 ### Added
-- motion, translational energy #2145
+- motion, translational energy (#2145)
 - Added new gas turbine types: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine. (#2132)
 
 ### Changed
-- cold start, emission certificate price, greenhouse gas emission, start-up speed #2143
 - energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
 - fuel-powered electricity generation process, combustion thermal energy trafo, gas turbine process, heat generation/gain process, hydro energy trafo, hydroelectric energy trafo and subclasses, nuclear energy trafo (#2120)
 - power-to-fuel, power-to-gas, power-to-liquid, power-to-ammonia, power-to-methane, solar energy transformation and subclasses, solar steam electric process, water electrolysis process, wind energy trafo, steam reforming, oeo:energy transfer, propulsion (#2120)
-
+- imported subclasses of uo:unit (#2141)
+- has unit, is unit of, has prefix, has unit denominator, has unit numerator, prefix, unit, quantity value (#2141)
+- meno:energy increase, meno:energy increase (#2158) 
+- internal combustion engine (#2157)
+- cold start, emission certificate price, greenhouse gas emission, start-up speed (#2143)
+- monetary value, good role, emission certificate (#2161)
 
 ### Removed
+- uo:unit (#2141)
 
 ## [2.9.0] - 2025-10-01
 
