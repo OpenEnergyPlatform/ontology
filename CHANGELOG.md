@@ -10,12 +10,12 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.X.X] - 202X-XX-XX
+## [2.10.0] - 2025-12-10
 
 ### Added
-- motion, translational energy (#2145)
 - Added new gas turbine types: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine. (#2132)
-- dcterms:creator (#1571)
+- motion, translational energy (#2145)
+- dcterms:creator (#2178)
 
 ### Changed
 - energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
@@ -23,9 +23,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - power-to-fuel, power-to-gas, power-to-liquid, power-to-ammonia, power-to-methane, solar energy transformation and subclasses, solar steam electric process, water electrolysis process, wind energy trafo, steam reforming, oeo:energy transfer, propulsion (#2120)
 - imported subclasses of uo:unit (#2141)
 - has unit, is unit of, has prefix, has unit denominator, has unit numerator, prefix, unit, quantity value (#2141)
-- meno:energy increase, meno:energy increase (#2158) 
-- internal combustion engine (#2157)
 - cold start, emission certificate price, greenhouse gas emission, start-up speed (#2143)
+- internal combustion engine (#2157)
+- meno:energy increase, meno:energy increase (#2158) 
 - monetary value, good role, emission certificate (#2161)
 
 ### Removed
