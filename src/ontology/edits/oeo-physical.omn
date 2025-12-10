@@ -117,6 +117,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000117>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/IAO_0000136>
 
     
@@ -174,6 +177,12 @@ ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003000>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/RO_0003001>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0019001>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/RO_0019002>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/uo#is_unit_of>
@@ -925,6 +934,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142",
     SubClassOf: 
         OEO_00000185
     
+    
+Class: <https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+
+    
+Class: <https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+
     
 Class: <https://www.commoncoreontologies.org/ont00000127>
 
@@ -5734,17 +5749,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/701
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
-    
-    EquivalentTo: 
-        (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020047)
-         and (<http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00050020)
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00020046,
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00020047)
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00050020),
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000384)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
-        OEO_00010235 some OEO_00000139
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396
     
     
 Class: OEO_00010081
@@ -5758,11 +5780,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/735
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00020046,
-        OEO_00010235 some OEO_00000007
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000384)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007)))
     
     
 Class: OEO_00010084
@@ -5980,6 +6011,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806"
     
     SubClassOf: 
         OEO_00140101,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00010095)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105
     
     
@@ -6019,11 +6056,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
 https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
 remove wrong axiom 
-https://github.com/OpenEnergyPlatform/ontology/pull/1044"
+https://github.com/OpenEnergyPlatform/ontology/pull/1044
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00110005,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00010097)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         
             Annotations: rdfs:comment "reintroduce axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
@@ -6033,8 +6081,7 @@ pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
-        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010107,
-        OEO_00010234 some OEO_00010097
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010107
     
     
 Class: OEO_00010099
@@ -6047,17 +6094,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00110005,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00010100)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
-        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010101,
-        OEO_00010234 some OEO_00010100
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010101
     
     
 Class: OEO_00010100
@@ -6132,17 +6188,26 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00110005,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00010102)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
-        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010106,
-        OEO_00010234 some OEO_00010102
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010106
     
     
 Class: OEO_00010104
@@ -6799,14 +6864,18 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 changed to subclass of  newly added 'power-to-fuel process'
 https://github.com/OpenEnergyPlatform/ontology/issues/1477
-https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+    
+    EquivalentTo: 
+        OEO_00330007
+         and (OEO_00000533 some OEO_00010155)
     
     SubClassOf: 
-        OEO_00330007,
-        (OEO_00000532 some OEO_00000331)
-         and (OEO_00010234 some OEO_00000139),
-        (OEO_00000533 some OEO_00010155)
-         and (OEO_00010235 some OEO_00000007)
+        OEO_00330007
     
     
 Class: OEO_00010217
@@ -6825,17 +6894,26 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 added new parent class `power-to-fuel proces' upstream
 https://github.com/OpenEnergyPlatform/ontology/issues/1477
-https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00010216,
-        (OEO_00000532 some OEO_00000006)
-         and (OEO_00000532 some OEO_00000441)
-         and (OEO_00010234 some OEO_00000139),
-        (OEO_00000533 some OEO_00010018)
-         and (OEO_00010235 some OEO_00000007),
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010219,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010220
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000139)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
+        <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00010219,
+        <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00010220,
+        OEO_00000532 some 
+            (OEO_00000006
+             and OEO_00000441),
+        OEO_00000533 some OEO_00010018
     
     
 Class: OEO_00010218
@@ -6864,16 +6942,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        (OEO_00000532 some OEO_00000441)
-         and (OEO_00010234 some OEO_00000139),
-        (OEO_00000533 some OEO_00000220)
-         and (OEO_00000533 some OEO_00010218)
-         and (OEO_00010235 some OEO_00000007),
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010021
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000139)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010021,
+        OEO_00000532 some OEO_00000441,
+        OEO_00000533 some 
+            (OEO_00000220
+             and OEO_00010218)
     
     
 Class: OEO_00010220
@@ -6921,11 +7008,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/959
 
 added new parent class `power-to-fuel proces' upstream
 https://github.com/OpenEnergyPlatform/ontology/issues/1477
-https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00010216,
-        <http://purl.obolibrary.org/obo/RO_0002234> some OEO_00010000
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000139)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
+        OEO_00000533 some OEO_00010221
     
     
 Class: OEO_00010223
@@ -7221,19 +7318,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1315"
 Class: OEO_00010248
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generation process is an energy transformation that has thermal energy as energy output.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat gain process is an energy transformation that has thermal energy as energy output.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation",
-        rdfs:label "heat generation process"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation process",
+        rdfs:comment "With the logical definition of heat gain process, heat transfer is inferred as subclass which is intended but depends on the perspective and the system boundaries. To avoid confusion, the main label was changed from heat generation to heat gain process.",
+        rdfs:label "heat gain process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130
 
 Add alternative term:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1455
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+relabel
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     EquivalentTo: 
-        OEO_00020003
-         and (OEO_00010235 some OEO_00000207)
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000150)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207)))
     
     SubClassOf: 
         OEO_00020003
@@ -7249,15 +7360,23 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1130
 
 Add relation to emission
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1210"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1210
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000007)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207))),
+        <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00140038,
         <http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147,
-        OEO_00000532 some OEO_00000099,
-        OEO_00010234 some OEO_00000007,
-        OEO_00010235 some OEO_00000207
+        OEO_00000532 some OEO_00000099
     
     
 Class: OEO_00010253
@@ -7454,12 +7573,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1251"
     
     SubClassOf: 
         OEO_00140033,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some 
+                (OEO_00000007
+                 and OEO_00000207))))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
         OEO_00000532 some OEO_00110001,
         OEO_00000532 some OEO_00140159,
-        OEO_00000533 some OEO_00140160,
-        OEO_00010234 some OEO_00000007,
-        OEO_00010235 some OEO_00000007,
-        OEO_00010235 some OEO_00010114
+        OEO_00000533 some OEO_00140160
     
     
 Class: OEO_00010273
@@ -9514,15 +9638,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1625
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"@en
-    
-    EquivalentTo: 
-        OEO_00000419
-         and (OEO_00010234 some OEO_00000150)
-         and (OEO_00010235 some OEO_00000150)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00000419,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000150)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000150))),
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
@@ -9674,6 +9803,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1447"
     
     SubClassOf: 
         OEO_00020103,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00020040)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00020040))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00230021
     
     
@@ -9758,16 +9893,21 @@ Class: OEO_00020043
         rdfs:label "wind energy transformation"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044,
-        OEO_00010234 some OEO_00000446,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00010235 some OEO_00000139
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000446)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044
     
     
 Class: OEO_00020045
@@ -9809,11 +9949,22 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+    
+    EquivalentTo: 
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000384)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000150)))
     
     SubClassOf: 
-        OEO_00020003,
-        OEO_00010234 some OEO_00000384
+        OEO_00020003
     
     
 Class: OEO_00020047
@@ -9826,15 +9977,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00020046,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000387,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
-        OEO_00010235 some OEO_00000388
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000384)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000388))),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000387
     
     
 Class: OEO_00020048
@@ -9847,15 +10004,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/672
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00020046,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
-        OEO_00010235 some OEO_00000139
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000384)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032
     
     
 Class: OEO_00020050
@@ -9903,15 +10066,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00010234 some OEO_00000300,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00010235 some OEO_00000207
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000300)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207)))
     
     
 Class: OEO_00020058
@@ -9944,7 +10112,12 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041"
     
     SubClassOf: 
         OEO_00140101,
-        OEO_00010234 only OEO_00000191
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000191)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207)))
     
     
 Class: OEO_00020073
@@ -10657,16 +10830,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1499"
 Class: OEO_00020251
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is an energy transformation that converts other forms of energy to kinetic energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Propulsion is an energy transformation that converts other forms of energy to translational kinetic energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Antrieb"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "energy-to-motion-process"@en,
         rdfs:label "propulsion"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1528
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1541"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1541
+
+replace energy-participant axioms and adjust definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     EquivalentTo: 
-        OEO_00020003
-         and (OEO_00010235 some OEO_00230020)
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000150)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00020454)))
     
     SubClassOf: 
         OEO_00020003
@@ -11499,20 +11680,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1240
 
 Relabel and add old label as alternative term:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1455
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     EquivalentTo: 
         OEO_00240014
          and (OEO_00000532 some OEO_00000099)
     
     SubClassOf: 
-        OEO_00240014,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000007)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175,
         <http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147,
-        OEO_00000500 some OEO_00000148,
-        OEO_00000533 some OEO_00000331,
-        OEO_00010234 some OEO_00000007
+        OEO_00000500 some OEO_00000148
     
     
 Class: OEO_00050002
@@ -11838,7 +12026,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"@en
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
@@ -11938,11 +12130,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"@en
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00010234 some OEO_00000218
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000218)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000150)))
     
     
 Class: OEO_00110005
@@ -11955,14 +12156,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/682
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041"@en
+https://github.com/OpenEnergyPlatform/ontology/pull/1041
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00110004,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00010235 some OEO_00000139
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000218)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139)))
     
     
 Class: OEO_00140000
@@ -12735,11 +12942,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299"
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00010234 only OEO_00000207,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00010235 only OEO_00000207
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000207)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207)))
     
     
 Class: OEO_00140102
@@ -12817,6 +13025,12 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041"
     
     SubClassOf: 
         OEO_00140101,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000056)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207))),
         <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>,
         OEO_00010234 some OEO_00000056
     
@@ -13332,12 +13546,22 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 Relabel and add old label as alternative label:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1455
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00010235 some OEO_00000139,
-        OEO_00010235 some OEO_00000207
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000007)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some 
+                (OEO_00000139
+                 and OEO_00000207))))
     
     
 Class: OEO_00240010
@@ -13442,9 +13666,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2065"
 Class: OEO_00240014
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity generation process is an energy transformation that has electrical energy as physical output."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity gain process is an energy transformation that has electrical energy as physical output."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "electricity generation",
-        rdfs:label "electricity generation process"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "electricity generation process",
+        rdfs:comment "With the logical definition of electricity gain process, electrical energy transfer is inferred as subclass which is intended but depends on the perspective and the system boundaries. To avoid confusion, the main label was changed from electricity generation to electricity gain process.",
+        rdfs:label "electricity gain process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/917
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932
 
@@ -13458,17 +13684,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+replace energy-participant axioms and relabel
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     EquivalentTo: 
-        OEO_00020003
-         and (OEO_00010235 some OEO_00000139)
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000150)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139)))
     
     SubClassOf: 
         OEO_00020003,
         OEO_00000500 some OEO_00240012,
-        OEO_00000500 some OEO_00240013,
-        OEO_00010235 some OEO_00000139
+        OEO_00000500 some OEO_00240013
     
     
 Class: OEO_00240015
@@ -14340,14 +14573,23 @@ Class: OEO_00310025
         <http://purl.obolibrary.org/obo/IAO_0000118> "combined cycle electricity generation"@en,
         rdfs:label "combined cycle electricity generation process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
-        OEO_00050001,
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000007)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
         <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00050020,
         <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00310027,
-        OEO_00010234 some OEO_00000139,
-        OEO_00010234 some OEO_00240000
+        OEO_00000532 some OEO_00000099
     
     
 Class: OEO_00310027
@@ -14357,15 +14599,23 @@ Class: OEO_00310027
         <http://purl.obolibrary.org/obo/IAO_0000118> "Gasturbinenprozess"@de,
         rdfs:label "gas turbine process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1256
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140038,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000007)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00240000))),
+        <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00140038,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000185,
-        OEO_00000532 some OEO_00000099,
-        OEO_00010234 some OEO_00000007,
-        OEO_00010235 some OEO_00240000
+        OEO_00000532 some OEO_00000099
     
     
 Class: OEO_00310028
@@ -15204,8 +15454,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299"
     
     SubClassOf: 
         OEO_00020103,
-        OEO_00010234 some OEO_00000139,
-        OEO_00010235 some OEO_00000139
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000139)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139)))
     
     
 Class: OEO_00320037
@@ -15218,8 +15472,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299"
     
     SubClassOf: 
         OEO_00020103,
-        OEO_00010234 some OEO_00000007,
-        OEO_00010235 some OEO_00000007
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000007)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007)))
     
     
 Class: OEO_00320038
@@ -15684,7 +15942,13 @@ Class: OEO_00320064
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1394"
     
     SubClassOf: 
-        OEO_00320036,
+        OEO_00020003,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000139)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000068
     
     
@@ -15826,14 +16090,24 @@ Class: OEO_00330007
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel process is an energy transformation that converts electrical energy to chemical energy by synthesising portions of matter into a synthetic fuel.",
         rdfs:label "power-to-fuel process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+    
+    EquivalentTo: 
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000139)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007)))
+         and (OEO_00000533 some OEO_00010017)
     
     SubClassOf: 
         OEO_00020003,
-        (OEO_00000532 some OEO_00000331)
-         and (OEO_00010234 some OEO_00000139),
-        (OEO_00000533 some OEO_00010017)
-         and (OEO_00010235 some OEO_00000007)
+        OEO_00000532 some OEO_00000331
     
     
 Class: OEO_00330008
@@ -15842,14 +16116,18 @@ Class: OEO_00330008
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-liquid process is a power-to-fuel process that converts electrical energy to chemical energy by synthesising portions of matter into a liquid synthetic fuel.",
         rdfs:label "power-to-liquid process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+replace energy-participant axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+    
+    EquivalentTo: 
+        OEO_00330007
+         and (OEO_00000533 some OEO_00010019)
     
     SubClassOf: 
-        OEO_00330007,
-        (OEO_00000532 some OEO_00000331)
-         and (OEO_00010234 some OEO_00000139),
-        (OEO_00000533 some OEO_00010019)
-         and (OEO_00010235 some OEO_00000007)
+        OEO_00330007
     
     
 Class: OEO_00330009

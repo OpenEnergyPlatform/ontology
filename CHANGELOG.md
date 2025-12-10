@@ -18,6 +18,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - dcterms:creator (#1571)
 
 ### Changed
+- energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
+- fuel-powered electricity generation process, combustion thermal energy trafo, gas turbine process, heat generation/gain process, hydro energy trafo, hydroelectric energy trafo and subclasses, nuclear energy trafo (#2120)
+- power-to-fuel, power-to-gas, power-to-liquid, power-to-ammonia, power-to-methane, solar energy transformation and subclasses, solar steam electric process, water electrolysis process, wind energy trafo, steam reforming, oeo:energy transfer, propulsion (#2120)
 - imported subclasses of uo:unit (#2141)
 - has unit, is unit of, has prefix, has unit denominator, has unit numerator, prefix, unit, quantity value (#2141)
 - meno:energy increase, meno:energy increase (#2158) 
