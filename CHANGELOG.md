@@ -13,9 +13,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.10.0] - 2025-12-10
 
 ### Added
-- Added new gas turbine types: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine. (#2132)
-- motion, translational energy (#2145)
-- dcterms:creator (#2178)
+- Add subclasses of gas turbine: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2132)
+- Add class motion, translational energy (#2145)
+- Add metadata dcterms:creator (#2178)
 
 ### Changed
 - energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
