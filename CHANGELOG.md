@@ -13,8 +13,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Added
+- overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon
 
 ### Changed
+- power line
 
 ### Removed
 
