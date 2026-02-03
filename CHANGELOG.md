@@ -13,10 +13,12 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [Unreleased] - YYYY-MM-DD
 
 ### Added
-- overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon
+- overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon (#2191)
+- transmission grid and distribution grid (#2197)
 
 ### Changed
-- power line
+- power line (#2191)
+- subclasses of rated voltage (#2197)
 
 ### Removed
 
@@ -26,7 +28,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Add subclasses of gas turbine: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2132)
 - Add class motion, translational energy (#2145)
 - Add metadata dcterms:creator (#2178)
-- transmission grid and distribution grid (#2197)
+
 
 ### Changed
 - energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
