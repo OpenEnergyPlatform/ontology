@@ -935,6 +935,45 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142",
         OEO_00000185
     
     
+Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00440000>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An overhead power line is a power line that is installed above the ground."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "conductor"@en,
+        rdfs:label "overhead power line"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        OEO_00000253
+    
+    
+Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00440001>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A submarine power line is a power line that is installed below the sea surface."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "undersea cable"@en,
+        rdfs:label "submarine power line"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        OEO_00000253
+    
+    
+Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00440002>
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground power line is a power line that is installed below the ground surface."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "underground cable"@en,
+        rdfs:label "underground power line"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"@en
+    
+    SubClassOf: 
+        OEO_00000253
+    
+    
 Class: <https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
 
     
@@ -3513,7 +3552,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752"
 Class: OEO_00000253
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power line is a grid component link that is an uninterrupted transmission system between two nodes in an electricity grid."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power line is a grid component link that enables the transfer of electricity between nodes in an electricity grid."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Stromleitung"@de,
         rdfs:label "power line"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
@@ -3524,11 +3563,16 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1360
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+update definition and add axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/ 2191"
     
     SubClassOf: 
         OEO_00000255,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00000143,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010410
     
     
 Class: OEO_00000255
@@ -11311,7 +11355,7 @@ Class: OEO_00020454
         <http://purl.obolibrary.org/obo/IAO_0000115> "Translational energy is the kinetic energy that a material entity possesses due to its translational motion."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Translationsenergie"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "translational kinetic energy",
-        rdfs:label "translational energy"@de,
+        rdfs:label "translational energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2136
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2145"
     
@@ -11330,6 +11374,48 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2145"
     
     SubClassOf: 
         OEO_00000419
+    
+    
+Class: OEO_00020457
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power line support structure is an artificial object with the function of holding overhead power lines above the ground surface.",
+        rdfs:label "power line support structure"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020459
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity pylon is a power line support structure that is designed to carry one or more overhead power lines, typically constructed as lattice or tubular tower made of steel.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "pylon",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "transmission tower",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Transmission_tower",
+        rdfs:label "electricity pylon"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        OEO_00020457
+    
+    
+Class: OEO_00020460
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A utility pole is a power line support structure used to support one or more overhead power lines, typically constructed from wood, metal, concrete, or composite materials.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "power pole",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "transmission pole",
+        <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Utility_pole",
+        rdfs:label "utility pole"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        OEO_00020457
     
     
 Class: OEO_00030000
@@ -12170,6 +12256,36 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139)))
+    
+    
+Class: OEO_00110019
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A transmission grid is an electricity grid that is able to transport electrical energy over long distances."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Übertragsnetz"@de,
+        rdfs:comment "Transmission grids transfer electricity for example from large generation plants to regional or local distribution networks. They operate at high rated voltage or extra high rated voltage."@en,
+        rdfs:label "transmission grid"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2162
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2197"@en
+    
+    SubClassOf: 
+        OEO_00000143,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00410056
+    
+    
+Class: OEO_00110020
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A distribution grid is an electricity grid that distributes electrical energy from the transmission grid or distributed sources to end users or storages."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Verteilnetz"@de,
+        rdfs:comment "Distribution grids usually operate at medium rated voltage or low rated voltage."@en,
+        rdfs:label "distribution grid"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2162
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2197"@en
+    
+    SubClassOf: 
+        OEO_00000143,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00410057
     
     
 Class: OEO_00140000
@@ -16671,10 +16787,14 @@ Class: OEO_00410070
         rdfs:label "low rated voltage"@en,
         OEO_00020426 "first implementation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108
+add axiom to distribution grid
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2162
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2197"
     
     SubClassOf: 
         OEO_00410068,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00110020,
         <https://www.commoncoreontologies.org/ont00001942> value OEO_00410051
     
     
@@ -16686,10 +16806,14 @@ Class: OEO_00410071
         rdfs:label "medium rated voltage"@en,
         OEO_00020426 "first implementation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108
+add axiom to distribution grid
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2162
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2197"
     
     SubClassOf: 
         OEO_00410068,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00110020,
         <https://www.commoncoreontologies.org/ont00001942> value OEO_00410052
     
     
@@ -16701,10 +16825,14 @@ Class: OEO_00410072
         rdfs:label "high rated voltage"@en,
         OEO_00020426 "first implementation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108
+add axiom to transmission grid
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2162
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2197"
     
     SubClassOf: 
         OEO_00410068,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00110019,
         <https://www.commoncoreontologies.org/ont00001942> value OEO_00410053
     
     
@@ -16716,11 +16844,28 @@ Class: OEO_00410073
         rdfs:label "extra high rated voltage"@en,
         OEO_00020426 "first implementation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2107
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2108
+add axiom to transmission grid
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2162
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2197"
     
     SubClassOf: 
         OEO_00410068,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00110019,
         <https://www.commoncoreontologies.org/ont00001942> value OEO_00410054
+    
+    
+Class: OEO_00420004
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power line for vehicles is a power line that is designed to transfer electrical energy to an electrically propelled vehicle. The conductor is installed alongside, above or embedded in the infrastructure used by the vehicles."@en,
+        rdfs:comment "For example third rail or catenary.",
+        rdfs:label "power line for vehicles"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        OEO_00000253
     
     
 Individual: OEO_00000182

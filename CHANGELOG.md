@@ -10,12 +10,24 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.11.0] - 2026-03-04
+
+### Added
+- overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon (#2191)
+- transmission grid and distribution grid (#2197)
+- simulation plan specification, simulation configuration, output creation objective and subclass (#2125)
+
+### Changed
+- power line (#2191)
+- subclasses of rated voltage (#2197)
+
 ## [2.10.0] - 2025-12-10
 
 ### Added
 - Add subclasses of gas turbine: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2132)
 - Add class motion, translational energy (#2145)
 - Add metadata dcterms:creator (#2178)
+
 
 ### Changed
 - energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
@@ -27,6 +39,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - internal combustion engine (#2157)
 - meno:energy increase, meno:energy increase (#2158) 
 - monetary value, good role, emission certificate (#2161)
+- has information input (shortcut), has information output (shortcut), covers energy carrier (shortcut), covers technology (shortcut), based on sector division (#2195)
 
 ### Removed
 - uo:unit (#2141)
