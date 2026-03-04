@@ -41,6 +41,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - internal combustion engine (#2157)
 - meno:energy increase, meno:energy increase (#2158) 
 - monetary value, good role, emission certificate (#2161)
+- has information input (shortcut), has information output (shortcut), covers energy carrier (shortcut), covers technology (shortcut), based on sector division (#2195)
 
 ### Removed
 - uo:unit (#2141)
