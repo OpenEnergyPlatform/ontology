@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 - overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon (#2191)
 - transmission grid and distribution grid (#2197)
+- simulation plan specification, simulation configuration, output creation objective and subclass (#2125)
 
 ### Changed
 - power line (#2191)
