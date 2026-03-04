@@ -10,7 +10,7 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [Unreleased] - YYYY-MM-DD
+## [2.11.0] - 2026-03-04
 
 ### Added
 - overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon (#2191)
@@ -20,8 +20,6 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Changed
 - power line (#2191)
 - subclasses of rated voltage (#2197)
-
-### Removed
 
 ## [2.10.0] - 2025-12-10
 
