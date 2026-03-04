@@ -21,8 +21,6 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - power line (#2191)
 - subclasses of rated voltage (#2197)
 
-### Removed
-
 ## [2.10.0] - 2025-12-10
 
 ### Added
