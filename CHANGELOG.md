@@ -11,11 +11,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
-## [2.X.X] - 20XX-XX-XX
+## [unreleased] - 20XX-XX-XX
 
 ### Added
+
 ### Changed
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
+
 ### Removed
 
 
