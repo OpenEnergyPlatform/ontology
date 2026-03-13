@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 ### Changed
+- covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
 ### Removed
 
 
