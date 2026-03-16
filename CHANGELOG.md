@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 
 ### Changed
+- fix formatting and release date in citation file (#2218)
 
 ### Removed
 
