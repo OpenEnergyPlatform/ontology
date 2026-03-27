@@ -16,7 +16,7 @@ Please fill out as much of the list below as you can for each entity you wish to
 - **Proposed Label**: [The primary term that is used to refer to the entity. Please follow the ENERO Foundry principle on [Naming Conventions](https://enerofoundry.github.io/ENEROFoundry/principles/8_naming/).]
 - **Potential Synonyms**: [Any alternative terms that can also be used to refer to the entity. Please follow the ENERO Foundry principle on [Naming Conventions](https://enerofoundry.github.io/ENEROFoundry/principles/8_naming/).]
 - **Proposed Superclass**: [an existing term in OEO]
-- **Proposed Definition**: A [proposed entity] is a [proposed superclass] that is [specify what distinguishes the proposed entity from other entities of this kind].
+- **Proposed Definition**: A [proposed entity] is a [proposed superclass] that is [specify what distinguishes the proposed entity from other entities of this kind]. [Please refer to the ENERO Foundry principle on [Textual Definitions](https://enerofoundry.github.io/ENEROFoundry/principles/9_definitions/).]
 - **Definition Sources/References**: [links to any reference material that can help others better understand the entity]
 - **Other Information**:
     - What differentiates the proposed entity from other entities of the proposed superclass?
