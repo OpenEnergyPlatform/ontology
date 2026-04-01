@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 - hydrogen boiler, biomass boiler, naturl gas boiler, oil boiler (#2226)
+- add german translations for hydrogen color labels (#2222)
 
 ### Changed
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
