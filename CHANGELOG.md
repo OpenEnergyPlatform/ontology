@@ -14,6 +14,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [unreleased] - 20XX-XX-XX
 
 ### Added
+- oeo-idranges.owl (#2225)
 
 ### Changed
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
