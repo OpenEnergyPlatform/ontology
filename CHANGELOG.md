@@ -14,15 +14,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [unreleased] - 20XX-XX-XX
 
 ### Added
-<<<<<<< feature-2223-id-ranges
 - oeo-idranges.owl (#2225)
-=======
+- hydrogen boiler, biomass boiler, naturl gas boiler, oil boiler (#2226)
 - add german translations for hydrogen color labels (#2222)
->>>>>>> dev
 
 ### Changed
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
 - fix formatting and release date in citation file (#2218)
+- boiler (#2226)
 
 ### Removed
 
