@@ -1,0 +1,80 @@
+# SPDX-FileCopyrightText: 2026 Ludwig Hülk <https://github.com/Ludee> © Reiner Lemoine Institut
+# SPDX-FileCopyrightText: OEO <https://github.com/OpenEnergyPlatform/ontology>
+# SPDX-License-Identifier: MIT
+
+# Project
+site_name: Open Energy Ontology (OEO)
+site_url: https://github.com/OpenEnergyPlatform/ontology
+site_description: Website of the Open Energy Ontology (OEO)
+
+# Repository
+repo_name: ontology
+repo_url: https://github.com/OpenEnergyPlatform/ontology
+docs_dir: docs
+copyright: OEO Developer Team | CC-BY-4.0
+
+# Configuration
+theme:
+  name: material
+  logo: img/Banner_OEO.png
+  favicon: img/favicon_oeo.ico
+  palette:
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.indexes
+    - navigation.path
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+
+# extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.details
+  - footnotes
+  - pymdownx.highlight:
+      use_pygments: true
+  - toc:
+      permalink: "#"
+
+plugins:
+- search:
+    separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+
+# Customization
+extra:
+  generator: false
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/OpenEnergyPlatform/ontology
+
+extra_css:
+  - extra.css
+
+# Navigation
+nav:
+  - Home: index.md
+  - Community: community.md
+  - Use-cases:
+      - Data Annotation: data_annotation.md
+  - Contact: contact.md
