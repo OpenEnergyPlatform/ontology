@@ -682,7 +682,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2232"
         owl:topObjectProperty
     
     SubPropertyChain: 
-        <http://purl.obolibrary.org/obo/BFO_0000117> o <http://purl.obolibrary.org/obo/RO_0019001>
+        <http://purl.obolibrary.org/obo/BFO_0000117> o <http://purl.obolibrary.org/obo/RO_0019002>
     
     Domain: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -1175,23 +1175,19 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000009
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric heat pump is a heat pump that uses electrical energy as drive energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electric heat pump is a heat pump that uses electrical energy as drive energy."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "elektrische Wärmepumpe"@de,
         rdfs:label "electric heat pump"@en,
         OEO_00020426 "fix energy axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1281
-pull: https://github.com/OpenEnergyPlatform/ontology/pulls/1282"
+pull: https://github.com/OpenEnergyPlatform/ontology/pulls/1282
+
+remove has energy input/out axioms:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull: https://github.com/OpenEnergyPlatform/ontology/pulls/2233"
     
     SubClassOf: 
-        OEO_00000212,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782
-
-change uses energy axiom to 'has energy input':
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
-        OEO_00010234 some OEO_00000139
+        OEO_00000212
     
     
 Class: OEO_00000010
@@ -1241,8 +1237,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     SubClassOf: 
         OEO_00000061,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
-        OEO_00010235 some OEO_00010114
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
     
 Class: OEO_00000012
@@ -3295,11 +3290,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
     
     SubClassOf: 
-        OEO_00000011,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
-        OEO_00010235 some OEO_00000207
+        OEO_00000011
     
     
 Class: OEO_00000211
@@ -8138,17 +8129,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1531
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
-
-remove has energy input/output axioms
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     
     SubClassOf: 
         OEO_00010127,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140033,
         OEO_00000532 some OEO_00000115,
-        OEO_00000533 some OEO_00010316
+        OEO_00000533 some OEO_00010316,
+        OEO_00010234 some OEO_00000007,
+        OEO_00010235 some OEO_00000007
     
     
 Class: OEO_00010316
@@ -13260,17 +13249,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/742
 
 change 'has physical input / output' axioms to 'has energy input / output':
 https://github.com/OpenEnergyPlatform/ontology/issues/994
-https://github.com/OpenEnergyPlatform/ontology/pull/1041
-
-remove 'has energy input' and replace axiom to energies:
-https://github.com/OpenEnergyPlatform/ontology/issues/2190
-https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+https://github.com/OpenEnergyPlatform/ontology/pull/1041"
     
     SubClassOf: 
         OEO_00140101,
+        (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
+             and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000056)))
+         and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
+            (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000207))),
         <http://purl.obolibrary.org/obo/RO_0000057> some <http://purl.obolibrary.org/obo/BFO_0000040>,
-        OEO_00020461 some OEO_00000207,
-        OEO_00020462 some OEO_00000056
+        OEO_00010234 some OEO_00000056
     
     
 Class: OEO_00140116
@@ -15743,15 +15733,13 @@ Class: OEO_00320039
         <http://purl.obolibrary.org/obo/IAO_0000115> "Combustion fuel transport is the fuel transport of combustion fuels."@en,
         rdfs:label "combustion fuel transport"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1269
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299
-
-remove axioms
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299"
     
     SubClassOf: 
         OEO_00320038,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000099
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000099,
+        OEO_00010234 some OEO_00000007,
+        OEO_00010235 some OEO_00000007
     
     
 Class: OEO_00320040
