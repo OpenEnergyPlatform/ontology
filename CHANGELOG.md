@@ -23,6 +23,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
 - fix formatting and release date in citation file (#2218)
 - boiler (#2226)
+- changed axioms: 'combustion thermal energy transformation', 'combustion-based heater' (#2190)
 
 ### Removed
 
