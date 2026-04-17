@@ -23,7 +23,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
 - fix formatting and release date in citation file (#2218)
 - boiler (#2226)
-- change axioms: `combustion thermal energy transformation`, `combustion-based heater`, `electric motor`, `energy transformation`, `geothermal heat unit`, `geothermal heat transfer`, `internal combustion engine`, `motor`, `renewable power unit`, `heat transfer`, `sensible heat storage object`, `energy storage object`, `wind energy converting unit` (#2233)
+- change axioms: `combustion thermal energy transformation`, `combustion-based heater`, `electric motor`, `energy transformation`, `geothermal heat unit`, `geothermal heat transfer`, `internal combustion engine`, `motor`, `renewable power unit`, `heat transfer`, `sensible heat storage object`, `energy storage object`, `wind energy converting unit`, `thermo-chemical heat storage object` (#2233)
 - Change axioms: `battery`, `charging` (#2233)
 
 ### Removed
