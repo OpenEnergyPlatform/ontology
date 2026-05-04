@@ -1122,7 +1122,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122
 
 move domain and range to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2195",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2195
+
+add property chain
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2215
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2216",
         OEO_00020434 "SELECT ?scenariobundle ?energycarrier WHERE {
 ?scenariobundle IAO:0000136 _:1.
 _:1 OEO:00000523 ?energycarrier.
@@ -1212,7 +1216,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2122
 
 move domain and range to oeo-shared-axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2119
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2195",
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2195
+
+add property chain
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2215
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2216",
         OEO_00020434 "SELECT ?scenariobundle ?technology WHERE {
 ?scenariobundle IAO:0000136 _:1.
 _:1 OEO:00390101 ?technology.
@@ -1223,6 +1231,25 @@ _:1 OEO:00390101 ?technology.
     
     Range: 
         OEO_00000407
+    
+    
+ObjectProperty: OEO_00020439
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a scenario bundle and a sector that is covered by the study the scenario bundle is about. It is a shortcut relation, see elucidation and associated sparql axiom.",
+        <http://purl.obolibrary.org/obo/IAO_0000600> "This is a shortcut relation to relate 'scenario bundle' to 'sector'. The original relation 'covers sector' relates 'study' (process) to 'sector'. 
+The shortcut relation should be used to represents these statements:
+('scenario bundle 'is about' some 'scenario study'`) and ('scenario study' 'covers sector' some 'sector')",
+        rdfs:label "covers sector (shortcut)",
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2013
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2023
+reconstruct and add property chain
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2215
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2216",
+        OEO_00020434 "SELECT ?scenariobundle ?sector WHERE {
+?scenariobundle IAO:0000136 _:1.
+_:1 OEO:00000505 ?sector.
+}"
     
     
 ObjectProperty: OEO_00040010

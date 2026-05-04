@@ -4,32 +4,57 @@ SPDX-License-Identifier: CC0-1.0 OR MIT
 -->
 
 # Changelog
+
 All notable changes to this project will be documented in this file. <br>
 For each version, important additions, changes and removals are listed here.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.12.0] - 2026-05-04
+
+### Added
+
+- oeo-idranges.owl (#2225)
+- hydrogen boiler, biomass boiler, natural gas boiler, oil boiler (#2226)
+- add german translations for hydrogen color labels (#2222)
+- Object property `decreases energy` and `increases energy` (#2232)
+- import from CCO: infrastructure system, infrastructure system role (#2236)
+
+### Changed
+
+- covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
+- fix formatting and release date in citation file (#2218)
+- boiler (#2226)
+- change parent class: critical infrastructure, critical infrastructure role (#2236)
+- Simplify axioms with `decreases energy`, `increases energy`: `charging`, `combustion thermal energy transformation`, `steam-electric process`, `solar-steam-electric process`, `energy transformation`, `ambient thermal energy transfer`, `marine current energy transformation`, `mineral oil refining process` , `photovoltaic energy transformation`, `electricity gain process`, `heat transfer`, `hydro energy transformation`, `solar thermal energy transformation`, `geothermal heat transfer`, `geothermal heat unit` (#2233)
+- Remove `has energy input` and `has energy output` axioms for: `mineral oil refining process`, `current collector`, `battery`, `combustion-based heater`, `combustion fuel transport`, `electric heat pump`, `electrical heater`, `electric vehicle`, `electromotive generator`, `electric motor`, `geothermal power unit`, `marine current energy converting unit`, `internal combustion engine`, `motor`, `latent heat storage object`, `renewable power unit`, `photovoltaic cell`, `solar power unit`, `solar heat unit`, `PV panel`, `geothermal power technology`, `sensible heat storage object`, `energy storage object`, `solar thermal power unit`, `photovoltaic technology`, `solar power technology`, `solar thermal power technology`, ` solar thermal collector`, `wind rotor`, `water electrolyser`, `wind energy converting unit`, `thermo-chemical heat storage object`, `steam turbine`, `water turbine`, `combined heat and power generating unit`, `nuclear electric hydrogen`, `renewable electrolytic hydrogen`, `solar electrolytic hydrogen`, `solar radiation receiving surface`, `steam power unit`, `data center`, `energy transformation unit`, `frequency control`, `hardware`, `vehicle`, `turbine`, `pump`, `heat generating unit`, `power generating unit`, `sewage plant`, `solar receiving object`, `energy converting component`, `fuel cell`, `heat exchanger`, `heater`, `marine tidal energy converting unit`, `marine wave energy converting unit` (#2233)
+
+### Removed
+
 ## [2.11.0] - 2026-03-04
 
 ### Added
+
 - overhead power line, submarine power line, underground power line, power line for vehicles, power line support structure, utility pole, electricity pylon (#2191)
 - transmission grid and distribution grid (#2197)
 - simulation plan specification, simulation configuration, output creation objective and subclass (#2125)
 
 ### Changed
+
 - power line (#2191)
 - subclasses of rated voltage (#2197)
 
 ## [2.10.0] - 2025-12-10
 
 ### Added
+
 - Add subclasses of gas turbine: turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2132)
 - Add class motion, translational energy (#2145)
 - Add metadata dcterms:creator (#2178)
 
-
 ### Changed
+
 - energy transformation, combined heat and power generation process, combined cycle electricity generation process, electricity generation/gain process (#2120)
 - fuel-powered electricity generation process, combustion thermal energy trafo, gas turbine process, heat generation/gain process, hydro energy trafo, hydroelectric energy trafo and subclasses, nuclear energy trafo (#2120)
 - power-to-fuel, power-to-gas, power-to-liquid, power-to-ammonia, power-to-methane, solar energy transformation and subclasses, solar steam electric process, water electrolysis process, wind energy trafo, steam reforming, oeo:energy transfer, propulsion (#2120)
@@ -37,21 +62,23 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - has unit, is unit of, has prefix, has unit denominator, has unit numerator, prefix, unit, quantity value (#2141)
 - cold start, emission certificate price, greenhouse gas emission, start-up speed (#2143)
 - internal combustion engine (#2157)
-- meno:energy increase, meno:energy increase (#2158) 
+- meno:energy increase, meno:energy increase (#2158)
 - monetary value, good role, emission certificate (#2161)
 - has information input (shortcut), has information output (shortcut), covers energy carrier (shortcut), covers technology (shortcut), based on sector division (#2195)
 
 ### Removed
+
 - uo:unit (#2141)
 
 ## [2.9.0] - 2025-10-01
 
 ### Added
+
 - voltage classification system, german voltage classification system (#2042)
 - electricity grid voltage level, low electricity grid voltage level, medium electricity grid voltage level, high electricity grid voltage level, extra high electricity grid voltage level (#2042)
 - Added battery sub-technologies: flow battery, NMC battery, LFP battery, lead-acid battery (#2055)
 - Added generator types: permanent magnet synchronous generator, squirrel-cage induction generator, induction generator (#2055)
-- Added RE sub-technologies: PERC pane, SCIG wind energy converting unit, PMSG wind power technology, direct drive wind energy converting unit, gearbox wind energy converting unit (#2055) 
+- Added RE sub-technologies: PERC pane, SCIG wind energy converting unit, PMSG wind power technology, direct drive wind energy converting unit, gearbox wind energy converting unit (#2055)
 - add new module file for co-simulation ontology (#2090)
 - multi-criteria decision analysis (#2091)
 - RO import: regulates characteristic, positively regulates characteristic, negatively regulates (#2094)
@@ -61,6 +88,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - technology scenario, sector focused scenario (#2124)
 
 ### Changed
+
 - electricity grid (#2042)
 - 'has information content entity' renamed to 'is subject of' (#2092)
 - air, water, biomass, biofuel, nuclear fuel (#2095)
@@ -74,10 +102,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - based on sector division, covers technology (shortcut), covers energy carrier (shortcut), has informarion input (shortcut), has information ouputt (shortcut) (#2122)
 - has squared / linear unit denominator, RED sector transport, EU emission sector LULUCF (#2126)
 
-
 ## [2.8.0] - 2025-05-28
 
 ### Added
+
 - has scenario year value (#2045)
 - WHG, BWaldG (#2006)
 - biosphere reserve role, protected landscape area role, water protection area role, floodplain role, forest role (#2006)
@@ -90,6 +118,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - quarter-hourly, every minute, every ten minutes (#2087)
 
 ### Changed
+
 - changed base IRI to https://openenergyplatform.org/
 - vehicle operational mode (bug fix) (#2046)
 - demand, efficiency value, final energy consumption value, process climate neutrality, material climate neutrality, primary energy consumption value, net electricity generation, climate neutrality criterion (#2063)
@@ -99,11 +128,13 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - energetic conversion process, energy transfer (bug fix) (#2061)
 
 ### Removed
+
 - has creation date, has report title (#2079)
 
 ## [2.7.0] - 2025-03-06
 
 ### Added
+
 - conceptual model (#1976)
 - model uncertainty location (#1990)
 - legislation, ROG, BNatSchG, protected area role, Fauna Flora Habitat role, Bird Sanctuary role, Fauna Flora Habitat, Bird Sanctuary (#1991)
@@ -115,6 +146,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - import from MENO ontology: energetic conversion process, energy decrease, energy increase, quality transfer + subclasses, quality transformation + subclasses(#2022)
 
 ### Changed
+
 - technical model implementation, conceptual model, model system boundary, input data/exogenous data, output data (#1990)
 - protected area, conditionally reserved region role, priority region role, suitable region role (#1991)
 - apply socio-economic constraints for assessment of potential, net capacity factor (#1995)
@@ -125,10 +157,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - uncertainty of a model, model, model system boundary (#2012)
 - solid (#2019)
 
-
 ## [2.6.0] - 2024-12-06
 
 ### Added
+
 - has aggregation type, has time stamp alignment (#1944)
 - study descriptor (#1950)
 - file oeo-tasks (#1940)
@@ -146,16 +178,17 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - gaseous (#1980)
 
 ### Changed
+
 - energy amount value / energy value (#1941)
 - rework contributing and readme file (#1937, #1946)
 - time stamp (#1944)
 - supply grid, transport network, critical infrastructure (#1947)
 - areal solar energy density (#1983)
 
-
 ## [2.5.0] - 2024-09-24
 
 ### Added
+
 - German alternative labels (#1883, #1895)
 - English language tags to existing alternative labels (#1883, #1895)
 - GAMS programming language (#1889)
@@ -170,10 +203,11 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - licence provider, licensee, has licence provider, permits (#1925)
 
 ### Changed
+
 - gams -> General Algebraic Modeling System (#1889)
 - uo:unit (#1892)
 - train, regionalisation (#1899)
-- add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures  (#1897)
+- add annotation: climate neutrality criterion, negative emission, study report due to legislation, decarbonisation pathway, re-share, flexibility, energy conversion efficiency, resilience, life cycle assessment, co2 emissions, ghg emissions, acceptance, sufficiency, energy demand, electrical energy share, regionalsation, gross electricity generation, electricity/gas/heating grid, sector coupling, model coupling, scenario projection comparison, model intercomparison study, policies and measures (#1897)
 - monetary value (formerly: monetary price) and subclasses (#1902)
 - size (#1905)
 - economic instrument, education instrument, information instrument, regulatory instrument, voluntary agreement instrument (#1906)
@@ -182,13 +216,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - replace has bearer with characteristic of (#1928)
 
 ### Obsoletion
+
 - economic value, has economic value, economic value (#1931)
 - has bearer (#1928)
-
 
 ## [2.4.0] - 2024-07-01
 
 ### Added
+
 - subsector, has subsector, subsector of (#1788)
 - manufacturing technology, manufacturing plant, manufactured commodity (#1840)
 - German alternative labels (#1862, #1868)
@@ -196,6 +231,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - SKOS annotations: skos:closeMatch, skos:exactMatch, skos:relatedMatch (#1874)
 
 ### Changed
+
 - electricity sector, industry sector, CRF sector (IPCC 2006) individuals (#1788)
 - industrial process -> manufacturing process, industrial material -> manufactured material (#1840)
 - electricity import/export value (#1864)
@@ -204,12 +240,13 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - emission factor value (#1880)
 
 ### Removed
-- emission value (#1880)
 
+- emission value (#1880)
 
 ## [2.3.0] - 2024-05-21
 
 ### Added
+
 - methanol (#1827)
 - has prefix (#1835)
 - imported 'characteristic of' and subclasses from RO (#1838)
@@ -222,6 +259,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - German alternative labels to about 40 classes (#1854)
 
 ### Changed
+
 - has documentation quality (#1834)
 - megawatt-hour, gigawatt-hour, terawatt-hour, petawatt-hour (#1845)
 - energy consumption value, final energy consumption value, primary energy consumption value, gross inland energy consumption value, gross national electricity consumption value (#1841)
@@ -230,10 +268,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - has bearer, has characteristic, characteristic of, role of, model role (#1852)
 - time stamp (#1853)
 
-
 ## [2.2.0] - 2024-03-04
 
 ### Added
+
 - economic instrument, voluntary agreement, voluntary agreement instrument, regulatory instrument, information instrument, education instrument (#1786)
 - priority region role, priority region, conditionally reserved region role, conditionally reserved region, suitable region role, suitable region, priority region with effect of suitable region, spatial planning policy (#1791)
 - missing value reason, notation key (#1795)
@@ -245,6 +283,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - has associated axiom(sparql), shortcut relations for has information input/output, covers energy carrier, covers technology, covers sector (#2023)
 
 ### Changed
+
 - energy transfer function, energy transformation function and subclasses (#1785)
 - effort sharing, feed-in tariff, levy, market premium (#1786)
 - policy instrument (#1791)
@@ -256,10 +295,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - forecasting model calculation (#1799)
 - uo-extracted.owl (#1820)
 
-
 ## [2.1.0] - 2023-12-05
 
 ### Added
+
 - resilience, power system resilience, power system (#1744)
 - service product role, service product (#1748)
 - region of relevance, study subregion role, study region role, interacting region role, considered region role (#1749)
@@ -269,6 +308,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - market share and market share value (#1779)
 
 ### Changed
+
 - subregion, study region, study subregion, interacting region, considered region (#1749)
 - model factsheet (#1751)
 - is connected to, has sink, has source (#1762)
@@ -280,28 +320,31 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - data descriptor (#1775)
 - target description, policy instrument, policy (#1778)
 
-
 ## [2.0.1] - 2023-10-26
 
 ### Changed
-- unit, prefix, generically dependent continuant (#1741/#1742)
 
+- unit, prefix, generically dependent continuant (#1741/#1742)
 
 ## [2.0.0] - 2023-10-25
 
 ### Major stuctural changes
+
 For the version 2.0.0 we especially did some major structural changes on the OEO. Two new modules were introduced:
-* The first one, oeo-sector, is a module on the same hierarchical level as the other content-related modules, i.e. oeo-physical, oeo-model and oeo-social. All sector-related entities were moved there from oeo-social.
-* The second one, oeo-shared-axioms, is a module that imports the four content-related modules and contains all axioms that are introduced across modules.
+
+- The first one, oeo-sector, is a module on the same hierarchical level as the other content-related modules, i.e. oeo-physical, oeo-model and oeo-social. All sector-related entities were moved there from oeo-social.
+- The second one, oeo-shared-axioms, is a module that imports the four content-related modules and contains all axioms that are introduced across modules.
 
 This caused a lot of movement of entities, especially from oeo-shared. Many classes were moved back to their original module. This restructuring was done to foster the modularity, which makes the implementation easier and more error-prone. Yet, we had to break with the rule, that all axioms should live in the same module as their class of declaration. The full axiomatisation of a class is now only provided if the module oeo-shared-axioms is used. See also the wiki article on the [modules of the OEO](https://github.com/OpenEnergyPlatform/ontology/wiki/Modules-of-the-OEO).
 
 Further, the import process for UO and OMO were updated. All scripts and tools not essential for the building routine moved to a [seperate repository](https://github.com/OpenEnergyPlatform/oeo-tools). And finally, english language labels were added to (english) definitions and labels, to allow other language extentions in the future.
 
 ### Content-related changes
+
 We added a lot of classes that are relevant for the OEKG development, i.e. technologies (#1572) and descriptors for scenario studies (https://github.com/OpenEnergyPlatform/oekg/issues/19).
 
 ### Added
+
 - heat generation technology, solar heat technology, geothermal heat technology (#1610)
 - new files for new UO v2023-05-25 import process (#1633)
 - recycling (#1638)
@@ -323,6 +366,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - energy storage object hierarchy, energy storage technology hierarchy (#1728)
 
 ### Changed
+
 - energy transformation (#1625)
 - waste role (#1638)
 - economy, economic scenario, target driven scenario, explorative scenario, policy scenario (#1642)
@@ -331,26 +375,28 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - model relabeled to numerical computer model, model, has contributor and subclasses (#1707)
 - study (#1711)
 - person, organisational role, organisation (#1716)
-- energy balance -> energy balance data set (#1717) 
+- energy balance -> energy balance data set (#1717)
 - state of matter (#1720)
 - potential energy storage function (#1728)
 
 ### Removed
+
 - import and annotation scripts removed from repo. New repo is https://github.com/OpenEnergyPlatform/oeo-tools (#1686)
 
 ### Deprecated
-- belongs to module (#1732)
 
+- belongs to module (#1732)
 
 ## [1.16.1] - 2023-08-01
 
 ### Changed
-- Update module files after saving with Protégé 5.6.1(#1628)
 
+- Update module files after saving with Protégé 5.6.1(#1628)
 
 ## [1.16.0] - 2023-08-01
 
 ### Added
+
 - boolean value (#1255)
 - material transformation, fuel production (#1575)
 - life cycle assessment (#1576)
@@ -361,6 +407,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - population count, annual GDP growth (#1623)
 
 ### Changed
+
 - boolean variable, true, false (#1255)
 - reimplemented competency question tests in pytest (#1420)
 - added commands to filter competency questions from the command line (#1420)
@@ -375,12 +422,13 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - gross domestic product (#1623)
 
 ### Removed
-- old competency question bash script (#1420)
 
+- old competency question bash script (#1420)
 
 ## [1.15.0] - 2023-05-31
 
 ### Added
+
 - energy transfer function (#1515)
 - mineral oil refining process, mineral oil product (#1531)
 - propulsion/energy-to-motion (#1541)
@@ -394,6 +442,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - has energy main/auxilary input, has energy main/waste output (#1564)
 
 ### Changed
+
 - propulsion/traction (#1541)
 - clean up oeo.omn and oeo-shared (#1546)
 - has copyright license -> has licence; information content entity; data set, database, modelling software, software, document, software documentation, factsheet, report (#1547)
@@ -405,12 +454,13 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - update files: oeo-import-edits.owl, src/ontology/catalog-v001.xml and src/ontology/edits/catalog-v001.xml, oeo-shared (#1555)
 
 ### Removed
--  files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
 
+- files and scripts from outdated import process: extract-iao-module.bat, imports/iao-module.owl, ro-module.owl (#1555)
 
 ## [1.14.0] - 2023-03-30
 
 ### Added
+
 - CRF-based sector division, EU legislation sector division (#1462)
 - Brent crude, Western Texas Intermediate (#1478)
 - electricity cost (#1482)
@@ -420,7 +470,8 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - added built ontology to the pipeline artifacts (#1475)
 
 ### Changed
-- NC/BR sector division and sector individuals; KSG sector division;  EU sectors/divisions; EU climate policy (#1462)
+
+- NC/BR sector division and sector individuals; KSG sector division; EU sectors/divisions; EU climate policy (#1462)
 - electricity grid (#1479)
 - Updated RO import source to [v2023-02-22](https://raw.githubusercontent.com/oborel/obo-relations/v2023-02-22/ro.owl)
 - air (#1499)
@@ -431,10 +482,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - uses, is used by (#1508)
 - update oeo.omn description (#1509)
 
-
 ## [1.13.0] - 2023-02-01
 
 ### Added
+
 - oeo-import-edits as a unified file for custom extensions of imported concepts + properties (#1268)
 - tank, fuel tank, volume (#1356)
 - heat generating unit, heat plant, heat transfer unit, solar heat plant, solar heat unit (#1360)
@@ -471,6 +522,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - energy balance, energy balance collection, energy balance calculation method, energy balance sector division (#1463)
 
 ### Changed
+
 - bearer of -> has characteristic (#1268)
 - ro-module -> ro-extracted (#1268)
 - power plant, power generating unit, combined heat and power plant, combined heat and power generating unit, solar thermal collector (#1360)
@@ -493,10 +545,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - german/eurostat energy balances -> German/Eurostat energy balance sector division; empirical/synthetic/test data set (#1463)
 - replaced owl:equivalentClass with 'may be identical to' in annotation properties
 
-
 ## [1.12.0] - 2022-11-02
 
 ### Added
+
 - github: template for pull requests (#1162)
 - steam reforming process (#1251)
 - emission price, CO2 price, CO2 emission, CO2 emission value, carbon tax value (#1253)
@@ -524,6 +576,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - data center, sewage plant, industrial waste thermal energy, recovered heat, aerothermal energy (#1359)
 
 ### Changed
+
 - github: update the description of the readme file (#1292)
 - energy transformation (#1251)
 - added annotations for which modules classes and individuals belong to (#1252)
@@ -557,13 +610,14 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - energy converting component, energy storage object, hardware, solar receiving object, vehicle, waste thermal energy (#1359)
 
 ### Removed
+
 - battery storage (#1348)
 - csv and txt (#1371)
-
 
 ## [1.11.0] - 2022-07-04
 
 ### Added
+
 - tangential proper part, surface, solar radiation receiving surface (#1209)
 - combustion thermal energy transformation (#1210)
 - measurement device (#1215)
@@ -575,6 +629,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - passenger, passenger transport, energy service demand for passenger/ton-kilometre (#1234)
 
 ### Changed
+
 - endogenous data, exogenous data (#1216)
 - origin, portion of matter (#1218)
 - pv cell -> photovoltaic cell (#1220)
@@ -587,10 +642,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - fuel-powered electricity generation (#1240)
 - charcoal, synthetic fuel, gas diesel oil, manufactured coal based gas, syngas, gasoline, kerosene, steam, compressed air, pumped water (#1243)
 
-
 ## [1.10.1] - 2022-06-14
 
 ### Added
+
 - nationally determined contribution (#1151)
 - maximum value, power capacity (#1155)
 - bioenergy (#1188)
@@ -600,6 +655,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - frequency control and subclasses primary control, secondary control, tertiary control (#1202)
 
 ### Changed
+
 - marine wave energy transformation, marine tidal energy transformation, marine current energy transformation (#1137)
 - has input, input of, has output, output of, participates in, has participant (#1138)
 - capacity factor (#1144)
@@ -618,10 +674,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - has institution (#1200)
 - waste fuel, liquid biofuel, solid biofuel, fossil combustion fuel, renewable fuel, synthetic fuel, volatile organic compound (#1201)
 
-
 ## [1.10.0] - 2022-05-09
 
 ### Added
+
 - abbreviation (#1075)
 - discount rate (#1077)
 - protected area (#1078)
@@ -641,6 +697,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - causally downstream of or within, causally upstream of or within (#1136)
 
 ### Changed
+
 - has bearer, bearer of, is defined by, process attribute of (#985)
 - biofuel and biogenic waste fuel (subclasses); origins (#1048)
 - license (#1063)
@@ -657,10 +714,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - trades / is traded at, good, good role (#1127)
 - traction motor -> electric traction motor (#1135)
 
-
 ## [1.9.0] - 2022-03-01
 
 ### Added
+
 - memo item and CRF (2006) sector individuals relating to memo item; has information content entity (#967)
 - annual, monthly, weekly, daily, hourly (#972)
 - mathematical expression (annotation property) (#990)
@@ -679,6 +736,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - has economic value / economic value of, social cost of emission (#1034)
 
 ### Changed
+
 - biofuel (#965)
 - has quantity value, has global warming potential (#966)
 - resolution, has resolution and subclasses (#972)
@@ -704,14 +762,15 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - axiom in marine current energy transformation (#1044)
 
 ### Removed
+
 - cost in oeo-social (#977)
 - organisation in oeo-social (#992)
 - oil and petroleum products (#1024)
 
-
 ## [1.8.0] - 2021-12-01
 
 ### Added
+
 - energy transformation unit, energy transfer (#895)
 - outage and subclasses, curtailment (#897)
 - levy, tax, feed in tariff, market and capacity premium (#909)
@@ -743,6 +802,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - renewable waste fuel, fossil waste fuel, renewable industrial waste fuel, fossil industrial waste fuel (#961)
 
 ### Changed
+
 - energy converting device / component, unit of measurement (#895)
 - currency (#910)
 - has resolution and subclasses (#912)
@@ -761,10 +821,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - ammonia (#959)
 - industrial waste fuel, municipal waste fuel, renewable municipal waste fuel, fossil municipal waste fuel (previously: non renewable municipal waste fuel) (#961)
 
-
 ## [1.7.0] - 2021-10-04
 
 ### Added
+
 - power plant portfolio, dispatch assignment (#792)
 - yield profile, demand trader, direct marketer, merit order, full load hours (#793)
 - energy demand (#796)
@@ -800,6 +860,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - axioms of typical period and aggregation type (#883)
 
 ### Changed
+
 - battery and subclasses (#801)
 - geographic coordinate (#803)
 - river (#806)
@@ -818,19 +879,20 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - has objective (#878)
 
 ### Removed
+
 - molten state battery (#801)
 - duplicate model factsheet OEO:00020031 (#854)
-
 
 ## [1.6.1] - 2021-07-07
 
 ### Changed
-- commodity (#789)
 
+- commodity (#789)
 
 ## [1.6.0] - 2021-07-01
 
 ### Added
+
 - trade, market participant (#745)
 - reservoir (#755)
 - contract (#756)
@@ -846,6 +908,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - hydrogen fuel cell, natural gas turbine, energy related axioms (#782)
 
 ### Changed
+
 - trader (#745)
 - has typical computation time (#751)
 - powerplant and power generating unit subclasses (#752)
@@ -859,12 +922,13 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - usage of alternative term (#774)
 
 ### Removed
-- hydroelectric dam energy transformation and run-off-river energy transformation (#758)
 
+- hydroelectric dam energy transformation and run-off-river energy transformation (#758)
 
 ## [1.5.0] - 2021-05-03
 
 ### Added
+
 - thorium and plutonium (#708)
 - has information input / output (#716)
 - has typical computation time / hardware (#723)
@@ -879,6 +943,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - public and private funders (#246)
 
 ### Changed
+
 - has physical output, has constraint (#716)
 - gross inland energy consumption, primary energy consumption (#719)
 - covers energy carrier (#722)
@@ -889,13 +954,14 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - wind energy converting unit uses wind rotor (#754)
 
 ### Removed
+
 - has numerical input / output (#716)
 - computation time (#723)
-
 
 ## [1.4.0] - 2021-03-02
 
 ### Added
+
 - monetary price and currency (#331)
 - market exchange (#341)
 - trader (#377)
@@ -918,6 +984,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - solar chemical energy transformation (#735)
 
 ### Changed
+
 - relations to energy transformation (#646)
 - has global warming potential (#651, #683)
 - definition of battery electric vehicle and fuel cell electric vehicle (#655)
@@ -933,12 +1000,13 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - has input / has physical input (#702)
 
 ### Removed
-- delete hydroelectricity class (#682)
 
+- delete hydroelectricity class (#682)
 
 ## [1.3.0] - 2020-12-18
 
 ### Added
+
 - industrial process (#589)
 - energy conversion efficiency and energy conversion performance (#591)
 - fuel-powered electricity generation (#592)
@@ -954,6 +1022,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - primary, secondary and final energy carrier (disposition) (#633)
 
 ### Changed
+
 - powerplant (#594)
 - relations has part and part of (#599)
 - heat, renamed to thermal energy (#609)
@@ -963,10 +1032,10 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - comment on waste fuel (#631)
 - energy transformation has input/output energy (#690)
 
-
 ## [1.2.0] - 2020-10-30
 
 ### Added
+
 - sensitivity analysis (#550)
 - has contributor (#530)
 - sponsor (#557)
@@ -985,18 +1054,20 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - spatial regions (#585)
 
 ### Changed
+
 - move subclasses of has participant (#530)
 - licence (#561)
 - ipcc_year_guidelines to CRF sectors (IPCC year) (#578)
 - factsheet subclasses (#584)
 
 ### Removed
-- software maintenance (#566)
 
+- software maintenance (#566)
 
 ## [1.1.0] - 2020-09-01
 
 ### Added
+
 - vehicle and subclasses and vehicle related energy converting devices and energy storage objects (#431, #435)
 - natural gas relation to methane (#431)
 - ethanol (#445)
@@ -1014,6 +1085,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - output and input data (#536)
 
 ### Changed
+
 - harmonise 'definition' annotation property (#529)
 - move object properties to oeo-shared (#472)
 - definition of sector and sector subclasses (#477, #484)
@@ -1026,12 +1098,13 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - unit (#537)
 
 ### Removed
-- unused object properties (#452)
 
+- unused object properties (#452)
 
 ## [1.0.0] - 2020-06-11
 
 ### Added
+
 - Concepts of biogenic, fossil, renewable and synthetic (#130)
 - factsheet categories (#47)
 - storage technologies (#47)
@@ -1055,6 +1128,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - process attribute (#386)
 
 ### Changed
+
 - Restructured the repository to add a 'src' folder with an 'ontology' sub-folder with sub-folders for editable modules and import modules (#200)
 - Split the ontology file into three modules: oeo-social,oeo-model and oeo-physical (#167)
 - FluorinatedGreenhouseGas (#88) and GreenhouseGas (#234)
@@ -1089,6 +1163,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 - electricity as alternative term for electrical energy (#621)
 
 ### Removed
+
 - `ObjectProperty` `has_stateofmatter` (#39)
 - some superclasses of unsatisfiable classes and some that made the
   ontology inconsistent (#51)

@@ -7,13 +7,22 @@ assignees: ''
 
 ---
 
-## Description of the issue
+## Template Instructions
 
-Here describe the issue as extensively as possible
+Please fill out as much of the list below as you can for each entity you wish to suggest for inclusion in the OEO. It isn't mandatory to complete every bullet point, but the more information is provided, the easier it will be for other developers to evaluate your suggestion.
 
-## Ideas of solution
+## Proposed New Ontology Entity
 
-If you already have ideas for the solution describe them here
+- **Proposed Label** (the primary term that is used to refer to the entity):
+- **Potential Synonyms** (any alternative terms that can also be used to refer to the entity):
+- **Proposed Superclass** (ideally an existing term in OEO):
+- **Proposed Definition**: "A [proposed entity] is a kind of [proposed superclass] that [specify what distinguishes the proposed entity from other entities of this kind]."
+- **Definition Sources/References** (links to any reference material that can help others better understand the entity):
+- **Other Information**:
+    - What differentiates the proposed entity from other entities of the proposed superclass?
+    - What would be an example of usage/instance of this entity?
+    - What are potential subclasses of the proposed entity?
+
 
 ## Workflow checklist
 
@@ -24,3 +33,4 @@ If you already have ideas for the solution describe them here
 I am aware that
 - [ ] every entry in the ontology should have a definition
 - [ ] classes should arise from concepts rather than from words
+- [ ] any ontology content that is proposed in this issue may be altered as needed to fit the structure and conventions of the OEO
