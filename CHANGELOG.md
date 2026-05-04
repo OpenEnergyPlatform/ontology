@@ -19,7 +19,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - hydrogen boiler, biomass boiler, natural gas boiler, oil boiler (#2226)
 - add german translations for hydrogen color labels (#2222)
 - Object property `decreases energy` and `increases energy` (#2232)
-- cco:infrastructure system an cco:infrastructure system role
+- import from CCO: infrastructure system, infrastructure system role (#2236)
 
 ### Changed
 
