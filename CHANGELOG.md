@@ -19,14 +19,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - hydrogen boiler, biomass boiler, natural gas boiler, oil boiler (#2226)
 - add german translations for hydrogen color labels (#2222)
 - Object property `decreases energy` and `increases energy` (#2232)
-- cco:infrastructure system an cco:infrastructure system role
+- import from CCO: infrastructure system, infrastructure system role (#2236)
 
 ### Changed
 
 - covers sector (shortcut), covers technology (shortcut), covers energy carrier (shortcut) #2216
 - fix formatting and release date in citation file (#2218)
 - boiler (#2226)
-- critical infrastructure and critical infrastructure role now subclass of cco:infrastructure system and cco:infrastructure system role
+- change parent class: critical infrastructure, critical infrastructure role (#2236)
 
 ### Removed
 
