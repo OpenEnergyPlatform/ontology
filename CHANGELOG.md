@@ -11,7 +11,7 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [unreleased] - 20XX-XX-XX
+## [2.12.0] - 2026-05-04
 
 ### Added
 
