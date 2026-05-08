@@ -11,6 +11,12 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [2.X.X] - 20XX-XX-XX
+
+### Added
+### Changed
+### Removed
+
 ## [2.12.0] - 2026-05-04
 
 ### Added
@@ -30,7 +36,6 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Simplify axioms with `decreases energy`, `increases energy`: `charging`, `combustion thermal energy transformation`, `steam-electric process`, `solar-steam-electric process`, `energy transformation`, `ambient thermal energy transfer`, `marine current energy transformation`, `mineral oil refining process` , `photovoltaic energy transformation`, `electricity gain process`, `heat transfer`, `hydro energy transformation`, `solar thermal energy transformation`, `geothermal heat transfer`, `geothermal heat unit` (#2233)
 - Remove `has energy input` and `has energy output` axioms for: `mineral oil refining process`, `current collector`, `battery`, `combustion-based heater`, `combustion fuel transport`, `electric heat pump`, `electrical heater`, `electric vehicle`, `electromotive generator`, `electric motor`, `geothermal power unit`, `marine current energy converting unit`, `internal combustion engine`, `motor`, `latent heat storage object`, `renewable power unit`, `photovoltaic cell`, `solar power unit`, `solar heat unit`, `PV panel`, `geothermal power technology`, `sensible heat storage object`, `energy storage object`, `solar thermal power unit`, `photovoltaic technology`, `solar power technology`, `solar thermal power technology`, ` solar thermal collector`, `wind rotor`, `water electrolyser`, `wind energy converting unit`, `thermo-chemical heat storage object`, `steam turbine`, `water turbine`, `combined heat and power generating unit`, `nuclear electric hydrogen`, `renewable electrolytic hydrogen`, `solar electrolytic hydrogen`, `solar radiation receiving surface`, `steam power unit`, `data center`, `energy transformation unit`, `frequency control`, `hardware`, `vehicle`, `turbine`, `pump`, `heat generating unit`, `power generating unit`, `sewage plant`, `solar receiving object`, `energy converting component`, `fuel cell`, `heat exchanger`, `heater`, `marine tidal energy converting unit`, `marine wave energy converting unit` (#2233)
 
-### Removed
 
 ## [2.11.0] - 2026-03-04
 
