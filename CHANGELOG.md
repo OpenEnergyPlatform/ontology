@@ -14,8 +14,11 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
+- change axiom: power-to-fuel technology and subclasses (#2250)
+
 ### Removed
 
 ## [2.12.0] - 2026-05-04
