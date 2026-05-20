@@ -18,6 +18,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
 - change axiom: power-to-fuel technology and subclasses (#2250)
+- correct definition: permits, run of river power technology (#2253)
 
 ### Removed
 
