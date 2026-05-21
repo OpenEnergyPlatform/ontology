@@ -18,6 +18,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
 - change axiom: power-to-fuel technology and subclasses (#2250)
+- remove axiom: electrical energy, solar electrical energy, hydro energy, marine current/tidal/wave energy, wind energy, industrial waste thermal energy (#2256)
 
 ### Removed
 
