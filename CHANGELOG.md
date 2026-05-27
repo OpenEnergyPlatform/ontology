@@ -14,11 +14,13 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- heat pump technology, electrical heating technology, combustion-based heating technology, coal / oil / natural gas / hydrogen / biomass powered heating technology (#2257)
 
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
 - change axiom: power-to-fuel technology and subclasses (#2250)
 - remove axiom: electrical energy, solar electrical energy, hydro energy, marine current/tidal/wave energy, wind energy, industrial waste thermal energy (#2256)
+- add alternative labels: heat generation technology, heat generation process (#2257)
 
 ### Removed
 
