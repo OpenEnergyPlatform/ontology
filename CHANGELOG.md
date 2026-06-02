@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 - heat pump technology, electrical heating technology, combustion-based heating technology, coal / oil / natural gas / hydrogen / biomass powered heating technology (#2257)
+- ethen (#2260)
 
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
