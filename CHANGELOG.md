@@ -15,6 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 - ethen (#2260)
+- combined cycle gas power plant, open cycle gas power plant (#2263)
 
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
