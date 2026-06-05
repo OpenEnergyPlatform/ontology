@@ -7430,6 +7430,7 @@ Class: OEO_00010248
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat gain process is an energy transformation that has thermal energy as energy output.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation",
         <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation process",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "heating",
         rdfs:comment "With the logical definition of heat gain process, heat transfer is inferred as subclass which is intended but depends on the perspective and the system boundaries. To avoid confusion, the main label was changed from heat generation to heat gain process.",
         rdfs:label "heat gain process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
@@ -7445,7 +7446,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 relabel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
     
     EquivalentTo: 
         (<http://purl.obolibrary.org/obo/BFO_0000117> some 
@@ -9217,10 +9222,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601"
 Class: OEO_00010432
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir hydro storage power technology is a power generation technology that describes how to combine hydro power units in run of river power plant and a hydroelectric energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river power technology is a power generation technology that describes how to combine hydro power units in run of river power plant and a hydroelectric energy transformation.",
         rdfs:label "run of river power technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601
+correct textual definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2252
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2254"
     
     SubClassOf: 
         OEO_00010431,
@@ -11155,9 +11163,14 @@ Class: OEO_00020308
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generation technology is an energy technology that describes how to combine heat generating units, heat generation processes, energy carriers and energy in a specific way.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "heating technology"@en,
         rdfs:label "heat generation technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1610"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1610
+
+add alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
     
     SubClassOf: 
         OEO_00020267,
@@ -11546,6 +11559,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
         OEO_00020457
     
     
+Class: OEO_00020463
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined cycle gas power plant is a gas power plant that contains a heat exchanger linked to a steam power unit, in addition to the gas fired power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CCGT"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Gas-und-Dampf-Kraftwerk"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "combined cycle gas turbine"@en,
+        rdfs:label "combined cycle gas power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2160
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2263"
+    
+    SubClassOf: 
+        OEO_00000184,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000017,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310028
+    
+    
+Class: OEO_00020464
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An open cycle gas power plant is a gas power plant that, in contrast to an combined cycle gas power plant, does not contain a steam power unit."@en,
+        rdfs:label "open cycle gas power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2160
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2263"
+    
+    SubClassOf: 
+        OEO_00000184,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000017
+    
+    
 Class: OEO_00020467
 
     Annotations: 
@@ -11598,6 +11642,125 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2226"
         OEO_00000503 some OEO_00010214
     
     
+Class: OEO_00020486
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump technology is a heat generation technology that describes how to combine heat pumps, heat gain processes, energy carriers and energy in a specific way.",
+        rdfs:label "heat pump technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020308,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000212
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020487
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical heating technology is a technology that describes how to combine electrical heaters in a heat gain process with electrical energy as input in a specific way.",
+        rdfs:label "electrical heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020308,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00310015
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020488
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion based heating technology is a heat generation technology that describes how to combine combustion-based heaters, heat gain processes, combustion fuels and energy in a specific way.",
+        rdfs:label "combustion-based heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020308,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00310014
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020489
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, coal and energy in a specific way.",
+        rdfs:label "coal powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00310014
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020490
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An oil powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, heating oil and energy in a specific way.",
+        rdfs:label "oil powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020468
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020491
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An gas powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, natural gas and energy in a specific way.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "natural gas powered heating technology",
+        rdfs:label "gas powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020467
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020492
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An hydrogen powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, hydrogen and energy in a specific way.",
+        rdfs:label "hydrogen powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020469
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020493
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass powered heating technology is a combustion-based heat generation technology that describes how to combine biomass boilers, heat gain processes, biomass and energy in a specific way.",
+        rdfs:label "biomass powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020470
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
 Class: OEO_00020494
 
     Annotations: 
