@@ -28,6 +28,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add alternative label: colliery gas, lignite (#2261)
 - add alternative labels: heat generation technology, heat generation process (#2257)
 - change definition: AC-line (#2266)
+- change label: nuclear electrolytic hydrogen (#2268)
 
 ### Removed
 
