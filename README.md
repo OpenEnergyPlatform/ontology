@@ -44,8 +44,13 @@ Example:
 
 ## Releases and installation
 
-The latest version of the OEO can be accessed on the [Open Energy Platform](https://openenergyplatform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
+With every release, two versions of OEO are published:
+- oeo-full.owl which contains the asserted hierarchy
+- oeo-closure.owl which contains the inferred hierarchy by the HermiT reasoner
+
 All released versions can be downloaded directly from the [GitHub Releases](https://github.com/OpenEnergyPlatform/ontology/releases/). <br>
+The latest version of the OEO can also be accessed on the [Open Energy Platform](https://openenergyplatform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
+The [TIB terminology service](https://terminology.tib.eu/ts/ontologies/oeo?lang=en) provides a lookup version of the latest version of oeo-closure.<br>
 The currently developed version is available on the default [dev Branch](https://github.com/OpenEnergyPlatform/ontology/).
 
 The source code of the ontology is found in the folder `src/ontology/` <br>

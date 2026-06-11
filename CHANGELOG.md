@@ -14,8 +14,22 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- heat pump technology, electrical heating technology, combustion-based heating technology, coal / oil / natural gas / hydrogen / biomass powered heating technology (#2257)
+- ethen (#2260)
+- agricultural waste fuel, coal refuse (#2261)
+- biomass heat unit, oil heat unit, hydrogen heat unit, (natural) gas heat unit, biomass heat plant, oil heat plant, hydrogen heat plant, gas heat plant (#2262)
+- combined cycle gas power plant, open cycle gas power plant (#2263)
+
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
+- change axiom: power-to-fuel technology and subclasses (#2250)
+- correct definition: run of river power technology, permits (#2254)
+- remove axiom: electrical energy, solar electrical energy, hydro energy, marine current/tidal/wave energy, wind energy, industrial waste thermal energy (#2256)
+- add alternative label: colliery gas, lignite (#2261)
+- add alternative labels: heat generation technology, heat generation process (#2257)
+- change definition: AC-line (#2266)
+- change label: nuclear electrolytic hydrogen (#2268)
+
 ### Removed
 
 ## [2.12.0] - 2026-05-04
