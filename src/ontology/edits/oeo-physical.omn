@@ -719,7 +719,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2232"
 ObjectProperty: OEO_00020505
 
     Annotations: 
-        rdfs:comment "A relation between a material entity m and an energy e, where m possesses a disposition d to change energy which is realized in a process p, which has an energy decrease or increase process as occurent part which regulates energy e.",
+        rdfs:comment "A relation between a material entity m and an energy e, where m possesses a disposition d to change energy which is realized in a process p, which has an energy decrease or increase process as occurent part which regulates energy e and which occurs in m.",
         rdfs:label "changes energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
@@ -731,19 +731,19 @@ ObjectProperty: OEO_00020506
         rdfs:label "consumes energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270",
-        <https://www.commoncoreontologies.org/ont00001754> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e."
+        <https://www.commoncoreontologies.org/ont00001754> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e and which occurs in m."
     
     SubPropertyOf: 
         OEO_00020505
     
     SubPropertyChain: 
-        <http://purl.obolibrary.org/obo/RO_0000091> o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020462
+        OEO_00020511 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020462
     
     
 ObjectProperty: OEO_00020507
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to produce / increase energy which is realized in a process p, which has an energy increase process as occurent part which positively regulates energy e.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to produce / increase energy which is realized in a process p, which has an energy increase process as occurent part which positively regulates energy e and which occurs in m.",
         rdfs:label "produces energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
@@ -752,7 +752,25 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
         OEO_00020505
     
     SubPropertyChain: 
-        <http://purl.obolibrary.org/obo/RO_0000091> o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020461
+        OEO_00020510 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020461
+    
+    
+ObjectProperty: OEO_00020510
+
+    Annotations: 
+        rdfs:label "has energy production dispositon"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
+ObjectProperty: OEO_00020511
+
+    Annotations: 
+        rdfs:label "has energy consumption disposition"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
     
     
 ObjectProperty: OEO_00040010
