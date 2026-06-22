@@ -19,6 +19,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - agricultural waste fuel, coal refuse (#2261)
 - biomass heat unit, oil heat unit, hydrogen heat unit, (natural) gas heat unit, biomass heat plant, oil heat plant, hydrogen heat plant, gas heat plant (#2262)
 - combined cycle gas power plant, open cycle gas power plant (#2263)
+- import from CCO: material artifact (#2196)
 
 ### Changed
 - change label: common reporting format / CRF sector division (#2248)
@@ -28,6 +29,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add alternative label: colliery gas, lignite (#2261)
 - add alternative labels: heat generation technology, heat generation process (#2257)
 - change definition: AC-line (#2266)
+- change label: hardware to electronic hardware (#2196)
 - change label: nuclear electrolytic hydrogen (#2268)
 
 ### Removed
