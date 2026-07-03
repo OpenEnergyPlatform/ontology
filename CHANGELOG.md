@@ -31,6 +31,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - change definition: AC-line (#2266)
 - change label: hardware to electronic hardware (#2196)
 - change label: nuclear electrolytic hydrogen (#2268)
+- move from artificial object to material artifact: dam (#2276)
 
 ### Removed
 
