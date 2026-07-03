@@ -37,6 +37,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Updated oekg annotation: decarbonisation pathway, sufficiency, policy instrument, acceptance (#2296)
 - Updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
 - Updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
+- move from artificial object to material artifact: dam (#2276)
 
 ### Removed
 
