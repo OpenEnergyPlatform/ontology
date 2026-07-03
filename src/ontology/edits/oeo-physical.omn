@@ -54,6 +54,9 @@ AnnotationProperty: <http://purl.org/dc/terms/title>
 AnnotationProperty: <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym>
 
     
+AnnotationProperty: <https://www.commoncoreontologies.org/ont00001753>
+
+    
 AnnotationProperty: <https://www.commoncoreontologies.org/ont00001754>
 
     
@@ -1026,10 +1029,11 @@ Class: <https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/o
     
 Class: <https://www.commoncoreontologies.org/ont00000127>
 
+    
 Class: <https://www.commoncoreontologies.org/ont00000870>
 
+    
 Class: <https://www.commoncoreontologies.org/ont00001141>
-
 
     
 Class: OEO_00000001
@@ -1889,12 +1893,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810"
 Class: OEO_00000047
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An AC-line is a powerline for transferring high voltage alternating current."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An AC-line is a powerline for transferring alternating current."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wechselstromleitung"@de,
         rdfs:comment "undirected",
         rdfs:label "AC-line"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/231
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/385
+
+remove \"high voltage\" from definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2164
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2266"
     
     SubClassOf: 
         OEO_00000253
@@ -2332,11 +2340,15 @@ Class: OEO_00000096
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Colliery gas is natural gas found in coal mines (British English: colliery). The main component is methane. Synonyms are firedamp, mine gas. It is used as a fossil fuel."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Grubengas"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "coalbed methane"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "firedamp"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "mine gas"@en,
         rdfs:label "colliery gas"@en,
         OEO_00020426 "Add alternative labels:
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1406"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1406
+add alternative label
+issue:https://github.com/OpenEnergyPlatform/ontology/issues/1958
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2261"
     
     SubClassOf: 
         OEO_00000292
@@ -2560,12 +2572,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1395
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
-        OEO_00000150,
-        OEO_00020182 some OEO_00020207,
-        OEO_00020182 some OEO_00020208
+        OEO_00000150
     
     
 Class: OEO_00000143
@@ -3240,8 +3254,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752"
 Class: OEO_00000206
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Hardware is an artificial object that is part of an electronic system.",
-        rdfs:label "hardware"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electronic hardware is an artificial object that is part of an electronic system.",
+        rdfs:label "electronic hardware"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350
 
@@ -3254,7 +3268,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 
 remove has energy output axiom 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+rename to electronic hardware
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2196
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2267"
     
     SubClassOf: 
         OEO_00000061
@@ -3345,27 +3363,32 @@ Class: OEO_00000218
         rdfs:label "hydro energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/679
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/681
+
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+change axiom to 'participates in'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/
+
 change axiom from participates in to is energy participant of
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+
 added axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1600
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1620
 
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
         OEO_00230020,
-        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000441,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
-
-change axiom to 'participates in'
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        OEO_00020182 some OEO_00110002
+        <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000441
     
     
 Class: OEO_00000219
@@ -3555,19 +3578,24 @@ Class: OEO_00000251
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Lignite is coal that is non-agglomerating with a gross calorific value less than 17 435 kJ/kg (4 165 kcal/kg) and greater than 31 % volatile matter on a dry mineral matter free basis."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Braunkohle"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "brown coal"@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "REGULATION (EC) No 1099/2008 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 22 October 2008 on energy statistics https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32008R1099&from=EN"@en,
         rdfs:comment "Oil shale and tar sands produced and combusted directly should be reported in this category. Oil shale and tar sands used as inputs for other transformation processes should also be reported in this category.	
 
 This includes the portion of the oil shale or tar sands consumed in the transformation process.",
         rdfs:label "lignite"@en,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810
+        skos:closeMatch <http://purl.obolibrary.org/obo/ENVO_2000008>,
+        OEO_00020426 "add mapping to ENVO 
+		    issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+			pull request: https://github.com/OpenEnergyPlatform/ontology/pull/810
 
-Convert to skos:closeMatch
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1879"
-        skos:closeMatch <http://purl.obolibrary.org/obo/ENVO_2000008>
+			Convert to skos:closeMatch
+			issue: https://github.com/OpenEnergyPlatform/ontology/issues/636
+			pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1879
+			
+			add alternative label
+			issue: https://github.com/OpenEnergyPlatform/ontology/issues/1958
+			pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2261"
     
     SubClassOf: 
         OEO_00000088,
@@ -4910,31 +4938,38 @@ Class: OEO_00000446
         rdfs:label "wind energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/211
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/225
+
 reclassify and change def
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/662
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/666
+
 remove disposition renewable fuel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/726
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/732
+
+change axiom to 'participates in'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/
+
 add and change axioms
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+
 added axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1600
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1620
+
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
         OEO_00230020,
         <http://purl.obolibrary.org/obo/RO_0000052> some OEO_00000054,
-        OEO_00000530 some OEO_00030004,
-        
-            Annotations: OEO_00020426 "change axiom to 'participates in'
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        OEO_00020182 some OEO_00000043,
-        OEO_00020183 some OEO_00020043
+        OEO_00000530 some OEO_00030004
     
     
 Class: OEO_00000447
@@ -6106,21 +6141,23 @@ Class: OEO_00010097
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
+change axiom to 'participates in'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/
+
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
 
 add and change axioms
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
-        OEO_00020087,
-        
-            Annotations: OEO_00020426 "change axiom to 'participates in'
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        OEO_00020182 some OEO_00010107,
-        OEO_00020183 some OEO_00010098
+        OEO_00020087
     
     
 Class: OEO_00010098
@@ -6203,11 +6240,14 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
 
 change axiom from participates in to is energy participant of
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
-        OEO_00020087,
-        OEO_00020182 some OEO_00010101
+        OEO_00020087
     
     
 Class: OEO_00010101
@@ -6236,20 +6276,23 @@ Class: OEO_00010102
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
+change axiom to 'participates in'
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/
+
 fix classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/896
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/921
 
 change axiom from participates in to is energy participant of
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
-        OEO_00020087,
-        
-            Annotations: OEO_00020426 "change axiom to 'participates in'
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/850
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/871/"
-        OEO_00020182 some OEO_00010106
+        OEO_00020087
     
     
 Class: OEO_00010103
@@ -7404,6 +7447,7 @@ Class: OEO_00010248
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat gain process is an energy transformation that has thermal energy as energy output.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation",
         <http://purl.obolibrary.org/obo/IAO_0000118> "heat generation process",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "heating",
         rdfs:comment "With the logical definition of heat gain process, heat transfer is inferred as subclass which is intended but depends on the perspective and the system boundaries. To avoid confusion, the main label was changed from heat generation to heat gain process.",
         rdfs:label "heat gain process"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1045
@@ -7419,7 +7463,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 relabel
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
     
     EquivalentTo: 
         (<http://purl.obolibrary.org/obo/BFO_0000117> some 
@@ -8945,7 +8993,7 @@ Class: OEO_00010416
         <http://purl.obolibrary.org/obo/IAO_0000115> "Nuclear electrolytic hydrogen is electrolytic hydrogen that is produced with nuclear electrical energy.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "pink hydrogen"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "pinker Wasserstoff"@de,
-        rdfs:label "nuclear electric hydrogen"@en,
+        rdfs:label "nuclear electrolytic hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559
 
@@ -8955,7 +9003,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2222
 
 remove has energy input axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+update label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2235
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2268"
     
     EquivalentTo: 
         OEO_00010379
@@ -9013,11 +9065,11 @@ Class: OEO_00010419
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar electrical energy is electrical energy that is energy output of a solar energy transformation.",
         rdfs:label "solar electrical energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559"
-    
-    EquivalentTo: 
-        OEO_00000139
-         and (OEO_00020184 some OEO_00020046)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
         OEO_00000139,
@@ -9191,10 +9243,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601"
 Class: OEO_00010432
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A reservoir hydro storage power technology is a power generation technology that describes how to combine hydro power units in run of river power plant and a hydroelectric energy transformation.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A run of river power technology is a power generation technology that describes how to combine hydro power units in run of river power plant and a hydroelectric energy transformation.",
         rdfs:label "run of river power technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601
+correct textual definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2252
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2254"
     
     SubClassOf: 
         OEO_00010431,
@@ -11129,9 +11184,14 @@ Class: OEO_00020308
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat generation technology is an energy technology that describes how to combine heat generating units, heat generation processes, energy carriers and energy in a specific way.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "heating technology"@en,
         rdfs:label "heat generation technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1610"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1610
+
+add alternative label
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
     
     SubClassOf: 
         OEO_00020267,
@@ -11149,13 +11209,18 @@ Class: OEO_00020347
         <http://purl.obolibrary.org/obo/IAO_0000118> "ptx technology",
         rdfs:label "power-to-fuel technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647
+
+refine axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2249
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2250"
     
     SubClassOf: 
         OEO_00020267,
         <http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00330009
-             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00330007))
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00330007)
+             and (<http://purl.obolibrary.org/obo/RO_0003000> some OEO_00000173))
     
     
 Class: OEO_00020348
@@ -11179,13 +11244,17 @@ Class: OEO_00020349
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-ammonia technology is an power-to-gas technology that describes how to combine power-to-ammonia systems in power-to-ammonia processes.",
         rdfs:label "power-to-ammonia technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647
+refine axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2249
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2250"
     
     SubClassOf: 
         OEO_00020348,
         <http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00330010
-             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010222))
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010222)
+             and (<http://purl.obolibrary.org/obo/RO_0003000> some OEO_00010221))
     
     
 Class: OEO_00020350
@@ -11194,13 +11263,17 @@ Class: OEO_00020350
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-methane technology is an power-to-gas technology that describes how to combine power-to-methane systems in power-to-methane processes.",
         rdfs:label "power-to-methane technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1572
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1647
+refine axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2249
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2250"
     
     SubClassOf: 
         OEO_00020348,
         <http://purl.obolibrary.org/obo/IAO_0000136> some 
             (OEO_00000269
-             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010217))
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010217)
+             and (<http://purl.obolibrary.org/obo/RO_0003000> some OEO_00010018))
     
     
 Class: OEO_00020351
@@ -11507,6 +11580,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
         OEO_00020457
     
     
+Class: OEO_00020463
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combined cycle gas power plant is a gas power plant that contains a heat exchanger linked to a steam power unit, in addition to the gas fired power units as parts."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "CCGT"@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Gas-und-Dampf-Kraftwerk"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "combined cycle gas turbine"@en,
+        rdfs:label "combined cycle gas power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2160
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2263"
+    
+    SubClassOf: 
+        OEO_00000184,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000017,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140102,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310028
+    
+    
+Class: OEO_00020464
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An open cycle gas power plant is a gas power plant that, in contrast to an combined cycle gas power plant, does not contain a steam power unit."@en,
+        rdfs:label "open cycle gas power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2160
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2263"
+    
+    SubClassOf: 
+        OEO_00000184,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000017
+    
+    
 Class: OEO_00020467
 
     Annotations: 
@@ -11557,6 +11661,275 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2226"
     SubClassOf: 
         OEO_00310013,
         OEO_00000503 some OEO_00010214
+    
+    
+Class: OEO_00020486
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat pump technology is a heat generation technology that describes how to combine heat pumps, heat gain processes, energy carriers and energy in a specific way.",
+        rdfs:label "heat pump technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020308,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00000212
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020487
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electrical heating technology is a technology that describes how to combine electrical heaters in a heat gain process with electrical energy as input in a specific way.",
+        rdfs:label "electrical heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020308,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00310015
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020488
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A combustion based heating technology is a heat generation technology that describes how to combine combustion-based heaters, heat gain processes, combustion fuels and energy in a specific way.",
+        rdfs:label "combustion-based heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020308,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00310014
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020489
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A coal powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, coal and energy in a specific way.",
+        rdfs:label "coal powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00310014
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020490
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An oil powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, heating oil and energy in a specific way.",
+        rdfs:label "oil powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020468
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020491
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An gas powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, natural gas and energy in a specific way.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "natural gas powered heating technology",
+        rdfs:label "gas powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020467
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020492
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An hydrogen powered heating technology is a combustion-based heat generation technology that describes how to combine combustion-based heaters, heat gain processes, hydrogen and energy in a specific way.",
+        rdfs:label "hydrogen powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020469
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020493
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass powered heating technology is a combustion-based heat generation technology that describes how to combine biomass boilers, heat gain processes, biomass and energy in a specific way.",
+        rdfs:label "biomass powered heating technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1772
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2257"
+    
+    SubClassOf: 
+        OEO_00020488,
+        <http://purl.obolibrary.org/obo/IAO_0000136> some 
+            (OEO_00020470
+             and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248))
+    
+    
+Class: OEO_00020494
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Ethene, or colloquially Ethylene, is a hydrocarbon with the chemical formula H2C=CH2. It is gaseous in its normal state and can be used as a combustion fuel.",
+        rdfs:label "ethene"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2167
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2260",
+        <https://www.commoncoreontologies.org/ont00001753> "Ethen"@de,
+        <https://www.commoncoreontologies.org/ont00001753> "Ethylen"@de,
+        <https://www.commoncoreontologies.org/ont00001753> "ethylene"@en
+    
+    SubClassOf: 
+        OEO_00140159,
+        OEO_00000529 value OEO_00000182
+    
+    
+Class: OEO_00020495
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An angricultural waste fuel is waste fuel produced by agriculture."@en,
+        rdfs:label "agricultural waste fuel"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1958
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2261"
+    
+    SubClassOf: 
+        OEO_00000439
+    
+    
+Class: OEO_00020496
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Coal refuse is a fossil waste fuel that is the material left over from coal mining. It can partially be reused as fuel."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "coal waste",
+        rdfs:label "coal refuse"@en,
+        OEO_00020426 "add
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1958
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2261"
+    
+    SubClassOf: 
+        OEO_00010224,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000088
+    
+    
+Class: OEO_00020497
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass heat unit is a heat generating unit that has a boiler and uses biomass as a fuel input."@en,
+        rdfs:label "biomass heat unit"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310013
+    
+    
+Class: OEO_00020498
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen heat unit is a heat generating unit that has a boiler and uses hydrogen as a fuel input."@en,
+        rdfs:label "hydrogen heat unit"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310013
+    
+    
+Class: OEO_00020499
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An oil heat unit is a heat generating unit that has a boiler and uses oil as a fuel input."@en,
+        rdfs:label "oil heat unit"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310013
+    
+    
+Class: OEO_00020500
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas heat unit is a heat generating unit that has a boiler and uses methane as a fuel input."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "natural gas heat unit",
+        rdfs:label "gas heat unit"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310008,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310013
+    
+    
+Class: OEO_00020501
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A biomass heat plant is a heat plant that has biomass heat units as parts.",
+        rdfs:label "biomass heat plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310011,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020497
+    
+    
+Class: OEO_00020502
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An oil heat plant is a heat plant that has oil heat units as parts.",
+        rdfs:label "oil heat plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310011,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020499
+    
+    
+Class: OEO_00020503
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen heat plant is a heat plant that has hydrogen heat units as parts.",
+        rdfs:label "hydrogen heat plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310011,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020498
+    
+    
+Class: OEO_00020504
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A gas heat plant is a heat plant that has gas heat units as parts.",
+        rdfs:label "gas heat plant"@de,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
+    
+    SubClassOf: 
+        OEO_00310011,
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020500
     
     
 Class: OEO_00030000
@@ -14602,11 +14975,14 @@ Class: OEO_00310004
         <http://purl.obolibrary.org/obo/IAO_0000118> "industrielle Abwärme"@de,
         rdfs:label "industrial waste thermal energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359
+
+remove is energy participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2256"
     
     SubClassOf: 
-        OEO_00010114,
-        OEO_00020184 some OEO_00050000
+        OEO_00010114
     
     
 Class: OEO_00310005
@@ -16816,7 +17192,6 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/2151"
     
     SubClassOf: 
         <https://www.commoncoreontologies.org/ont00000870>
-
     
     
 Class: OEO_00390000
