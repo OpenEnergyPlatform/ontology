@@ -1219,7 +1219,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
 Class: OEO_00000011
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting component is an artificial object that is usually a discrete part of an energy transformation unit with the function of transforming, transferring or changing a certain type of energy."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy converting component is a material artifact that is usually a discrete part of an energy transformation unit with the function of transforming, transferring or changing a certain type of energy."@en,
         rdfs:comment "formerly called energy transformer and formerly called energy converting device",
         rdfs:label "energy converting component"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/173
@@ -1243,10 +1243,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+move from artificial object to material artifact:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2276
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2280"
     
     SubClassOf: 
-        OEO_00000061,
+        <https://www.commoncoreontologies.org/ont00000995>,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
@@ -2774,7 +2778,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
 Class: OEO_00000159
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage object is an artificial object that has the function energy storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy storage object is a material artifact that has the function energy storage."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Energiespeicher"@de,
         rdfs:label "energy storage object"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/209
@@ -2783,19 +2787,24 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/276
 Make equivalent class:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1265
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1359
 
 Remove has energy input/output:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+move from artificial object to material artifact:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2276
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2280"
     
     EquivalentTo: 
         OEO_00000061
          and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00000012)
     
     SubClassOf: 
-        OEO_00000061
+        <https://www.commoncoreontologies.org/ont00000995>
     
     
 Class: OEO_00000165
@@ -3261,7 +3270,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/752"
 Class: OEO_00000206
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "Electronic hardware is an artificial object that is part of an electronic system.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Electronic hardware is a material artifact that is part of an electronic system."@en,
         rdfs:label "electronic hardware"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/319
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/350
@@ -3279,10 +3288,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
 
 rename to electronic hardware
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2196
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2267"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2267
+
+move from artificial object to material artifact:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2276
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2280"
     
     SubClassOf: 
-        OEO_00000061
+        <https://www.commoncoreontologies.org/ont00000995>
     
     
 Class: OEO_00000207
@@ -10411,22 +10424,29 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/861"
 Class: OEO_00020102
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation unit is an artificial object that transforms, changes or transfers a certain type of energy.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation unit is a material artifact that transforms, changes or transfers a certain type of energy."@en,
         rdfs:label "energy transformation unit"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/465
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/895
+
 move to oeo-shared:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
 remove has energy output axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+move from artificial object to material artifact:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2276
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2280"
     
     SubClassOf: 
-        OEO_00000061,
+        <https://www.commoncoreontologies.org/ont00000995>,
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
