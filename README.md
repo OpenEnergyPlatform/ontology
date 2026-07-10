@@ -28,6 +28,14 @@ This domain ontology is a collaborative effort to represent the context of **ene
 This repository is **dual-licensed** under [Creative Commons Zero v1.0 Universal (CC0-1.0)](https://creativecommons.org/publicdomain/zero/1.0/legalcode) or [MIT License (MIT)](https://opensource.org/license/mit). <br>
 You can choose between one of them if you use this work. <br>
 
+## Download
+
+Download the latest released version from the release page or here:
+
+- [oeo-full.owl](https://github.com/OpenEnergyPlatform/ontology/releases/latest/download/oeo-full.owl)
+- [oeo-closure.owl](https://github.com/OpenEnergyPlatform/ontology/releases/latest/download/oeo-closure.owl)
+
+
 ## Citation
 
 For **scientific citation** of this ontology, please refer to the [CITATION.cff](CITATION.cff) file. <br>
@@ -45,8 +53,8 @@ Example:
 ## Releases and installation
 
 With every release, two versions of OEO are published:
-- oeo-full.owl which contains the asserted hierarchy
-- oeo-closure.owl which contains the inferred hierarchy by the HermiT reasoner
+- [oeo-full.owl](https://github.com/OpenEnergyPlatform/ontology/releases/latest/download/oeo-full.owl) which contains the asserted hierarchy
+- [oeo-closure.owl](https://github.com/OpenEnergyPlatform/ontology/releases/latest/download/oeo-closure.owl) which contains the inferred hierarchy by the HermiT reasoner
 
 All released versions can be downloaded directly from the [GitHub Releases](https://github.com/OpenEnergyPlatform/ontology/releases/). <br>
 The latest version of the OEO can also be accessed on the [Open Energy Platform](https://openenergyplatform.org/ontology/oeo) and the [Master Branch](https://github.com/OpenEnergyPlatform/ontology/tree/master). <br>
