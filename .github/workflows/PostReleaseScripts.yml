@@ -127,7 +127,7 @@ jobs:
           cd ../../../..
       - name: Copy built ontology files to workspace
         run: |
-          find build/oeo/ -maxdepth 2 -name "oeo-full.*" -exec cp {} ${{ github.workspace }} \;
+          find build/oeo/ -maxdepth 2 -name "oeo-full.*" -o -name "oeo-closure.*" -exec cp {} ${{ github.workspace }} \;
       - name: Attach artifacts to release
         uses: ncipollo/release-action@v1
         with:
@@ -144,4 +144,4 @@ jobs:
           # We don't want this behaviour, as releases created as draft or pre-release won't be updated in that regard and therefore result in
           # unconsistent behaviour when creating normal releases vs. draft or pre-releases.
           makeLatest: false
-          artifacts: "${{ github.workspace }}/build-files.zip,${{ github.workspace }}/existing-terms-and-definitions.zip,${{ github.workspace }}/oeo-full.omn,${{ github.workspace }}/oeo-full.owl"
+          artifacts: "${{ github.workspace }}/build-files.zip,${{ github.workspace }}/existing-terms-and-definitions.zip,${{ github.workspace }}/oeo-full.omn,${{ github.workspace }}/oeo-full.owl,${{ github.workspace }}/oeo-closure.owl"
