@@ -15,7 +15,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 ### Changed
-### Deleted
+### Removed
 
 ## [2.13.0] - 2026-07-10
 
