@@ -15,7 +15,11 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Added
 - CSV, JSON, CPACS, KML, BADA, VTK, NetCDF, SO6, GeoTiff (#2251)
+- liquid hydrogen, methane pyrolytic hydrogen (#2277)
+
 ### Changed
+- update definition source: abated steam reforming hydrogen, fossil steam reforming hydrogen, renewable electrolytic hydrogen (#2277)
+
 ### Removed
 
 ## [2.13.0] - 2026-07-10
