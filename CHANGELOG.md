@@ -14,23 +14,30 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
-- heat pump technology, electrical heating technology, combustion-based heating technology, coal / oil / natural gas / hydrogen / biomass powered heating technology (#2257)
-- ethen (#2260)
+- CSV, JSON, CPACS, KML, BADA, VTK, NetCDF, SO6, GeoTiff (#2251)
+### Changed
+### Removed
+
+## [2.13.0] - 2026-07-10
+
+### Added
+- heat pump technology, electrical heating technology, combustion-based heating technology, coal/oil/natural gas/hydrogen/biomass powered heating technology (#2257)
+- ethene (#2260)
 - agricultural waste fuel, coal refuse (#2261)
 - biomass heat unit, oil heat unit, hydrogen heat unit, (natural) gas heat unit, biomass heat plant, oil heat plant, hydrogen heat plant, gas heat plant (#2262)
 - combined cycle gas power plant, open cycle gas power plant (#2263)
+- import from CCO: material artifact (#2196)
 
 ### Changed
-- change label: common reporting format / CRF sector division (#2248)
+- change label: common reporting format to CRF sector division (#2248)
 - change axiom: power-to-fuel technology and subclasses (#2250)
 - correct definition: run of river power technology, permits (#2254)
 - remove axiom: electrical energy, solar electrical energy, hydro energy, marine current/tidal/wave energy, wind energy, industrial waste thermal energy (#2256)
+- add alternative label: heat generation technology, heat generation process (#2257)
 - add alternative label: colliery gas, lignite (#2261)
-- add alternative labels: heat generation technology, heat generation process (#2257)
 - change definition: AC-line (#2266)
-- change label: nuclear electrolytic hydrogen (#2268)
-
-### Removed
+- change label: hardware to electronic hardware (#2196)
+- change label: nuclear electric hydrogen to nuclear electrolytic hydrogen (#2268)
 
 ## [2.12.0] - 2026-05-04
 
