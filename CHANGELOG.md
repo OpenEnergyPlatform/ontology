@@ -19,6 +19,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Changed
 - update definition source: abated steam reforming hydrogen, fossil steam reforming hydrogen, renewable electrolytic hydrogen (#2277)
+- remove alternative label: solar electrolytic hydrogen (#2277)
 
 ### Removed
 
