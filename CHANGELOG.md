@@ -16,6 +16,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 - CSV, JSON, CPACS, KML, BADA, VTK, NetCDF, SO6, GeoTiff (#2251)
 ### Changed
+- add alternative labels: commercial sector (#2294)
 ### Removed
 
 ## [2.13.0] - 2026-07-10
