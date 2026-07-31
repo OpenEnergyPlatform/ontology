@@ -44,6 +44,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add alternative label: colliery gas, lignite (#2261)
 - change definition: AC-line (#2266)
 - change label: hardware to electronic hardware (#2196)
+- change label: nuclear electric hydrogen to nuclear electrolytic hydrogen (#2268)
 
 ## [2.12.0] - 2026-05-04
 
