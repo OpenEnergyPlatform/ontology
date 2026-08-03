@@ -19,6 +19,12 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 
 ### Changed
 
+- hydrogen supply chain (#2297)
+### Changed
+- add alternative labels: commercial sector (#2294)
+- Updated oekg annotation: decarbonisation pathway, sufficiency, policy instrument, acceptance (#2296)
+- Updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
+- Updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
 ### Removed
 
 ## [2.13.0] - 2026-07-10
