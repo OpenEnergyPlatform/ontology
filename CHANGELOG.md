@@ -16,6 +16,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 - CSV, JSON, CPACS, KML, BADA, VTK, NetCDF, SO6, GeoTiff (#2251)
 - base load power plant, base load power plant role (#2293)
+- integrated assessment modeling scenario (#2302)
 
 ### Changed
 
