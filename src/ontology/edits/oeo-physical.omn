@@ -716,6 +716,63 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2232"
         OEO_00000150
     
     
+ObjectProperty: OEO_00020505
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, in which m possesses a disposition d to change energy, this disposition is realized in a process p, and p has as an occurrent part an energy-decrease or energy-increase process q that occurs in m and regulates e.",
+        rdfs:label "changes energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    
+ObjectProperty: OEO_00020506
+
+    Annotations: 
+        rdfs:label "consumes energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e and which occurs in m."
+    
+    SubPropertyOf: 
+        OEO_00020505
+    
+    SubPropertyChain: 
+        OEO_00020511 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020462
+    
+    
+ObjectProperty: OEO_00020507
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to produce / increase energy which is realized in a process p, which has an energy increase process as occurent part which positively regulates energy e and which occurs in m.",
+        rdfs:label "produces energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubPropertyOf: 
+        OEO_00020505
+    
+    SubPropertyChain: 
+        OEO_00020510 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020461
+    
+    
+ObjectProperty: OEO_00020510
+
+    Annotations: 
+        rdfs:label "has energy production dispositon"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
+ObjectProperty: OEO_00020511
+
+    Annotations: 
+        rdfs:label "has energy consumption disposition"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -2084,12 +2141,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801
 
 remove has energy input/output axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add new axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
     
     SubClassOf: 
         OEO_00000159,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140037,
-        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020508,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020509,
+        OEO_00020506 some OEO_00000139,
+        OEO_00020507 some OEO_00000139
     
     
 Class: OEO_00000071
@@ -6476,7 +6541,7 @@ Class: OEO_00010110
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A marine wave energy converting unit is a hydro power unit that uses marine wave energy."@en,
-        rdfs:label "marine wave energy converting unit",
+        rdfs:label "marine wave energy converting unit"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
@@ -8581,6 +8646,7 @@ Class: OEO_00010380
         <http://purl.obolibrary.org/obo/IAO_0000118> "erneuerbarer Elektrolysewasserstoff"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "green hydrogen"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "grüner Wasserstoff"@de,
+        rdfs:comment "The label \"green hydrogen\" is widely used for renewable electrolytic hydrogen, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
         rdfs:label "renewable electrolytic hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442
@@ -8626,6 +8692,7 @@ Class: OEO_00010382
         <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil steam reforming hydrogen is hydrogen that is produced from a fossil combustion fuel in a steam reforming process which is not followed by a carbon capture and storage process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "grauer Wasserstoff"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "grey hydrogen"@en,
+        rdfs:comment "The label \"grey hydrogen\" is widely used for fossil steam reforming hydrogen, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
         rdfs:label "fossil steam reforming hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442
@@ -8655,6 +8722,7 @@ Class: OEO_00010383
         <http://purl.obolibrary.org/obo/IAO_0000118> "CCS steam reforming hydrogen",
         <http://purl.obolibrary.org/obo/IAO_0000118> "blauer Wasserstoff"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "blue hydrogen"@en,
+        rdfs:comment "The label \"blue hydrogen\" is widely used for abated steam reforming hydrogen, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
         rdfs:label "abated steam reforming hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442
@@ -9080,8 +9148,6 @@ Class: OEO_00010418
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar electrolytic hydrogen is electrolytic hydrogen that is produced with solar electrical energy.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "gelber Wasserstoff"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "yellow hydrogen"@en,
         rdfs:label "solar electrolytic hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559
@@ -11540,7 +11606,7 @@ Class: OEO_00020407
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector coupling technology is a technology that intends to connect processes from the electricity, heat, mobility or industrial sectors, as well as their infrastructures.",
         <http://purl.obolibrary.org/obo/IAO_0000600> "The aim of sector coupling is usually an optimisation of an energy system (e.g. with respect to cost, environmental impact, sustainability and decarbonisation) by establishing energy flows across sectorial borders",
-        rdfs:label "sector coupling technology",
+        rdfs:label "sector coupling technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1521
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842"
     
@@ -11556,7 +11622,7 @@ Class: OEO_00020408
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Sector coupling is a process of connecting processes from the electricity, heat, mobility or industrial sectors as well as their infrastructures.",
         <http://purl.obolibrary.org/obo/IAO_0000600> "The aim of sector coupling is usually an optimisation of an energy system (e.g. with respect to cost, environmental impact, sustainability and decarbonisation) by establishing energy flows across sectorial borders",
-        rdfs:label "sector coupling",
+        rdfs:label "sector coupling"@en,
         OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1521
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842
@@ -11575,7 +11641,7 @@ Class: OEO_00020410
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "System robustness is a disposition of a system that is designed or evolved in such a way as to be resistant to total failure despite partial damage or external changes.",
-        rdfs:label "system robustness",
+        rdfs:label "system robustness"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1683
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1843"
     
@@ -11995,7 +12061,7 @@ Class: OEO_00020504
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas heat plant is a heat plant that has gas heat units as parts.",
-        rdfs:label "gas heat plant"@de,
+        rdfs:label "gas heat plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
     
@@ -12003,7 +12069,93 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
         OEO_00310011,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020500
     
+ 
+Class: OEO_00020514
+
+    Annotations: 
+        rdfs:comment "A base load power plant role is a role of a powerplant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. Usually coal power plants and nuclear power plants bear that role.",
+        rdfs:label "base load power plant role"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
     
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00020515
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A base load power plant is a power plant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. It possesses the base load power plant role.",
+        rdfs:label "base load power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
+
+    EquivalentTo: 
+        OEO_00000031
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020514)
+    
+    SubClassOf: 
+        OEO_00000031
+        
+    
+Class: OEO_00020508
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy production disposition is a disposition of a material entity m to increase some kind of energy e. The disposition is realized in a process p that has an energy increase process as occurent part, positively regulating energy e."@en,
+        rdfs:label "energy production disposition"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020509
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption disposition is a disposition of a material entity m to decrease some kind of energy e. The disposition is realized in a process p that has an energy decrease process as occurent part, negatively regulating energy e."@en,
+        rdfs:label "energy consumption disposition"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
+
+Class: OEO_00020512
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquid hydrogen is hydrogen that has been brought to a liquid state of matter at -253°C.",
+        rdfs:label "liquid hydrogen"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2274
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2277"
+    
+    EquivalentTo: 
+        OEO_00000220
+         and (OEO_00000531 value OEO_00000256)
+    
+    SubClassOf: 
+        OEO_00000220
+    
+    
+Class: OEO_00020513
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane pyrolytic hydrogen is synthetic hydrogen that is produced from pyrolysis of methane and solid CO2 storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "turquouise hydrogen"@en,
+        rdfs:comment "The label \"turquoise hydrogen\" is widely used for hydrogen from pyrolysis of methane, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
+        rdfs:label "methane pyrolytic hydrogen"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2274
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2277"
+    
+    SubClassOf: 
+        OEO_00000220,
+        OEO_00000530 some OEO_00030005
+        
+        
 Class: OEO_00020516
 
     Annotations: 
@@ -12015,6 +12167,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2297"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+
     
     
 Class: OEO_00030000
@@ -16715,14 +16868,19 @@ Class: OEO_00320064
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Charging is an electrical energy transfer where the transferred energy is stored in a battery.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "laden"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Ladeprozess"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "battery charging process"@en,
         rdfs:label "charging"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1368
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1394
 
 update axioms to energies
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+rework axioms to battery and energy
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
     
     SubClassOf: 
         OEO_00020003,
