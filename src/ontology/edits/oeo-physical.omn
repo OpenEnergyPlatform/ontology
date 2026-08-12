@@ -716,6 +716,63 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2232"
         OEO_00000150
     
     
+ObjectProperty: OEO_00020505
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, in which m possesses a disposition d to change energy, this disposition is realized in a process p, and p has as an occurrent part an energy-decrease or energy-increase process q that occurs in m and regulates e.",
+        rdfs:label "changes energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    
+ObjectProperty: OEO_00020506
+
+    Annotations: 
+        rdfs:label "consumes energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e and which occurs in m."
+    
+    SubPropertyOf: 
+        OEO_00020505
+    
+    SubPropertyChain: 
+        OEO_00020511 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020462
+    
+    
+ObjectProperty: OEO_00020507
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to produce / increase energy which is realized in a process p, which has an energy increase process as occurent part which positively regulates energy e and which occurs in m.",
+        rdfs:label "produces energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubPropertyOf: 
+        OEO_00020505
+    
+    SubPropertyChain: 
+        OEO_00020510 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020461
+    
+    
+ObjectProperty: OEO_00020510
+
+    Annotations: 
+        rdfs:label "has energy production dispositon"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
+ObjectProperty: OEO_00020511
+
+    Annotations: 
+        rdfs:label "has energy consumption disposition"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -2077,12 +2134,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801
 
 remove has energy input/output axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add new axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
     
     SubClassOf: 
         OEO_00000159,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140037,
-        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020508,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020509,
+        OEO_00020506 some OEO_00000139,
+        OEO_00020507 some OEO_00000139
     
     
 Class: OEO_00000071
@@ -11975,7 +12040,7 @@ Class: OEO_00020515
         rdfs:label "base load power plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
-    
+
     EquivalentTo: 
         OEO_00000031
          and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020514)
@@ -11983,6 +12048,33 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
     SubClassOf: 
         OEO_00000031
         
+    
+Class: OEO_00020508
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy production disposition is a disposition of a material entity m to increase some kind of energy e. The disposition is realized in a process p that has an energy increase process as occurent part, positively regulating energy e."@en,
+        rdfs:label "energy production disposition"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020509
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption disposition is a disposition of a material entity m to decrease some kind of energy e. The disposition is realized in a process p that has an energy decrease process as occurent part, negatively regulating energy e."@en,
+        rdfs:label "energy consumption disposition"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
 
 Class: OEO_00020512
 
@@ -16710,14 +16802,19 @@ Class: OEO_00320064
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Charging is an electrical energy transfer where the transferred energy is stored in a battery.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "laden"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Ladeprozess"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "battery charging process"@en,
         rdfs:label "charging"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1368
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1394
 
 update axioms to energies
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+rework axioms to battery and energy
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
     
     SubClassOf: 
         OEO_00020003,

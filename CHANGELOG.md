@@ -17,6 +17,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - CSV, JSON, CPACS, KML, BADA, VTK, NetCDF, SO6, GeoTiff (#2251)
 - liquid hydrogen, methane pyrolytic hydrogen (#2277)
 - base load power plant, base load power plant role (#2293)
+- integrated assessment modeling scenario (#2302)
 - hydrogen supply chain (#2297)
 
 ### Changed
