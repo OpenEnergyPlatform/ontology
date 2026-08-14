@@ -75,9 +75,6 @@ AnnotationProperty: dc:contributor
 AnnotationProperty: dc:description
 
     
-AnnotationProperty: owl:deprecated
-
-    
 AnnotationProperty: rdfs:comment
 
     
@@ -85,9 +82,6 @@ AnnotationProperty: rdfs:isDefinedBy
 
     
 AnnotationProperty: rdfs:label
-
-    
-AnnotationProperty: rdfs:seeAlso
 
     
 AnnotationProperty: skos:altLabel
@@ -106,9 +100,6 @@ AnnotationProperty: skos:relatedMatch
 
     
 Datatype: rdf:PlainLiteral
-
-    
-Datatype: xsd:boolean
 
     
 Datatype: xsd:decimal
@@ -524,11 +515,27 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
 ObjectProperty: OEO_00010235
 
     Annotations: 
-        rdfs:comment "The use of this relations has led to unintended semantic dependencies.",
-        rdfs:label "DEPRECATED has energy output"@en,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020461>,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020507>,
-        owl:deprecated true
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an output of the artificial object or process.",
+        rdfs:label "has energy output"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+move to oeo-shared:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1384
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
+
+rework module structure 
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+    
+    SubPropertyOf: 
+        <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00010238>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
+    
+    Range: 
+        OEO_00000150
     
     
 ObjectProperty: OEO_00010473
@@ -629,21 +636,37 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
 ObjectProperty: OEO_00020259
 
     Annotations: 
-        rdfs:comment "The use of this relations has led to unintended semantic dependencies.",
-        rdfs:label "DEPRECATED has main energy output"@en,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020461>,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020507>,
-        owl:deprecated true
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is the intended energy output of p, e.g. for further usage.",
+        rdfs:label "has main energy output"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
+    
+    SubPropertyOf: 
+        OEO_00010235
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
     
     
 ObjectProperty: OEO_00020260
 
     Annotations: 
-        rdfs:comment "The use of this relations has led to unintended semantic dependencies.",
-        rdfs:label "DEPRECATED has waste energy output"@en,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020461>,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020507>,
-        owl:deprecated true
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is an unintended, unwanted or unevitable output of p, e.g. waste heat.",
+        rdfs:label "has waste energy output"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
+    
+    SubPropertyOf: 
+        OEO_00010235
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    Range: 
+        OEO_00000150
     
     
 ObjectProperty: OEO_00020404
@@ -705,10 +728,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
 ObjectProperty: OEO_00020506
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e and which occurs in m.",
         rdfs:label "consumes energy"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e and which occurs in m."
     
     SubPropertyOf: 
         OEO_00020505
@@ -762,21 +785,45 @@ ObjectProperty: OEO_00140164
 ObjectProperty: OEO_00140175
 
     Annotations: 
-        rdfs:comment "The use of this relations has led to unintended semantic dependencies.",
-        rdfs:label "DEPRECATED has gross output"@en,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020461>,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020507>,
-        owl:deprecated true
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has gross output c iff: p has energy output c, and c is the total amount of energy generated during the process.",
+        rdfs:label "has gross output"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838
+
+make subproperty of 'has energy output' and add domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+    
+    SubPropertyOf: 
+        OEO_00010235
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
+    
+    Range: 
+        OEO_00000150
     
     
 ObjectProperty: OEO_00140176
 
     Annotations: 
-        rdfs:comment "The use of this relations has led to unintended semantic dependencies.",
-        rdfs:label "DEPRECATED has net output"@en,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020461>,
-        rdfs:seeAlso <https://openenergyplatform.org/ontology/oeo/OEO_00020507>,
-        owl:deprecated true
+        <http://purl.obolibrary.org/obo/IAO_0000115> "p has net output c iff: p has energy output c, and c is the amount of energy delivered to the consumer or fed into a supply grid.",
+        rdfs:label "has net output"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838
+
+make subproperty of 'has energy output' and add domain:
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+    
+    SubPropertyOf: 
+        OEO_00010235
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
+    
+    Range: 
+        OEO_00000150
     
     
 ObjectProperty: OEO_00240025
@@ -11973,6 +12020,34 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
         OEO_00310011,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020500
     
+ 
+Class: OEO_00020514
+
+    Annotations: 
+        rdfs:comment "A base load power plant role is a role of a powerplant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. Usually coal power plants and nuclear power plants bear that role.",
+        rdfs:label "base load power plant role"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00020515
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A base load power plant is a power plant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. It possesses the base load power plant role.",
+        rdfs:label "base load power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
+
+    EquivalentTo: 
+        OEO_00000031
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020514)
+    
+    SubClassOf: 
+        OEO_00000031
+        
     
 Class: OEO_00020508
 
@@ -12000,8 +12075,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
         <http://purl.obolibrary.org/obo/BFO_0000016>,
         <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
         <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
-    
-    
+
 Class: OEO_00020512
 
     Annotations: 
@@ -12031,36 +12105,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2277"
     SubClassOf: 
         OEO_00000220,
         OEO_00000530 some OEO_00030005
-    
-    
-Class: OEO_00020514
-
-    Annotations: 
-        rdfs:comment "A base load power plant role is a role of a powerplant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. Usually coal power plants and nuclear power plants bear that role.",
-        rdfs:label "base load power plant role"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
-    
-    SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000023>
-    
-    
-Class: OEO_00020515
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A base load power plant is a power plant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. It possesses the base load power plant role.",
-        rdfs:label "base load power plant"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
-    
-    EquivalentTo: 
-        OEO_00000031
-         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020514)
-    
-    SubClassOf: 
-        OEO_00000031
-    
-    
+        
+        
 Class: OEO_00020516
 
     Annotations: 
@@ -12072,6 +12118,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2297"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+
     
     
 Class: OEO_00030000
@@ -13970,7 +14017,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
 update oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
-    
     SubClassOf: 
         OEO_00140040
     
