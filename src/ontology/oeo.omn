@@ -73,6 +73,9 @@ A supplementary module is the oeo-physical-axioms module, which contains general
     dct:title "Open Energy Ontology",
     owl:versionInfo "2.13.0"
 
+AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000115>
+
+    
 AnnotationProperty: <http://purl.obolibrary.org/obo/IAO_0000233>
 
     
@@ -97,11 +100,32 @@ AnnotationProperty: owl:versionInfo
 AnnotationProperty: rdfs:comment
 
     
+AnnotationProperty: rdfs:label
+
+    
 Datatype: rdf:PlainLiteral
 
     
 Datatype: xsd:string
 
+    
+ObjectProperty: OEO_00370004
 
-   
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t"@en,
+        rdfs:comment "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant",
+        rdfs:label "occurs in"@en
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/BFO_0000003>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000004>
+    
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000004>
+
     
