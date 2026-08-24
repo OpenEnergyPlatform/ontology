@@ -23,8 +23,10 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - "refers to energy carrier" as subproperty of "refers to" (#2306)
 - "refers to technology" as subproperty of "refers to" (#2306)
 - "refers to temporal region" as subproperty of "refers to" (#2306)
+- "occurs in" as new property (#2305)
 
 ### Changed
+- replace "paricipates in" with opposite direction "occurs in" (#2305)
 - reorder "has spatial region" as subproperty of "refers to" (#2306)
 - reorder "has scenario year" as subproperty of "refers to temporal region" (#2306)
 - update definition source: abated steam reforming hydrogen, fossil steam reforming hydrogen, renewable electrolytic hydrogen (#2277)
