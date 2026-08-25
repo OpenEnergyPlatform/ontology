@@ -29,6 +29,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - axiom: fuel-powered electricity generation process occurs in some fueled power unit (#2305)
 - axiom: gas turbine process occurs in some gas turbine (#2305)
 - axiom: curtailment occurs in some power generating unit (#2305)
+- axiom: power-to-methane process occurs in some power-to-methane system (#2305)
 - axiom: power-to-gas process occurs in some power-to-gas system (#2305)
 - axiom: steam-electric process occurs in some gas turbine (#2305)
 - axiom: gas turbine process occurs in some steam-electric process (#2305)
