@@ -19,8 +19,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - base load power plant, base load power plant role (#2293)
 - integrated assessment modeling scenario (#2302)
 - hydrogen supply chain (#2297)
+- "refers to" as subproperty of "is about" (#2306)
+- "refers to energy carrier" as subproperty of "refers to" (#2306)
+- "refers to technology" as subproperty of "refers to" (#2306)
+- "refers to temporal region" as subproperty of "refers to" (#2306)
 
 ### Changed
+- reorder "has spatial region" as subproperty of "refers to" (#2306)
+- reorder "has scenario year" as subproperty of "refers to temporal region" (#2306)
 - update definition source: abated steam reforming hydrogen, fossil steam reforming hydrogen, renewable electrolytic hydrogen (#2277)
 - remove alternative label: solar electrolytic hydrogen (#2277)
 - add alternative labels: commercial sector (#2294)

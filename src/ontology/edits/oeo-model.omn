@@ -310,10 +310,14 @@ ObjectProperty: OEO_00010378
         <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between an information content entity and a spatial region that describes that the information content entity is about a spatial region.",
         rdfs:label "has spatial region"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1404
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1441
+
+make subproperty of refers to
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2272
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2306"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
+        OEO_00370000
     
     Domain: 
         <http://purl.obolibrary.org/obo/IAO_0000030>
@@ -462,10 +466,14 @@ ObjectProperty: OEO_00020224
         <http://purl.obolibrary.org/obo/IAO_0000115> "An is-about-relation between a scenario and a scenario year to indicate the scenario year of a scenario.",
         rdfs:label "has scenario year"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1335
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1347
+
+reorder as sub property of refers to temporal region
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2272
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2306"
     
     SubPropertyOf: 
-        <http://purl.obolibrary.org/obo/IAO_0000136>
+        OEO_00370002
     
     Domain: 
         OEO_00000364
@@ -546,6 +554,81 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1706"
     
 ObjectProperty: OEO_00140164
 
+    
+ObjectProperty: OEO_00370000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an information content entity and another entity that specifies a context in which the information content entity is to be interpreted."@en,
+        rdfs:label "refers to"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2272
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2306"
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/IAO_0000136>
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000001>
+    
+    
+ObjectProperty: OEO_00370001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an information content entity and an energy carrier that specifies context of the information content entity with respect to an energy carrier."@en,
+        rdfs:comment "\"For example, an energy consumption value that refers to the consumption of natural gas.\""@en,
+        rdfs:label "refers to energy carrier"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2272
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2306"
+    
+    SubPropertyOf: 
+        OEO_00370000
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        OEO_00020039
+    
+    
+ObjectProperty: OEO_00370002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an information content entity and a temporal region that specifies the temporal context of the information content entity."@en,
+        rdfs:comment "\"For example, a data set that refers to the year 2020.\""@en,
+        rdfs:label "refers to temporal region"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2272
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2306"
+    
+    SubPropertyOf: 
+        OEO_00370000
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        <http://purl.obolibrary.org/obo/BFO_0000008>
+    
+    
+ObjectProperty: OEO_00370003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an information content entity and a technology that specifies the technological context of the Information Content Entity."@en,
+        rdfs:comment "\"For example, an efficiency value that refers to hydro power technology.\""@en,
+        rdfs:label "refers to technology"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2272
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2306"
+    
+    SubPropertyOf: 
+        OEO_00370000
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000030>
+    
+    Range: 
+        OEO_00000407
+    
     
 ObjectProperty: OEO_00390023
 
@@ -2387,6 +2470,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1749"
     SubClassOf: 
         OEO_00360020
     
+    
+Class: OEO_00020039
+
     
 Class: OEO_00020072
 
