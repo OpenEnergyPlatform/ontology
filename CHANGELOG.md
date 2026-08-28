@@ -23,6 +23,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - "refers to energy carrier" as subproperty of "refers to" (#2306)
 - "refers to technology" as subproperty of "refers to" (#2306)
 - "refers to temporal region" as subproperty of "refers to" (#2306)
+- import from BFO/RO: occurs in (#2305)
 
 ### Changed
 - add axiom "occurs in" as replacement for "participates in": ... (#2305)
