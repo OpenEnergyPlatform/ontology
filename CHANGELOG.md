@@ -25,7 +25,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - "refers to temporal region" as subproperty of "refers to" (#2306)
 
 ### Changed
-- define domain of property "has aggregation type" (#2259)
+- change domain: has aggregation type, has temporal resolution (#2259)
 - expand domain of property "has temporal resolution" (#2259)
 - add axiom "occurs in" as replacement for "participates in": ... (#2305)
 - add axiom "occurs in" for: `electricity generation process`, `photovoltaic energy transformation`, `fuel-powered electricity generation process`, `gas turbine process`, `power-to-methane process`, `curtailment`, `power-to-gas process`, `steam-electric process`, `hydro energy transformation`, `wind energy transformation`, `hydroelectric energy transformation`, `marine current energy transformation`, `marine tidal energy transformation`, `marine wave energy transformation`, `marine current energy transformation`, `mineral oil refining process`, `combined heat and power generating process`, `power-to-fuel process`, `power-to-ammonia process` (#2305)
