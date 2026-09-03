@@ -50,6 +50,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - biomass heat unit, oil heat unit, hydrogen heat unit, (natural) gas heat unit, biomass heat plant, oil heat plant, hydrogen heat plant, gas heat plant (#2262)
 - combined cycle gas power plant, open cycle gas power plant (#2263)
 - import from CCO: material artifact (#2196)
+- simulation component, simulation hardware component, simulation component role, device under test role, controls hardware function of (#2072)
 
 ### Changed
 - change label: common reporting format to CRF sector division (#2248)
