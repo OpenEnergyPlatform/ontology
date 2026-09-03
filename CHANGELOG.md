@@ -37,6 +37,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Updated oekg annotation: decarbonisation pathway, sufficiency, policy instrument, acceptance (#2296)
 - Updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
 - Updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
+- add "has participant" axiom: hydro energy process, hydroelectric energy transformation, marine current/tidal/wave energy transformation, mineral oil refinery process, solar tracking and subclasses, combined heat and power genering process, combustion fuel transport, hydrogen transport, power-to-fuel process, power-to-ammonia-process, power-to-methane process, power-to-gas process (#2314)
+- remove "participates in" axiom from: solar tracked receiving surface, single/two axis tracked receiving surface, combined heat and power generating unit, filling station, hydrogen station (#2314)
 
 ### Removed
 
