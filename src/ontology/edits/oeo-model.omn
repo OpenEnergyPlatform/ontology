@@ -255,7 +255,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
 ObjectProperty: OEO_00000516
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between data set and the temporal resolution it uses."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation that holds between data set or qunatity value and the temporal resolution it uses."@en,
         rdfs:label "has temporal resolution"@en,
         OEO_00020426 "issue https://github.com/OpenEnergyPlatform/ontology/issues/622
 Pull request https://github.com/OpenEnergyPlatform/ontology/pull/626
@@ -265,13 +265,16 @@ fix def and add domain and range
 Pull request https://github.com/OpenEnergyPlatform/ontology/pull/972
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+expand domain for quantity value
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2259
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2312"
     
     SubPropertyOf: 
         OEO_00000514
     
     Domain: 
-        <http://purl.obolibrary.org/obo/IAO_0000100>
+        <http://purl.obolibrary.org/obo/IAO_0000100> or OEO_00000350
     
     Range: 
         OEO_00020122
@@ -573,11 +576,21 @@ ObjectProperty: OEO_00370003
 ObjectProperty: OEO_00390023
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a data item or data set and an aggregation type that indicates the method of data aggregation applied to the data set.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a data item or quantity value and an aggregation type that specifies the aggregation method by which the represented data or quantity value was derived.",
         rdfs:label "has aggregation type"@en,
         OEO_00020426 "Added
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1901
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1944
+
+define domain and range
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2259
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2312"
+    
+    Domain: 
+        <http://purl.obolibrary.org/obo/IAO_0000027> or OEO_00000350
+    
+    Range: 
+        OEO_00140068
     
     
 ObjectProperty: OEO_00390024
