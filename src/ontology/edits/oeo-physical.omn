@@ -120,6 +120,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
 
     
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000066>
+
+    
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000117>
 
     
@@ -828,22 +831,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
     
 ObjectProperty: OEO_00240025
 
-    
-ObjectProperty: OEO_00370007
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "b occurs_in c =def b is a process and c is a material entity or immaterial entity& there exists a spatiotemporal region r and b occupies_spatiotemporal_region r.& forall(t) if b exists_at t then c exists_at t & there exist spatial regions s and s’ where & b spatially_projects_onto s at t& c is occupies_spatial_region s’ at t& s is a proper_continuant_part_of s’ at t."@en,
-        rdfs:comment "Paraphrase of definition: a relation between a process and an independent continuant, in which the process takes place entirely within the independent continuant."@en,
-        rdfs:label "occurs in"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
-    
-    Domain: 
-        <http://purl.obolibrary.org/obo/BFO_0000003>
-    
-    Range: 
-        <http://purl.obolibrary.org/obo/BFO_0000004>
-    
     
 ObjectProperty: owl:topObjectProperty
 
@@ -6202,23 +6189,28 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110005,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010108,
         
             Annotations: rdfs:comment "reintroduce axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010108,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
         <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010107,
         OEO_00020461 some OEO_00000139,
-        OEO_00020462 some OEO_00010097,
-        OEO_00370007 some OEO_00010108
+        OEO_00020462 some OEO_00010097
     
     
 Class: OEO_00010099
@@ -6239,7 +6231,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110005,
@@ -6249,13 +6245,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010109,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010109,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
-        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010101,
-        OEO_00370007 some OEO_00010109
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010101
     
     
 Class: OEO_00010100
@@ -6344,7 +6341,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110005,
@@ -6354,13 +6355,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010110,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010110,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
-        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010106,
-        OEO_00370007 some OEO_00010110
+        <http://purl.obolibrary.org/obo/RO_0002427> some OEO_00010106
     
     
 Class: OEO_00010104
@@ -7052,7 +7054,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         OEO_00330007
@@ -7060,9 +7066,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00330007,
-        OEO_00370007 some OEO_00000335
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000335,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000335
     
-    
+  
 Class: OEO_00010217
 
     Annotations: 
@@ -7087,7 +7094,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
@@ -7097,13 +7108,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000269,
         <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00010219,
         <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00010220,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000269,
         OEO_00000532 some 
             (OEO_00000006
              and OEO_00000441),
-        OEO_00000533 some OEO_00010018,
-        OEO_00370007 some OEO_00000269
+        OEO_00000533 some OEO_00010018
     
     
 Class: OEO_00010218
@@ -7204,9 +7216,10 @@ replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
-add occurs in axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+add occurs in and has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
@@ -7216,8 +7229,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
-        OEO_00000533 some OEO_00010221,
-        OEO_00370007 some OEO_00330010
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00330010,
+        OEO_00000533 some OEO_00010221
     
     
 Class: OEO_00010223
@@ -8260,16 +8273,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00010127,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140033,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010318,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010318,
         OEO_00000532 some OEO_00000115,
         OEO_00000533 some OEO_00010316,
         OEO_00020461 some OEO_00000007,
-        OEO_00020462 some OEO_00000007,
-        OEO_00370007 some OEO_00010318
+        OEO_00020462 some OEO_00000007
     
     
 Class: OEO_00010316
@@ -8882,10 +8900,15 @@ Class: OEO_00010395
         <http://purl.obolibrary.org/obo/IAO_0000118> "Sonnennachführung"@de,
         rdfs:label "solar tracking"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010398
     
     
 Class: OEO_00010396
@@ -8895,10 +8918,15 @@ Class: OEO_00010396
         <http://purl.obolibrary.org/obo/IAO_0000118> "Einachs-Nachführung"@de,
         rdfs:label "single axis tracking"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        OEO_00010395
+        OEO_00010395,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010399
     
     
 Class: OEO_00010397
@@ -8908,10 +8936,14 @@ Class: OEO_00010397
         <http://purl.obolibrary.org/obo/IAO_0000118> "Zweiachs-Nachführung"@de,
         rdfs:label "two axis tracking"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        OEO_00010395
+        OEO_00010395,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010400
     
     
 Class: OEO_00010398
@@ -8920,11 +8952,11 @@ Class: OEO_00010398
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar tracked receiving surface is a solar radiation receiving surface that participates in solar tracking.",
         rdfs:label "solar tracked receiving surface"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
-    
-    EquivalentTo: 
-        OEO_00020199
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010395)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+remove equivalence axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020199
@@ -8936,11 +8968,11 @@ Class: OEO_00010399
         <http://purl.obolibrary.org/obo/IAO_0000115> "A single axis tracked receiving surface is a solar radiation receiving surface that participates in single axis tracking.",
         rdfs:label "single axis tracked receiving surface"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
-    
-    EquivalentTo: 
-        OEO_00020199
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010396)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+remove equivalence axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020199
@@ -8952,11 +8984,11 @@ Class: OEO_00010400
         <http://purl.obolibrary.org/obo/IAO_0000115> "A two axis tracked receiving surface is a solar radiation receiving surface that participates in two axis tracking.",
         rdfs:label "two axis tracked receiving surface"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
-    
-    EquivalentTo: 
-        OEO_00020199
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010397)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+remove equivalence axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020199
@@ -9408,8 +9440,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601"
     
     SubClassOf: 
         OEO_00010434,
-        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010109)
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099)
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010110)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010103)
     
     
 Class: OEO_00010438
@@ -10181,8 +10213,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044,
-        OEO_00370007 some OEO_00000448
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000448,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044
     
     
 Class: OEO_00020045
@@ -10295,10 +10327,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000032,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032,
         OEO_00020461 some OEO_00000139,
-        OEO_00020462 some OEO_00000384,
-        OEO_00370007 some OEO_00000032
+        OEO_00020462 some OEO_00000384
     
     
 Class: OEO_00020050
@@ -10606,8 +10638,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000334,
-        OEO_00370007 some OEO_00000031
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000031,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000334
     
     
 Class: OEO_00020136
@@ -12494,7 +12526,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+remove axiom to fueled power plant
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         OEO_00240014
@@ -12507,11 +12543,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000175,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175,
         <http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147,
-        OEO_00000500 some OEO_00000148,
-        OEO_00370007 some OEO_00000175
+        OEO_00000500 some OEO_00000148
     
     
 Class: OEO_00050002
@@ -12849,14 +12884,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000396,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
         OEO_00020461 some OEO_00000139,
-        OEO_00020462 some OEO_00000207,
-        OEO_00370007 some OEO_00000396
+        OEO_00020462 some OEO_00000207
     
     
 Class: OEO_00080000
@@ -13026,13 +13061,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000442,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000442,
         OEO_00020461 some OEO_00000150,
-        OEO_00020462 some OEO_00000218,
-        OEO_00370007 some OEO_00000442
+        OEO_00020462 some OEO_00000218
     
     
 Class: OEO_00110005
@@ -13053,7 +13093,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 add occurs in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110004,
@@ -13063,7 +13107,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
-        OEO_00370007 some OEO_00010085
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010085,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010085
+
     
     
 Class: OEO_00110019
@@ -14479,9 +14525,10 @@ replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
-add occurs in axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+add occurs in and has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
@@ -14493,7 +14540,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
              and (<http://purl.obolibrary.org/obo/RO_0019001> some 
                 (OEO_00000139
                  and OEO_00000207)))),
-        OEO_00370007 some OEO_00240010
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00240010,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00240010
+
     
     
 Class: OEO_00240010
@@ -14521,7 +14570,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
 
 Remove participates in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         OEO_00020102
@@ -14534,7 +14584,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
         <http://purl.obolibrary.org/obo/BFO_0000051> some 
             (OEO_00000210 or OEO_00140102),
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107,
         <http://purl.obolibrary.org/obo/RO_0000085> some 
             (OEO_00010386
              and OEO_00010387)
@@ -14646,9 +14695,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000334,
         OEO_00000500 some OEO_00240012,
-        OEO_00000500 some OEO_00240013,
-        OEO_00370007 some OEO_00000334
+        OEO_00000500 some OEO_00240013
     
     
 Class: OEO_00240015
@@ -15591,10 +15640,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00240000))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000185,
         <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00140038,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000185,
-        OEO_00000532 some OEO_00000099,
-        OEO_00370007 some OEO_00000185
+        OEO_00000532 some OEO_00000099
     
     
 Class: OEO_00310028
@@ -16496,11 +16545,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299
 
 remove energy axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00320038,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000099
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000099,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00320058
     
     
 Class: OEO_00320040
@@ -16831,16 +16885,15 @@ Class: OEO_00320058
         <http://purl.obolibrary.org/obo/IAO_0000118> "Tankstelle"@de,
         rdfs:label "filling station"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1308
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00320016,
-        <http://purl.obolibrary.org/obo/RO_0000056> some 
-            (OEO_00320039
-             and (<http://purl.obolibrary.org/obo/RO_0000057> some 
-                (OEO_00320056
-                 and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00010023))))
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00320016
     
     
 Class: OEO_00320059
@@ -16850,11 +16903,14 @@ Class: OEO_00320059
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wasserstofftankstelle"@de,
         rdfs:label "hydrogen station"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1308
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        OEO_00320058,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320060
+        OEO_00320058
     
     
 Class: OEO_00320060
@@ -16864,11 +16920,16 @@ Class: OEO_00320060
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wasserstofftransport"@de,
         rdfs:label "hydrogen transport"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1308
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00320039,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000220
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000220,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00320059
     
     
 Class: OEO_00320061
@@ -17094,9 +17155,10 @@ replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
-add occurs in axiom
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
+add occurs in and has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         (<http://purl.obolibrary.org/obo/BFO_0000117> some 
@@ -17109,8 +17171,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
-        OEO_00000532 some OEO_00000331,
-        OEO_00370007 some OEO_00330009
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00330009,
+        OEO_00000532 some OEO_00000331
     
     
 Class: OEO_00330008

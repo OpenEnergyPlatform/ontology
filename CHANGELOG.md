@@ -26,9 +26,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - import from BFO/RO: occurs in (#2305)
 
 ### Changed
-- add axiom "occurs in" as replacement for "participates in": ... (#2305)
-- add axiom "occurs in" for: `electricity generation process`, `photovoltaic energy transformation`, `fuel-powered electricity generation process`, `gas turbine process`, `power-to-methane process`, `curtailment`, `power-to-gas process`, `steam-electric process`, `hydro energy transformation`, `wind energy transformation`, `hydroelectric energy transformation`, `marine current energy transformation`, `marine tidal energy transformation`, `marine wave energy transformation`, `marine current energy transformation`, `mineral oil refining process`, `combined heat and power generating process`, `power-to-fuel process`, `power-to-ammonia process` (#2305)
-- remove axiom "participates in" for: `power plant`, `photovoltaic cell`, `fueled power plant`, `fueled power unit`, `gas turbine`, `power-to-methane system`. `power generating unit`, `power-to-gas system`, `steam turbine`, `water turbine`, `wind rotor`, `hydro power unit`, `hydro power plant`, `marine current energy converting unit`, `marine tidal energy converting unit`, `marine wave energy converting unit`, `marine current energy power plant`, `marine tidal energy power plant`, `marine wave energy power plant`, `mineral oil refinery`, `combined heat and power generating unit`, `combined heat and power plant`, `power-to-fuel system`, `power-to-ammonia system` (#2305)
+- add axiom "occurs in" for: electricity generation process, photovoltaic energy transformation, fuel-powered electricity generation process, gas turbine process, power-to-methane process, curtailment, power-to-gas process, steam-electric process, hydro energy transformation, wind energy transformation, hydroelectric energy transformation, marine current energy transformation, marine tidal energy transformation, marine wave energy transformation, marine current energy transformation, mineral oil refining process, combined heat and power generating process, power-to-fuel process, power-to-ammonia process (#2310) (#2313)
+- remove axiom "participates in" for: power plant, photovoltaic cell, fueled power plant, fueled power unit, gas turbine, power-to-methane system. power generating unit, power-to-gas system, steam turbine, water turbine, wind rotor, hydro power unit, hydro power plant, marine current energy converting unit, marine tidal energy converting unit, marine wave energy converting unit, marine current energy power plant, marine tidal energy power plant, marine wave energy power plant, mineral oil refinery, combined heat and power generating unit, combined heat and power plant, power-to-fuel system, power-to-ammonia system (#2310) (#2313)
+- change domain: has aggregation type, has temporal resolution (#2259)
 - reorder "has spatial region" as subproperty of "refers to" (#2306)
 - reorder "has scenario year" as subproperty of "refers to temporal region" (#2306)
 - update definition source: abated steam reforming hydrogen, fossil steam reforming hydrogen, renewable electrolytic hydrogen (#2277)
@@ -38,6 +38,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
 - Updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
 - correct IRI: underground power line, overhead power line, submarine power line, turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2316)
+- add "has participant" axiom: hydro energy transformation, hydroelectric energy transformation, marine current/tidal/wave energy transformation, mineral oil refining process, solar tracking and subclasses, combined heat and power generating process, combustion fuel transport, hydrogen transport, power-to-fuel process, power-to-ammonia process, power-to-methane process, power-to-gas process (#2314)
+- remove "participates in" axiom from: solar tracked receiving surface, single/two axis tracked receiving surface, combined heat and power generating unit, filling station, hydrogen station (#2314)
 
 ### Removed
 
@@ -1214,7 +1216,7 @@ We added a lot of classes that are relevant for the OEKG development, i.e. techn
 
 ### Removed
 
-- `ObjectProperty` `has_stateofmatter` (#39)
+- ObjectProperty has_stateofmatter (#39)
 - some superclasses of unsatisfiable classes and some that made the
   ontology inconsistent (#51)
 - contact and subclasses (#101)
