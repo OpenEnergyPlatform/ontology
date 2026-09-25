@@ -40,7 +40,8 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - add "has participant" axiom: hydro energy transformation, hydroelectric energy transformation, marine current/tidal/wave energy transformation, mineral oil refining process, solar tracking and subclasses, combined heat and power generating process, combustion fuel transport, hydrogen transport, power-to-fuel process, power-to-ammonia process, power-to-methane process, power-to-gas process (#2314)
 - remove "participates in" axiom from: solar tracked receiving surface, single/two axis tracked receiving surface, combined heat and power generating unit, filling station, hydrogen station (#2314)
 
-### Removed
+### Removed / Obsolete
+- has energy participant and subrelations, is energy participant of and subrelations (#2303)
 
 ## [2.13.0] - 2026-07-10
 
