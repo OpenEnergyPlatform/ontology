@@ -38,8 +38,12 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - Updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
 - Updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
 - move from artificial object to material artifact: dam, data center, electronic hardware, energy converting component, energy storage object, energy transformation unit, manufacturing plant, measurement device, reservoir, sewage plant, solar receiving object, tank, transport network component, vehicle (#2276)
+- correct IRI: underground power line, overhead power line, submarine power line, turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2316)
+- add "has participant" axiom: hydro energy transformation, hydroelectric energy transformation, marine current/tidal/wave energy transformation, mineral oil refining process, solar tracking and subclasses, combined heat and power generating process, combustion fuel transport, hydrogen transport, power-to-fuel process, power-to-ammonia process, power-to-methane process, power-to-gas process (#2314)
+- remove "participates in" axiom from: solar tracked receiving surface, single/two axis tracked receiving surface, combined heat and power generating unit, filling station, hydrogen station (#2314)
 
-### Removed
+### Removed / Obsolete
+- has energy participant and subrelations, is energy participant of and subrelations (#2303)
 
 ## [2.13.0] - 2026-07-10
 
@@ -50,6 +54,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - biomass heat unit, oil heat unit, hydrogen heat unit, (natural) gas heat unit, biomass heat plant, oil heat plant, hydrogen heat plant, gas heat plant (#2262)
 - combined cycle gas power plant, open cycle gas power plant (#2263)
 - import from CCO: material artifact (#2196)
+- simulation component, simulation hardware component, simulation component role, device under test role, controls hardware function of (#2072)
 
 ### Changed
 - change label: common reporting format to CRF sector division (#2248)
