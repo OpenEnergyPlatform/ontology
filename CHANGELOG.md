@@ -11,36 +11,32 @@ For each version, important additions, changes and removals are listed here.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/),
 and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [2.X.X] - 20XX-XX-XX
+## [2.14.0] - 2026-10-07
 
 ### Added
 - CSV, JSON, CPACS, KML, BADA, VTK, NetCDF, SO6, GeoTiff (#2251)
 - liquid hydrogen, methane pyrolytic hydrogen (#2277)
 - base load power plant, base load power plant role (#2293)
-- integrated assessment modeling scenario (#2302)
 - hydrogen supply chain (#2297)
-- "refers to" as subproperty of "is about" (#2306)
-- "refers to energy carrier" as subproperty of "refers to" (#2306)
-- "refers to technology" as subproperty of "refers to" (#2306)
-- "refers to temporal region" as subproperty of "refers to" (#2306)
+- integrated assessment modeling scenario (#2302)
 - import from BFO/RO: occurs in (#2305)
+- refers to, refers to energy carrier, refers to technology, refers to temporal region (#2306)
 
 ### Changed
-- add axiom "occurs in" for: electricity generation process, photovoltaic energy transformation, fuel-powered electricity generation process, gas turbine process, power-to-methane process, curtailment, power-to-gas process, steam-electric process, hydro energy transformation, wind energy transformation, hydroelectric energy transformation, marine current energy transformation, marine tidal energy transformation, marine wave energy transformation, marine current energy transformation, mineral oil refining process, combined heat and power generating process, power-to-fuel process, power-to-ammonia process (#2310) (#2313)
-- remove axiom "participates in" for: power plant, photovoltaic cell, fueled power plant, fueled power unit, gas turbine, power-to-methane system. power generating unit, power-to-gas system, steam turbine, water turbine, wind rotor, hydro power unit, hydro power plant, marine current energy converting unit, marine tidal energy converting unit, marine wave energy converting unit, marine current energy power plant, marine tidal energy power plant, marine wave energy power plant, mineral oil refinery, combined heat and power generating unit, combined heat and power plant, power-to-fuel system, power-to-ammonia system (#2310) (#2313)
 - change domain: has aggregation type, has temporal resolution (#2259)
-- reorder "has spatial region" as subproperty of "refers to" (#2306)
-- reorder "has scenario year" as subproperty of "refers to temporal region" (#2306)
 - update definition source: abated steam reforming hydrogen, fossil steam reforming hydrogen, renewable electrolytic hydrogen (#2277)
 - remove alternative label: solar electrolytic hydrogen (#2277)
 - add alternative labels: commercial sector (#2294)
-- Updated oekg annotation: decarbonisation pathway, sufficiency, policy instrument, acceptance (#2296)
-- Updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
-- Updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
-- correct IRI: underground power line, overhead power line, submarine power line, turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2316)
+- updated oekg annotation: decarbonisation pathway, sufficiency, policy instrument, acceptance (#2296)
+- updated oekg annotation: study report due to legal obligation, model coupling, regionalisation, model intercomparison study, scenario projection comparison (#2296)
+- updated oekg annotation: electricity grid, greenhouse gas emission, negative emission, gas grid, heating grid, electrical energy share, sector coupling, energy conversion efficiency, renewable energy share, gross electricity generation, CO2 emission, flexibility, resilience, life cycle assessment (#2296)
+- change parent class: has spatial region, has scenario year (#2306)
+- add axiom "occurs in" for: electricity generation process, photovoltaic energy transformation, fuel-powered electricity generation process, gas turbine process, power-to-methane process, curtailment, power-to-gas process, steam-electric process, hydro energy transformation, wind energy transformation, hydroelectric energy transformation, marine current energy transformation, marine tidal energy transformation, marine wave energy transformation, marine current energy transformation, mineral oil refining process, combined heat and power generating process, power-to-fuel process, power-to-ammonia process (#2310) (#2313)
+- remove axiom "participates in" for: power plant, photovoltaic cell, fueled power plant, fueled power unit, gas turbine, power-to-methane system. power generating unit, power-to-gas system, steam turbine, water turbine, wind rotor, hydro power unit, hydro power plant, marine current energy converting unit, marine tidal energy converting unit, marine wave energy converting unit, marine current energy power plant, marine tidal energy power plant, marine wave energy power plant, mineral oil refinery, combined heat and power generating unit, combined heat and power plant, power-to-fuel system, power-to-ammonia system (#2310) (#2313)
 - add "has participant" axiom: hydro energy transformation, hydroelectric energy transformation, marine current/tidal/wave energy transformation, mineral oil refining process, solar tracking and subclasses, combined heat and power generating process, combustion fuel transport, hydrogen transport, power-to-fuel process, power-to-ammonia process, power-to-methane process, power-to-gas process (#2314)
 - remove "participates in" axiom from: solar tracked receiving surface, single/two axis tracked receiving surface, combined heat and power generating unit, filling station, hydrogen station (#2314)
-- update annotations: simulation, optimisation (#2320)
+- correct IRI: underground power line, overhead power line, submarine power line, turboshaft gas turbine, turboprop gas turbine, turbofan gas turbine, turbojet gas turbine (#2316)
+- update annotations: simulation, optimisation (#2321)
 
 ### Removed / Obsolete
 - has energy participant and subrelations, is energy participant of and subrelations (#2303)
