@@ -18,7 +18,7 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - liquid hydrogen, methane pyrolytic hydrogen (#2277)
 - base load power plant, base load power plant role (#2293)
 - hydrogen supply chain (#2297)
-- integrated assessment modeling scenario (#2302)
+- integrated assessment modelling scenario (#2302)
 - import from BFO/RO: occurs in (#2305)
 - refers to, refers to energy carrier, refers to technology, refers to temporal region (#2306)
 
