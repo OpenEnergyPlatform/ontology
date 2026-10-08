@@ -1,10 +1,16 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
-PREFIX owl: <http://www.w3.org/2002/07/owl#> 
-SELECT ?classes_without_label 
-WHERE { 
-    ?classes_without_label a owl:Class . 
-    MINUS {?classes_without_label rdfs:label ?l} 
-    FILTER (!isBlank(?classes_without_label))
-    FILTER (strstarts(str(?classes_without_label), 
-                      "https://openenergyplatform.org/ontology/oeo"))
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?invalid_classes
+WHERE {
+    ?invalid_classes a owl:Class .
+    FILTER(! ISBLANK(?invalid_classes))
+    FILTER(STRSTARTS(STR(?invalid_classes), "https://openenergyplatform.org/ontology/oeo"))
+
+    OPTIONAL {
+        ?invalid_classes rdfs:label ?label .
+        FILTER(LANGMATCHES(LANG(?label), "EN"))
+    }
+    FILTER(! BOUND(?label))
 }
+ORDER BY ?invalid_classes

@@ -75,6 +75,9 @@ AnnotationProperty: dc:contributor
 AnnotationProperty: dc:description
 
     
+AnnotationProperty: owl:deprecated
+
+    
 AnnotationProperty: rdfs:comment
 
     
@@ -82,6 +85,9 @@ AnnotationProperty: rdfs:isDefinedBy
 
     
 AnnotationProperty: rdfs:label
+
+    
+AnnotationProperty: rdfs:seeAlso
 
     
 AnnotationProperty: skos:altLabel
@@ -102,6 +108,9 @@ AnnotationProperty: skos:relatedMatch
 Datatype: rdf:PlainLiteral
 
     
+Datatype: xsd:boolean
+
+    
 Datatype: xsd:decimal
 
     
@@ -118,6 +127,9 @@ ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000051>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000054>
+
+    
+ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000066>
 
     
 ObjectProperty: <http://purl.obolibrary.org/obo/BFO_0000117>
@@ -195,7 +207,9 @@ ObjectProperty: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is used in the artificial object or process.",
-        rdfs:label "has energy participant"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has energy participant",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
@@ -205,7 +219,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     Domain: 
         <http://purl.obolibrary.org/obo/BFO_0000015> or OEO_00000061
@@ -493,7 +511,11 @@ ObjectProperty: OEO_00010234
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an input of the artificial object or process.",
-        rdfs:label "has energy input"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has energy input",
+        rdfs:seeAlso "OEO_00020506 (consumes energy)
+OEO_00020462 (decreases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
@@ -503,7 +525,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00010238>
@@ -516,7 +542,11 @@ ObjectProperty: OEO_00010235
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an artificial object or a process and an energy, where the energy is an output of the artificial object or process.",
-        rdfs:label "has energy output"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has energy output",
+        rdfs:seeAlso "OEO_00020507 (produces energy)
+OEO_00020461 (increases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
@@ -526,7 +556,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00010238>
@@ -551,7 +585,9 @@ ObjectProperty: OEO_00020182
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is used in the artificial object or process.",
-        rdfs:label "is energy participant of"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete is energy participant of",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
 
@@ -561,7 +597,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     Domain: 
         OEO_00000150
@@ -577,9 +617,14 @@ ObjectProperty: OEO_00020183
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an input of the artificial object or process.",
-        rdfs:label "is energy input to"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete is energy input to",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00020182
@@ -589,9 +634,15 @@ ObjectProperty: OEO_00020184
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between an energy and an artificial object or a process, where the energy is an output of the artificial object or process.",
-        rdfs:label "is energy output of"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete is energy output of",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1057
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1065
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00020182
@@ -601,9 +652,17 @@ ObjectProperty: OEO_00020257
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is required as major energy input for p.",
-        rdfs:label "has main energy input"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has main energy input",
+        rdfs:seeAlso "OEO_00020506 (consumes energy)
+OEO_00020462 (decreases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00010234
@@ -619,9 +678,17 @@ ObjectProperty: OEO_00020258
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is required as input for p, but not as main input.",
-        rdfs:label "has auxilary energy input"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has auxilary energy input",
+        rdfs:seeAlso "OEO_00020506 (consumes energy)
+OEO_00020462 (decreases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00010234
@@ -637,9 +704,17 @@ ObjectProperty: OEO_00020259
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is the intended energy output of p, e.g. for further usage.",
-        rdfs:label "has main energy output"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has main energy output",
+        rdfs:seeAlso "OEO_00020507 (produces energy)
+OEO_00020461 (increases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00010235
@@ -655,9 +730,17 @@ ObjectProperty: OEO_00020260
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a process p and a kind of energy e, where e is an unintended, unwanted or unevitable output of p, e.g. waste heat.",
-        rdfs:label "has waste energy output"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has waste energy output",
+        rdfs:seeAlso "OEO_00020507 (produces energy)
+OEO_00020461 (increases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1530
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1564
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00010235
@@ -716,6 +799,63 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2232"
         OEO_00000150
     
     
+ObjectProperty: OEO_00020505
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, in which m possesses a disposition d to change energy, this disposition is realized in a process p, and p has as an occurrent part an energy-decrease or energy-increase process q that occurs in m and regulates e.",
+        rdfs:label "changes energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    
+ObjectProperty: OEO_00020506
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to consume / decrease energy which is realized in a process p, which has an energy decrease process as occurent part which negatively regulates energy e and which occurs in m.",
+        rdfs:label "consumes energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubPropertyOf: 
+        OEO_00020505
+    
+    SubPropertyChain: 
+        OEO_00020511 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020462
+    
+    
+ObjectProperty: OEO_00020507
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a material entity m and an energy e, where m possesses a disposition d to produce / increase energy which is realized in a process p, which has an energy increase process as occurent part which positively regulates energy e and which occurs in m.",
+        rdfs:label "produces energy"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubPropertyOf: 
+        OEO_00020505
+    
+    SubPropertyChain: 
+        OEO_00020510 o <http://purl.obolibrary.org/obo/BFO_0000054> o OEO_00020461
+    
+    
+ObjectProperty: OEO_00020510
+
+    Annotations: 
+        rdfs:label "has energy production dispositon"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
+ObjectProperty: OEO_00020511
+
+    Annotations: 
+        rdfs:label "has energy consumption disposition"@en
+    
+    SubPropertyOf: 
+        <http://purl.obolibrary.org/obo/RO_0000091>
+    
+    
 ObjectProperty: OEO_00040010
 
     
@@ -729,13 +869,21 @@ ObjectProperty: OEO_00140175
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "p has gross output c iff: p has energy output c, and c is the total amount of energy generated during the process.",
-        rdfs:label "has gross output"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has gross output",
+        rdfs:seeAlso "OEO_00020507 (produces energy)
+OEO_00020461 (increases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838
 
 make subproperty of 'has energy output' and add domain:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00010235
@@ -751,13 +899,21 @@ ObjectProperty: OEO_00140176
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "p has net output c iff: p has energy output c, and c is the amount of energy delivered to the consumer or fed into a supply grid.",
-        rdfs:label "has net output"@en,
+        rdfs:comment "The usage of this relation has led to unintended semantic dependencies.",
+        rdfs:label "obsolete has net output",
+        rdfs:seeAlso "OEO_00020507 (produces energy)
+OEO_00020461 (increases energy)",
+        owl:deprecated true,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/394
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/838
 
 make subproperty of 'has energy output' and add domain:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+make obsolete
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2303"
     
     SubPropertyOf: 
         OEO_00010235
@@ -782,6 +938,9 @@ Class: <http://purl.obolibrary.org/obo/BFO_0000002>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000003>
+
+    
+Class: <http://purl.obolibrary.org/obo/BFO_0000004>
 
     
 Class: <http://purl.obolibrary.org/obo/BFO_0000006>
@@ -929,97 +1088,6 @@ Class: <http://purl.obolibrary.org/obo/UO_1000114>
     
 Class: <http://purl.obolibrary.org/obo/UO_1000223>
 
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00080000>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A turboshaft gas turbine is a type of gas turbine that is optimized to produce shaft power."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "turboshaft engine"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142",
-        rdfs:label "turboshaft gas turbine"@en
-    
-    SubClassOf: 
-        OEO_00000185
-    
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00080001>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A turboprop gas turbine is a gas turbine that drives an aircraft propeller. It works like a turboshaft turbine but is additionally able to produce jet thrust."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "turboprop engine"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142",
-        rdfs:label "turboprop gas turbine"@en
-    
-    SubClassOf: 
-        OEO_00000185
-    
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00080002>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbofan gas turbine is a gas turbine that produces jet thrust through its core engine and additional thrust through the connected fan."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "turbofan egine"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142",
-        rdfs:label "turbofan gas turbine"@en
-    
-    SubClassOf: 
-        OEO_00000185
-    
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00080003>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbojet gas turbine is a gas turbine which produces only jet thrust."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "turbojet engine"@en,
-        <http://purl.obolibrary.org/obo/IAO_0000233> "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142",
-        rdfs:label "turbojet gas turbine"@en
-    
-    SubClassOf: 
-        OEO_00000185
-    
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00440000>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An overhead power line is a power line that is installed above the ground."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "conductor"@en,
-        rdfs:label "overhead power line"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
-    
-    SubClassOf: 
-        OEO_00000253
-    
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00440001>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A submarine power line is a power line that is installed below the sea surface."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "undersea cable"@en,
-        rdfs:label "submarine power line"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
-    
-    SubClassOf: 
-        OEO_00000253
-    
-    
-Class: <https://openenergyplatform.org/ontology/oeo/oeo-physical/OEO_00440002>
-
-    Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground power line is a power line that is installed below the ground surface."@en,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "underground cable"@en,
-        rdfs:label "underground power line"@en,
-        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"@en
-    
-    SubClassOf: 
-        OEO_00000253
-    
     
 Class: <https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01013>
 
@@ -1601,7 +1669,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     EquivalentTo: 
         OEO_00020102
@@ -1611,8 +1683,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
     SubClassOf: 
         OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240014
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000334
     
     
 Class: OEO_00000032
@@ -1638,15 +1709,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1220
 
 Remove has energy input/output axioms:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00000188,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020048
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199
     
     
 Class: OEO_00000033
@@ -2077,12 +2148,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/801
 
 remove has energy input/output axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add new axioms
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
     
     SubClassOf: 
         OEO_00000159,
         <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140037,
-        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010322,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020508,
+        <http://purl.obolibrary.org/obo/RO_0000091> some OEO_00020509,
+        OEO_00020506 some OEO_00000139,
+        OEO_00020507 some OEO_00000139
     
     
 Class: OEO_00000071
@@ -2588,7 +2667,7 @@ Class: OEO_00000143
         <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity grid is a supply grid that transfers electrical energy / electricity."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Stromnetz"@de,
         rdfs:label "electricity grid"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/138
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/165
 
@@ -2615,7 +2694,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2073
 
 Added 'part of' some 'power system' axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1960
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2042
+
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00000200,
@@ -2869,14 +2952,17 @@ Class: OEO_00000174
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fueled power plant is a power plant that has fueled power units as parts.",
         rdfs:label "fueled power plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/292
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     EquivalentTo: 
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000175
     
     SubClassOf: 
-        OEO_00000031,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
+        OEO_00000031
     
     
 Class: OEO_00000175
@@ -2885,15 +2971,18 @@ Class: OEO_00000175
         <http://purl.obolibrary.org/obo/IAO_0000115> "A fueled power unit is a power generating unit that uses fuel.",
         rdfs:label "fueled power unit"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/292
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/306
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     EquivalentTo: 
         OEO_00000334
          and (OEO_00000503 some OEO_00000173)
     
     SubClassOf: 
-        OEO_00000334,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050001
+        OEO_00000334
     
     
 Class: OEO_00000181
@@ -2991,18 +3080,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/300
 
 change produces energy axiom to 'has energy output':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00000425,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
-issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00310027,
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/736
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766
@@ -3162,7 +3247,7 @@ Class: OEO_00000199
         <http://purl.obolibrary.org/obo/IAO_0000115> "A greenhouse gas emission is an emission that releases a greenhouse gas.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Treibhausgasemission"@de,
         rdfs:label "greenhouse gas emission"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/406
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/410
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
@@ -3186,7 +3271,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
 
 add subclassof axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2138
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2143"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2143
+
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     EquivalentTo: 
         OEO_00000147
@@ -3761,11 +3850,14 @@ Class: OEO_00000269
         rdfs:label "power-to-methane system"@en,
         OEO_00020426 "Improve definition and classification:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1262
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1348
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
-        OEO_00000335,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010217
+        OEO_00000335
     
     
 Class: OEO_00000282
@@ -3862,12 +3954,15 @@ Class: OEO_00000293
         <http://purl.obolibrary.org/obo/IAO_0000115> "Negative emission is the process of absorbing a substance, usually a pollutant that was emitted before.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "negative Emission"@de,
         rdfs:label "negative emission"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/56
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/234
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -4312,7 +4407,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 
 remove has energy output axiom 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"@en
     
     EquivalentTo: 
         OEO_00020102
@@ -4321,14 +4420,13 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"@en
     SubClassOf: 
         OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
     
     
 Class: OEO_00000335
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is a power-to-fuel system that implements a power-to-gas process. A water electrolyser is participating in the power-to-gas process."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-gas system is a power-to-fuel system that implements a power-to-gas process. A power-to-gas system has a water electrolyser as part."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "P2G",
         <http://purl.obolibrary.org/obo/IAO_0000118> "PtG",
         <http://purl.obolibrary.org/obo/IAO_0000118> "power to gas",
@@ -4339,12 +4437,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/954
 
 created new parent class 'power-to-fuel system'
 https://github.com/OpenEnergyPlatform/ontology/issues/1477
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+Remove participates in axiom and update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00330009,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010216
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
     
     
 Class: OEO_00000345
@@ -4666,14 +4767,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
 Remove has energy input/output:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00000425,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00050020,
         
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
@@ -4920,14 +5021,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
 remove has energy input/output axioms:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
-        OEO_00000425,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110004
+        OEO_00000425
     
     
 Class: OEO_00000446
@@ -5002,14 +5103,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
 
 Remove has energy input/output:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00000425,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020043,
         <http://purl.obolibrary.org/obo/RO_0000086> some OEO_00020144
     
     
@@ -5931,15 +6032,15 @@ Class: OEO_00010085
         <http://purl.obolibrary.org/obo/IAO_0000115> "A hydro power unit is a power generating unit that uses hydro energy."@en,
         rdfs:label "hydro power unit"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00000334,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000442,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/761
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/782"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005,
         OEO_00000503 some OEO_00000441
     
     
@@ -5950,12 +6051,15 @@ Class: OEO_00010086
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wasserkraftwerk"@de,
         rdfs:label "hydro power plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/78
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/758
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00000031,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010085,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00110005,
         OEO_00000503 some OEO_00000441
     
     
@@ -6177,15 +6281,25 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1044
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110005,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010108,
         
             Annotations: rdfs:comment "reintroduce axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
 pull-request: https://github.com/OpenEnergyPlatform/ontology/pull/1137"
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010108,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
@@ -6209,7 +6323,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110005,
@@ -6219,7 +6341,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010109,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010109,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
@@ -6309,7 +6433,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110005,
@@ -6319,7 +6451,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010110,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010105,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010110,
         
             Annotations: OEO_00020426 "replace 'has input' with 'causally downstream of or within'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1023
@@ -6399,11 +6533,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437
 
 remove 'has energy input' axiom:
 issue:https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00010085,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010098,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010388
     
     
@@ -6425,11 +6562,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437
 
 Remove has energy input:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2910
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00010085,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010388
     
     
@@ -6437,7 +6577,7 @@ Class: OEO_00010110
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A marine wave energy converting unit is a hydro power unit that uses marine wave energy."@en,
-        rdfs:label "marine wave energy converting unit",
+        rdfs:label "marine wave energy converting unit"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
 
@@ -6451,11 +6591,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1437
 
 Remove has energy input:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2910
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00010085,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010103,
         <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010388
     
     
@@ -6466,12 +6609,15 @@ Class: OEO_00010111
         <http://purl.obolibrary.org/obo/IAO_0000118> "Meeresströmungskraftwerk"@de,
         rdfs:label "marine current energy power plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00010086,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010108,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010098
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010108
     
     
 Class: OEO_00010112
@@ -6480,12 +6626,15 @@ Class: OEO_00010112
         <http://purl.obolibrary.org/obo/IAO_0000115> "A marine tidal energy power plant is a power plant that has marine tidal energy units as parts.",
         rdfs:label "marine tidal energy power plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00010086,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010109,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010109
     
     
 Class: OEO_00010113
@@ -6495,12 +6644,15 @@ Class: OEO_00010113
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wellenkraftwerk"@de,
         rdfs:label "marine wave energy power plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/762
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/806
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00010086,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010110,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010103
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010110
     
     
 Class: OEO_00010114
@@ -6994,16 +7146,26 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1483
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         OEO_00330007
          and (OEO_00000533 some OEO_00010155)
     
     SubClassOf: 
-        OEO_00330007
+        OEO_00330007,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000335,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000335
     
-    
+  
 Class: OEO_00010217
 
     Annotations: 
@@ -7024,7 +7186,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1483
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
@@ -7034,8 +7204,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000269,
         <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00010219,
         <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00010220,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000269,
         OEO_00000532 some 
             (OEO_00000006
              and OEO_00000441),
@@ -7138,7 +7310,12 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1483
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in and has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
@@ -7148,6 +7325,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000007))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00330010,
         OEO_00000533 some OEO_00010221
     
     
@@ -8187,11 +8365,21 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 
 simplify energy axioms with 'increases energy' and 'decreases energy':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00010127,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00140033,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010318,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010318,
         OEO_00000532 some OEO_00000115,
         OEO_00000533 some OEO_00010316,
         OEO_00020461 some OEO_00000007,
@@ -8252,11 +8440,14 @@ Class: OEO_00010318
         <http://purl.obolibrary.org/obo/IAO_0000118> "Mineralölraffinerie"@de,
         rdfs:label "mineral oil refinery"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1318
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1331
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010315,
         OEO_00000503 some OEO_00000115
     
     
@@ -8538,6 +8729,7 @@ Class: OEO_00010380
         <http://purl.obolibrary.org/obo/IAO_0000118> "erneuerbarer Elektrolysewasserstoff"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "green hydrogen"@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "grüner Wasserstoff"@de,
+        rdfs:comment "The label \"green hydrogen\" is widely used for renewable electrolytic hydrogen, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
         rdfs:label "renewable electrolytic hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442
@@ -8583,6 +8775,7 @@ Class: OEO_00010382
         <http://purl.obolibrary.org/obo/IAO_0000115> "Fossil steam reforming hydrogen is hydrogen that is produced from a fossil combustion fuel in a steam reforming process which is not followed by a carbon capture and storage process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "grauer Wasserstoff"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "grey hydrogen"@en,
+        rdfs:comment "The label \"grey hydrogen\" is widely used for fossil steam reforming hydrogen, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
         rdfs:label "fossil steam reforming hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442
@@ -8612,6 +8805,7 @@ Class: OEO_00010383
         <http://purl.obolibrary.org/obo/IAO_0000118> "CCS steam reforming hydrogen",
         <http://purl.obolibrary.org/obo/IAO_0000118> "blauer Wasserstoff"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "blue hydrogen"@en,
+        rdfs:comment "The label \"blue hydrogen\" is widely used for abated steam reforming hydrogen, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
         rdfs:label "abated steam reforming hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1013
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442
@@ -8802,10 +8996,15 @@ Class: OEO_00010395
         <http://purl.obolibrary.org/obo/IAO_0000118> "Sonnennachführung"@de,
         rdfs:label "solar tracking"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        <http://purl.obolibrary.org/obo/BFO_0000015>
+        <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010398
     
     
 Class: OEO_00010396
@@ -8815,10 +9014,15 @@ Class: OEO_00010396
         <http://purl.obolibrary.org/obo/IAO_0000118> "Einachs-Nachführung"@de,
         rdfs:label "single axis tracking"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        OEO_00010395
+        OEO_00010395,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010399
     
     
 Class: OEO_00010397
@@ -8828,10 +9032,14 @@ Class: OEO_00010397
         <http://purl.obolibrary.org/obo/IAO_0000118> "Zweiachs-Nachführung"@de,
         rdfs:label "two axis tracking"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        OEO_00010395
+        OEO_00010395,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010400
     
     
 Class: OEO_00010398
@@ -8840,11 +9048,11 @@ Class: OEO_00010398
         <http://purl.obolibrary.org/obo/IAO_0000115> "A solar tracked receiving surface is a solar radiation receiving surface that participates in solar tracking.",
         rdfs:label "solar tracked receiving surface"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
-    
-    EquivalentTo: 
-        OEO_00020199
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010395)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+remove equivalence axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020199
@@ -8856,11 +9064,11 @@ Class: OEO_00010399
         <http://purl.obolibrary.org/obo/IAO_0000115> "A single axis tracked receiving surface is a solar radiation receiving surface that participates in single axis tracking.",
         rdfs:label "single axis tracked receiving surface"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
-    
-    EquivalentTo: 
-        OEO_00020199
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010396)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+remove equivalence axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020199
@@ -8872,11 +9080,11 @@ Class: OEO_00010400
         <http://purl.obolibrary.org/obo/IAO_0000115> "A two axis tracked receiving surface is a solar radiation receiving surface that participates in two axis tracking.",
         rdfs:label "two axis tracked receiving surface"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1076
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448"
-    
-    EquivalentTo: 
-        OEO_00020199
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010397)
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1448
+
+remove equivalence axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020199
@@ -9037,8 +9245,6 @@ Class: OEO_00010418
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Solar electrolytic hydrogen is electrolytic hydrogen that is produced with solar electrical energy.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "gelber Wasserstoff"@de,
-        <http://purl.obolibrary.org/obo/IAO_0000118> "yellow hydrogen"@en,
         rdfs:label "solar electrolytic hydrogen"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1490
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1559
@@ -9330,8 +9536,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1601"
     
     SubClassOf: 
         OEO_00010434,
-        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010109)
-         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010099)
+        (<http://purl.obolibrary.org/obo/IAO_0000136> some OEO_00010110)
+         and (<http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010103)
     
     
 Class: OEO_00010438
@@ -9854,12 +10060,15 @@ Class: OEO_00020004
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas grid is a supply grid that distributes gaseous fuel, e.g. methane.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "Gasnetz"@de,
         rdfs:label "gas grid"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
 pull request: https://github.com/OpenEnergyPlatform/ontology/385
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00000200,
@@ -9872,12 +10081,15 @@ Class: OEO_00020005
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heating grid is a supply grid that distributes thermal energy via circulating steam or liquids."@en,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wärmenetz"@de,
         rdfs:label "heating grid"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/36
 pull request: https://github.com/OpenEnergyPlatform/ontology/385
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00000200,
@@ -10083,7 +10295,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/702
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
@@ -10093,6 +10309,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000448,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000044
     
     
@@ -10198,10 +10415,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 simplify energy axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000032,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000032,
         OEO_00020461 some OEO_00000139,
         OEO_00020462 some OEO_00000384
@@ -10501,12 +10723,18 @@ Class: OEO_00020107
         rdfs:label "curtailment"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/888
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/897
+
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000031,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000334
     
     
@@ -11071,12 +11299,15 @@ Class: OEO_00020254
         <http://purl.obolibrary.org/obo/IAO_0000115> "Electrical energy share is a process attribute that indicates the fraction of electrical energy related to the total energy of an energy generation or consumption process.",
         <http://purl.obolibrary.org/obo/IAO_0000118> "degree of electrification",
         rdfs:label "electrical energy share"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1434
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00030019,
@@ -11471,7 +11702,7 @@ Class: OEO_00020407
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A sector coupling technology is a technology that intends to connect processes from the electricity, heat, mobility or industrial sectors, as well as their infrastructures.",
         <http://purl.obolibrary.org/obo/IAO_0000600> "The aim of sector coupling is usually an optimisation of an energy system (e.g. with respect to cost, environmental impact, sustainability and decarbonisation) by establishing energy flows across sectorial borders",
-        rdfs:label "sector coupling technology",
+        rdfs:label "sector coupling technology"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1521
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842"
     
@@ -11487,13 +11718,16 @@ Class: OEO_00020408
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Sector coupling is a process of connecting processes from the electricity, heat, mobility or industrial sectors as well as their infrastructures.",
         <http://purl.obolibrary.org/obo/IAO_0000600> "The aim of sector coupling is usually an optimisation of an energy system (e.g. with respect to cost, environmental impact, sustainability and decarbonisation) by establishing energy flows across sectorial borders",
-        rdfs:label "sector coupling",
-        OEO_00020425 "study descriptor",
+        rdfs:label "sector coupling"@en,
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1521
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1842
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -11503,7 +11737,7 @@ Class: OEO_00020410
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "System robustness is a disposition of a system that is designed or evolved in such a way as to be resistant to total failure despite partial damage or external changes.",
-        rdfs:label "system robustness",
+        rdfs:label "system robustness"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1683
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1843"
     
@@ -11923,13 +12157,113 @@ Class: OEO_00020504
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "A gas heat plant is a heat plant that has gas heat units as parts.",
-        rdfs:label "gas heat plant"@de,
+        rdfs:label "gas heat plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2159
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2262"
     
     SubClassOf: 
         OEO_00310011,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020500
+    
+    
+Class: OEO_00020508
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy production disposition is a disposition of a material entity m to increase some kind of energy e. The disposition is realized in a process p that has an energy increase process as occurent part, positively regulating energy e."@en,
+        rdfs:label "energy production disposition"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020509
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy consumption disposition is a disposition of a material entity m to decrease some kind of energy e. The disposition is realized in a process p that has an energy decrease process as occurent part, negatively regulating energy e."@en,
+        rdfs:label "energy consumption disposition"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000052> some <http://purl.obolibrary.org/obo/BFO_0000040>
+    
+    
+Class: OEO_00020512
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Liquid hydrogen is hydrogen that has been brought to a liquid state of matter at -253°C.",
+        rdfs:label "liquid hydrogen"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2274
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2277"
+    
+    EquivalentTo: 
+        OEO_00000220
+         and (OEO_00000531 value OEO_00000256)
+    
+    SubClassOf: 
+        OEO_00000220
+    
+    
+Class: OEO_00020513
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "Methane pyrolytic hydrogen is synthetic hydrogen that is produced from pyrolysis of methane and solid CO2 storage.",
+        <http://purl.obolibrary.org/obo/IAO_0000118> "turquouise hydrogen"@en,
+        rdfs:comment "The label \"turquoise hydrogen\" is widely used for hydrogen from pyrolysis of methane, e.g. by the International Renewable Energy Agency (IRENA). See: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2020/Nov/IRENA_Green_Hydrogen_breakthrough_2021.pdf",
+        rdfs:label "methane pyrolytic hydrogen"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2274
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2277"
+    
+    SubClassOf: 
+        OEO_00000220,
+        OEO_00000530 some OEO_00030005
+    
+    
+Class: OEO_00020514
+
+    Annotations: 
+        rdfs:comment "A base load power plant role is a role of a powerplant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. Usually coal power plants and nuclear power plants bear that role.",
+        rdfs:label "base load power plant role"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000023>
+    
+    
+Class: OEO_00020515
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A base load power plant is a power plant that is intended or operated to provide a relatively constant electrical power output over extended periods to meet the continuously occurring minimum electricity demand of an electricity system. It possesses the base load power plant role.",
+        rdfs:label "base load power plant"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2292
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2293"
+    
+    EquivalentTo: 
+        OEO_00000031
+         and (<http://purl.obolibrary.org/obo/RO_0000087> some OEO_00020514)
+    
+    SubClassOf: 
+        OEO_00000031
+    
+    
+Class: OEO_00020516
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A hydrogen supply chain is a process that comprises the entirety of all subprocesses (production, conditioning, storage, transport, and distribution) that are necessary to provide hydrogen from its generation to its final use.",
+        rdfs:label "hydrogen supply chain"@en,
+        OEO_00020425 "study descriptor tag",
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2290
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2297"
+    
+    SubClassOf: 
+        <http://purl.obolibrary.org/obo/BFO_0000015>
     
     
 Class: OEO_00030000
@@ -12284,7 +12618,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+remove axiom to fueled power plant
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         OEO_00240014
@@ -12297,7 +12639,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000174,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000175,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000175,
         <http://purl.obolibrary.org/obo/RO_0002418> some OEO_00000147,
         OEO_00000500 some OEO_00000148
@@ -12630,10 +12972,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000396,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000010,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000396,
         
@@ -12641,6 +12988,74 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/766"
         OEO_00020461 some OEO_00000139,
         OEO_00020462 some OEO_00000207
+    
+    
+Class: OEO_00080000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A turboshaft gas turbine is a type of gas turbine that is optimized to produce shaft power."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "turboshaft engine"@en,
+        rdfs:label "turboshaft gas turbine"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"
+    
+    SubClassOf: 
+        OEO_00000185
+    
+    
+Class: OEO_00080001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A turboprop gas turbine is a gas turbine that drives an aircraft propeller. It works like a turboshaft turbine but is additionally able to produce jet thrust."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "turboprop engine"@en,
+        rdfs:label "turboprop gas turbine"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"
+    
+    SubClassOf: 
+        OEO_00000185
+    
+    
+Class: OEO_00080002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbofan gas turbine is a gas turbine that produces jet thrust through its core engine and additional thrust through the connected fan."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "turbofan egine"@en,
+        rdfs:label "turbofan gas turbine"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"
+    
+    SubClassOf: 
+        OEO_00000185
+    
+    
+Class: OEO_00080003
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A turbojet gas turbine is a gas turbine which produces only jet thrust."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "turbojet engine"@en,
+        rdfs:label "turbojet gas turbine"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2132
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2142
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"
+    
+    SubClassOf: 
+        OEO_00000185
     
     
 Class: OEO_00090000
@@ -12738,10 +13153,20 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 simplify energy axioms with 'increases energy' and 'decreases energy':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000442,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000442,
         OEO_00020461 some OEO_00000150,
         OEO_00020462 some OEO_00000218
     
@@ -12760,7 +13185,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1041
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00110004,
@@ -12769,7 +13202,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
              and (<http://purl.obolibrary.org/obo/RO_0019002> some OEO_00000218)))
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
-             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139)))
+             and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00000139))),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00010085,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00010085
+
     
     
 Class: OEO_00110019
@@ -13105,7 +13541,7 @@ Class: OEO_00140049
         <http://purl.obolibrary.org/obo/IAO_0000118> "Energieumwandlungseffizienz"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wirkungsgrad"@de,
         rdfs:label "energy conversion efficiency"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/434
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/591
 
@@ -13117,7 +13553,10 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00030019,
@@ -13743,7 +14182,7 @@ Class: OEO_00140133
         <http://purl.obolibrary.org/obo/IAO_0000118> "erneuerbarer Anteil"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "renewables share"@en,
         rdfs:label "renewable energy share"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/187
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/780
 axiom to RE share value and alternative label
@@ -13751,7 +14190,10 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1434
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1561
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00030019,
@@ -13807,7 +14249,7 @@ Class: OEO_00140146
         <http://purl.obolibrary.org/obo/IAO_0000118> "Energiebedarf"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "Energienachfrage"@de,
         rdfs:label "energy demand"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/794
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/796
 
@@ -13817,7 +14259,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+    
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00140040
@@ -14173,7 +14619,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1562
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in and has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020003,
@@ -14184,7 +14635,10 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some 
                 (OEO_00000139
-                 and OEO_00000207))))
+                 and OEO_00000207)))),
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00240010,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00240010
+
     
     
 Class: OEO_00240010
@@ -14208,7 +14662,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360
 
 Remove has energy output:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         OEO_00020102
@@ -14221,8 +14680,6 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
         <http://purl.obolibrary.org/obo/BFO_0000051> some 
             (OEO_00000210 or OEO_00140102),
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020107,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009,
         <http://purl.obolibrary.org/obo/RO_0000085> some 
             (OEO_00010386
              and OEO_00010387)
@@ -14239,14 +14696,17 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/923
 
 change as a subclass of energy transformation unit:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000144,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00240009
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00240010
     
     
 Class: OEO_00240012
@@ -14256,12 +14716,15 @@ Class: OEO_00240012
         <http://purl.obolibrary.org/obo/IAO_0000118> "Bruttostromerzeugung"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "gross electricity production"@en,
         rdfs:label "gross electricity generation"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/917
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/932
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         OEO_00030019,
@@ -14317,13 +14780,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
 
 simplify equivalence axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     EquivalentTo: 
         OEO_00020461 some OEO_00000139
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000334,
         OEO_00000500 some OEO_00240012,
         OEO_00000500 some OEO_00240013
     
@@ -14674,7 +15142,7 @@ Class: OEO_00260007
         <http://purl.obolibrary.org/obo/IAO_0000118> "CO2-Emission"@de,
         <http://purl.obolibrary.org/obo/IAO_0000118> "carbon dioxide emission"@en,
         rdfs:label "CO2 emission"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/866
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1253/
 
@@ -14686,7 +15154,10 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"@en
     
     EquivalentTo: 
         OEO_00000147
@@ -15251,7 +15722,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1362
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020003,
@@ -15261,6 +15736,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
          and (<http://purl.obolibrary.org/obo/BFO_0000117> some 
             (<https://raw.githubusercontent.com/stap-m/midlevel-energy-ontology/main/ontology/src/midlevel-energy.owl/MENO_01014>
              and (<http://purl.obolibrary.org/obo/RO_0019001> some OEO_00240000))),
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00000185,
         <http://purl.obolibrary.org/obo/BFO_0000117> some OEO_00140038,
         <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000185,
         OEO_00000532 some OEO_00000099
@@ -16165,11 +16641,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1299
 
 remove energy axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00320038,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000099
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000099,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00320058
     
     
 Class: OEO_00320040
@@ -16500,16 +16981,15 @@ Class: OEO_00320058
         <http://purl.obolibrary.org/obo/IAO_0000118> "Tankstelle"@de,
         rdfs:label "filling station"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1308
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00320016,
-        <http://purl.obolibrary.org/obo/RO_0000056> some 
-            (OEO_00320039
-             and (<http://purl.obolibrary.org/obo/RO_0000057> some 
-                (OEO_00320056
-                 and (<http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00010023))))
+        <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00320016
     
     
 Class: OEO_00320059
@@ -16519,11 +16999,14 @@ Class: OEO_00320059
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wasserstofftankstelle"@de,
         rdfs:label "hydrogen station"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1308
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
-        OEO_00320058,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00320060
+        OEO_00320058
     
     
 Class: OEO_00320060
@@ -16533,11 +17016,16 @@ Class: OEO_00320060
         <http://purl.obolibrary.org/obo/IAO_0000118> "Wasserstofftransport"@de,
         rdfs:label "hydrogen transport"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1308
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1357
+
+add has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     SubClassOf: 
         OEO_00320039,
-        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000220
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00000220,
+        <http://purl.obolibrary.org/obo/RO_0000057> some OEO_00320059
     
     
 Class: OEO_00320061
@@ -16598,14 +17086,19 @@ Class: OEO_00320064
 
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Charging is an electrical energy transfer where the transferred energy is stored in a battery.",
-        <http://purl.obolibrary.org/obo/IAO_0000118> "laden"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "Ladeprozess"@de,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "battery charging process"@en,
         rdfs:label "charging"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1368
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1394
 
 update axioms to energies
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+rework axioms to battery and energy
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2246
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2270"
     
     SubClassOf: 
         OEO_00020003,
@@ -16756,7 +17249,12 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483
 
 replace energy-participant axioms
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2053
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120
+
+add occurs in and has participant axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2314"
     
     EquivalentTo: 
         (<http://purl.obolibrary.org/obo/BFO_0000117> some 
@@ -16769,6 +17267,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
     
     SubClassOf: 
         OEO_00020003,
+        <http://purl.obolibrary.org/obo/BFO_0000066> some OEO_00330009,
         OEO_00000532 some OEO_00000331
     
     
@@ -16795,15 +17294,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2120"
 Class: OEO_00330009
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel system is an energy transformation unit that implements a power-to-fuel process. A water electrolyser is participating in the power-to-fuel process.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-fuel system is an energy transformation unit that implements a power-to-fuel process. A power-to-fuel system has a water electrolyser as part.",
         rdfs:label "power-to-fuel system"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+Remove participates in axiom and update definition
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00330007
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00010021
     
     
 Class: OEO_00330010
@@ -16812,11 +17314,14 @@ Class: OEO_00330010
         <http://purl.obolibrary.org/obo/IAO_0000115> "A power-to-ammonia system is a power-to-gas system that implements the power-to-ammonia process.",
         rdfs:label "power-to-ammonia system"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1477
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1483
+
+Remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"
     
     SubClassOf: 
-        OEO_00000335,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010222
+        OEO_00000335
     
     
 Class: OEO_00330012
@@ -16994,16 +17499,18 @@ Class: OEO_00360007
     Annotations: 
         <http://purl.obolibrary.org/obo/IAO_0000115> "Flexibility is a disposition of an energy system that is able to balance energy by adjusting energy supply and energy demand."@en,
         rdfs:label "flexibility"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1549
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1717
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
-
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
@@ -17100,16 +17607,18 @@ Class: OEO_00360015
         <http://purl.obolibrary.org/obo/IAO_0000115> "Resilience is a disposition of a system that represents the capacity of a system to absorb disturbance and reorganize so as to retain essentially the same function, structure, and feedbacks."@en,
         <http://purl.obolibrary.org/obo/IAO_0000119> "B. Walker, C. S. Holling, S. R. Carpenter, and A. Kinzig, “Resilience, adaptability and transformability in social–ecological systems,” Ecol. Soc., vol. 9, no. 2, 2004, Art. no. 5",
         rdfs:label "resilience"@en,
-        OEO_00020425 "study descriptor",
+        OEO_00020425 "study descriptor tag",
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1550
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1744
 add oekg annotation
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1529
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1897
-
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928
+update oekg annotation
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2295
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2296"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000016>,
@@ -17415,6 +17924,57 @@ Class: OEO_00420004
         rdfs:label "power line for vehicles"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191"
+    
+    SubClassOf: 
+        OEO_00000253
+    
+    
+Class: OEO_00440000
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An overhead power line is a power line that is installed above the ground."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "conductor"@en,
+        rdfs:label "overhead power line"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"
+    
+    SubClassOf: 
+        OEO_00000253
+    
+    
+Class: OEO_00440001
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A submarine power line is a power line that is installed below the sea surface."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "undersea cable"@en,
+        rdfs:label "submarine power line"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"
+    
+    SubClassOf: 
+        OEO_00000253
+    
+    
+Class: OEO_00440002
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An underground power line is a power line that is installed below the ground surface."@en,
+        <http://purl.obolibrary.org/obo/IAO_0000118> "underground cable"@en,
+        rdfs:label "underground power line"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2154
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2191
+
+correct IRI
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2315
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2316"@en
     
     SubClassOf: 
         OEO_00000253
