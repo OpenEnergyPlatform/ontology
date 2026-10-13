@@ -14,7 +14,9 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ## [2.X.X] - 20XX-XX-XX
 
 ### Added
+- has numerator, has denominator (#2333)
 ### Changed
+- change parent property: has unit numerator, has unit denominator (#2333)
 ### Removed
 
 
