@@ -16,9 +16,11 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 ### Added
 - refers to sector (#2326)
 - has numerator, has denominator (#2333)
+- count value (#2336)
 
 ### Changed
 - change parent property: has unit numerator, has unit denominator (#2333)
+- change parent class: population count (#2336)
 
 ### Removed
 
