@@ -17,10 +17,14 @@ and the versioning adheres to [Semantic Versioning](http://semver.org/spec/v2.0.
 - refers to sector (#2326)
 - has numerator, has denominator (#2333)
 - count value (#2336)
+- heat exchange function, electricity transformer function (#2338)
 
 ### Changed
 - change parent property: has unit numerator, has unit denominator (#2333)
 - change parent class: population count (#2336)
+- add function axiom: energy converting component, heat exchanger, heater, energy transformation unit (#2338)
+- remove participates in axiom: energy converting component, power generating unit, solar thermal collector, internal combustion engine, heat generating unit, combustion-based heater, geothermal heat plant (#2338)
+- definition update: energy transformation function (#2338)
 
 ### Removed
 
