@@ -1308,12 +1308,16 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1390
 
 rework module structure 
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1592
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1652
+
+remove participates in axiom and replace with function
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     SubClassOf: 
         OEO_00000061,
         <http://purl.obolibrary.org/obo/BFO_0000050> some OEO_00020102,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010385
     
     
 Class: OEO_00000012
@@ -3410,10 +3414,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/993
 
 change produces energy axiom to 'has energy output':
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/994
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1006
+
+add function axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     SubClassOf: 
-        OEO_00000011
+        OEO_00000011,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010387
     
     
 Class: OEO_00000211
@@ -4411,7 +4420,9 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
 
 Remove participates in axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2305
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"@en
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"@en
     
     EquivalentTo: 
         OEO_00020102
@@ -4419,8 +4430,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2310"@en
     
     SubClassOf: 
         OEO_00020102,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000188
     
     
 Class: OEO_00000335
@@ -4659,12 +4669,15 @@ https://github.com/OpenEnergyPlatform/ontology/pull/1432
 
 Remove has energy input/output axiom:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     SubClassOf: 
         OEO_00000210,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020047
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020199
     
     
 Class: OEO_00000388
@@ -5705,14 +5718,14 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2157
 
 remove energy input axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     SubClassOf: 
         OEO_00010032,
-        
-            Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/787
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/817"
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140038,
         OEO_00000503 some OEO_00000099
     
     
@@ -8848,7 +8861,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1442"
 Class: OEO_00010385
 
     Annotations: 
-        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation function is the function of an artificial object that has been engineered to transform input energy into usable output energy of a different type.",
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An energy transformation function is the function of an artificial object that has been engineered to transform input energy into usable output energy, either of a different type, or with different characteristics, such as voltage level or temperature level.",
+        rdfs:comment "Examples:
+Function of an engine to transform chemical energy to kinetic energy (change of type); 
+Function of a heat exchanger to transform heat from one temperature level to another (change of characteristic);
+Function of a transformer to transform electricity from one voltage level to another (change of characteristic).",
         rdfs:label "energy transformation function"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1438
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1445
@@ -8866,7 +8883,11 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1785
 
 replaced 'has bearer' with 'characteristic of'
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/1907
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1928
+
+update definition and add comment with examples
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000034>,
@@ -10646,8 +10667,8 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
             Annotations: OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/980
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1010"
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00000011,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020003,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020104
+        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020104,
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010385
     
     
 Class: OEO_00020103
@@ -12264,6 +12285,31 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2297"
     
     SubClassOf: 
         <http://purl.obolibrary.org/obo/BFO_0000015>
+    
+    
+Class: OEO_00020522
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "A heat exchange function is an energy transformation function of an artificial object that has been engineered to exchange thermal energy from one medium to another, and/or from one temperature level to another."@en,
+        rdfs:label "heat exchange function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
+    
+    SubClassOf: 
+        OEO_00010385,
+        <http://purl.obolibrary.org/obo/BFO_0000054> some OEO_00140101
+    
+    
+Class: OEO_00020523
+
+    Annotations: 
+        <http://purl.obolibrary.org/obo/IAO_0000115> "An electricity transformer function is an energy transformation function of an artificial object that has been engineered to transfor electicity from one voltage level to another, and/or from one current level to another."@en,
+        rdfs:label "electricity transformer function"@en,
+        OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
+    
+    SubClassOf: 
+        OEO_00010385
     
     
 Class: OEO_00030000
@@ -14038,11 +14084,15 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1264
 
 Remove has energy input/output:
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2910
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+replace participates in axiom with function axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     SubClassOf: 
         OEO_00000011,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00140101
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00020522
     
     
 Class: OEO_00140104
@@ -15490,15 +15540,18 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360
 
 remove has energy output axiom
 issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233
+
+remove participates in axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     EquivalentTo: 
         OEO_00020102
          and (<http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010387)
     
     SubClassOf: 
-        OEO_00020102,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248
+        OEO_00020102
     
     
 Class: OEO_00310009
@@ -15535,7 +15588,11 @@ Class: OEO_00310011
         <http://purl.obolibrary.org/obo/IAO_0000115> "A heat plant is an energy transformation unit consisting of heat generating units and a grid component that feeds thermal energy into a heating grid.",
         rdfs:label "heat plant"@en,
         OEO_00020426 "issue: https://github.com/OpenEnergyPlatform/ontology/issues/1254
-pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360"
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360
+
+replace participates in axiom with function axiom
+issue: https://github.com/OpenEnergyPlatform/ontology/issues/2255
+pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2338"
     
     EquivalentTo: 
         OEO_00020102
@@ -15546,7 +15603,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360"
         OEO_00020102,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00020008,
         <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310008,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010248
+        <http://purl.obolibrary.org/obo/RO_0000085> some OEO_00010387
     
     
 Class: OEO_00310012
@@ -15604,8 +15661,7 @@ issue: https://github.com/OpenEnergyPlatform/ontology/issues/2190
 pull request: https://github.com/OpenEnergyPlatform/ontology/pull/2233"
     
     SubClassOf: 
-        OEO_00000210,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00010249
+        OEO_00000210
     
     
 Class: OEO_00310015
@@ -15651,8 +15707,7 @@ pull request: https://github.com/OpenEnergyPlatform/ontology/pull/1360"
     
     SubClassOf: 
         OEO_00310011,
-        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310017,
-        <http://purl.obolibrary.org/obo/RO_0000056> some OEO_00020059
+        <http://purl.obolibrary.org/obo/BFO_0000051> some OEO_00310017
     
     
 Class: OEO_00310021
